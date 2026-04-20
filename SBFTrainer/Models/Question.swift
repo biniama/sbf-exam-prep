@@ -48,6 +48,7 @@ struct Question: Codable, Identifiable, Hashable {
     let correctOption: String
     let hasImage: Bool
     let imageReference: String?
+    let imageReferences: [String]?
 
     var id: String { uniqueId }
 
@@ -60,6 +61,7 @@ struct Question: Codable, Identifiable, Hashable {
         case correctOption = "correct_option"
         case hasImage = "has_image"
         case imageReference = "image_reference"
+        case imageReferences = "image_references"
     }
 
     var examType: ExamType {
@@ -68,15 +70,18 @@ struct Question: Codable, Identifiable, Hashable {
         return .see
     }
 
-    var imageURL: URL? {
-        guard let ref = imageReference else { return nil }
-        // ref is like "assets/shared/shared_016.png"
-        let parts = ref.split(separator: "/").map(String.init)
-        guard parts.count == 3 else { return nil }
-        return Bundle.main.url(forResource: parts[2].replacingOccurrences(of: ".png", with: ""),
-                               withExtension: "png",
-                               subdirectory: "assets/\(parts[1])")
+    var imageURLs: [URL] {
+        let refs = imageReferences ?? (imageReference.map { [$0] } ?? [])
+        return refs.compactMap { ref in
+            let parts = ref.split(separator: "/").map(String.init)
+            guard parts.count == 3 else { return nil }
+            return Bundle.main.url(forResource: parts[2].replacingOccurrences(of: ".png", with: ""),
+                                   withExtension: "png",
+                                   subdirectory: "assets/\(parts[1])")
+        }
     }
+
+    var imageURL: URL? { imageURLs.first }
 
     var sortedOptions: [(key: String, value: QuestionOption)] {
         options.sorted { $0.key < $1.key }

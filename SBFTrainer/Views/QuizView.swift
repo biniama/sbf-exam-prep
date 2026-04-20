@@ -163,7 +163,7 @@ struct QuizView: View {
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
-            .background(Color.navy.gradient)
+            .background(AppGradient.navy)
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .shadow(color: Color.navy.opacity(0.25), radius: 6, y: 3)
         }

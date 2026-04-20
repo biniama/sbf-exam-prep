@@ -41,7 +41,7 @@ struct OnboardingView: View {
                 .symbolEffect(.pulse, options: .repeating)
 
             VStack(spacing: 10) {
-                Text("SBF Trainer")
+                Text("SBF Exam Prep")
                     .font(.system(size: 36, weight: .bold, design: .rounded))
                     .foregroundStyle(.white)
                 Text("Sportbootführerschein · Exam Prep")
@@ -72,7 +72,7 @@ struct OnboardingView: View {
             Text("Everything You Need")
                 .font(.title2.bold())
                 .foregroundStyle(.white)
-
+            
             VStack(spacing: 16) {
                 featureRow(icon: "checkmark.seal.fill", color: .successGreen,
                            title: "Official Questions",
@@ -88,6 +88,7 @@ struct OnboardingView: View {
                            body: "Wrong answers are tracked and surfaced again until you master them")
             }
             .padding(.horizontal, 28)
+
 
             Spacer()
         }
@@ -132,7 +133,7 @@ struct OnboardingView: View {
                     .foregroundStyle(Color.navy)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(Color.gold.gradient)
+                    .background(AppGradient.gold)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             }
             .padding(.horizontal, 28)
@@ -192,7 +193,7 @@ struct OnboardingView: View {
                 .font(.title3)
                 .foregroundStyle(.white)
                 .frame(width: 40, height: 40)
-                .background(color.gradient)
+                .background(color)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             VStack(alignment: .leading, spacing: 3) {
                 Text(title)
@@ -218,7 +219,7 @@ struct OnboardingView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
-            .background(active ? Color.gold.gradient : Color.white.opacity(0.1).gradient)
+            .background(active ? AnyShapeStyle(AppGradient.gold) : AnyShapeStyle(Color.white.opacity(0.1)))
             .clipShape(RoundedRectangle(cornerRadius: 14))
         }
     }
@@ -248,7 +249,7 @@ struct OnboardingView: View {
                     .foregroundStyle(Color.navy)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(Color.gold.gradient)
+                    .background(AppGradient.gold)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
             } else if page == 3 {
@@ -264,7 +265,7 @@ struct OnboardingView: View {
                     .foregroundStyle(Color.navy)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(Color.gold.gradient)
+                    .background(AppGradient.gold)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
             }

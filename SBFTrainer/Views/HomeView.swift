@@ -74,7 +74,7 @@ struct HomeView: View {
                     .font(.system(size: 36, weight: .medium))
                     .foregroundStyle(Color.gold)
 
-                Text("SBF Trainer")
+                Text("SBF Exam Prep")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundStyle(.white)
 
@@ -128,7 +128,7 @@ struct HomeView: View {
                     .foregroundStyle(.white)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 4)
-                    .background(progress.dailyStreak > 0 ? Color.gold.gradient : Color.gray.gradient)
+                    .background(progress.dailyStreak > 0 ? AppGradient.gold : AppGradient.gray)
                     .clipShape(Capsule())
             }
 
@@ -138,11 +138,13 @@ struct HomeView: View {
                         Circle()
                             .fill(day.studied ? Color.gold : Color.navyLight.opacity(0.15))
                             .frame(width: 34, height: 34)
-                            .overlay(
-                                Image(systemName: day.studied ? "checkmark" : "")
+                            .overlay {
+                            if day.studied {
+                                Image(systemName: "checkmark")
                                     .font(.caption2.bold())
-                                    .foregroundStyle(day.studied ? Color.navy : Color.clear)
-                            )
+                                    .foregroundStyle(Color.navy)
+                            }
+                        }
                         Text(dayLabel(day.date))
                             .font(.system(size: 10, weight: .medium))
                             .foregroundStyle(day.studied ? Color.navy : Color.secondary)
@@ -241,7 +243,7 @@ struct HomeView: View {
                     .font(.title2)
                     .foregroundStyle(.white)
                     .frame(width: 44, height: 44)
-                    .background(color.gradient)
+                    .background(color)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
 
                 VStack(alignment: .leading, spacing: 2) {
@@ -280,7 +282,7 @@ struct HomeView: View {
                         .foregroundStyle(.white)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 3)
-                        .background(Color.errorRed.gradient)
+                        .background(AppGradient.errorRed)
                         .clipShape(Capsule())
                 }
             }
@@ -291,7 +293,7 @@ struct HomeView: View {
                         .font(.title2)
                         .foregroundStyle(.white)
                         .frame(width: 44, height: 44)
-                        .background((progress.wrongAnswerCount > 0 ? Color.errorRed : Color.successGreen).gradient)
+                        .background(progress.wrongAnswerCount > 0 ? AppGradient.errorRed : AppGradient.successGreen)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
 
                     VStack(alignment: .leading, spacing: 2) {

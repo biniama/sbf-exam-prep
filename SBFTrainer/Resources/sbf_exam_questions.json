@@ -57,7 +57,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_002",
@@ -85,7 +86,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_003",
@@ -113,7 +115,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_004",
@@ -141,7 +144,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_004.png"
+          "image_reference": "assets/shared/shared_004.png",
+          "image_references": [
+            "assets/shared/shared_004.png"
+          ]
         },
         {
           "unique_id": "shared_005",
@@ -169,7 +175,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_005.png"
+          "image_reference": "assets/shared/shared_005.png",
+          "image_references": [
+            "assets/shared/shared_005.png"
+          ]
         },
         {
           "unique_id": "shared_006",
@@ -197,7 +206,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_007",
@@ -225,7 +235,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_008",
@@ -253,7 +264,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_009",
@@ -281,7 +293,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_010",
@@ -309,7 +322,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_011",
@@ -337,7 +351,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_012",
@@ -365,7 +380,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_013",
@@ -393,7 +409,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_014",
@@ -421,7 +438,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_015",
@@ -449,7 +467,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_016",
@@ -477,7 +496,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_016.png"
+          "image_reference": "assets/shared/shared_016.png",
+          "image_references": [
+            "assets/shared/shared_016.png"
+          ]
         },
         {
           "unique_id": "shared_017",
@@ -505,7 +527,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_017.png"
+          "image_reference": "assets/shared/shared_017.png",
+          "image_references": [
+            "assets/shared/shared_017.png"
+          ]
         },
         {
           "unique_id": "shared_018",
@@ -533,7 +558,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_018.png"
+          "image_reference": "assets/shared/shared_018.png",
+          "image_references": [
+            "assets/shared/shared_018.png"
+          ]
         },
         {
           "unique_id": "shared_019",
@@ -561,7 +589,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_019.png"
+          "image_reference": "assets/shared/shared_019.png",
+          "image_references": [
+            "assets/shared/shared_019.png"
+          ]
         },
         {
           "unique_id": "shared_020",
@@ -589,7 +620,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_020.png"
+          "image_reference": "assets/shared/shared_020.png",
+          "image_references": [
+            "assets/shared/shared_020.png"
+          ]
         },
         {
           "unique_id": "shared_021",
@@ -617,7 +651,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_021.png"
+          "image_reference": "assets/shared/shared_021.png",
+          "image_references": [
+            "assets/shared/shared_021.png"
+          ]
         },
         {
           "unique_id": "shared_022",
@@ -645,7 +682,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_022.png"
+          "image_reference": "assets/shared/shared_022.png",
+          "image_references": [
+            "assets/shared/shared_022.png"
+          ]
         },
         {
           "unique_id": "shared_023",
@@ -673,7 +713,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_023.png"
+          "image_reference": "assets/shared/shared_023.png",
+          "image_references": [
+            "assets/shared/shared_023.png"
+          ]
         },
         {
           "unique_id": "shared_024",
@@ -701,7 +744,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_024.png"
+          "image_reference": "assets/shared/shared_024.png",
+          "image_references": [
+            "assets/shared/shared_024.png"
+          ]
         },
         {
           "unique_id": "shared_025",
@@ -729,7 +775,11 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_025.png"
+          "image_reference": "assets/shared/shared_025.png",
+          "image_references": [
+            "assets/shared/shared_025.png",
+            "assets/shared/shared_025_b.png"
+          ]
         },
         {
           "unique_id": "shared_026",
@@ -757,7 +807,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_026.png"
+          "image_reference": "assets/shared/shared_026.png",
+          "image_references": [
+            "assets/shared/shared_026.png"
+          ]
         },
         {
           "unique_id": "shared_027",
@@ -785,7 +838,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_027.png"
+          "image_reference": "assets/shared/shared_027.png",
+          "image_references": [
+            "assets/shared/shared_027.png"
+          ]
         },
         {
           "unique_id": "shared_028",
@@ -813,7 +869,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_028.png"
+          "image_reference": "assets/shared/shared_028.png",
+          "image_references": [
+            "assets/shared/shared_028.png"
+          ]
         },
         {
           "unique_id": "shared_029",
@@ -841,7 +900,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_029.png"
+          "image_reference": "assets/shared/shared_029.png",
+          "image_references": [
+            "assets/shared/shared_029.png"
+          ]
         },
         {
           "unique_id": "shared_030",
@@ -869,7 +931,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/shared/shared_030.png"
+          "image_reference": "assets/shared/shared_030.png",
+          "image_references": [
+            "assets/shared/shared_030.png"
+          ]
         },
         {
           "unique_id": "shared_031",
@@ -897,7 +962,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_032",
@@ -925,7 +991,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_033",
@@ -953,7 +1020,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_034",
@@ -981,7 +1049,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_035",
@@ -1009,7 +1078,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_036",
@@ -1037,7 +1107,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_037",
@@ -1065,7 +1136,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_038",
@@ -1093,7 +1165,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_039",
@@ -1121,7 +1194,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_040",
@@ -1149,7 +1223,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_041",
@@ -1177,7 +1252,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_042",
@@ -1205,7 +1281,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_043",
@@ -1233,7 +1310,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_044",
@@ -1261,7 +1339,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_045",
@@ -1289,7 +1368,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_046",
@@ -1317,7 +1397,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_047",
@@ -1345,7 +1426,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_048",
@@ -1373,7 +1455,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_049",
@@ -1401,7 +1484,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_050",
@@ -1429,7 +1513,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_051",
@@ -1457,7 +1542,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_052",
@@ -1485,7 +1571,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_053",
@@ -1513,7 +1600,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_054",
@@ -1541,7 +1629,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_055",
@@ -1569,7 +1658,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_056",
@@ -1597,7 +1687,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_057",
@@ -1625,7 +1716,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_058",
@@ -1653,7 +1745,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_059",
@@ -1681,7 +1774,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_060",
@@ -1709,7 +1803,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_061",
@@ -1737,7 +1832,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_062",
@@ -1765,7 +1861,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_063",
@@ -1793,7 +1890,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_064",
@@ -1821,7 +1919,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_065",
@@ -1849,7 +1948,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_066",
@@ -1877,7 +1977,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_067",
@@ -1905,7 +2006,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_068",
@@ -1933,7 +2035,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_069",
@@ -1961,7 +2064,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_070",
@@ -1989,7 +2093,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_071",
@@ -2017,7 +2122,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_072",
@@ -2045,7 +2151,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         }
       ]
     },
@@ -2092,7 +2199,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_074",
@@ -2120,7 +2228,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_075",
@@ -2148,7 +2257,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_076",
@@ -2176,7 +2286,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_077",
@@ -2204,7 +2315,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_078",
@@ -2232,7 +2344,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_079",
@@ -2260,7 +2373,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_080",
@@ -2288,7 +2402,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_081",
@@ -2316,7 +2431,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_082",
@@ -2344,7 +2460,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_083",
@@ -2372,7 +2489,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_084",
@@ -2400,7 +2518,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_085",
@@ -2428,7 +2547,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_086",
@@ -2456,7 +2576,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_087",
@@ -2484,7 +2605,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_088",
@@ -2512,7 +2634,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_089",
@@ -2540,7 +2663,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_090",
@@ -2568,7 +2692,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_091",
@@ -2596,7 +2721,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_092",
@@ -2624,7 +2750,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_093",
@@ -2652,7 +2779,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_094",
@@ -2680,7 +2808,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_095",
@@ -2708,7 +2837,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_096",
@@ -2736,7 +2866,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_097",
@@ -2764,7 +2895,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_098",
@@ -2792,7 +2924,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_099",
@@ -2820,7 +2953,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_100",
@@ -2848,7 +2982,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_101",
@@ -2876,7 +3011,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_102",
@@ -2904,7 +3040,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_103",
@@ -2932,7 +3069,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_104",
@@ -2960,7 +3098,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_105",
@@ -2988,7 +3127,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_106",
@@ -3016,7 +3156,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_107",
@@ -3044,7 +3185,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_107.png"
+          "image_reference": "assets/binnen/binnen_107.png",
+          "image_references": [
+            "assets/binnen/binnen_107.png"
+          ]
         },
         {
           "unique_id": "binnen_108",
@@ -3072,7 +3216,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_108.png"
+          "image_reference": "assets/binnen/binnen_108.png",
+          "image_references": [
+            "assets/binnen/binnen_108.png"
+          ]
         },
         {
           "unique_id": "binnen_109",
@@ -3100,7 +3247,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_110",
@@ -3128,7 +3276,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_110.png"
+          "image_reference": "assets/binnen/binnen_110.png",
+          "image_references": [
+            "assets/binnen/binnen_110.png"
+          ]
         },
         {
           "unique_id": "binnen_111",
@@ -3156,7 +3307,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_111.png"
+          "image_reference": "assets/binnen/binnen_111.png",
+          "image_references": [
+            "assets/binnen/binnen_111.png"
+          ]
         },
         {
           "unique_id": "binnen_112",
@@ -3184,7 +3338,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_112.png"
+          "image_reference": "assets/binnen/binnen_112.png",
+          "image_references": [
+            "assets/binnen/binnen_112.png"
+          ]
         },
         {
           "unique_id": "binnen_113",
@@ -3212,7 +3369,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_113.png"
+          "image_reference": "assets/binnen/binnen_113.png",
+          "image_references": [
+            "assets/binnen/binnen_113.png"
+          ]
         },
         {
           "unique_id": "binnen_114",
@@ -3240,7 +3400,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_114.png"
+          "image_reference": "assets/binnen/binnen_114.png",
+          "image_references": [
+            "assets/binnen/binnen_114.png"
+          ]
         },
         {
           "unique_id": "binnen_115",
@@ -3268,7 +3431,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_115.png"
+          "image_reference": "assets/binnen/binnen_115.png",
+          "image_references": [
+            "assets/binnen/binnen_115.png"
+          ]
         },
         {
           "unique_id": "binnen_116",
@@ -3296,7 +3462,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_116.png"
+          "image_reference": "assets/binnen/binnen_116.png",
+          "image_references": [
+            "assets/binnen/binnen_116.png"
+          ]
         },
         {
           "unique_id": "binnen_117",
@@ -3324,7 +3493,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_118",
@@ -3352,7 +3522,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_119",
@@ -3380,7 +3551,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_120",
@@ -3408,7 +3580,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_120.png"
+          "image_reference": "assets/binnen/binnen_120.png",
+          "image_references": [
+            "assets/binnen/binnen_120.png"
+          ]
         },
         {
           "unique_id": "binnen_121",
@@ -3436,7 +3611,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_121.png"
+          "image_reference": "assets/binnen/binnen_121.png",
+          "image_references": [
+            "assets/binnen/binnen_121.png"
+          ]
         },
         {
           "unique_id": "binnen_122",
@@ -3464,7 +3642,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_122.png"
+          "image_reference": "assets/binnen/binnen_122.png",
+          "image_references": [
+            "assets/binnen/binnen_122.png"
+          ]
         },
         {
           "unique_id": "binnen_123",
@@ -3492,7 +3673,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_123.png"
+          "image_reference": "assets/binnen/binnen_123.png",
+          "image_references": [
+            "assets/binnen/binnen_123.png"
+          ]
         },
         {
           "unique_id": "binnen_124",
@@ -3520,7 +3704,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_124.png"
+          "image_reference": "assets/binnen/binnen_124.png",
+          "image_references": [
+            "assets/binnen/binnen_124.png"
+          ]
         },
         {
           "unique_id": "binnen_125",
@@ -3548,7 +3735,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_125.png"
+          "image_reference": "assets/binnen/binnen_125.png",
+          "image_references": [
+            "assets/binnen/binnen_125.png"
+          ]
         },
         {
           "unique_id": "binnen_126",
@@ -3576,7 +3766,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_127",
@@ -3604,7 +3795,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_127.png"
+          "image_reference": "assets/binnen/binnen_127.png",
+          "image_references": [
+            "assets/binnen/binnen_127.png"
+          ]
         },
         {
           "unique_id": "binnen_128",
@@ -3632,7 +3826,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_129",
@@ -3660,7 +3855,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_129.png"
+          "image_reference": "assets/binnen/binnen_129.png",
+          "image_references": [
+            "assets/binnen/binnen_129.png"
+          ]
         },
         {
           "unique_id": "binnen_130",
@@ -3688,7 +3886,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_131",
@@ -3716,7 +3915,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_131.png"
+          "image_reference": "assets/binnen/binnen_131.png",
+          "image_references": [
+            "assets/binnen/binnen_131.png"
+          ]
         },
         {
           "unique_id": "binnen_132",
@@ -3744,7 +3946,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_132.png"
+          "image_reference": "assets/binnen/binnen_132.png",
+          "image_references": [
+            "assets/binnen/binnen_132.png"
+          ]
         },
         {
           "unique_id": "binnen_133",
@@ -3772,7 +3977,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_134",
@@ -3800,7 +4006,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_135",
@@ -3828,7 +4035,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_136",
@@ -3856,7 +4064,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_137",
@@ -3884,7 +4093,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_138",
@@ -3912,7 +4122,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_139",
@@ -3940,7 +4151,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_140",
@@ -3968,7 +4180,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_141",
@@ -3996,7 +4209,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_142",
@@ -4024,7 +4238,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_143",
@@ -4052,7 +4267,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_144",
@@ -4080,7 +4296,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_145",
@@ -4108,7 +4325,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_145.png"
+          "image_reference": "assets/binnen/binnen_145.png",
+          "image_references": [
+            "assets/binnen/binnen_145.png"
+          ]
         },
         {
           "unique_id": "binnen_146",
@@ -4136,7 +4356,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_146.png"
+          "image_reference": "assets/binnen/binnen_146.png",
+          "image_references": [
+            "assets/binnen/binnen_146.png"
+          ]
         },
         {
           "unique_id": "binnen_147",
@@ -4164,7 +4387,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_147.png"
+          "image_reference": "assets/binnen/binnen_147.png",
+          "image_references": [
+            "assets/binnen/binnen_147.png"
+          ]
         },
         {
           "unique_id": "binnen_148",
@@ -4192,7 +4418,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_148.png"
+          "image_reference": "assets/binnen/binnen_148.png",
+          "image_references": [
+            "assets/binnen/binnen_148.png"
+          ]
         },
         {
           "unique_id": "binnen_149",
@@ -4220,7 +4449,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_149.png"
+          "image_reference": "assets/binnen/binnen_149.png",
+          "image_references": [
+            "assets/binnen/binnen_149.png"
+          ]
         },
         {
           "unique_id": "binnen_150",
@@ -4248,7 +4480,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_150.png"
+          "image_reference": "assets/binnen/binnen_150.png",
+          "image_references": [
+            "assets/binnen/binnen_150.png"
+          ]
         },
         {
           "unique_id": "binnen_151",
@@ -4276,7 +4511,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_151.png"
+          "image_reference": "assets/binnen/binnen_151.png",
+          "image_references": [
+            "assets/binnen/binnen_151.png"
+          ]
         },
         {
           "unique_id": "binnen_152",
@@ -4304,7 +4542,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_152.png"
+          "image_reference": "assets/binnen/binnen_152.png",
+          "image_references": [
+            "assets/binnen/binnen_152.png"
+          ]
         },
         {
           "unique_id": "binnen_153",
@@ -4332,7 +4573,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_153.png"
+          "image_reference": "assets/binnen/binnen_153.png",
+          "image_references": [
+            "assets/binnen/binnen_153.png"
+          ]
         },
         {
           "unique_id": "binnen_154",
@@ -4360,7 +4604,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_154.png"
+          "image_reference": "assets/binnen/binnen_154.png",
+          "image_references": [
+            "assets/binnen/binnen_154.png"
+          ]
         },
         {
           "unique_id": "binnen_155",
@@ -4388,7 +4635,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_155.png"
+          "image_reference": "assets/binnen/binnen_155.png",
+          "image_references": [
+            "assets/binnen/binnen_155.png"
+          ]
         },
         {
           "unique_id": "binnen_156",
@@ -4416,7 +4666,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_156.png"
+          "image_reference": "assets/binnen/binnen_156.png",
+          "image_references": [
+            "assets/binnen/binnen_156.png"
+          ]
         },
         {
           "unique_id": "binnen_157",
@@ -4444,7 +4697,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_157.png"
+          "image_reference": "assets/binnen/binnen_157.png",
+          "image_references": [
+            "assets/binnen/binnen_157.png"
+          ]
         },
         {
           "unique_id": "binnen_158",
@@ -4472,7 +4728,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_159",
@@ -4500,7 +4757,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_160",
@@ -4528,7 +4786,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_161",
@@ -4556,7 +4815,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_162",
@@ -4584,7 +4844,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_162.png"
+          "image_reference": "assets/binnen/binnen_162.png",
+          "image_references": [
+            "assets/binnen/binnen_162.png"
+          ]
         },
         {
           "unique_id": "binnen_163",
@@ -4612,7 +4875,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_163.png"
+          "image_reference": "assets/binnen/binnen_163.png",
+          "image_references": [
+            "assets/binnen/binnen_163.png"
+          ]
         },
         {
           "unique_id": "binnen_164",
@@ -4640,7 +4906,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_164.png"
+          "image_reference": "assets/binnen/binnen_164.png",
+          "image_references": [
+            "assets/binnen/binnen_164.png"
+          ]
         },
         {
           "unique_id": "binnen_165",
@@ -4668,7 +4937,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_165.png"
+          "image_reference": "assets/binnen/binnen_165.png",
+          "image_references": [
+            "assets/binnen/binnen_165.png"
+          ]
         },
         {
           "unique_id": "binnen_166",
@@ -4696,7 +4968,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_166.png"
+          "image_reference": "assets/binnen/binnen_166.png",
+          "image_references": [
+            "assets/binnen/binnen_166.png"
+          ]
         },
         {
           "unique_id": "binnen_167",
@@ -4724,7 +4999,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_167.png"
+          "image_reference": "assets/binnen/binnen_167.png",
+          "image_references": [
+            "assets/binnen/binnen_167.png"
+          ]
         },
         {
           "unique_id": "binnen_168",
@@ -4752,7 +5030,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_169",
@@ -4780,7 +5059,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_170",
@@ -4808,7 +5088,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_171",
@@ -4836,7 +5117,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_172",
@@ -4864,7 +5146,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_173",
@@ -4892,7 +5175,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_174",
@@ -4920,7 +5204,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_175",
@@ -4948,7 +5233,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_176",
@@ -4976,7 +5262,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_177",
@@ -5004,7 +5291,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_178",
@@ -5032,7 +5320,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_179",
@@ -5060,7 +5349,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_180",
@@ -5088,7 +5378,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_180.png"
+          "image_reference": "assets/binnen/binnen_180.png",
+          "image_references": [
+            "assets/binnen/binnen_180.png"
+          ]
         },
         {
           "unique_id": "binnen_181",
@@ -5116,7 +5409,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_182",
@@ -5144,7 +5438,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_183",
@@ -5172,7 +5467,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_183.png"
+          "image_reference": "assets/binnen/binnen_183.png",
+          "image_references": [
+            "assets/binnen/binnen_183.png"
+          ]
         },
         {
           "unique_id": "binnen_184",
@@ -5200,7 +5498,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_185",
@@ -5228,7 +5527,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_185.png"
+          "image_reference": "assets/binnen/binnen_185.png",
+          "image_references": [
+            "assets/binnen/binnen_185.png"
+          ]
         },
         {
           "unique_id": "binnen_186",
@@ -5256,7 +5558,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_186.png"
+          "image_reference": "assets/binnen/binnen_186.png",
+          "image_references": [
+            "assets/binnen/binnen_186.png"
+          ]
         },
         {
           "unique_id": "binnen_187",
@@ -5284,7 +5589,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_188",
@@ -5312,7 +5618,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_188.png"
+          "image_reference": "assets/binnen/binnen_188.png",
+          "image_references": [
+            "assets/binnen/binnen_188.png"
+          ]
         },
         {
           "unique_id": "binnen_189",
@@ -5340,7 +5649,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_189.png"
+          "image_reference": "assets/binnen/binnen_189.png",
+          "image_references": [
+            "assets/binnen/binnen_189.png"
+          ]
         },
         {
           "unique_id": "binnen_190",
@@ -5368,7 +5680,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_191",
@@ -5396,7 +5709,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_192",
@@ -5424,7 +5738,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_192.png"
+          "image_reference": "assets/binnen/binnen_192.png",
+          "image_references": [
+            "assets/binnen/binnen_192.png"
+          ]
         },
         {
           "unique_id": "binnen_193",
@@ -5452,7 +5769,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_193.png"
+          "image_reference": "assets/binnen/binnen_193.png",
+          "image_references": [
+            "assets/binnen/binnen_193.png"
+          ]
         },
         {
           "unique_id": "binnen_194",
@@ -5480,7 +5800,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_195",
@@ -5508,7 +5829,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_196",
@@ -5536,7 +5858,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_196.png"
+          "image_reference": "assets/binnen/binnen_196.png",
+          "image_references": [
+            "assets/binnen/binnen_196.png"
+          ]
         },
         {
           "unique_id": "binnen_197",
@@ -5564,7 +5889,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_198",
@@ -5592,7 +5918,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_198.png"
+          "image_reference": "assets/binnen/binnen_198.png",
+          "image_references": [
+            "assets/binnen/binnen_198.png"
+          ]
         },
         {
           "unique_id": "binnen_199",
@@ -5620,7 +5949,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_199.png"
+          "image_reference": "assets/binnen/binnen_199.png",
+          "image_references": [
+            "assets/binnen/binnen_199.png"
+          ]
         },
         {
           "unique_id": "binnen_200",
@@ -5648,7 +5980,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_200.png"
+          "image_reference": "assets/binnen/binnen_200.png",
+          "image_references": [
+            "assets/binnen/binnen_200.png"
+          ]
         },
         {
           "unique_id": "binnen_201",
@@ -5676,7 +6011,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_201.png"
+          "image_reference": "assets/binnen/binnen_201.png",
+          "image_references": [
+            "assets/binnen/binnen_201.png"
+          ]
         },
         {
           "unique_id": "binnen_202",
@@ -5704,7 +6042,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_202.png"
+          "image_reference": "assets/binnen/binnen_202.png",
+          "image_references": [
+            "assets/binnen/binnen_202.png"
+          ]
         },
         {
           "unique_id": "binnen_203",
@@ -5732,7 +6073,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_203.png"
+          "image_reference": "assets/binnen/binnen_203.png",
+          "image_references": [
+            "assets/binnen/binnen_203.png"
+          ]
         },
         {
           "unique_id": "binnen_204",
@@ -5760,7 +6104,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_204.png"
+          "image_reference": "assets/binnen/binnen_204.png",
+          "image_references": [
+            "assets/binnen/binnen_204.png"
+          ]
         },
         {
           "unique_id": "binnen_205",
@@ -5788,7 +6135,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_206",
@@ -5816,7 +6164,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_207",
@@ -5844,7 +6193,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_208",
@@ -5872,7 +6222,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_209",
@@ -5900,7 +6251,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_210",
@@ -5928,7 +6280,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_211",
@@ -5956,7 +6309,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_212",
@@ -5984,7 +6338,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_213",
@@ -6012,7 +6367,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_214",
@@ -6040,7 +6396,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_215",
@@ -6068,7 +6425,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_216",
@@ -6096,7 +6454,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_217",
@@ -6124,7 +6483,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_218",
@@ -6152,7 +6512,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_219",
@@ -6180,7 +6541,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_220",
@@ -6208,7 +6570,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_221",
@@ -6236,7 +6599,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_222",
@@ -6264,7 +6628,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_223",
@@ -6292,7 +6657,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_224",
@@ -6320,7 +6686,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_225",
@@ -6348,7 +6715,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_226",
@@ -6376,7 +6744,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_227",
@@ -6404,7 +6773,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_228",
@@ -6432,7 +6802,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_229",
@@ -6460,7 +6831,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_230",
@@ -6488,7 +6860,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_231",
@@ -6516,7 +6889,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_232",
@@ -6544,7 +6918,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_233",
@@ -6572,7 +6947,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_234",
@@ -6600,7 +6976,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_235",
@@ -6628,7 +7005,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_236",
@@ -6656,7 +7034,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_237",
@@ -6684,7 +7063,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_238",
@@ -6712,7 +7092,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_239",
@@ -6740,7 +7121,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_240",
@@ -6768,7 +7150,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_241",
@@ -6796,7 +7179,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_242",
@@ -6824,7 +7208,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_243",
@@ -6852,7 +7237,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_243.png"
+          "image_reference": "assets/binnen/binnen_243.png",
+          "image_references": [
+            "assets/binnen/binnen_243.png"
+          ]
         },
         {
           "unique_id": "binnen_244",
@@ -6880,7 +7268,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/binnen/binnen_244.png"
+          "image_reference": "assets/binnen/binnen_244.png",
+          "image_references": [
+            "assets/binnen/binnen_244.png"
+          ]
         },
         {
           "unique_id": "binnen_245",
@@ -6908,7 +7299,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_246",
@@ -6936,7 +7328,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_247",
@@ -6964,7 +7357,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_248",
@@ -6992,7 +7386,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_249",
@@ -7020,7 +7415,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_250",
@@ -7048,7 +7444,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_251",
@@ -7076,7 +7473,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_252",
@@ -7104,7 +7502,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "binnen_253",
@@ -7132,7 +7531,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         }
       ]
     },
@@ -7180,7 +7580,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_074",
@@ -7208,7 +7609,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_075",
@@ -7236,7 +7638,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_076",
@@ -7264,7 +7667,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_077",
@@ -7292,7 +7696,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_078",
@@ -7320,7 +7725,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_079",
@@ -7348,7 +7754,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_080",
@@ -7376,7 +7783,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_081",
@@ -7404,7 +7812,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_082",
@@ -7432,7 +7841,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_083",
@@ -7460,7 +7870,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_084",
@@ -7488,7 +7899,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_085",
@@ -7516,7 +7928,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_086",
@@ -7544,7 +7957,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_087",
@@ -7572,7 +7986,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_088",
@@ -7600,7 +8015,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_089",
@@ -7628,7 +8044,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_090",
@@ -7656,7 +8073,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_091",
@@ -7684,7 +8102,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_092",
@@ -7712,7 +8131,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_092.png"
+          "image_reference": "assets/see/see_092.png",
+          "image_references": [
+            "assets/see/see_092.png"
+          ]
         },
         {
           "unique_id": "see_093",
@@ -7740,7 +8162,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_093.png"
+          "image_reference": "assets/see/see_093.png",
+          "image_references": [
+            "assets/see/see_093.png"
+          ]
         },
         {
           "unique_id": "see_094",
@@ -7768,7 +8193,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_094.png"
+          "image_reference": "assets/see/see_094.png",
+          "image_references": [
+            "assets/see/see_094.png"
+          ]
         },
         {
           "unique_id": "see_095",
@@ -7796,7 +8224,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_096",
@@ -7824,7 +8253,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_097",
@@ -7852,7 +8282,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_097.png"
+          "image_reference": "assets/see/see_097.png",
+          "image_references": [
+            "assets/see/see_097.png"
+          ]
         },
         {
           "unique_id": "see_098",
@@ -7880,7 +8313,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_098.png"
+          "image_reference": "assets/see/see_098.png",
+          "image_references": [
+            "assets/see/see_098.png"
+          ]
         },
         {
           "unique_id": "see_099",
@@ -7908,7 +8344,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_099.png"
+          "image_reference": "assets/see/see_099.png",
+          "image_references": [
+            "assets/see/see_099.png"
+          ]
         },
         {
           "unique_id": "see_100",
@@ -7936,7 +8375,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_101",
@@ -7964,7 +8404,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_102",
@@ -7992,7 +8433,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_102.png"
+          "image_reference": "assets/see/see_102.png",
+          "image_references": [
+            "assets/see/see_102.png"
+          ]
         },
         {
           "unique_id": "see_103",
@@ -8020,7 +8464,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_103.png"
+          "image_reference": "assets/see/see_103.png",
+          "image_references": [
+            "assets/see/see_103.png"
+          ]
         },
         {
           "unique_id": "see_104",
@@ -8048,7 +8495,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_104.png"
+          "image_reference": "assets/see/see_104.png",
+          "image_references": [
+            "assets/see/see_104.png"
+          ]
         },
         {
           "unique_id": "see_105",
@@ -8076,7 +8526,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_105.png"
+          "image_reference": "assets/see/see_105.png",
+          "image_references": [
+            "assets/see/see_105.png"
+          ]
         },
         {
           "unique_id": "see_106",
@@ -8104,7 +8557,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_106.png"
+          "image_reference": "assets/see/see_106.png",
+          "image_references": [
+            "assets/see/see_106.png"
+          ]
         },
         {
           "unique_id": "see_107",
@@ -8132,7 +8588,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_107.png"
+          "image_reference": "assets/see/see_107.png",
+          "image_references": [
+            "assets/see/see_107.png"
+          ]
         },
         {
           "unique_id": "see_108",
@@ -8160,7 +8619,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_108.png"
+          "image_reference": "assets/see/see_108.png",
+          "image_references": [
+            "assets/see/see_108.png"
+          ]
         },
         {
           "unique_id": "see_109",
@@ -8188,7 +8650,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_109.png"
+          "image_reference": "assets/see/see_109.png",
+          "image_references": [
+            "assets/see/see_109.png"
+          ]
         },
         {
           "unique_id": "see_110",
@@ -8216,7 +8681,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_110.png"
+          "image_reference": "assets/see/see_110.png",
+          "image_references": [
+            "assets/see/see_110.png"
+          ]
         },
         {
           "unique_id": "see_111",
@@ -8244,7 +8712,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_111.png"
+          "image_reference": "assets/see/see_111.png",
+          "image_references": [
+            "assets/see/see_111.png"
+          ]
         },
         {
           "unique_id": "see_112",
@@ -8272,7 +8743,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_112.png"
+          "image_reference": "assets/see/see_112.png",
+          "image_references": [
+            "assets/see/see_112.png"
+          ]
         },
         {
           "unique_id": "see_113",
@@ -8300,7 +8774,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_114",
@@ -8328,7 +8803,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_115",
@@ -8356,7 +8832,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_115.png"
+          "image_reference": "assets/see/see_115.png",
+          "image_references": [
+            "assets/see/see_115.png"
+          ]
         },
         {
           "unique_id": "see_116",
@@ -8384,7 +8863,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_116.png"
+          "image_reference": "assets/see/see_116.png",
+          "image_references": [
+            "assets/see/see_116.png"
+          ]
         },
         {
           "unique_id": "see_117",
@@ -8412,7 +8894,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_117.png"
+          "image_reference": "assets/see/see_117.png",
+          "image_references": [
+            "assets/see/see_117.png"
+          ]
         },
         {
           "unique_id": "see_118",
@@ -8440,7 +8925,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_118.png"
+          "image_reference": "assets/see/see_118.png",
+          "image_references": [
+            "assets/see/see_118.png"
+          ]
         },
         {
           "unique_id": "see_119",
@@ -8468,7 +8956,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_119.png"
+          "image_reference": "assets/see/see_119.png",
+          "image_references": [
+            "assets/see/see_119.png"
+          ]
         },
         {
           "unique_id": "see_120",
@@ -8496,7 +8987,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_121",
@@ -8524,7 +9016,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_122",
@@ -8552,7 +9045,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_122.png"
+          "image_reference": "assets/see/see_122.png",
+          "image_references": [
+            "assets/see/see_122.png"
+          ]
         },
         {
           "unique_id": "see_123",
@@ -8580,7 +9076,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_123.png"
+          "image_reference": "assets/see/see_123.png",
+          "image_references": [
+            "assets/see/see_123.png"
+          ]
         },
         {
           "unique_id": "see_124",
@@ -8608,7 +9107,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_125",
@@ -8636,7 +9136,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_126",
@@ -8664,7 +9165,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_127",
@@ -8692,7 +9194,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_128",
@@ -8720,7 +9223,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_129",
@@ -8748,7 +9252,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_130",
@@ -8776,7 +9281,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_131",
@@ -8804,7 +9310,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_132",
@@ -8832,7 +9339,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_133",
@@ -8860,7 +9368,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_133.png"
+          "image_reference": "assets/see/see_133.png",
+          "image_references": [
+            "assets/see/see_133.png"
+          ]
         },
         {
           "unique_id": "see_134",
@@ -8888,7 +9399,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_134.png"
+          "image_reference": "assets/see/see_134.png",
+          "image_references": [
+            "assets/see/see_134.png"
+          ]
         },
         {
           "unique_id": "see_135",
@@ -8916,7 +9430,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_136",
@@ -8944,7 +9459,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_137",
@@ -8972,7 +9488,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_138",
@@ -9000,7 +9517,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_139",
@@ -9028,7 +9546,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_140",
@@ -9056,7 +9575,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_140.png"
+          "image_reference": "assets/see/see_140.png",
+          "image_references": [
+            "assets/see/see_140.png"
+          ]
         },
         {
           "unique_id": "see_141",
@@ -9084,7 +9606,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_141.png"
+          "image_reference": "assets/see/see_141.png",
+          "image_references": [
+            "assets/see/see_141.png"
+          ]
         },
         {
           "unique_id": "see_142",
@@ -9112,7 +9637,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_143",
@@ -9140,7 +9666,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_144",
@@ -9168,7 +9695,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_145",
@@ -9196,7 +9724,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_146",
@@ -9224,7 +9753,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_147",
@@ -9252,7 +9782,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_148",
@@ -9280,7 +9811,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_148.png"
+          "image_reference": "assets/see/see_148.png",
+          "image_references": [
+            "assets/see/see_148.png"
+          ]
         },
         {
           "unique_id": "see_149",
@@ -9308,7 +9842,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_149.png"
+          "image_reference": "assets/see/see_149.png",
+          "image_references": [
+            "assets/see/see_149.png"
+          ]
         },
         {
           "unique_id": "see_150",
@@ -9336,7 +9873,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_150.png"
+          "image_reference": "assets/see/see_150.png",
+          "image_references": [
+            "assets/see/see_150.png"
+          ]
         },
         {
           "unique_id": "see_151",
@@ -9364,7 +9904,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_151.png"
+          "image_reference": "assets/see/see_151.png",
+          "image_references": [
+            "assets/see/see_151.png"
+          ]
         },
         {
           "unique_id": "see_152",
@@ -9392,7 +9935,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_153",
@@ -9420,7 +9964,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_154",
@@ -9448,7 +9993,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_154.png"
+          "image_reference": "assets/see/see_154.png",
+          "image_references": [
+            "assets/see/see_154.png"
+          ]
         },
         {
           "unique_id": "see_155",
@@ -9476,7 +10024,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_156",
@@ -9504,7 +10053,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_157",
@@ -9532,7 +10082,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_158",
@@ -9560,7 +10111,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_159",
@@ -9588,7 +10140,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_160",
@@ -9616,7 +10169,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_161",
@@ -9644,7 +10198,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_162",
@@ -9672,7 +10227,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_162.png"
+          "image_reference": "assets/see/see_162.png",
+          "image_references": [
+            "assets/see/see_162.png"
+          ]
         },
         {
           "unique_id": "see_163",
@@ -9700,7 +10258,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_164",
@@ -9728,7 +10287,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_165",
@@ -9756,7 +10316,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_166",
@@ -9784,7 +10345,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_167",
@@ -9812,7 +10374,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_168",
@@ -9840,7 +10403,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_169",
@@ -9868,7 +10432,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_170",
@@ -9896,7 +10461,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_171",
@@ -9924,7 +10490,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_172",
@@ -9952,7 +10519,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_173",
@@ -9980,7 +10548,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_174",
@@ -10008,7 +10577,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_175",
@@ -10036,7 +10606,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_176",
@@ -10064,7 +10635,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_176.png"
+          "image_reference": "assets/see/see_176.png",
+          "image_references": [
+            "assets/see/see_176.png"
+          ]
         },
         {
           "unique_id": "see_177",
@@ -10092,7 +10666,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_177.png"
+          "image_reference": "assets/see/see_177.png",
+          "image_references": [
+            "assets/see/see_177.png"
+          ]
         },
         {
           "unique_id": "see_178",
@@ -10120,7 +10697,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_178.png"
+          "image_reference": "assets/see/see_178.png",
+          "image_references": [
+            "assets/see/see_178.png"
+          ]
         },
         {
           "unique_id": "see_179",
@@ -10148,7 +10728,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_179.png"
+          "image_reference": "assets/see/see_179.png",
+          "image_references": [
+            "assets/see/see_179.png"
+          ]
         },
         {
           "unique_id": "see_180",
@@ -10176,7 +10759,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_180.png"
+          "image_reference": "assets/see/see_180.png",
+          "image_references": [
+            "assets/see/see_180.png"
+          ]
         },
         {
           "unique_id": "see_181",
@@ -10204,7 +10790,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_182",
@@ -10232,7 +10819,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_182.png"
+          "image_reference": "assets/see/see_182.png",
+          "image_references": [
+            "assets/see/see_182.png"
+          ]
         },
         {
           "unique_id": "see_183",
@@ -10260,7 +10850,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_184",
@@ -10288,7 +10879,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_184.png"
+          "image_reference": "assets/see/see_184.png",
+          "image_references": [
+            "assets/see/see_184.png"
+          ]
         },
         {
           "unique_id": "see_185",
@@ -10316,7 +10910,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_185.png"
+          "image_reference": "assets/see/see_185.png",
+          "image_references": [
+            "assets/see/see_185.png"
+          ]
         },
         {
           "unique_id": "see_186",
@@ -10344,7 +10941,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_186.png"
+          "image_reference": "assets/see/see_186.png",
+          "image_references": [
+            "assets/see/see_186.png"
+          ]
         },
         {
           "unique_id": "see_187",
@@ -10372,7 +10972,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_187.png"
+          "image_reference": "assets/see/see_187.png",
+          "image_references": [
+            "assets/see/see_187.png"
+          ]
         },
         {
           "unique_id": "see_188",
@@ -10400,7 +11003,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_188.png"
+          "image_reference": "assets/see/see_188.png",
+          "image_references": [
+            "assets/see/see_188.png"
+          ]
         },
         {
           "unique_id": "see_189",
@@ -10428,7 +11034,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_189.png"
+          "image_reference": "assets/see/see_189.png",
+          "image_references": [
+            "assets/see/see_189.png"
+          ]
         },
         {
           "unique_id": "see_190",
@@ -10456,7 +11065,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_190.png"
+          "image_reference": "assets/see/see_190.png",
+          "image_references": [
+            "assets/see/see_190.png"
+          ]
         },
         {
           "unique_id": "see_191",
@@ -10484,7 +11096,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_191.png"
+          "image_reference": "assets/see/see_191.png",
+          "image_references": [
+            "assets/see/see_191.png"
+          ]
         },
         {
           "unique_id": "see_192",
@@ -10512,7 +11127,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_192.png"
+          "image_reference": "assets/see/see_192.png",
+          "image_references": [
+            "assets/see/see_192.png"
+          ]
         },
         {
           "unique_id": "see_193",
@@ -10540,7 +11158,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_193.png"
+          "image_reference": "assets/see/see_193.png",
+          "image_references": [
+            "assets/see/see_193.png"
+          ]
         },
         {
           "unique_id": "see_194",
@@ -10568,7 +11189,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_194.png"
+          "image_reference": "assets/see/see_194.png",
+          "image_references": [
+            "assets/see/see_194.png"
+          ]
         },
         {
           "unique_id": "see_195",
@@ -10596,7 +11220,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_195.png"
+          "image_reference": "assets/see/see_195.png",
+          "image_references": [
+            "assets/see/see_195.png"
+          ]
         },
         {
           "unique_id": "see_196",
@@ -10624,7 +11251,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_196.png"
+          "image_reference": "assets/see/see_196.png",
+          "image_references": [
+            "assets/see/see_196.png"
+          ]
         },
         {
           "unique_id": "see_197",
@@ -10652,7 +11282,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_198",
@@ -10680,7 +11311,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_199",
@@ -10708,7 +11340,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_200",
@@ -10736,7 +11369,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_200.png"
+          "image_reference": "assets/see/see_200.png",
+          "image_references": [
+            "assets/see/see_200.png"
+          ]
         },
         {
           "unique_id": "see_201",
@@ -10764,7 +11400,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_201.png"
+          "image_reference": "assets/see/see_201.png",
+          "image_references": [
+            "assets/see/see_201.png"
+          ]
         },
         {
           "unique_id": "see_202",
@@ -10792,7 +11431,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_202.png"
+          "image_reference": "assets/see/see_202.png",
+          "image_references": [
+            "assets/see/see_202.png"
+          ]
         },
         {
           "unique_id": "see_203",
@@ -10820,7 +11462,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_203.png"
+          "image_reference": "assets/see/see_203.png",
+          "image_references": [
+            "assets/see/see_203.png"
+          ]
         },
         {
           "unique_id": "see_204",
@@ -10848,7 +11493,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_204.png"
+          "image_reference": "assets/see/see_204.png",
+          "image_references": [
+            "assets/see/see_204.png"
+          ]
         },
         {
           "unique_id": "see_205",
@@ -10876,7 +11524,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_205.png"
+          "image_reference": "assets/see/see_205.png",
+          "image_references": [
+            "assets/see/see_205.png"
+          ]
         },
         {
           "unique_id": "see_206",
@@ -10904,7 +11555,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_206.png"
+          "image_reference": "assets/see/see_206.png",
+          "image_references": [
+            "assets/see/see_206.png"
+          ]
         },
         {
           "unique_id": "see_207",
@@ -10932,7 +11586,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_207.png"
+          "image_reference": "assets/see/see_207.png",
+          "image_references": [
+            "assets/see/see_207.png"
+          ]
         },
         {
           "unique_id": "see_208",
@@ -10960,7 +11617,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_208.png"
+          "image_reference": "assets/see/see_208.png",
+          "image_references": [
+            "assets/see/see_208.png"
+          ]
         },
         {
           "unique_id": "see_209",
@@ -10988,7 +11648,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_210",
@@ -11016,7 +11677,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_211",
@@ -11044,7 +11706,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_212",
@@ -11072,7 +11735,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_213",
@@ -11100,7 +11764,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_214",
@@ -11128,7 +11793,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_215",
@@ -11156,7 +11822,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_216",
@@ -11184,7 +11851,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_217",
@@ -11212,7 +11880,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_218",
@@ -11240,7 +11909,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_219",
@@ -11268,7 +11938,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_220",
@@ -11296,7 +11967,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_221",
@@ -11324,7 +11996,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_222",
@@ -11352,7 +12025,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_223",
@@ -11380,7 +12054,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_224",
@@ -11408,7 +12083,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_225",
@@ -11436,7 +12112,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_226",
@@ -11464,7 +12141,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_227",
@@ -11492,7 +12170,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_228",
@@ -11520,7 +12199,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_229",
@@ -11548,7 +12228,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_230",
@@ -11576,7 +12257,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_231",
@@ -11604,7 +12286,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_232",
@@ -11632,7 +12315,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_233",
@@ -11660,7 +12344,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_234",
@@ -11688,7 +12373,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_235",
@@ -11716,7 +12402,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_236",
@@ -11744,7 +12431,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_237",
@@ -11772,7 +12460,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_238",
@@ -11800,7 +12489,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_239",
@@ -11828,7 +12518,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_240",
@@ -11856,7 +12547,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_241",
@@ -11884,7 +12576,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_242",
@@ -11912,7 +12605,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_243",
@@ -11940,7 +12634,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_244",
@@ -11968,7 +12663,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_245",
@@ -11996,7 +12692,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_246",
@@ -12024,7 +12721,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_247",
@@ -12052,7 +12750,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_248",
@@ -12080,7 +12779,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_249",
@@ -12108,7 +12808,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_250",
@@ -12136,7 +12837,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_251",
@@ -12164,7 +12866,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_252",
@@ -12192,7 +12895,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_253",
@@ -12220,7 +12924,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_254",
@@ -12248,7 +12953,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_255",
@@ -12276,7 +12982,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_256",
@@ -12304,7 +13011,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_257",
@@ -12332,7 +13040,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_258",
@@ -12360,7 +13069,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_259",
@@ -12388,7 +13098,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_260",
@@ -12416,7 +13127,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_260.png"
+          "image_reference": "assets/see/see_260.png",
+          "image_references": [
+            "assets/see/see_260.png"
+          ]
         },
         {
           "unique_id": "see_261",
@@ -12444,7 +13158,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_262",
@@ -12472,7 +13187,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_263",
@@ -12500,7 +13216,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_264",
@@ -12528,7 +13245,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_265",
@@ -12556,7 +13274,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_265.png"
+          "image_reference": "assets/see/see_265.png",
+          "image_references": [
+            "assets/see/see_265.png"
+          ]
         },
         {
           "unique_id": "see_266",
@@ -12584,7 +13305,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_266.png"
+          "image_reference": "assets/see/see_266.png",
+          "image_references": [
+            "assets/see/see_266.png"
+          ]
         },
         {
           "unique_id": "see_267",
@@ -12612,7 +13336,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_268",
@@ -12640,7 +13365,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_269",
@@ -12668,7 +13394,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_270",
@@ -12696,7 +13423,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_271",
@@ -12724,7 +13452,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_272",
@@ -12752,7 +13481,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_273",
@@ -12780,7 +13510,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_274",
@@ -12808,7 +13539,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_275",
@@ -12836,7 +13568,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_276",
@@ -12864,7 +13597,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_277",
@@ -12892,7 +13626,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_278",
@@ -12920,7 +13655,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_279",
@@ -12948,7 +13684,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_280",
@@ -12976,7 +13713,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_281",
@@ -13004,7 +13742,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_282",
@@ -13032,7 +13771,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_282.png"
+          "image_reference": "assets/see/see_282.png",
+          "image_references": [
+            "assets/see/see_282.png"
+          ]
         },
         {
           "unique_id": "see_283",
@@ -13060,7 +13802,8 @@
           },
           "correct_option": "A",
           "has_image": false,
-          "image_reference": null
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "see_284",
@@ -13088,7 +13831,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_284.png"
+          "image_reference": "assets/see/see_284.png",
+          "image_references": [
+            "assets/see/see_284.png"
+          ]
         },
         {
           "unique_id": "see_285",
@@ -13116,7 +13862,10 @@
           },
           "correct_option": "A",
           "has_image": true,
-          "image_reference": "assets/see/see_285.png"
+          "image_reference": "assets/see/see_285.png",
+          "image_references": [
+            "assets/see/see_285.png"
+          ]
         }
       ]
     }

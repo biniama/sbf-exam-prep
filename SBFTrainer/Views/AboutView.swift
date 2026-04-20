@@ -38,7 +38,7 @@ struct AboutView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 22))
                     .shadow(color: .black.opacity(0.3), radius: 12, y: 6)
 
-                Text("SBF Trainer")
+                Text("SBF Exam Prep")
                     .font(.system(size: 26, weight: .bold, design: .rounded))
                     .foregroundStyle(.white)
 
@@ -63,8 +63,8 @@ struct AboutView: View {
         aboutCard(icon: "book.closed.fill", iconColor: .navy, title: "About This App") {
             VStack(alignment: .leading, spacing: 10) {
                 bilingualRow(
-                    de: "SBF Trainer hilft dir, die Prüfung zum Sportbootführerschein Binnen Motor und SBF See zu bestehen.",
-                    en: "SBF Trainer helps you pass the Sportbootführerschein Binnen Motor and SBF See exam."
+                    de: "SBF Exam Prep hilft dir, die Prüfung zum Sportbootführerschein Binnen Motor und SBF See zu bestehen.",
+                    en: "SBF Exam Prep helps you pass the Sportbootführerschein Binnen Motor and SBF See exam."
                 )
                 Divider()
                 bilingualRow(
@@ -130,7 +130,7 @@ struct AboutView: View {
                 }
                 Divider()
                 HStack {
-                    Text("© 2024 SBF Trainer")
+                    Text("© 2024 SBF Exam Prep")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                     Spacer()
@@ -151,7 +151,7 @@ struct AboutView: View {
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.white)
                     .frame(width: 30, height: 30)
-                    .background(iconColor.gradient)
+                    .background(iconColor)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                 Text(title)
                     .font(.headline)

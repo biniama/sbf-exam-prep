@@ -1,7 +1,16 @@
 import SwiftUI
+import UIKit
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        .portrait
+    }
+}
 
 @main
-struct SBFTrainerApp: App {
+struct SBFExamPrepApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var progress = UserProgress.shared
     @StateObject private var store    = QuestionStore.shared
 

@@ -9,6 +9,7 @@ struct LearnView: View {
     @State private var searchText: String = ""
     @State private var showOnlyWrong = false
     @State private var showOnlyBookmarked = false
+    @State private var showTopicPicker = false
 
     var filteredQuestions: [Question] {
         var q = store.questions(for: selectedType, category: selectedCategory)
@@ -26,28 +27,18 @@ struct LearnView: View {
         return q
     }
 
-    var categories: [String] {
-        store.categories(for: selectedType)
-    }
+    var categories: [String] { store.categories(for: selectedType) }
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Type Picker
-                examTypePicker
+                filterBar
                     .padding(.horizontal, 16)
-                    .padding(.top, 8)
+                    .padding(.vertical, 10)
+                    .background(Color.surfaceBG)
 
-                // Category scroll
-                categoryScroll
-                    .padding(.top, 8)
+                Divider().opacity(0.5)
 
-                // Filter chips
-                filterChips
-                    .padding(.horizontal, 16)
-                    .padding(.top, 6)
-
-                // Question list
                 List {
                     ForEach(Array(filteredQuestions.enumerated()), id: \.element.uniqueId) { index, q in
                         NavigationLink(destination: QuestionDetailView(questions: filteredQuestions, startIndex: index)) {
@@ -75,6 +66,62 @@ struct LearnView: View {
                         .clipShape(Capsule())
                 }
             }
+            .sheet(isPresented: $showTopicPicker) {
+                TopicPickerSheet(
+                    categories: categories,
+                    selectedType: $selectedType,
+                    selectedCategory: $selectedCategory
+                )
+                .presentationDetents([.large])
+                .presentationDragIndicator(.visible)
+            }
+        }
+    }
+
+    // MARK: - Filter bar (one row)
+
+    private var filterBar: some View {
+        HStack(spacing: 8) {
+            // Exam type compact picker
+            examTypePicker
+
+            Spacer()
+
+            // Topics button
+            Button { showTopicPicker = true } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "square.grid.2x2")
+                        .font(.caption.weight(.semibold))
+                    Text(selectedCategory ?? "Topics")
+                        .font(.caption.weight(.semibold))
+                        .lineLimit(1)
+                    Image(systemName: "chevron.down")
+                        .font(.system(size: 9, weight: .bold))
+                }
+                .foregroundStyle(selectedCategory != nil ? .white : Color.navyMid)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(selectedCategory != nil ? Color.navy : Color.navyLight.opacity(0.12))
+                .clipShape(Capsule())
+            }
+
+            // Mistakes toggle
+            filterToggle(
+                active: showOnlyWrong,
+                icon: showOnlyWrong ? "xmark.circle.fill" : "xmark.circle"
+            ) {
+                showOnlyWrong.toggle()
+                if showOnlyWrong { showOnlyBookmarked = false }
+            }
+
+            // Saved toggle
+            filterToggle(
+                active: showOnlyBookmarked,
+                icon: showOnlyBookmarked ? "bookmark.fill" : "bookmark"
+            ) {
+                showOnlyBookmarked.toggle()
+                if showOnlyBookmarked { showOnlyWrong = false }
+            }
         }
     }
 
@@ -87,78 +134,218 @@ struct LearnView: View {
                         selectedCategory = nil
                     }
                 } label: {
-                    Text(type.rawValue)
+                    Text(type == .all ? "All" : type.rawValue)
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(selectedType == type ? .white : Color.navy)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 8)
+                        .foregroundStyle(selectedType == type ? .white : Color.navyMid)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 6)
                         .background(selectedType == type ? Color.navy : Color.clear)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .clipShape(Capsule())
                 }
             }
         }
-        .padding(4)
-        .background(Color.navy.opacity(0.1))
-        .clipShape(RoundedRectangle(cornerRadius: 13))
+        .padding(3)
+        .background(Color.navyLight.opacity(0.10))
+        .clipShape(Capsule())
     }
 
-    private var categoryScroll: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
-                categoryChip(nil, label: "All")
-                ForEach(categories, id: \.self) { cat in
-                    categoryChip(cat, label: cat)
-                }
-            }
-            .padding(.horizontal, 16)
-        }
-    }
-
-    private func categoryChip(_ value: String?, label: String) -> some View {
-        let mastery = value.flatMap { progress.masteryForCategory($0) }
-        return Button {
-            withAnimation(.spring(response: 0.3)) { selectedCategory = value }
-        } label: {
-            HStack(spacing: 4) {
-                Text(label)
-                    .font(.caption.weight(.medium))
-                if let pct = mastery {
-                    Text("\(Int(pct * 100))%")
-                        .font(.caption2.bold())
-                        .foregroundStyle(pct >= 0.8 ? Color.successGreen : pct >= 0.5 ? Color.gold : Color.errorRed)
-                }
-            }
-            .foregroundStyle(selectedCategory == value ? .white : Color.navyMid)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 6)
-            .background(selectedCategory == value ? Color.navyMid : Color.navyLight.opacity(0.12))
-            .clipShape(Capsule())
-        }
-    }
-
-    private var filterChips: some View {
-        HStack(spacing: 8) {
-            filterToggle(active: showOnlyWrong, label: "Mistakes", icon: "xmark.circle") {
-                showOnlyWrong.toggle()
-                if showOnlyWrong { showOnlyBookmarked = false }
-            }
-            filterToggle(active: showOnlyBookmarked, label: "Saved", icon: "bookmark") {
-                showOnlyBookmarked.toggle()
-                if showOnlyBookmarked { showOnlyWrong = false }
-            }
-            Spacer()
-        }
-    }
-
-    private func filterToggle(active: Bool, label: String, icon: String, action: @escaping () -> Void) -> some View {
+    private func filterToggle(active: Bool, icon: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            Label(label, systemImage: icon)
-                .font(.caption.weight(.medium))
-                .foregroundStyle(active ? .white : Color.navyMid)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .background(active ? Color.navy : Color.navyLight.opacity(0.12))
-                .clipShape(Capsule())
+            Image(systemName: icon)
+                .font(.system(size: 15, weight: .medium))
+                .foregroundStyle(active ? Color.navy : Color.navyMid)
+                .frame(width: 32, height: 32)
+                .background(active ? Color.gold.opacity(0.25) : Color.navyLight.opacity(0.10))
+                .clipShape(Circle())
+        }
+    }
+}
+
+// MARK: - Topic picker sheet
+
+private struct TopicPickerSheet: View {
+    let categories: [String]
+    @Binding var selectedType: ExamType
+    @Binding var selectedCategory: String?
+    @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var progress: UserProgress
+
+    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+
+                    // Exam type grid
+                    VStack(alignment: .leading, spacing: 10) {
+                        sectionHeader("Exam Type")
+                        LazyVGrid(columns: columns, spacing: 10) {
+                            ForEach(ExamType.allCases) { type in
+                                typeCard(type)
+                            }
+                        }
+                    }
+
+                    // Topic grid
+                    VStack(alignment: .leading, spacing: 10) {
+                        sectionHeader("Topic")
+                        LazyVGrid(columns: columns, spacing: 10) {
+                            topicCard(nil)
+                            ForEach(categories, id: \.self) { cat in
+                                topicCard(cat)
+                            }
+                        }
+                    }
+                }
+                .padding(16)
+            }
+            .background(Color.surfaceBG)
+            .navigationTitle("Filter")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Reset") {
+                        withAnimation { selectedCategory = nil }
+                    }
+                    .foregroundStyle(selectedCategory != nil ? Color.errorRed : Color.secondary)
+                    .disabled(selectedCategory == nil)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") { dismiss() }
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color.navy)
+                }
+            }
+        }
+    }
+
+    private func sectionHeader(_ text: String) -> some View {
+        Text(text.uppercased())
+            .font(.caption.weight(.bold))
+            .foregroundStyle(.secondary)
+            .tracking(0.8)
+    }
+
+    private func typeCard(_ type: ExamType) -> some View {
+        let isSelected = selectedType == type
+        let count = store.questions(for: type).count
+        return Button {
+            withAnimation(.spring(response: 0.3)) {
+                selectedType = type
+                selectedCategory = nil
+            }
+        } label: {
+            HStack(spacing: 10) {
+                Image(systemName: type.icon)
+                    .font(.title3)
+                    .foregroundStyle(isSelected ? .white : typeAccentColor(type))
+                    .frame(width: 36, height: 36)
+                    .background(isSelected ? typeAccentColor(type) : typeAccentColor(type).opacity(0.12))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(type.rawValue)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(isSelected ? Color.navy : Color.navy)
+                    Text("\(count) q")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+                if isSelected {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(Color.navy)
+                        .font(.subheadline)
+                }
+            }
+            .padding(12)
+            .background(isSelected ? Color.gold.opacity(0.18) : Color.cardBG)
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(isSelected ? Color.gold : Color.clear, lineWidth: 1.5)
+            )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func topicCard(_ category: String?) -> some View {
+        let isSelected = selectedCategory == category
+        let allQ = store.questions(for: selectedType, category: category)
+        let count = allQ.count
+        let mastery = category.flatMap { progress.masteryForCategory($0) }
+        let label = category ?? "All Topics"
+
+        return Button {
+            withAnimation(.spring(response: 0.3)) { selectedCategory = category }
+            dismiss()
+        } label: {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Text(label)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(isSelected ? Color.navy : Color.navy)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer()
+                    if isSelected {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundStyle(Color.navy)
+                            .font(.subheadline)
+                    }
+                }
+
+                HStack(spacing: 6) {
+                    Text("\(count) questions")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+
+                    if let pct = mastery {
+                        Spacer()
+                        masteryBadge(pct)
+                    }
+                }
+
+                if let pct = mastery {
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            Capsule().fill(Color.navyLight.opacity(0.12))
+                            Capsule().fill(masteryColor(pct))
+                                .frame(width: geo.size.width * CGFloat(pct))
+                        }
+                    }
+                    .frame(height: 3)
+                }
+            }
+            .padding(12)
+            .background(isSelected ? Color.gold.opacity(0.18) : Color.cardBG)
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(isSelected ? Color.gold : Color.clear, lineWidth: 1.5)
+            )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func masteryBadge(_ pct: Double) -> some View {
+        Text("\(Int(pct * 100))%")
+            .font(.caption2.bold())
+            .foregroundStyle(masteryColor(pct))
+    }
+
+    private func masteryColor(_ pct: Double) -> Color {
+        pct >= 0.8 ? Color.successGreen : pct >= 0.5 ? Color.gold : Color.errorRed
+    }
+
+    private func typeAccentColor(_ type: ExamType) -> Color {
+        switch type {
+        case .all:    return .navyLight
+        case .shared: return .gold
+        case .binnen: return .oceanTeal
+        case .see:    return .navyLight
         }
     }
 }
@@ -174,7 +361,7 @@ struct QuestionRowView: View {
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.white)
                 .frame(width: 36, height: 36)
-                .background(typeColor.gradient)
+                .background(typeColor)
                 .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 4) {

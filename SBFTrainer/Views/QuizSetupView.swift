@@ -111,7 +111,7 @@ struct QuizSetupView: View {
                 }
             }
             .padding(14)
-            .background(examSimulation ? Color.navy.gradient : Color.gold.opacity(0.12).gradient)
+            .background(examSimulation ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.gold.opacity(0.12)))
             .clipShape(RoundedRectangle(cornerRadius: 14))
             .overlay(RoundedRectangle(cornerRadius: 14)
                 .stroke(examSimulation ? Color.clear : Color.gold.opacity(0.4), lineWidth: 1.5))
@@ -168,7 +168,7 @@ struct QuizSetupView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
-            .background(active ? Color.navy.gradient : Color.navyLight.opacity(0.1).gradient)
+            .background(active ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.navyLight.opacity(0.1)))
             .clipShape(RoundedRectangle(cornerRadius: 14))
         }
     }
@@ -259,7 +259,7 @@ struct QuizSetupView: View {
                 .font(.subheadline.bold())
                 .foregroundStyle(questionCount == n ? .white : Color.navyMid)
                 .frame(width: 50, height: 40)
-                .background(questionCount == n ? Color.navy.gradient : Color.navyLight.opacity(0.12).gradient)
+                .background(questionCount == n ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.navyLight.opacity(0.12)))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .disabled(effective == 0)
@@ -282,7 +282,7 @@ struct QuizSetupView: View {
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
-            .background(count > 0 ? (examSimulation ? Color.errorRed.gradient : Color.navy.gradient) : Color.gray.gradient)
+            .background(count > 0 ? (examSimulation ? AppGradient.errorRed : AppGradient.navy) : AppGradient.gray)
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .shadow(color: (examSimulation ? Color.errorRed : Color.navy).opacity(0.3), radius: 8, y: 4)
         }

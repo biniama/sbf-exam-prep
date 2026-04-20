@@ -84,7 +84,7 @@ struct QuestionDetailView: View {
                             .foregroundStyle(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 14)
-                            .background(Color.navy.gradient)
+                            .background(AppGradient.navy)
                             .clipShape(RoundedRectangle(cornerRadius: 14))
                     }
                 } else {

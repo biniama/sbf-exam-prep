@@ -60,7 +60,7 @@ struct SettingsView: View {
                     NavigationLink(destination: AboutView()) {
                         Label {
                             VStack(alignment: .leading, spacing: 2) {
-                                Text("About SBF Trainer")
+                                Text("About SBF Exam Prep")
                                     .foregroundStyle(Color.primary)
                                 Text("Version \(appVersion) · ELWIS 2023")
                                     .font(.caption)

@@ -122,8 +122,8 @@
           "unique_id": "shared_004",
           "question_number": 4,
           "category": "Sound Signals",
-          "german_text": "Wie lang ist die Dauer eines kurzen Tons ( )?",
-          "english_text": "How long is the duration of a short blast? (approximately one second)",
+          "german_text": "Wie lang ist die Dauer eines kurzen Tons (➖)?",
+          "english_text": "How long is the duration of a short blast? (➖)",
           "options": {
             "A": {
               "german": "Etwa 1 Sekunde.",
@@ -143,18 +143,16 @@
             }
           },
           "correct_option": "A",
-          "has_image": true,
-          "image_reference": "assets/shared/shared_004.png",
-          "image_references": [
-            "assets/shared/shared_004.png"
-          ]
+          "has_image": false,
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_005",
           "question_number": 5,
           "category": "Sound Signals",
-          "german_text": "Wie lang ist die Dauer eines langen Tons ( )?",
-          "english_text": "How long is the duration of a prolonged blast? (approximately 4–6 seconds)",
+          "german_text": "Wie lang ist die Dauer eines langen Tons (━━)?",
+          "english_text": "How long is the duration of a prolonged blast? (━━)",
           "options": {
             "A": {
               "german": "Etwa 4 - 6 Sekunden.",
@@ -174,11 +172,9 @@
             }
           },
           "correct_option": "A",
-          "has_image": true,
-          "image_reference": "assets/shared/shared_005.png",
-          "image_references": [
-            "assets/shared/shared_005.png"
-          ]
+          "has_image": false,
+          "image_reference": null,
+          "image_references": null
         },
         {
           "unique_id": "shared_006",

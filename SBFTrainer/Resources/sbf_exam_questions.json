@@ -122,8 +122,8 @@
           "unique_id": "shared_004",
           "question_number": 4,
           "category": "Sound Signals",
-          "german_text": "Wie lang ist die Dauer eines kurzen Tons (➖)?",
-          "english_text": "How long is the duration of a short blast? (➖)",
+          "german_text": "Wie lang ist die Dauer eines kurzen Tons (•)?",
+          "english_text": "How long is the duration of a short blast? (•)",
           "options": {
             "A": {
               "german": "Etwa 1 Sekunde.",

@@ -99,7 +99,7 @@ struct AboutView: View {
     private var featuresCard: some View {
         aboutCard(icon: "star.fill", iconColor: .gold, title: "Features") {
             VStack(alignment: .leading, spacing: 10) {
-                featureRow("quiz.fill", "Randomised quizzes with instant feedback", color: .navy)
+                featureRow("checklist", "Randomised quizzes with instant feedback", color: .navy)
                 featureRow("globe", "Bilingual German / English", color: .oceanTeal)
                 featureRow("photo.fill", "103+ official ELWIS diagrams & signals", color: .navyMid)
                 featureRow("bookmark.fill", "Bookmarks & wrong-answer review", color: .gold)

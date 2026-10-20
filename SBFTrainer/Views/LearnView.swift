@@ -3,6 +3,7 @@ import SwiftUI
 struct LearnView: View {
     @EnvironmentObject var store: QuestionStore
     @EnvironmentObject var progress: UserProgress
+    @Environment(\.horizontalSizeClass) private var hSize
 
     @State private var selectedType: ExamType = .all
     @State private var selectedCategory: String? = nil
@@ -10,196 +11,211 @@ struct LearnView: View {
     @State private var showOnlyWrong = false
     @State private var showOnlyBookmarked = false
     @State private var showTopicPicker = false
+    #if DEBUG
+    @State private var showDebugQuestion = DebugLaunchOptions.selectedQuestion != nil
+    #endif
+    @State private var selection: String? = {
+        #if DEBUG
+        return DebugLaunchOptions.selectedQuestion
+        #else
+        return nil
+        #endif
+    }()
 
     var filteredQuestions: [Question] {
         var q = store.questions(for: selectedType, category: selectedCategory)
         if showOnlyWrong      { q = q.filter { progress.isWrong($0.uniqueId) } }
         if showOnlyBookmarked { q = q.filter { progress.isBookmarked($0.uniqueId) } }
-        if !searchText.isEmpty {
-            let s = searchText.lowercased()
+        let s = searchText.trimmingCharacters(in: .whitespaces)
+        if !s.isEmpty {
             q = q.filter {
-                $0.germanText.lowercased().contains(s) ||
-                $0.englishText.lowercased().contains(s) ||
-                $0.category.lowercased().contains(s) ||
-                "\($0.questionNumber)".contains(s)
+                $0.germanText.localizedCaseInsensitiveContains(s) ||
+                $0.englishText.localizedCaseInsensitiveContains(s) ||
+                $0.localizedCategory.localizedCaseInsensitiveContains(s) ||
+                "\($0.questionNumber)" == s
             }
         }
         return q
     }
 
-    var categories: [String] { store.categories(for: selectedType) }
-
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                filterBar
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 10)
-                    .background(Color.surfaceBG)
-
-                Divider().opacity(0.5)
-
-                List {
-                    ForEach(Array(filteredQuestions.enumerated()), id: \.element.uniqueId) { index, q in
-                        NavigationLink(destination: QuestionDetailView(questions: filteredQuestions, startIndex: index)) {
-                            QuestionRowView(question: q)
-                        }
-                        .listRowBackground(Color.cardBG)
-                        .listRowSeparatorTint(Color.navyLight.opacity(0.15))
+        if hSize == .regular {
+            NavigationSplitView {
+                listScreen(selectable: true)
+                    .navigationSplitViewColumnWidth(min: 340, ideal: 400, max: 480)
+            } detail: {
+                NavigationStack {
+                    let qs = filteredQuestions
+                    if let id = selection, let index = qs.firstIndex(where: { $0.uniqueId == id }) {
+                        QuestionDetailView(questions: qs, startIndex: index)
+                            .id(id)
+                    } else {
+                        ContentUnavailableView("Select a question", systemImage: "text.book.closed",
+                                               description: Text("Choose a question from the list to study it."))
                     }
                 }
-                .listStyle(.plain)
-                .background(Color.surfaceBG)
             }
-            .background(Color.surfaceBG)
-            .searchable(text: $searchText, prompt: "Search questions…")
-            .navigationTitle("Browse")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Text("\(filteredQuestions.count)")
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(Color.navy)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 4)
-                        .background(Color.gold.opacity(0.3))
-                        .clipShape(Capsule())
-                }
-            }
-            .sheet(isPresented: $showTopicPicker) {
-                TopicPickerSheet(
-                    categories: categories,
-                    selectedType: $selectedType,
-                    selectedCategory: $selectedCategory
-                )
-                .presentationDetents([.large])
-                .presentationDragIndicator(.visible)
+        } else {
+            NavigationStack {
+                listScreen(selectable: false)
+                    #if DEBUG
+                    .navigationDestination(isPresented: $showDebugQuestion) {
+                        let qs = filteredQuestions
+                        if let id = selection, let index = qs.firstIndex(where: { $0.uniqueId == id }) {
+                            QuestionDetailView(questions: qs, startIndex: index)
+                        }
+                    }
+                    #endif
             }
         }
     }
 
-    // MARK: - Filter bar (one row)
+    private func listScreen(selectable: Bool) -> some View {
+        let qs = filteredQuestions
+        return VStack(spacing: 0) {
+            filterBar
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(Color.surfaceBG)
+            Divider().opacity(0.5)
+            if qs.isEmpty {
+                ContentUnavailableView.search(text: searchText)
+            } else if selectable {
+                List(selection: $selection) {
+                    ForEach(qs) { q in
+                        QuestionRowView(question: q)
+                            .tag(q.uniqueId)
+                            .listRowBackground(selection == q.uniqueId ? Color.gold.opacity(0.18) : Color.cardBG)
+                    }
+                }
+                .listStyle(.plain)
+            } else {
+                List {
+                    ForEach(Array(qs.enumerated()), id: \.element.uniqueId) { index, q in
+                        NavigationLink(destination: QuestionDetailView(questions: qs, startIndex: index)) {
+                            QuestionRowView(question: q)
+                        }
+                        .listRowBackground(Color.cardBG)
+                    }
+                }
+                .listStyle(.plain)
+            }
+        }
+        .background(Color.surfaceBG)
+        .searchable(text: $searchText, prompt: Text("Search questions"))
+        .navigationTitle("Browse")
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Text("\(qs.count)")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(Color.navy)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(Color.gold.opacity(0.35))
+                    .clipShape(Capsule())
+                    .accessibilityLabel(Text("\(qs.count) questions"))
+            }
+        }
+        .sheet(isPresented: $showTopicPicker) {
+            TopicPickerSheet(selectedType: $selectedType, selectedCategory: $selectedCategory)
+                .presentationDetents([.large])
+                .presentationDragIndicator(.visible)
+        }
+    }
+
+    // MARK: - Filter bar
 
     private var filterBar: some View {
         HStack(spacing: 8) {
-            // Exam type compact picker
-            examTypePicker
-
-            Spacer()
-
-            // Topics button
             Button { showTopicPicker = true } label: {
-                HStack(spacing: 4) {
-                    Image(systemName: "square.grid.2x2")
-                        .font(.caption.weight(.semibold))
-                    Text(selectedCategory ?? "Topics")
-                        .font(.caption.weight(.semibold))
+                HStack(spacing: 5) {
+                    Image(systemName: "line.3.horizontal.decrease.circle")
+                    Text(filterTitle)
                         .lineLimit(1)
                     Image(systemName: "chevron.down")
-                        .font(.system(size: 9, weight: .bold))
+                        .font(.caption2.weight(.bold))
                 }
-                .foregroundStyle(selectedCategory != nil ? .white : Color.navyMid)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(selectedCategory != nil ? Color.navy : Color.navyLight.opacity(0.12))
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(isFiltered ? .white : Color.inkSecondary)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+                .background(isFiltered ? Color.navy : Color.navyLight.opacity(0.12))
                 .clipShape(Capsule())
             }
+            .accessibilityHint(Text("Choose exam and topic"))
 
-            // Mistakes toggle
-            filterToggle(
-                active: showOnlyWrong,
-                icon: showOnlyWrong ? "xmark.circle.fill" : "xmark.circle"
-            ) {
+            Spacer(minLength: 4)
+
+            filterToggle(active: showOnlyWrong,
+                         icon: showOnlyWrong ? "xmark.circle.fill" : "xmark.circle",
+                         label: "Show only mistakes") {
                 showOnlyWrong.toggle()
                 if showOnlyWrong { showOnlyBookmarked = false }
             }
-
-            // Saved toggle
-            filterToggle(
-                active: showOnlyBookmarked,
-                icon: showOnlyBookmarked ? "bookmark.fill" : "bookmark"
-            ) {
+            filterToggle(active: showOnlyBookmarked,
+                         icon: showOnlyBookmarked ? "bookmark.fill" : "bookmark",
+                         label: "Show only saved questions") {
                 showOnlyBookmarked.toggle()
                 if showOnlyBookmarked { showOnlyWrong = false }
             }
         }
     }
 
-    private var examTypePicker: some View {
-        HStack(spacing: 0) {
-            ForEach(ExamType.allCases) { type in
-                Button {
-                    withAnimation(.spring(response: 0.3)) {
-                        selectedType = type
-                        selectedCategory = nil
-                    }
-                } label: {
-                    Text(type == .all ? "All" : type.rawValue)
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(selectedType == type ? .white : Color.navyMid)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .background(selectedType == type ? Color.navy : Color.clear)
-                        .clipShape(Capsule())
-                }
-            }
-        }
-        .padding(3)
-        .background(Color.navyLight.opacity(0.10))
-        .clipShape(Capsule())
+    private var isFiltered: Bool { selectedType != .all || selectedCategory != nil }
+
+    private var filterTitle: String {
+        if let cat = selectedCategory { return store.categoryName(cat) }
+        if selectedType != .all { return selectedType.licenceName }
+        return String(localized: "All topics")
     }
 
-    private func filterToggle(active: Bool, icon: String, action: @escaping () -> Void) -> some View {
+    private func filterToggle(active: Bool, icon: String, label: LocalizedStringKey,
+                              action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Image(systemName: icon)
-                .font(.system(size: 15, weight: .medium))
-                .foregroundStyle(active ? Color.navy : Color.navyMid)
-                .frame(width: 32, height: 32)
-                .background(active ? Color.gold.opacity(0.25) : Color.navyLight.opacity(0.10))
+                .font(.body.weight(.medium))
+                .foregroundStyle(active ? Color.navy : Color.inkSecondary)
+                .frame(width: 40, height: 40)
+                .background(active ? Color.gold.opacity(0.35) : Color.navyLight.opacity(0.12))
                 .clipShape(Circle())
         }
+        .accessibilityLabel(Text(label))
+        .accessibilityAddTraits(active ? .isSelected : [])
     }
 }
 
 // MARK: - Topic picker sheet
 
 private struct TopicPickerSheet: View {
-    let categories: [String]
     @Binding var selectedType: ExamType
     @Binding var selectedCategory: String?
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var store: QuestionStore
     @EnvironmentObject var progress: UserProgress
 
-    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    private let columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-
-                    // Exam type grid
+                VStack(alignment: .leading, spacing: 22) {
                     VStack(alignment: .leading, spacing: 10) {
-                        sectionHeader("Exam Type")
+                        SectionHeader(title: "Exam")
                         LazyVGrid(columns: columns, spacing: 10) {
-                            ForEach(ExamType.allCases) { type in
-                                typeCard(type)
-                            }
+                            ForEach(ExamType.allCases) { typeCard($0) }
                         }
                     }
-
-                    // Topic grid
                     VStack(alignment: .leading, spacing: 10) {
-                        sectionHeader("Topic")
+                        SectionHeader(title: "Topic")
                         LazyVGrid(columns: columns, spacing: 10) {
                             topicCard(nil)
-                            ForEach(categories, id: \.self) { cat in
-                                topicCard(cat)
-                            }
+                            ForEach(store.categories(for: selectedType), id: \.self) { topicCard($0) }
                         }
                     }
                 }
                 .padding(16)
+                .readableWidth()
             }
             .background(Color.surfaceBG)
             .navigationTitle("Filter")
@@ -207,30 +223,19 @@ private struct TopicPickerSheet: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Reset") {
-                        withAnimation { selectedCategory = nil }
+                        withAnimation { selectedType = .all; selectedCategory = nil }
                     }
-                    .foregroundStyle(selectedCategory != nil ? Color.errorRed : Color.secondary)
-                    .disabled(selectedCategory == nil)
+                    .disabled(selectedType == .all && selectedCategory == nil)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Done") { dismiss() }
-                        .fontWeight(.semibold)
-                        .foregroundStyle(Color.navy)
+                    Button("Done") { dismiss() }.fontWeight(.semibold)
                 }
             }
         }
     }
 
-    private func sectionHeader(_ text: String) -> some View {
-        Text(text.uppercased())
-            .font(.caption.weight(.bold))
-            .foregroundStyle(.secondary)
-            .tracking(0.8)
-    }
-
     private func typeCard(_ type: ExamType) -> some View {
         let isSelected = selectedType == type
-        let count = store.questions(for: type).count
         return Button {
             withAnimation(.spring(response: 0.3)) {
                 selectedType = type
@@ -240,115 +245,79 @@ private struct TopicPickerSheet: View {
             HStack(spacing: 10) {
                 Image(systemName: type.icon)
                     .font(.title3)
-                    .foregroundStyle(isSelected ? .white : typeAccentColor(type))
+                    .foregroundStyle(isSelected ? .white : Color.navyLight)
                     .frame(width: 36, height: 36)
-                    .background(isSelected ? typeAccentColor(type) : typeAccentColor(type).opacity(0.12))
+                    .background(isSelected ? Color.navy : Color.navyLight.opacity(0.14))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(type.rawValue)
+                    Text(type.licenceName)
                         .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(isSelected ? Color.navy : Color.navy)
-                    Text("\(count) q")
+                        .foregroundStyle(Color.ink)
+                        .multilineTextAlignment(.leading)
+                    Text("\(store.questions(for: type).count) questions")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
-                Spacer()
-                if isSelected {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(Color.navy)
-                        .font(.subheadline)
-                }
+                Spacer(minLength: 0)
             }
             .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(isSelected ? Color.gold.opacity(0.18) : Color.cardBG)
             .clipShape(RoundedRectangle(cornerRadius: 14))
-            .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .stroke(isSelected ? Color.gold : Color.clear, lineWidth: 1.5)
-            )
+            .overlay(RoundedRectangle(cornerRadius: 14).stroke(isSelected ? Color.gold : .clear, lineWidth: 1.5))
         }
         .buttonStyle(.plain)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
     private func topicCard(_ category: String?) -> some View {
         let isSelected = selectedCategory == category
-        let allQ = store.questions(for: selectedType, category: category)
-        let count = allQ.count
+        let count = store.questions(for: selectedType, category: category).count
         let mastery = category.flatMap { progress.masteryForCategory($0) }
-        let label = category ?? "All Topics"
+        let label = category.map { store.categoryName($0) } ?? String(localized: "All topics")
 
         return Button {
             withAnimation(.spring(response: 0.3)) { selectedCategory = category }
             dismiss()
         } label: {
             VStack(alignment: .leading, spacing: 8) {
+                Text(label)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Color.ink)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
                 HStack {
-                    Text(label)
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(isSelected ? Color.navy : Color.navy)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer()
-                    if isSelected {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundStyle(Color.navy)
-                            .font(.subheadline)
-                    }
-                }
-
-                HStack(spacing: 6) {
                     Text("\(count) questions")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
-
+                    Spacer()
                     if let pct = mastery {
-                        Spacer()
-                        masteryBadge(pct)
+                        Text(pct, format: .percent.precision(.fractionLength(0)))
+                            .font(.caption2.bold())
+                            .foregroundStyle(masteryColor(pct))
                     }
                 }
-
                 if let pct = mastery {
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule().fill(Color.navyLight.opacity(0.12))
-                            Capsule().fill(masteryColor(pct))
-                                .frame(width: geo.size.width * CGFloat(pct))
-                        }
-                    }
-                    .frame(height: 3)
+                    ProgressView(value: pct)
+                        .tint(masteryColor(pct))
                 }
             }
             .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(isSelected ? Color.gold.opacity(0.18) : Color.cardBG)
             .clipShape(RoundedRectangle(cornerRadius: 14))
-            .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .stroke(isSelected ? Color.gold : Color.clear, lineWidth: 1.5)
-            )
+            .overlay(RoundedRectangle(cornerRadius: 14).stroke(isSelected ? Color.gold : .clear, lineWidth: 1.5))
         }
         .buttonStyle(.plain)
-    }
-
-    private func masteryBadge(_ pct: Double) -> some View {
-        Text("\(Int(pct * 100))%")
-            .font(.caption2.bold())
-            .foregroundStyle(masteryColor(pct))
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
     private func masteryColor(_ pct: Double) -> Color {
-        pct >= 0.8 ? Color.successGreen : pct >= 0.5 ? Color.gold : Color.errorRed
-    }
-
-    private func typeAccentColor(_ type: ExamType) -> Color {
-        switch type {
-        case .all:    return .navyLight
-        case .shared: return .gold
-        case .binnen: return .oceanTeal
-        case .see:    return .navyLight
-        }
+        pct >= 0.8 ? .successGreen : pct >= 0.5 ? .gold : .errorRed
     }
 }
+
+// MARK: - Row
 
 struct QuestionRowView: View {
     let question: Question
@@ -356,54 +325,52 @@ struct QuestionRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // Number badge
             Text("\(question.questionNumber)")
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.white)
                 .frame(width: 36, height: 36)
-                .background(typeColor)
+                .background(ExamTypeBadge(type: question.examType).badgeColor)
                 .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(question.germanText)
                     .font(.subheadline)
-                    .foregroundStyle(Color.navy)
-                    .lineLimit(2)
-
+                    .foregroundStyle(Color.ink)
+                    .lineLimit(3)
                 HStack(spacing: 6) {
-                    CategoryBadge(text: question.category)
+                    CategoryBadge(text: question.localizedCategory)
                     if question.hasImage {
                         Image(systemName: "photo")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
+                    if question.soundPattern != nil {
+                        Image(systemName: "speaker.wave.2")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
-
             Spacer(minLength: 0)
-
             VStack(spacing: 4) {
                 if progress.isBookmarked(question.uniqueId) {
-                    Image(systemName: "bookmark.fill")
-                        .font(.caption)
-                        .foregroundStyle(Color.gold)
+                    Image(systemName: "bookmark.fill").font(.caption).foregroundStyle(Color.gold)
                 }
                 if progress.isWrong(question.uniqueId) {
-                    Image(systemName: "exclamationmark.circle.fill")
-                        .font(.caption)
-                        .foregroundStyle(Color.errorRed)
+                    Image(systemName: "exclamationmark.circle.fill").font(.caption).foregroundStyle(Color.errorRed)
                 }
             }
         }
         .padding(.vertical, 6)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(Text("Question \(question.questionNumber): \(question.germanText)"))
+        .accessibilityValue(accessibilityStatus)
     }
 
-    var typeColor: Color {
-        switch question.examType {
-        case .shared: return .gold
-        case .binnen: return .oceanTeal
-        case .see:    return .navyLight
-        case .all:    return .navy
-        }
+    private var accessibilityStatus: Text {
+        var parts: [String] = [question.localizedCategory]
+        if progress.isBookmarked(question.uniqueId) { parts.append(String(localized: "Saved")) }
+        if progress.isWrong(question.uniqueId) { parts.append(String(localized: "Answered wrongly")) }
+        return Text(parts.joined(separator: ", "))
     }
 }

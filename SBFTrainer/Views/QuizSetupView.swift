@@ -1,302 +1,287 @@
 import SwiftUI
 
 struct QuizSetupView: View {
+    enum Mode: Hashable { case practice, review, mistakes, exam }
+
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @Environment(\.horizontalSizeClass) private var hSize
+    @State private var mode: Mode = .practice
     @State private var selectedType: ExamType = .all
+    @State private var examType: ExamType = .binnen
     @State private var selectedCategory: String? = nil
     @State private var questionCount: Int = 20
-    @State private var fromWrong = false
-    @State private var examSimulation = false
     @State private var showQuiz = false
     @StateObject private var vm = QuizViewModel()
 
-    let counts = [10, 20, 30, 50]
+    private let counts = [10, 20, 30, 50]
 
-    var availableCount: Int {
-        if examSimulation { return store.questions(for: selectedType == .all ? .binnen : selectedType).count }
-        if fromWrong { return progress.wrongAnswerCount }
-        return store.questions(for: selectedType, category: selectedCategory).count
+    private var availableCount: Int {
+        switch mode {
+        case .practice: return store.questions(for: selectedType, category: selectedCategory).count
+        case .review:   return progress.dueCount
+        case .mistakes: return progress.wrongAnswerCount
+        case .exam:     return ExamRules(type: examType).totalCount
+        }
+    }
+
+    private var startCount: Int {
+        switch mode {
+        case .practice: return min(questionCount, availableCount)
+        case .review, .mistakes: return min(30, availableCount)
+        case .exam: return availableCount
+        }
     }
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.surfaceBG.ignoresSafeArea()
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 24) {
-                        // Hero
-                        heroCard
-                        // Options
-                        VStack(spacing: 16) {
-                            modeSection
-                            if examSimulation { examSimSection }
-                            if !fromWrong && !examSimulation { examTypeSection }
-                            if !fromWrong && !examSimulation { categorySection }
-                            if !examSimulation { questionCountSection }
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 20) {
+                    heroCard
+                    if hSize == .regular {
+                        HStack(alignment: .top, spacing: 16) {
+                            modeSection.frame(maxWidth: .infinity)
+                            VStack(spacing: 16) { optionSections }.frame(maxWidth: .infinity)
                         }
-                        .padding(.horizontal, 20)
-
-                        startButton
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 32)
+                    } else {
+                        modeSection
+                        optionSections
                     }
+                    startButton
                 }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 32)
+                .readableWidth(Layout.wideWidth)
             }
-            .navigationTitle("Quiz Setup")
+            .background(Color.surfaceBG)
+            .navigationTitle("Quiz")
             .navigationBarTitleDisplayMode(.large)
             .fullScreenCover(isPresented: $showQuiz) {
                 NavigationStack { QuizView(vm: vm) }
             }
+            .onAppear { questionCount = progress.quizCount }
+        }
+    }
+
+    @ViewBuilder
+    private var optionSections: some View {
+        switch mode {
+        case .practice:
+            examTypeSection
+            categorySection
+            questionCountSection
+        case .exam:
+            examSection
+        case .review:
+            infoCard(icon: "arrow.triangle.2.circlepath", title: "Spaced repetition",
+                     text: "Questions you answered come back after 1, 3, 7, 14 and 30 days. A wrong answer starts the cycle again.")
+        case .mistakes:
+            infoCard(icon: "xmark.circle", title: "Your mistakes",
+                     text: "Questions you answered wrongly, most frequent first. Answer one correctly to reduce its count.")
         }
     }
 
     private var heroCard: some View {
-        ZStack {
-            NavyGradient().frame(height: 160)
-            VStack(spacing: 8) {
-                Image(systemName: "brain")
-                    .font(.system(size: 40))
-                    .foregroundStyle(Color.gold)
-                Text("Configure Your Quiz")
-                    .font(.title3.bold())
-                    .foregroundStyle(.white)
-                Text("\(availableCount) questions available")
-                    .font(.subheadline)
-                    .foregroundStyle(Color.white.opacity(0.7))
-            }
+        VStack(spacing: 8) {
+            Image(systemName: mode == .exam ? "timer" : "brain.head.profile")
+                .font(.largeTitle)
+                .foregroundStyle(Color.gold)
+                .accessibilityHidden(true)
+            Text(mode == .exam ? "Exam simulation" : "Configure your quiz")
+                .font(.title3.bold())
+                .foregroundStyle(.white)
+            Text("\(availableCount) questions available")
+                .font(.subheadline)
+                .foregroundStyle(Color.white.opacity(0.75))
         }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 24)
+        .background(NavyGradient())
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .padding(.top, 8)
+        .accessibilityElement(children: .combine)
     }
+
+    // MARK: - Mode
 
     private var modeSection: some View {
-        sectionCard(title: "Quiz Mode", icon: "slider.horizontal.3") {
-            VStack(spacing: 10) {
-                HStack(spacing: 12) {
-                    modeButton(active: !fromWrong && !examSimulation,
-                               label: "All Questions", icon: "rectangle.stack") {
-                        withAnimation { fromWrong = false; examSimulation = false }
-                    }
-                    modeButton(active: fromWrong,
-                               label: "Mistakes Only", icon: "xmark.circle",
-                               badge: progress.wrongAnswerCount > 0 ? "\(progress.wrongAnswerCount)" : nil) {
-                        withAnimation { fromWrong = true; examSimulation = false }
-                    }
-                }
-                examSimButton
+        sectionCard(title: "Mode", icon: "slider.horizontal.3") {
+            VStack(spacing: 8) {
+                modeRow(.practice, icon: "rectangle.stack", title: "Practice",
+                        subtitle: "Random questions with instant feedback")
+                modeRow(.review, icon: "arrow.triangle.2.circlepath", title: "Due for review",
+                        subtitle: "\(progress.dueCount) questions due today", badge: progress.dueCount)
+                modeRow(.mistakes, icon: "xmark.circle", title: "Mistakes",
+                        subtitle: "\(progress.wrongAnswerCount) questions answered wrongly", badge: progress.wrongAnswerCount)
+                modeRow(.exam, icon: "timer", title: "Exam simulation",
+                        subtitle: "Official composition, time limit and pass marks")
             }
         }
     }
 
-    private var examSimButton: some View {
-        Button {
-            withAnimation { examSimulation.toggle(); fromWrong = false }
+    private func modeRow(_ value: Mode, icon: String, title: LocalizedStringKey, subtitle: LocalizedStringKey,
+                         badge: Int = 0) -> some View {
+        let active = mode == value
+        return Button {
+            withAnimation(.spring(response: 0.3)) { mode = value }
         } label: {
             HStack(spacing: 12) {
-                Image(systemName: "timer")
+                Image(systemName: icon)
                     .font(.title3)
-                    .foregroundStyle(examSimulation ? .white : Color.gold)
-                    .frame(width: 32)
+                    .foregroundStyle(active ? .white : Color.navyLight)
+                    .frame(width: 36, height: 36)
+                    .background(active ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.navyLight.opacity(0.12)))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Exam Simulation")
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(examSimulation ? .white : Color.navy)
-                    Text("30 questions · 30 min · 70% to pass")
-                        .font(.caption)
-                        .foregroundStyle(examSimulation ? Color.white.opacity(0.8) : Color.navyMid)
+                    Text(title).font(.subheadline.weight(.semibold)).foregroundStyle(Color.ink)
+                    Text(subtitle).font(.caption).foregroundStyle(.secondary)
                 }
-                Spacer()
-                if examSimulation {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.white)
+                Spacer(minLength: 0)
+                if active {
+                    Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.gold)
                 }
             }
-            .padding(14)
-            .background(examSimulation ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.gold.opacity(0.12)))
-            .clipShape(RoundedRectangle(cornerRadius: 14))
-            .overlay(RoundedRectangle(cornerRadius: 14)
-                .stroke(examSimulation ? Color.clear : Color.gold.opacity(0.4), lineWidth: 1.5))
+            .padding(10)
+            .background(active ? Color.gold.opacity(0.12) : Color.clear)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .contentShape(Rectangle())
         }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(active ? .isSelected : [])
     }
 
-    private var examSimSection: some View {
-        sectionCard(title: "Choose Exam", icon: "doc.text.magnifyingglass") {
-            VStack(spacing: 8) {
-                ForEach([ExamType.binnen, ExamType.see]) { type in
-                    Button {
-                        withAnimation { selectedType = type }
-                    } label: {
-                        HStack {
-                            Image(systemName: type.icon).frame(width: 24)
-                                .foregroundStyle(selectedType == type ? Color.navy : .secondary)
-                            Text(type == .binnen ? "SBF Binnen Motor" : "SBF See")
-                                .font(.subheadline)
-                                .foregroundStyle(Color.navy)
-                            Spacer()
-                            if selectedType == type {
-                                Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.navy)
-                            }
-                        }
-                        .padding(12)
-                        .background(selectedType == type ? Color.navy.opacity(0.08) : Color.clear)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    }
+    // MARK: - Exam
+
+    private var examSection: some View {
+        let rules = ExamRules(type: examType)
+        return sectionCard(title: "Exam", icon: "doc.text.magnifyingglass") {
+            VStack(alignment: .leading, spacing: 12) {
+                Picker("Exam", selection: $examType) {
+                    Text("SBF Inland").tag(ExamType.binnen)
+                    Text("SBF Sea").tag(ExamType.see)
                 }
+                .pickerStyle(.segmented)
+
+                ruleRow("list.number", "\(rules.basicCount) basic + \(rules.specificCount) specific questions")
+                ruleRow("checkmark.seal", "Pass: at least \(rules.basicPassMark) of \(rules.basicCount) basic and \(rules.specificPassMark) of \(rules.specificCount) specific")
+                ruleRow("timer", "Time limit: \(rules.minutes) minutes")
+                ruleRow("eye.slash", "No feedback until the end, like the real exam")
+                if rules.excludesNavigationTask {
+                    ruleRow("map", "The navigation task of the SBF See exam is not included")
+                }
+                Text("Source: ELWIS scoring key for the SBF theory exam.")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
             }
         }
     }
 
-    private func modeButton(active: Bool, label: String, icon: String, badge: String? = nil, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            VStack(spacing: 6) {
-                ZStack(alignment: .topTrailing) {
-                    Image(systemName: icon)
-                        .font(.title2)
-                        .foregroundStyle(active ? .white : Color.navyMid)
-                    if let badge {
-                        Text(badge)
-                            .font(.caption2.bold())
-                            .foregroundStyle(.white)
-                            .padding(4)
-                            .background(Color.errorRed)
-                            .clipShape(Circle())
-                            .offset(x: 8, y: -8)
-                    }
-                }
-                Text(label)
-                    .font(.caption.weight(.medium))
-                    .foregroundStyle(active ? .white : Color.navyMid)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(active ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.navyLight.opacity(0.1)))
-            .clipShape(RoundedRectangle(cornerRadius: 14))
+    private func ruleRow(_ icon: String, _ text: LocalizedStringKey) -> some View {
+        Label {
+            Text(text).font(.subheadline).foregroundStyle(Color.ink).fixedSize(horizontal: false, vertical: true)
+        } icon: {
+            Image(systemName: icon).foregroundStyle(Color.gold)
         }
     }
+
+    // MARK: - Practice options
 
     private var examTypeSection: some View {
-        sectionCard(title: "Exam Type", icon: "list.bullet") {
-            VStack(spacing: 8) {
+        sectionCard(title: "Exam", icon: "list.bullet") {
+            VStack(spacing: 6) {
                 ForEach(ExamType.allCases) { type in
-                    examTypeRow(type)
+                    let active = selectedType == type
+                    Button {
+                        withAnimation(.spring(response: 0.3)) { selectedType = type; selectedCategory = nil }
+                    } label: {
+                        HStack(spacing: 12) {
+                            Image(systemName: type.icon).frame(width: 24)
+                                .foregroundStyle(active ? Color.gold : .secondary)
+                            Text(type.licenceName).font(.subheadline).foregroundStyle(Color.ink)
+                            Spacer()
+                            Text("\(store.questions(for: type).count)")
+                                .font(.caption.monospacedDigit()).foregroundStyle(.secondary)
+                            if active { Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.gold) }
+                        }
+                        .padding(10)
+                        .background(active ? Color.gold.opacity(0.12) : Color.clear)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(active ? .isSelected : [])
                 }
             }
-        }
-    }
-
-    private func examTypeRow(_ type: ExamType) -> some View {
-        Button {
-            withAnimation(.spring(response: 0.3)) {
-                selectedType = type
-                selectedCategory = nil
-            }
-        } label: {
-            HStack(spacing: 12) {
-                Image(systemName: type.icon)
-                    .frame(width: 24)
-                    .foregroundStyle(selectedType == type ? Color.navy : .secondary)
-                Text(type.rawValue)
-                    .font(.subheadline)
-                    .foregroundStyle(Color.navy)
-                Spacer()
-                Text("\(store.questions(for: type).count) Qs")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                if selectedType == type {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(Color.navy)
-                }
-            }
-            .padding(12)
-            .background(selectedType == type ? Color.navy.opacity(0.08) : Color.clear)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
 
     private var categorySection: some View {
-        sectionCard(title: "Category (optional)", icon: "tag") {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    categoryPill(nil, label: "All")
-                    ForEach(store.categories(for: selectedType), id: \.self) { cat in
-                        categoryPill(cat, label: cat)
-                    }
+        sectionCard(title: "Topic (optional)", icon: "tag") {
+            Picker("Topic", selection: $selectedCategory) {
+                Text("All topics").tag(String?.none)
+                ForEach(store.categories(for: selectedType), id: \.self) { cat in
+                    Text(store.categoryName(cat)).tag(String?.some(cat))
                 }
             }
-        }
-    }
-
-    private func categoryPill(_ value: String?, label: String) -> some View {
-        Button {
-            withAnimation { selectedCategory = value }
-        } label: {
-            Text(label)
-                .font(.caption.weight(.medium))
-                .foregroundStyle(selectedCategory == value ? .white : Color.navyMid)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 7)
-                .background(selectedCategory == value ? Color.navyMid : Color.navyLight.opacity(0.12))
-                .clipShape(Capsule())
+            .pickerStyle(.menu)
+            .tint(Color.ink)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
     private var questionCountSection: some View {
-        sectionCard(title: "Number of Questions", icon: "number.circle") {
-            HStack(spacing: 10) {
-                ForEach(counts, id: \.self) { n in
-                    countButton(n)
-                }
-                Spacer()
+        sectionCard(title: "Number of questions", icon: "number.circle") {
+            Picker("Number of questions", selection: $questionCount) {
+                ForEach(counts, id: \.self) { Text("\($0)").tag($0) }
             }
+            .pickerStyle(.segmented)
         }
     }
 
-    private func countButton(_ n: Int) -> some View {
-        let effective = min(n, availableCount)
-        return Button {
-            withAnimation { questionCount = n }
-        } label: {
-            Text("\(n)")
-                .font(.subheadline.bold())
-                .foregroundStyle(questionCount == n ? .white : Color.navyMid)
-                .frame(width: 50, height: 40)
-                .background(questionCount == n ? AnyShapeStyle(AppGradient.navy) : AnyShapeStyle(Color.navyLight.opacity(0.12)))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+    private func infoCard(icon: String, title: LocalizedStringKey, text: LocalizedStringKey) -> some View {
+        sectionCard(title: title, icon: icon) {
+            Text(text)
+                .font(.subheadline)
+                .foregroundStyle(Color.ink)
+                .fixedSize(horizontal: false, vertical: true)
         }
-        .disabled(effective == 0)
-        .opacity(effective == 0 ? 0.4 : 1)
     }
+
+    // MARK: - Start
 
     private var startButton: some View {
-        let examType = examSimulation ? (selectedType == .all ? ExamType.binnen : selectedType) : selectedType
-        let count = examSimulation ? min(30, availableCount) : min(questionCount, availableCount)
-        return Button {
-            vm.setup(type: examType, count: count, category: examSimulation ? nil : selectedCategory,
-                     fromWrong: fromWrong, examMode: examSimulation)
+        Button {
+            switch mode {
+            case .practice: vm.setup(type: selectedType, count: startCount, category: selectedCategory)
+            case .review: vm.setupDueReview()
+            case .mistakes: vm.setupMistakes()
+            case .exam: vm.setupExam(type: examType)
+            }
             showQuiz = true
         } label: {
-            HStack {
-                Image(systemName: examSimulation ? "timer" : "play.fill")
-                Text(examSimulation ? "Start Exam Simulation" : "Start Quiz · \(count) Questions")
-                    .font(.headline)
-            }
-            .foregroundStyle(.white)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(count > 0 ? (examSimulation ? AppGradient.errorRed : AppGradient.navy) : AppGradient.gray)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .shadow(color: (examSimulation ? Color.errorRed : Color.navy).opacity(0.3), radius: 8, y: 4)
+            Label(mode == .exam ? "Start exam simulation" : "Start · \(startCount) questions",
+                  systemImage: mode == .exam ? "timer" : "play.fill")
+                .font(.headline)
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(startCount > 0 ? (mode == .exam ? AppGradient.errorRed : AppGradient.navy) : AppGradient.gray)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
         }
-        .disabled(count == 0)
+        .disabled(startCount == 0)
     }
 
-    private func sectionCard<Content: View>(title: String, icon: String, @ViewBuilder content: () -> Content) -> some View {
+    private func sectionCard<Content: View>(title: LocalizedStringKey, icon: String,
+                                            @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             Label(title, systemImage: icon)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(Color.navyMid)
+                .foregroundStyle(Color.inkSecondary)
+                .accessibilityAddTraits(.isHeader)
             content()
         }
         .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .cardStyle()
     }
 }

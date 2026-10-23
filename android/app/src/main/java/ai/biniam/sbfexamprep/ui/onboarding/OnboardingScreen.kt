@@ -61,6 +61,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.material.icons.filled.CheckBox
+import androidx.compose.material.icons.filled.CheckBoxOutlineBlank
+import androidx.compose.material.icons.filled.RadioButtonChecked
+import androidx.compose.material.icons.filled.RadioButtonUnchecked
+import ai.biniam.sbfexamprep.data.LicenceGoal
+import ai.biniam.sbfexamprep.ui.components.licenceInlandTitle
 import ai.biniam.sbfexamprep.R
 import ai.biniam.sbfexamprep.reminders.ReminderScheduler
 import ai.biniam.sbfexamprep.ui.LocalApp
@@ -68,7 +74,8 @@ import ai.biniam.sbfexamprep.ui.components.LightStatusBarIcons
 import ai.biniam.sbfexamprep.ui.theme.Brand
 import kotlinx.coroutines.launch
 
-private const val PAGES = 4
+private const val PAGES = 5
+private const val REMINDER_PAGE = 3
 
 @Composable
 fun OnboardingScreen() {
@@ -78,14 +85,14 @@ fun OnboardingScreen() {
     val pager = rememberPagerState { PAGES }
     val scope = rememberCoroutineScope()
     fun goTo(page: Int) = scope.launch { pager.animateScrollToPage(page) }
-    fun finish() = app.progressRepository.updateSettings { it.copy(onboardingDone = true) }
+    fun finish() = app.progressRepository.updateSettings { it.copy(onboardingDone = true, hasChosenLicence = true) }
 
     fun enableReminder(granted: Boolean) {
         if (granted) {
             app.progressRepository.updateSettings { it.copy(reminderEnabled = true, reminderMinutes = 18 * 60) }
             ReminderScheduler.schedule(context, 18 * 60)
         }
-        goTo(3)
+        goTo(REMINDER_PAGE + 1)
     }
     val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission(), ::enableReminder)
     LightStatusBarIcons()
@@ -102,8 +109,11 @@ fun OnboardingScreen() {
                            verticalArrangement = Arrangement.spacedBy(16.dp)) {
                         when (page) {
                             0 -> Welcome(app.questions.allQuestions.size)
-                            1 -> Features()
-                            2 -> Reminder(
+                            1 -> Licence(settings.licenceGoal) { goal ->
+                                app.progressRepository.updateSettings { it.copy(licenceGoal = goal, hasChosenLicence = true) }
+                            }
+                            2 -> Features()
+                            REMINDER_PAGE -> Reminder(
                                 onEnable = {
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                                         permission.launch(Manifest.permission.POST_NOTIFICATIONS)
@@ -111,7 +121,7 @@ fun OnboardingScreen() {
                                         enableReminder(NotificationManagerCompat.from(context).areNotificationsEnabled())
                                     }
                                 },
-                                onSkip = { goTo(3) },
+                                onSkip = { goTo(REMINDER_PAGE + 1) },
                             )
                             else -> Translations(settings.showEnglish) { on ->
                                 app.progressRepository.updateSettings { it.copy(showEnglish = on) }
@@ -174,6 +184,34 @@ private fun Welcome(count: Int) {
 }
 
 @Composable
+private fun Licence(goal: LicenceGoal, onChange: (LicenceGoal) -> Unit) {
+    Box(Modifier.size(72.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.08f)), contentAlignment = Alignment.Center) {
+        Icon(Icons.Filled.Sailing, null, Modifier.size(38.dp), tint = Brand.gold)
+    }
+    Title(stringResource(R.string.licence_question))
+    Body(stringResource(R.string.licence_question_sub))
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        GroupLabel(stringResource(R.string.sbf_inland))
+        LicenceGoal.Inland.entries.forEach { option ->
+            val active = goal.inland == option
+            Choice(if (active) Icons.Filled.RadioButtonChecked else Icons.Filled.RadioButtonUnchecked,
+                   licenceInlandTitle(option), active, compact = true) {
+                onChange(goal.copy(inland = option, sea = if (option == LicenceGoal.Inland.NONE) true else goal.sea))
+            }
+        }
+        GroupLabel(stringResource(R.string.licence_sea))
+        Choice(if (goal.sea) Icons.Filled.CheckBox else Icons.Filled.CheckBoxOutlineBlank, stringResource(R.string.licence_also_sea),
+               goal.sea, role = Role.Checkbox, compact = true) {
+            if (goal.inland != LicenceGoal.Inland.NONE) onChange(goal.copy(sea = !goal.sea))
+        }
+    }
+}
+
+@Composable
+private fun GroupLabel(text: String) = Text(text, Modifier.fillMaxWidth().padding(top = 6.dp), style = MaterialTheme.typography.labelLarge,
+                                            color = Color.White.copy(alpha = 0.6f))
+
+@Composable
 private fun Features() {
     Title(stringResource(R.string.everything_you_need))
     Spacer(Modifier.size(4.dp))
@@ -228,12 +266,13 @@ private fun Translations(showEnglish: Boolean, onChange: (Boolean) -> Unit) {
 }
 
 @Composable
-private fun Choice(icon: ImageVector, label: String, active: Boolean, onClick: () -> Unit) {
+private fun Choice(icon: ImageVector, label: String, active: Boolean, role: Role = Role.RadioButton, compact: Boolean = false,
+                   onClick: () -> Unit) {
     Row(
         Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp))
             .background(if (active) Brand.gold else Color.White.copy(alpha = 0.1f))
-            .selectable(active, role = Role.RadioButton, onClick = onClick)
-            .padding(16.dp),
+            .selectable(active, role = role, onClick = onClick)
+            .padding(horizontal = 16.dp, vertical = if (compact) 12.dp else 16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Icon(icon, null, tint = if (active) Brand.navy else Color.White)

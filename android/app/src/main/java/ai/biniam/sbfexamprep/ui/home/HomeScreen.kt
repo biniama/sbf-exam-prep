@@ -79,6 +79,14 @@ import ai.biniam.sbfexamprep.ui.components.SectionHeader
 import ai.biniam.sbfexamprep.ui.components.StatCard
 import ai.biniam.sbfexamprep.ui.components.cardStyle
 import ai.biniam.sbfexamprep.ui.components.currentLocale
+import ai.biniam.sbfexamprep.data.ExamFormat
+import ai.biniam.sbfexamprep.data.ExamRules
+import ai.biniam.sbfexamprep.ui.components.examFormatTitle
+import ai.biniam.sbfexamprep.ui.components.examSummary
+import ai.biniam.sbfexamprep.ui.settings.LicenceDialog
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.saveable.rememberSaveable
 import ai.biniam.sbfexamprep.ui.components.examTypeTitle
 import ai.biniam.sbfexamprep.ui.components.percent
 import ai.biniam.sbfexamprep.ui.components.relativeTime
@@ -114,7 +122,16 @@ fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit) {
     }
     val streak = @Composable { StreakSection(progress.dailyStreak(today), progress.last7Days(today)) }
     val actions = @Composable {
-        QuickActions(settings.quizCount, progress.wrongAnswerCount, quiz, onBrowse)
+        QuickActions(settings.quizCount, settings.licenceGoal.examFormats, progress.wrongAnswerCount, quiz, onBrowse)
+    }
+    var editLicence by rememberSaveable { mutableStateOf(false) }
+    if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
+    // Shown until a licence is picked – also announces the sailing questions to existing users.
+    val licencePrompt = @Composable {
+        if (!settings.hasChosenLicence) {
+            ActionRow(Icons.Filled.Sailing, Brand.gold, stringResource(R.string.new_sailing),
+                      stringResource(R.string.new_sailing_sub)) { editLicence = true }
+        }
     }
     val recent = @Composable { RecentSection(progress.quizHistory.take(4), now) }
 
@@ -127,6 +144,7 @@ fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit) {
             ReadableWidth(Layout.wideWidth) {
                 if (wide) {
                     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                        licencePrompt()
                         stats()
                         Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(16.dp)) { todayCard(); actions() }
@@ -135,7 +153,7 @@ fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit) {
                     }
                 } else {
                     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                        stats(); todayCard(); streak(); actions(); recent()
+                        licencePrompt(); stats(); todayCard(); streak(); actions(); recent()
                     }
                 }
             }
@@ -244,17 +262,19 @@ private fun StreakSection(streak: Int, days: List<Pair<LocalDate, Boolean>>) {
 }
 
 @Composable
-private fun QuickActions(quizCount: Int, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit) {
+private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
         SectionHeader(stringResource(R.string.quick_start), Icons.Filled.Bolt)
         ActionRow(Icons.Filled.PlayCircle, Brand.navy, stringResource(R.string.quick_quiz),
                   pluralStringResource(R.plurals.random_questions, quizCount, quizCount)) {
             quiz.setup(ExamType.ALL, quizCount)
         }
-        ActionRow(Icons.Filled.Timer, Brand.oceanTeal, stringResource(R.string.exam_sim_inland),
-                  stringResource(R.string.exam_sim_inland_sub)) { quiz.setupExam(ExamType.BINNEN) }
-        ActionRow(Icons.Filled.Timer, Brand.navyLight, stringResource(R.string.exam_sim_sea),
-                  stringResource(R.string.exam_sim_sea_sub)) { quiz.setupExam(ExamType.SEE) }
+        formats.forEach { format ->
+            ActionRow(Icons.Filled.Timer, if (format == ExamFormat.SEE) Brand.navyLight else Brand.oceanTeal,
+                      stringResource(R.string.exam_sim_type, examFormatTitle(format)), examSummary(ExamRules(format))) {
+                quiz.setupExam(format)
+            }
+        }
         if (mistakes > 0) {
             ActionRow(Icons.Filled.Replay, Sbf.colors.error, stringResource(R.string.practise_mistakes),
                       pluralStringResource(R.plurals.questions_to_retry, mistakes, mistakes)) { quiz.setupMistakes() }
@@ -301,7 +321,7 @@ private fun RecentSection(records: List<QuizRecord>, now: Long) {
                 Icon(icon, null, tint = tint)
                 Spacer(Modifier.width(12.dp))
                 Column(Modifier.weight(1f)) {
-                    val type = examTypeTitle(record.type)
+                    val type = record.format?.let { examFormatTitle(it) } ?: examTypeTitle(record.type)
                     Text(stringResource(if (exam) R.string.recent_exam else R.string.recent_quiz, type),
                          style = MaterialTheme.typography.titleSmall, color = Sbf.colors.ink)
                     Text(relativeTime(record.date, now, locale), style = MaterialTheme.typography.bodySmall, color = Sbf.colors.muted)

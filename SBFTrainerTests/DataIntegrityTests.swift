@@ -8,8 +8,15 @@ final class DataIntegrityTests: XCTestCase {
 
     func testCatalogueLoads() {
         XCTAssertNil(store.loadError)
-        XCTAssertEqual(store.allQuestions.count, 466)
-        XCTAssertEqual(store.sections.count, 3)
+        XCTAssertEqual(store.allQuestions.count, 513)
+        XCTAssertEqual(store.sections.count, 4)
+    }
+
+    func testSailingQuestionsAreComplete() {
+        let sailing = store.specificQuestions(for: .segeln)
+        XCTAssertEqual(sailing.map(\.questionNumber), Array(254...300))
+        XCTAssertEqual(sailing.filter(\.hasImage).map(\.uniqueId), ["segeln_295"])
+        XCTAssertTrue(sailing.allSatisfy { !$0.englishText.isEmpty })
     }
 
     func testIdsAreUnique() {

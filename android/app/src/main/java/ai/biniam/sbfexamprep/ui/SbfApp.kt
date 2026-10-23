@@ -29,6 +29,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import ai.biniam.sbfexamprep.DebugLaunch
 import ai.biniam.sbfexamprep.R
+import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.SbfApplication
 import ai.biniam.sbfexamprep.ui.browse.BrowseScreen
@@ -76,8 +77,9 @@ fun SbfApp(app: SbfApplication) {
         }
         LaunchedEffect(Unit) {
             when (DebugLaunch.quiz) {
-                "exam-binnen" -> quiz.setupExam(ExamType.BINNEN)
-                "exam-see" -> quiz.setupExam(ExamType.SEE)
+                "exam-binnen" -> quiz.setupExam(ExamFormat.BINNEN_MOTOR)
+                "exam-segeln" -> quiz.setupExam(ExamFormat.BINNEN_MOTOR_SAIL)
+                "exam-see" -> quiz.setupExam(ExamFormat.SEE)
                 "practice" -> quiz.setup(ExamType.ALL, 20)
             }
         }

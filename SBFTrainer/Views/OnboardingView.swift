@@ -5,7 +5,8 @@ struct OnboardingView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
     @State private var page = 0
-    private let pageCount = 4
+    private let pageCount = 5
+    private let notificationPageIndex = 3
 
     var body: some View {
         ZStack {
@@ -13,9 +14,10 @@ struct OnboardingView: View {
 
             TabView(selection: $page) {
                 welcomePage.tag(0)
-                featuresPage.tag(1)
-                notificationPage.tag(2)
-                languagePage.tag(3)
+                LicenceOnboardingPage().tag(1)
+                featuresPage.tag(2)
+                notificationPage.tag(notificationPageIndex)
+                languagePage.tag(4)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .animation(.easeInOut, value: page)
@@ -23,7 +25,7 @@ struct OnboardingView: View {
             VStack {
                 Spacer()
                 pageIndicator.padding(.bottom, 8)
-                if page != 2 {
+                if page != notificationPageIndex {
                     nextButton
                         .padding(.horizontal, 28)
                         .padding(.bottom, 40)
@@ -90,9 +92,9 @@ struct OnboardingView: View {
                     .accessibilityAddTraits(.isHeader)
                 VStack(spacing: 18) {
                     featureRow(icon: "checkmark.seal.fill", color: .green, title: "Official questions",
-                               body: "The complete ELWIS catalogue (August 2023) for SBF Binnen and SBF See, in German with English translations.")
+                               body: "The complete ELWIS catalogue (August 2023) for SBF Binnen (motor and sail) and SBF See, in German with English translations.")
                     featureRow(icon: "timer", color: .orange, title: "Real exam simulation",
-                               body: "7 basic + 23 specific questions with the official pass marks and time limit.")
+                               body: "The official composition, pass marks and time limit for your licence.")
                     featureRow(icon: "photo.fill", color: .teal, title: "Signs, lights & sound signals",
                                body: "Clear illustrations for every image question — and sound signals you can listen to.")
                     featureRow(icon: "arrow.triangle.2.circlepath", color: .purple, title: "Spaced repetition",
@@ -130,7 +132,7 @@ struct OnboardingView: View {
                 Task {
                     let granted = await NotificationManager.shared.requestPermission()
                     progress.setReminder(enabled: granted, minutes: 18 * 60)
-                    withAnimation { page = 3 }
+                    withAnimation { page = notificationPageIndex + 1 }
                 }
             } label: {
                 Label("Enable daily reminder", systemImage: "bell.fill")
@@ -142,7 +144,7 @@ struct OnboardingView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             }
             .padding(.horizontal, 28)
-            Button("Not now") { withAnimation { page = 3 } }
+            Button("Not now") { withAnimation { page = notificationPageIndex + 1 } }
                 .font(.subheadline)
                 .foregroundStyle(Color.white.opacity(0.7))
             Spacer()
@@ -243,6 +245,7 @@ struct OnboardingView: View {
             if page < pageCount - 1 {
                 withAnimation { page += 1 }
             } else {
+                progress.setLicenceGoal(progress.licenceGoal)
                 UserDefaults.standard.set(true, forKey: "onboardingDone")
                 isPresented = false
             }

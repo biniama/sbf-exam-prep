@@ -20,7 +20,7 @@ enum DebugLaunchOptions {
 
     static var selectedQuestion: String? { UserDefaults.standard.string(forKey: "screenshotQuestion") }
 
-    /// Opens a quiz on launch: "exam-binnen", "exam-see" or "practice".
+    /// Opens a quiz on launch: "exam-binnen", "exam-segeln", "exam-see" or "practice".
     static var autoQuiz: String? { UserDefaults.standard.string(forKey: "screenshotQuiz") }
 
     /// Seeds realistic progress so screenshots don't show an empty app.
@@ -41,6 +41,7 @@ enum DebugLaunchOptions {
                                            correctAnswers: 27, isExam: true, passed: true))
         progress.saveQuizRecord(QuizRecord(date: .now.addingTimeInterval(-90_000), examType: "All", totalQuestions: 20,
                                            correctAnswers: 16))
+        progress.setLicenceGoal(LicenceGoal(inland: .motorAndSail, sea: true))
         UserDefaults.standard.set(true, forKey: "demoSeeded")
         UserDefaults.standard.set(true, forKey: "onboardingDone")
     }

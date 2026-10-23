@@ -8,7 +8,7 @@ struct AboutView: View {
             VStack(spacing: 16) {
                 hero
                 card(icon: "book.closed.fill", color: .navyLight, title: "About this app") {
-                    Text("SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor) and See.")
+                    Text("SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor and sail) and See.")
                     Text("Every question is shown in German, as in the exam, with an optional English translation.")
                 }
                 card(icon: "list.bullet.clipboard.fill", color: .oceanTeal, title: "Question catalogue") {

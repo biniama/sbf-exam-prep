@@ -16,9 +16,15 @@ data class QuizRecord(
     /** Set for exam simulations only. */
     val isExam: Boolean? = null,
     val passed: Boolean? = null,
+    val examFormat: String? = null,
 ) {
     val accuracy: Double get() = if (totalQuestions > 0) correctAnswers.toDouble() / totalQuestions else 0.0
     val type: ExamType get() = ExamType.fromRaw(examType)
+
+    /** Exam format of a simulation (records from before formats existed fall back to the exam type). */
+    val format: ExamFormat?
+        get() = ExamFormat.fromRaw(examFormat)
+            ?: if (isExam == true) (if (type == ExamType.SEE) ExamFormat.SEE else ExamFormat.BINNEN_MOTOR) else null
 }
 
 /** Leitner box of a question for spaced repetition; [due] in epoch milliseconds. */
@@ -146,4 +152,7 @@ data class AppSettings(
     val reminderEnabled: Boolean = false,
     val reminderMinutes: Int = 18 * 60,
     val onboardingDone: Boolean = false,
+    val licenceGoal: LicenceGoal = LicenceGoal(),
+    /** False until the learner has picked a licence (onboarding or the Home prompt). */
+    val hasChosenLicence: Boolean = false,
 )

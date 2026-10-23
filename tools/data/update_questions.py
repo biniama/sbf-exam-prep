@@ -6,7 +6,8 @@
   so both apps can play the signal
 * normalises ``image_references`` (one generated illustration per question)
 * merges explanations from tools/data/explanations/*.json when present
-* fixes question texts whose signal glyph was lost when the catalogue was scraped
+* fixes question texts whose signal glyph was lost when the catalogue was scraped, and stray
+  spaces after abbreviations ("EU -Kennzeichnung" → "EU-Kennzeichnung")
 * removes bracketed "[image: …]" notes from the English translations (they were
   machine-generated guesses and often contradicted the actual figure)
 
@@ -24,20 +25,24 @@ QUESTIONS = ROOT / "shared" / "sbf_exam_questions.json"
 EXPLANATIONS = Path(__file__).resolve().parent / "explanations"
 
 CATEGORY_DE = {
+    "Boat Types and Stability": "Bootstypen und Stabilität",
     "COLREGS and Regulations": "KVR und Vorschriften",
     "Definitions and Terms": "Begriffe und Definitionen",
     "Engine and Technical": "Motor und Technik",
     "Environmental Protection": "Umweltschutz",
+    "Gear and Sails": "Ausrüstung und Segel",
     "General Regulations": "Allgemeine Vorschriften",
     "Lights": "Lichter",
     "Lights and Day Signals": "Lichter und Sichtzeichen",
     "Lights and Signals": "Lichter und Signale",
     "Locks": "Schleusen",
+    "Manoeuvres and Emergencies": "Manöver und Notfälle",
     "Navigation": "Navigation",
     "Navigation Signs": "Schifffahrtszeichen",
     "Regulations and Licensing": "Vorschriften und Fahrerlaubnis",
     "Safety": "Sicherheit",
     "Safety and Emergency": "Sicherheit und Notfall",
+    "Sail Trim and Boat Handling": "Segeltrimm und Bootsführung",
     "Seamanship": "Seemannschaft",
     "SeeSchStrO Regulations": "SeeSchStrO-Vorschriften",
     "Sound Signals": "Schallsignale",
@@ -46,6 +51,7 @@ CATEGORY_DE = {
     "Water Sports": "Wassersport",
     "Waterways and Fairway Marks": "Wasserstraßen und Fahrwasserkennzeichnung",
     "Weather": "Wetter",
+    "Wind": "Wind",
 }
 
 SOUND_PATTERNS = {
@@ -74,6 +80,9 @@ SOUND_PATTERNS = {
 # Questions whose official figure was missing from the original data set.
 ADDED_IMAGES = {"see_091"}
 
+# The PDF scrape left a space between an abbreviation and its compound ("EU -Kennzeichnung", "CO 2 -Feuerlöscher").
+ABBREVIATION_GAP = re.compile(r"\b(CO2|[A-Z]{2,4}) -(?=[A-Za-zÄÖÜäöü])")
+
 IMAGE_NOTE = re.compile(r"\s*\[(?:image|Image|figure|picture|diagram)[^\]]*\]")
 
 TEXT_FIXES = {
@@ -81,6 +90,10 @@ TEXT_FIXES = {
     "see_117": ("( )", "(━━ ━━)"),
     "see_140": ("(mindestens )", "(mindestens • • • • •)"),
 }
+
+
+def fix_abbreviations(text: str) -> str:
+    return ABBREVIATION_GAP.sub(r"\1-", text.replace("CO 2", "CO2"))
 
 
 def main():
@@ -108,6 +121,10 @@ def main():
             q["english_text"] = IMAGE_NOTE.sub("", q["english_text"]).strip()
             for opt in q["options"].values():
                 opt["english"] = IMAGE_NOTE.sub("", opt["english"]).strip()
+
+            q["german_text"] = fix_abbreviations(q["german_text"])
+            for opt in q["options"].values():
+                opt["german"] = fix_abbreviations(opt["german"])
 
             if uid in TEXT_FIXES:
                 old, new = TEXT_FIXES[uid]

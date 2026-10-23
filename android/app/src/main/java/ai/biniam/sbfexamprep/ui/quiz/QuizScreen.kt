@@ -70,7 +70,7 @@ import ai.biniam.sbfexamprep.ui.components.PrimaryButton
 import ai.biniam.sbfexamprep.ui.components.QuestionMedia
 import ai.biniam.sbfexamprep.ui.components.ReadableWidth
 import ai.biniam.sbfexamprep.ui.components.cardStyle
-import ai.biniam.sbfexamprep.ui.components.examTypeTitle
+import ai.biniam.sbfexamprep.ui.components.examFormatTitle
 import ai.biniam.sbfexamprep.ui.components.isGerman
 import ai.biniam.sbfexamprep.ui.question.AnswerOption
 import ai.biniam.sbfexamprep.ui.question.QuestionDetail
@@ -142,7 +142,7 @@ private fun QuestionScreen(vm: QuizViewModel, q: Question) {
                         Spacer(Modifier.width(6.dp))
                         Text(vm.formattedTime, style = MaterialTheme.typography.labelLarge, color = color)
                         Spacer(Modifier.weight(1f))
-                        Text(stringResource(R.string.exam_sim_type, examTypeTitle(rules.type)),
+                        Text(stringResource(R.string.exam_sim_type, examFormatTitle(rules.format)),
                              style = MaterialTheme.typography.labelLarge, color = color)
                     }
                 }

@@ -76,6 +76,7 @@ struct Question: Codable, Identifiable, Hashable {
     var examType: ExamType {
         if uniqueId.hasPrefix("shared") { return .shared }
         if uniqueId.hasPrefix("binnen") { return .binnen }
+        if uniqueId.hasPrefix("segeln") { return .segeln }
         return .see
     }
 
@@ -134,17 +135,19 @@ enum ExamType: String, CaseIterable, Identifiable, Codable {
     case all    = "All"
     case shared = "Shared"
     case binnen = "Binnen"
+    case segeln = "Segeln"
     case see    = "See"
 
     var id: String { rawValue }
 
-    /// Localised name (German official terms: Basisfragen, Binnen, See).
+    /// Localised name (German official terms: Basisfragen, Binnen, See, Segeln).
     var title: String {
         switch self {
         case .all:    return String(localized: "All", comment: "Exam type: all questions")
         case .shared: return String(localized: "Basic", comment: "Exam type: Basisfragen shared by both licences")
         case .binnen: return String(localized: "Inland", comment: "Exam type: SBF Binnen")
         case .see:    return String(localized: "Sea", comment: "Exam type: SBF See")
+        case .segeln: return String(localized: "Sailing", comment: "Exam type: sailing questions of the SBF Binnen")
         }
     }
 
@@ -153,8 +156,30 @@ enum ExamType: String, CaseIterable, Identifiable, Codable {
         switch self {
         case .all:    return String(localized: "All questions")
         case .shared: return String(localized: "Basic questions")
-        case .binnen: return String(localized: "SBF Inland (motor)")
+        case .binnen: return String(localized: "SBF Inland")
         case .see:    return String(localized: "SBF Sea")
+        case .segeln: return String(localized: "SBF Inland · sailing")
+        }
+    }
+
+    /// Short noun for an exam part, e.g. "7 basic + 23 inland".
+    var partNoun: String {
+        switch self {
+        case .all:    return String(localized: "questions", comment: "Exam part noun")
+        case .shared: return String(localized: "basic", comment: "Exam part noun: 7 basic + 23 inland")
+        case .binnen: return String(localized: "inland", comment: "Exam part noun: 7 basic + 23 inland")
+        case .see:    return String(localized: "sea", comment: "Exam part noun: 7 basic + 23 sea")
+        case .segeln: return String(localized: "sailing", comment: "Exam part noun: 7 basic + 23 inland + 7 sailing")
+        }
+    }
+
+    /// Heading of an exam part in the result.
+    var partTitle: String {
+        switch self {
+        case .all, .shared: return String(localized: "Basic questions")
+        case .binnen:       return String(localized: "Inland questions")
+        case .see:          return String(localized: "Sea questions")
+        case .segeln:       return String(localized: "Sailing questions")
         }
     }
 
@@ -164,6 +189,7 @@ enum ExamType: String, CaseIterable, Identifiable, Codable {
         case .shared: return "star.circle"
         case .binnen: return "water.waves"
         case .see:    return "wind"
+        case .segeln: return "sailboat"
         }
     }
 }

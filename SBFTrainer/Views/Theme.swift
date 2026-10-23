@@ -108,6 +108,7 @@ struct ExamTypeBadge: View {
         case .shared: return Color(red: 0.62, green: 0.50, blue: 0.16)
         case .binnen: return Color(red: 0.05, green: 0.47, blue: 0.53)
         case .see:    return .navyLight
+        case .segeln: return Color(red: 0.66, green: 0.27, blue: 0.20)
         }
     }
 }

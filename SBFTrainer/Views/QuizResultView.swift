@@ -109,14 +109,21 @@ struct QuizResultView: View {
     private func examBreakdown(_ result: ExamResult) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(title: "Official scoring", systemImage: "list.clipboard")
-            partRow(title: "Basic questions", correct: result.basicCorrect, total: result.rules.basicCount,
-                    passMark: result.rules.basicPassMark, passed: result.basicPassed)
-            partRow(title: "\(result.rules.type.title)-specific questions", correct: result.specificCorrect,
-                    total: result.rules.specificCount, passMark: result.rules.specificPassMark,
-                    passed: result.specificPassed)
-            Text("Both parts are assessed separately and must each be passed.")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            ForEach(result.rules.parts) { part in
+                partRow(title: part.type.partTitle, correct: result.correct(in: part), total: part.count,
+                        passMark: part.passMark, passed: part.passMark == nil ? nil : result.passed(part))
+            }
+            if let total = result.rules.totalPassMark {
+                partRow(title: String(localized: "Total"), correct: result.totalCorrect, total: result.rules.totalCount,
+                        passMark: total, passed: result.totalPassed)
+                Text("For the sailing licence alone, only the total counts.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else if result.rules.parts.count > 1 {
+                Text("Each part is assessed separately and must be passed.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
             if result.rules.excludesNavigationTask {
                 Text("The real SBF See exam also includes a navigation task (9 questions, at least 7 correct), which is not part of this simulation.")
                     .font(.caption)
@@ -128,23 +135,27 @@ struct QuizResultView: View {
         .cardStyle()
     }
 
-    private func partRow(title: LocalizedStringKey, correct: Int, total: Int, passMark: Int, passed: Bool) -> some View {
-        HStack(spacing: 12) {
-            Image(systemName: passed ? "checkmark.circle.fill" : "xmark.circle.fill")
-                .foregroundStyle(passed ? Color.successGreen : Color.errorRed)
+    /// `passed == nil`: the part has no pass mark of its own (only the total counts).
+    private func partRow(title: String, correct: Int, total: Int, passMark: Int?, passed: Bool?) -> some View {
+        let color: Color = passed.map { $0 ? .successGreen : .errorRed } ?? .inkSecondary
+        return HStack(spacing: 12) {
+            Image(systemName: passed.map { $0 ? "checkmark.circle.fill" : "xmark.circle.fill" } ?? "circle.dashed")
+                .foregroundStyle(color)
                 .font(.title3)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(Color.ink)
-                Text("Pass mark: \(passMark) of \(total)")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                if let passMark {
+                    Text("Pass mark: \(passMark) of \(total)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
             Spacer()
             Text("\(correct)/\(total)")
                 .font(.headline.monospacedDigit())
-                .foregroundStyle(passed ? Color.successGreen : Color.errorRed)
+                .foregroundStyle(color)
         }
         .accessibilityElement(children: .combine)
     }
@@ -153,7 +164,8 @@ struct QuizResultView: View {
         HStack(spacing: 12) {
             StatCard(value: "\(vm.correctCount)", label: "Correct", icon: "checkmark.circle.fill", color: .successGreen)
             StatCard(value: "\(vm.wrongIds.count)", label: "Wrong", icon: "xmark.circle.fill", color: .errorRed)
-            StatCard(value: vm.examType.title, label: "Exam", icon: vm.examType.icon, color: .navyLight)
+            StatCard(value: vm.examRules?.format.shortTitle ?? vm.examType.title, label: "Exam",
+                     icon: vm.examRules?.format.icon ?? vm.examType.icon, color: .navyLight)
         }
     }
 

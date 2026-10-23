@@ -1,6 +1,7 @@
 package ai.biniam.sbfexamprep
 
 import android.content.Intent
+import ai.biniam.sbfexamprep.data.LicenceGoal
 import ai.biniam.sbfexamprep.data.ProgressState
 import ai.biniam.sbfexamprep.data.QuizRecord
 import java.time.ZoneId
@@ -12,7 +13,7 @@ import java.time.ZonedDateTime
  *     adb shell am start -n ai.biniam.sbfexamprep/.MainActivity \
  *         --ez demoProgress true --es screenshotTab browse --es screenshotQuestion see_093
  *
- * `screenshotQuiz` opens "exam-binnen", "exam-see" or "practice". Ignored in release builds.
+ * `screenshotQuiz` opens "exam-binnen", "exam-segeln", "exam-see" or "practice". Ignored in release builds.
  */
 object DebugLaunch {
     var tab: String? = null
@@ -45,6 +46,9 @@ object DebugLaunch {
             .saveQuizRecord(QuizRecord(ms - 3_600_000, "Binnen", 30, 27, isExam = true, passed = true), zone)
         val state = p
         app.progressRepository.updateProgress { state }
-        app.progressRepository.updateSettings { it.copy(onboardingDone = true) }
+        app.progressRepository.updateSettings {
+            it.copy(onboardingDone = true, licenceGoal = LicenceGoal(LicenceGoal.Inland.MOTOR_AND_SAIL, sea = true),
+                    hasChosenLicence = true)
+        }
     }
 }

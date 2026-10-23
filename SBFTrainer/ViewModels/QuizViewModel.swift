@@ -45,12 +45,12 @@ final class QuizViewModel: ObservableObject {
 
     var examRules: ExamRules? { if case .exam(let r) = mode { return r } else { return nil } }
 
-    /// Official scoring: basic and licence-specific parts are assessed separately.
+    /// Official scoring: correct answers are counted per exam part.
     var examResult: ExamResult? {
         guard let rules = examRules else { return nil }
-        let basic = questions.filter { $0.examType == .shared && answers[$0.uniqueId] == true }.count
-        let specific = questions.filter { $0.examType != .shared && answers[$0.uniqueId] == true }.count
-        return rules.result(basicCorrect: basic, specificCorrect: specific)
+        var correct: [ExamType: Int] = [:]
+        for q in questions where answers[q.uniqueId] == true { correct[q.examType, default: 0] += 1 }
+        return rules.result(correct: correct)
     }
 
     var examPassed: Bool { examResult?.passed ?? false }
@@ -89,18 +89,17 @@ final class QuizViewModel: ObservableObject {
         start(shuffle ? qs.shuffled() : qs, type: .all, mode: mode)
     }
 
-    /// Exam simulation following the official composition: 7 basic + 23 specific questions.
-    func setupExam(type: ExamType) {
-        let rules = ExamRules(type: type)
-        let basic = store.specificQuestions(for: .shared).shuffled().prefix(rules.basicCount)
-        let specific = store.specificQuestions(for: type).shuffled().prefix(rules.specificCount)
-        start(Array(basic) + Array(specific), type: type, mode: .exam(rules))
+    /// Exam simulation following the official composition, e.g. 7 basic + 23 inland questions.
+    func setupExam(format: ExamFormat) {
+        let rules = ExamRules(format: format)
+        let qs = rules.parts.flatMap { store.specificQuestions(for: $0.type).shuffled().prefix($0.count) }
+        start(qs, type: rules.parts.last?.type ?? .all, mode: .exam(rules))
     }
 
     /// Same questions again, answer order reshuffled.
     func retry() {
         if let rules = examRules {
-            setupExam(type: rules.type)
+            setupExam(format: rules.format)
         } else {
             start(questions.shuffled(), type: examType, mode: mode)
         }
@@ -188,6 +187,7 @@ final class QuizViewModel: ObservableObject {
         if let result = examResult {
             record.isExam = true
             record.passed = result.passed
+            record.examFormat = result.rules.format.rawValue
         }
         progress.saveQuizRecord(record)
     }

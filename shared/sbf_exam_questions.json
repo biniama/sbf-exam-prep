@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "SBF Exam Question Catalog",
-    "description": "Official Sportbootführerschein (SBF) exam questions for Binnen Motor and See, based on the ELWIS August 2023 catalog",
+    "description": "Official Sportbootführerschein (SBF) exam questions for Binnen (motor and sail) and See, based on the ELWIS August 2023 catalog",
     "source": "ELWIS - Elektronischer Wasserstraßen-Informationsservice",
     "catalog_date": "2023-08-01",
     "languages": [
@@ -9,7 +9,7 @@
       "en"
     ],
     "note": "In the official catalog, answer A is always correct. For exam simulation, options should be randomized.",
-    "total_questions": 466
+    "total_questions": 513
   },
   "exam_sections": [
     {
@@ -2164,7 +2164,7 @@
           "english_text": "Which fire extinguisher is suitable for recreational craft and how often must a fire extinguisher be inspected?",
           "options": {
             "A": {
-              "german": "ABC -Pulver- und Schaumlöscher, mindestens alle 2 Jahre.",
+              "german": "ABC-Pulver- und Schaumlöscher, mindestens alle 2 Jahre.",
               "english": "ABC dry powder and foam extinguisher, at least every 2 years."
             },
             "B": {
@@ -2172,7 +2172,7 @@
               "english": "Foam extinguisher, at least once per year."
             },
             "C": {
-              "german": "CO 2 -Feuerlöscher, mindestens alle 2 Jahre.",
+              "german": "CO2-Feuerlöscher, mindestens alle 2 Jahre.",
               "english": "CO2 fire extinguisher, at least every 2 years."
             },
             "D": {
@@ -6943,7 +6943,7 @@
               "english": "The work area must be covered generously and the resulting waste must be treated and disposed of as hazardous waste."
             },
             "B": {
-              "german": "Es dürfen nur Unterwasseranstriche verwendet werden, deren Umweltverträglichkeit an der EU -Kennzeichnung erkenntlich ist.",
+              "german": "Es dürfen nur Unterwasseranstriche verwendet werden, deren Umweltverträglichkeit an der EU-Kennzeichnung erkenntlich ist.",
               "english": "Only underwater paints may be used whose environmental compatibility is recognisable from the EU labelling."
             },
             "C": {
@@ -7447,7 +7447,7 @@
               "english": "Officially recognised identification marks only."
             },
             "D": {
-              "german": "Kennzeichen gemäß Konformitätserklärung ( CE -Zeichen).",
+              "german": "Kennzeichen gemäß Konformitätserklärung ( CE-Zeichen).",
               "english": "Marks pursuant to the declaration of conformity (CE mark)."
             }
           },
@@ -8061,11 +8061,11 @@
           "english_text": "What certificate of competency is required to participate in inland waterway radio communications?",
           "options": {
             "A": {
-              "german": "Das UKW -Sprechfunkzeugnis für den Binnenschifffahrtsfunk.",
+              "german": "Das UKW-Sprechfunkzeugnis für den Binnenschifffahrtsfunk.",
               "english": "The VHF radiotelephone certificate for inland waterways (UKW-Sprechfunkzeugnis für den Binnenschifffahrtsfunk)."
             },
             "B": {
-              "german": "Das CB -Sprechfunkzeugnis für den Binnenschifffahrtsfunk.",
+              "german": "Das CB-Sprechfunkzeugnis für den Binnenschifffahrtsfunk.",
               "english": "The CB radiotelephone certificate for inland waterways."
             },
             "C": {
@@ -8073,7 +8073,7 @@
               "english": "The maritime radio certificate for inland waterways."
             },
             "D": {
-              "german": "Das SRC -Sprechfunkzeugnis für den Binnenschifffahrtsfunk.",
+              "german": "Das SRC-Sprechfunkzeugnis für den Binnenschifffahrtsfunk.",
               "english": "The SRC (Short Range Certificate) for inland waterways."
             }
           },
@@ -8114,6 +8114,1481 @@
           "category_de": "Vorschriften und Fahrerlaubnis",
           "explanation_de": "Radarfahrt ist die Fahrt mit Radar bei unsichtigem Wetter.",
           "explanation_en": "Radar navigation means navigating by radar in restricted visibility."
+        }
+      ]
+    },
+    {
+      "exam_type": "Segeln",
+      "description": "Spezifische Fragen Segeln - Questions specific to SBF Binnen under sail",
+      "question_range": "254-300",
+      "total": 47,
+      "categories": [
+        "Boat Types and Stability",
+        "Gear and Sails",
+        "Manoeuvres and Emergencies",
+        "Sail Trim and Boat Handling",
+        "Wind"
+      ],
+      "questions": [
+        {
+          "unique_id": "segeln_254",
+          "question_number": 254,
+          "category": "Boat Types and Stability",
+          "german_text": "Was wird unter einem \"Kimmkieler\" verstanden?",
+          "english_text": "What is a \"bilge keeler\" (Kimmkieler)?",
+          "options": {
+            "A": {
+              "german": "Eine Yacht mit zwei Seitenkielen.",
+              "english": "A yacht with two bilge keels (side keels)."
+            },
+            "B": {
+              "german": "Eine Yacht mit zwei Seitenschwertern.",
+              "english": "A yacht with two side centreboards."
+            },
+            "C": {
+              "german": "Eine Yacht mit einem Kielschwert.",
+              "english": "A yacht with a keel-centreboard."
+            },
+            "D": {
+              "german": "Eine Yacht mit zwei Kielen hintereinander.",
+              "english": "A yacht with two keels one behind the other."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Ein Kimmkieler hat statt eines Mittelkiels zwei Seitenkiele, die schräg links und rechts unter dem Rumpf sitzen.",
+          "explanation_en": "A bilge keeler has two side keels, angled out to port and starboard under the hull, instead of one central keel."
+        },
+        {
+          "unique_id": "segeln_255",
+          "question_number": 255,
+          "category": "Boat Types and Stability",
+          "german_text": "Worin besteht der Vorteil eines Kimmkielers gegenüber anderen Kielbooten?",
+          "english_text": "What is the advantage of a bilge keeler over other keelboats?",
+          "options": {
+            "A": {
+              "german": "Er kann problemlos aufrecht trocken fallen.",
+              "english": "It can dry out upright without problems."
+            },
+            "B": {
+              "german": "Sein Tiefgang ist größer.",
+              "english": "Its draught is greater."
+            },
+            "C": {
+              "german": "Die Abdrift ist geringer als bei anderen Kielbooten.",
+              "english": "Its leeway is smaller than that of other keelboats."
+            },
+            "D": {
+              "german": "Der Kiel lässt sich aufholen.",
+              "english": "The keel can be raised."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Auf seinen beiden Seitenkielen steht ein Kimmkieler bei Niedrigwasser aufrecht – ideal für Tidengewässer und trockenfallende Liegeplätze.",
+          "explanation_en": "Standing on its two side keels, a bilge keeler stays upright when the water drops away – ideal for tidal waters and moorings that dry out."
+        },
+        {
+          "unique_id": "segeln_256",
+          "question_number": 256,
+          "category": "Boat Types and Stability",
+          "german_text": "Was wird unter einer \"Kielschwertyacht\" verstanden?",
+          "english_text": "What is a \"keel-centreboard yacht\" (Kielschwertyacht)?",
+          "options": {
+            "A": {
+              "german": "Eine Yacht mit flach gehendem Ballastkiel und zusätzlichem aufholbarem Schwert.",
+              "english": "A yacht with a shallow ballast keel and an additional retractable centreboard."
+            },
+            "B": {
+              "german": "Eine Yacht mit einem Ballastkiel und einem zusätzlichen Schwert.",
+              "english": "A yacht with a ballast keel and an additional centreboard."
+            },
+            "C": {
+              "german": "Eine Yacht mit einem aufholbaren Ballastkiel.",
+              "english": "A yacht with a retractable ballast keel."
+            },
+            "D": {
+              "german": "Eine Yacht mit zwei Seitenkielen.",
+              "english": "A yacht with two bilge keels."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Die Kielschwertyacht kombiniert einen flachen Ballastkiel (wenig Tiefgang) mit einem aufholbaren Schwert, das am Wind die Abdrift verringert.",
+          "explanation_en": "A keel-centreboard yacht combines a shallow ballast keel (little draught) with a retractable centreboard that reduces leeway when sailing upwind."
+        },
+        {
+          "unique_id": "segeln_257",
+          "question_number": 257,
+          "category": "Boat Types and Stability",
+          "german_text": "Wodurch wirken die Bodenlenzventile einer Jolle, die unterhalb der Wasserlinie liegen?",
+          "english_text": "How do a dinghy's self-bailers (Bodenlenzventile), which lie below the waterline, work?",
+          "options": {
+            "A": {
+              "german": "Durch den Sog, der bei Fahrt durchs Wasser entsteht.",
+              "english": "Through the suction created when the boat moves through the water."
+            },
+            "B": {
+              "german": "Durch die Schwerkraft fließt das Wasser außenbords.",
+              "english": "Gravity makes the water flow overboard."
+            },
+            "C": {
+              "german": "Durch die Massenträgheit, die das Boot besitzt.",
+              "english": "Through the boat's inertia."
+            },
+            "D": {
+              "german": "Durch das Druckgefälle zwischen Luft- und Wasserdruck.",
+              "english": "Through the pressure difference between air and water pressure."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "In Fahrt erzeugt die Strömung am Lenzventil einen Sog, der das Wasser aus dem Boot zieht. Im Stand funktionieren Bodenlenzventile nicht.",
+          "explanation_en": "When the boat moves, the water flowing past the self-bailer creates suction that draws the water out. At rest, self-bailers do not work."
+        },
+        {
+          "unique_id": "segeln_258",
+          "question_number": 258,
+          "category": "Boat Types and Stability",
+          "german_text": "Was wird unter \"Formstabilität\" verstanden?",
+          "english_text": "What is meant by \"form stability\" (Formstabilität)?",
+          "options": {
+            "A": {
+              "german": "Die Fähigkeit eines Schiffes, durch seine Rumpfform der Krängung entgegenzuwirken.",
+              "english": "A vessel's ability to resist heeling through the shape of its hull."
+            },
+            "B": {
+              "german": "Die Fähigkeit eines Schiffes, sich nach einer Kenterung wieder von selbst aufzurichten.",
+              "english": "A vessel's ability to right itself after capsizing."
+            },
+            "C": {
+              "german": "Die Fähigkeit eines Schiffes beim Loslassen der Pinne den Kurs beizubehalten.",
+              "english": "A vessel's ability to hold its course when the tiller is released."
+            },
+            "D": {
+              "german": "Die Fähigkeit eines Schiffes über Jahre die Rumpfform auch bei starker Beanspruchung beizubehalten.",
+              "english": "A vessel's ability to keep its hull shape for years, even under heavy loads."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Formstabilität entsteht durch einen breiten, flachen Rumpf: Bei Krängung wandert der Auftrieb nach Lee und richtet das Boot auf.",
+          "explanation_en": "Form stability comes from a wide, flat hull: when the boat heels, the buoyancy moves to leeward and pushes the boat upright."
+        },
+        {
+          "unique_id": "segeln_259",
+          "question_number": 259,
+          "category": "Boat Types and Stability",
+          "german_text": "Was wird unter \"Gewichtsstabilität\" verstanden?",
+          "english_text": "What is meant by \"weight stability\" (Gewichtsstabilität)?",
+          "options": {
+            "A": {
+              "german": "Die Fähigkeit eines Schiffes, durch seinen tief liegenden Ballast der Krängung entgegenzuwirken.",
+              "english": "A vessel's ability to resist heeling through its low-lying ballast."
+            },
+            "B": {
+              "german": "Die Möglichkeit durch zusätzlichen Innenballast die Krängung zu verringern.",
+              "english": "The possibility of reducing heel by adding internal ballast."
+            },
+            "C": {
+              "german": "Die Möglichkeit durch ein hohes Crewgewicht der Krängung entgegenzuwirken.",
+              "english": "The possibility of countering heel with a heavy crew."
+            },
+            "D": {
+              "german": "Die Fähigkeit eines Schiffes, durch seine Rumpfform der Krängung entgegenzuwirken.",
+              "english": "A vessel's ability to resist heeling through the shape of its hull."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Gewichtsstabilität entsteht durch tief liegenden Ballast, meist im Kiel. Je stärker das Boot krängt, desto weiter wirkt das Gewicht als Hebel nach Luv.",
+          "explanation_en": "Weight stability comes from low-lying ballast, usually in the keel. The more the boat heels, the further the weight acts as a lever to windward."
+        },
+        {
+          "unique_id": "segeln_260",
+          "question_number": 260,
+          "category": "Boat Types and Stability",
+          "german_text": "Welche Boote sind vorwiegend \"gewichtsstabil\"?",
+          "english_text": "Which boats are mainly \"weight-stable\"?",
+          "options": {
+            "A": {
+              "german": "Kielyachten sind vorwiegend \"gewichtsstabil\".",
+              "english": "Keel yachts are mainly \"weight-stable\"."
+            },
+            "B": {
+              "german": "Jollen sind vorwiegend \"gewichtsstabil\".",
+              "english": "Dinghies are mainly \"weight-stable\"."
+            },
+            "C": {
+              "german": "Katamarane sind vorwiegend \"gewichtsstabil\".",
+              "english": "Catamarans are mainly \"weight-stable\"."
+            },
+            "D": {
+              "german": "Trimarane sind vorwiegend \"gewichtsstabil\".",
+              "english": "Trimarans are mainly \"weight-stable\"."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Kielyachten richten sich durch ihren schweren Ballastkiel auf – sie sind vorwiegend gewichtsstabil.",
+          "explanation_en": "Keel yachts are pushed upright by their heavy ballast keel – they are mainly weight-stable."
+        },
+        {
+          "unique_id": "segeln_261",
+          "question_number": 261,
+          "category": "Boat Types and Stability",
+          "german_text": "Welche Boote sind vorwiegend \"formstabil\"?",
+          "english_text": "Which boats are mainly \"form-stable\"?",
+          "options": {
+            "A": {
+              "german": "Jollen sind vorwiegend \"formstabil\".",
+              "english": "Dinghies are mainly \"form-stable\"."
+            },
+            "B": {
+              "german": "Kielyachten sind vorwiegend \"formstabil\".",
+              "english": "Keel yachts are mainly \"form-stable\"."
+            },
+            "C": {
+              "german": "Kimmkieler sind vorwiegend \"formstabil\".",
+              "english": "Bilge keelers are mainly \"form-stable\"."
+            },
+            "D": {
+              "german": "Kielschwertyachten sind vorwiegend \"formstabil\".",
+              "english": "Keel-centreboard yachts are mainly \"form-stable\"."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Jollen haben keinen Ballastkiel. Ihre Stabilität kommt aus der breiten Rumpfform und dem Gewicht der Crew – sie sind vorwiegend formstabil.",
+          "explanation_en": "Dinghies have no ballast keel. Their stability comes from the wide hull shape and the crew's weight – they are mainly form-stable."
+        },
+        {
+          "unique_id": "segeln_262",
+          "question_number": 262,
+          "category": "Boat Types and Stability",
+          "german_text": "Wodurch kann bei formstabilen Booten bei viel Wind die Stabilität erhöht werden?",
+          "english_text": "How can the stability of form-stable boats be increased in strong wind?",
+          "options": {
+            "A": {
+              "german": "Durch Ausreiten bzw. durch Benutzung der Trapezeinrichtung.",
+              "english": "By hiking out or using the trapeze."
+            },
+            "B": {
+              "german": "Durch Verlagerung von Innenballast.",
+              "english": "By shifting internal ballast."
+            },
+            "C": {
+              "german": "Durch Umpumpen von Wasserballast.",
+              "english": "By pumping water ballast across."
+            },
+            "D": {
+              "german": "Durch Ausfahren von sogenannten Trimmklappen oder eines Zusatzschwertes.",
+              "english": "By extending so-called trim tabs or an additional centreboard."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Beim Ausreiten oder im Trapez verlagert die Crew ihr Gewicht weit nach Luv und vergrößert so das aufrichtende Moment.",
+          "explanation_en": "When hiking out or on the trapeze, the crew moves its weight far to windward and so increases the righting moment."
+        },
+        {
+          "unique_id": "segeln_263",
+          "question_number": 263,
+          "category": "Boat Types and Stability",
+          "german_text": "Wie verändert sich das aufrichtende Kraftmoment einer Jolle bei Krängung?",
+          "english_text": "How does the righting moment of a dinghy change as it heels?",
+          "options": {
+            "A": {
+              "german": "Es nimmt anfangs zu bis zu einem Maximum, von da wieder ab, bis Auftriebs- und Gewischtsschwerpunkt übereinander liegen, anschließend kentert die Jolle.",
+              "english": "It first increases to a maximum and then decreases until the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes."
+            },
+            "B": {
+              "german": "Es nimmt anfangs ab bis zu einem Minimum, von da wieder zu, bis Auftriebs- und Gewichtsschwerpunkt übereinander liegen, anschließend kentert die Jolle.",
+              "english": "It first decreases to a minimum and then increases again until the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes."
+            },
+            "C": {
+              "german": "Es nimmt anfangs ab und erreicht ein Maximum, wenn Auftriebs- und Gewichtsschwerpunkt übereinander liegen, anschließend kentert die Jolle.",
+              "english": "It first decreases and reaches a maximum when the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes."
+            },
+            "D": {
+              "german": "Es nimmt anfangs ab und erreicht sein Minimum, bis Auftriebs- und Gewichtsschwerpunkt übereinander liegen, anschließend kentert die Jolle.",
+              "english": "It first decreases and reaches its minimum when the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Bei einer Jolle steigt das aufrichtende Moment zunächst bis zu einem Maximum und nimmt dann ab. Liegen Auftriebs- und Gewichtsschwerpunkt übereinander, ist kein aufrichtendes Moment mehr da – die Jolle kentert.",
+          "explanation_en": "A dinghy's righting moment first rises to a maximum and then falls. Once the centres of buoyancy and gravity are vertically aligned, there is no righting moment left – the dinghy capsizes."
+        },
+        {
+          "unique_id": "segeln_264",
+          "question_number": 264,
+          "category": "Boat Types and Stability",
+          "german_text": "Wie verändert sich das aufrichtende Kraftmoment einer Kielyacht bei stetig zunehmender Krängung?",
+          "english_text": "How does the righting moment of a keel yacht change as the heel steadily increases?",
+          "options": {
+            "A": {
+              "german": "Es nimmt zu und erreicht nach Überschreitung des Maximums seinen kritischen Winkel erst bei über 90°.",
+              "english": "It increases and, after passing its maximum, reaches its critical angle only beyond 90°."
+            },
+            "B": {
+              "german": "Es nimmt bis zum Erreichen des kritischen Winkels zu, der bei etwa 70° liegt.",
+              "english": "It increases until the critical angle of about 70° is reached."
+            },
+            "C": {
+              "german": "Es nimmt bis zum Erreichen des kritischen Winkels von 90° ab.",
+              "english": "It decreases until the critical angle of 90° is reached."
+            },
+            "D": {
+              "german": "Es nimmt bis 90° Krängung ab und dann stetig zu.",
+              "english": "It decreases up to 90° of heel and then increases steadily."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Bootstypen und Stabilität",
+          "explanation_de": "Bei der Kielyacht wächst das aufrichtende Moment mit der Krängung. Der kritische Winkel, ab dem sie nicht mehr selbst aufrichtet, liegt erst jenseits von 90°.",
+          "explanation_en": "A keel yacht's righting moment grows as it heels. The critical angle beyond which it no longer rights itself lies only beyond 90°."
+        },
+        {
+          "unique_id": "segeln_265",
+          "question_number": 265,
+          "category": "Gear and Sails",
+          "german_text": "Welche Maßnahme ist bei Ruderbruch auf einer Jolle zu treffen?",
+          "english_text": "What must be done if a dinghy's rudder breaks?",
+          "options": {
+            "A": {
+              "german": "Notruder oder Paddel als Ersatz nehmen, Fahrwasser verlassen, sich als manövrierunfähig zu erkennen geben.",
+              "english": "Use an emergency rudder or a paddle instead, leave the fairway and show that you are unable to manoeuvre."
+            },
+            "B": {
+              "german": "Sofort ankern und einen Notruf absetzen, Signalkörper (blauer Kegel) setzen.",
+              "english": "Anchor immediately, send a distress call and hoist a signal shape (blue cone)."
+            },
+            "C": {
+              "german": "Rote Flagge kreisförmig schwenken, Schleppleine bereithalten.",
+              "english": "Wave a red flag in a circle and have a towline ready."
+            },
+            "D": {
+              "german": "Segel bergen, Motor starten und in Rückwärtsfahrt das Ufer ansteuern.",
+              "english": "Lower the sails, start the engine and head for the shore in reverse."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Ohne Ruder ist die Jolle kaum steuerbar: Notruder oder Paddel nutzen, das Fahrwasser verlassen und anderen zeigen, dass man manövrierunfähig ist.",
+          "explanation_en": "Without a rudder the dinghy can hardly be steered: use an emergency rudder or paddle, leave the fairway and show others that you are unable to manoeuvre."
+        },
+        {
+          "unique_id": "segeln_266",
+          "question_number": 266,
+          "category": "Gear and Sails",
+          "german_text": "Wodurch kann eine Pinnensteuerung auch bei Krängung des Bootes sicher erreicht und bedient werden?",
+          "english_text": "How can tiller steering be reached and operated safely even when the boat heels?",
+          "options": {
+            "A": {
+              "german": "Durch einen Pinnenausleger.",
+              "english": "With a tiller extension."
+            },
+            "B": {
+              "german": "Durch Verstellen des Travellers.",
+              "english": "By adjusting the traveller."
+            },
+            "C": {
+              "german": "Durch das Ausreiten mit Hilfe des Trapezes.",
+              "english": "By hiking out on the trapeze."
+            },
+            "D": {
+              "german": "Durch Ersetzen der Pinne durch ein Rad.",
+              "english": "By replacing the tiller with a wheel."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Mit dem Pinnenausleger kann der Steuermann auch beim Ausreiten auf der hohen Kante steuern.",
+          "explanation_en": "A tiller extension lets the helmsman steer even while hiking out on the windward side."
+        },
+        {
+          "unique_id": "segeln_267",
+          "question_number": 267,
+          "category": "Gear and Sails",
+          "german_text": "Warum sollte Tauwerk an Bord stets ordentlich aufgeschossen werden?",
+          "english_text": "Why should ropes on board always be coiled neatly?",
+          "options": {
+            "A": {
+              "german": "Damit es im Gebrauchsfall klar liegt.",
+              "english": "So they are clear and ready when needed."
+            },
+            "B": {
+              "german": "Damit es trocknen kann und nicht verrottet.",
+              "english": "So they can dry and do not rot."
+            },
+            "C": {
+              "german": "Damit die Reißfestigkeit erhalten bleibt.",
+              "english": "So their breaking strength is maintained."
+            },
+            "D": {
+              "german": "Damit es nicht durch UV-Strahlung beschädigt wird.",
+              "english": "So they are not damaged by UV radiation."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Ordentlich aufgeschossenes Tauwerk ist sofort einsatzbereit und vertörnt nicht, wenn es schnell gebraucht wird.",
+          "explanation_en": "Neatly coiled rope is ready to use straight away and does not tangle when it is needed in a hurry."
+        },
+        {
+          "unique_id": "segeln_268",
+          "question_number": 268,
+          "category": "Gear and Sails",
+          "german_text": "Warum sollten Fallen stets ordentlich aufgeschossen werden?",
+          "english_text": "Why should halyards always be coiled neatly?",
+          "options": {
+            "A": {
+              "german": "Damit sie im Gebrauchsfall schnell und sicher gefiert werden können.",
+              "english": "So they can be let go quickly and safely when needed."
+            },
+            "B": {
+              "german": "Damit sie trocknen können und nicht verrotten.",
+              "english": "So they can dry and do not rot."
+            },
+            "C": {
+              "german": "Damit sie nicht durch UV-Strahlung beschädigt werden.",
+              "english": "So they are not damaged by UV radiation."
+            },
+            "D": {
+              "german": "Damit sie nicht mit den Schoten verwechselt werden können.",
+              "english": "So they cannot be confused with the sheets."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Ein Fall muss im Notfall sofort und ohne Kinken laufen, damit das Segel schnell geborgen werden kann.",
+          "explanation_en": "In an emergency a halyard must run free immediately and without kinks so the sail can be lowered quickly."
+        },
+        {
+          "unique_id": "segeln_269",
+          "question_number": 269,
+          "category": "Gear and Sails",
+          "german_text": "Wie heißen die Ecken eines Segels?",
+          "english_text": "What are the corners of a sail called?",
+          "options": {
+            "A": {
+              "german": "Kopf, Hals, Schothorn.",
+              "english": "Head, tack, clew (Kopf, Hals, Schothorn)."
+            },
+            "B": {
+              "german": "Kopf, Hals, Nock.",
+              "english": "Head, tack, boom end (Kopf, Hals, Nock)."
+            },
+            "C": {
+              "german": "Vorliek, Unterliek, Achterliek.",
+              "english": "Luff, foot, leech (Vorliek, Unterliek, Achterliek)."
+            },
+            "D": {
+              "german": "Vorstag, Unterwant, Achterstag.",
+              "english": "Forestay, lower shroud, backstay (Vorstag, Unterwant, Achterstag)."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Die Ecken heißen Kopf (oben), Hals (vorne unten) und Schothorn (hinten unten, dort greift die Schot an).",
+          "explanation_en": "The corners are the head (top), the tack (lower front) and the clew (lower back, where the sheet is attached)."
+        },
+        {
+          "unique_id": "segeln_270",
+          "question_number": 270,
+          "category": "Gear and Sails",
+          "german_text": "Wie heißen die Kanten eines Segels?",
+          "english_text": "What are the edges of a sail called?",
+          "options": {
+            "A": {
+              "german": "Vorliek, Unterliek, Achterliek.",
+              "english": "Luff, foot, leech (Vorliek, Unterliek, Achterliek)."
+            },
+            "B": {
+              "german": "Kopf, Hals, Nock.",
+              "english": "Head, tack, boom end (Kopf, Hals, Nock)."
+            },
+            "C": {
+              "german": "Vorstag, Unterwant, Achterstag.",
+              "english": "Forestay, lower shroud, backstay (Vorstag, Unterwant, Achterstag)."
+            },
+            "D": {
+              "german": "Kopf, Hals, Schothorn.",
+              "english": "Head, tack, clew (Kopf, Hals, Schothorn)."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Die Kanten heißen Vorliek (vorne), Unterliek (unten) und Achterliek (hinten).",
+          "explanation_en": "The edges are the luff (front), the foot (bottom) and the leech (back)."
+        },
+        {
+          "unique_id": "segeln_271",
+          "question_number": 271,
+          "category": "Gear and Sails",
+          "german_text": "Wozu dienen Segellatten?",
+          "english_text": "What are sail battens for?",
+          "options": {
+            "A": {
+              "german": "Der Formgebung und Aussteifung des Segels.",
+              "english": "To give the sail its shape and stiffen it."
+            },
+            "B": {
+              "german": "Der Erleichterung des Reffens.",
+              "english": "To make reefing easier."
+            },
+            "C": {
+              "german": "Der Verhinderung des Killens von Segeln.",
+              "english": "To stop the sail from flogging."
+            },
+            "D": {
+              "german": "Der Möglichkeit das Segel auch bei Starkwind nutzen zu können.",
+              "english": "To allow the sail to be used in strong wind as well."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Segellatten stecken in Taschen am Achterliek. Sie stützen das Profil und halten das Achterliek in Form.",
+          "explanation_en": "Sail battens sit in pockets along the leech. They support the sail's profile and keep the leech in shape."
+        },
+        {
+          "unique_id": "segeln_272",
+          "question_number": 272,
+          "category": "Gear and Sails",
+          "german_text": "Weshalb dürfen Segel nicht über einen längeren Zeitraum killen?",
+          "english_text": "Why must sails not flog (killen) for a long time?",
+          "options": {
+            "A": {
+              "german": "Killen schädigt das Tuch und lässt Nähte aufgehen.",
+              "english": "Flogging damages the cloth and opens the seams."
+            },
+            "B": {
+              "german": "Killen lässt das Boot bei stärkerem Wind kentern.",
+              "english": "Flogging makes the boat capsize in stronger wind."
+            },
+            "C": {
+              "german": "Killen führt zu Verletzungen der Besatzung.",
+              "english": "Flogging injures the crew."
+            },
+            "D": {
+              "german": "Killen führt zu Beschädigungen an nebeneinander liegenden Schiffen.",
+              "english": "Flogging damages vessels lying alongside."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Beim Killen schlägt das Tuch ständig hin und her. Das zermürbt das Material und lässt Nähte aufgehen.",
+          "explanation_en": "When a sail flogs, the cloth flaps back and forth constantly. This wears out the material and opens the seams."
+        },
+        {
+          "unique_id": "segeln_273",
+          "question_number": 273,
+          "category": "Gear and Sails",
+          "german_text": "Warum müssen auch kleine Schäden an den Segeln sofort repariert werden?",
+          "english_text": "Why must even small damage to the sails be repaired immediately?",
+          "options": {
+            "A": {
+              "german": "Weil unter Winddruck daraus schnell große Schäden werden.",
+              "english": "Because under wind pressure it quickly becomes major damage."
+            },
+            "B": {
+              "german": "Weil dadurch der Vortrieb des Segels leidet.",
+              "english": "Because it reduces the sail's drive."
+            },
+            "C": {
+              "german": "Weil es nur noch bei Flaute eingesetzt werden kann.",
+              "english": "Because the sail can then only be used in a calm."
+            },
+            "D": {
+              "german": "Weil Feuchtigkeit in das Segel eindringen kann.",
+              "english": "Because moisture can get into the sail."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Ausrüstung und Segel",
+          "explanation_de": "Ein kleiner Riss reißt unter Winddruck schnell weiter. Rechtzeitig repariert, bleibt der Schaden klein.",
+          "explanation_en": "Under wind pressure a small tear quickly spreads. Repaired in time, the damage stays small."
+        },
+        {
+          "unique_id": "segeln_274",
+          "question_number": 274,
+          "category": "Wind",
+          "german_text": "Woran kann wärend der Fahrt die Richtung des wahren Windes erkannt werden?",
+          "english_text": "How can the direction of the true wind be recognised while under way?",
+          "options": {
+            "A": {
+              "german": "An Flaggen oder anderen Anzeichen an Land.",
+              "english": "By flags or other signs on land."
+            },
+            "B": {
+              "german": "An der Zugrichtung von Wolken.",
+              "english": "By the direction in which the clouds are moving."
+            },
+            "C": {
+              "german": "An der Nationalflagge am Heck.",
+              "english": "By the national flag at the stern."
+            },
+            "D": {
+              "german": "An den Trimmfäden im Großsegel.",
+              "english": "By the telltales on the mainsail."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Alles an Bord zeigt in Fahrt den scheinbaren Wind. Den wahren Wind erkennt man an Flaggen, Rauch oder Bäumen an Land.",
+          "explanation_en": "Everything on board shows the apparent wind while under way. The true wind can be seen on flags, smoke or trees on land."
+        },
+        {
+          "unique_id": "segeln_275",
+          "question_number": 275,
+          "category": "Wind",
+          "german_text": "Welcher Wind wird in Fahrt von Standern bzw. Verklickern angezeigt?",
+          "english_text": "Which wind is shown by burgees or wind indicators (Verklicker) while under way?",
+          "options": {
+            "A": {
+              "german": "Der scheinbare Wind.",
+              "english": "The apparent wind."
+            },
+            "B": {
+              "german": "Der Fahrtwind.",
+              "english": "The wind created by the boat's own motion."
+            },
+            "C": {
+              "german": "Der wahre Wind.",
+              "english": "The true wind."
+            },
+            "D": {
+              "german": "Die Windrichtung.",
+              "english": "The wind direction."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Stander und Verklicker bewegen sich mit dem Boot und zeigen deshalb den scheinbaren Wind – die Summe aus wahrem Wind und Fahrtwind.",
+          "explanation_en": "Burgees and wind indicators move with the boat, so they show the apparent wind – the sum of the true wind and the wind from the boat's motion."
+        },
+        {
+          "unique_id": "segeln_276",
+          "question_number": 276,
+          "category": "Wind",
+          "german_text": "Wann kommen wahrer Wind und scheinbarer Wind auf einem segelnden Boot aus der gleichen Richtung?",
+          "english_text": "When do the true wind and the apparent wind come from the same direction on a sailing boat?",
+          "options": {
+            "A": {
+              "german": "Auf Vorwindkurs.",
+              "english": "On a run (dead downwind)."
+            },
+            "B": {
+              "german": "Auf Halbwindkurs.",
+              "english": "On a beam reach."
+            },
+            "C": {
+              "german": "Auf Amwindkurs.",
+              "english": "Close-hauled."
+            },
+            "D": {
+              "german": "Auf Raumschotkurs.",
+              "english": "On a broad reach."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Auf Vorwindkurs kommen wahrer Wind und Fahrtwind genau von vorne bzw. hinten. Der scheinbare Wind hat dieselbe Richtung, ist aber schwächer.",
+          "explanation_en": "On a run, the true wind and the wind from the boat's motion are directly opposite each other. The apparent wind has the same direction but is weaker."
+        },
+        {
+          "unique_id": "segeln_277",
+          "question_number": 277,
+          "category": "Wind",
+          "german_text": "Warum ist der scheinbare Wind auf einem Vorwindkurs schwächer als der wahre Wind?",
+          "english_text": "Why is the apparent wind weaker than the true wind on a run?",
+          "options": {
+            "A": {
+              "german": "Der wahre Wind vermindert sich um den entgegenstehenden Fahrtwind.",
+              "english": "The true wind is reduced by the opposing wind of the boat's own motion."
+            },
+            "B": {
+              "german": "Der wahre Wind wird durch den Fahrtwind abgebremst.",
+              "english": "The true wind is slowed down by the wind of the boat's motion."
+            },
+            "C": {
+              "german": "Der scheinbare Wind wird durch den Unterdruck am Segel entlang abgebremst.",
+              "english": "The apparent wind is slowed down by the low pressure along the sail."
+            },
+            "D": {
+              "german": "Der scheinbare Wind ist unabhängig von der Windrichtung immer schwächer als der wahre Wind.",
+              "english": "The apparent wind is always weaker than the true wind, whatever the wind direction."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Vor dem Wind segelt das Boot mit dem Wind mit. Der Fahrtwind kommt von vorne und wird vom wahren Wind abgezogen.",
+          "explanation_en": "Downwind the boat moves with the wind. The wind from the boat's motion comes from ahead and is subtracted from the true wind."
+        },
+        {
+          "unique_id": "segeln_278",
+          "question_number": 278,
+          "category": "Wind",
+          "german_text": "Warum ist der scheinbare Wind auf einem Kurs hoch am Wind stärker als der wahre Wind?",
+          "english_text": "Why is the apparent wind stronger than the true wind when sailing close-hauled?",
+          "options": {
+            "A": {
+              "german": "Da sich auf diesem Kurs der wahre Wind und der Fahrtwind in Richtung und Stärke addieren.",
+              "english": "Because on this course the true wind and the wind of the boat's motion add up in direction and strength."
+            },
+            "B": {
+              "german": "Da sich auf diesem Kurs eine Düse zwischen Fock- und Großsegel bildet, die den Wind verstärkt.",
+              "english": "Because on this course a slot forms between jib and mainsail that accelerates the wind."
+            },
+            "C": {
+              "german": "Da der wahre Wind beim Amwindkurs stärker ist als bei raumen Kursen.",
+              "english": "Because the true wind is stronger close-hauled than on downwind courses."
+            },
+            "D": {
+              "german": "Da der scheinbare Wind unabhängig von der Windrichtung immer stärker als der wahre Wind ist.",
+              "english": "Because the apparent wind is always stronger than the true wind, whatever the wind direction."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Hoch am Wind kommen wahrer Wind und Fahrtwind beide von vorne. Sie addieren sich zu einem stärkeren scheinbaren Wind.",
+          "explanation_en": "Close-hauled, the true wind and the wind from the boat's motion both come from ahead. They add up to a stronger apparent wind."
+        },
+        {
+          "unique_id": "segeln_279",
+          "question_number": 279,
+          "category": "Wind",
+          "german_text": "Auf einem Amwindkurs wurde gerefft. Ein entgegenkommendes Boot gleichen Typs segelt ungerefft. Wie lässt sich das erklären?",
+          "english_text": "A boat sailing close-hauled has reefed. An oncoming boat of the same type is sailing unreefed. How can this be explained?",
+          "options": {
+            "A": {
+              "german": "Der scheinbare Wind ist auf Amwindkursen stärker, auf Raumschot- und Vorwindkursen schwächer als der wahre Wind.",
+              "english": "The apparent wind is stronger than the true wind close-hauled, and weaker on broad-reach and downwind courses."
+            },
+            "B": {
+              "german": "Boote sind stabiler, wenn der Wind achterlicher einfällt.",
+              "english": "Boats are more stable when the wind comes from further aft."
+            },
+            "C": {
+              "german": "Der wahre Wind staut sich am Segel bei Raumschotkurs und ist deshalb schwächer.",
+              "english": "On a broad reach the true wind builds up against the sail and is therefore weaker."
+            },
+            "D": {
+              "german": "Bei Amwindkurs streicht der Wind am tragflächenartig gewölbten Segel entlang und wird dadurch beschleunigt.",
+              "english": "Close-hauled, the wind flows along the wing-shaped sail and is accelerated by it."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Beide Boote haben denselben wahren Wind. Am Wind spürt man aber deutlich mehr scheinbaren Wind als auf raumen Kursen – daher refft nur der Amwindsegler.",
+          "explanation_en": "Both boats have the same true wind. Close-hauled, however, the apparent wind is much stronger than on downwind courses – so only the boat sailing upwind reefs."
+        },
+        {
+          "unique_id": "segeln_280",
+          "question_number": 280,
+          "category": "Wind",
+          "german_text": "Warum raumt beim Einfallen einer Bö auf Amwindkurs der scheinbare Wind?",
+          "english_text": "Why does the apparent wind free (come from further aft) when a gust hits while sailing close-hauled?",
+          "options": {
+            "A": {
+              "german": "Da der Fahrtwind zunächst gleich bleibt, der wahre Wind jedoch zunimmt, kommt der daraus resultierende scheinbare Wind raumer.",
+              "english": "Because the wind of the boat's motion stays the same at first while the true wind increases, so the resulting apparent wind comes from further aft."
+            },
+            "B": {
+              "german": "Da durch die Koreoliskraft der Wind auch seine Richtung ändert, wenn er stärker wird.",
+              "english": "Because the Coriolis force also changes the wind's direction when it gets stronger."
+            },
+            "C": {
+              "german": "Da durch den Trimm des Bootes sich der Kurs automatisch ändert, wenn der Wind zunimmt.",
+              "english": "Because the boat's trim changes the course automatically when the wind increases."
+            },
+            "D": {
+              "german": "Da die Windrichtung durch die Segelstellung beeinflusst wird, verändert sich auch der scheinbare Wind.",
+              "english": "Because the wind direction is influenced by the set of the sails, the apparent wind changes too."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "In der Bö nimmt der wahre Wind zu, der Fahrtwind bleibt zunächst gleich. Im Windparallelogramm überwiegt dann der wahre Wind – der scheinbare Wind dreht nach achtern (er raumt).",
+          "explanation_en": "In a gust the true wind increases while the wind from the boat's motion stays the same at first. The true wind then dominates, so the apparent wind shifts aft (it frees)."
+        },
+        {
+          "unique_id": "segeln_281",
+          "question_number": 281,
+          "category": "Wind",
+          "german_text": "Beim Einfallen einer Bö auf Amwindkurs raumt der scheinbare Wind. Welchen Nutzen kann auf der Kreuz daraus gezogen werden?",
+          "english_text": "When a gust hits while sailing close-hauled, the apparent wind frees. How can this be used when beating to windward?",
+          "options": {
+            "A": {
+              "german": "Mitluven, um weitere Höhe zu gewinnen.",
+              "english": "Luff up with the gust to gain more ground to windward."
+            },
+            "B": {
+              "german": "Abfallen, um maximale Höhe zu segeln.",
+              "english": "Bear away to sail as high as possible."
+            },
+            "C": {
+              "german": "Segel etwas fieren, um die Bö in Krängung umzusetzen.",
+              "english": "Ease the sails a little to turn the gust into heel."
+            },
+            "D": {
+              "german": "Ein Spinnacker kann gesetzt werden.",
+              "english": "A spinnaker can be set."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Wind",
+          "explanation_de": "Raumt der Wind in der Bö, kann man anluven und dieselbe Segelstellung beibehalten – so gewinnt man auf der Kreuz Höhe.",
+          "explanation_en": "When the wind frees in a gust, you can luff up and keep the same sail setting – gaining ground to windward when beating."
+        },
+        {
+          "unique_id": "segeln_282",
+          "question_number": 282,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie sollte das Schwert einer Jolle auf Vorwindkurs gefahren werden und warum?",
+          "english_text": "How should a dinghy's centreboard be set on a run, and why?",
+          "options": {
+            "A": {
+              "german": "Es sollte aufgeholt werden. Dadurch vermindert sich der Reibungswiderstand, aber auch die Gefahr der Kenterung bei einer unfreiwilligen Halse.",
+              "english": "It should be raised. This reduces friction, and also the risk of capsizing in an accidental gybe."
+            },
+            "B": {
+              "german": "Es sollte gefiert werden. Dadurch wird das Boot stabiler und die Gefahr der Kenterung bei einer unfreiwilligen Halse reduziert.",
+              "english": "It should be lowered. This makes the boat more stable and reduces the risk of capsizing in an accidental gybe."
+            },
+            "C": {
+              "german": "Es sollte nie ganz aufgeholt werden, da es sonst bei einer Kenterung zum Aufrichten der Jolle nicht mehr greifbar ist.",
+              "english": "It should never be raised completely, otherwise it cannot be reached to right the dinghy after a capsize."
+            },
+            "D": {
+              "german": "Es sollte bei stärkerem Wind ganz aufgeholt werden, um die Steuerfähigkeit der Jolle zu verbessern.",
+              "english": "It should be raised completely in stronger wind to improve the dinghy's steering."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Vor dem Wind gibt es kaum Abdrift. Aufgeholtes Schwert spart Widerstand. Außerdem kann die Jolle bei einer Patenthalse eher seitlich ausweichen, statt über das Schwert zu kentern.",
+          "explanation_en": "Downwind there is hardly any leeway. A raised centreboard saves resistance, and in an accidental gybe the dinghy can slide sideways rather than tripping over its board and capsizing."
+        },
+        {
+          "unique_id": "segeln_283",
+          "question_number": 283,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie verändern sich Abdrift und Krängung, wenn das Schwert einer Jolle auf einem Amwindkurs etwas aufgeholt wird?",
+          "english_text": "How do leeway and heel change when a dinghy's centreboard is raised a little while sailing close-hauled?",
+          "options": {
+            "A": {
+              "german": "Die Abdrift wird größer, die Krängung nimmt ab.",
+              "english": "Leeway increases, heel decreases."
+            },
+            "B": {
+              "german": "Die Abdrift wird größer, die Krängung nimmt zu.",
+              "english": "Leeway increases, heel increases."
+            },
+            "C": {
+              "german": "Die Abdrift nimmt ab, das Boot wird aufgrund des geringeren Wasserwiderstandes schneller.",
+              "english": "Leeway decreases, and the boat gets faster because of the lower water resistance."
+            },
+            "D": {
+              "german": "Die Abdrift wird kleiner, die Krängung nimmt ab.",
+              "english": "Leeway decreases, heel decreases."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Weniger Schwertfläche bedeutet weniger Lateralwiderstand: Das Boot treibt mehr seitlich ab, krängt aber weniger.",
+          "explanation_en": "Less centreboard area means less lateral resistance: the boat slips more sideways but heels less."
+        },
+        {
+          "unique_id": "segeln_284",
+          "question_number": 284,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Mit welcher Krängung sollte eine Jolle üblicherweise gesegelt werden und weshalb?",
+          "english_text": "At what angle of heel should a dinghy normally be sailed, and why?",
+          "options": {
+            "A": {
+              "german": "Möglichst aufrecht, da sonst Abdrift und Luvgierigkeit zunehmen.",
+              "english": "As upright as possible, otherwise leeway and weather helm increase."
+            },
+            "B": {
+              "german": "Möglichst aufrecht, weil sonst Abdrift und Leegierigkeit zunehmen.",
+              "english": "As upright as possible, otherwise leeway and lee helm increase."
+            },
+            "C": {
+              "german": "Leicht nach Lee geneigt, da sonst die Segel leicht nach Luv überkommen können.",
+              "english": "Heeled slightly to leeward, otherwise the sails can easily swing over to windward."
+            },
+            "D": {
+              "german": "Möglichst nach Luv geneigt, weil dadurch die Abdrift und die Luvgierigkeit abnehmen.",
+              "english": "Heeled to windward as far as possible, because this reduces leeway and weather helm."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Eine aufrecht gesegelte Jolle ist am schnellsten. Krängt sie, nehmen Abdrift und Luvgierigkeit zu.",
+          "explanation_en": "A dinghy sailed upright is fastest. When it heels, leeway and weather helm increase."
+        },
+        {
+          "unique_id": "segeln_285",
+          "question_number": 285,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie wirkt sich auf einem Halbwindkurs ein zu dicht geholtes Großsegel auf die Geschwindigkeit des Bootes aus?",
+          "english_text": "On a beam reach, how does a mainsail sheeted in too tight affect the boat's speed?",
+          "options": {
+            "A": {
+              "german": "Die Krängung nimmt zu, die Geschwindigkeit nimmt ab.",
+              "english": "Heel increases, speed decreases."
+            },
+            "B": {
+              "german": "Die Krängung und die Geschwindigkeit nehmen bis zum kritischen Punkt zu, darüber hinaus schnell ab.",
+              "english": "Heel and speed increase up to a critical point and then drop quickly."
+            },
+            "C": {
+              "german": "Die Geschwindigkeit nimmt zu, da dadurch die Windkräfte optimaler genutzt werden.",
+              "english": "Speed increases because the wind forces are used better."
+            },
+            "D": {
+              "german": "Das Boot bleibt stehen, da die Strömung abreißt.",
+              "english": "The boat stops because the airflow separates from the sail."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Ist das Großsegel zu dicht, reißt die Strömung ab. Das Segel drückt dann mehr seitlich als nach vorne – mehr Krängung, weniger Fahrt.",
+          "explanation_en": "If the mainsail is sheeted in too tight, the airflow breaks away. The sail then pushes more sideways than forwards – more heel, less speed."
+        },
+        {
+          "unique_id": "segeln_286",
+          "question_number": 286,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie wirkt sich ein Holepunkt, der zu weit vorne liegt, auf Stand und Beanspruchung des Vorsegels aus?",
+          "english_text": "How does a sheet lead (Holepunkt) that is too far forward affect the set and load of the headsail?",
+          "options": {
+            "A": {
+              "german": "Das Unterliek killt, das Achterliek wird übermäßig gereckt.",
+              "english": "The foot flutters, the leech is overstretched."
+            },
+            "B": {
+              "german": "Das Achterliek killt, das Vorliek wird übermäßig gereckt.",
+              "english": "The leech flutters, the luff is overstretched."
+            },
+            "C": {
+              "german": "Das Vorliek killt, das Unterliek wird übermäßig gereckt.",
+              "english": "The luff flutters, the foot is overstretched."
+            },
+            "D": {
+              "german": "Das Vorliek killt, das Achterliek wird übermäßig gereckt.",
+              "english": "The luff flutters, the leech is overstretched."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Liegt der Holepunkt zu weit vorne, zieht die Schot vor allem nach unten: Das Achterliek wird stark gespannt, das Unterliek ist zu lose und killt.",
+          "explanation_en": "If the sheet lead is too far forward, the sheet pulls mainly downwards: the leech is pulled very tight while the foot is too loose and flutters."
+        },
+        {
+          "unique_id": "segeln_287",
+          "question_number": 287,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie wirkt sich ein Holepunkt, der zu weit achtern liegt, auf Stand und Beanspruchung des Vorsegels aus?",
+          "english_text": "How does a sheet lead (Holepunkt) that is too far aft affect the set and load of the headsail?",
+          "options": {
+            "A": {
+              "german": "Das Achterliek killt, das Unterliek wird übermäßig gereckt.",
+              "english": "The leech flutters, the foot is overstretched."
+            },
+            "B": {
+              "german": "Das Vorliek killt, das Unterliek wird übermäßig gereckt.",
+              "english": "The luff flutters, the foot is overstretched."
+            },
+            "C": {
+              "german": "Das Unterliek killt, das Achterliek wird übermäßig gereckt.",
+              "english": "The foot flutters, the leech is overstretched."
+            },
+            "D": {
+              "german": "Das Achterliek killt, das Vorliek wird übermäßig gereckt.",
+              "english": "The leech flutters, the luff is overstretched."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Liegt der Holepunkt zu weit achtern, zieht die Schot vor allem nach hinten: Das Unterliek wird stark gespannt, das Achterliek ist zu lose und killt.",
+          "explanation_en": "If the sheet lead is too far aft, the sheet pulls mainly backwards: the foot is pulled very tight while the leech is too loose and flutters."
+        },
+        {
+          "unique_id": "segeln_288",
+          "question_number": 288,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie muss ein Segel bei leichtem Wind getrimmt werden?",
+          "english_text": "How should a sail be trimmed in light wind?",
+          "options": {
+            "A": {
+              "german": "Das Segel soll bauchig stehen.",
+              "english": "The sail should be full (deep)."
+            },
+            "B": {
+              "german": "Das Segel soll flach getrimmt werden.",
+              "english": "The sail should be trimmed flat."
+            },
+            "C": {
+              "german": "Die Schoten müssen gefiert werden.",
+              "english": "The sheets must be eased."
+            },
+            "D": {
+              "german": "Die Schoten müssen dicht geholt werden.",
+              "english": "The sheets must be pulled in tight."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Ein bauchiges Segel erzeugt bei wenig Wind mehr Vortrieb.",
+          "explanation_en": "A full sail produces more drive in light wind."
+        },
+        {
+          "unique_id": "segeln_289",
+          "question_number": 289,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie muss ein Segel bei starkem Wind getrimmt werden?",
+          "english_text": "How should a sail be trimmed in strong wind?",
+          "options": {
+            "A": {
+              "german": "Das Segel soll flach getrimmt werden.",
+              "english": "The sail should be trimmed flat."
+            },
+            "B": {
+              "german": "Es soll bauchig getrimmt werden.",
+              "english": "It should be trimmed full (deep)."
+            },
+            "C": {
+              "german": "Die Schoten müssen dicht geholt werden.",
+              "english": "The sheets must be pulled in tight."
+            },
+            "D": {
+              "german": "Die Schoten müssen gefiert werden.",
+              "english": "The sheets must be eased."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Ein flaches Segel erzeugt weniger Kraft und damit weniger Krängung – das Boot bleibt bei viel Wind kontrollierbar.",
+          "explanation_en": "A flat sail produces less force and therefore less heel – the boat stays under control in strong wind."
+        },
+        {
+          "unique_id": "segeln_290",
+          "question_number": 290,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Wie beeinflusst ein Unterliekstrecker den Trimm des Segels?",
+          "english_text": "How does an outhaul (Unterliekstrecker) affect the trim of the sail?",
+          "options": {
+            "A": {
+              "german": "Je nach Zugkraft wird der untere Teil des Großsegels bauchiger oder flacher.",
+              "english": "Depending on the tension, the lower part of the mainsail becomes fuller or flatter."
+            },
+            "B": {
+              "german": "Je nach Zugkraft wird der untere Teil des Vorsegels bauchiger oder flacher.",
+              "english": "Depending on the tension, the lower part of the headsail becomes fuller or flatter."
+            },
+            "C": {
+              "german": "Je nach Zugkraft wird der achtere Teil des Vorsegels bauchiger oder flacher.",
+              "english": "Depending on the tension, the aft part of the headsail becomes fuller or flatter."
+            },
+            "D": {
+              "german": "Je nach Zugkraft wird der achtere Teil des Großsegels bauchiger oder flacher.",
+              "english": "Depending on the tension, the aft part of the mainsail becomes fuller or flatter."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Der Unterliekstrecker spannt das Unterliek des Großsegels am Baum. Mehr Zug macht den unteren Teil flacher, weniger Zug bauchiger.",
+          "explanation_en": "The outhaul tensions the foot of the mainsail along the boom. More tension makes the lower part flatter, less tension makes it fuller."
+        },
+        {
+          "unique_id": "segeln_291",
+          "question_number": 291,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Um auf Amwindkursen eine Jolle auf Kurs zu halten, muss die Pinne stets stark von der Seite der Segel weggezogen werden. Wie kann der Trimmfehler behoben werden?",
+          "english_text": "To keep a dinghy on course when sailing close-hauled, the tiller always has to be pulled hard away from the side the sails are on. How can this trim fault be corrected?",
+          "options": {
+            "A": {
+              "german": "Großsegel flacher trimmen; Gewichtsverlagerung nach achtern.",
+              "english": "Trim the mainsail flatter; move weight aft."
+            },
+            "B": {
+              "german": "Großsegel flacher trimmen; Gewichtsverlagerung nach vorne.",
+              "english": "Trim the mainsail flatter; move weight forward."
+            },
+            "C": {
+              "german": "Vorsegel flacher trimmen; Gewichtsverlagerung nach achtern.",
+              "english": "Trim the headsail flatter; move weight aft."
+            },
+            "D": {
+              "german": "Vorsegel flacher trimmen; Gewichtsverlagerung nach vorne.",
+              "english": "Trim the headsail flatter; move weight forward."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Die Pinne muss nach Luv gezogen werden – das Boot ist zu luvgierig. Abhilfe: Großsegel flacher trimmen (weniger Druck achtern) und Gewicht nach achtern verlagern.",
+          "explanation_en": "The tiller has to be pulled to windward – the boat has too much weather helm. Fix: trim the mainsail flatter (less pressure aft) and move weight aft."
+        },
+        {
+          "unique_id": "segeln_292",
+          "question_number": 292,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Um auf Amwindkursen eine Jolle auf Kurs zu halten, muss die Pinne stets stark zur Seite der Segel hingedrückt werden. Wie kann der Trimmfehler behoben werden?",
+          "english_text": "To keep a dinghy on course when sailing close-hauled, the tiller always has to be pushed hard towards the side the sails are on. How can this trim fault be corrected?",
+          "options": {
+            "A": {
+              "german": "Großsegel bauchiger trimmen, Gewichtsverlagerung nach vorn.",
+              "english": "Trim the mainsail fuller; move weight forward."
+            },
+            "B": {
+              "german": "Großsegel flacher trimmen, Gewichtsverlagerung nach vorn.",
+              "english": "Trim the mainsail flatter; move weight forward."
+            },
+            "C": {
+              "german": "Großsegel bauchiger trimmen, Gewichtsverlagerung nach hinten.",
+              "english": "Trim the mainsail fuller; move weight aft."
+            },
+            "D": {
+              "german": "Großsegel flacher trimmen, Gewichtsverlagerung nach hinten.",
+              "english": "Trim the mainsail flatter; move weight aft."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Die Pinne muss nach Lee gedrückt werden – das Boot ist leegierig. Abhilfe: Großsegel bauchiger trimmen (mehr Druck achtern) und Gewicht nach vorne verlagern.",
+          "explanation_en": "The tiller has to be pushed to leeward – the boat has lee helm. Fix: trim the mainsail fuller (more pressure aft) and move weight forward."
+        },
+        {
+          "unique_id": "segeln_293",
+          "question_number": 293,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Warum soll ein gut getrimmtes Segelboot leicht luvgierig sein?",
+          "english_text": "Why should a well-trimmed sailing boat have slight weather helm?",
+          "options": {
+            "A": {
+              "german": "Weil es im Notfall von selbst in den Wind schießt.",
+              "english": "Because in an emergency it turns into the wind by itself."
+            },
+            "B": {
+              "german": "Weil es sich so anspruchsvoller steuern lässt.",
+              "english": "Because it is then more demanding to steer."
+            },
+            "C": {
+              "german": "Weil es so weniger Höhe läuft.",
+              "english": "Because it then points less high."
+            },
+            "D": {
+              "german": "Weil es auf Raumschotkurs mehr Geschwindigkeit läuft.",
+              "english": "Because it is then faster on a broad reach."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Lässt man die Pinne los, dreht ein leicht luvgieriges Boot von selbst in den Wind und bleibt stehen. Das ist ein wichtiger Sicherheitsvorteil, z. B. bei Mensch über Bord.",
+          "explanation_en": "If the tiller is let go, a boat with slight weather helm turns into the wind by itself and stops. This is an important safety advantage, e.g. in a man-overboard situation."
+        },
+        {
+          "unique_id": "segeln_294",
+          "question_number": 294,
+          "category": "Sail Trim and Boat Handling",
+          "german_text": "Welchen Einfluss hat zunehmende Krängung auf den Trimm des Bootes?",
+          "english_text": "What effect does increasing heel have on the boat's balance (trim)?",
+          "options": {
+            "A": {
+              "german": "Die Luvgierigkeit nimmt zu.",
+              "english": "Weather helm increases."
+            },
+            "B": {
+              "german": "Die Leegierigkeit nimmt zu.",
+              "english": "Lee helm increases."
+            },
+            "C": {
+              "german": "Keinen.",
+              "english": "None."
+            },
+            "D": {
+              "german": "Bis 45° Krängung nimmt die Luvgierigkeit zu, dann wieder ab.",
+              "english": "Weather helm increases up to 45° of heel and then decreases."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Segeltrimm und Bootsführung",
+          "explanation_de": "Mit der Krängung wandert der Segeldruckpunkt nach Lee und dreht das Boot in den Wind – die Luvgierigkeit nimmt zu.",
+          "explanation_en": "As the boat heels, the sail's centre of effort moves out to leeward and turns the boat into the wind – weather helm increases."
+        },
+        {
+          "unique_id": "segeln_295",
+          "question_number": 295,
+          "category": "Manoeuvres and Emergencies",
+          "german_text": "Welche Manöver hat das Boot auf dem eingezeichneten Kurs an den Punkten 1, 2 und 3 gefahren?",
+          "english_text": "Which manoeuvres did the boat sail at points 1, 2 and 3 on the course shown?",
+          "options": {
+            "A": {
+              "german": "1 Wende, 2 Halse, 3 Q-Wende.",
+              "english": "1 tack, 2 gybe, 3 chicken gybe (Q-Wende)."
+            },
+            "B": {
+              "german": "1 Q-Wende, 2 Halse, 3 Wende.",
+              "english": "1 chicken gybe (Q-Wende), 2 gybe, 3 tack."
+            },
+            "C": {
+              "german": "1 Halse, 2 Wende, 3 Q-Wende.",
+              "english": "1 gybe, 2 tack, 3 chicken gybe (Q-Wende)."
+            },
+            "D": {
+              "german": "1 Wende, 2 Q-Wende, 3 Halse.",
+              "english": "1 tack, 2 chicken gybe (Q-Wende), 3 gybe."
+            }
+          },
+          "correct_option": "A",
+          "has_image": true,
+          "image_reference": "assets/segeln/segeln_295.png",
+          "category_de": "Manöver und Notfälle",
+          "image_references": [
+            "assets/segeln/segeln_295.png"
+          ],
+          "explanation_de": "Bei 1 geht der Bug durch den Wind (Wende), bei 2 das Heck (Halse). Bei 3 dreht das Boot mit dem Bug durch den Wind und läuft dann in eine Schleife weiter – eine Q-Wende statt einer Halse.",
+          "explanation_en": "At 1 the bow passes through the wind (tack), at 2 the stern (gybe). At 3 the boat turns its bow through the wind and carries on round in a loop – a chicken gybe instead of a gybe."
+        },
+        {
+          "unique_id": "segeln_296",
+          "question_number": 296,
+          "category": "Manoeuvres and Emergencies",
+          "german_text": "Was ist mit Schwert und Ruder einer Jolle zu tun, wenn das Boot an einer Boje liegen gelassen wird?",
+          "english_text": "What should be done with the centreboard and rudder of a dinghy that is left on a mooring buoy?",
+          "options": {
+            "A": {
+              "german": "Schwert und Ruderblatt aufholen, damit das Boot frei schwojen kann.",
+              "english": "Raise the centreboard and the rudder blade so the boat can swing freely."
+            },
+            "B": {
+              "german": "Schwert absenken, Ruder aufholen, damit das Boot frei schwojen kann.",
+              "english": "Lower the centreboard and raise the rudder so the boat can swing freely."
+            },
+            "C": {
+              "german": "Schwert aufholen, Ruder absenken, damit das Boot frei schwojen kann.",
+              "english": "Raise the centreboard and lower the rudder so the boat can swing freely."
+            },
+            "D": {
+              "german": "Schwert und Ruder absenken, damit das Boot frei schwojen kann.",
+              "english": "Lower the centreboard and the rudder so the boat can swing freely."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Manöver und Notfälle",
+          "explanation_de": "Mit aufgeholtem Schwert und Ruder kann die Jolle um die Boje schwojen, ohne sich mit Leine oder Boje zu verhaken. Ruder und Schwert werden zudem nicht beschädigt.",
+          "explanation_en": "With the centreboard and rudder raised, the dinghy can swing around the buoy without catching the line or the buoy, and neither blade gets damaged."
+        },
+        {
+          "unique_id": "segeln_297",
+          "question_number": 297,
+          "category": "Manoeuvres and Emergencies",
+          "german_text": "Warum ist eine Patenthalse gefährlich?",
+          "english_text": "Why is an accidental gybe (Patenthalse) dangerous?",
+          "options": {
+            "A": {
+              "german": "Es kann zu Verletzungen der Crew, zu Riggschäden und zur Kenterung führen.",
+              "english": "It can injure the crew, damage the rig and cause a capsize."
+            },
+            "B": {
+              "german": "Es kann zur plötzlichen Änderung der Ausweichpflicht kommen.",
+              "english": "It can suddenly change which vessel has to give way."
+            },
+            "C": {
+              "german": "Es kann zum Verlust der Steuerfähigkeit des Fahrzeuges führen.",
+              "english": "It can make the vessel lose its steering."
+            },
+            "D": {
+              "german": "Es kann erneut eine Patenthalse folgen, wenn nicht sofort abgefallen wird.",
+              "english": "Another accidental gybe can follow if you do not bear away immediately."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Manöver und Notfälle",
+          "explanation_de": "Bei einer Patenthalse schlägt der Baum unkontrolliert über. Er kann Personen am Kopf treffen, das Rigg beschädigen und das Boot kentern lassen.",
+          "explanation_en": "In an accidental gybe the boom swings across without control. It can hit people on the head, damage the rig and capsize the boat."
+        },
+        {
+          "unique_id": "segeln_298",
+          "question_number": 298,
+          "category": "Manoeuvres and Emergencies",
+          "german_text": "Ein Segelboot segelt am Wind, plötzlich bricht das Luvwant. Welches Manöver ist sinnvoll?",
+          "english_text": "A sailing boat is sailing close-hauled when the windward shroud suddenly breaks. Which manoeuvre makes sense?",
+          "options": {
+            "A": {
+              "german": "Wende.",
+              "english": "Tack."
+            },
+            "B": {
+              "german": "Halse.",
+              "english": "Gybe."
+            },
+            "C": {
+              "german": "Q-Wende.",
+              "english": "Chicken gybe (Q-Wende)."
+            },
+            "D": {
+              "german": "Aufschießer.",
+              "english": "Shooting up into the wind (Aufschießer)."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Manöver und Notfälle",
+          "explanation_de": "Nach der Wende wird das gebrochene Want zum Leewant und trägt keine Last mehr. Das intakte Want auf der anderen Seite hält dann den Mast.",
+          "explanation_en": "After tacking, the broken shroud becomes the leeward shroud and no longer carries load. The intact shroud on the other side then holds the mast."
+        },
+        {
+          "unique_id": "segeln_299",
+          "question_number": 299,
+          "category": "Manoeuvres and Emergencies",
+          "german_text": "Ein Segelboot segelt bei starkem Wind nur unter Großsegel auf Amwindkurs. Plötzlich bricht das Vorstag. Was ist sofort zu unternehmen?",
+          "english_text": "In strong wind a sailing boat is sailing close-hauled under mainsail only. Suddenly the forestay breaks. What must be done immediately?",
+          "options": {
+            "A": {
+              "german": "Abfallen auf Vorwindkurs.",
+              "english": "Bear away onto a run."
+            },
+            "B": {
+              "german": "Dichtholen und Anluven.",
+              "english": "Sheet in and luff up."
+            },
+            "C": {
+              "german": "Einen Aufschießer fahren.",
+              "english": "Shoot up into the wind."
+            },
+            "D": {
+              "german": "Eine Halse fahren.",
+              "english": "Gybe."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Manöver und Notfälle",
+          "explanation_de": "Beim Abfallen auf Vorwindkurs drückt der Wind den Mast nach vorne gegen das Achterstag. Das entlastet den Mast, der sonst ohne Vorstag nach achtern fallen könnte.",
+          "explanation_en": "When bearing away onto a run, the wind pushes the mast forwards against the backstay. This relieves the mast, which could otherwise fall aft without its forestay."
+        },
+        {
+          "unique_id": "segeln_300",
+          "question_number": 300,
+          "category": "Manoeuvres and Emergencies",
+          "german_text": "Ein Segelboot segelt bei starkem Wind nur unter Großsegel auf Amwindkurs. Plötzlich bricht das Vorstag. Womit kann das gebrochene Vorstag schnell provisorisch ersetzt werden?",
+          "english_text": "In strong wind a sailing boat is sailing close-hauled under mainsail only. Suddenly the forestay breaks. What can quickly be used as a temporary replacement for the broken forestay?",
+          "options": {
+            "A": {
+              "german": "Durch die Fock oder ein Fall.",
+              "english": "The jib or a halyard."
+            },
+            "B": {
+              "german": "Durch die Fockschot oder das Großfall.",
+              "english": "The jib sheet or the main halyard."
+            },
+            "C": {
+              "german": "Durch die Vor- oder die Achterleine.",
+              "english": "The bow line or the stern line."
+            },
+            "D": {
+              "german": "Durch die Fockschot oder eine Reffleine.",
+              "english": "The jib sheet or a reefing line."
+            }
+          },
+          "correct_option": "A",
+          "has_image": false,
+          "image_reference": null,
+          "category_de": "Manöver und Notfälle",
+          "explanation_de": "Ein ungenutztes Fall (z. B. das Fockfall) oder die Fock selbst kann vom Masttopp zum Bug gespannt werden und den Mast provisorisch nach vorne abstützen.",
+          "explanation_en": "An unused halyard (e.g. the jib halyard) or the jib itself can be tensioned from the masthead to the bow to support the mast forwards temporarily."
         }
       ]
     },
@@ -8546,7 +10021,7 @@
           "english_text": "Which navigation lights and sound-signalling equipment may be used on pleasure craft flying the German flag?",
           "options": {
             "A": {
-              "german": "Solche, deren Baumuster vom Bundesamt für Seeschifffahrt und Hydrographie ( BSH ) zur Verwendung zugelassen sind oder eine als gleichwertig anerkannte Zulassung eines EU -Staates besitzen.",
+              "german": "Solche, deren Baumuster vom Bundesamt für Seeschifffahrt und Hydrographie ( BSH ) zur Verwendung zugelassen sind oder eine als gleichwertig anerkannte Zulassung eines EU-Staates besitzen.",
               "english": "Those whose type design has been approved for use by the Federal Maritime and Hydrographic Agency (BSH), or which hold an equivalent approval recognised by an EU member state."
             },
             "B": {
@@ -8554,7 +10029,7 @@
               "english": "Those which achieve the prescribed minimum range of three nautical miles, the required size and colouring or sound level, and are accompanied by a certificate from a classification society."
             },
             "C": {
-              "german": "Solche, die gemäß der Kollisionsverhütungsregeln (KVR), der Seeschifffahrtsstraßen-Ordnung (SeeSchStrO) und der Schifffahrtsordnung Emsmündung (EmsSchO) vorgeschrieben sind und ein CE -Zeichen haben.",
+              "german": "Solche, die gemäß der Kollisionsverhütungsregeln (KVR), der Seeschifffahrtsstraßen-Ordnung (SeeSchStrO) und der Schifffahrtsordnung Emsmündung (EmsSchO) vorgeschrieben sind und ein CE-Zeichen haben.",
               "english": "Those which are prescribed pursuant to the Collision Regulations (COLREGS), the German Maritime Traffic Regulations (SeeSchStrO), and the Ems Estuary Navigation Order (EmsSchO), and which bear the CE mark."
             },
             "D": {

@@ -7,6 +7,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ai.biniam.sbfexamprep.SbfApplication
+import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamResult
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
@@ -67,13 +68,12 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
     val examRules: ExamRules? get() = (mode as? QuizMode.Exam)?.rules
     val examMode: Boolean get() = mode is QuizMode.Exam
 
-    /** Official scoring: basic and licence-specific parts are assessed separately. */
+    /** Official scoring: correct answers are counted per exam part. */
     val examResult: ExamResult?
         get() {
             val rules = examRules ?: return null
-            val basic = questions.count { it.examType == ExamType.SHARED && answers[it.uniqueId] == true }
-            val specific = questions.count { it.examType != ExamType.SHARED && answers[it.uniqueId] == true }
-            return rules.result(basic, specific)
+            val correct = questions.filter { answers[it.uniqueId] == true }.groupingBy { it.examType }.eachCount()
+            return rules.result(correct)
         }
 
     val formattedTime: String get() = "%d:%02d".format(timeRemaining / 60, timeRemaining % 60)
@@ -100,18 +100,17 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
     /** Quiz over an explicit list (e.g. saved questions). */
     fun setup(list: List<Question>, mode: QuizMode = QuizMode.Saved) = start(list.shuffled(), ExamType.ALL, mode)
 
-    /** Exam simulation following the official composition: 7 basic + 23 specific questions. */
-    fun setupExam(type: ExamType) {
-        val rules = ExamRules(type)
-        val basic = store.specificQuestions(ExamType.SHARED).shuffled().take(rules.basicCount)
-        val specific = store.specificQuestions(type).shuffled().take(rules.specificCount)
-        start(basic + specific, type, QuizMode.Exam(rules))
+    /** Exam simulation following the official composition, e.g. 7 basic + 23 inland questions. */
+    fun setupExam(format: ExamFormat) {
+        val rules = ExamRules(format)
+        val list = rules.parts.flatMap { store.specificQuestions(it.type).shuffled().take(it.count) }
+        start(list, rules.parts.last().type, QuizMode.Exam(rules))
     }
 
     /** Same questions again in a new order (a new exam for simulations). */
     fun retry() {
         val rules = examRules
-        if (rules != null) setupExam(rules.type) else start(questions.shuffled(), examType, mode)
+        if (rules != null) setupExam(rules.format) else start(questions.shuffled(), examType, mode)
     }
 
     private fun start(list: List<Question>, type: ExamType, mode: QuizMode) {
@@ -186,6 +185,7 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
         val record = QuizRecord(
             date = System.currentTimeMillis(), examType = examType.raw, totalQuestions = questions.size,
             correctAnswers = correctCount, isExam = result?.let { true }, passed = result?.passed,
+            examFormat = result?.rules?.format?.raw,
         )
         progress.updateProgress { it.saveQuizRecord(record, ZoneId.systemDefault()) }
     }

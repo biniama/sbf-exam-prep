@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.PanTool
+import androidx.compose.material.icons.filled.Sailing
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Translate
@@ -85,6 +86,7 @@ import ai.biniam.sbfexamprep.ui.components.currentLocale
 import ai.biniam.sbfexamprep.ui.components.isGerman
 import ai.biniam.sbfexamprep.ui.components.percent
 import ai.biniam.sbfexamprep.ui.theme.Brand
+import ai.biniam.sbfexamprep.ui.components.licenceSummary
 import ai.biniam.sbfexamprep.ui.theme.Sbf
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -109,6 +111,8 @@ fun SettingsScreen() {
     var confirmReset by rememberSaveable { mutableStateOf(false) }
     var pickTime by rememberSaveable { mutableStateOf(false) }
     var notificationsDenied by rememberSaveable { mutableStateOf(false) }
+    var editLicence by rememberSaveable { mutableStateOf(false) }
+    if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
 
     fun setReminder(enabled: Boolean, minutes: Int = settings.reminderMinutes) {
         app.progressRepository.updateSettings { it.copy(reminderEnabled = enabled, reminderMinutes = minutes) }
@@ -141,6 +145,10 @@ fun SettingsScreen() {
             ReadableWidth {
                 Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
                     Section(stringResource(R.string.learning), stringResource(R.string.learning_footer)) {
+                        LinkRow(Icons.Filled.Sailing, stringResource(R.string.my_licence), licenceSummary(settings.licenceGoal)) {
+                            editLicence = true
+                        }
+                        Divider()
                         SwitchRow(Icons.Filled.Translate, stringResource(R.string.show_english), settings.showEnglish) { on ->
                             app.progressRepository.updateSettings { it.copy(showEnglish = on) }
                         }
@@ -215,6 +223,7 @@ fun SettingsScreen() {
                     Section(stringResource(R.string.question_catalogue), stringResource(R.string.not_government)) {
                         StatRow(stringResource(R.string.licence_basic), "${app.questions.specificQuestions(ExamType.SHARED).size}")
                         StatRow(stringResource(R.string.sbf_inland_specific), "${app.questions.specificQuestions(ExamType.BINNEN).size}")
+                        StatRow(stringResource(R.string.licence_sailing), "${app.questions.specificQuestions(ExamType.SEGELN).size}")
                         StatRow(stringResource(R.string.sbf_sea_specific), "${app.questions.specificQuestions(ExamType.SEE).size}")
                         StatRow(stringResource(R.string.total), "${app.questions.allQuestions.size}")
                         // Play policy: government information must link to its original source.

@@ -16,12 +16,19 @@ class DataIntegrityTest {
     private val store = QuestionRepository(File(shared, QuestionRepository.ASSET_NAME).readText())
 
     @Test fun catalogueIsComplete() {
-        assertEquals(466, store.allQuestions.size)
+        assertEquals(513, store.allQuestions.size)
         assertEquals(store.metadata.totalQuestions, store.allQuestions.size)
         assertEquals(store.allQuestions.size, store.allQuestions.map { it.uniqueId }.toSet().size)
         assertEquals(72, store.specificQuestions(ExamType.SHARED).size)
         assertEquals(store.specificQuestions(ExamType.SHARED).size + store.specificQuestions(ExamType.BINNEN).size,
                      store.questions(ExamType.BINNEN).size)
+    }
+
+    @Test fun sailingQuestionsAreComplete() {
+        val sailing = store.specificQuestions(ExamType.SEGELN)
+        assertEquals((254..300).toList(), sailing.map { it.questionNumber })
+        assertEquals(listOf("segeln_295"), sailing.filter { it.hasImage }.map { it.uniqueId })
+        assertTrue(File(shared, "assets/segeln/segeln_295.png").exists())
     }
 
     @Test fun everyQuestionHasFourOptionsAndAValidAnswer() {
@@ -77,7 +84,7 @@ class DataIntegrityTest {
     @Test fun categoriesAreSortedByDisplayName() {
         val german = store.categories(ExamType.ALL, german = true).map { store.categoryName(it, true) }
         assertEquals(german.sortedWith(java.text.Collator.getInstance(java.util.Locale.GERMAN)), german)
-        assertEquals(22, german.size)
+        assertEquals(27, german.size)
     }
 
     @Test fun germanResourcesMatchEnglish() {

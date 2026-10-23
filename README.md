@@ -1,6 +1,6 @@
 # SBF Exam Prep
 
-Study app for the German recreational boating licence — **Sportbootführerschein Binnen (motor) & See** — for
+Study app for the German recreational boating licence — **Sportbootführerschein Binnen (motor and sail) & See** — for
 **iPhone, iPad and Android**. It contains the complete official ELWIS question catalogue (August 2023), shown in
 German as in the exam with optional English translations, and an app interface in English and German.
 
@@ -8,11 +8,11 @@ German as in the exam with optional English translations, and an app interface i
 
 | | |
 |---|---|
-| **466 official questions** | 72 basic questions (both exams) + 181 SBF Binnen + 213 SBF See |
-| **Illustrations** | 140 image questions with figures redrawn for the app (lights, shapes, buoys, signs, flags, weather maps); pinch to zoom |
+| **513 official questions** | 72 basic questions (every exam) + 181 SBF Binnen + 47 sailing (SBF Binnen under sail) + 213 SBF See |
+| **Illustrations** | 141 image questions with figures redrawn for the app (lights, shapes, buoys, signs, flags, weather maps); pinch to zoom |
 | **Sound signals** | 20 questions play the signal (short ≈ 1 s, prolonged ≈ 4 s) with a synthesised horn |
 | **Explanations** | Every question has a short explanation in German and English |
-| **Exam simulation** | Official composition (7 basic + 23 specific), pass marks (5/7 and 18/23) and time (45 / 60 min), no feedback until the end |
+| **Exam simulation** | Official ELWIS formats for Binnen motor, Binnen sail, motor + sail, the sailing add-on and See: composition, pass marks per part or in total, time limits; no feedback until the end. "My licence" (onboarding, Settings) picks the formats offered |
 | **Spaced repetition** | Leitner boxes with reviews after 1, 3, 7, 14 and 30 days; a wrong answer starts again |
 | **Practice** | By exam and topic, mistakes, saved questions; browse and search the catalogue |
 | **Answer order** | The catalogue always lists the correct answer first; the apps shuffle it (stable per question while browsing) |
@@ -35,10 +35,10 @@ SBFTrainerTests/       Data integrity and logic tests
 android/               Android app (Kotlin, Jetpack Compose, Material 3, minSdk 26)
 shared/                Question catalogue + illustrations used by both apps
   sbf_exam_questions.json
-  assets/{shared,binnen,see}/<id>.png
+  assets/{shared,binnen,segeln,see}/<id>.png
 tools/
   images/              Python SVG drawings of every illustration (build.py renders shared/assets)
-  data/                update_questions.py + explanations/*.json (data maintenance)
+  data/                import_segeln.py, update_questions.py + explanations/*.json (data maintenance)
   l10n/                build_catalogs.py (iOS) and build_android_strings.py (Android)
 sbf-hosting/           Firebase Hosting site: privacy policy, support pages (EN/DE)
 store/                 App Store and Google Play texts, graphics and screenshots
@@ -86,6 +86,7 @@ Debug builds accept intent extras for screenshots, e.g.
 All changes to the catalogue go through the scripts, so they can be re-run safely:
 
 ```bash
+python3 tools/data/import_segeln.py        # (re)import the ELWIS sailing questions 254–300 + English from segeln_en.json
 python3 tools/data/update_questions.py     # categories (DE), sound patterns, text fixes, image refs, explanations
 python3 tools/images/build.py              # redraw all illustrations into shared/assets (needs resvg)
 python3 tools/images/build.py see_09       # only ids with this prefix
@@ -94,7 +95,8 @@ python3 tools/l10n/build_catalogs.py --derived-data <DerivedData dir>   # after 
 ```
 
 Explanations live in `tools/data/explanations/*.json` as `{"<id>": {"de": "…", "en": "…"}}`.
-The question data originally came from the ELWIS PDFs (see the sibling `sbf-exam-questions` project).
+The question data originally came from the ELWIS PDFs (see the sibling `sbf-exam-questions` project); the sailing
+questions are imported straight from the ELWIS page by `import_segeln.py`, keeping the German wording verbatim.
 
 ## Website
 

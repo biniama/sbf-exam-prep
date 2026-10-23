@@ -8,7 +8,7 @@ struct QuizSetupView: View {
     @Environment(\.horizontalSizeClass) private var hSize
     @State private var mode: Mode = .practice
     @State private var selectedType: ExamType = .all
-    @State private var examType: ExamType = .binnen
+    @State private var examFormat: ExamFormat = .binnenMotor
     @State private var selectedCategory: String? = nil
     @State private var questionCount: Int = 20
     @State private var showQuiz = false
@@ -21,7 +21,7 @@ struct QuizSetupView: View {
         case .practice: return store.questions(for: selectedType, category: selectedCategory).count
         case .review:   return progress.dueCount
         case .mistakes: return progress.wrongAnswerCount
-        case .exam:     return ExamRules(type: examType).totalCount
+        case .exam:     return ExamRules(format: examFormat).totalCount
         }
     }
 
@@ -59,7 +59,12 @@ struct QuizSetupView: View {
             .fullScreenCover(isPresented: $showQuiz) {
                 NavigationStack { QuizView(vm: vm) }
             }
-            .onAppear { questionCount = progress.quizCount }
+            .onAppear {
+                questionCount = progress.quizCount
+                if !progress.licenceGoal.examFormats.contains(examFormat) {
+                    examFormat = progress.licenceGoal.examFormats.first ?? .binnenMotor
+                }
+            }
         }
     }
 
@@ -153,21 +158,30 @@ struct QuizSetupView: View {
     // MARK: - Exam
 
     private var examSection: some View {
-        let rules = ExamRules(type: examType)
+        let rules = ExamRules(format: examFormat)
+        let formats = progress.licenceGoal.examFormats
         return sectionCard(title: "Exam", icon: "doc.text.magnifyingglass") {
             VStack(alignment: .leading, spacing: 12) {
-                Picker("Exam", selection: $examType) {
-                    Text("SBF Inland").tag(ExamType.binnen)
-                    Text("SBF Sea").tag(ExamType.see)
+                if formats.count > 1 {
+                    Picker("Exam", selection: $examFormat) {
+                        ForEach(formats) { Text($0.title).tag($0) }
+                    }
+                    .pickerStyle(.segmented)
+                } else {
+                    Label(examFormat.title, systemImage: examFormat.icon)
+                        .font(.headline)
+                        .foregroundStyle(Color.ink)
                 }
-                .pickerStyle(.segmented)
 
-                ruleRow("list.number", "\(rules.basicCount) basic + \(rules.specificCount) specific questions")
-                ruleRow("checkmark.seal", "Pass: at least \(rules.basicPassMark) of \(rules.basicCount) basic and \(rules.specificPassMark) of \(rules.specificCount) specific")
-                ruleRow("timer", "Time limit: \(rules.minutes) minutes")
-                ruleRow("eye.slash", "No feedback until the end, like the real exam")
+                ruleRow("list.number", Text(rules.summary))
+                ruleRow("checkmark.seal", Text(passText(rules)))
+                ruleRow("timer", Text("Time limit: \(rules.minutes) minutes"))
+                ruleRow("eye.slash", Text("No feedback until the end, like the real exam"))
                 if rules.excludesNavigationTask {
-                    ruleRow("map", "The navigation task of the SBF See exam is not included")
+                    ruleRow("map", Text("The navigation task of the SBF See exam is not included"))
+                }
+                if rules.totalPassMark == nil && rules.parts.count > 1 {
+                    ruleRow("square.split.2x1", Text("Each part is assessed separately and must be passed."))
                 }
                 Text("Source: ELWIS scoring key for the SBF theory exam.")
                     .font(.caption2)
@@ -176,9 +190,19 @@ struct QuizSetupView: View {
         }
     }
 
-    private func ruleRow(_ icon: String, _ text: LocalizedStringKey) -> some View {
+    private func passText(_ rules: ExamRules) -> String {
+        if let total = rules.totalPassMark {
+            return String(localized: "Pass: at least \(total) of \(rules.totalCount) correct in total")
+        }
+        let parts = rules.parts.compactMap { part in
+            part.passMark.map { String(localized: "\($0) of \(part.count) \(part.type.partNoun)") }
+        }
+        return String(localized: "Pass: at least \(parts.formatted(.list(type: .and)))")
+    }
+
+    private func ruleRow(_ icon: String, _ text: Text) -> some View {
         Label {
-            Text(text).font(.subheadline).foregroundStyle(Color.ink).fixedSize(horizontal: false, vertical: true)
+            text.font(.subheadline).foregroundStyle(Color.ink).fixedSize(horizontal: false, vertical: true)
         } icon: {
             Image(systemName: icon).foregroundStyle(Color.gold)
         }
@@ -255,7 +279,7 @@ struct QuizSetupView: View {
             case .practice: vm.setup(type: selectedType, count: startCount, category: selectedCategory)
             case .review: vm.setupDueReview()
             case .mistakes: vm.setupMistakes()
-            case .exam: vm.setupExam(type: examType)
+            case .exam: vm.setupExam(format: examFormat)
             }
             showQuiz = true
         } label: {

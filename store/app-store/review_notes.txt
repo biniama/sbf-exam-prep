@@ -1,7 +1,7 @@
 1. Screen recording: attached / linked (recorded on a physical iPhone, starting with app launch).
 
 2. Purpose
-SBF Exam Prep helps learners pass the theory exam of the German recreational boating licence (Sportbootführerschein Binnen and See). It contains the complete official question catalogue (466 questions, ELWIS, August 2023) in German as in the exam, with optional English translations, explanations, illustrations, playable sound signals, spaced repetition and an exam simulation with the official pass marks and time limits.
+SBF Exam Prep helps learners pass the theory exam of the German recreational boating licence (Sportbootführerschein Binnen under motor and sail, and See). It contains the complete official question catalogue (513 questions including the 47 sailing questions, ELWIS, August 2023) in German as in the exam, with optional English translations, explanations, illustrations, playable sound signals, spaced repetition and exam simulations with the official composition, pass marks and time limits for each licence. The learner picks their licence in onboarding or under Settings → My licence.
 
 3. How to review
 No account or login is needed; everything is available immediately after the short onboarding.

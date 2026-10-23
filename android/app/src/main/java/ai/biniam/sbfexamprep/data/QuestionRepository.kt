@@ -20,18 +20,22 @@ class QuestionRepository(json: String) {
         byId = allQuestions.associateBy { it.uniqueId }
     }
 
-    /** Questions of an exam. Basic questions (Basisfragen) belong to both licences. */
+    /**
+     * Questions of an exam. Basic questions (Basisfragen) belong to both licences;
+     * the sailing questions are an additional part of the SBF Binnen and are listed on their own.
+     */
     fun questions(type: ExamType): List<Question> = when (type) {
         ExamType.ALL -> allQuestions
         ExamType.SHARED -> allQuestions.filter { it.examType == ExamType.SHARED }
         ExamType.BINNEN -> allQuestions.filter { it.examType == ExamType.BINNEN || it.examType == ExamType.SHARED }
         ExamType.SEE -> allQuestions.filter { it.examType == ExamType.SEE || it.examType == ExamType.SHARED }
+        ExamType.SEGELN -> allQuestions.filter { it.examType == ExamType.SEGELN }
     }
 
     fun questions(type: ExamType, category: String?): List<Question> =
         questions(type).let { base -> if (category == null) base else base.filter { it.category == category } }
 
-    /** Licence-specific questions only (without the shared basic questions). */
+    /** Questions of one exam part only (without the shared basic questions). */
     fun specificQuestions(type: ExamType): List<Question> = allQuestions.filter { it.examType == type }
 
     /** Canonical (English) category keys, sorted by their display name. */

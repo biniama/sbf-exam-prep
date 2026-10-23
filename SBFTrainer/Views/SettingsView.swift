@@ -51,6 +51,15 @@ struct SettingsView: View {
 
     private var learningSection: some View {
         Section {
+            NavigationLink {
+                LicenceSettingsView()
+            } label: {
+                LabeledContent {
+                    Text(progress.licenceGoal.summary)
+                } label: {
+                    Label("My licence", systemImage: "sailboat")
+                }
+            }
             Toggle(isOn: Binding(get: { progress.showEnglish }, set: { progress.setShowEnglish($0) })) {
                 Label("Show English translation", systemImage: "globe")
             }
@@ -127,6 +136,7 @@ struct SettingsView: View {
         Section {
             statRow("Basic questions", value: "\(store.specificQuestions(for: .shared).count)")
             statRow("SBF Inland (specific)", value: "\(store.specificQuestions(for: .binnen).count)")
+            statRow("SBF Inland · sailing", value: "\(store.specificQuestions(for: .segeln).count)")
             statRow("SBF Sea (specific)", value: "\(store.specificQuestions(for: .see).count)")
             statRow("Total", value: "\(store.allQuestions.count)")
             // Store policies: government information must link to its original source.

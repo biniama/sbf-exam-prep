@@ -358,6 +358,7 @@ CATALOG = {
     "binnen_186": lambda: S.scenario("binnen_186"),
     "binnen_188": lambda: S.scenario("binnen_188"),
     "binnen_189": lambda: S.scenario("binnen_189"),
+    "segeln_295": S.manoeuvre_course,
     "binnen_192": lambda: G.light_panel([("sq", "g", .25, .8), ("sq", "w", .75, .8)]),
     "binnen_193": lambda: G.light_panel([("sq", "g", .25, .8), ("sq", "w", .75, .8)]),
     "binnen_196": lambda: G.light_panel([("ci", "r", .5, .28), ("ci", "w", .5, .62)]),

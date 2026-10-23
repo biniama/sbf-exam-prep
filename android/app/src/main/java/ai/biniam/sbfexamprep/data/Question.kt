@@ -53,6 +53,7 @@ data class Question(
         get() = when {
             uniqueId.startsWith("shared") -> ExamType.SHARED
             uniqueId.startsWith("binnen") -> ExamType.BINNEN
+            uniqueId.startsWith("segeln") -> ExamType.SEGELN
             else -> ExamType.SEE
         }
 
@@ -90,7 +91,7 @@ data class Question(
 }
 
 enum class ExamType(val raw: String) {
-    ALL("All"), SHARED("Shared"), BINNEN("Binnen"), SEE("See");
+    ALL("All"), SHARED("Shared"), BINNEN("Binnen"), SEGELN("Segeln"), SEE("See");
 
     companion object {
         fun fromRaw(raw: String): ExamType = entries.firstOrNull { it.raw == raw } ?: ALL

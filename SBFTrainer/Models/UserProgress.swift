@@ -10,9 +10,18 @@ struct QuizRecord: Codable, Hashable {
     /// Set for exam simulations only.
     var isExam: Bool? = nil
     var passed: Bool? = nil
+    var examFormat: String? = nil
 
     var accuracy: Double { totalQuestions > 0 ? Double(correctAnswers) / Double(totalQuestions) : 0 }
     var type: ExamType { ExamType(rawValue: examType) ?? .all }
+    /// Exam format of a simulation (records from before formats existed fall back to the exam type).
+    var format: ExamFormat? {
+        if let examFormat { return ExamFormat(rawValue: examFormat) }
+        guard isExam == true else { return nil }
+        return type == .see ? .see : .binnenMotor
+    }
+    /// "Inland · motor" for exam simulations, otherwise the question set.
+    var title: String { format?.title ?? type.title }
 }
 
 /// Leitner box of a question for spaced repetition.
@@ -57,6 +66,9 @@ final class UserProgress: ObservableObject {
     @Published private(set) var reminderEnabled = false
     @Published private(set) var reminderMinutes = 18 * 60
     @Published private(set) var iCloudSyncEnabled = true
+    @Published private(set) var licenceGoal = LicenceGoal.standard
+    /// False until the learner has picked a licence (onboarding or the Home prompt).
+    @Published private(set) var hasChosenLicence = false
 
     private let defaults: UserDefaults
     private let cloud: CloudSync?
@@ -123,6 +135,10 @@ final class UserProgress: ObservableObject {
         reminderEnabled = defaults.bool(forKey: "reminderEnabled")
         reminderMinutes = defaults.object(forKey: "reminderMinutes") as? Int ?? 18 * 60
         iCloudSyncEnabled = cloud?.isEnabled ?? false
+        if let data = defaults.data(forKey: "licenceGoal"), let goal = try? JSONDecoder().decode(LicenceGoal.self, from: data) {
+            licenceGoal = goal
+            hasChosenLicence = true
+        }
     }
 
     private func save<T: Encodable>(_ value: T, key: String) {
@@ -274,6 +290,13 @@ final class UserProgress: ObservableObject {
     }
 
     func toggleEnglish() { setShowEnglish(!showEnglish) }
+
+    func setLicenceGoal(_ goal: LicenceGoal) {
+        guard goal.isValid else { return }
+        licenceGoal = goal
+        hasChosenLicence = true
+        defaults.set(try? JSONEncoder().encode(goal), forKey: "licenceGoal")
+    }
 
     func setQuizCount(_ n: Int) {
         quizCount = n

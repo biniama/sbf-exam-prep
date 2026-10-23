@@ -153,7 +153,7 @@ struct QuizView: View {
                         .monospacedDigit()
                     Spacer()
                     if let rules = vm.examRules {
-                        Text("Exam simulation · \(rules.type.title)")
+                        Text("Exam simulation · \(rules.format.title)")
                     }
                 }
                 .font(.caption.weight(.semibold))

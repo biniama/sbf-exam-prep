@@ -21,6 +21,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Assignment
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.outlined.Circle
 import androidx.compose.material.icons.filled.ErrorOutline
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -57,7 +58,10 @@ import ai.biniam.sbfexamprep.ui.components.StatCard
 import ai.biniam.sbfexamprep.ui.components.cardStyle
 import ai.biniam.sbfexamprep.ui.components.currentLocale
 import ai.biniam.sbfexamprep.ui.components.examTypeIcon
+import ai.biniam.sbfexamprep.ui.components.examFormatIcon
+import ai.biniam.sbfexamprep.ui.components.examFormatShortTitle
 import ai.biniam.sbfexamprep.ui.components.examTypeTitle
+import ai.biniam.sbfexamprep.ui.components.partTitle
 import ai.biniam.sbfexamprep.ui.components.percent
 import ai.biniam.sbfexamprep.ui.theme.Brand
 import ai.biniam.sbfexamprep.ui.theme.Sbf
@@ -115,13 +119,20 @@ fun QuizResultScreen(vm: QuizViewModel, onReview: (String) -> Unit) {
                     if (result != null) {
                         Column(Modifier.cardStyle().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             SectionHeader(stringResource(R.string.official_scoring), Icons.AutoMirrored.Filled.Assignment)
-                            PartRow(stringResource(R.string.licence_basic), result.basicCorrect, result.rules.basicCount,
-                                    result.rules.basicPassMark, result.basicPassed)
-                            PartRow(stringResource(R.string.specific_questions, examTypeTitle(result.rules.type)),
-                                    result.specificCorrect, result.rules.specificCount, result.rules.specificPassMark,
-                                    result.specificPassed)
-                            Text(stringResource(R.string.both_parts), style = MaterialTheme.typography.bodySmall,
-                                 color = Sbf.colors.muted)
+                            result.rules.parts.forEach { part ->
+                                PartRow(partTitle(part.type), result.correct(part), part.count, part.passMark,
+                                        if (part.passMark == null) null else result.passed(part))
+                            }
+                            val totalPassMark = result.rules.totalPassMark
+                            if (totalPassMark != null) {
+                                PartRow(stringResource(R.string.total), result.totalCorrect, result.rules.totalCount,
+                                        totalPassMark, result.totalPassed)
+                                Text(stringResource(R.string.total_only), style = MaterialTheme.typography.bodySmall,
+                                     color = Sbf.colors.muted)
+                            } else if (result.rules.parts.size > 1) {
+                                Text(stringResource(R.string.each_part), style = MaterialTheme.typography.bodySmall,
+                                     color = Sbf.colors.muted)
+                            }
                             if (result.rules.excludesNavigationTask) {
                                 Text(stringResource(R.string.navigation_task_note), style = MaterialTheme.typography.bodySmall,
                                      color = Sbf.colors.muted)
@@ -134,8 +145,9 @@ fun QuizResultScreen(vm: QuizViewModel, onReview: (String) -> Unit) {
                                  Sbf.colors.success, Modifier.weight(1f))
                         StatCard("${vm.wrongIds.size}", stringResource(R.string.wrong), Icons.Filled.Cancel,
                                  Sbf.colors.error, Modifier.weight(1f))
-                        StatCard(examTypeTitle(vm.examType), stringResource(R.string.exam), examTypeIcon(vm.examType),
-                                 Brand.navyLight, Modifier.weight(1f))
+                        val format = result?.rules?.format
+                        StatCard(format?.let { examFormatShortTitle(it) } ?: examTypeTitle(vm.examType), stringResource(R.string.exam),
+                                 format?.let { examFormatIcon(it) } ?: examTypeIcon(vm.examType), Brand.navyLight, Modifier.weight(1f))
                     }
 
                     // Mistakes
@@ -187,18 +199,28 @@ private fun ScoreRing(accuracy: Double, color: Color) {
 }
 
 @Composable
-private fun PartRow(title: String, correct: Int, total: Int, passMark: Int, passed: Boolean) {
+/** [passed] is null when the part has no pass mark of its own (only the total counts). */
+private fun PartRow(title: String, correct: Int, total: Int, passMark: Int?, passed: Boolean?) {
+    val color = when (passed) {
+        true -> Sbf.colors.success
+        false -> Sbf.colors.error
+        null -> Sbf.colors.muted
+    }
     Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(if (passed) Icons.Filled.CheckCircle else Icons.Filled.Cancel, null,
-             tint = if (passed) Sbf.colors.success else Sbf.colors.error)
+        Icon(when (passed) {
+            true -> Icons.Filled.CheckCircle
+            false -> Icons.Filled.Cancel
+            null -> Icons.Outlined.Circle
+        }, null, tint = color)
         Spacer(Modifier.width(10.dp))
         Column(Modifier.weight(1f)) {
             Text(title, style = MaterialTheme.typography.titleSmall, color = Sbf.colors.ink)
-            Text(stringResource(R.string.pass_mark, passMark, total), style = MaterialTheme.typography.bodySmall,
-                 color = Sbf.colors.muted)
+            if (passMark != null) {
+                Text(stringResource(R.string.pass_mark, passMark, total), style = MaterialTheme.typography.bodySmall,
+                     color = Sbf.colors.muted)
+            }
         }
         Text(stringResource(R.string.score_fraction, correct, total), style = MaterialTheme.typography.titleMedium,
-             fontWeight = FontWeight.Bold, textAlign = TextAlign.End,
-             color = if (passed) Sbf.colors.success else Sbf.colors.error)
+             fontWeight = FontWeight.Bold, textAlign = TextAlign.End, color = color)
     }
 }

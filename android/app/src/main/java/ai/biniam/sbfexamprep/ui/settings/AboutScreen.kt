@@ -98,6 +98,7 @@ fun AboutScreen(onBack: () -> Unit) {
                     Card(Icons.AutoMirrored.Filled.LibraryBooks, Brand.oceanTeal, stringResource(R.string.question_catalogue)) {
                         CountRow(stringResource(R.string.licence_basic), store.specificQuestions(ExamType.SHARED).size)
                         CountRow(stringResource(R.string.sbf_inland_specific), store.specificQuestions(ExamType.BINNEN).size)
+                        CountRow(stringResource(R.string.licence_sailing), store.specificQuestions(ExamType.SEGELN).size)
                         CountRow(stringResource(R.string.sbf_sea_specific), store.specificQuestions(ExamType.SEE).size)
                         CountRow(stringResource(R.string.illustrated_questions), store.allQuestions.count { it.hasImage })
                         HorizontalDivider(color = Sbf.colors.hairline)

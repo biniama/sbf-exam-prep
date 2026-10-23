@@ -80,6 +80,44 @@ def _water(w=1200, h=700, shore=False) -> Canvas:
     return c
 
 
+def _arrowhead(c: Canvas, tip, toward_from, size=34):
+    """Filled arrowhead at ``tip`` pointing away from ``toward_from``."""
+    ang = math.atan2(tip[1] - toward_from[1], tip[0] - toward_from[0])
+    pts = [tip]
+    for side in (-1, 1):
+        a = ang + math.pi + side * 0.42
+        pts.append((tip[0] + size * math.cos(a), tip[1] + size * math.sin(a)))
+    c.poly(pts, fill=BLACK)
+
+
+def manoeuvre_course() -> Canvas:
+    """Segeln 295: course with a tack (1), a gybe (2) and a chicken gybe (3); wind from the left."""
+    c = _water(1200, 900)
+    s, ox, oy = 1.55, 30, 10
+
+    def p(x, y):
+        return f"{ox + x * s:.1f} {oy + y * s:.1f}"
+
+    start, end = (588, 18), (712, 150)
+    course = (f"M {p(*start)} L {p(360, 470)} "
+              f"C {p(330, 535)} {p(255, 545)} {p(225, 485)} "      # 1: bow through the wind
+              f"L {p(130, 330)} C {p(112, 300)} {p(132, 222)} {p(150, 195)} "
+              f"L {p(220, 85)} C {p(242, 52)} {p(318, 40)} {p(350, 75)} "  # 2: stern through the wind
+              f"L {p(665, 290)} C {p(698, 312)} {p(700, 425)} {p(628, 428)} "
+              f"C {p(560, 430)} {p(562, 348)} {p(592, 308)} "        # 3: loop through the wind
+              f"L {p(*end)}")
+    c.path(course, fill="none", stroke=BLACK, sw=6)
+    sx, sy = (ox + start[0] * s, oy + start[1] * s)
+    c.circle(sx, sy, 10, fill=BLACK)
+    for a, b in (((520, 154), (468, 255)), ((476, 161), (555, 215))):   # direction of travel
+        _arrowhead(c, (ox + b[0] * s, oy + b[1] * s), (ox + a[0] * s, oy + a[1] * s), size=40)
+    _arrowhead(c, (ox + end[0] * s, oy + end[1] * s), (ox + 650 * s, oy + 215 * s), size=44)
+    for label, (x, y) in (("1", (292, 488)), ("2", (282, 108)), ("3", (626, 392))):
+        c.text(ox + x * s, oy + y * s + 22, label, size=64, weight="800")
+    wind_arrow(c, 105, 420, 270, length=170)
+    return c
+
+
 def scenario(uid: str) -> Canvas:
     if uid == "binnen_180":
         c = _water(shore=True)

@@ -28,17 +28,19 @@ final class QuestionStore: ObservableObject {
         }
     }
 
-    /// Questions of an exam. Basic questions (Basisfragen) belong to both licences.
+    /// Questions of an exam. Basic questions (Basisfragen) belong to both licences;
+    /// the sailing questions are an additional part of the SBF Binnen and are listed on their own.
     func questions(for type: ExamType) -> [Question] {
         switch type {
         case .all:    return allQuestions
         case .shared: return allQuestions.filter { $0.examType == .shared }
         case .binnen: return allQuestions.filter { $0.examType == .binnen || $0.examType == .shared }
         case .see:    return allQuestions.filter { $0.examType == .see    || $0.examType == .shared }
+        case .segeln: return allQuestions.filter { $0.examType == .segeln }
         }
     }
 
-    /// Licence-specific questions only (without the shared basic questions).
+    /// Questions of one exam part only (without the shared basic questions).
     func specificQuestions(for type: ExamType) -> [Question] {
         allQuestions.filter { $0.examType == type }
     }

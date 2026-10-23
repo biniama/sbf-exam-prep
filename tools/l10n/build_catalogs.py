@@ -36,6 +36,46 @@ DE = {
     "Basic": "Basis",
     "Inland": "Binnen",
     "Sea": "See",
+    "Sailing": "Segeln",
+    "SBF Inland · sailing": "SBF Binnen · Segeln",
+    "questions": "Fragen",
+    "basic": "Basis",
+    "inland": "Binnen",
+    "sailing": "Segeln",
+    "sea": "See",
+    "Inland questions": "Binnenfragen",
+    "Sailing questions": "Segelfragen",
+    "Sea questions": "Seefragen",
+
+    # Exam formats & licence
+    "Inland · motor": "Binnen · Motor",
+    "Inland · sail": "Binnen · Segel",
+    "Inland · motor + sail": "Binnen · Motor + Segel",
+    "Sailing add-on": "Segel-Ergänzung",
+    "%@ · %lld min": "%@ · %lld Min.",
+    "%lld of %lld %@": "%lld von %lld %@",
+    "Pass: at least %@": "Bestanden mit mindestens %@",
+    "Pass: at least %lld of %lld correct in total": "Bestanden mit mindestens %lld von %lld richtigen Antworten insgesamt",
+    "Each part is assessed separately and must be passed.": "Jeder Teil wird getrennt bewertet und muss bestanden werden.",
+    "For the sailing licence alone, only the total counts.": "Beim reinen Segelschein zählt nur die Gesamtzahl richtiger Antworten.",
+    "My licence": "Mein Führerschein",
+    "Not needed": "Nicht nötig",
+    "Motor": "Motor",
+    "Sail": "Segel",
+    "Motor + sail": "Motor + Segel",
+    "Sail only – I already hold SBF Inland (motor)": "Nur Segel – ich habe schon den SBF Binnen (Motor)",
+    "Also preparing for SBF Sea": "Ich mache auch den SBF See",
+    "Exam simulations": "Prüfungssimulationen",
+    "The sailing licence for inland waters has its own exam with 7 extra sailing questions.":
+        "Für den Binnenschein unter Segel gibt es eine eigene Prüfung mit 7 zusätzlichen Segelfragen.",
+    "Your choice decides which exam simulations are offered. All questions stay available for practice.":
+        "Deine Auswahl bestimmt, welche Prüfungssimulationen angeboten werden. Zum Üben bleiben alle Fragen verfügbar.",
+    "Which licence are you taking?": "Welchen Führerschein machst du?",
+    "This decides which exam simulations you get. You can change it any time in Settings.":
+        "Davon hängt ab, welche Prüfungssimulationen du bekommst. Du kannst es jederzeit in den Einstellungen ändern.",
+    "New: sailing questions": "Neu: Segelfragen",
+    "Choose your licence to get the right exam simulation.":
+        "Wähle deinen Führerschein, um die passende Prüfungssimulation zu bekommen.",
     "All questions": "Alle Fragen",
     "Basic questions": "Basisfragen",
     "SBF Inland": "SBF Binnen",
@@ -246,11 +286,11 @@ DE = {
         "Alle %lld offiziellen Fragen, Prüfungssimulation und intelligente Wiederholung.",
     "Everything you need": "Alles, was du brauchst",
     "Official questions": "Offizielle Fragen",
-    "The complete ELWIS catalogue (August 2023) for SBF Binnen and SBF See, in German with English translations.":
-        "Der vollständige ELWIS-Fragenkatalog (August 2023) für SBF Binnen und SBF See, auf Deutsch mit englischer Übersetzung.",
+    "The complete ELWIS catalogue (August 2023) for SBF Binnen (motor and sail) and SBF See, in German with English translations.":
+        "Der vollständige ELWIS-Fragenkatalog (August 2023) für SBF Binnen (Motor und Segel) und SBF See, auf Deutsch mit englischer Übersetzung.",
     "Real exam simulation": "Echte Prüfungssimulation",
-    "7 basic + 23 specific questions with the official pass marks and time limit.":
-        "7 Basis- + 23 spezifische Fragen mit offiziellen Bestehensgrenzen und Zeitlimit.",
+    "The official composition, pass marks and time limit for your licence.":
+        "Offizielle Zusammensetzung, Bestehensgrenzen und Zeitlimit für deinen Führerschein.",
     "Signs, lights & sound signals": "Zeichen, Lichter & Schallsignale",
     "Clear illustrations for every image question — and sound signals you can listen to.":
         "Klare Abbildungen zu jeder Bildfrage – und Schallsignale zum Anhören.",
@@ -269,8 +309,8 @@ DE = {
 
     # About
     "About this app": "Über diese App",
-    "SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor) and See.":
-        "SBF Exam Prep bereitet dich auf die theoretische Prüfung zum Sportbootführerschein Binnen (unter Antriebsmaschine) und See vor.",
+    "SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor and sail) and See.":
+        "SBF Exam Prep bereitet dich auf die theoretische Prüfung zum Sportbootführerschein Binnen (unter Antriebsmaschine und unter Segel) und See vor.",
     "Every question is shown in German, as in the exam, with an optional English translation.":
         "Jede Frage wird wie in der Prüfung auf Deutsch angezeigt, wahlweise mit englischer Übersetzung.",
     "Illustrated questions": "Fragen mit Abbildung",

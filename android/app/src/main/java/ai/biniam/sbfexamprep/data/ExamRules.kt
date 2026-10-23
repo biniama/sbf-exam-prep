@@ -1,37 +1,83 @@
 package ai.biniam.sbfexamprep.data
 
+import kotlinx.serialization.Serializable
+
 /**
- * Official ELWIS scoring for the multiple-choice part of the theory exam
+ * Exam formats of the multiple-choice theory exam that the app simulates
  * (Bewertungsschlüssel, ELWIS, as of 31 Oct 2022).
- *
- * Both licences: 7 basic questions (pass ≥ 5) + 23 licence-specific questions (pass ≥ 18).
- * SBF Binnen: 45 minutes. SBF See: 60 minutes including a 9-question navigation task,
- * which this app does not simulate.
  */
-data class ExamRules(val type: ExamType) {
-    init {
-        require(type == ExamType.BINNEN || type == ExamType.SEE) { "Exam simulation exists for SBF Binnen and SBF See" }
+enum class ExamFormat(val raw: String) {
+    BINNEN_MOTOR("binnen-motor"),
+    BINNEN_SAIL("binnen-sail"),
+    BINNEN_MOTOR_SAIL("binnen-motor-sail"),
+    SAIL_ADDON("sail-addon"),
+    SEE("see");
+
+    companion object {
+        fun fromRaw(raw: String?): ExamFormat? = entries.firstOrNull { it.raw == raw }
     }
-
-    val basicCount = 7
-    val basicPassMark = 5
-    val specificCount = 23
-    val specificPassMark = 18
-    val totalCount get() = basicCount + specificCount
-
-    /** Time limit in minutes as in the official exam. */
-    val minutes get() = if (type == ExamType.BINNEN) 45 else 60
-
-    /** The navigation task (9 written questions) is part of the SBF See exam but not of this app. */
-    val excludesNavigationTask get() = type == ExamType.SEE
-
-    fun result(basicCorrect: Int, specificCorrect: Int) = ExamResult(this, basicCorrect, specificCorrect)
 }
 
-data class ExamResult(val rules: ExamRules, val basicCorrect: Int, val specificCorrect: Int) {
-    val basicPassed get() = basicCorrect >= rules.basicPassMark
-    val specificPassed get() = specificCorrect >= rules.specificPassMark
+/** One separately counted part of an exam; [passMark] is null when only the total counts. */
+data class ExamPart(val type: ExamType, val count: Int, val passMark: Int?)
 
-    /** Both parts are assessed separately; the exam is passed only if both are passed. */
-    val passed get() = basicPassed && specificPassed
+data class ExamRules(val format: ExamFormat) {
+    val parts: List<ExamPart> = when (format) {
+        ExamFormat.BINNEN_MOTOR -> listOf(ExamPart(ExamType.SHARED, 7, 5), ExamPart(ExamType.BINNEN, 23, 18))
+        ExamFormat.BINNEN_SAIL -> listOf(ExamPart(ExamType.SHARED, 4, null), ExamPart(ExamType.BINNEN, 14, null),
+                                         ExamPart(ExamType.SEGELN, 7, null))
+        ExamFormat.BINNEN_MOTOR_SAIL -> listOf(ExamPart(ExamType.SHARED, 7, 5), ExamPart(ExamType.BINNEN, 23, 18),
+                                               ExamPart(ExamType.SEGELN, 7, 5))
+        ExamFormat.SAIL_ADDON -> listOf(ExamPart(ExamType.SEGELN, 7, 5))
+        ExamFormat.SEE -> listOf(ExamPart(ExamType.SHARED, 7, 5), ExamPart(ExamType.SEE, 23, 18))
+    }
+
+    /** Minimum correct answers over all parts (SBF Binnen under sail only). */
+    val totalPassMark: Int? = if (format == ExamFormat.BINNEN_SAIL) 20 else null
+
+    /** Time limit in minutes as in the official exam. */
+    val minutes: Int = when (format) {
+        ExamFormat.BINNEN_MOTOR -> 45
+        ExamFormat.BINNEN_SAIL -> 35
+        ExamFormat.BINNEN_MOTOR_SAIL, ExamFormat.SEE -> 60
+        ExamFormat.SAIL_ADDON -> 15
+    }
+
+    val totalCount: Int get() = parts.sumOf { it.count }
+
+    /** The navigation task (9 written questions) is part of the SBF See exam but not of this app. */
+    val excludesNavigationTask: Boolean get() = format == ExamFormat.SEE
+
+    fun result(correct: Map<ExamType, Int>) = ExamResult(this, correct)
+}
+
+data class ExamResult(val rules: ExamRules, val correct: Map<ExamType, Int>) {
+    fun correct(part: ExamPart): Int = correct[part.type] ?: 0
+
+    /** A part without its own pass mark always counts as passed; the total decides. */
+    fun passed(part: ExamPart): Boolean = part.passMark?.let { correct(part) >= it } ?: true
+
+    val totalCorrect: Int get() = rules.parts.sumOf { correct(it) }
+
+    val totalPassed: Boolean get() = rules.totalPassMark?.let { totalCorrect >= it } ?: true
+
+    /** Every part with a pass mark and the total (if any) must be passed. */
+    val passed: Boolean get() = totalPassed && rules.parts.all { passed(it) }
+}
+
+/** The licences the learner is preparing for ("My licence"). Decides which exam simulations are offered. */
+@Serializable
+data class LicenceGoal(val inland: Inland = Inland.MOTOR, val sea: Boolean = true) {
+    enum class Inland(val format: ExamFormat?) {
+        NONE(null), MOTOR(ExamFormat.BINNEN_MOTOR), SAIL(ExamFormat.BINNEN_SAIL),
+        MOTOR_AND_SAIL(ExamFormat.BINNEN_MOTOR_SAIL), SAIL_ADDON(ExamFormat.SAIL_ADDON),
+    }
+
+    val isValid: Boolean get() = inland != Inland.NONE || sea
+
+    val includesSailing: Boolean get() = inland == Inland.SAIL || inland == Inland.MOTOR_AND_SAIL || inland == Inland.SAIL_ADDON
+
+    val examFormats: List<ExamFormat>
+        get() = (listOfNotNull(inland.format) + if (sea) listOf(ExamFormat.SEE) else emptyList())
+            .ifEmpty { listOf(ExamFormat.BINNEN_MOTOR, ExamFormat.SEE) }
 }

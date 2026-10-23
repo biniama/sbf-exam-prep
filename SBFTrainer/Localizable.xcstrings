@@ -2,12 +2,12 @@
   "sourceLanguage": "en",
   "version": "1.0",
   "strings": {
-    "%@-specific questions": {
+    "%@ · %lld min": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@-spezifische Fragen"
+            "value": "%@ · %lld Min."
           }
         }
       }
@@ -32,22 +32,22 @@
         }
       }
     },
-    "%lld basic + %lld specific questions": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld Basis- + %lld spezifische Fragen"
-          }
-        }
-      }
-    },
     "%lld of %lld": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld von %lld"
+          }
+        }
+      }
+    },
+    "%lld of %lld %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld %@"
           }
         }
       }
@@ -362,36 +362,6 @@
         }
       }
     },
-    "7 basic + 23 inland questions · 45 min": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "7 Basis- + 23 Binnenfragen · 45 Min."
-          }
-        }
-      }
-    },
-    "7 basic + 23 sea questions · 60 min": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "7 Basis- + 23 Seefragen · 60 Min."
-          }
-        }
-      }
-    },
-    "7 basic + 23 specific questions with the official pass marks and time limit.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "7 Basis- + 23 spezifische Fragen mit offiziellen Bestehensgrenzen und Zeitlimit."
-          }
-        }
-      }
-    },
     "A local notification on this device. No data is sent anywhere.": {
       "localizations": {
         "de": {
@@ -498,6 +468,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mitteilungen in den Einstellungen erlauben"
+          }
+        }
+      }
+    },
+    "Also preparing for SBF Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich mache auch den SBF See"
           }
         }
       }
@@ -612,16 +592,6 @@
         }
       }
     },
-    "Both parts are assessed separately and must each be passed.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Beide Teile werden getrennt bewertet und müssen jeweils bestanden werden."
-          }
-        }
-      }
-    },
     "Browse": {
       "localizations": {
         "de": {
@@ -658,6 +628,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prüfung und Thema wählen"
+          }
+        }
+      }
+    },
+    "Choose your licence to get the right exam simulation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle deinen Führerschein, um die passende Prüfungssimulation zu bekommen."
           }
         }
       }
@@ -802,6 +782,16 @@
         }
       }
     },
+    "Each part is assessed separately and must be passed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeder Teil wird getrennt bewertet und muss bestanden werden."
+          }
+        }
+      }
+    },
     "Enable daily reminder": {
       "localizations": {
         "de": {
@@ -912,22 +902,12 @@
         }
       }
     },
-    "Exam simulation · Inland": {
+    "Exam simulations": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prüfungssimulation · Binnen"
-          }
-        }
-      }
-    },
-    "Exam simulation · Sea": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prüfungssimulation · See"
+            "value": "Prüfungssimulationen"
           }
         }
       }
@@ -978,6 +958,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Beenden und Ergebnis ansehen"
+          }
+        }
+      }
+    },
+    "For the sailing licence alone, only the total counts.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim reinen Segelschein zählt nur die Gesamtzahl richtiger Antworten."
           }
         }
       }
@@ -1112,6 +1102,46 @@
         }
       }
     },
+    "Inland questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnenfragen"
+          }
+        }
+      }
+    },
+    "Inland · motor": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen · Motor"
+          }
+        }
+      }
+    },
+    "Inland · motor + sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen · Motor + Segel"
+          }
+        }
+      }
+    },
+    "Inland · sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen · Segel"
+          }
+        }
+      }
+    },
     "Keep practising": {
       "localizations": {
         "de": {
@@ -1212,12 +1242,52 @@
         }
       }
     },
+    "Motor": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motor"
+          }
+        }
+      }
+    },
+    "Motor + sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motor + Segel"
+          }
+        }
+      }
+    },
+    "My licence": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mein Führerschein"
+          }
+        }
+      }
+    },
     "New exam simulation": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Neue Prüfungssimulation"
+          }
+        }
+      }
+    },
+    "New: sailing questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu: Segelfragen"
           }
         }
       }
@@ -1278,6 +1348,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nr. %lld"
+          }
+        }
+      }
+    },
+    "Not needed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht nötig"
           }
         }
       }
@@ -1422,12 +1502,22 @@
         }
       }
     },
-    "Pass: at least %lld of %lld basic and %lld of %lld specific": {
+    "Pass: at least %@": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bestanden: mind. %lld von %lld Basisfragen und %lld von %lld spezifischen Fragen"
+            "value": "Bestanden mit mindestens %@"
+          }
+        }
+      }
+    },
+    "Pass: at least %lld of %lld correct in total": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestanden mit mindestens %lld von %lld richtigen Antworten insgesamt"
           }
         }
       }
@@ -1892,12 +1982,12 @@
         }
       }
     },
-    "SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor) and See.": {
+    "SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor and sail) and See.": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "SBF Exam Prep bereitet dich auf die theoretische Prüfung zum Sportbootführerschein Binnen (unter Antriebsmaschine) und See vor."
+            "value": "SBF Exam Prep bereitet dich auf die theoretische Prüfung zum Sportbootführerschein Binnen (unter Antriebsmaschine und unter Segel) und See vor."
           }
         }
       }
@@ -1912,22 +2002,22 @@
         }
       }
     },
-    "SBF Inland (motor)": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SBF Binnen (Motor)"
-          }
-        }
-      }
-    },
     "SBF Inland (specific)": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "SBF Binnen (spezifisch)"
+          }
+        }
+      }
+    },
+    "SBF Inland · sailing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Binnen · Segeln"
           }
         }
       }
@@ -1948,6 +2038,56 @@
           "stringUnit": {
             "state": "translated",
             "value": "SBF See (spezifisch)"
+          }
+        }
+      }
+    },
+    "Sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segel"
+          }
+        }
+      }
+    },
+    "Sail only – I already hold SBF Inland (motor)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur Segel – ich habe schon den SBF Binnen (Motor)"
+          }
+        }
+      }
+    },
+    "Sailing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segeln"
+          }
+        }
+      }
+    },
+    "Sailing add-on": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segel-Ergänzung"
+          }
+        }
+      }
+    },
+    "Sailing questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segelfragen"
           }
         }
       }
@@ -1998,6 +2138,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "See"
+          }
+        }
+      }
+    },
+    "Sea questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seefragen"
           }
         }
       }
@@ -2352,12 +2502,12 @@
         }
       }
     },
-    "The complete ELWIS catalogue (August 2023) for SBF Binnen and SBF See, in German with English translations.": {
+    "The complete ELWIS catalogue (August 2023) for SBF Binnen (motor and sail) and SBF See, in German with English translations.": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Der vollständige ELWIS-Fragenkatalog (August 2023) für SBF Binnen und SBF See, auf Deutsch mit englischer Übersetzung."
+            "value": "Der vollständige ELWIS-Fragenkatalog (August 2023) für SBF Binnen (Motor und Segel) und SBF See, auf Deutsch mit englischer Übersetzung."
           }
         }
       }
@@ -2382,12 +2532,32 @@
         }
       }
     },
+    "The official composition, pass marks and time limit for your licence.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Zusammensetzung, Bestehensgrenzen und Zeitlimit für deinen Führerschein."
+          }
+        }
+      }
+    },
     "The real SBF See exam also includes a navigation task (9 questions, at least 7 correct), which is not part of this simulation.": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Die echte SBF-See-Prüfung enthält zusätzlich eine Navigationsaufgabe (9 Fragen, mindestens 7 richtig), die nicht Teil dieser Simulation ist."
+          }
+        }
+      }
+    },
+    "The sailing licence for inland waters has its own exam with 7 extra sailing questions.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für den Binnenschein unter Segel gibt es eine eigene Prüfung mit 7 zusätzlichen Segelfragen."
           }
         }
       }
@@ -2408,6 +2578,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Diese App ist eine unabhängige Lernhilfe und steht in keiner Verbindung zur GDWS, zu ELWIS, zum DMYV oder zum DSV. Bitte prüfe stets die aktuellen Vorschriften."
+          }
+        }
+      }
+    },
+    "This decides which exam simulations you get. You can change it any time in Settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Davon hängt ab, welche Prüfungssimulationen du bekommst. Du kannst es jederzeit in den Einstellungen ändern."
           }
         }
       }
@@ -2562,6 +2742,16 @@
         }
       }
     },
+    "Which licence are you taking?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welchen Führerschein machst du?"
+          }
+        }
+      }
+    },
     "Why?": {
       "localizations": {
         "de": {
@@ -2592,6 +2782,16 @@
         }
       }
     },
+    "Your choice decides which exam simulations are offered. All questions stay available for practice.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Auswahl bestimmt, welche Prüfungssimulationen angeboten werden. Zum Üben bleiben alle Fragen verfügbar."
+          }
+        }
+      }
+    },
     "Your mistakes": {
       "localizations": {
         "de": {
@@ -2612,6 +2812,26 @@
         }
       }
     },
+    "basic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basis"
+          }
+        }
+      }
+    },
+    "inland": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen"
+          }
+        }
+      }
+    },
     "pause": {
       "localizations": {
         "de": {
@@ -2628,6 +2848,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "lang"
+          }
+        }
+      }
+    },
+    "questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen"
+          }
+        }
+      }
+    },
+    "sailing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segeln"
+          }
+        }
+      }
+    },
+    "sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See"
           }
         }
       }

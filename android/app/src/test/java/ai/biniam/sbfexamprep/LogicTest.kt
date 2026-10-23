@@ -1,8 +1,10 @@
 package ai.biniam.sbfexamprep
 
 import ai.biniam.sbfexamprep.audio.SoundSignal
+import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
+import ai.biniam.sbfexamprep.data.LicenceGoal
 import ai.biniam.sbfexamprep.data.ProgressState
 import ai.biniam.sbfexamprep.data.QuizRecord
 import ai.biniam.sbfexamprep.data.ReviewState
@@ -24,25 +26,52 @@ class LogicTest {
     // Exam rules ------------------------------------------------------------------------
 
     @Test fun examRulesFollowElwis() {
-        val binnen = ExamRules(ExamType.BINNEN)
-        assertEquals(30, binnen.totalCount)
-        assertEquals(45, binnen.minutes)
-        assertFalse(binnen.excludesNavigationTask)
-        val see = ExamRules(ExamType.SEE)
-        assertEquals(60, see.minutes)
-        assertTrue(see.excludesNavigationTask)
+        val expected = mapOf(
+            ExamFormat.BINNEN_MOTOR to (30 to 45), ExamFormat.BINNEN_SAIL to (25 to 35),
+            ExamFormat.BINNEN_MOTOR_SAIL to (37 to 60), ExamFormat.SAIL_ADDON to (7 to 15), ExamFormat.SEE to (30 to 60),
+        )
+        for ((format, value) in expected) {
+            val rules = ExamRules(format)
+            assertEquals(format.raw, value.first, rules.totalCount)
+            assertEquals(format.raw, value.second, rules.minutes)
+        }
+        assertFalse(ExamRules(ExamFormat.BINNEN_MOTOR).excludesNavigationTask)
+        assertTrue(ExamRules(ExamFormat.SEE).excludesNavigationTask)
     }
 
-    @Test fun bothPartsMustBePassed() {
-        val rules = ExamRules(ExamType.BINNEN)
-        assertTrue(rules.result(5, 18).passed)
-        assertFalse(rules.result(4, 23).passed)
-        assertFalse(rules.result(7, 17).passed)
+    @Test fun everyPartWithAPassMarkMustBePassed() {
+        val rules = ExamRules(ExamFormat.BINNEN_MOTOR)
+        assertTrue(rules.result(mapOf(ExamType.SHARED to 5, ExamType.BINNEN to 18)).passed)
+        assertFalse(rules.result(mapOf(ExamType.SHARED to 4, ExamType.BINNEN to 23)).passed)
+        assertFalse(rules.result(mapOf(ExamType.SHARED to 7, ExamType.BINNEN to 17)).passed)
+
+        val combined = ExamRules(ExamFormat.BINNEN_MOTOR_SAIL)
+        assertTrue(combined.result(mapOf(ExamType.SHARED to 5, ExamType.BINNEN to 18, ExamType.SEGELN to 5)).passed)
+        assertFalse(combined.result(mapOf(ExamType.SHARED to 7, ExamType.BINNEN to 23, ExamType.SEGELN to 4)).passed)
+
+        val addOn = ExamRules(ExamFormat.SAIL_ADDON)
+        assertTrue(addOn.result(mapOf(ExamType.SEGELN to 5)).passed)
+        assertFalse(addOn.result(mapOf(ExamType.SEGELN to 4)).passed)
     }
 
-    @Test(expected = IllegalArgumentException::class)
-    fun noExamForBasicQuestionsAlone() {
-        ExamRules(ExamType.SHARED)
+    @Test fun sailOnlyCountsTheTotal() {
+        val rules = ExamRules(ExamFormat.BINNEN_SAIL)
+        assertEquals(20, rules.totalPassMark)
+        assertTrue(rules.result(mapOf(ExamType.SHARED to 0, ExamType.BINNEN to 14, ExamType.SEGELN to 6)).passed)
+        assertFalse(rules.result(mapOf(ExamType.SHARED to 4, ExamType.BINNEN to 12, ExamType.SEGELN to 3)).passed)
+    }
+
+    @Test fun licenceGoalOffersMatchingExams() {
+        assertEquals(listOf(ExamFormat.BINNEN_MOTOR, ExamFormat.SEE), LicenceGoal().examFormats)
+        assertEquals(listOf(ExamFormat.BINNEN_MOTOR_SAIL), LicenceGoal(LicenceGoal.Inland.MOTOR_AND_SAIL, sea = false).examFormats)
+        assertEquals(listOf(ExamFormat.SAIL_ADDON, ExamFormat.SEE), LicenceGoal(LicenceGoal.Inland.SAIL_ADDON, sea = true).examFormats)
+        assertFalse(LicenceGoal(LicenceGoal.Inland.NONE, sea = false).isValid)
+    }
+
+    @Test fun oldExamRecordsKeepTheirFormat() {
+        val record = QuizRecord(0, "See", 30, 25, isExam = true, passed = true)
+        assertEquals(ExamFormat.SEE, record.format)
+        assertNull(QuizRecord(0, "All", 20, 15).format)
     }
 
     // Spaced repetition -----------------------------------------------------------------

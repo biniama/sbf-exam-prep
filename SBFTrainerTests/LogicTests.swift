@@ -3,37 +3,62 @@ import XCTest
 
 @MainActor
 final class ExamRulesTests: XCTestCase {
-    func testOfficialPassMarks() {
-        let rules = ExamRules(type: .binnen)
-        XCTAssertEqual(rules.totalCount, 30)
-        XCTAssertEqual(rules.minutes, 45)
-        XCTAssertEqual(ExamRules(type: .see).minutes, 60)
+    func testOfficialCompositionAndTimes() {
+        let expected: [ExamFormat: (count: Int, minutes: Int)] = [
+            .binnenMotor: (30, 45), .binnenSail: (25, 35), .binnenMotorSail: (37, 60), .sailAddOn: (7, 15), .see: (30, 60),
+        ]
+        for (format, value) in expected {
+            let rules = ExamRules(format: format)
+            XCTAssertEqual(rules.totalCount, value.count, format.rawValue)
+            XCTAssertEqual(rules.minutes, value.minutes, format.rawValue)
+        }
+    }
 
-        XCTAssertTrue(rules.result(basicCorrect: 5, specificCorrect: 18).passed)
-        XCTAssertFalse(rules.result(basicCorrect: 4, specificCorrect: 23).passed, "basic part failed")
-        XCTAssertFalse(rules.result(basicCorrect: 7, specificCorrect: 17).passed, "specific part failed")
+    func testPartPassMarks() {
+        let rules = ExamRules(format: .binnenMotor)
+        XCTAssertTrue(rules.result(correct: [.shared: 5, .binnen: 18]).passed)
+        XCTAssertFalse(rules.result(correct: [.shared: 4, .binnen: 23]).passed, "basic part failed")
+        XCTAssertFalse(rules.result(correct: [.shared: 7, .binnen: 17]).passed, "inland part failed")
+
+        let combined = ExamRules(format: .binnenMotorSail)
+        XCTAssertTrue(combined.result(correct: [.shared: 5, .binnen: 18, .segeln: 5]).passed)
+        XCTAssertFalse(combined.result(correct: [.shared: 7, .binnen: 23, .segeln: 4]).passed, "sailing part failed")
+
+        let addOn = ExamRules(format: .sailAddOn)
+        XCTAssertTrue(addOn.result(correct: [.segeln: 5]).passed)
+        XCTAssertFalse(addOn.result(correct: [.segeln: 4]).passed)
+    }
+
+    func testSailOnlyCountsTheTotal() {
+        let rules = ExamRules(format: .binnenSail)
+        XCTAssertEqual(rules.totalPassMark, 20)
+        // 0 of 4 basic questions is fine as long as the total reaches 20.
+        XCTAssertTrue(rules.result(correct: [.shared: 0, .binnen: 14, .segeln: 6]).passed)
+        XCTAssertFalse(rules.result(correct: [.shared: 4, .binnen: 12, .segeln: 3]).passed, "19 in total")
     }
 
     func testExamSimulationComposition() {
         let defaults = UserDefaults(suiteName: "ExamRulesTests")!
         defaults.removePersistentDomain(forName: "ExamRulesTests")
         let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults))
-        for type in [ExamType.binnen, .see] {
-            vm.setupExam(type: type)
-            XCTAssertEqual(vm.questions.count, 30)
-            XCTAssertEqual(vm.questions.filter { $0.examType == .shared }.count, 7)
-            XCTAssertEqual(vm.questions.filter { $0.examType == type }.count, 23)
-            XCTAssertEqual(Set(vm.questions.map(\.uniqueId)).count, 30, "no duplicates")
-            XCTAssertEqual(vm.timeRemaining, ExamRules(type: type).minutes * 60)
+        for format in ExamFormat.allCases {
+            let rules = ExamRules(format: format)
+            vm.setupExam(format: format)
+            XCTAssertEqual(vm.questions.count, rules.totalCount, format.rawValue)
+            for part in rules.parts {
+                XCTAssertEqual(vm.questions.filter { $0.examType == part.type }.count, part.count, format.rawValue)
+            }
+            XCTAssertEqual(Set(vm.questions.map(\.uniqueId)).count, rules.totalCount, "no duplicates")
+            XCTAssertEqual(vm.timeRemaining, rules.minutes * 60)
             XCTAssertTrue(vm.examMode)
         }
     }
 
-    func testExamScoringCountsBothParts() {
+    func testExamScoringCountsEveryPart() {
         let defaults = UserDefaults(suiteName: "ExamScoring")!
         defaults.removePersistentDomain(forName: "ExamScoring")
         let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults))
-        vm.setupExam(type: .binnen)
+        vm.setupExam(format: .binnenMotorSail)
         // Answer every question correctly.
         while vm.state != .finished {
             guard let q = vm.current else { break }
@@ -42,9 +67,30 @@ final class ExamRulesTests: XCTestCase {
             vm.next()
         }
         let result = vm.examResult
-        XCTAssertEqual(result?.basicCorrect, 7)
-        XCTAssertEqual(result?.specificCorrect, 23)
+        XCTAssertEqual(result?.correct, [.shared: 7, .binnen: 23, .segeln: 7])
         XCTAssertEqual(result?.passed, true)
+    }
+
+    func testLicenceGoalOffersMatchingExams() {
+        XCTAssertEqual(LicenceGoal.standard.examFormats, [.binnenMotor, .see])
+        XCTAssertEqual(LicenceGoal(inland: .motorAndSail, sea: false).examFormats, [.binnenMotorSail])
+        XCTAssertEqual(LicenceGoal(inland: .sailAddOn, sea: true).examFormats, [.sailAddOn, .see])
+        XCTAssertFalse(LicenceGoal(inland: .none, sea: false).isValid)
+
+        let defaults = UserDefaults(suiteName: "LicenceGoal")!
+        defaults.removePersistentDomain(forName: "LicenceGoal")
+        let progress = UserProgress(testDefaults: defaults)
+        XCTAssertFalse(progress.hasChosenLicence)
+        progress.setLicenceGoal(LicenceGoal(inland: .sail, sea: false))
+        let reloaded = UserProgress(testDefaults: defaults)
+        XCTAssertTrue(reloaded.hasChosenLicence)
+        XCTAssertEqual(reloaded.licenceGoal, LicenceGoal(inland: .sail, sea: false))
+    }
+
+    func testOldExamRecordsKeepTheirTitle() throws {
+        let json = #"{"date":0,"examType":"See","totalQuestions":30,"correctAnswers":25,"isExam":true,"passed":true}"#
+        let record = try JSONDecoder().decode(QuizRecord.self, from: Data(json.utf8))
+        XCTAssertEqual(record.format, .see)
     }
 }
 

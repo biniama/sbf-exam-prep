@@ -1,1 +1,1 @@
-sportbootführerschein,bootsführerschein,prüfung,fragenkatalog,elwis,segeln,motorboot,skipper,quiz
+sportbootführerschein,bootsführerschein,segelschein,prüfung,fragenkatalog,elwis,segeln,motorboot

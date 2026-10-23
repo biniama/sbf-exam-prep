@@ -68,6 +68,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
+import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.ui.LocalApp
@@ -78,6 +79,10 @@ import ai.biniam.sbfexamprep.ui.components.SectionHeader
 import ai.biniam.sbfexamprep.ui.components.cardStyle
 import ai.biniam.sbfexamprep.ui.components.examTypeIcon
 import ai.biniam.sbfexamprep.ui.components.isGerman
+import ai.biniam.sbfexamprep.ui.components.examFormatIcon
+import ai.biniam.sbfexamprep.ui.components.examFormatTitle
+import ai.biniam.sbfexamprep.ui.components.examPassText
+import ai.biniam.sbfexamprep.ui.components.examSummary
 import ai.biniam.sbfexamprep.ui.components.licenceName
 import ai.biniam.sbfexamprep.ui.theme.Brand
 import ai.biniam.sbfexamprep.ui.theme.Sbf
@@ -94,7 +99,9 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
     var mode by rememberSaveable { mutableStateOf(SetupMode.PRACTICE) }
     var examType by rememberSaveable { mutableStateOf(ExamType.ALL) }
-    var exam by rememberSaveable { mutableStateOf(ExamType.BINNEN) }
+    val formats = settings.licenceGoal.examFormats
+    var chosenExam by rememberSaveable { mutableStateOf(formats.first()) }
+    val exam = if (chosenExam in formats) chosenExam else formats.first()
     var category by rememberSaveable { mutableStateOf<String?>(null) }
     var count by rememberSaveable { mutableIntStateOf(settings.quizCount) }
 
@@ -152,7 +159,7 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                     when (mode) {
                         SetupMode.PRACTICE -> {
                             SectionCard(stringResource(R.string.exam), Icons.Filled.FormatListNumbered) {
-                                listOf(ExamType.ALL, ExamType.BINNEN, ExamType.SEE, ExamType.SHARED).forEach { t ->
+                                listOf(ExamType.ALL, ExamType.BINNEN, ExamType.SEGELN, ExamType.SEE, ExamType.SHARED).forEach { t ->
                                     ModeRow(examType == t, examTypeIcon(t), licenceName(t),
                                             pluralStringResource(R.plurals.questions_count, app.questions.questions(t).size,
                                                                  app.questions.questions(t).size)) {
@@ -179,20 +186,18 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                         SetupMode.MISTAKES -> InfoCard(Icons.Filled.Cancel, stringResource(R.string.your_mistakes),
                                                        stringResource(R.string.your_mistakes_text))
                         SetupMode.EXAM -> SectionCard(stringResource(R.string.exam), Icons.Filled.FindInPage) {
-                            SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
-                                listOf(ExamType.BINNEN, ExamType.SEE).forEachIndexed { i, t ->
-                                    SegmentedButton(exam == t, { exam = t }, SegmentedButtonDefaults.itemShape(i, 2)) {
-                                        Text(stringResource(if (t == ExamType.BINNEN) R.string.sbf_inland else R.string.licence_sea))
-                                    }
+                            formats.forEach { f ->
+                                ModeRow(exam == f, examFormatIcon(f), examFormatTitle(f), examSummary(ExamRules(f))) {
+                                    chosenExam = f
                                 }
                             }
-                            RuleRow(Icons.Filled.FormatListNumbered,
-                                    stringResource(R.string.rules_composition, rules.basicCount, rules.specificCount))
-                            RuleRow(Icons.Filled.Verified, stringResource(R.string.rules_pass, rules.basicPassMark, rules.basicCount,
-                                                                          rules.specificPassMark, rules.specificCount))
+                            RuleRow(Icons.Filled.Verified, examPassText(rules))
                             RuleRow(Icons.Filled.Timer, pluralStringResource(R.plurals.time_limit_minutes, rules.minutes, rules.minutes))
                             RuleRow(Icons.Filled.VisibilityOff, stringResource(R.string.rules_feedback))
                             if (rules.excludesNavigationTask) RuleRow(Icons.Filled.Map, stringResource(R.string.rules_navigation))
+                            if (rules.totalPassMark == null && rules.parts.size > 1) {
+                                RuleRow(Icons.Filled.FormatListNumbered, stringResource(R.string.each_part))
+                            }
                             Text(stringResource(R.string.rules_source), style = MaterialTheme.typography.labelSmall,
                                  color = Sbf.colors.muted)
                         }

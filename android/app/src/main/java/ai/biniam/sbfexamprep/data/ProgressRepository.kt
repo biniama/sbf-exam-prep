@@ -33,6 +33,10 @@ class ProgressRepository(context: Context) {
         reminderEnabled = prefs.getBoolean("reminderEnabled", false),
         reminderMinutes = prefs.getInt("reminderMinutes", 18 * 60),
         onboardingDone = prefs.getBoolean("onboardingDone", false),
+        licenceGoal = prefs.getString("licenceGoal", null)
+            ?.let { runCatching { json.decodeFromString(LicenceGoal.serializer(), it) }.getOrNull() }
+            ?: LicenceGoal(),
+        hasChosenLicence = prefs.contains("licenceGoal"),
     )
 
     fun updateProgress(change: (ProgressState) -> ProgressState) {
@@ -49,6 +53,7 @@ class ProgressRepository(context: Context) {
             putBoolean("reminderEnabled", s.reminderEnabled)
             putInt("reminderMinutes", s.reminderMinutes)
             putBoolean("onboardingDone", s.onboardingDone)
+            if (s.hasChosenLicence) putString("licenceGoal", json.encodeToString(LicenceGoal.serializer(), s.licenceGoal))
         }
     }
 

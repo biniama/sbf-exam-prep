@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Air
 import androidx.compose.material.icons.filled.Layers
 import androidx.compose.material.icons.filled.Sailing
 import androidx.compose.material.icons.filled.Stars
@@ -39,7 +40,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import ai.biniam.sbfexamprep.R
+import ai.biniam.sbfexamprep.data.ExamFormat
+import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
+import ai.biniam.sbfexamprep.data.LicenceGoal
 import ai.biniam.sbfexamprep.ui.theme.Brand
 import ai.biniam.sbfexamprep.ui.theme.Sbf
 
@@ -90,6 +94,7 @@ fun examTypeTitle(type: ExamType): String = stringResource(
         ExamType.ALL -> R.string.exam_all
         ExamType.SHARED -> R.string.exam_basic
         ExamType.BINNEN -> R.string.exam_inland
+        ExamType.SEGELN -> R.string.exam_sailing
         ExamType.SEE -> R.string.exam_sea
     }
 )
@@ -100,21 +105,113 @@ fun licenceName(type: ExamType): String = stringResource(
         ExamType.ALL -> R.string.licence_all
         ExamType.SHARED -> R.string.licence_basic
         ExamType.BINNEN -> R.string.licence_inland
+        ExamType.SEGELN -> R.string.licence_sailing
         ExamType.SEE -> R.string.licence_sea
     }
 )
+
+/** Short noun for an exam part, e.g. "7 basic + 23 inland". */
+@Composable
+fun partNoun(type: ExamType): String = stringResource(
+    when (type) {
+        ExamType.ALL -> R.string.part_questions
+        ExamType.SHARED -> R.string.part_basic
+        ExamType.BINNEN -> R.string.part_inland
+        ExamType.SEGELN -> R.string.part_sailing
+        ExamType.SEE -> R.string.part_sea
+    }
+)
+
+/** Heading of an exam part in the result. */
+@Composable
+fun partTitle(type: ExamType): String = stringResource(
+    when (type) {
+        ExamType.ALL, ExamType.SHARED -> R.string.licence_basic
+        ExamType.BINNEN -> R.string.part_title_inland
+        ExamType.SEGELN -> R.string.part_title_sailing
+        ExamType.SEE -> R.string.part_title_sea
+    }
+)
+
+@Composable
+fun examFormatTitle(format: ExamFormat): String = stringResource(
+    when (format) {
+        ExamFormat.BINNEN_MOTOR -> R.string.format_binnen_motor
+        ExamFormat.BINNEN_SAIL -> R.string.format_binnen_sail
+        ExamFormat.BINNEN_MOTOR_SAIL -> R.string.format_binnen_motor_sail
+        ExamFormat.SAIL_ADDON -> R.string.format_sail_addon
+        ExamFormat.SEE -> R.string.exam_sea
+    }
+)
+
+/** For tight spaces such as the result stat card. */
+@Composable
+fun examFormatShortTitle(format: ExamFormat): String = stringResource(
+    when (format) {
+        ExamFormat.BINNEN_MOTOR -> R.string.licence_motor
+        ExamFormat.BINNEN_SAIL -> R.string.licence_sail
+        ExamFormat.BINNEN_MOTOR_SAIL -> R.string.licence_motor_sail
+        ExamFormat.SAIL_ADDON -> R.string.format_sail_addon
+        ExamFormat.SEE -> R.string.exam_sea
+    }
+)
+
+fun examFormatIcon(format: ExamFormat): ImageVector = when (format) {
+    ExamFormat.BINNEN_MOTOR -> Icons.Filled.Waves
+    ExamFormat.BINNEN_SAIL, ExamFormat.BINNEN_MOTOR_SAIL, ExamFormat.SAIL_ADDON -> Icons.Filled.Sailing
+    ExamFormat.SEE -> Icons.Filled.Air
+}
+
+/** "7 basic + 23 inland · 45 min" */
+@Composable
+fun examSummary(rules: ExamRules): String {
+    val composition = rules.parts.map { "${it.count} ${partNoun(it.type)}" }.joinToString(" + ")
+    return stringResource(R.string.exam_summary, composition, rules.minutes)
+}
+
+/** "Pass: at least 5 of 7 basic and 18 of 23 inland" or the total for the sailing licence alone. */
+@Composable
+fun examPassText(rules: ExamRules): String {
+    rules.totalPassMark?.let { return stringResource(R.string.rules_pass_total, it, rules.totalCount) }
+    val parts = rules.parts.mapNotNull { part ->
+        part.passMark?.let { stringResource(R.string.part_pass, it, part.count, partNoun(part.type)) }
+    }
+    val joined = if (parts.size > 1) {
+        stringResource(R.string.list_and, parts.dropLast(1).joinToString(", "), parts.last())
+    } else parts.firstOrNull().orEmpty()
+    return stringResource(R.string.rules_pass_parts, joined)
+}
+
+@Composable
+fun licenceInlandTitle(inland: LicenceGoal.Inland): String = stringResource(
+    when (inland) {
+        LicenceGoal.Inland.NONE -> R.string.licence_none
+        LicenceGoal.Inland.MOTOR -> R.string.licence_motor
+        LicenceGoal.Inland.SAIL -> R.string.licence_sail
+        LicenceGoal.Inland.MOTOR_AND_SAIL -> R.string.licence_motor_sail
+        LicenceGoal.Inland.SAIL_ADDON -> R.string.licence_sail_addon
+    }
+)
+
+/** "Inland · motor + sail · Sea" */
+@Composable
+fun licenceSummary(goal: LicenceGoal): String =
+    (listOfNotNull(goal.inland.format?.let { examFormatTitle(it) }) +
+        if (goal.sea) listOf(examFormatTitle(ExamFormat.SEE)) else emptyList()).joinToString(" · ")
 
 fun examTypeIcon(type: ExamType): ImageVector = when (type) {
     ExamType.ALL -> Icons.Filled.Layers
     ExamType.SHARED -> Icons.Filled.Stars
     ExamType.BINNEN -> Icons.Filled.Waves
-    ExamType.SEE -> Icons.Filled.Sailing
+    ExamType.SEGELN -> Icons.Filled.Sailing
+    ExamType.SEE -> Icons.Filled.Air
 }
 
 fun examTypeColor(type: ExamType): Color = when (type) {
     ExamType.ALL -> Brand.navyLight
     ExamType.SHARED -> Brand.gold
     ExamType.BINNEN -> Brand.oceanTeal
+    ExamType.SEGELN -> Color(0xFFA84533)
     ExamType.SEE -> Brand.navyLight
 }
 

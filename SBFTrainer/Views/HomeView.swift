@@ -7,6 +7,7 @@ struct HomeView: View {
     @Environment(\.horizontalSizeClass) private var hSize
     @StateObject private var quizVM = QuizViewModel()
     @State private var showingQuiz = false
+    @State private var showingLicence = false
 
     init(selectedTab: Binding<AppTab> = .constant(.home)) {
         _selectedTab = selectedTab
@@ -32,11 +33,15 @@ struct HomeView: View {
             .fullScreenCover(isPresented: $showingQuiz) {
                 NavigationStack { QuizView(vm: quizVM) }
             }
+            .sheet(isPresented: $showingLicence) {
+                NavigationStack { LicenceSettingsView(isSheet: true) }
+            }
             #if DEBUG
             .task {
                 switch DebugLaunchOptions.autoQuiz {
-                case "exam-binnen": quizVM.setupExam(type: .binnen); showingQuiz = true
-                case "exam-see": quizVM.setupExam(type: .see); showingQuiz = true
+                case "exam-binnen": quizVM.setupExam(format: .binnenMotor); showingQuiz = true
+                case "exam-segeln": quizVM.setupExam(format: .binnenMotorSail); showingQuiz = true
+                case "exam-see": quizVM.setupExam(format: .see); showingQuiz = true
                 case "practice": quizVM.setup(type: .all, count: 20); showingQuiz = true
                 default: break
                 }
@@ -51,6 +56,7 @@ struct HomeView: View {
     private var content: some View {
         if hSize == .regular {
             VStack(spacing: 16) {
+                licencePrompt
                 statsRow
                 HStack(alignment: .top, spacing: 16) {
                     VStack(spacing: 16) { todayCard; quickActions }
@@ -59,6 +65,7 @@ struct HomeView: View {
             }
         } else {
             VStack(spacing: 16) {
+                licencePrompt
                 statsRow
                 todayCard
                 streakSection
@@ -114,6 +121,44 @@ struct HomeView: View {
         }
         .frame(width: 110, height: 110)
         .accessibilityElement(children: .combine)
+    }
+
+    // MARK: Licence prompt
+
+    /// Shown until the learner has picked a licence – also announces the sailing questions to existing users.
+    @ViewBuilder
+    private var licencePrompt: some View {
+        if !progress.hasChosenLicence {
+            Button { showingLicence = true } label: {
+                HStack(spacing: 14) {
+                    Image(systemName: "sailboat.fill")
+                        .font(.title2)
+                        .foregroundStyle(Color.navy)
+                        .frame(width: 44, height: 44)
+                        .background(AppGradient.gold)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .accessibilityHidden(true)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("New: sailing questions")
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(Color.ink)
+                        Text("Choose your licence to get the right exam simulation.")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 0)
+                    Image(systemName: "chevron.right")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .accessibilityHidden(true)
+                }
+                .padding(14)
+                .cardStyle()
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+        }
     }
 
     // MARK: Stats
@@ -219,37 +264,35 @@ struct HomeView: View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(title: "Quick start", systemImage: "bolt.fill")
             VStack(spacing: 10) {
-                quickActionRow(icon: "play.circle.fill", title: "Quick quiz",
-                               subtitle: "\(progress.quizCount) random questions", color: .navy) {
+                quickActionRow(icon: "play.circle.fill", title: Text("Quick quiz"),
+                               subtitle: Text("\(progress.quizCount) random questions"), color: .navy) {
                     quizVM.setup(type: .all, count: progress.quizCount)
                     showingQuiz = true
                 }
-                quickActionRow(icon: "timer", title: "Exam simulation · Inland",
-                               subtitle: "7 basic + 23 inland questions · 45 min", color: .oceanTeal) {
-                    quizVM.setupExam(type: .binnen)
-                    showingQuiz = true
-                }
-                quickActionRow(icon: "timer", title: "Exam simulation · Sea",
-                               subtitle: "7 basic + 23 sea questions · 60 min", color: .navyLight) {
-                    quizVM.setupExam(type: .see)
-                    showingQuiz = true
+                ForEach(progress.licenceGoal.examFormats) { format in
+                    quickActionRow(icon: "timer", title: Text("Exam simulation · \(format.title)"),
+                                   subtitle: Text(ExamRules(format: format).summary),
+                                   color: format == .see ? .navyLight : .oceanTeal) {
+                        quizVM.setupExam(format: format)
+                        showingQuiz = true
+                    }
                 }
                 if progress.wrongAnswerCount > 0 {
-                    quickActionRow(icon: "arrow.counterclockwise.circle.fill", title: "Practise mistakes",
-                                   subtitle: "\(progress.wrongAnswerCount) questions to retry", color: .errorRed) {
+                    quickActionRow(icon: "arrow.counterclockwise.circle.fill", title: Text("Practise mistakes"),
+                                   subtitle: Text("\(progress.wrongAnswerCount) questions to retry"), color: .errorRed) {
                         quizVM.setupMistakes()
                         showingQuiz = true
                     }
                 }
-                quickActionRow(icon: "list.number", title: "All questions in order",
-                               subtitle: "Go through the whole catalogue", color: .gold) {
+                quickActionRow(icon: "list.number", title: Text("All questions in order"),
+                               subtitle: Text("Go through the whole catalogue"), color: .gold) {
                     selectedTab = .browse
                 }
             }
         }
     }
 
-    private func quickActionRow(icon: String, title: LocalizedStringKey, subtitle: LocalizedStringKey,
+    private func quickActionRow(icon: String, title: Text, subtitle: Text,
                                 color: Color, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             HStack(spacing: 14) {
@@ -261,10 +304,10 @@ struct HomeView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(title)
+                    title
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Color.ink)
-                    Text(subtitle)
+                    subtitle
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -306,7 +349,7 @@ struct HomeView: View {
                 .font(.title3)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
-                Text(record.isExam == true ? "Exam · \(record.type.title)" : "Quiz · \(record.type.title)")
+                Text(record.isExam == true ? "Exam · \(record.title)" : "Quiz · \(record.title)")
                     .font(.subheadline.weight(.medium))
                     .foregroundStyle(Color.ink)
                 Text(record.date, style: .relative)

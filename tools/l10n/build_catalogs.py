@@ -288,6 +288,9 @@ DE = {
     "This app is an independent study aid and is not affiliated with or endorsed by the GDWS, ELWIS, the DMYV or the DSV. Always check the current regulations.":
         "Diese App ist eine unabhängige Lernhilfe und steht in keiner Verbindung zur GDWS, zu ELWIS, zum DMYV oder zum DSV. Bitte prüfe stets die aktuellen Vorschriften.",
     "Official information on ELWIS": "Offizielle Informationen auf ELWIS",
+    "Official source: elwis.de": "Offizielle Quelle: elwis.de",
+    "Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.":
+        "Fragen aus dem amtlichen ELWIS-Fragenkatalog (GDWS). Unabhängige Lernhilfe, keine Behörden-App.",
     "© 2026 SBF Exam Prep": "© 2026 SBF Exam Prep",
 
     # Widget

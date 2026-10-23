@@ -103,6 +103,7 @@
     <string name="no_results">No matching questions</string>
     <string name="no_saved">No saved questions</string>
     <string name="no_saved_text">Tap the bookmark while browsing or during a quiz to collect questions here.</string>
+    <string name="not_government">Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.</string>
     <string name="not_now">Not now</string>
     <string name="not_passed">Not passed</string>
     <string name="not_studied">Not studied</string>
@@ -180,6 +181,7 @@
     <string name="signs_lights_sounds">Signs, lights &amp; sound signals</string>
     <string name="signs_lights_sounds_text">Clear illustrations for every image question — and sound signals you can listen to.</string>
     <string name="sound_signal_label">Sound signal: %s</string>
+    <string name="source_elwis">Official source: elwis.de</string>
     <string name="sources_1">Questions and answers: official question catalogue for the Sportbootführerschein, published on ELWIS by the Generaldirektion Wasserstraßen und Schifffahrt (status: August 2023).</string>
     <string name="sources_2">Illustrations were drawn for this app following the official figures. English translations are unofficial study aids; only the German text is valid in the exam.</string>
     <string name="sources_3">This app is an independent study aid and is not affiliated with or endorsed by the GDWS, ELWIS, the DMYV or the DSV. Always check the current regulations.</string>

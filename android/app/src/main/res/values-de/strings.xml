@@ -102,6 +102,7 @@
     <string name="no_results">Keine passenden Fragen</string>
     <string name="no_saved">Keine gemerkten Fragen</string>
     <string name="no_saved_text">Tippe beim Lernen oder im Quiz auf das Lesezeichen, um Fragen hier zu sammeln.</string>
+    <string name="not_government">Fragen aus dem amtlichen ELWIS-Fragenkatalog (GDWS). Unabhängige Lernhilfe, keine Behörden-App.</string>
     <string name="not_now">Jetzt nicht</string>
     <string name="not_passed">Nicht bestanden</string>
     <string name="not_studied">Nicht gelernt</string>
@@ -179,6 +180,7 @@
     <string name="signs_lights_sounds">Zeichen, Lichter &amp; Schallsignale</string>
     <string name="signs_lights_sounds_text">Klare Abbildungen zu jeder Bildfrage – und Schallsignale zum Anhören.</string>
     <string name="sound_signal_label">Schallsignal: %s</string>
+    <string name="source_elwis">Offizielle Quelle: elwis.de</string>
     <string name="sources_1">Fragen und Antworten: amtlicher Fragenkatalog für den Sportbootführerschein, veröffentlicht auf ELWIS von der Generaldirektion Wasserstraßen und Schifffahrt (Stand: August 2023).</string>
     <string name="sources_2">Die Abbildungen wurden für diese App nach den amtlichen Vorlagen gezeichnet. Die englischen Übersetzungen sind inoffizielle Lernhilfen; in der Prüfung gilt nur der deutsche Text.</string>
     <string name="sources_3">Diese App ist eine unabhängige Lernhilfe und steht in keiner Verbindung zur GDWS, zu ELWIS, zum DMYV oder zum DSV. Bitte prüfe stets die aktuellen Vorschriften.</string>

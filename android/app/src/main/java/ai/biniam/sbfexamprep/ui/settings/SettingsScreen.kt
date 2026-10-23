@@ -212,11 +212,15 @@ fun SettingsScreen() {
                         StatRow(stringResource(R.string.quizzes_completed), "${progress.quizHistory.size}", last = true)
                     }
 
-                    Section(stringResource(R.string.question_catalogue), stringResource(R.string.catalogue_footer)) {
+                    Section(stringResource(R.string.question_catalogue), stringResource(R.string.not_government)) {
                         StatRow(stringResource(R.string.licence_basic), "${app.questions.specificQuestions(ExamType.SHARED).size}")
                         StatRow(stringResource(R.string.sbf_inland_specific), "${app.questions.specificQuestions(ExamType.BINNEN).size}")
                         StatRow(stringResource(R.string.sbf_sea_specific), "${app.questions.specificQuestions(ExamType.SEE).size}")
-                        StatRow(stringResource(R.string.total), "${app.questions.allQuestions.size}", last = true)
+                        StatRow(stringResource(R.string.total), "${app.questions.allQuestions.size}")
+                        // Play policy: government information must link to its original source.
+                        LinkRow(Icons.AutoMirrored.Filled.OpenInNew, stringResource(R.string.source_elwis), null, external = true) {
+                            uri.openUri(AppLinks.ELWIS)
+                        }
                     }
 
                     Section(stringResource(R.string.about), stringResource(R.string.version, versionName())) {

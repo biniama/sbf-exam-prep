@@ -166,7 +166,10 @@ STRINGS = {
     "sources_1": "Questions and answers: official question catalogue for the Sportbootführerschein, published on ELWIS by the Generaldirektion Wasserstraßen und Schifffahrt (status: August 2023).",
     "sources_2": "Illustrations were drawn for this app following the official figures. English translations are unofficial study aids; only the German text is valid in the exam.",
     "sources_3": "This app is an independent study aid and is not affiliated with or endorsed by the GDWS, ELWIS, the DMYV or the DSV. Always check the current regulations.",
-    "elwis_info": "Official information on ELWIS", "copyright": "© 2026 SBF Exam Prep",
+    "elwis_info": "Official information on ELWIS",
+    "source_elwis": ("Official source: elwis.de", "Offizielle Quelle: elwis.de"),
+    "not_government": ("Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.",
+                       "Fragen aus dem amtlichen ELWIS-Fragenkatalog (GDWS). Unabhängige Lernhilfe, keine Behörden-App."), "copyright": "© 2026 SBF Exam Prep",
 }
 
 PLURAL_RES = {

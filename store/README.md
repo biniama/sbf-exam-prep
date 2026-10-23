@@ -22,7 +22,7 @@ limits when they were written.
 
 Graphics: `google-play-icon-512.png` (hi-res icon) and `google-play-feature-graphic.png` (1024 × 500).
 Screenshots (`screenshots/`, English and German): iPhone 6.9" 1320 × 2868 and iPad 13" 2064 × 2752 for
-App Store Connect; Android phone 1080 × 2400 and tablet 2560 × 1600 for Google Play. They were taken from debug
+App Store Connect; Android phone 1080 × 1920 (Play allows at most 2:1) and tablet 2560 × 1440 (Play requires 16:9) for Google Play, all 24-bit PNG without alpha. They were taken from debug
 builds with demo progress (see the launch options in the main README).
 
 ## URLs

@@ -28,4 +28,6 @@ MADE FOR EVERY SCREEN
 PRIVATE BY DESIGN
 No account, no ads, no tracking. Works completely offline.
 
-SBF Exam Prep is an independent study aid and is not affiliated with the GDWS, ELWIS, the DMYV or the DSV. English translations are unofficial; only the German text is valid in the exam.
+SOURCE AND DISCLAIMER
+The exam questions come from the official question catalogue of the German Federal Waterways and Shipping Administration (GDWS), published on ELWIS: https://www.elwis.de/DE/Sportschifffahrt/Sportbootfuehrerscheine/Sportbootfuehrerscheine-node.html
+SBF Exam Prep is an independent, private study aid. It is not a government app and is not affiliated with or endorsed by the GDWS, ELWIS, the DMYV or the DSV. English translations are unofficial; only the German text is valid in the exam.

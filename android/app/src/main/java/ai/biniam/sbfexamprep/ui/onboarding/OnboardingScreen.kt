@@ -164,6 +164,13 @@ private fun Welcome(count: Int) {
     Spacer(Modifier.size(8.dp))
     Title(stringResource(R.string.pass_your_exam))
     Body(stringResource(R.string.onboarding_all_questions, count))
+    // Play policy: government information must link to its original source.
+    val uri = androidx.compose.ui.platform.LocalUriHandler.current
+    Text(stringResource(R.string.not_government), style = MaterialTheme.typography.bodySmall,
+         color = Color.White.copy(alpha = 0.7f), textAlign = TextAlign.Center)
+    TextButton(onClick = { uri.openUri(ai.biniam.sbfexamprep.ui.AppLinks.ELWIS) }) {
+        Text(stringResource(R.string.source_elwis), color = Brand.goldLight)
+    }
 }
 
 @Composable

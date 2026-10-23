@@ -64,6 +64,15 @@ struct OnboardingView: View {
                     .font(.subheadline)
                     .foregroundStyle(Color.white.opacity(0.7))
                     .multilineTextAlignment(.center)
+                // Store policies: government information must link to its original source.
+                Text("Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.")
+                    .font(.footnote)
+                    .foregroundStyle(Color.white.opacity(0.6))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 8)
+                Link("Official source: elwis.de", destination: AppLinks.elwis)
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(Color.goldLight)
             }
             .padding(.horizontal, 32)
             Spacer()

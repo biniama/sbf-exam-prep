@@ -27,4 +27,6 @@ FÜR JEDEN BILDSCHIRM
 DATENSCHUTZ INKLUSIVE
 Kein Konto, keine Werbung, kein Tracking. Funktioniert komplett offline.
 
-SBF Exam Prep ist eine unabhängige Lernhilfe und steht in keiner Verbindung zur GDWS, zu ELWIS, zum DMYV oder zum DSV. Die englischen Übersetzungen sind inoffiziell; in der Prüfung gilt nur der deutsche Text.
+QUELLE UND HINWEIS
+Die Prüfungsfragen stammen aus dem amtlichen Fragenkatalog der Generaldirektion Wasserstraßen und Schifffahrt (GDWS), veröffentlicht auf ELWIS: https://www.elwis.de/DE/Sportschifffahrt/Sportbootfuehrerscheine/Sportbootfuehrerscheine-node.html
+SBF Exam Prep ist eine unabhängige, private Lernhilfe. Sie ist keine Behörden-App und steht in keiner Verbindung zur GDWS, zu ELWIS, zum DMYV oder zum DSV. Die englischen Übersetzungen sind inoffiziell; in der Prüfung gilt nur der deutsche Text.

@@ -1332,16 +1332,6 @@
         }
       }
     },
-    "Official ELWIS catalogue, August 2023. The basic questions are part of both exams.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Offizieller ELWIS-Fragenkatalog, August 2023. Die Basisfragen gehören zu beiden Prüfungen."
-          }
-        }
-      }
-    },
     "Official composition, time limit and pass marks": {
       "localizations": {
         "de": {
@@ -1378,6 +1368,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Offizielle Bewertung"
+          }
+        }
+      }
+    },
+    "Official source: elwis.de": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Quelle: elwis.de"
           }
         }
       }
@@ -1638,6 +1638,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fragen kommen in wachsenden Abständen wieder, bis du sie sicher kannst."
+          }
+        }
+      }
+    },
+    "Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen aus dem amtlichen ELWIS-Fragenkatalog (GDWS). Unabhängige Lernhilfe, keine Behörden-App."
           }
         }
       }

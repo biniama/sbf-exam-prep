@@ -12,7 +12,7 @@ TEAM = 'A86W8T79TR'
 BUNDLE_ID = 'ai.biniam.SBFExamPrep'
 DEPLOYMENT_TARGET = '17.0'
 MARKETING_VERSION = '1.0'
-BUILD_NUMBER = '1'
+BUILD_NUMBER = '4'
 
 project = Xcodeproj::Project.new(PROJECT_PATH)
 project.root_object.development_region = 'en'

@@ -129,10 +129,15 @@ struct SettingsView: View {
             statRow("SBF Inland (specific)", value: "\(store.specificQuestions(for: .binnen).count)")
             statRow("SBF Sea (specific)", value: "\(store.specificQuestions(for: .see).count)")
             statRow("Total", value: "\(store.allQuestions.count)")
+            // Store policies: government information must link to its original source.
+            Link(destination: AppLinks.elwis) {
+                Label("Official source: elwis.de", systemImage: "arrow.up.right.square")
+            }
+            .foregroundStyle(Color.ink)
         } header: {
             Text("Question catalogue")
         } footer: {
-            Text("Official ELWIS catalogue, August 2023. The basic questions are part of both exams.")
+            Text("Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.")
         }
     }
 

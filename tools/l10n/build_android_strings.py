@@ -50,6 +50,20 @@ STRINGS = {
     "ff_navigation_diagrams": "Solution diagrams", "ff_navigation_diagrams_sub": "Step-by-step plot of each solution with narration.",
     "ff_navigation_videos": "Technique videos", "ff_navigation_videos_sub": "Links to videos about working on the chart.",
 
+    # Navigation tasks
+    "nav_home_title": "Navigation tasks · Sea", "nav_home_sub": "15 official chart tasks with worked solutions",
+    "nav_tasks_title": "Navigation tasks", "nav_glossary": "Terms and abbreviations", "nav_tasks_section": "Tasks",
+    "nav_task_n": "Task %lld",
+    "nav_source": "Source: ELWIS navigation tasks, status August 2023. English translations are unofficial.",
+    "nav_chart_title": "You need practice chart D49",
+    "nav_chart_text": "In the exam the 9 navigation questions are solved on paper chart D49 with a plotting triangle and dividers. The app explains every step and the arithmetic.",
+    "nav_variation": "Variation (Mw) on this chart excerpt: %@",
+    "nav_show_all": "Show all answers", "nav_hide_all": "Hide all answers",
+    "nav_chart_work": "Chart work: draw this on chart D49.", "nav_official_result": "Official result",
+    "nav_how_to_solve": "How to solve it", "nav_show_solution": "Show solution", "nav_hide_solution": "Hide solution",
+    "nav_signs": "Signs: east variation and deviation are positive (+), west negative (−).",
+    "nav_question_types": "Exam question types",
+
     # Exam formats & licence
     "format_binnen_motor": "Inland · motor", "format_binnen_sail": "Inland · sail",
     "format_binnen_motor_sail": "Inland · motor + sail", "format_sail_addon": "Sailing add-on",

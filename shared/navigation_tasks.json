@@ -1,0 +1,4137 @@
+{
+  "source": "ELWIS – Navigationsaufgaben SBF See (Übungskarte D49)",
+  "source_url": "https://www.elwis.de/DE/Sportschifffahrt/Sportbootfuehrerscheine/Fragenkatalog-See/Navigationsaufgaben/Navigationsaufgaben-node.html",
+  "catalog_date": "2023-08-01",
+  "chart": "Übungskarte D49 – Mündungen der Jade, Weser und Elbe",
+  "chart_excerpts": [
+    "53° 46,06' N  007° 43,12' E – 54° 00,42' N  008° 00,00' E",
+    "53° 50,48' N  007° 57,54' E – 54° 05,24' N  008° 14,48' E",
+    "53° 53,36' N  007° 51,12' E – 54° 13,80' N  008° 15,00' E",
+    "53° 46,00' N  007° 49,00' E – 54° 06,00' N  008° 13,00' E",
+    "53° 43,00' N  007° 24,00' E – 53° 57,00' N  007° 55,00' E",
+    "53° 48,20' N  007° 24,00' E – 54° 08,54' N  007° 48,00' E",
+    "53° 54,24' N  008° 15,24' E – 54° 09,00' N  008° 32,12' E",
+    "53° 50,00' N  008° 04,00' E – 54° 01,00' N  008° 32,00' E"
+  ],
+  "tolerances": {
+    "degrees": 2,
+    "nm": 0.2,
+    "minutes": 2,
+    "knots": 0.3,
+    "arc_minutes": 0.3
+  },
+  "glossary": [
+    {
+      "abbr": "rwK",
+      "de": "rechtweisender Kurs",
+      "en": "true course",
+      "explanation_de": "Kurs bezogen auf geographisch Nord",
+      "explanation_en": "course relative to true north"
+    },
+    {
+      "abbr": "MgK",
+      "de": "Magnetkompasskurs",
+      "en": "magnetic compass course",
+      "explanation_de": "Kurs, den der Bordkompass anzeigt",
+      "explanation_en": "course shown by the boat's compass"
+    },
+    {
+      "abbr": "rwP",
+      "de": "rechtweisende Peilung",
+      "en": "true bearing",
+      "explanation_de": "Richtung zu einem Objekt, bezogen auf geographisch Nord",
+      "explanation_en": "direction to an object relative to true north"
+    },
+    {
+      "abbr": "MgP",
+      "de": "Magnetkompasspeilung",
+      "en": "magnetic compass bearing",
+      "explanation_de": "mit dem Kompass gemessene Richtung zu einem Objekt",
+      "explanation_en": "direction to an object measured with the compass"
+    },
+    {
+      "abbr": "Mw",
+      "de": "Missweisung",
+      "en": "variation",
+      "explanation_de": "Winkel zwischen geographisch und magnetisch Nord; steht in der Kompassrose der Karte",
+      "explanation_en": "angle between true and magnetic north; printed in the chart's compass rose"
+    },
+    {
+      "abbr": "Abl",
+      "de": "Ablenkung",
+      "en": "deviation",
+      "explanation_de": "Kompassfehler durch Eisen und Elektrik an Bord; aus der Ablenkungstabelle",
+      "explanation_en": "compass error caused by iron and electrics on board; from the deviation table"
+    },
+    {
+      "abbr": "FüG",
+      "de": "Fahrt über Grund",
+      "en": "speed over ground",
+      "explanation_de": "Geschwindigkeit gegenüber dem Meeresboden",
+      "explanation_en": "speed relative to the sea bed"
+    },
+    {
+      "abbr": "BV",
+      "de": "Besteckversetzung",
+      "en": "set and drift",
+      "explanation_de": "Richtung und Distanz vom Koppelort zum beobachteten Ort",
+      "explanation_en": "direction and distance from the DR position to the observed position"
+    },
+    {
+      "abbr": "Koppelort",
+      "de": "Koppelort",
+      "en": "dead-reckoning (DR) position",
+      "explanation_de": "aus Kurs, Fahrt und Zeit errechneter Ort",
+      "explanation_en": "position worked out from course, speed and time"
+    },
+    {
+      "abbr": "beob. Ort",
+      "de": "beobachteter Ort",
+      "en": "observed position (fix)",
+      "explanation_de": "durch Peilungen bestimmter Ort",
+      "explanation_en": "position found by bearings"
+    },
+    {
+      "abbr": "sm",
+      "de": "Seemeile",
+      "en": "nautical mile (nm)",
+      "explanation_de": "1852 m = 1 Bogenminute Breite",
+      "explanation_en": "1852 m = 1 minute of latitude"
+    },
+    {
+      "abbr": "kn",
+      "de": "Knoten",
+      "en": "knot",
+      "explanation_de": "1 Seemeile pro Stunde",
+      "explanation_en": "1 nautical mile per hour"
+    },
+    {
+      "abbr": "Kennung",
+      "de": "Kennung",
+      "en": "light character",
+      "explanation_de": "Rhythmus und Farbe eines Feuers",
+      "explanation_en": "rhythm and colour of a light"
+    },
+    {
+      "abbr": "Toppzeichen",
+      "de": "Toppzeichen",
+      "en": "topmark",
+      "explanation_de": "Form auf der Spitze einer Tonne",
+      "explanation_en": "shape on top of a buoy"
+    },
+    {
+      "abbr": "Wiederkehr",
+      "de": "Wiederkehr",
+      "en": "period",
+      "explanation_de": "Dauer eines vollständigen Feuerzyklus",
+      "explanation_en": "duration of one complete light cycle"
+    },
+    {
+      "abbr": "Nenntragweite",
+      "de": "Nenntragweite",
+      "en": "nominal range",
+      "explanation_de": "Sichtweite eines Feuers bei 10 sm meteorologischer Sicht",
+      "explanation_en": "range of a light in 10 nm meteorological visibility"
+    }
+  ],
+  "question_types": [
+    {
+      "number": 286,
+      "de": "Wie lautet der rwK?",
+      "en": "What is the true course?"
+    },
+    {
+      "number": 287,
+      "de": "Tragen Sie den Kurs in die Seekarte ein.",
+      "en": "Plot the course on the chart."
+    },
+    {
+      "number": 288,
+      "de": "Wie lautet der MgK?",
+      "en": "What is the magnetic compass course?"
+    },
+    {
+      "number": 289,
+      "de": "Wie lauten die Peilungen?",
+      "en": "What are the bearings?"
+    },
+    {
+      "number": 290,
+      "de": "Tragen Sie die Peilungen in die Seekarte ein.",
+      "en": "Plot the bearings on the chart."
+    },
+    {
+      "number": 291,
+      "de": "Entnehmen Sie der Seekarte die geographische Position.",
+      "en": "Take the geographical position from the chart."
+    },
+    {
+      "number": 292,
+      "de": "Tragen Sie die Position in die Seekarte ein.",
+      "en": "Plot the position on the chart."
+    },
+    {
+      "number": 293,
+      "de": "Wie groß ist die Distanz?",
+      "en": "What is the distance?"
+    },
+    {
+      "number": 294,
+      "de": "Auf welcher Position befindet sich das Schiff nach Koppelort?",
+      "en": "What is the dead-reckoning position?"
+    },
+    {
+      "number": 295,
+      "de": "Wie lautet die Besteckversetzung?",
+      "en": "What is the set and drift?"
+    },
+    {
+      "number": 296,
+      "de": "In welcher Zeit erreichen Sie das Ziel?",
+      "en": "How long until you reach the destination?"
+    },
+    {
+      "number": 297,
+      "de": "Wie groß ist die Geschwindigkeit?",
+      "en": "What is the speed?"
+    },
+    {
+      "number": 298,
+      "de": "Welche Bedeutung hat das Schifffahrtszeichen?",
+      "en": "What is the meaning of the mark?"
+    },
+    {
+      "number": 299,
+      "de": "Beschreiben Sie das Schifffahrtszeichen (zum Beispiel Farbe, Kennung, Toppzeichen, Nenntragweite, Feuerhöhe, Art des Feuers).",
+      "en": "Describe the mark (e.g. colour, light character, topmark, nominal range, height of light, type of light)."
+    },
+    {
+      "number": 300,
+      "de": "Was bedeutet diese Eintragung in der Seekarte?",
+      "en": "What does this entry on the chart mean?"
+    }
+  ],
+  "tasks": [
+    {
+      "number": 1,
+      "intro_de": "Ein Sportboot befindet sich am 05.05.2012 in der Deutschen Bucht auf der Reise von Borkum nach Cuxhaven. Die Fahrt über Grund beträgt 8 kn.\n\nUm 10:00 Uhr wird die Leuchttonne \"TG19/Weser 2\" nahebei passiert. Von dieser Tonne wird der Kurs auf die Ansteuerungstonne der alten Weser \"ST\" abgesetzt.",
+      "notes_de": "*) Auf Basis des gemäß Verkehrsblatt vom 15.01.2013 geänderten Ergebnisses zu Frage 1 (rwK = 079°) wird der Magnetkompasskurs unter Berücksichtigung einer Ablenkung von +4° und der laut zugehörigem Kartenausschnitt des Fragebogens Nummer 1 angegebenen Missweisung von +1° ermittelt.\n\nDemnach lautet der MgK tatsächlich: 074°",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwk = 079°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 079°",
+          "kind": "true_course",
+          "from": "TG19/Weser 2",
+          "to": "ST",
+          "rwk": 79,
+          "solution": [
+            {
+              "de": "Kurslinie von „TG19/Weser 2“ nach „ST“ zeichnen.",
+              "en": "Draw the course line from \"TG19/Weser 2\" to \"ST\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 079°",
+              "en": "rwK = 079°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              79
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Die Ablenkung beträgt +4°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 074° *)",
+          "question_en": "Deviation is +4°; take the variation (Mw) from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 074° *)",
+          "kind": "compass_course",
+          "rwk": 79,
+          "abl": 4,
+          "mgk": 74,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = +4°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = +4°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 079° − (+1°) − (+4°) = 074°",
+              "en": "MgK = rwK − Mw − Abl = 079° − (+1°) − (+4°) = 074°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              74
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "question_de": "Wie groß ist die Distanz zwischen der Tonne \"TG19/Weser 2\" und der Tonne \"ST\"?",
+          "answer_de": "6,1 sm",
+          "question_en": "What is the distance between buoy \"TG19/Weser 2\" and buoy \"ST\"?",
+          "answer_en": "6.1 nm",
+          "kind": "distance",
+          "nm": 6.1,
+          "solution": [
+            {
+              "de": "Distanz mit dem Zirkel abgreifen und am seitlichen Kartenrand (Breitenskala) ablesen: 1 Bogenminute Breite = 1 Seemeile. Nie an der Längenskala messen!",
+              "en": "Take the distance with the dividers and read it on the side border (latitude scale): 1 minute of latitude = 1 nautical mile. Never measure on the longitude scale!"
+            },
+            {
+              "de": "Distanz = 6,1 sm",
+              "en": "Distance = 6.1 nm"
+            }
+          ],
+          "check": {
+            "type": "nm",
+            "values": [
+              6.1
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "In welcher Zeit wird die Distanz zwischen der Tonne \"TG19/Weser 2\" und der Tonne \"ST\" zurückgelegt?",
+          "answer_de": "45,75 min., also 46 min. oder \"in einer 3/4 Stunde\"",
+          "question_en": "How long does it take to cover the distance between buoy \"TG19/Weser 2\" and buoy \"ST\"?",
+          "answer_en": "45.75 min, i.e. 46 min or \"in three quarters of an hour\"",
+          "kind": "travel_time",
+          "nm": 6.1,
+          "kn": 8,
+          "minutes": 45.75,
+          "solution": [
+            {
+              "de": "Zeit = Distanz ÷ Geschwindigkeit; in Minuten mal 60.",
+              "en": "Time = distance ÷ speed; multiply by 60 for minutes."
+            },
+            {
+              "de": "Distanz: 6,1 sm, Fahrt: 8 kn",
+              "en": "Distance: 6.1 nm, speed: 8 kn"
+            },
+            {
+              "de": "t = 6,1 ÷ 8 × 60 = 45,75 min",
+              "en": "t = 6.1 ÷ 8 × 60 = 45.75 min"
+            }
+          ],
+          "check": {
+            "type": "minutes",
+            "values": [
+              45.75
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Auf welcher Position befindet sich das Schiff nach Koppelort um 10:30 Uhr?",
+          "answer_de": "53° 55,8' N\n007° 51,3' E",
+          "question_en": "What is the boat's dead-reckoning position (Koppelort) at 10:30?",
+          "answer_en": "53° 55.8' N\n007° 51.3' E",
+          "kind": "dr_position",
+          "start": "10:00",
+          "end": "10:30",
+          "kn": 8,
+          "rwk": 79,
+          "lat": [
+            53,
+            55.8
+          ],
+          "lon": [
+            7,
+            51.3
+          ],
+          "solution": [
+            {
+              "de": "Koppelort: vom letzten bekannten Ort die gefahrene Distanz auf dem Kurs abtragen.",
+              "en": "Dead-reckoning position: from the last known position, mark off the distance run along the course."
+            },
+            {
+              "de": "Zeit 10:00–10:30 = 30 min; Distanz = 8 kn × 30/60 h = 4 sm",
+              "en": "Time 10:00–10:30 = 30 min; distance = 8 kn × 30/60 h = 4 nm"
+            },
+            {
+              "de": "Distanz mit dem Zirkel an der Breitenskala abgreifen und auf dem Kurs 079° abtragen, dann die Position ablesen:",
+              "en": "Take this distance from the latitude scale with the dividers, mark it off along course 079° and read the position:"
+            },
+            {
+              "de": "53° 55,8' N  007° 51,3' E",
+              "en": "53° 55.8' N  007° 51.3' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              55.8
+            ],
+            "lon": [
+              7,
+              51.3
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Um 10:30 Uhr werden nachfolgende Schifffahrtszeichen mit den Hand-Peilkompass gepeilt. Die Ablenkung beträgt dabei 0°, die Mw ist der Seekarte zu entnehmen.\n\nNeue Weser, Leuchttonne \"4a\", MgP = 169°\nAlte Weser, Leuchttonne \"ST\", MgP = 064°.\n\nWie lauten die rw-Peilungen?",
+          "answer_de": "Leuchttonne \"4a\" rwP = 170°\nLeuchttonne \"ST\" rwP = 065°",
+          "question_en": "At 10:30 the following marks are taken with the hand bearing compass. Deviation is 0°; take the variation from the chart.\n\nNeue Weser, lighted buoy \"4a\", MgP = 169°\nAlte Weser, lighted buoy \"ST\", MgP = 064°.\n\nWhat are the true bearings?",
+          "answer_en": "Lighted buoy \"4a\" rwP = 170°\nLighted buoy \"ST\" rwP = 065°",
+          "kind": "bearings",
+          "abl": 0,
+          "items": [
+            {
+              "object": "4a",
+              "mgp": 169,
+              "rwp": 170
+            },
+            {
+              "object": "ST",
+              "mgp": 64,
+              "rwp": 65
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = 0°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = 0°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "4a: rwP = 169° + (0°) + (+1°) = 170°",
+              "en": "4a: rwP = 169° + (0°) + (+1°) = 170°"
+            },
+            {
+              "de": "ST: rwP = 064° + (0°) + (+1°) = 065°",
+              "en": "ST: rwP = 064° + (0°) + (+1°) = 065°"
+            },
+            {
+              "de": "Beim Hand-Peilkompass ist die Ablenkung 0°, weil er abseits der Störfelder des Bootes benutzt wird.",
+              "en": "With a hand bearing compass the deviation is 0° because it is used away from the boat's magnetic fields."
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              170,
+              65
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Wie lautet die Besteckversetzung?",
+          "answer_de": "BV = 103° - 0,8 sm",
+          "question_en": "What is the set and drift (Besteckversetzung)?",
+          "answer_en": "BV = 103° – 0.8 nm",
+          "kind": "set_drift",
+          "direction": 103,
+          "nm": 0.8,
+          "solution": [
+            {
+              "de": "Besteckversetzung (BV) = Richtung und Distanz vom Koppelort zum beobachteten (gepeilten) Ort. Sie zeigt, wie Strom und Wind das Boot versetzt haben.",
+              "en": "Set and drift (BV) = direction and distance from the dead-reckoning position to the observed (fixed) position. It shows how current and wind have moved the boat."
+            },
+            {
+              "de": "Richtung mit dem Kursdreieck messen, Distanz mit dem Zirkel an der Breitenskala abgreifen.",
+              "en": "Measure the direction with the plotting triangle and the distance with the dividers on the latitude scale."
+            },
+            {
+              "de": "BV = 103° – 0,8 sm",
+              "en": "BV = 103° – 0.8 nm"
+            }
+          ],
+          "check": {
+            "type": "set_drift",
+            "direction": 103,
+            "nm": 0.8
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Leuchttonne \"ST\".",
+          "answer_de": "Farbe: rot/weiß senkrecht gestreift\nKennung: weißes Gleichtaktfeuer mit 8 Sekunden Wiederkehr\nToppzeichen: roter Ball",
+          "question_en": "Describe the colour, light character and topmark of lighted buoy \"ST\".",
+          "answer_en": "Colour: red/white vertical stripes\nLight: white isophase light, period 8 seconds\nTopmark: red ball",
+          "kind": "light",
+          "object": "ST",
+          "code": "Iso.W.8s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Iso W 8s",
+              "en": "Light character on the chart: Iso W 8s"
+            },
+            {
+              "de": "Gleichtaktfeuer (Iso): Licht und Dunkel sind gleich lang; Farbe weiß; Wiederkehr 8 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "isophase light (Iso): light and dark phases of equal length; colour white; period 8 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 05.05.2012 a recreational craft is in the German Bight on passage from Borkum to Cuxhaven. Speed over ground is 8 kn.\n\nAt 10:00 the lighted buoy \"TG19/Weser 2\" is passed close by. From this buoy the course is set to the Alte Weser landfall buoy \"ST\".",
+      "notes_en": "*) Based on the result of question 1 as corrected in the Verkehrsblatt of 15.01.2013 (rwK = 079°), the magnetic compass course is worked out with a deviation of +4° and the variation of +1° given on the chart excerpt of exam sheet no. 1.\n\nThe MgK is therefore actually: 074°",
+      "values": {
+        "mw": 1,
+        "speed_kn": 8
+      }
+    },
+    {
+      "number": 2,
+      "intro_de": "Ein Sportboot befindet sich am 10.06.2011 in der Deutschen Bucht auf der Reise von Helgoland nach Cuxhaven. Die Fahrt über Grund beträgt 10 kn. Um 11:00 Uhr wird 1,2 sm südlich von Helgoland die Tonne \"Helgoland-O\" nahebei passiert.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des Sportbootes um 11:00 Uhr.",
+          "answer_de": "54° 09,0' N\n007° 53,5' E",
+          "question_en": "Take the boat's geographical position at 11:00 from the chart.",
+          "answer_en": "54° 09.0' N\n007° 53.5' E",
+          "kind": "read_position",
+          "lat": [
+            54,
+            9.0
+          ],
+          "lon": [
+            7,
+            53.5
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "54° 09,0' N  007° 53,5' E",
+              "en": "54° 09.0' N  007° 53.5' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              54,
+              9.0
+            ],
+            "lon": [
+              7,
+              53.5
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Im Abstand von ca. 0,6 sm südwestlich der Tonne \"Helgoland-O\" befindet sich eine Eintragung. Was bedeutet diese Eintragung in der Seekarte?",
+          "answer_de": "Wrack,\nKartentiefe 53,6 m",
+          "question_en": "About 0.6 nm south-west of buoy \"Helgoland-O\" there is an entry on the chart. What does it mean?",
+          "answer_en": "Wreck,\ncharted depth 53.6 m",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Von der Tonne \"Helgoland-O\" aus wird ein MgK von 116° gesteuert. Die Ablenkung beträgt +3°, die Mw ist der Seekarte zu entnehmen. Wie lautet der rwK?",
+          "answer_de": "rwK = 120°",
+          "question_en": "From buoy \"Helgoland-O\" a magnetic compass course (MgK) of 116° is steered. Deviation is +3°; take the variation from the chart. What is the true course (rwK)?",
+          "answer_en": "rwK = 120°",
+          "kind": "true_from_compass",
+          "mgk": 116,
+          "abl": 3,
+          "rwk": 120,
+          "solution": [
+            {
+              "de": "Vom Magnetkompasskurs zum rechtweisenden Kurs: Ablenkung und Missweisung werden addiert (Ost = +, West = −).",
+              "en": "From magnetic compass course to true course: add deviation and variation (east = +, west = −)."
+            },
+            {
+              "de": "Abl = +3°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = +3°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "rwK = MgK + Abl + Mw = 116° + (+3°) + (+1°) = 120°",
+              "en": "rwK = MgK + Abl + Mw = 116° + (+3°) + (+1°) = 120°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              120
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Tragen Sie den rechtweisenden Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Nach 11,1 sm Distanz wird die Tonne \"Außenelbe-Reede 4\" nahebei passiert. Beschreiben Sie Farbe, Kennung und Toppzeichen des Schifffahrtszeichens.",
+          "answer_de": "Farbe: gelb\nKennung: gelbes Blitzfeuer mit 4 Sekunden Wiederkehr\nToppzeichen: keines",
+          "question_en": "After a distance of 11.1 nm, buoy \"Außenelbe-Reede 4\" is passed close by. Describe the colour, light character and topmark of this mark.",
+          "answer_en": "Colour: yellow\nLight: yellow flashing light, period 4 seconds\nTopmark: none",
+          "kind": "light",
+          "object": "Außenelbe-Reede 4",
+          "code": "Fl.Y.4s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Fl Y 4s",
+              "en": "Light character on the chart: Fl Y 4s"
+            },
+            {
+              "de": "Blitzfeuer (Fl): kurzer Lichtschein, längere Dunkelpause; Farbe gelb; Wiederkehr 4 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "flashing light (Fl): short flash, longer dark phase; colour yellow; period 4 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "question_de": "In welcher Zeit wird die in Frage 5 genannte Distanz zurückgelegt?",
+          "answer_de": "67 min.",
+          "question_en": "How long does it take to cover the distance named in question 5?",
+          "answer_en": "67 min",
+          "kind": "travel_time",
+          "nm": 11.1,
+          "kn": 10,
+          "minutes": 67,
+          "solution": [
+            {
+              "de": "Zeit = Distanz ÷ Geschwindigkeit; in Minuten mal 60.",
+              "en": "Time = distance ÷ speed; multiply by 60 for minutes."
+            },
+            {
+              "de": "Distanz: 11,1 sm, Fahrt: 10 kn",
+              "en": "Distance: 11.1 nm, speed: 10 kn"
+            },
+            {
+              "de": "t = 11,1 ÷ 10 × 60 = 66,6 min",
+              "en": "t = 11.1 ÷ 10 × 60 = 66.6 min"
+            }
+          ],
+          "check": {
+            "type": "minutes",
+            "values": [
+              67
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Auf welcher Position befindet sich das Schiff nach Koppelort um 11:54 Uhr?",
+          "answer_de": "54° 04,5' N\n008° 06,7' E",
+          "question_en": "What is the boat's dead-reckoning position at 11:54?",
+          "answer_en": "54° 04.5' N\n008° 06.7' E",
+          "kind": "dr_position",
+          "start": "11:00",
+          "end": "11:54",
+          "kn": 10,
+          "rwk": 120,
+          "lat": [
+            54,
+            4.5
+          ],
+          "lon": [
+            8,
+            6.7
+          ],
+          "solution": [
+            {
+              "de": "Koppelort: vom letzten bekannten Ort die gefahrene Distanz auf dem Kurs abtragen.",
+              "en": "Dead-reckoning position: from the last known position, mark off the distance run along the course."
+            },
+            {
+              "de": "Zeit 11:00–11:54 = 54 min; Distanz = 10 kn × 54/60 h = 9 sm",
+              "en": "Time 11:00–11:54 = 54 min; distance = 10 kn × 54/60 h = 9 nm"
+            },
+            {
+              "de": "Distanz mit dem Zirkel an der Breitenskala abgreifen und auf dem Kurs 120° abtragen, dann die Position ablesen:",
+              "en": "Take this distance from the latitude scale with the dividers, mark it off along course 120° and read the position:"
+            },
+            {
+              "de": "54° 04,5' N  008° 06,7' E",
+              "en": "54° 04.5' N  008° 06.7' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              54,
+              4.5
+            ],
+            "lon": [
+              8,
+              6.7
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Um 11:54 Uhr wird die Leuchttonne \"Außenelbe-Reede 4\" mit den Hand-Peilkompass gepeilt: MgP = 146°. Die Ablenkung beträgt 0°, die Mw ist der Seekarte zu entnehmen. Wie lautet die rw-Peilung?",
+          "answer_de": "rwP = 147°",
+          "question_en": "At 11:54 the lighted buoy \"Außenelbe-Reede 4\" is taken with the hand bearing compass: MgP = 146°. Deviation is 0°; take the variation from the chart. What is the true bearing?",
+          "answer_en": "rwP = 147°",
+          "kind": "bearings",
+          "abl": 0,
+          "items": [
+            {
+              "object": "Außenelbe-Reede 4",
+              "mgp": 146,
+              "rwp": 147
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = 0°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = 0°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "Außenelbe-Reede 4: rwP = 146° + (0°) + (+1°) = 147°",
+              "en": "Außenelbe-Reede 4: rwP = 146° + (0°) + (+1°) = 147°"
+            },
+            {
+              "de": "Beim Hand-Peilkompass ist die Ablenkung 0°, weil er abseits der Störfelder des Bootes benutzt wird.",
+              "en": "With a hand bearing compass the deviation is 0° because it is used away from the boat's magnetic fields."
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              147
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Das Schiff befindet sich zeitgleich zur Peilung auf der 20-Meter-Linie. Wie lautet die Besteckversetzung?",
+          "answer_de": "BV = 007° - 1,6 sm",
+          "question_en": "At the time of the bearing the boat is on the 20-metre depth contour. What is the set and drift?",
+          "answer_en": "BV = 007° – 1.6 nm",
+          "kind": "set_drift",
+          "direction": 7,
+          "nm": 1.6,
+          "solution": [
+            {
+              "de": "Besteckversetzung (BV) = Richtung und Distanz vom Koppelort zum beobachteten (gepeilten) Ort. Sie zeigt, wie Strom und Wind das Boot versetzt haben.",
+              "en": "Set and drift (BV) = direction and distance from the dead-reckoning position to the observed (fixed) position. It shows how current and wind have moved the boat."
+            },
+            {
+              "de": "Richtung mit dem Kursdreieck messen, Distanz mit dem Zirkel an der Breitenskala abgreifen.",
+              "en": "Measure the direction with the plotting triangle and the distance with the dividers on the latitude scale."
+            },
+            {
+              "de": "BV = 007° – 1,6 sm",
+              "en": "BV = 007° – 1.6 nm"
+            }
+          ],
+          "check": {
+            "type": "set_drift",
+            "direction": 7,
+            "nm": 1.6
+          }
+        }
+      ],
+      "intro_en": "On 10.06.2011 a recreational craft is in the German Bight on passage from Helgoland to Cuxhaven. Speed over ground is 10 kn. At 11:00, 1.2 nm south of Helgoland, buoy \"Helgoland-O\" is passed close by.",
+      "notes_en": null,
+      "values": {
+        "mw": 1,
+        "speed_kn": 10
+      }
+    },
+    {
+      "number": 3,
+      "intro_de": "Ein Sportboot befindet sich am 23.05.2011 in der Deutschen Bucht auf der Fahrt aus der Jade nach Langeoog. Um 13:30 Uhr wird die Tonne \"1b/Jade 1\" nahebei passiert. Die Fahrt über Grund wird mit 6 kn angenommen.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des Sportbootes um 13:30 Uhr.",
+          "answer_de": "53° 52,4' N\n007° 44,0' E",
+          "question_en": "Take the boat's geographical position at 13:30 from the chart.",
+          "answer_en": "53° 52.4' N\n007° 44.0' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            52.4
+          ],
+          "lon": [
+            7,
+            44.0
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 52,4' N  007° 44,0' E",
+              "en": "53° 52.4' N  007° 44.0' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              52.4
+            ],
+            "lon": [
+              7,
+              44.0
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Von dieser Tonne aus wird der Kurs auf die Tonne \"Accumer Ee\" abgesetzt. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From this buoy the course is set to buoy \"Accumer Ee\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 240°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 240°",
+          "kind": "true_course",
+          "from": "1b/Jade 1",
+          "to": "Accumer Ee",
+          "rwk": 240,
+          "solution": [
+            {
+              "de": "Kurslinie von „1b/Jade 1“ nach „Accumer Ee“ zeichnen.",
+              "en": "Draw the course line from \"1b/Jade 1\" to \"Accumer Ee\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 240°",
+              "en": "rwK = 240°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              240
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Die Ablenkung beträgt -2°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 242°",
+          "question_en": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 242°",
+          "kind": "compass_course",
+          "rwk": 240,
+          "abl": -2,
+          "mgk": 242,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = 0°, Abl = −2°",
+              "en": "Variation Mw (from chart) = 0°, deviation Abl = −2°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 240° − (0°) − (−2°) = 242°",
+              "en": "MgK = rwK − Mw − Abl = 240° − (0°) − (−2°) = 242°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              242
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Wann wird die Tonne \"Accumer Ee\" voraussichtlich erreicht?",
+          "answer_de": "15:12 Uhr",
+          "question_en": "When is buoy \"Accumer Ee\" expected to be reached?",
+          "answer_en": "15:12",
+          "kind": "eta",
+          "start": "13:30",
+          "kn": 6,
+          "eta": "15:12",
+          "nm": 10.2,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Distanz zum Ziel in der Karte messen, Fahrzeit berechnen und zur Startzeit addieren.",
+              "en": "Measure the distance to the destination, work out the time and add it to the start time."
+            },
+            {
+              "de": "Distanz ≈ 10,2 sm (aus der Karte); t = 10,2 ÷ 6 × 60 ≈ 102 min",
+              "en": "Distance ≈ 10.2 nm (from the chart); t = 10.2 ÷ 6 × 60 ≈ 102 min"
+            },
+            {
+              "de": "Ankunft = 13:30 + 102 min = 15:12 Uhr",
+              "en": "Arrival = 13:30 + 102 min = 15:12"
+            }
+          ],
+          "check": {
+            "type": "clock",
+            "values": [
+              "15:12"
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Auf Position 53° 49,5' N 007° 36,8' E (ca. 1,9 sm nordwestlich der Ansteuerungstonne \"Otzumer Balje\") finden Sie einen roten Eintrag mit einem \"A\". Was bedeutet diese Eintragung in die Seekarte?",
+          "answer_de": "Position der Gezeitenstromangabe, oder \"Stromraute\"",
+          "question_en": "At position 53° 49.5' N 007° 36.8' E (about 1.9 nm north-west of the landfall buoy \"Otzumer Balje\") there is a red entry with an \"A\". What does this entry on the chart mean?",
+          "answer_en": "Position of a tidal stream table entry, or \"tidal diamond\"",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "question_de": "Um 14:30 Uhr wird mit dem Peilaufsatz des Magnetkompasses eine Kreuzpeilung durchgeführt. Die Ablenkung für den anliegenden Kurs beträgt -2°, die Mw ist der Seekarte zu entnehmen.\n\nTonne \"TG15\" MgP = 292°\nTonne \"TG17/Weser1\" MgP = 347°\nTonne \"Accumer Ee\" MgP = 234°\n\nWie lauten die rw-Peilungen?",
+          "answer_de": "Tonne \"TG15\" rwP = 290°\nTonne \"TG17/Weser1\" rwP = 345°\nTonne \"Accumer Ee\" rwP = 232°",
+          "question_en": "At 14:30 a cross bearing is taken with the bearing ring of the magnetic compass. Deviation for the current course is –2°; take the variation from the chart.\n\nBuoy \"TG15\" MgP = 292°\nBuoy \"TG17/Weser1\" MgP = 347°\nBuoy \"Accumer Ee\" MgP = 234°\n\nWhat are the true bearings?",
+          "answer_en": "Buoy \"TG15\" rwP = 290°\nBuoy \"TG17/Weser1\" rwP = 345°\nBuoy \"Accumer Ee\" rwP = 232°",
+          "kind": "bearings",
+          "abl": -2,
+          "items": [
+            {
+              "object": "TG15",
+              "mgp": 292,
+              "rwp": 290
+            },
+            {
+              "object": "TG17/Weser1",
+              "mgp": 347,
+              "rwp": 345
+            },
+            {
+              "object": "Accumer Ee",
+              "mgp": 234,
+              "rwp": 232
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = −2°, Mw (laut Karte) = 0°",
+              "en": "Deviation Abl = −2°, variation Mw (from chart) = 0°"
+            },
+            {
+              "de": "TG15: rwP = 292° + (−2°) + (0°) = 290°",
+              "en": "TG15: rwP = 292° + (−2°) + (0°) = 290°"
+            },
+            {
+              "de": "TG17/Weser1: rwP = 347° + (−2°) + (0°) = 345°",
+              "en": "TG17/Weser1: rwP = 347° + (−2°) + (0°) = 345°"
+            },
+            {
+              "de": "Accumer Ee: rwP = 234° + (−2°) + (0°) = 232°",
+              "en": "Accumer Ee: rwP = 234° + (−2°) + (0°) = 232°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              290,
+              345,
+              232
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"Accumer Ee\".",
+          "answer_de": "Farbe: rot-weiß senkrecht gestreift\nKennung: weißes Gleichtaktfeuer mit 8 Sekunden Wiederkehr\nToppzeichen: roter Ball",
+          "question_en": "Describe the colour, light character and topmark of buoy \"Accumer Ee\".",
+          "answer_en": "Colour: red-white vertical stripes\nLight: white isophase light, period 8 seconds\nTopmark: red ball",
+          "kind": "light",
+          "object": "Accumer Ee",
+          "code": "Iso.W.8s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Iso W 8s",
+              "en": "Light character on the chart: Iso W 8s"
+            },
+            {
+              "de": "Gleichtaktfeuer (Iso): Licht und Dunkel sind gleich lang; Farbe weiß; Wiederkehr 8 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "isophase light (Iso): light and dark phases of equal length; colour white; period 8 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 23.05.2011 a recreational craft is in the German Bight on passage from the Jade to Langeoog. At 13:30 buoy \"1b/Jade 1\" is passed close by. Speed over ground is assumed to be 6 kn.",
+      "notes_en": null,
+      "values": {
+        "mw": 0,
+        "speed_kn": 6
+      }
+    },
+    {
+      "number": 4,
+      "intro_de": "Ein aus Langeoog auslaufendes Sportboot befindet sich am 18.04.2014 um 09:00 Uhr nahe bei der Tonne \"Accumer Ee\".",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des Bootes um 09:00 Uhr.",
+          "answer_de": "53° 47,2' N\n007° 29,1' E",
+          "question_en": "Take the boat's geographical position at 09:00 from the chart.",
+          "answer_en": "53° 47.2' N\n007° 29.1' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            47.2
+          ],
+          "lon": [
+            7,
+            29.1
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 47,2' N  007° 29,1' E",
+              "en": "53° 47.2' N  007° 29.1' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              47.2
+            ],
+            "lon": [
+              7,
+              29.1
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Von der Tonne \"Accumer Ee\" aus wird der Kurs auf die Tonne \"Otzumer Balje\" abgesetzt. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From buoy \"Accumer Ee\" the course is set to buoy \"Otzumer Balje\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 081°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 081°",
+          "kind": "true_course",
+          "from": "Accumer Ee",
+          "to": "Otzumer Balje",
+          "rwk": 81,
+          "solution": [
+            {
+              "de": "Kurslinie von „Accumer Ee“ nach „Otzumer Balje“ zeichnen.",
+              "en": "Draw the course line from \"Accumer Ee\" to \"Otzumer Balje\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 081°",
+              "en": "rwK = 081°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              81
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Die Ablenkung beträgt +7°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 074°",
+          "question_en": "Deviation is +7°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 074°",
+          "kind": "compass_course",
+          "rwk": 81,
+          "abl": 7,
+          "mgk": 74,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = 0°, Abl = +7°",
+              "en": "Variation Mw (from chart) = 0°, deviation Abl = +7°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 081° − (0°) − (+7°) = 074°",
+              "en": "MgK = rwK − Mw − Abl = 081° − (0°) − (+7°) = 074°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              74
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"Otzumer Balje\".",
+          "answer_de": "Farbe: rot-weiß senkrecht gestreift\nKennung: weißes Gleichtaktfeuer mit 4 Sekunden Wiederkehr\nToppzeichen: roter Ball",
+          "question_en": "Describe the colour, light character and topmark of buoy \"Otzumer Balje\".",
+          "answer_en": "Colour: red-white vertical stripes\nLight: white isophase light, period 4 seconds\nTopmark: red ball",
+          "kind": "light",
+          "object": "Otzumer Balje",
+          "code": "Iso.W.4s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Iso W 4s",
+              "en": "Light character on the chart: Iso W 4s"
+            },
+            {
+              "de": "Gleichtaktfeuer (Iso): Licht und Dunkel sind gleich lang; Farbe weiß; Wiederkehr 4 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "isophase light (Iso): light and dark phases of equal length; colour white; period 4 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "question_de": "Es ist 10:00 Uhr. Die durchschnittliche Fahrt über Grund betrug in der letzten Stunde 6 kn. Auf welcher Position befindet sich das Schiff nach Koppelort?",
+          "answer_de": "53° 48,2'N\n007° 39,2' E",
+          "question_en": "It is 10:00. The average speed over ground during the last hour was 6 kn. What is the boat's dead-reckoning position?",
+          "answer_en": "53° 48.2' N\n007° 39.2' E",
+          "kind": "dr_position",
+          "start": "09:00",
+          "end": "10:00",
+          "kn": 6,
+          "rwk": 81,
+          "lat": [
+            53,
+            48.2
+          ],
+          "lon": [
+            7,
+            39.2
+          ],
+          "solution": [
+            {
+              "de": "Koppelort: vom letzten bekannten Ort die gefahrene Distanz auf dem Kurs abtragen.",
+              "en": "Dead-reckoning position: from the last known position, mark off the distance run along the course."
+            },
+            {
+              "de": "Zeit 09:00–10:00 = 60 min; Distanz = 6 kn × 60/60 h = 6 sm",
+              "en": "Time 09:00–10:00 = 60 min; distance = 6 kn × 60/60 h = 6 nm"
+            },
+            {
+              "de": "Distanz mit dem Zirkel an der Breitenskala abgreifen und auf dem Kurs 081° abtragen, dann die Position ablesen:",
+              "en": "Take this distance from the latitude scale with the dividers, mark it off along course 081° and read the position:"
+            },
+            {
+              "de": "53° 48,2' N  007° 39,2' E",
+              "en": "53° 48.2' N  007° 39.2' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              48.2
+            ],
+            "lon": [
+              7,
+              39.2
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Sie beschließen über die Otzumer Balje und das Langeooger Wattfahrwasser hinter der Insel zurück zum Hafen zu laufen. ca. 1,2 sm südwestlich der Tonne \"Otzumer Balje\" finden Sie zwei ähnliche Einträge. Was bedeuten diese Eintragungen in der Seekarte?",
+          "answer_de": "Wracks mit 3,7 m bzw. 1,4 m Tiefe",
+          "question_en": "You decide to return to the harbour via the Otzumer Balje and the Langeoog tidal-flat channel behind the island. About 1.2 nm south-west of buoy \"Otzumer Balje\" you find two similar entries. What do these entries on the chart mean?",
+          "answer_en": "Wrecks with 3.7 m and 1.4 m depth",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Um 10:15 Uhr peilen Sie mit dem Peilaufsatz am Magnetkompass die westlichste der drei Kirchen auf Spiekeroog in MgP = 110° und die Tonne \"Otzumer Balje\" in MgP = 030°. Die Ablenkung für den anliegenden Kurs beträgt +5°, die Mw ist der Karte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "Kirche rwP = 115°\nTonne rwp = 035°",
+          "question_en": "At 10:15 you take the westernmost of the three churches on Spiekeroog with the bearing ring of the magnetic compass at MgP = 110°, and buoy \"Otzumer Balje\" at MgP = 030°. Deviation for the current course is +5°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "Church rwP = 115°\nBuoy rwP = 035°",
+          "kind": "bearings",
+          "abl": 5,
+          "items": [
+            {
+              "object": "Kirche Spiekeroog",
+              "mgp": 110,
+              "rwp": 115
+            },
+            {
+              "object": "Otzumer Balje",
+              "mgp": 30,
+              "rwp": 35
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = +5°, Mw (laut Karte) = 0°",
+              "en": "Deviation Abl = +5°, variation Mw (from chart) = 0°"
+            },
+            {
+              "de": "Kirche Spiekeroog: rwP = 110° + (+5°) + (0°) = 115°",
+              "en": "Kirche Spiekeroog: rwP = 110° + (+5°) + (0°) = 115°"
+            },
+            {
+              "de": "Otzumer Balje: rwP = 030° + (+5°) + (0°) = 035°",
+              "en": "Otzumer Balje: rwP = 030° + (+5°) + (0°) = 035°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              115,
+              35
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Karte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 18.04.2014 at 09:00 a recreational craft leaving Langeoog is close to buoy \"Accumer Ee\".",
+      "notes_en": null,
+      "values": {
+        "mw": 0,
+        "speed_kn": 6
+      }
+    },
+    {
+      "number": 5,
+      "intro_de": "Ein Motorboot befindet sich am 29.07.2011 in der Küstenverkehrszone und möchte in die Jade einlaufen.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Zur Standortbestimmung werden um 14:00 Uhr mit dem Peilaufsatz am Magnetkompass die folgenden Objekte gepeilt. Die Ablenkung für den anliegenden Kurs beträgt -4°, die Mw ist der Seekarte zu entnehmen.\n\nWasserturm Langeoog MgP = 225°\nTonne \"Otzumer Balje\" MgP = 131°\n\nWie lauten die rw-Peilungen?",
+          "answer_de": "Wasserturm rwP = 221°\nTonne rwP = 127°",
+          "question_en": "To fix the position, the following objects are taken at 14:00 with the bearing ring of the magnetic compass. Deviation for the current course is –4°; take the variation from the chart.\n\nLangeoog water tower MgP = 225°\nBuoy \"Otzumer Balje\" MgP = 131°\n\nWhat are the true bearings?",
+          "answer_en": "Water tower rwP = 221°\nBuoy rwP = 127°",
+          "kind": "bearings",
+          "abl": -4,
+          "items": [
+            {
+              "object": "Wasserturm Langeoog",
+              "mgp": 225,
+              "rwp": 221
+            },
+            {
+              "object": "Otzumer Balje",
+              "mgp": 131,
+              "rwp": 127
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = −4°, Mw (laut Karte) = 0°",
+              "en": "Deviation Abl = −4°, variation Mw (from chart) = 0°"
+            },
+            {
+              "de": "Wasserturm Langeoog: rwP = 225° + (−4°) + (0°) = 221°",
+              "en": "Wasserturm Langeoog: rwP = 225° + (−4°) + (0°) = 221°"
+            },
+            {
+              "de": "Otzumer Balje: rwP = 131° + (−4°) + (0°) = 127°",
+              "en": "Otzumer Balje: rwP = 131° + (−4°) + (0°) = 127°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              221,
+              127
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des ermittelten Standortes.",
+          "answer_de": "53° 49,7' N\n007° 35,8' E",
+          "question_en": "Take the geographical position of the fix from the chart.",
+          "answer_en": "53° 49.7' N\n007° 35.8' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            49.7
+          ],
+          "lon": [
+            7,
+            35.8
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 49,7' N  007° 35,8' E",
+              "en": "53° 49.7' N  007° 35.8' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              49.7
+            ],
+            "lon": [
+              7,
+              35.8
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Von diesem Ort aus wird der Kurs auf die Tonne \"1b/Jade1\" abgesetzt. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From this position the course is set to buoy \"1b/Jade1\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 061°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 061°",
+          "kind": "true_course",
+          "from": "Standort",
+          "to": "1b/Jade1",
+          "rwk": 61,
+          "solution": [
+            {
+              "de": "Kurslinie von „Standort“ nach „1b/Jade1“ zeichnen.",
+              "en": "Draw the course line from \"Standort\" to \"1b/Jade1\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 061°",
+              "en": "rwK = 061°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              61
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Die Ablenkung beträgt -2°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 063°",
+          "question_en": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 063°",
+          "kind": "compass_course",
+          "rwk": 61,
+          "abl": -2,
+          "mgk": 63,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = 0°, Abl = −2°",
+              "en": "Variation Mw (from chart) = 0°, deviation Abl = −2°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 061° − (0°) − (−2°) = 063°",
+              "en": "MgK = rwK − Mw − Abl = 061° − (0°) − (−2°) = 063°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              63
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Das Motorboot macht 11 kn Fahrt über Grund. Zu welcher Uhrzeit wird die Tonne \"1b/Jade1\" voraussichtlich erreicht?",
+          "answer_de": "14:30 Uhr",
+          "question_en": "The motor boat makes 11 kn over ground. At what time is buoy \"1b/Jade1\" expected to be reached?",
+          "answer_en": "14:30",
+          "kind": "eta",
+          "start": "14:00",
+          "kn": 11,
+          "eta": "14:30",
+          "nm": 5.5,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Distanz zum Ziel in der Karte messen, Fahrzeit berechnen und zur Startzeit addieren.",
+              "en": "Measure the distance to the destination, work out the time and add it to the start time."
+            },
+            {
+              "de": "Distanz ≈ 5,5 sm (aus der Karte); t = 5,5 ÷ 11 × 60 ≈ 30 min",
+              "en": "Distance ≈ 5.5 nm (from the chart); t = 5.5 ÷ 11 × 60 ≈ 30 min"
+            },
+            {
+              "de": "Ankunft = 14:00 + 30 min = 14:30 Uhr",
+              "en": "Arrival = 14:00 + 30 min = 14:30"
+            }
+          ],
+          "check": {
+            "type": "clock",
+            "values": [
+              "14:30"
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"1b/Jade1\".",
+          "answer_de": "Farbe: grün\nKennung: grünes unterbrochenes Feuer mit 4 Sekunden Wiederkehr\nToppzeichen: keines",
+          "question_en": "Describe the colour, light character and topmark of buoy \"1b/Jade1\".",
+          "answer_en": "Colour: green\nLight: green occulting light, period 4 seconds\nTopmark: none",
+          "kind": "light",
+          "object": "1b/Jade1",
+          "code": "Oc.G.4s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Oc G 4s",
+              "en": "Light character on the chart: Oc G 4s"
+            },
+            {
+              "de": "Unterbrochenes Feuer (Oc): länger hell als dunkel; Farbe grün; Wiederkehr 4 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "occulting light (Oc): light phase longer than dark phase; colour green; period 4 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "question_de": "Das Motorboot macht weiterhin 11 kn Fahrt über Grund, als um 14:06 Uhr ein Maschinenschaden eintritt. Auf welcher Position befindet sich das Schiff zu diesem Zeitpunkt nach Koppelort?",
+          "answer_de": "53° 50,2' N\n007° 37,4' E",
+          "question_en": "The motor boat keeps making 11 kn over ground when an engine failure occurs at 14:06. What is the boat's dead-reckoning position at that moment?",
+          "answer_en": "53° 50.2' N\n007° 37.4' E",
+          "kind": "dr_position",
+          "start": "14:00",
+          "end": "14:06",
+          "kn": 11,
+          "rwk": 61,
+          "lat": [
+            53,
+            50.2
+          ],
+          "lon": [
+            7,
+            37.4
+          ],
+          "solution": [
+            {
+              "de": "Koppelort: vom letzten bekannten Ort die gefahrene Distanz auf dem Kurs abtragen.",
+              "en": "Dead-reckoning position: from the last known position, mark off the distance run along the course."
+            },
+            {
+              "de": "Zeit 14:00–14:06 = 6 min; Distanz = 11 kn × 6/60 h = 1,1 sm",
+              "en": "Time 14:00–14:06 = 6 min; distance = 11 kn × 6/60 h = 1.1 nm"
+            },
+            {
+              "de": "Distanz mit dem Zirkel an der Breitenskala abgreifen und auf dem Kurs 061° abtragen, dann die Position ablesen:",
+              "en": "Take this distance from the latitude scale with the dividers, mark it off along course 061° and read the position:"
+            },
+            {
+              "de": "53° 50,2' N  007° 37,4' E",
+              "en": "53° 50.2' N  007° 37.4' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              50.2
+            ],
+            "lon": [
+              7,
+              37.4
+            ]
+          }
+        }
+      ],
+      "intro_en": "On 29.07.2011 a motor boat is in the inshore traffic zone and wants to enter the Jade.",
+      "notes_en": null,
+      "values": {
+        "mw": 0,
+        "speed_kn": 11
+      }
+    },
+    {
+      "number": 6,
+      "intro_de": "Ein aus der Alten Weser auslaufendes Motorboot befindet sich am 30.06.2012 auf dem Weg in die Elbe und steht um 09:00 Uhr nahebei der Tonne \"A2\".",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des Motorbootes.",
+          "answer_de": "53° 55,3' N\n007° 58,8' E",
+          "question_en": "Take the motor boat's geographical position from the chart.",
+          "answer_en": "53° 55.3' N\n007° 58.8' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            55.3
+          ],
+          "lon": [
+            7,
+            58.8
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 55,3' N  007° 58,8' E",
+              "en": "53° 55.3' N  007° 58.8' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              55.3
+            ],
+            "lon": [
+              7,
+              58.8
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Von der Tonne \"A2\" aus setzt das Boot seinen Kurs auf die Tonne \"Westertill-N\" ab. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From buoy \"A2\" the boat sets its course to buoy \"Westertill-N\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 059°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 059°",
+          "kind": "true_course",
+          "from": "A2",
+          "to": "Westertill-N",
+          "rwk": 59,
+          "solution": [
+            {
+              "de": "Kurslinie von „A2“ nach „Westertill-N“ zeichnen.",
+              "en": "Draw the course line from \"A2\" to \"Westertill-N\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 059°",
+              "en": "rwK = 059°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              59
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Die Ablenkung beträgt -2°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 060°",
+          "question_en": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 060°",
+          "kind": "compass_course",
+          "rwk": 59,
+          "abl": -2,
+          "mgk": 60,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = −2°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = −2°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 059° − (+1°) − (−2°) = 060°",
+              "en": "MgK = rwK − Mw − Abl = 059° − (+1°) − (−2°) = 060°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              60
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Nach einiger Zeit wird die Tonne \"NGN\" an Backbordseite passiert.\nBeschreiben Sie Farbe, Kennung und Toppzeichen des Schifffahrtszeichens.",
+          "answer_de": "Farbe: oben schwarz und unten gelb\nKennung: weißes schnelles Funkelfeuer\nToppzeichen: zwei Kegel - beide \"Spitze oben\" - senkrecht übereinander",
+          "question_en": "After a while buoy \"NGN\" is passed on the port side.\nDescribe the colour, light character and topmark of this mark.",
+          "answer_en": "Colour: black above, yellow below\nLight: white quick flashing light\nTopmark: two cones, both point up, one above the other",
+          "kind": "light",
+          "object": "NGN",
+          "code": "Q.W",
+          "mark": "north_cardinal",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Q W",
+              "en": "Light character on the chart: Q W"
+            },
+            {
+              "de": "Funkelfeuer (Q): 50–60 Blitze pro Minute; Farbe weiß",
+              "en": "quick flashing light (Q): 50–60 flashes per minute; colour white"
+            },
+            {
+              "de": "Nord-Kardinalzeichen: Toppzeichen zwei Kegel Spitze oben, schwarz über gelb, Funkelfeuer weiß ohne Unterbrechung. Man passiert es im Norden.",
+              "en": "North cardinal mark: two cones point up, black above yellow, continuous white quick light. Pass it to the north."
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "question_de": "Im weiteren Fahrtverlauf werden mit dem Peilaufsatz am Magnetkompass die folgenden Objekte gepeilt. Die Ablenkung für den anliegenden Kurs beträgt -2°, die Mw ist der Seekarte zu entnehmen.\n\nLeuchtturm \"Alte Weser\" MgP = 160°\nTonne \"Westertill-N\" MgP = 056°\n\nWie lauten die rw-Peilungen?",
+          "answer_de": "Leuchtturm rwP = 159°\nTonne rwP = 055°",
+          "question_en": "Further on, the following objects are taken with the bearing ring of the magnetic compass. Deviation for the current course is –2°; take the variation from the chart.\n\nLighthouse \"Alte Weser\" MgP = 160°\nBuoy \"Westertill-N\" MgP = 056°\n\nWhat are the true bearings?",
+          "answer_en": "Lighthouse rwP = 159°\nBuoy rwP = 055°",
+          "kind": "bearings",
+          "abl": -2,
+          "items": [
+            {
+              "object": "Leuchtturm Alte Weser",
+              "mgp": 160,
+              "rwp": 159
+            },
+            {
+              "object": "Westertill-N",
+              "mgp": 56,
+              "rwp": 55
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = −2°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = −2°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "Leuchtturm Alte Weser: rwP = 160° + (−2°) + (+1°) = 159°",
+              "en": "Leuchtturm Alte Weser: rwP = 160° + (−2°) + (+1°) = 159°"
+            },
+            {
+              "de": "Westertill-N: rwP = 056° + (−2°) + (+1°) = 055°",
+              "en": "Westertill-N: rwP = 056° + (−2°) + (+1°) = 055°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              159,
+              55
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Um 09:54 Uhr wird die Tonne \"Westertill-N\" passiert. Wie groß ist die Geschwindigkeit seit 09:00 Uhr?",
+          "answer_de": "FüG = 6 kn",
+          "question_en": "At 09:54 buoy \"Westertill-N\" is passed. What has the speed been since 09:00?",
+          "answer_en": "Speed over ground = 6 kn",
+          "kind": "speed",
+          "start": "09:00",
+          "end": "09:54",
+          "nm": 5.4,
+          "kn": 6,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Geschwindigkeit = Distanz ÷ Zeit (in Stunden).",
+              "en": "Speed = distance ÷ time (in hours)."
+            },
+            {
+              "de": "Zeit: 09:00 bis 09:54 = 54 min; Distanz ≈ 5,4 sm (aus der Karte)",
+              "en": "Time: 09:00 to 09:54 = 54 min; distance ≈ 5.4 nm (from the chart)"
+            },
+            {
+              "de": "v = 5,4 ÷ 54 × 60 = 6 kn",
+              "en": "v = 5.4 ÷ 54 × 60 = 6 kn"
+            }
+          ],
+          "check": {
+            "type": "knots",
+            "values": [
+              6
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Unmittelbar südlich der Tonne \"Westertill-N\" befindet sich eine Eintragung. Was bedeutet diese Eintragung in der Seekarte?",
+          "answer_de": "Kartentiefe 24 m",
+          "question_en": "Immediately south of buoy \"Westertill-N\" there is an entry. What does this entry on the chart mean?",
+          "answer_en": "Charted depth 24 m",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 30.06.2012 a motor boat leaving the Alte Weser is on its way to the Elbe and is close to buoy \"A2\" at 09:00.",
+      "notes_en": null,
+      "values": {
+        "mw": 1
+      }
+    },
+    {
+      "number": 7,
+      "intro_de": "Ein aus der Elbe auslaufendes Motorboot steht am 22.10.2010 um 11:00 Uhr nahebei der Tonne \"Außenelbe-Reede 2\". Die Fahrt über Grund beträgt 8 kn.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des Motorbootes um 11:00 Uhr.",
+          "answer_de": "54° 03,5' N\n008° 06,9' E",
+          "question_en": "Take the motor boat's geographical position at 11:00 from the chart.",
+          "answer_en": "54° 03.5' N\n008° 06.9' E",
+          "kind": "read_position",
+          "lat": [
+            54,
+            3.5
+          ],
+          "lon": [
+            8,
+            6.9
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "54° 03,5' N  008° 06,9' E",
+              "en": "54° 03.5' N  008° 06.9' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              54,
+              3.5
+            ],
+            "lon": [
+              8,
+              6.9
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"Außenelbe-Reede 2\".",
+          "answer_de": "Farbe: gelb\nKennung: gelbes unterbrochenes Feuer mit 3 Gruppen und der Wiederkehr 12 Sekunden\nToppzeichen: keines",
+          "question_en": "Describe the colour, light character and topmark of buoy \"Außenelbe-Reede 2\".",
+          "answer_en": "Colour: yellow\nLight: yellow occulting light, groups of 3, period 12 seconds\nTopmark: none",
+          "kind": "light",
+          "object": "Außenelbe-Reede 2",
+          "code": "Oc(3).Y.12s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Oc(3) Y 12s",
+              "en": "Light character on the chart: Oc(3) Y 12s"
+            },
+            {
+              "de": "Unterbrochenes Feuer (Oc): länger hell als dunkel, in 3er-Gruppen; Farbe gelb; Wiederkehr 12 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "occulting light (Oc): light phase longer than dark phase, in groups of 3; colour yellow; period 12 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Von der angegebenen Position aus wird am Magnetkompasskurs ein Kurs von 218° gesteuert. Die Ablenkung beträgt -3°, die Mw ist der Seekarte zu entnehmen. Wie lautet der rwK?",
+          "answer_de": "rwK = 216°",
+          "question_en": "From this position a magnetic compass course of 218° is steered. Deviation is –3°; take the variation from the chart. What is the true course (rwK)?",
+          "answer_en": "rwK = 216°",
+          "kind": "true_from_compass",
+          "mgk": 218,
+          "abl": -3,
+          "rwk": 216,
+          "solution": [
+            {
+              "de": "Vom Magnetkompasskurs zum rechtweisenden Kurs: Ablenkung und Missweisung werden addiert (Ost = +, West = −).",
+              "en": "From magnetic compass course to true course: add deviation and variation (east = +, west = −)."
+            },
+            {
+              "de": "Abl = −3°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = −3°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "rwK = MgK + Abl + Mw = 218° + (−3°) + (+1°) = 216°",
+              "en": "rwK = MgK + Abl + Mw = 218° + (−3°) + (+1°) = 216°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              216
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Tragen Sie den rechtweisenden Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Wann erreichen Sie die Tonne \"NGN\"?",
+          "answer_de": "11:57 Uhr",
+          "question_en": "When do you reach buoy \"NGN\"?",
+          "answer_en": "11:57",
+          "kind": "eta",
+          "start": "11:00",
+          "kn": 8,
+          "eta": "11:57",
+          "nm": 7.6,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Distanz zum Ziel in der Karte messen, Fahrzeit berechnen und zur Startzeit addieren.",
+              "en": "Measure the distance to the destination, work out the time and add it to the start time."
+            },
+            {
+              "de": "Distanz ≈ 7,6 sm (aus der Karte); t = 7,6 ÷ 8 × 60 ≈ 57 min",
+              "en": "Distance ≈ 7.6 nm (from the chart); t = 7.6 ÷ 8 × 60 ≈ 57 min"
+            },
+            {
+              "de": "Ankunft = 11:00 + 57 min = 11:57 Uhr",
+              "en": "Arrival = 11:00 + 57 min = 11:57"
+            }
+          ],
+          "check": {
+            "type": "clock",
+            "values": [
+              "11:57"
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Welche Bedeutung hat die Tonne \"NGN\"?",
+          "answer_de": "Nord-Kardinal-Zeichen\nZeigt an, dass die Gefahrenstelle nördlich der Tonne sicher umfahren werden kann.",
+          "question_en": "What is the meaning of buoy \"NGN\"?",
+          "answer_en": "North cardinal mark\nShows that the danger can be passed safely to the north of the buoy.",
+          "kind": "mark_meaning",
+          "mark": "north_cardinal",
+          "solution": [
+            {
+              "de": "Nord-Kardinalzeichen: Toppzeichen zwei Kegel Spitze oben, schwarz über gelb, Funkelfeuer weiß ohne Unterbrechung. Man passiert es im Norden.",
+              "en": "North cardinal mark: two cones point up, black above yellow, continuous white quick light. Pass it to the north."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "question_de": "Um 12:00 Uhr werden mit dem Hand-Peilkompass folgende Tonnen gepeilt:\n\nTonne \"ST\" MgP = 240°\nTonne \"A2\" MgP = 150°\n\nDie Ablenkung beträgt 0°, die Mw ist aus der Seekarte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "Tonne \"ST\" rwP = 241°\nTonne \"A2\" rwP = 151°",
+          "question_en": "At 12:00 the following buoys are taken with the hand bearing compass:\n\nBuoy \"ST\" MgP = 240°\nBuoy \"A2\" MgP = 150°\n\nDeviation is 0°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "Buoy \"ST\" rwP = 241°\nBuoy \"A2\" rwP = 151°",
+          "kind": "bearings",
+          "abl": 0,
+          "items": [
+            {
+              "object": "ST",
+              "mgp": 240,
+              "rwp": 241
+            },
+            {
+              "object": "A2",
+              "mgp": 150,
+              "rwp": 151
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = 0°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = 0°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "ST: rwP = 240° + (0°) + (+1°) = 241°",
+              "en": "ST: rwP = 240° + (0°) + (+1°) = 241°"
+            },
+            {
+              "de": "A2: rwP = 150° + (0°) + (+1°) = 151°",
+              "en": "A2: rwP = 150° + (0°) + (+1°) = 151°"
+            },
+            {
+              "de": "Beim Hand-Peilkompass ist die Ablenkung 0°, weil er abseits der Störfelder des Bootes benutzt wird.",
+              "en": "With a hand bearing compass the deviation is 0° because it is used away from the boat's magnetic fields."
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              241,
+              151
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "question_de": "Wie lautet die Besteckversetzung?",
+          "answer_de": "BV = 273° -1,1 sm",
+          "question_en": "What is the set and drift?",
+          "answer_en": "BV = 273° – 1.1 nm",
+          "kind": "set_drift",
+          "direction": 273,
+          "nm": 1.1,
+          "solution": [
+            {
+              "de": "Besteckversetzung (BV) = Richtung und Distanz vom Koppelort zum beobachteten (gepeilten) Ort. Sie zeigt, wie Strom und Wind das Boot versetzt haben.",
+              "en": "Set and drift (BV) = direction and distance from the dead-reckoning position to the observed (fixed) position. It shows how current and wind have moved the boat."
+            },
+            {
+              "de": "Richtung mit dem Kursdreieck messen, Distanz mit dem Zirkel an der Breitenskala abgreifen.",
+              "en": "Measure the direction with the plotting triangle and the distance with the dividers on the latitude scale."
+            },
+            {
+              "de": "BV = 273° – 1,1 sm",
+              "en": "BV = 273° – 1.1 nm"
+            }
+          ],
+          "check": {
+            "type": "set_drift",
+            "direction": 273,
+            "nm": 1.1
+          }
+        }
+      ],
+      "intro_en": "On 22.10.2010 at 11:00 a motor boat leaving the Elbe is close to buoy \"Außenelbe-Reede 2\". Speed over ground is 8 kn.",
+      "notes_en": null,
+      "values": {
+        "mw": 1,
+        "speed_kn": 8
+      }
+    },
+    {
+      "number": 8,
+      "intro_de": "Ein Motorboot steht am 28.05.2012 um 10:00 Uhr in der Deutschen Bucht. Die Fahrt über Grund wird mit 9 kn angenommen.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Durch Peilung und Abstandsmessung wird eine Standortbestimmung durchgeführt. Die Tonne \"E2\" wird gepeilt: rwP = 084°, Distanz 1,6 sm. Tragen Sie die rw-Peilung in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "The position is fixed by bearing and distance. Buoy \"E2\" is taken: rwP = 084°, distance 1.6 nm. Plot the true bearing on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearing_distance",
+          "solution": [
+            {
+              "de": "Peillinie durch das Objekt ziehen, dann die Distanz mit dem Zirkel an der Breitenskala abgreifen (1' Breite = 1 sm) und vom Objekt aus auf der Peillinie abtragen.",
+              "en": "Draw the bearing line through the object, take the distance with the dividers from the latitude scale (1' of latitude = 1 nm) and mark it off along the line from the object."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position.",
+          "answer_de": "54° 07,0' N\n007° 41,0' E",
+          "question_en": "Take the geographical position from the chart.",
+          "answer_en": "54° 07.0' N\n007° 41.0' E",
+          "kind": "read_position",
+          "lat": [
+            54,
+            7.0
+          ],
+          "lon": [
+            7,
+            41.0
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "54° 07,0' N  007° 41,0' E",
+              "en": "54° 07.0' N  007° 41.0' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              54,
+              7.0
+            ],
+            "lon": [
+              7,
+              41.0
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "question_de": "An dem ermittelten Ort befindet sich ein Eintrag. Was bedeutet diese Eintragung in die Seekarte?",
+          "answer_de": "Kartentiefe 37 m",
+          "question_en": "There is an entry at this position. What does this entry on the chart mean?",
+          "answer_en": "Charted depth 37 m",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "question_de": "Von dem ermittelten Ort wird das Verkehrstrennungsgebiet Jade Approach auf einem rechtweisenden Kurs von 232° angesteuert. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From this position the boat heads for the Jade Approach traffic separation scheme on a true course of 232°. Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Wie groß ist die Distanz zum Verkehrstrennungsgebiet?",
+          "answer_de": "3,8 sm",
+          "question_en": "What is the distance to the traffic separation scheme?",
+          "answer_en": "3.8 nm",
+          "kind": "distance",
+          "nm": 3.8,
+          "solution": [
+            {
+              "de": "Distanz mit dem Zirkel abgreifen und am seitlichen Kartenrand (Breitenskala) ablesen: 1 Bogenminute Breite = 1 Seemeile. Nie an der Längenskala messen!",
+              "en": "Take the distance with the dividers and read it on the side border (latitude scale): 1 minute of latitude = 1 nautical mile. Never measure on the longitude scale!"
+            },
+            {
+              "de": "Distanz = 3,8 sm",
+              "en": "Distance = 3.8 nm"
+            }
+          ],
+          "check": {
+            "type": "nm",
+            "values": [
+              3.8
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Die Ablenkung beträgt +2°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 229°",
+          "question_en": "Deviation is +2°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 229°",
+          "kind": "compass_course",
+          "rwk": 232,
+          "abl": 2,
+          "mgk": 229,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = +2°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = +2°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 232° − (+1°) − (+2°) = 229°",
+              "en": "MgK = rwK − Mw − Abl = 232° − (+1°) − (+2°) = 229°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              229
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Bei Erreichen des Verkehrstrennungsgebietes Jade Approach wird der Kurs geändert, um das Verkehrstrennungsgebiet rechtwinklig zu queren (Annahme: kein Versatz durch Strom und Wind). Wie lautet der rwK?",
+          "answer_de": "rwK = 242°",
+          "question_en": "On reaching the Jade Approach traffic separation scheme the course is altered to cross the scheme at right angles (assumption: no set from current or wind). What is the true course (rwK)?",
+          "answer_en": "rwK = 242°",
+          "kind": "true_course",
+          "from": "Verkehrstrennungsgebiet",
+          "to": "rechtwinklig",
+          "rwk": 242,
+          "perpendicular": true,
+          "solution": [
+            {
+              "de": "Ein Verkehrstrennungsgebiet wird möglichst rechtwinklig zur allgemeinen Verkehrsrichtung gequert (Kielrichtung).",
+              "en": "A traffic separation scheme is crossed as nearly as possible at right angles to the general direction of traffic (heading)."
+            },
+            {
+              "de": "Die Richtung der Verkehrsrichtung in der Karte messen und 90° addieren bzw. abziehen.",
+              "en": "Measure the direction of the traffic lanes on the chart and add or subtract 90°."
+            },
+            {
+              "de": "rwK = 242°",
+              "en": "rwK = 242°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              242
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Welcher Zeitraum wird für das Queren des Verkehrstrennungsgebietes Jade Approach voraussichtlich benötigt?",
+          "answer_de": "Zeitraum = 20 min.",
+          "question_en": "How long is crossing the Jade Approach traffic separation scheme expected to take?",
+          "answer_en": "20 min",
+          "kind": "travel_time",
+          "nm": 3.0,
+          "kn": 9,
+          "minutes": 20,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Zeit = Distanz ÷ Geschwindigkeit; in Minuten mal 60.",
+              "en": "Time = distance ÷ speed; multiply by 60 for minutes."
+            },
+            {
+              "de": "Distanz (aus der Karte gemessen): 3 sm, Fahrt: 9 kn",
+              "en": "Distance (measured on the chart): 3 nm, speed: 9 kn"
+            },
+            {
+              "de": "t = 3 ÷ 9 × 60 = 20 min",
+              "en": "t = 3 ÷ 9 × 60 = 20 min"
+            }
+          ],
+          "check": {
+            "type": "minutes",
+            "values": [
+              20
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Nach einiger Zeit wird die Tonne \"TG16/Reede\" querab an Backbord passiert. Beschreiben Sie Farbe, Kennung und Toppzeichen des Schifffahrtszeichens.",
+          "answer_de": "Farbe: rot\nKennung: rotes unterbrochenes Feuer in 3er Gruppen und einer Wiederkehr von 12 Sekunden\nToppzeichen: keines",
+          "question_en": "After a while buoy \"TG16/Reede\" is passed abeam to port. Describe the colour, light character and topmark of this mark.",
+          "answer_en": "Colour: red\nLight: red occulting light in groups of 3, period 12 seconds\nTopmark: none",
+          "kind": "light",
+          "object": "TG16/Reede",
+          "code": "Oc(3).R.12s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Oc(3) R 12s",
+              "en": "Light character on the chart: Oc(3) R 12s"
+            },
+            {
+              "de": "Unterbrochenes Feuer (Oc): länger hell als dunkel, in 3er-Gruppen; Farbe rot; Wiederkehr 12 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "occulting light (Oc): light phase longer than dark phase, in groups of 3; colour red; period 12 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 28.05.2012 at 10:00 a motor boat is in the German Bight. Speed over ground is assumed to be 9 kn.",
+      "notes_en": null,
+      "values": {
+        "mw": 1,
+        "speed_kn": 9
+      }
+    },
+    {
+      "number": 9,
+      "intro_de": "Ein Sportboot befährt am 23.06.2011 nördlich des roten Tonnenstrichs die Elbe seewärts. Gegen 12:00 Uhr wird die Tonne \"14\" nahebei passiert. Die Fahrt über Grund beträgt 5,8 kn.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Wann erreicht das Boot voraussichtlich die Tonne \"6\"?",
+          "answer_de": "Gegen 13:00 Uhr",
+          "question_en": "When is the boat expected to reach buoy \"6\"?",
+          "answer_en": "At about 13:00",
+          "kind": "eta",
+          "start": "12:00",
+          "kn": 5.8,
+          "eta": "13:00",
+          "nm": 5.8,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Distanz zum Ziel in der Karte messen, Fahrzeit berechnen und zur Startzeit addieren.",
+              "en": "Measure the distance to the destination, work out the time and add it to the start time."
+            },
+            {
+              "de": "Distanz ≈ 5,8 sm (aus der Karte); t = 5,8 ÷ 5,8 × 60 ≈ 60 min",
+              "en": "Distance ≈ 5.8 nm (from the chart); t = 5.8 ÷ 5.8 × 60 ≈ 60 min"
+            },
+            {
+              "de": "Ankunft = 12:00 + 60 min = 13:00 Uhr",
+              "en": "Arrival = 12:00 + 60 min = 13:00"
+            }
+          ],
+          "check": {
+            "type": "clock",
+            "values": [
+              "13:00"
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "An der Tonne \"6\" wird das Fahrwasser zügig und ohne die Berufsschifffahrt zu behindern nach Süden gequert. Gut südlich des grünen Tonnenstrichs geht es weiter elbabwärts auf der 5 m Linie, bis gegen 13:50 Uhr Tonne \"1\" an Steuerbord querab ist. Nun wird der rwK 206° auf den Leuchtturm \"Alte Weser\" abgesetzt. Die Ablenkung beträgt +4°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 202°",
+          "question_en": "At buoy \"6\" the fairway is crossed southwards quickly and without impeding commercial shipping. Well south of the line of green buoys the boat continues down the Elbe along the 5 m contour until, at about 13:50, buoy \"1\" is abeam to starboard. Now the true course 206° is set towards lighthouse \"Alte Weser\". Deviation is +4°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 202°",
+          "kind": "compass_course",
+          "rwk": 206,
+          "abl": 4,
+          "mgk": 202,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = 0°, Abl = +4°",
+              "en": "Variation Mw (from chart) = 0°, deviation Abl = +4°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 206° − (0°) − (+4°) = 202°",
+              "en": "MgK = rwK − Mw − Abl = 206° − (0°) − (+4°) = 202°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              202
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "question_de": "Beschreiben Sie das Feuer des Leuchtturms \"Alte Weser\" anhand der Eintragung in der Karte.",
+          "answer_de": "Festfeuer in Sektoren in den Farben weiß, rot und grün. Feuerhöhe 33 m, Tragweiten 23 sm bis 18 sm.",
+          "question_en": "Describe the light of lighthouse \"Alte Weser\" from its entry on the chart.",
+          "answer_en": "Fixed light in sectors, white, red and green. Height of light 33 m, ranges 23 nm to 18 nm.",
+          "kind": "lighthouse",
+          "solution": [
+            {
+              "de": "Die Feuerbeschreibung steht neben dem Leuchtturmsymbol: Kennung, Farben/Sektoren, Feuerhöhe (m) und Nenntragweite (sm).",
+              "en": "The light description is printed next to the lighthouse symbol: character, colours/sectors, height of light (m) and nominal range (nm)."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "question_de": "Was bedeutet der Zusatz \"Horn Mo(AL)60s\"?",
+          "answer_de": "Nebelhorn in den Morsebuchstaben A und L alle 60 Sekunden.",
+          "question_en": "What does the addition \"Horn Mo(AL)60s\" mean?",
+          "answer_en": "Fog horn sounding the Morse letters A and L every 60 seconds.",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Um 14:20 Uhr zeigt das GPS folgende Position: 53° 56,0' N 008° 11,0' E. Tragen Sie diese in die Karte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "At 14:20 the GPS shows the following position: 53° 56.0' N 008° 11.0' E. Plot it on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "position",
+          "solution": [
+            {
+              "de": "Breite am seitlichen, Länge am oberen oder unteren Kartenrand einstellen und mit Kursdreieck oder Zirkel in die Karte übertragen. Den Ort mit Kreis und Uhrzeit markieren.",
+              "en": "Set the latitude on the side border and the longitude on the top or bottom border and transfer both into the chart with the triangle or dividers. Mark the position with a circle and the time."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "question_de": "Die GPS-Position soll anhand von Peilungen kontrolliert werden. Wie lauten von dieser GPS-Position aus die rw-Peilungen auf Leuchtturm \"Neuwerk\" und Leuchtturm \"Alte Weser\"?",
+          "answer_de": "rwP = 096° Neuwerk\nrwP = 205° Alte Weser",
+          "question_en": "The GPS position is to be checked with bearings. From this GPS position, what are the true bearings of lighthouse \"Neuwerk\" and lighthouse \"Alte Weser\"?",
+          "answer_en": "rwP = 096° Neuwerk\nrwP = 205° Alte Weser",
+          "kind": "chart_bearings",
+          "items": [
+            {
+              "object": "Neuwerk",
+              "rwp": 96
+            },
+            {
+              "object": "Alte Weser",
+              "rwp": 205
+            }
+          ],
+          "solution": [
+            {
+              "de": "Von der eingetragenen Position aus die Richtung zu jedem Leuchtturm mit dem Kursdreieck messen. Das ist die rechtweisende Peilung.",
+              "en": "From the plotted position, measure the direction to each lighthouse with the plotting triangle. That is the true bearing."
+            },
+            {
+              "de": "Neuwerk: rwP = 096°",
+              "en": "Neuwerk: rwP = 096°"
+            },
+            {
+              "de": "Alte Weser: rwP = 205°",
+              "en": "Alte Weser: rwP = 205°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              96,
+              205
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Tragen Sie die rw-Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Wie groß ist die Distanz zum Leuchtturm \"Alte Weser\"?",
+          "answer_de": "4,6 sm",
+          "question_en": "What is the distance to lighthouse \"Alte Weser\"?",
+          "answer_en": "4.6 nm",
+          "kind": "distance",
+          "nm": 4.6,
+          "solution": [
+            {
+              "de": "Distanz mit dem Zirkel abgreifen und am seitlichen Kartenrand (Breitenskala) ablesen: 1 Bogenminute Breite = 1 Seemeile. Nie an der Längenskala messen!",
+              "en": "Take the distance with the dividers and read it on the side border (latitude scale): 1 minute of latitude = 1 nautical mile. Never measure on the longitude scale!"
+            },
+            {
+              "de": "Distanz = 4,6 sm",
+              "en": "Distance = 4.6 nm"
+            }
+          ],
+          "check": {
+            "type": "nm",
+            "values": [
+              4.6
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Gegen 15:20 Uhr sind Sie am Leuchtturm \"Alte Weser\". Wie groß ist die Geschwindigkeit der letzten Stunde?",
+          "answer_de": "4,6 kn",
+          "question_en": "At about 15:20 you are at lighthouse \"Alte Weser\". What was the speed during the last hour?",
+          "answer_en": "4.6 kn",
+          "kind": "speed",
+          "start": "14:20",
+          "end": "15:20",
+          "nm": 4.6,
+          "kn": 4.6,
+          "solution": [
+            {
+              "de": "Geschwindigkeit = Distanz ÷ Zeit (in Stunden).",
+              "en": "Speed = distance ÷ time (in hours)."
+            },
+            {
+              "de": "Zeit: 14:20 bis 15:20 = 60 min; Distanz ≈ 4,6 sm (aus der Karte)",
+              "en": "Time: 14:20 to 15:20 = 60 min; distance ≈ 4.6 nm (from the chart)"
+            },
+            {
+              "de": "v = 4,6 ÷ 60 × 60 = 4,6 kn",
+              "en": "v = 4.6 ÷ 60 × 60 = 4.6 kn"
+            }
+          ],
+          "check": {
+            "type": "knots",
+            "values": [
+              4.6
+            ]
+          }
+        }
+      ],
+      "intro_en": "On 23.06.2011 a recreational craft is heading seawards on the Elbe, north of the line of red buoys. At about 12:00 buoy \"14\" is passed close by. Speed over ground is 5.8 kn.",
+      "notes_en": null,
+      "values": {
+        "mw": 0,
+        "speed_kn": 5.8
+      }
+    },
+    {
+      "number": 10,
+      "intro_de": "Ein am 14.07.2010 aus der \"Alten Weser\" auslaufendes Fahrzeug hat den Leuchtturm \"Alte Weser\" passiert und steht um 12:00 Uhr nahebei der Tonne \"A10\".",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position dieser Tonne.",
+          "answer_de": "53° 52,6' N\n008° 06,4' E",
+          "question_en": "Take the geographical position of this buoy from the chart.",
+          "answer_en": "53° 52.6' N\n008° 06.4' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            52.6
+          ],
+          "lon": [
+            8,
+            6.4
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 52,6' N  008° 06,4' E",
+              "en": "53° 52.6' N  008° 06.4' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              52.6
+            ],
+            "lon": [
+              8,
+              6.4
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Beschreiben Sie das Feuer des Leuchtturms \"Alte Weser\".",
+          "answer_de": "Festfeuer mit weißen, roten und grünen Sektoren. Feuerhöhe 33 m, 23 sm bis 18 sm Nenntragweite.",
+          "question_en": "Describe the light of lighthouse \"Alte Weser\".",
+          "answer_en": "Fixed light with white, red and green sectors. Height of light 33 m, nominal range 23 nm to 18 nm.",
+          "kind": "lighthouse",
+          "solution": [
+            {
+              "de": "Die Feuerbeschreibung steht neben dem Leuchtturmsymbol: Kennung, Farben/Sektoren, Feuerhöhe (m) und Nenntragweite (sm).",
+              "en": "The light description is printed next to the lighthouse symbol: character, colours/sectors, height of light (m) and nominal range (nm)."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Vom angegebenen Standort aus wird der Kurs auf die Tonne \"A2\" abgesetzt. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From this position the course is set to buoy \"A2\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 301°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 301°",
+          "kind": "true_course",
+          "from": "A10",
+          "to": "A2",
+          "rwk": 301,
+          "solution": [
+            {
+              "de": "Kurslinie von „A10“ nach „A2“ zeichnen.",
+              "en": "Draw the course line from \"A10\" to \"A2\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 301°",
+              "en": "rwK = 301°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              301
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Die Ablenkung beträgt -4°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 304°",
+          "question_en": "Deviation is –4°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 304°",
+          "kind": "compass_course",
+          "rwk": 301,
+          "abl": -4,
+          "mgk": 304,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = −4°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = −4°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 301° − (+1°) − (−4°) = 304°",
+              "en": "MgK = rwK − Mw − Abl = 301° − (+1°) − (−4°) = 304°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              304
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Um 12:26 Uhr wird die Tonne \"A2\" querab passiert. Wie groß ist die Geschwindigkeit über Grund seit Passage der Tonne \"A10\"?",
+          "answer_de": "12,0 kn",
+          "question_en": "At 12:26 buoy \"A2\" is passed abeam. What has the speed over ground been since passing buoy \"A10\"?",
+          "answer_en": "12.0 kn",
+          "kind": "speed",
+          "start": "12:00",
+          "end": "12:26",
+          "nm": 5.2,
+          "kn": 12.0,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Geschwindigkeit = Distanz ÷ Zeit (in Stunden).",
+              "en": "Speed = distance ÷ time (in hours)."
+            },
+            {
+              "de": "Zeit: 12:00 bis 12:26 = 26 min; Distanz ≈ 5,2 sm (aus der Karte)",
+              "en": "Time: 12:00 to 12:26 = 26 min; distance ≈ 5.2 nm (from the chart)"
+            },
+            {
+              "de": "v = 5,2 ÷ 26 × 60 = 12 kn",
+              "en": "v = 5.2 ÷ 26 × 60 = 12 kn"
+            }
+          ],
+          "check": {
+            "type": "knots",
+            "values": [
+              12.0
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Nach Passage der Tonne \"A2\" wird der Kurs nach Steuerbord geändert und auf die Tonne \"E3\" abgesetzt. Wenig später wird die Tonne \"ST\" passiert. Welche Bedeutung hat dieses Schifffahrtszeichen?",
+          "answer_de": "Kennzeichnung der Zufahrt zu Fahrwassern und der Mitte von Schifffahrtswegen",
+          "question_en": "After passing buoy \"A2\" the course is altered to starboard and set to buoy \"E3\". A little later buoy \"ST\" is passed. What is the meaning of this mark?",
+          "answer_en": "Marks the approach to fairways and the middle of channels",
+          "kind": "mark_meaning",
+          "mark": "safe_water",
+          "solution": [
+            {
+              "de": "Ansteuerungstonne (Mitte-Fahrwasser): rot-weiß senkrecht gestreift, roter Ball, Gleichtakt-, unterbrochenes oder Blinkfeuer weiß bzw. Morse A.",
+              "en": "Safe water mark: red-white vertical stripes, red ball, white isophase, occulting or long-flashing light or Morse A."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Zur Standortbestimmung werden danach mit dem Peilaufsatz am Magnetkompass folgende Schifffahrtszeichen gepeilt:\n\nTonne \"Nordergründe-N\" MgP = 110°\nTonne \"ST\" MgP = 225°\n\nDie Ablenkung für den anliegenden Kurs beträgt +1°, die Mw ist der Seekarte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "rwP = 112° Tonne \"NGN\"\nrwP = 227° Tonne \"ST\"",
+          "question_en": "To fix the position, the following marks are then taken with the bearing ring of the magnetic compass:\n\nBuoy \"Nordergründe-N\" MgP = 110°\nBuoy \"ST\" MgP = 225°\n\nDeviation for the current course is +1°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "rwP = 112° buoy \"NGN\"\nrwP = 227° buoy \"ST\"",
+          "kind": "bearings",
+          "abl": 1,
+          "items": [
+            {
+              "object": "NGN",
+              "mgp": 110,
+              "rwp": 112
+            },
+            {
+              "object": "ST",
+              "mgp": 225,
+              "rwp": 227
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = +1°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = +1°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "NGN: rwP = 110° + (+1°) + (+1°) = 112°",
+              "en": "NGN: rwP = 110° + (+1°) + (+1°) = 112°"
+            },
+            {
+              "de": "ST: rwP = 225° + (+1°) + (+1°) = 227°",
+              "en": "ST: rwP = 225° + (+1°) + (+1°) = 227°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              112,
+              227
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        }
+      ],
+      "intro_en": "A vessel leaving the \"Alte Weser\" on 14.07.2010 has passed lighthouse \"Alte Weser\" and is close to buoy \"A10\" at 12:00.",
+      "notes_en": null,
+      "values": {
+        "mw": 1
+      }
+    },
+    {
+      "number": 11,
+      "intro_de": "Ein Sportboot steht am 05.08.2013 um 09:00 Uhr in der Deutschen Bucht auf Position 53° 54,2' N und 007° 53,8' E und möchte in die Neue Weser einlaufen.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Tragen Sie die Position in die Karte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the position on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "position",
+          "solution": [
+            {
+              "de": "Breite am seitlichen, Länge am oberen oder unteren Kartenrand einstellen und mit Kursdreieck oder Zirkel in die Karte übertragen. Den Ort mit Kreis und Uhrzeit markieren.",
+              "en": "Set the latitude on the side border and the longitude on the top or bottom border and transfer both into the chart with the triangle or dividers. Mark the position with a circle and the time."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "question_de": "Auf der o. g. Position befindet sich ein Eintrag. Was bedeutet diese Eintragung in die Seekarte?",
+          "answer_de": "Kartentiefe 18,5 m",
+          "question_en": "There is an entry at this position. What does this entry on the chart mean?",
+          "answer_en": "Charted depth 18.5 m",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Von der o. g. Position wird der Kurs auf die Tonne \"5\" des Fahrwassers der Neuen Weser abgesetzt. Wie lautet der rwK?",
+          "answer_de": "rwK = 148°",
+          "question_en": "From this position the course is set to buoy \"5\" of the Neue Weser fairway. What is the true course (rwK)?",
+          "answer_en": "rwK = 148°",
+          "kind": "true_course",
+          "from": "Standort",
+          "to": "5",
+          "rwk": 148,
+          "solution": [
+            {
+              "de": "Kurslinie von „Standort“ nach „5“ zeichnen.",
+              "en": "Draw the course line from \"Standort\" to \"5\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 148°",
+              "en": "rwK = 148°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              148
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Tragen Sie den rechtweisenden Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Die Ablenkung beträgt -5°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 152°",
+          "question_en": "Deviation is –5°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 152°",
+          "kind": "compass_course",
+          "rwk": 148,
+          "abl": -5,
+          "mgk": 152,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = −5°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = −5°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 148° − (+1°) − (−5°) = 152°",
+              "en": "MgK = rwK − Mw − Abl = 148° − (+1°) − (−5°) = 152°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              152
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"5\" der Neuen Weser.",
+          "answer_de": "Farbe: grün\nKennung: grünes unterbrochenes Feuer in 2er Gruppen mit einer Wiederkehr von 9 Sekunden\nToppzeichen: keines",
+          "question_en": "Describe the colour, light character and topmark of buoy \"5\" of the Neue Weser.",
+          "answer_en": "Colour: green\nLight: green occulting light in groups of 2, period 9 seconds\nTopmark: none",
+          "kind": "light",
+          "object": "5",
+          "code": "Oc(2).G.9s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Oc(2) G 9s",
+              "en": "Light character on the chart: Oc(2) G 9s"
+            },
+            {
+              "de": "Unterbrochenes Feuer (Oc): länger hell als dunkel, in 2er-Gruppen; Farbe grün; Wiederkehr 9 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "occulting light (Oc): light phase longer than dark phase, in groups of 2; colour green; period 9 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "question_de": "Wann wird die Tonne \"5\" voraussichtlich passiert, wenn das Boot eine Fahrt über Grund von 6 kn macht?",
+          "answer_de": "Um 09:37 Uhr",
+          "question_en": "When will buoy \"5\" be passed if the boat makes 6 kn over ground?",
+          "answer_en": "At 09:37",
+          "kind": "eta",
+          "start": "09:00",
+          "kn": 6,
+          "eta": "09:37",
+          "nm": 3.7,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Distanz zum Ziel in der Karte messen, Fahrzeit berechnen und zur Startzeit addieren.",
+              "en": "Measure the distance to the destination, work out the time and add it to the start time."
+            },
+            {
+              "de": "Distanz ≈ 3,7 sm (aus der Karte); t = 3,7 ÷ 6 × 60 ≈ 37 min",
+              "en": "Distance ≈ 3.7 nm (from the chart); t = 3.7 ÷ 6 × 60 ≈ 37 min"
+            },
+            {
+              "de": "Ankunft = 09:00 + 37 min = 09:37 Uhr",
+              "en": "Arrival = 09:00 + 37 min = 09:37"
+            }
+          ],
+          "check": {
+            "type": "clock",
+            "values": [
+              "09:37"
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Im weiteren Verlauf der Reise werden mit dem Hand-Peilkompass folgende Leuchttürme gepeilt:\n\nLeuchtturm \"Alte Weser\" MgP = 011°\nLeuchtturm \"Tegeler Plate\" MgP = 102°\n\nDie Ablenkung beträgt 0°, die Mw ist der Seekarte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "rwP = 012° LT \"Alte Weser\"\nrwP = 103° LT \"Tegeler Plate\"",
+          "question_en": "Further on, the following lighthouses are taken with the hand bearing compass:\n\nLighthouse \"Alte Weser\" MgP = 011°\nLighthouse \"Tegeler Plate\" MgP = 102°\n\nDeviation is 0°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "rwP = 012° lighthouse \"Alte Weser\"\nrwP = 103° lighthouse \"Tegeler Plate\"",
+          "kind": "bearings",
+          "abl": 0,
+          "items": [
+            {
+              "object": "Leuchtturm Alte Weser",
+              "mgp": 11,
+              "rwp": 12
+            },
+            {
+              "object": "Leuchtturm Tegeler Plate",
+              "mgp": 102,
+              "rwp": 103
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = 0°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = 0°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "Leuchtturm Alte Weser: rwP = 011° + (0°) + (+1°) = 012°",
+              "en": "Leuchtturm Alte Weser: rwP = 011° + (0°) + (+1°) = 012°"
+            },
+            {
+              "de": "Leuchtturm Tegeler Plate: rwP = 102° + (0°) + (+1°) = 103°",
+              "en": "Leuchtturm Tegeler Plate: rwP = 102° + (0°) + (+1°) = 103°"
+            },
+            {
+              "de": "Beim Hand-Peilkompass ist die Ablenkung 0°, weil er abseits der Störfelder des Bootes benutzt wird.",
+              "en": "With a hand bearing compass the deviation is 0° because it is used away from the boat's magnetic fields."
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              12,
+              103
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Tragen Sie die rwP in die Karte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 05.08.2013 at 09:00 a recreational craft is in the German Bight at position 53° 54.2' N and 007° 53.8' E and wants to enter the Neue Weser.",
+      "notes_en": null,
+      "values": {
+        "mw": 1,
+        "speed_kn": 6
+      }
+    },
+    {
+      "number": 12,
+      "intro_de": "Ein am 02.05.2012 aus der Jade auslaufendes Sportboot steht um 08:00 Uhr nahebei der Tonne \"10\" des Wangerooger Fahrwassers und möchte in nördlicher Richtung ablaufen. Die Fahrt über Grund wird mit 8 kn angenommen.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des Bootes.",
+          "answer_de": "53° 50,0' N\n007° 53,4' E",
+          "question_en": "Take the boat's geographical position from the chart.",
+          "answer_en": "53° 50.0' N\n007° 53.4' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            50.0
+          ],
+          "lon": [
+            7,
+            53.4
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 50,0' N  007° 53,4' E",
+              "en": "53° 50.0' N  007° 53.4' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              50.0
+            ],
+            "lon": [
+              7,
+              53.4
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Von der angegebenen Position wird der Kurs auf die Tonne \"ST\" abgesetzt. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From this position the course is set to buoy \"ST\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 007°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 007°",
+          "kind": "true_course",
+          "from": "10",
+          "to": "ST",
+          "rwk": 7,
+          "solution": [
+            {
+              "de": "Kurslinie von „10“ nach „ST“ zeichnen.",
+              "en": "Draw the course line from \"10\" to \"ST\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 007°",
+              "en": "rwK = 007°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              7
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Die Ablenkung beträgt -3°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 009°",
+          "question_en": "Deviation is –3°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 009°",
+          "kind": "compass_course",
+          "rwk": 7,
+          "abl": -3,
+          "mgk": 9,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = −3°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = −3°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 007° − (+1°) − (−3°) = 009°",
+              "en": "MgK = rwK − Mw − Abl = 007° − (+1°) − (−3°) = 009°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              9
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Die Tonne \"4a\" der \"Neuen Weser\" wird passiert. Beschreiben Sie Farbe, Kennung und Toppzeichen des Schifffahrtszeichens.",
+          "answer_de": "Farbe: rot\nKennung: rotes unterbrochenes Funkelfeuer mit 13 Sekunden Wiederkehr\nToppzeichen: roter Zylinder",
+          "question_en": "Buoy \"4a\" of the \"Neue Weser\" is passed. Describe the colour, light character and topmark of this mark.",
+          "answer_en": "Colour: red\nLight: red interrupted quick flashing light, period 13 seconds\nTopmark: red cylinder",
+          "kind": "light",
+          "object": "4a",
+          "code": "IQ.R.13s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: IQ R 13s",
+              "en": "Light character on the chart: IQ R 13s"
+            },
+            {
+              "de": "Unterbrochenes Funkelfeuer (IQ): Funkelfolge, dann Dunkelpause; Farbe rot; Wiederkehr 13 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "interrupted quick light (IQ): quick flashes, then a dark pause; colour red; period 13 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "question_de": "Um 08:30 Uhr wird ein treibendes und leckendes Ölfass nahebei passiert und an die Verkehrszentrale gemeldet. Auf welcher Position befindet sich das Schiff nach Koppelort zu diesem Zeitpunkt?",
+          "answer_de": "53° 54,0' N\n007° 54,3' E",
+          "question_en": "At 08:30 a drifting, leaking oil drum is passed close by and reported to the vessel traffic service. What is the boat's dead-reckoning position at that time?",
+          "answer_en": "53° 54.0' N\n007° 54.3' E",
+          "kind": "dr_position",
+          "start": "08:00",
+          "end": "08:30",
+          "kn": 8,
+          "rwk": 7,
+          "lat": [
+            53,
+            54.0
+          ],
+          "lon": [
+            7,
+            54.3
+          ],
+          "solution": [
+            {
+              "de": "Koppelort: vom letzten bekannten Ort die gefahrene Distanz auf dem Kurs abtragen.",
+              "en": "Dead-reckoning position: from the last known position, mark off the distance run along the course."
+            },
+            {
+              "de": "Zeit 08:00–08:30 = 30 min; Distanz = 8 kn × 30/60 h = 4 sm",
+              "en": "Time 08:00–08:30 = 30 min; distance = 8 kn × 30/60 h = 4 nm"
+            },
+            {
+              "de": "Distanz mit dem Zirkel an der Breitenskala abgreifen und auf dem Kurs 007° abtragen, dann die Position ablesen:",
+              "en": "Take this distance from the latitude scale with the dividers, mark it off along course 007° and read the position:"
+            },
+            {
+              "de": "53° 54,0' N  007° 54,3' E",
+              "en": "53° 54.0' N  007° 54.3' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              54.0
+            ],
+            "lon": [
+              7,
+              54.3
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Um 09:00 Uhr wird die Tonne \"ST\" gepeilt: rwP = 168°. Als Distanz werden 2,0 sm ermittelt. Tragen Sie die rw-Peilung in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "At 09:00 buoy \"ST\" is taken: rwP = 168°. The distance is found to be 2.0 nm. Plot the true bearing on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearing_distance",
+          "solution": [
+            {
+              "de": "Peillinie durch das Objekt ziehen, dann die Distanz mit dem Zirkel an der Breitenskala abgreifen (1' Breite = 1 sm) und vom Objekt aus auf der Peillinie abtragen.",
+              "en": "Draw the bearing line through the object, take the distance with the dividers from the latitude scale (1' of latitude = 1 nm) and mark it off along the line from the object."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Wie lautet die Besteckversetzung?",
+          "answer_de": "BV = 296° -0,7 sm",
+          "question_en": "What is the set and drift?",
+          "answer_en": "BV = 296° – 0.7 nm",
+          "kind": "set_drift",
+          "direction": 296,
+          "nm": 0.7,
+          "solution": [
+            {
+              "de": "Besteckversetzung (BV) = Richtung und Distanz vom Koppelort zum beobachteten (gepeilten) Ort. Sie zeigt, wie Strom und Wind das Boot versetzt haben.",
+              "en": "Set and drift (BV) = direction and distance from the dead-reckoning position to the observed (fixed) position. It shows how current and wind have moved the boat."
+            },
+            {
+              "de": "Richtung mit dem Kursdreieck messen, Distanz mit dem Zirkel an der Breitenskala abgreifen.",
+              "en": "Measure the direction with the plotting triangle and the distance with the dividers on the latitude scale."
+            },
+            {
+              "de": "BV = 296° – 0,7 sm",
+              "en": "BV = 296° – 0.7 nm"
+            }
+          ],
+          "check": {
+            "type": "set_drift",
+            "direction": 296,
+            "nm": 0.7
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Welche Bedeutung hat die Tonne \"ST\"?",
+          "answer_de": "Kennzeichnung der Zufahrt zu Fahrwassern und der Mitte von Schifffahrtswegen (hier: \"Alte Weser\")",
+          "question_en": "What is the meaning of buoy \"ST\"?",
+          "answer_en": "Marks the approach to fairways and the middle of channels (here: \"Alte Weser\")",
+          "kind": "mark_meaning",
+          "mark": "safe_water",
+          "solution": [
+            {
+              "de": "Ansteuerungstonne (Mitte-Fahrwasser): rot-weiß senkrecht gestreift, roter Ball, Gleichtakt-, unterbrochenes oder Blinkfeuer weiß bzw. Morse A.",
+              "en": "Safe water mark: red-white vertical stripes, red ball, white isophase, occulting or long-flashing light or Morse A."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 02.05.2012 at 08:00 a recreational craft leaving the Jade is close to buoy \"10\" of the Wangerooge fairway and wants to head north. Speed over ground is assumed to be 8 kn.",
+      "notes_en": null,
+      "values": {
+        "mw": 1,
+        "speed_kn": 8
+      }
+    },
+    {
+      "number": 13,
+      "intro_de": "Ein aus Helgoland ausgelaufenes Sportboot befindet sich am 02.07.2014 auf dem Weg nach Bremerhaven.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Um 09:00 Uhr werden mit dem Hand-Peilkompass folgende Schifffahrtszeichen gepeilt:\n\nTonne \"Helgoland-O\" MgP = 284°\nTonne \"Düne-S\" MgP = 008°\n\nDie Ablenkung beträgt 0°, die Mw ist der Seekarte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "rwP = 285° Tonne \"Helgoland-O\"\nrwP = 009° Tonne \"Düne-S\"",
+          "question_en": "At 09:00 the following marks are taken with the hand bearing compass:\n\nBuoy \"Helgoland-O\" MgP = 284°\nBuoy \"Düne-S\" MgP = 008°\n\nDeviation is 0°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "rwP = 285° buoy \"Helgoland-O\"\nrwP = 009° buoy \"Düne-S\"",
+          "kind": "bearings",
+          "abl": 0,
+          "items": [
+            {
+              "object": "Helgoland-O",
+              "mgp": 284,
+              "rwp": 285
+            },
+            {
+              "object": "Düne-S",
+              "mgp": 8,
+              "rwp": 9
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = 0°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = 0°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "Helgoland-O: rwP = 284° + (0°) + (+1°) = 285°",
+              "en": "Helgoland-O: rwP = 284° + (0°) + (+1°) = 285°"
+            },
+            {
+              "de": "Düne-S: rwP = 008° + (0°) + (+1°) = 009°",
+              "en": "Düne-S: rwP = 008° + (0°) + (+1°) = 009°"
+            },
+            {
+              "de": "Beim Hand-Peilkompass ist die Ablenkung 0°, weil er abseits der Störfelder des Bootes benutzt wird.",
+              "en": "With a hand bearing compass the deviation is 0° because it is used away from the boat's magnetic fields."
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              285,
+              9
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Entnehmen Sie der Seekarte die geographische Position des durch Peilung ermittelten Standortes.",
+          "answer_de": "54° 08,6' N\n007° 55,7' E",
+          "question_en": "Take the geographical position of the fix from the chart.",
+          "answer_en": "54° 08.6' N\n007° 55.7' E",
+          "kind": "read_position",
+          "lat": [
+            54,
+            8.6
+          ],
+          "lon": [
+            7,
+            55.7
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "54° 08,6' N  007° 55,7' E",
+              "en": "54° 08.6' N  007° 55.7' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              54,
+              8.6
+            ],
+            "lon": [
+              7,
+              55.7
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Welche Bedeutung hat die Tonne \"Helgoland-O\"?",
+          "answer_de": "Ost-Kardinal-Zeichen\nZeigt an, dass die Gefahrenstelle im Osten sicher umfahren werden kann",
+          "question_en": "What is the meaning of buoy \"Helgoland-O\"?",
+          "answer_en": "East cardinal mark\nShows that the danger can be passed safely to the east",
+          "kind": "mark_meaning",
+          "mark": "east_cardinal",
+          "solution": [
+            {
+              "de": "Ost-Kardinalzeichen: Toppzeichen zwei Kegel Spitze voneinander weg, schwarz-gelb-schwarz, Funkelfeuer weiß in 3er Gruppen. Man passiert es im Osten.",
+              "en": "East cardinal mark: two cones base to base pointing away from each other, black-yellow-black, white quick light in groups of 3. Pass it to the east."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Von dem durch Peilung ermittelten Standort wird der Kurs auf die Tonne \"ST\" abgesetzt. Tragen Sie den Kurs in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From the fix the course is set to buoy \"ST\". Plot the course on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 182°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 182°",
+          "kind": "true_course",
+          "from": "Standort",
+          "to": "ST",
+          "rwk": 182,
+          "solution": [
+            {
+              "de": "Kurslinie von „Standort“ nach „ST“ zeichnen.",
+              "en": "Draw the course line from \"Standort\" to \"ST\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 182°",
+              "en": "rwK = 182°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              182
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Die Ablenkung beträgt +4°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 177°",
+          "question_en": "Deviation is +4°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 177°",
+          "kind": "compass_course",
+          "rwk": 182,
+          "abl": 4,
+          "mgk": 177,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = +4°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = +4°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 182° − (+1°) − (+4°) = 177°",
+              "en": "MgK = rwK − Mw − Abl = 182° − (+1°) − (+4°) = 177°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              177
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Um 09:40 Uhr wird die Tonne \"E3\" querab passiert. Wie groß ist die Geschwindigkeit des Bootes seit dem durch Peilung bestimmten Standort?",
+          "answer_de": "FüG = 7,5 kn",
+          "question_en": "At 09:40 buoy \"E3\" is passed abeam. What has the boat's speed been since the fix?",
+          "answer_en": "Speed over ground = 7.5 kn",
+          "kind": "speed",
+          "start": "09:00",
+          "end": "09:40",
+          "nm": 5.0,
+          "kn": 7.5,
+          "derived": true,
+          "solution": [
+            {
+              "de": "Geschwindigkeit = Distanz ÷ Zeit (in Stunden).",
+              "en": "Speed = distance ÷ time (in hours)."
+            },
+            {
+              "de": "Zeit: 09:00 bis 09:40 = 40 min; Distanz ≈ 5 sm (aus der Karte)",
+              "en": "Time: 09:00 to 09:40 = 40 min; distance ≈ 5 nm (from the chart)"
+            },
+            {
+              "de": "v = 5 ÷ 40 × 60 = 7,5 kn",
+              "en": "v = 5 ÷ 40 × 60 = 7.5 kn"
+            }
+          ],
+          "check": {
+            "type": "knots",
+            "values": [
+              7.5
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"ST\".",
+          "answer_de": "Farbe: rot-weiß senkrecht gestreift\nKennung: weißes Gleichtaktfeuer mit 8 Sekunden Wiederkehr\nToppzeichen: roter Ball",
+          "question_en": "Describe the colour, light character and topmark of buoy \"ST\".",
+          "answer_en": "Colour: red-white vertical stripes\nLight: white isophase light, period 8 seconds\nTopmark: red ball",
+          "kind": "light",
+          "object": "ST",
+          "code": "Iso.W.8s",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Iso W 8s",
+              "en": "Light character on the chart: Iso W 8s"
+            },
+            {
+              "de": "Gleichtaktfeuer (Iso): Licht und Dunkel sind gleich lang; Farbe weiß; Wiederkehr 8 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "isophase light (Iso): light and dark phases of equal length; colour white; period 8 s (time for one complete cycle)"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 02.07.2014 a recreational craft that has left Helgoland is on its way to Bremerhaven.",
+      "notes_en": null,
+      "values": {
+        "mw": 1
+      }
+    },
+    {
+      "number": 14,
+      "intro_de": "Ein Sportboot verlässt am frühen Morgen des 31.08.2013 die Insel Neuwerk mit dem Ziel Husum. Die Fahrt über Grund wird mit 6 kn angegeben.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Beschreiben Sie das Feuer des Leuchtturms Neuwerk.",
+          "answer_de": "Blink in 3er Gruppen, weiß-rot-grün. 20 Sekunden Wiederkehr. Feuerträger 38 m hoch. Nenntragweite 16 sm bis 11 sm.",
+          "question_en": "Describe the light of lighthouse Neuwerk.",
+          "answer_en": "Long flashing light in groups of 3, white-red-green. Period 20 seconds. Light structure 38 m high. Nominal range 16 nm to 11 nm.",
+          "kind": "lighthouse",
+          "code": "LFl(3).WRG.20s",
+          "solution": [
+            {
+              "de": "Die Feuerbeschreibung steht neben dem Leuchtturmsymbol: Kennung, Farben/Sektoren, Feuerhöhe (m) und Nenntragweite (sm).",
+              "en": "The light description is printed next to the lighthouse symbol: character, colours/sectors, height of light (m) and nominal range (nm)."
+            },
+            {
+              "de": "Blinkfeuer (LFl): Lichtschein von mindestens 2 Sekunden, in 3er-Gruppen; Farbe weiß-rot-grün; Wiederkehr 20 s (Zeit für einen vollständigen Durchlauf)",
+              "en": "long-flashing light (LFl): flashes of at least 2 seconds, in groups of 3; colour white-red-green; period 20 s (time for one complete cycle)"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "question_de": "Erläutern Sie die Bedeutung folgender Hintergrundfarben in der Seekarte: weiß, hellblau, hellgrün und hellgelb.",
+          "answer_de": "weiß: \"tiefes Wasser\"\nhellblau: \"flaches Wasser\"\nhellgrün: \"Watt\"\nhellgelb: \"Land\"",
+          "question_en": "Explain the meaning of the following background colours on the chart: white, light blue, light green and light yellow.",
+          "answer_en": "white: \"deep water\"\nlight blue: \"shallow water\"\nlight green: \"tidal flats\"\nlight yellow: \"land\"",
+          "kind": "chart_colours",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Gegen 07:00 Uhr wird die Tonne \"13/Neuwerk-Reede1\" nahebei passiert. Entnehmen Sie der Seekarte die geographische Position dieser Tonne.",
+          "answer_de": "53° 58,4' N\n008° 28,2' E",
+          "question_en": "At about 07:00 buoy \"13/Neuwerk-Reede1\" is passed close by. Take the geographical position of this buoy from the chart.",
+          "answer_en": "53° 58.4' N\n008° 28.2' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            58.4
+          ],
+          "lon": [
+            8,
+            28.2
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 58,4' N  008° 28,2' E",
+              "en": "53° 58.4' N  008° 28.2' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              58.4
+            ],
+            "lon": [
+              8,
+              28.2
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Von der Tonne \"13/Neuwerk-Reede1\" aus wird das Fahrwasser zunächst gequert. Dann fährt das Sportboot außerhalb des roten Tonnenstriches elbabwärts zur Tonne \"8\", die es um 07:45 Uhr erreicht. Von der Tonne \"8\" wird der Kurs auf die Tonne \"Norderelbe\" abgesetzt. Tragen Sie den Kurs ab Tonne \"8\" in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "From buoy \"13/Neuwerk-Reede1\" the fairway is first crossed. The boat then runs down the Elbe outside the line of red buoys to buoy \"8\", which it reaches at 07:45. From buoy \"8\" the course is set to buoy \"Norderelbe\". Plot the course from buoy \"8\" on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "course",
+          "solution": [
+            {
+              "de": "Kursdreieck mit der Kante an Start und Ziel legen und die Kurslinie ziehen. Beschriften mit Uhrzeit und rwK.",
+              "en": "Lay the edge of the plotting triangle through start and destination and draw the course line. Label it with time and true course."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "question_de": "Wie lautet der rwK?",
+          "answer_de": "rwK = 038°",
+          "question_en": "What is the true course (rwK)?",
+          "answer_en": "rwK = 038°",
+          "kind": "true_course",
+          "from": "8",
+          "to": "Norderelbe",
+          "rwk": 38,
+          "solution": [
+            {
+              "de": "Kurslinie von „8“ nach „Norderelbe“ zeichnen.",
+              "en": "Draw the course line from \"8\" to \"Norderelbe\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 038°",
+              "en": "rwK = 038°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              38
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Die Ablenkung beträgt +4°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 033°",
+          "question_en": "Deviation is +4°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 033°",
+          "kind": "compass_course",
+          "rwk": 38,
+          "abl": 4,
+          "mgk": 33,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = +1°, Abl = +4°",
+              "en": "Variation Mw (from chart) = +1°, deviation Abl = +4°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 038° − (+1°) − (+4°) = 033°",
+              "en": "MgK = rwK − Mw − Abl = 038° − (+1°) − (+4°) = 033°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              33
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Wie groß ist die Distanz zwischen den Tonnen \"8\" und \"Norderelbe\"?",
+          "answer_de": "3,6 sm",
+          "question_en": "What is the distance between buoys \"8\" and \"Norderelbe\"?",
+          "answer_en": "3.6 nm",
+          "kind": "distance",
+          "nm": 3.6,
+          "solution": [
+            {
+              "de": "Distanz mit dem Zirkel abgreifen und am seitlichen Kartenrand (Breitenskala) ablesen: 1 Bogenminute Breite = 1 Seemeile. Nie an der Längenskala messen!",
+              "en": "Take the distance with the dividers and read it on the side border (latitude scale): 1 minute of latitude = 1 nautical mile. Never measure on the longitude scale!"
+            },
+            {
+              "de": "Distanz = 3,6 sm",
+              "en": "Distance = 3.6 nm"
+            }
+          ],
+          "check": {
+            "type": "nm",
+            "values": [
+              3.6
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "question_de": "Um 08:30 Uhr werden mit dem Peilaufsatz am Magnetkompass die Tonne \"Süderpiep\" in MgP = 020° und die Tonne \"Norderelbe\" in MgP = 098° gepeilt. Die Ablenkung für den anliegenden Kurs beträgt +1°, die Mw ist der Seekarte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "rwP = 022° Süderpiep\nrwP = 100° Norderelbe",
+          "question_en": "At 08:30 buoy \"Süderpiep\" is taken with the bearing ring of the magnetic compass at MgP = 020°, and buoy \"Norderelbe\" at MgP = 098°. Deviation for the current course is +1°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "rwP = 022° Süderpiep\nrwP = 100° Norderelbe",
+          "kind": "bearings",
+          "abl": 1,
+          "items": [
+            {
+              "object": "Süderpiep",
+              "mgp": 20,
+              "rwp": 22
+            },
+            {
+              "object": "Norderelbe",
+              "mgp": 98,
+              "rwp": 100
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = +1°, Mw (laut Karte) = +1°",
+              "en": "Deviation Abl = +1°, variation Mw (from chart) = +1°"
+            },
+            {
+              "de": "Süderpiep: rwP = 020° + (+1°) + (+1°) = 022°",
+              "en": "Süderpiep: rwP = 020° + (+1°) + (+1°) = 022°"
+            },
+            {
+              "de": "Norderelbe: rwP = 098° + (+1°) + (+1°) = 100°",
+              "en": "Norderelbe: rwP = 098° + (+1°) + (+1°) = 100°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              22,
+              100
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "question_de": "Tragen Sie die rechtweisenden Peilungen in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        }
+      ],
+      "intro_en": "Early in the morning of 31.08.2013 a recreational craft leaves the island of Neuwerk bound for Husum. Speed over ground is given as 6 kn.",
+      "notes_en": null,
+      "values": {
+        "mw": 1,
+        "speed_kn": 6
+      }
+    },
+    {
+      "number": 15,
+      "intro_de": "Ein Sportboot läuft am 20.08.2011 von der Weser kommend in die Elbmündung.",
+      "notes_de": "",
+      "steps": [
+        {
+          "number": 1,
+          "question_de": "Um 09:00 Uhr werden folgende Peilungen ermittelt:\n\nLeuchtturm \"Alte Weser\" MgP = 175°\nLeuchtturm \"Neuwerk\" MgP = 085°\n\nDie Ablenkung beträgt +5°, die Mw ist der Seekarte zu entnehmen. Wie lauten die rw-Peilungen?",
+          "answer_de": "rwP = 180° Alte Weser\nrwP = 090° Neuwerk",
+          "question_en": "At 09:00 the following bearings are taken:\n\nLighthouse \"Alte Weser\" MgP = 175°\nLighthouse \"Neuwerk\" MgP = 085°\n\nDeviation is +5°; take the variation from the chart. What are the true bearings?",
+          "answer_en": "rwP = 180° Alte Weser\nrwP = 090° Neuwerk",
+          "kind": "bearings",
+          "abl": 5,
+          "items": [
+            {
+              "object": "Leuchtturm Alte Weser",
+              "mgp": 175,
+              "rwp": 180
+            },
+            {
+              "object": "Leuchtturm Neuwerk",
+              "mgp": 85,
+              "rwp": 90
+            }
+          ],
+          "solution": [
+            {
+              "de": "Magnetkompasspeilung in rechtweisende Peilung umrechnen: rwP = MgP + Abl + Mw (Ost = +, West = −).",
+              "en": "Convert magnetic compass bearings to true bearings: rwP = MgP + Abl + Mw (east = +, west = −)."
+            },
+            {
+              "de": "Abl = +5°, Mw (laut Karte) = 0°",
+              "en": "Deviation Abl = +5°, variation Mw (from chart) = 0°"
+            },
+            {
+              "de": "Leuchtturm Alte Weser: rwP = 175° + (+5°) + (0°) = 180°",
+              "en": "Leuchtturm Alte Weser: rwP = 175° + (+5°) + (0°) = 180°"
+            },
+            {
+              "de": "Leuchtturm Neuwerk: rwP = 085° + (+5°) + (0°) = 090°",
+              "en": "Leuchtturm Neuwerk: rwP = 085° + (+5°) + (0°) = 090°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              180,
+              90
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "question_de": "Tragen Sie die rwP in die Karte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "Plot the true bearings on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "bearings",
+          "solution": [
+            {
+              "de": "Kursdreieck auf die rw-Peilung einstellen, die Kante durch das gepeilte Objekt legen und die Standlinie zum Schiff hin ziehen. Wo sich die Standlinien schneiden, ist der beobachtete Ort.",
+              "en": "Set the plotting triangle to the true bearing, lay its edge through the object and draw the position line towards the boat. Where the lines cross is the observed position."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "question_de": "Geben Sie die ermittelte Position nach geographischer Breite und Länge an.",
+          "answer_de": "53° 54,9' N\n008° 07,6' E",
+          "question_en": "Give the position found as latitude and longitude.",
+          "answer_en": "53° 54.9' N\n008° 07.6' E",
+          "kind": "read_position",
+          "lat": [
+            53,
+            54.9
+          ],
+          "lon": [
+            8,
+            7.6
+          ],
+          "solution": [
+            {
+              "de": "Mit Kursdreieck oder Zirkel die Breite zum seitlichen und die Länge zum oberen oder unteren Kartenrand übertragen und ablesen.",
+              "en": "With the triangle or dividers, transfer the latitude to the side border and the longitude to the top or bottom border and read them off."
+            },
+            {
+              "de": "53° 54,9' N  008° 07,6' E",
+              "en": "53° 54.9' N  008° 07.6' E"
+            }
+          ],
+          "check": {
+            "type": "position",
+            "lat": [
+              53,
+              54.9
+            ],
+            "lon": [
+              8,
+              7.6
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "question_de": "Von dieser Position aus setzen Sie Kurs auf die Tonne \"1\" des Elbe-Fahrwassers. Wie lautet der rwK?",
+          "answer_de": "rwK = 037°",
+          "question_en": "From this position you set course to buoy \"1\" of the Elbe fairway. What is the true course (rwK)?",
+          "answer_en": "rwK = 037°",
+          "kind": "true_course",
+          "from": "Standort",
+          "to": "1",
+          "rwk": 37,
+          "solution": [
+            {
+              "de": "Kurslinie von „Standort“ nach „1“ zeichnen.",
+              "en": "Draw the course line from \"Standort\" to \"1\"."
+            },
+            {
+              "de": "Kursdreieck an die Kurslinie legen, den Mittelpunkt auf einen Meridian (Längenkreis) schieben und den Winkel an der Gradskala ablesen. Auf die Fahrtrichtung achten!",
+              "en": "Lay the plotting triangle along the course line, slide its centre onto a meridian and read the angle on the degree scale. Mind the direction of travel!"
+            },
+            {
+              "de": "rwK = 037°",
+              "en": "rwK = 037°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              37
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "question_de": "Die Ablenkung beträgt -2°, die Mw ist der Seekarte zu entnehmen. Wie lautet der MgK?",
+          "answer_de": "MgK = 039°",
+          "question_en": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?",
+          "answer_en": "MgK = 039°",
+          "kind": "compass_course",
+          "rwk": 37,
+          "abl": -2,
+          "mgk": 39,
+          "solution": [
+            {
+              "de": "Vom rechtweisenden zum Magnetkompasskurs: Missweisung und Ablenkung werden abgezogen (Ost = +, West = −).",
+              "en": "From true to magnetic compass course: subtract variation and deviation (east = +, west = −)."
+            },
+            {
+              "de": "Mw (laut Karte) = 0°, Abl = −2°",
+              "en": "Variation Mw (from chart) = 0°, deviation Abl = −2°"
+            },
+            {
+              "de": "MgK = rwK − Mw − Abl = 037° − (0°) − (−2°) = 039°",
+              "en": "MgK = rwK − Mw − Abl = 037° − (0°) − (−2°) = 039°"
+            }
+          ],
+          "check": {
+            "type": "degrees",
+            "values": [
+              39
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "question_de": "Wie groß ist die Distanz zur Tonne \"1\"?",
+          "answer_de": "5,4 sm",
+          "question_en": "What is the distance to buoy \"1\"?",
+          "answer_en": "5.4 nm",
+          "kind": "distance",
+          "nm": 5.4,
+          "solution": [
+            {
+              "de": "Distanz mit dem Zirkel abgreifen und am seitlichen Kartenrand (Breitenskala) ablesen: 1 Bogenminute Breite = 1 Seemeile. Nie an der Längenskala messen!",
+              "en": "Take the distance with the dividers and read it on the side border (latitude scale): 1 minute of latitude = 1 nautical mile. Never measure on the longitude scale!"
+            },
+            {
+              "de": "Distanz = 5,4 sm",
+              "en": "Distance = 5.4 nm"
+            }
+          ],
+          "check": {
+            "type": "nm",
+            "values": [
+              5.4
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "question_de": "Nach 1,8 sm kreuzt Ihr Kurs eine Eintragung in der Seekarte, die mit \"Obstn\" beschriftet ist. Was bedeutet diese Eintragung in der Seekarte?",
+          "answer_de": "Schifffahrtshindernis mit einer Kartentiefe von 9,7 m",
+          "question_en": "After 1.8 nm your course crosses an entry on the chart labelled \"Obstn\". What does this entry on the chart mean?",
+          "answer_en": "Obstruction with a charted depth of 9.7 m",
+          "kind": "chart_entry",
+          "solution": [
+            {
+              "de": "Die Bedeutung aller Zeichen und Abkürzungen in der Seekarte steht im Heft „Karte 1/INT 1“ (Zeichen, Abkürzungen, Begriffe).",
+              "en": "The meaning of all chart symbols and abbreviations is explained in \"Chart 1/INT 1\" (symbols, abbreviations, terms)."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "question_de": "Beschreiben Sie Farbe, Kennung und Toppzeichen der Tonne \"1\" des Elbe-Fahrwassers.",
+          "answer_de": "Farbe: grün\nKennung: grünes Funkelfeuer\nToppzeichen: grüner Kegel Spitze oben",
+          "question_en": "Describe the colour, light character and topmark of buoy \"1\" of the Elbe fairway.",
+          "answer_en": "Colour: green\nLight: green quick flashing light\nTopmark: green cone, point up",
+          "kind": "light",
+          "object": "1",
+          "code": "Q.G",
+          "solution": [
+            {
+              "de": "Kennung laut Karte: Q G",
+              "en": "Light character on the chart: Q G"
+            },
+            {
+              "de": "Funkelfeuer (Q): 50–60 Blitze pro Minute; Farbe grün",
+              "en": "quick flashing light (Q): 50–60 flashes per minute; colour green"
+            },
+            {
+              "de": "Farbe und Toppzeichen stehen als Abkürzung am Tonnensymbol (Erklärung in „Karte 1/INT 1“).",
+              "en": "Colour and topmark are given as abbreviations next to the buoy symbol (explained in \"Chart 1/INT 1\")."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "question_de": "Die Revierzentrale \"Cuxhaven Elbe Traffic\" meldet drei über Bord gefallene Container in Position 53° 59,6' N und 008° 23,2 E. Tragen Sie die Position in die Seekarte ein.",
+          "answer_de": "Siehe Karte",
+          "question_en": "The vessel traffic service \"Cuxhaven Elbe Traffic\" reports three containers lost overboard at position 53° 59.6' N and 008° 23.2' E. Plot the position on the chart.",
+          "answer_en": "See chart",
+          "kind": "plot",
+          "what": "position",
+          "solution": [
+            {
+              "de": "Breite am seitlichen, Länge am oberen oder unteren Kartenrand einstellen und mit Kursdreieck oder Zirkel in die Karte übertragen. Den Ort mit Kreis und Uhrzeit markieren.",
+              "en": "Set the latitude on the side border and the longitude on the top or bottom border and transfer both into the chart with the triangle or dividers. Mark the position with a circle and the time."
+            }
+          ]
+        }
+      ],
+      "intro_en": "On 20.08.2011 a recreational craft coming from the Weser enters the mouth of the Elbe.",
+      "notes_en": null,
+      "values": {
+        "mw": 0
+      }
+    }
+  ]
+}

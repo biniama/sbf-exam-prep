@@ -37,6 +37,7 @@ import ai.biniam.sbfexamprep.ui.home.HomeScreen
 import ai.biniam.sbfexamprep.ui.onboarding.OnboardingScreen
 import ai.biniam.sbfexamprep.ui.quiz.QuizScreen
 import ai.biniam.sbfexamprep.ui.quiz.QuizSetupScreen
+import ai.biniam.sbfexamprep.ui.navigation.NavigationHost
 import ai.biniam.sbfexamprep.ui.quiz.QuizViewModel
 import ai.biniam.sbfexamprep.ui.saved.SavedScreen
 import ai.biniam.sbfexamprep.ui.settings.SettingsScreen
@@ -88,6 +89,11 @@ fun SbfApp(app: SbfApplication) {
             QuizScreen(quiz)
             return@CompositionLocalProvider
         }
+        var navigationOpen by rememberSaveable { mutableStateOf(false) }
+        if (navigationOpen) {
+            NavigationHost(onClose = { navigationOpen = false })
+            return@CompositionLocalProvider
+        }
 
         BackHandler(enabled = tab != AppTab.HOME) { tab = AppTab.HOME }
         NavigationSuiteScaffold(
@@ -104,7 +110,7 @@ fun SbfApp(app: SbfApplication) {
         ) {
             holder.SaveableStateProvider(tab.name) {
                 when (tab) {
-                    AppTab.HOME -> HomeScreen(quiz, onBrowse = { tab = AppTab.BROWSE })
+                    AppTab.HOME -> HomeScreen(quiz, onBrowse = { tab = AppTab.BROWSE }, onNavigation = { navigationOpen = true })
                     AppTab.BROWSE -> BrowseScreen()
                     AppTab.QUIZ -> QuizSetupScreen(quiz)
                     AppTab.SAVED -> SavedScreen(quiz)

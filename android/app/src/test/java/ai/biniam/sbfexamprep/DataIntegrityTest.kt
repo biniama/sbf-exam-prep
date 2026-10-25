@@ -1,6 +1,7 @@
 package ai.biniam.sbfexamprep
 
 import ai.biniam.sbfexamprep.data.ExamType
+import ai.biniam.sbfexamprep.data.NavigationCatalog
 import ai.biniam.sbfexamprep.data.QuestionRepository
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -22,6 +23,19 @@ class DataIntegrityTest {
         assertEquals(72, store.specificQuestions(ExamType.SHARED).size)
         assertEquals(store.specificQuestions(ExamType.SHARED).size + store.specificQuestions(ExamType.BINNEN).size,
                      store.questions(ExamType.BINNEN).size)
+    }
+
+    @Test fun navigationTasksAreComplete() {
+        val nav = File(shared, NavigationCatalog.ASSET_NAME).inputStream().use { NavigationCatalog.load(it) }
+        assertEquals((1..15).toList(), nav.tasks.map { it.number })
+        nav.tasks.forEach { task ->
+            assertEquals("task ${task.number}", (1..9).toList(), task.steps.map { it.number })
+            task.steps.forEach { step ->
+                assertNotNull("task ${task.number}.${step.number}", step.questionEn)
+                assertTrue("task ${task.number}.${step.number} has no solution", step.solution.isNotEmpty())
+            }
+        }
+        assertEquals(8, nav.chartExcerpts.size)
     }
 
     @Test fun sailingQuestionsAreComplete() {

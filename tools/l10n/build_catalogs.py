@@ -63,6 +63,29 @@ DE = {
     "Step-by-step plot of each solution with narration.": "Schrittweise Lösungsskizze mit Vorlesefunktion.",
     "Links to videos about working on the chart.": "Links zu Videos über die Arbeit mit der Seekarte.",
 
+    # Navigation tasks
+    "Navigation tasks · Sea": "Navigationsaufgaben · See",
+    "15 official chart tasks with worked solutions": "15 amtliche Kartenaufgaben mit Lösungsweg",
+    "Terms and abbreviations": "Begriffe und Abkürzungen",
+    "Tasks": "Aufgaben",
+    "Task %lld": "Aufgabe %lld",
+    "Source: ELWIS navigation tasks, status August 2023. English translations are unofficial.":
+        "Quelle: ELWIS-Navigationsaufgaben, Stand August 2023. Die englischen Übersetzungen sind inoffiziell.",
+    "You need practice chart D49": "Du brauchst die Übungskarte D49",
+    "In the exam the 9 navigation questions are solved on paper chart D49 with a plotting triangle and dividers. The app explains every step and the arithmetic.":
+        "In der Prüfung werden die 9 Navigationsfragen auf der Papierkarte D49 mit Kursdreieck und Zirkel gelöst. Die App erklärt jeden Schritt und die Rechnung.",
+    "Variation (Mw) on this chart excerpt: %@": "Missweisung (Mw) in diesem Kartenausschnitt: %@",
+    "Show all answers": "Alle Lösungen zeigen",
+    "Hide all answers": "Alle Lösungen ausblenden",
+    "Chart work: draw this on chart D49.": "Kartenarbeit: in der Karte D49 einzeichnen.",
+    "Official result": "Amtliches Ergebnis",
+    "How to solve it": "Lösungsweg",
+    "Show solution": "Lösung zeigen",
+    "Hide solution": "Lösung ausblenden",
+    "Signs: east variation and deviation are positive (+), west negative (−).":
+        "Vorzeichen: östliche Missweisung und Ablenkung sind positiv (+), westliche negativ (−).",
+    "Exam question types": "Fragetypen in der Prüfung",
+
     # Exam formats & licence
     "Inland · motor": "Binnen · Motor",
     "Inland · sail": "Binnen · Segel",

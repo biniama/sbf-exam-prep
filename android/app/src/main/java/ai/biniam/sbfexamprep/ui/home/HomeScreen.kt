@@ -68,6 +68,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
+import androidx.compose.material.icons.filled.Map
+import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.data.QuizRecord
 import ai.biniam.sbfexamprep.ui.LocalApp
@@ -97,10 +99,11 @@ import java.time.LocalDate
 import java.time.format.TextStyle
 
 @Composable
-fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit) {
+fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit, onNavigation: () -> Unit = {}) {
     val app = LocalApp.current
     val progress by app.progressRepository.progress.collectAsStateWithLifecycle()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
+    val flags by app.featureFlags.enabled.collectAsStateWithLifecycle()
     val now = System.currentTimeMillis()
     val today = LocalDate.now()
     val due = progress.dueCount(now)
@@ -122,7 +125,8 @@ fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit) {
     }
     val streak = @Composable { StreakSection(progress.dailyStreak(today), progress.last7Days(today)) }
     val actions = @Composable {
-        QuickActions(settings.quizCount, settings.licenceGoal.examFormats, progress.wrongAnswerCount, quiz, onBrowse)
+        QuickActions(settings.quizCount, settings.licenceGoal.examFormats, progress.wrongAnswerCount, quiz, onBrowse,
+                     if (FeatureFlag.NAVIGATION_TASKS in flags) onNavigation else null)
     }
     var editLicence by rememberSaveable { mutableStateOf(false) }
     if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
@@ -262,7 +266,8 @@ private fun StreakSection(streak: Int, days: List<Pair<LocalDate, Boolean>>) {
 }
 
 @Composable
-private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit) {
+private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit,
+                         onNavigation: (() -> Unit)?) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
         SectionHeader(stringResource(R.string.quick_start), Icons.Filled.Bolt)
         ActionRow(Icons.Filled.PlayCircle, Brand.navy, stringResource(R.string.quick_quiz),
@@ -274,6 +279,10 @@ private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: In
                       stringResource(R.string.exam_sim_type, examFormatTitle(format)), examSummary(ExamRules(format))) {
                 quiz.setupExam(format)
             }
+        }
+        if (onNavigation != null) {
+            ActionRow(Icons.Filled.Map, Brand.oceanTeal, stringResource(R.string.nav_home_title),
+                      stringResource(R.string.nav_home_sub), onNavigation)
         }
         if (mistakes > 0) {
             ActionRow(Icons.Filled.Replay, Sbf.colors.error, stringResource(R.string.practise_mistakes),

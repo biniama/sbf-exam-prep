@@ -362,6 +362,16 @@
         }
       }
     },
+    "15 official chart tasks with worked solutions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "15 amtliche Kartenaufgaben mit Lösungsweg"
+          }
+        }
+      }
+    },
     "A local notification on this device. No data is sent anywhere.": {
       "localizations": {
         "de": {
@@ -622,6 +632,16 @@
         }
       }
     },
+    "Chart work: draw this on chart D49.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kartenarbeit: in der Karte D49 einzeichnen."
+          }
+        }
+      }
+    },
     "Choose a question from the list to study it.": {
       "localizations": {
         "de": {
@@ -872,6 +892,16 @@
         }
       }
     },
+    "Exam question types": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragetypen in der Prüfung"
+          }
+        }
+      }
+    },
     "Exam questions are always shown in German, as in the official exam. The app language can be changed in the system settings.": {
       "localizations": {
         "de": {
@@ -1082,12 +1112,42 @@
         }
       }
     },
+    "Hide all answers": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Lösungen ausblenden"
+          }
+        }
+      }
+    },
+    "Hide solution": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösung ausblenden"
+          }
+        }
+      }
+    },
     "Home": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Start"
+          }
+        }
+      }
+    },
+    "How to solve it": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsweg"
           }
         }
       }
@@ -1118,6 +1178,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Die Abbildungen wurden für diese App nach den amtlichen Vorlagen gezeichnet. Die englischen Übersetzungen sind inoffizielle Lernhilfen; in der Prüfung gilt nur der deutsche Text."
+          }
+        }
+      }
+    },
+    "In the exam the 9 navigation questions are solved on paper chart D49 with a plotting triangle and dividers. The app explains every step and the arithmetic.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In der Prüfung werden die 9 Navigationsfragen auf der Papierkarte D49 mit Kursdreieck und Zirkel gelöst. Die App erklärt jeden Schritt und die Rechnung."
           }
         }
       }
@@ -1342,6 +1412,16 @@
         }
       }
     },
+    "Navigation tasks · Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgaben · See"
+          }
+        }
+      }
+    },
     "New exam simulation": {
       "localizations": {
         "de": {
@@ -1508,6 +1588,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Offizielle Fragen"
+          }
+        }
+      }
+    },
+    "Official result": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amtliches Ergebnis"
           }
         }
       }
@@ -2282,6 +2372,16 @@
         }
       }
     },
+    "Show all answers": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Lösungen zeigen"
+          }
+        }
+      }
+    },
     "Show correct answer": {
       "localizations": {
         "de": {
@@ -2312,12 +2412,32 @@
         }
       }
     },
+    "Show solution": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösung zeigen"
+          }
+        }
+      }
+    },
     "Signs, lights & sound signals": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Zeichen, Lichter & Schallsignale"
+          }
+        }
+      }
+    },
+    "Signs: east variation and deviation are positive (+), west negative (−).": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorzeichen: östliche Missweisung und Ablenkung sind positiv (+), westliche negativ (−)."
           }
         }
       }
@@ -2348,6 +2468,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Schallsignale zum Anhören"
+          }
+        }
+      }
+    },
+    "Source: ELWIS navigation tasks, status August 2023. English translations are unofficial.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelle: ELWIS-Navigationsaufgaben, Stand August 2023. Die englischen Übersetzungen sind inoffiziell."
           }
         }
       }
@@ -2592,12 +2722,42 @@
         }
       }
     },
+    "Task %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgabe %lld"
+          }
+        }
+      }
+    },
+    "Tasks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgaben"
+          }
+        }
+      }
+    },
     "Technique videos": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Technik-Videos"
+          }
+        }
+      }
+    },
+    "Terms and abbreviations": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begriffe und Abkürzungen"
           }
         }
       }
@@ -2852,6 +3012,16 @@
         }
       }
     },
+    "Variation (Mw) on this chart excerpt: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Missweisung (Mw) in diesem Kartenausschnitt: %@"
+          }
+        }
+      }
+    },
     "Version %@": {
       "localizations": {
         "de": {
@@ -2888,6 +3058,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Falsch"
+          }
+        }
+      }
+    },
+    "You need practice chart D49": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du brauchst die Übungskarte D49"
           }
         }
       }

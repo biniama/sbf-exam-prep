@@ -58,6 +58,8 @@ add_tree(main.new_group('SBFTrainer', 'SBFTrainer'), File.join(ROOT, 'SBFTrainer
 shared = main.new_group('shared', 'shared')
 questions = shared.new_file('sbf_exam_questions.json')
 app.resources_build_phase.add_file_reference(questions)
+navigation = shared.new_file('navigation_tasks.json')
+app.resources_build_phase.add_file_reference(navigation)
 assets = shared.new_file('assets')
 assets.last_known_file_type = 'folder'          # folder reference keeps assets/<exam>/<id>.png
 app.resources_build_phase.add_file_reference(assets)

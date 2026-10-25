@@ -4,10 +4,12 @@ struct HomeView: View {
     @Binding var selectedTab: AppTab
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var flags: FeatureFlags
     @Environment(\.horizontalSizeClass) private var hSize
     @StateObject private var quizVM = QuizViewModel()
     @State private var showingQuiz = false
     @State private var showingLicence = false
+    @State private var showingNavigation = false
 
     init(selectedTab: Binding<AppTab> = .constant(.home)) {
         _selectedTab = selectedTab
@@ -33,6 +35,7 @@ struct HomeView: View {
             .fullScreenCover(isPresented: $showingQuiz) {
                 NavigationStack { QuizView(vm: quizVM) }
             }
+            .navigationDestination(isPresented: $showingNavigation) { NavigationTasksView() }
             .sheet(isPresented: $showingLicence) {
                 NavigationStack { LicenceSettingsView(isSheet: true) }
             }
@@ -275,6 +278,12 @@ struct HomeView: View {
                                    color: format == .see ? .navyLight : .oceanTeal) {
                         quizVM.setupExam(format: format)
                         showingQuiz = true
+                    }
+                }
+                if flags.isOn(.navigationTasks) {
+                    quickActionRow(icon: "map.fill", title: Text("Navigation tasks · Sea"),
+                                   subtitle: Text("15 official chart tasks with worked solutions"), color: .oceanTeal) {
+                        showingNavigation = true
                     }
                 }
                 if progress.wrongAnswerCount > 0 {

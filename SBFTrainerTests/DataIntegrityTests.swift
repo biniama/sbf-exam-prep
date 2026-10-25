@@ -101,3 +101,22 @@ final class DataIntegrityTests: XCTestCase {
         XCTAssertEqual(strings["Settings"], "Einstellungen")
     }
 }
+
+@MainActor
+final class NavigationDataTests: XCTestCase {
+    func testNavigationCatalogLoads() throws {
+        let catalog = try XCTUnwrap(NavigationStore.shared.catalog, NavigationStore.shared.loadError ?? "")
+        XCTAssertEqual(catalog.tasks.map(\.number), Array(1...15))
+        for task in catalog.tasks {
+            XCTAssertEqual(task.steps.map(\.number), Array(1...9), "task \(task.number)")
+            XCTAssertNotNil(task.introEN, "task \(task.number)")
+            for step in task.steps {
+                XCTAssertNotNil(step.questionEN, "task \(task.number).\(step.number)")
+                XCTAssertNotNil(step.answerEN, "task \(task.number).\(step.number)")
+                XCTAssertFalse(step.solution.isEmpty, "task \(task.number).\(step.number) has no worked solution")
+            }
+        }
+        XCTAssertEqual(catalog.chartExcerpts.count, 8)
+        XCTAssertEqual(catalog.questionTypes.map(\.number), Array(286...300))
+    }
+}

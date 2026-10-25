@@ -652,6 +652,16 @@
         }
       }
     },
+    "Back": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurück"
+          }
+        }
+      }
+    },
     "Basic": {
       "localizations": {
         "de": {
@@ -968,6 +978,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zum Vergrößern doppeltippen"
+          }
+        }
+      }
+    },
+    "Drawn from the official results – not a reproduction of chart D49.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus den amtlichen Ergebnissen gezeichnet – keine Wiedergabe der Karte D49."
           }
         }
       }
@@ -1812,6 +1832,16 @@
         }
       }
     },
+    "Next": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiter"
+          }
+        }
+      }
+    },
     "Next exercise": {
       "localizations": {
         "de": {
@@ -2098,6 +2128,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bestanden"
+          }
+        }
+      }
+    },
+    "Pause": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "Play": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abspielen"
           }
         }
       }
@@ -2438,6 +2488,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "App bewerten"
+          }
+        }
+      }
+    },
+    "Read aloud": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorlesen"
           }
         }
       }
@@ -2872,6 +2932,26 @@
         }
       }
     },
+    "Solution diagram": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsskizze"
+          }
+        }
+      }
+    },
+    "Solution diagram, step by step": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsskizze, Schritt für Schritt"
+          }
+        }
+      }
+    },
     "Solution diagrams": {
       "localizations": {
         "de": {
@@ -3072,6 +3152,16 @@
         }
       }
     },
+    "Step %lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schritt %lld von %lld"
+          }
+        }
+      }
+    },
     "Step-by-step plot of each solution with narration.": {
       "localizations": {
         "de": {
@@ -3178,6 +3268,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Aufgabe %lld"
+          }
+        }
+      }
+    },
+    "Task %lld · diagram": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgabe %lld · Skizze"
           }
         }
       }
@@ -3768,6 +3868,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "© 2026 SBF Exam Prep"
+          }
+        }
+      }
+    },
+    "· Question %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "· Frage %lld"
           }
         }
       }

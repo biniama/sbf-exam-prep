@@ -151,6 +151,20 @@ DE = {
     "Interrupted quick: quick flashes, then a pause": "Unterbrochenes Funkelfeuer: Funkelfolge, dann Pause",
     "Morse code letter": "Morsebuchstabe",
 
+    # Solution diagrams
+    "Solution diagram, step by step": "Lösungsskizze, Schritt für Schritt",
+    "Solution diagram": "Lösungsskizze",
+    "Task %lld · diagram": "Aufgabe %lld · Skizze",
+    "Step %lld of %lld": "Schritt %lld von %lld",
+    "· Question %lld": "· Frage %lld",
+    "Read aloud": "Vorlesen",
+    "Back": "Zurück",
+    "Next": "Weiter",
+    "Play": "Abspielen",
+    "Pause": "Pause",
+    "Drawn from the official results – not a reproduction of chart D49.":
+        "Aus den amtlichen Ergebnissen gezeichnet – keine Wiedergabe der Karte D49.",
+
     # Exam formats & licence
     "Inland · motor": "Binnen · Motor",
     "Inland · sail": "Binnen · Segel",

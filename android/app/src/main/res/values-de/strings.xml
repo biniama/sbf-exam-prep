@@ -41,6 +41,17 @@
     <string name="data">Daten</string>
     <string name="day_streak">Tage in Folge</string>
     <string name="default_quiz_length">Standardlänge eines Quiz</string>
+    <string name="diagram_a11y">Lösungsskizze</string>
+    <string name="diagram_back">Zurück</string>
+    <string name="diagram_disclaimer">Aus den amtlichen Ergebnissen gezeichnet – keine Wiedergabe der Karte D49.</string>
+    <string name="diagram_link">Lösungsskizze, Schritt für Schritt</string>
+    <string name="diagram_next">Weiter</string>
+    <string name="diagram_pause">Pause</string>
+    <string name="diagram_play">Abspielen</string>
+    <string name="diagram_question">· Frage %d</string>
+    <string name="diagram_read_aloud">Vorlesen</string>
+    <string name="diagram_step">Schritt %1$d von %2$d</string>
+    <string name="diagram_title">Aufgabe %d · Skizze</string>
     <string name="done">Fertig</string>
     <string name="drill_answer">Antwort</string>
     <string name="drill_arrival">Ankunftszeit</string>

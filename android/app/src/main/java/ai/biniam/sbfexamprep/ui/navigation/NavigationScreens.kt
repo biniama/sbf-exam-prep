@@ -24,6 +24,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Map
+import androidx.compose.material.icons.filled.Route
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -38,6 +39,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -69,6 +71,7 @@ private sealed interface NavScreen {
     data class Task(val number: Int) : NavScreen
     data object Glossary : NavScreen
     data object Drills : NavScreen
+    data class Diagram(val number: Int) : NavScreen
 }
 
 /** [start]: "list" (task list) or "drills". Going back from the start screen closes the feature. */
@@ -79,16 +82,29 @@ fun NavigationHost(start: String = "list", onClose: () -> Unit) {
         screenKey == "glossary" -> NavScreen.Glossary
         screenKey == "drills" -> NavScreen.Drills
         screenKey.startsWith("task:") -> NavScreen.Task(screenKey.removePrefix("task:").toInt())
+        screenKey.startsWith("diagram:") -> NavScreen.Diagram(screenKey.removePrefix("diagram:").toInt())
         else -> NavScreen.List
     }
-    val back = { if (screenKey == start) onClose() else screenKey = "list" }
+    val back = {
+        when {
+            screenKey == start -> onClose()
+            screen is NavScreen.Diagram -> screenKey = "task:${screen.number}"
+            else -> screenKey = "list"
+        }
+    }
     BackHandler(onBack = back)
     when (screen) {
         NavScreen.List -> NavigationTaskList(onBack = onClose, onTask = { screenKey = "task:$it" },
                                              onGlossary = { screenKey = "glossary" }, onDrills = { screenKey = "drills" })
-        is NavScreen.Task -> NavigationTaskScreen(screen.number, onBack = back)
+        is NavScreen.Task -> NavigationTaskScreen(screen.number, onBack = back, onDiagram = { screenKey = "diagram:${screen.number}" })
         NavScreen.Glossary -> NavigationGlossary(onBack = back)
         NavScreen.Drills -> NavigationDrillsScreen(onBack = back)
+        is NavScreen.Diagram -> {
+            val task = LocalApp.current.navigation.task(screen.number)
+            val diagram = task?.diagram
+            if (task != null && diagram != null) NavigationDiagramScreen(task, diagram, onBack = back)
+            else LaunchedEffect(Unit) { back() }
+        }
     }
 }
 
@@ -168,7 +184,7 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
 }
 
 @Composable
-private fun NavigationTaskScreen(number: Int, onBack: () -> Unit) {
+private fun NavigationTaskScreen(number: Int, onBack: () -> Unit, onDiagram: () -> Unit) {
     val app = LocalApp.current
     val task = app.navigation.task(number) ?: return onBack()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
@@ -177,6 +193,16 @@ private fun NavigationTaskScreen(number: Int, onBack: () -> Unit) {
     NavScaffold(stringResource(R.string.nav_task_n, number), onBack) {
         Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(Brand.navyLight.copy(alpha = 0.10f)).padding(16.dp)) {
             Bilingual(task.introDe, task.introEn, settings.showEnglish)
+        }
+        if (FeatureFlag.NAVIGATION_DIAGRAMS in flags && task.diagram != null) {
+            Row(Modifier.fillMaxWidth().cardStyle().clickable(onClick = onDiagram).padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Filled.Route, null, tint = Brand.navyLight)
+                Spacer(Modifier.width(14.dp))
+                Text(stringResource(R.string.diagram_link), Modifier.weight(1f), style = MaterialTheme.typography.titleSmall,
+                     fontWeight = FontWeight.SemiBold, color = Sbf.colors.ink)
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
+            }
         }
         task.values.mw?.let { mw ->
             Text(stringResource(R.string.nav_variation, signedDegrees(mw)), style = MaterialTheme.typography.bodySmall,

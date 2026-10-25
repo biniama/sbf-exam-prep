@@ -61,6 +61,8 @@ data class NavigationTask(
     @SerialName("notes_en") val notesEn: String? = null,
     val values: TaskValues = TaskValues(),
     val steps: List<NavigationStep>,
+    /** Step-by-step solution diagram (null where the official results do not fix the geometry). */
+    val diagram: NavigationDiagram? = null,
 ) {
     @Serializable
     data class TaskValues(val mw: Double? = null, @SerialName("speed_kn") val speedKn: Double? = null)
@@ -86,6 +88,43 @@ data class NavigationStep(
 @Serializable
 data class SolutionLine(val de: String, val en: String) {
     fun text(german: Boolean) = if (german) de else en
+}
+
+/** Geometry in nautical miles around the diagram centre; see tools/data/navigation_diagrams.py. */
+@Serializable
+data class NavigationDiagram(
+    val grid: Grid,
+    val width: Double,
+    val height: Double,
+    val elements: List<Element>,
+    val frames: List<Frame>,
+) {
+    /** [k] = cos(latitude): nautical miles per minute of longitude. */
+    @Serializable
+    data class Grid(val lat: Double, val lon: Double, val k: Double)
+
+    @Serializable
+    data class Element(
+        val id: String,
+        val type: String,
+        val style: String,
+        val label: String? = null,
+        @SerialName("label_en") val labelEn: String? = null,
+        val sub: String? = null,
+        val x: Double? = null,
+        val y: Double? = null,
+        val x1: Double? = null,
+        val y1: Double? = null,
+        val x2: Double? = null,
+        val y2: Double? = null,
+    ) {
+        fun label(german: Boolean) = if (german) label else labelEn ?: label
+    }
+
+    @Serializable
+    data class Frame(val show: List<String>, val de: String, val en: String, val step: Int? = null) {
+        fun text(german: Boolean) = if (german) de else en
+    }
 }
 
 /** How a typed answer is checked; positions as [degrees, minutes]. Values are numbers or clock times. */

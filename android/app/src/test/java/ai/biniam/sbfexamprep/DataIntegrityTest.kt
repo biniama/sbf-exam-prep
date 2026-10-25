@@ -38,6 +38,24 @@ class DataIntegrityTest {
         assertEquals(8, nav.chartExcerpts.size)
     }
 
+    @Test fun navigationDiagramsAreConsistent() {
+        val nav = File(shared, NavigationCatalog.ASSET_NAME).inputStream().use { NavigationCatalog.load(it) }
+        // Task 14: the position of buoy 8 is neither given nor derivable from the official results.
+        assertEquals((1..15).filter { it != 14 }, nav.tasks.filter { it.diagram != null }.map { it.number })
+        nav.tasks.forEach { task ->
+            val diagram = task.diagram ?: return@forEach
+            val ids = diagram.elements.map { it.id }
+            assertEquals("task ${task.number}: duplicate ids", ids.size, ids.toSet().size)
+            assertTrue("task ${task.number}: no frames", diagram.frames.isNotEmpty())
+            diagram.frames.forEach { frame ->
+                assertTrue("task ${task.number}: empty frame", frame.show.isNotEmpty() && frame.en.isNotBlank() && frame.de.isNotBlank())
+                assertTrue("task ${task.number}: unknown ids ${frame.show - ids.toSet()}", ids.containsAll(frame.show))
+                frame.step?.let { assertTrue("task ${task.number}: step $it", it in 1..9) }
+            }
+            assertEquals("task ${task.number}: elements never shown", ids.toSet(), diagram.frames.flatMap { it.show }.toSet())
+        }
+    }
+
     @Test fun sailingQuestionsAreComplete() {
         val sailing = store.specificQuestions(ExamType.SEGELN)
         assertEquals((254..300).toList(), sailing.map { it.questionNumber })

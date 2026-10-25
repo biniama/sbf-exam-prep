@@ -119,4 +119,21 @@ final class NavigationDataTests: XCTestCase {
         XCTAssertEqual(catalog.chartExcerpts.count, 8)
         XCTAssertEqual(catalog.questionTypes.map(\.number), Array(286...300))
     }
+
+    func testNavigationDiagramsAreConsistent() throws {
+        let catalog = try XCTUnwrap(NavigationStore.shared.catalog)
+        // Task 14: the position of buoy 8 is neither given nor derivable from the official results.
+        XCTAssertEqual(catalog.tasks.filter { $0.diagram != nil }.map(\.number), Array(1...15).filter { $0 != 14 })
+        for task in catalog.tasks {
+            guard let diagram = task.diagram else { continue }
+            let ids = Set(diagram.elements.map(\.id))
+            XCTAssertEqual(ids.count, diagram.elements.count, "task \(task.number): duplicate ids")
+            XCTAssertFalse(diagram.frames.isEmpty, "task \(task.number)")
+            for frame in diagram.frames {
+                XCTAssertFalse(frame.show.isEmpty || frame.de.isEmpty || frame.en.isEmpty, "task \(task.number): empty frame")
+                XCTAssertTrue(Set(frame.show).isSubset(of: ids), "task \(task.number): unknown ids")
+            }
+            XCTAssertEqual(Set(diagram.frames.flatMap(\.show)), ids, "task \(task.number): elements never shown")
+        }
+    }
 }

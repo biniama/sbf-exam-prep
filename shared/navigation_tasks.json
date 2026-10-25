@@ -508,6 +508,151 @@
       "values": {
         "mw": 1,
         "speed_kn": 8
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.91458,
+          "lon": 7.83997,
+          "k": 0.58899
+        },
+        "width": 6.791,
+        "height": 3.434,
+        "elements": [
+          {
+            "id": "S",
+            "type": "point",
+            "x": -3.395,
+            "y": 0.162,
+            "label": "TG19/Weser 2",
+            "label_en": "TG19/Weser 2",
+            "style": "mark",
+            "sub": "10:00"
+          },
+          {
+            "id": "T",
+            "type": "point",
+            "x": 2.593,
+            "y": 1.326,
+            "label": "ST",
+            "label_en": "ST",
+            "style": "mark"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -3.395,
+            "y1": 0.162,
+            "x2": 2.593,
+            "y2": 1.326,
+            "style": "course",
+            "label": "rwK 079° · 6,1 sm",
+            "label_en": "true 079° · 6.1 nm"
+          },
+          {
+            "id": "DR",
+            "type": "point",
+            "x": 0.531,
+            "y": 0.925,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "10:30"
+          },
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": 1.207,
+            "y1": 1.336,
+            "x2": 1.745,
+            "y2": -1.717,
+            "style": "bearing",
+            "label": "4a · 170°",
+            "label_en": "4a · 170°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": 0.767,
+            "y1": 0.491,
+            "x2": 3.395,
+            "y2": 1.717,
+            "style": "bearing",
+            "label": "ST · 065°",
+            "label_en": "ST · 065°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": 1.311,
+            "y": 0.745,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix",
+            "sub": "10:30"
+          },
+          {
+            "id": "BV",
+            "type": "line",
+            "x1": 0.531,
+            "y1": 0.925,
+            "x2": 1.311,
+            "y2": 0.745,
+            "style": "set_drift",
+            "label": "BV 103° · 0,8 sm",
+            "label_en": "set/drift 103° · 0.8 nm"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "S",
+              "T"
+            ],
+            "de": "Um 10:00 Uhr passiert das Boot die Tonne TG19/Weser 2. Ziel ist die Ansteuerungstonne ST.",
+            "en": "At 10:00 the boat passes buoy TG19/Weser 2. The destination is the landfall buoy ST."
+          },
+          {
+            "show": [
+              "C"
+            ],
+            "de": "Kurslinie zwischen beiden Tonnen zeichnen: rechtweisender Kurs 079°, Distanz 6,1 Seemeilen.",
+            "en": "Draw the course line between the buoys: true course 079°, distance 6.1 nautical miles.",
+            "step": 1
+          },
+          {
+            "show": [
+              "DR"
+            ],
+            "de": "In 30 Minuten legt das Boot bei 8 Knoten 4 Seemeilen zurück. Diese Distanz auf der Kurslinie abtragen: Koppelort 10:30 Uhr.",
+            "en": "In 30 minutes at 8 knots the boat covers 4 nautical miles. Mark this off along the course line: dead-reckoning position at 10:30.",
+            "step": 5
+          },
+          {
+            "show": [
+              "B1"
+            ],
+            "de": "Erste Standlinie: Peilung zur Tonne 4a, rechtweisend 170°.",
+            "en": "First position line: bearing to buoy 4a, true 170°.",
+            "step": 7
+          },
+          {
+            "show": [
+              "B2",
+              "F"
+            ],
+            "de": "Zweite Standlinie: Peilung zur Tonne ST, rechtweisend 065°. Der Schnittpunkt ist der beobachtete Ort.",
+            "en": "Second position line: bearing to buoy ST, true 065°. Where the lines cross is the observed position.",
+            "step": 7
+          },
+          {
+            "show": [
+              "BV"
+            ],
+            "de": "Vom Koppelort zum beobachteten Ort: Besteckversetzung 103°, 0,8 Seemeilen. So weit haben Strom und Wind das Boot versetzt.",
+            "en": "From the dead-reckoning position to the observed position: set and drift 103°, 0.8 nautical miles. That is how far current and wind have moved the boat.",
+            "step": 8
+          }
+        ]
       }
     },
     {
@@ -791,6 +936,132 @@
       "values": {
         "mw": 1,
         "speed_kn": 10
+      },
+      "diagram": {
+        "grid": {
+          "lat": 54.10375,
+          "lon": 8.02852,
+          "k": 0.58632
+        },
+        "width": 9.676,
+        "height": 5.55,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": -4.838,
+            "y": 2.775,
+            "label": "Helgoland-O",
+            "label_en": "Helgoland-O",
+            "style": "mark",
+            "sub": "11:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -4.838,
+            "y1": 2.775,
+            "x2": 4.775,
+            "y2": -2.775,
+            "style": "course",
+            "label": "rwK 120° · 11,1 sm",
+            "label_en": "true 120° · 11.1 nm"
+          },
+          {
+            "id": "A",
+            "type": "point",
+            "x": 4.775,
+            "y": -2.775,
+            "label": "Außenelbe-Reede 4",
+            "label_en": "Außenelbe-Reede 4",
+            "style": "mark"
+          },
+          {
+            "id": "DR",
+            "type": "point",
+            "x": 2.956,
+            "y": -1.725,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "11:54"
+          },
+          {
+            "id": "B",
+            "type": "line",
+            "x1": 2.824,
+            "y1": 0.366,
+            "x2": 4.838,
+            "y2": -2.735,
+            "style": "bearing",
+            "label": "Außenelbe-Reede 4 · 147°",
+            "label_en": "Außenelbe-Reede 4 · 147°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": 3.151,
+            "y": -0.137,
+            "label": "beob. Ort (20-m-Linie)",
+            "label_en": "fix (20 m contour)",
+            "style": "fix",
+            "sub": "11:54"
+          },
+          {
+            "id": "BV",
+            "type": "line",
+            "x1": 2.956,
+            "y1": -1.725,
+            "x2": 3.151,
+            "y2": -0.137,
+            "style": "set_drift",
+            "label": "BV 007° · 1,6 sm",
+            "label_en": "set/drift 007° · 1.6 nm"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 11:00 Uhr wird die Tonne Helgoland-O passiert.",
+            "en": "At 11:00 buoy Helgoland-O is passed."
+          },
+          {
+            "show": [
+              "C",
+              "A"
+            ],
+            "de": "MgK 116° wird zum rechtweisenden Kurs 120°. Kurslinie zeichnen; nach 11,1 Seemeilen liegt die Tonne Außenelbe-Reede 4.",
+            "en": "MgK 116° becomes true course 120°. Draw the course line; after 11.1 nautical miles lies buoy Außenelbe-Reede 4.",
+            "step": 4
+          },
+          {
+            "show": [
+              "DR"
+            ],
+            "de": "Bis 11:54 Uhr sind es 54 Minuten bei 10 Knoten, also 9 Seemeilen: Koppelort.",
+            "en": "Until 11:54 that is 54 minutes at 10 knots, so 9 nautical miles: dead-reckoning position.",
+            "step": 7
+          },
+          {
+            "show": [
+              "B",
+              "F"
+            ],
+            "de": "Peilung zur Tonne Außenelbe-Reede 4: rechtweisend 147°. Wo diese Standlinie die 20-Meter-Linie schneidet, steht das Boot.",
+            "en": "Bearing to buoy Außenelbe-Reede 4: true 147°. Where this position line meets the 20-metre contour is the boat's position.",
+            "step": 9
+          },
+          {
+            "show": [
+              "BV"
+            ],
+            "de": "Besteckversetzung vom Koppelort zum beobachteten Ort: 007°, 1,6 Seemeilen.",
+            "en": "Set and drift from the dead-reckoning position to the observed position: 007°, 1.6 nautical miles.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -1060,6 +1331,102 @@
       "values": {
         "mw": 0,
         "speed_kn": 6
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.82692,
+          "lon": 7.60248,
+          "k": 0.59023
+        },
+        "width": 9.252,
+        "height": 5.569,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": 4.626,
+            "y": 2.785,
+            "label": "1b/Jade 1",
+            "label_en": "1b/Jade 1",
+            "style": "mark",
+            "sub": "13:30"
+          },
+          {
+            "id": "A",
+            "type": "point",
+            "x": -4.153,
+            "y": -2.415,
+            "label": "Accumer Ee",
+            "label_en": "Accumer Ee",
+            "style": "mark",
+            "sub": "15:12"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": 4.626,
+            "y1": 2.785,
+            "x2": -4.153,
+            "y2": -2.415,
+            "style": "course",
+            "label": "rwK 240°",
+            "label_en": "true 240°"
+          },
+          {
+            "id": "DR",
+            "type": "point",
+            "x": -0.57,
+            "y": -0.215,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "14:30"
+          },
+          {
+            "id": "B",
+            "type": "line",
+            "x1": -4.626,
+            "y1": -2.785,
+            "x2": -1.001,
+            "y2": 0.047,
+            "style": "bearing",
+            "label": "Accumer Ee · 232°",
+            "label_en": "Accumer Ee · 232°"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 13:30 Uhr wird die Tonne 1b/Jade 1 passiert.",
+            "en": "At 13:30 buoy 1b/Jade 1 is passed."
+          },
+          {
+            "show": [
+              "C",
+              "A"
+            ],
+            "de": "Kurs auf die Tonne Accumer Ee: rechtweisend 240°. Die Distanz von etwa 10,2 Seemeilen dauert bei 6 Knoten 102 Minuten: Ankunft 15:12 Uhr.",
+            "en": "Course to buoy Accumer Ee: true 240°. The distance of about 10.2 nautical miles takes 102 minutes at 6 knots: arrival 15:12.",
+            "step": 2
+          },
+          {
+            "show": [
+              "DR"
+            ],
+            "de": "Um 14:30 Uhr hat das Boot 6 Seemeilen zurückgelegt.",
+            "en": "By 14:30 the boat has covered 6 nautical miles."
+          },
+          {
+            "show": [
+              "B"
+            ],
+            "de": "Kreuzpeilung: Die Standlinie zur Tonne Accumer Ee verläuft mit 232° durch die Tonne. Die Standlinien zu TG15 (290°) und TG17/Weser1 (345°) werden genauso gezeichnet; wo sich alle drei schneiden, steht das Boot.",
+            "en": "Cross bearing: the position line to buoy Accumer Ee runs through the buoy at 232°. The lines to TG15 (290°) and TG17/Weser1 (345°) are drawn the same way; where all three cross is the boat's position.",
+            "step": 8
+          }
+        ]
       }
     },
     {
@@ -1335,6 +1702,102 @@
       "values": {
         "mw": 0,
         "speed_kn": 6
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.78613,
+          "lon": 7.57478,
+          "k": 0.5908
+        },
+        "width": 6.348,
+        "height": 2.949,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": -3.174,
+            "y": 0.032,
+            "label": "Accumer Ee",
+            "label_en": "Accumer Ee",
+            "style": "mark",
+            "sub": "09:00"
+          },
+          {
+            "id": "O",
+            "type": "point",
+            "x": 2.83,
+            "y": 0.983,
+            "label": "Otzumer Balje",
+            "label_en": "Otzumer Balje",
+            "style": "mark"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -3.174,
+            "y1": 0.032,
+            "x2": 2.83,
+            "y2": 0.983,
+            "style": "course",
+            "label": "rwK 081°",
+            "label_en": "true 081°"
+          },
+          {
+            "id": "DR",
+            "type": "point",
+            "x": 2.752,
+            "y": 0.971,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "10:00"
+          },
+          {
+            "id": "B",
+            "type": "line",
+            "x1": 3.174,
+            "y1": 1.474,
+            "x2": 1.109,
+            "y2": -1.474,
+            "style": "bearing",
+            "label": "Otzumer Balje · 035°",
+            "label_en": "Otzumer Balje · 035°"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 09:00 Uhr ist das Boot an der Tonne Accumer Ee.",
+            "en": "At 09:00 the boat is at buoy Accumer Ee."
+          },
+          {
+            "show": [
+              "C",
+              "O"
+            ],
+            "de": "Kurs auf die Tonne Otzumer Balje: rechtweisend 081°.",
+            "en": "Course to buoy Otzumer Balje: true 081°.",
+            "step": 2
+          },
+          {
+            "show": [
+              "DR"
+            ],
+            "de": "Eine Stunde bei 6 Knoten: 6 Seemeilen auf der Kurslinie abtragen, Koppelort 10:00 Uhr.",
+            "en": "One hour at 6 knots: mark off 6 nautical miles along the course line, dead-reckoning position at 10:00.",
+            "step": 6
+          },
+          {
+            "show": [
+              "B"
+            ],
+            "de": "Um 10:15 Uhr: Standlinie zur Tonne Otzumer Balje mit 035° durch die Tonne. Die Peilung zur Kirche (115°) ergibt die zweite Standlinie.",
+            "en": "At 10:15: position line to buoy Otzumer Balje at 035° through the buoy. The bearing to the church (115°) gives the second line.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -1629,6 +2092,126 @@
       "values": {
         "mw": 0,
         "speed_kn": 11
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.83511,
+          "lon": 7.6418,
+          "k": 0.59011
+        },
+        "width": 6.472,
+        "height": 4.587,
+        "elements": [
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": -1.202,
+            "y1": 0.046,
+            "x2": -3.236,
+            "y2": -2.293,
+            "style": "bearing",
+            "label": "Wasserturm · 221°",
+            "label_en": "water tower · 221°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": -2.075,
+            "y1": -0.046,
+            "x2": 0.46,
+            "y2": -1.956,
+            "style": "bearing",
+            "label": "Otzumer Balje · 127°",
+            "label_en": "Otzumer Balje · 127°"
+          },
+          {
+            "id": "O",
+            "type": "point",
+            "x": 0.46,
+            "y": -1.956,
+            "label": "Otzumer Balje",
+            "label_en": "Otzumer Balje",
+            "style": "mark"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": -1.596,
+            "y": -0.407,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix",
+            "sub": "14:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -1.596,
+            "y1": -0.407,
+            "x2": 3.236,
+            "y2": 2.293,
+            "style": "course",
+            "label": "rwK 061° · 5,5 sm",
+            "label_en": "true 061° · 5.5 nm"
+          },
+          {
+            "id": "J",
+            "type": "point",
+            "x": 3.236,
+            "y": 2.293,
+            "label": "1b/Jade 1",
+            "label_en": "1b/Jade 1",
+            "style": "mark",
+            "sub": "14:30"
+          },
+          {
+            "id": "DR",
+            "type": "point",
+            "x": -0.634,
+            "y": 0.127,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "14:06"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "B1"
+            ],
+            "de": "Erste Standlinie: Wasserturm Langeoog, rechtweisend 221°.",
+            "en": "First position line: Langeoog water tower, true 221°.",
+            "step": 2
+          },
+          {
+            "show": [
+              "B2",
+              "O",
+              "F"
+            ],
+            "de": "Zweite Standlinie: Tonne Otzumer Balje, rechtweisend 127°. Der Schnittpunkt ist der Standort um 14:00 Uhr.",
+            "en": "Second position line: buoy Otzumer Balje, true 127°. The crossing point is the position at 14:00.",
+            "step": 3
+          },
+          {
+            "show": [
+              "C",
+              "J"
+            ],
+            "de": "Kurs auf die Tonne 1b/Jade 1: rechtweisend 061°. Bei 11 Knoten sind die 5,5 Seemeilen nach 30 Minuten zurückgelegt: 14:30 Uhr.",
+            "en": "Course to buoy 1b/Jade 1: true 061°. At 11 knots the 5.5 nautical miles take 30 minutes: 14:30.",
+            "step": 4
+          },
+          {
+            "show": [
+              "DR"
+            ],
+            "de": "Maschinenschaden um 14:06 Uhr: 6 Minuten bei 11 Knoten sind 1,1 Seemeilen. Koppelort.",
+            "en": "Engine failure at 14:06: 6 minutes at 11 knots is 1.1 nautical miles. Dead-reckoning position.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -1892,6 +2475,126 @@
       "notes_en": null,
       "values": {
         "mw": 1
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.91593,
+          "lon": 8.05417,
+          "k": 0.58897
+        },
+        "width": 5.244,
+        "height": 6.25,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": -2.622,
+            "y": 0.344,
+            "label": "A2",
+            "label_en": "A2",
+            "style": "mark",
+            "sub": "09:00"
+          },
+          {
+            "id": "W",
+            "type": "point",
+            "x": 2.007,
+            "y": 3.125,
+            "label": "Westertill-N",
+            "label_en": "Westertill-N",
+            "style": "mark",
+            "sub": "09:54"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -2.622,
+            "y1": 0.344,
+            "x2": 2.007,
+            "y2": 3.125,
+            "style": "course",
+            "label": "rwK 059° · 5,4 sm",
+            "label_en": "true 059° · 5.4 nm"
+          },
+          {
+            "id": "L",
+            "type": "point",
+            "x": 2.622,
+            "y": -3.125,
+            "label": "Leuchtturm Alte Weser",
+            "label_en": "Alte Weser lighthouse",
+            "style": "mark"
+          },
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": 0.601,
+            "y1": 2.141,
+            "x2": 2.622,
+            "y2": -3.125,
+            "style": "bearing",
+            "label": "159°",
+            "label_en": "159°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": 0.601,
+            "y1": 2.141,
+            "x2": 2.007,
+            "y2": 3.125,
+            "style": "bearing",
+            "label": "055°",
+            "label_en": "055°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": 0.601,
+            "y": 2.141,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 09:00 Uhr steht das Boot an der Tonne A2.",
+            "en": "At 09:00 the boat is at buoy A2."
+          },
+          {
+            "show": [
+              "C",
+              "W"
+            ],
+            "de": "Kurs auf die Tonne Westertill-N: rechtweisend 059°.",
+            "en": "Course to buoy Westertill-N: true 059°.",
+            "step": 2
+          },
+          {
+            "show": [
+              "L",
+              "B1",
+              "B2",
+              "F"
+            ],
+            "de": "Peilungen zum Leuchtturm Alte Weser (159°) und zur Tonne Westertill-N (055°) durch die Objekte zeichnen. Der Schnittpunkt ist der beobachtete Ort.",
+            "en": "Draw the bearings of lighthouse Alte Weser (159°) and buoy Westertill-N (055°) through the objects. The crossing point is the observed position.",
+            "step": 7
+          },
+          {
+            "show": [
+              "C",
+              "W"
+            ],
+            "de": "Um 09:54 Uhr ist die Tonne Westertill-N erreicht: 5,4 Seemeilen in 54 Minuten ergeben 6 Knoten.",
+            "en": "At 09:54 buoy Westertill-N is reached: 5.4 nautical miles in 54 minutes gives 6 knots.",
+            "step": 8
+          }
+        ]
       }
     },
     {
@@ -2154,6 +2857,144 @@
       "values": {
         "mw": 1,
         "speed_kn": 8
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.98666,
+          "lon": 8.00203,
+          "k": 0.58797
+        },
+        "width": 7.987,
+        "height": 8.601,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": 3.994,
+            "y": 4.301,
+            "label": "Außenelbe-Reede 2",
+            "label_en": "Außenelbe-Reede 2",
+            "style": "mark",
+            "sub": "11:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": 3.994,
+            "y1": 4.301,
+            "x2": -0.709,
+            "y2": -2.172,
+            "style": "course",
+            "label": "rwK 216°",
+            "label_en": "true 216°"
+          },
+          {
+            "id": "N",
+            "type": "point",
+            "x": -0.474,
+            "y": -1.848,
+            "label": "NGN",
+            "label_en": "NGN",
+            "style": "mark",
+            "sub": "11:57"
+          },
+          {
+            "id": "DR",
+            "type": "point",
+            "x": -0.709,
+            "y": -2.172,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "12:00"
+          },
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": -1.282,
+            "y1": -1.823,
+            "x2": -3.994,
+            "y2": -3.326,
+            "style": "bearing",
+            "label": "ST · 241°",
+            "label_en": "ST · 241°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": -2.098,
+            "y1": -1.589,
+            "x2": -0.595,
+            "y2": -4.301,
+            "style": "bearing",
+            "label": "A2 · 151°",
+            "label_en": "A2 · 151°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": -1.807,
+            "y": -2.114,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix",
+            "sub": "12:00"
+          },
+          {
+            "id": "BV",
+            "type": "line",
+            "x1": -0.709,
+            "y1": -2.172,
+            "x2": -1.807,
+            "y2": -2.114,
+            "style": "set_drift",
+            "label": "BV 273° · 1,1 sm",
+            "label_en": "set/drift 273° · 1.1 nm"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 11:00 Uhr steht das Boot an der Tonne Außenelbe-Reede 2.",
+            "en": "At 11:00 the boat is at buoy Außenelbe-Reede 2."
+          },
+          {
+            "show": [
+              "C",
+              "N"
+            ],
+            "de": "MgK 218° wird zum rechtweisenden Kurs 216°. Bei 8 Knoten ist die Tonne NGN nach 7,6 Seemeilen um 11:57 Uhr erreicht.",
+            "en": "MgK 218° becomes true course 216°. At 8 knots buoy NGN is reached after 7.6 nautical miles at 11:57.",
+            "step": 4
+          },
+          {
+            "show": [
+              "DR"
+            ],
+            "de": "Koppelort 12:00 Uhr: eine Stunde bei 8 Knoten, also 8 Seemeilen.",
+            "en": "Dead-reckoning position at 12:00: one hour at 8 knots, so 8 nautical miles."
+          },
+          {
+            "show": [
+              "B1",
+              "B2",
+              "F"
+            ],
+            "de": "Peilungen zu den Tonnen ST (241°) und A2 (151°): Der Schnittpunkt ist der beobachtete Ort.",
+            "en": "Bearings of buoys ST (241°) and A2 (151°): the crossing point is the observed position.",
+            "step": 8
+          },
+          {
+            "show": [
+              "BV"
+            ],
+            "de": "Besteckversetzung vom Koppelort zum beobachteten Ort: 273°, 1,1 Seemeilen.",
+            "en": "Set and drift from the dead-reckoning position to the observed position: 273°, 1.1 nautical miles.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -2392,6 +3233,107 @@
       "values": {
         "mw": 1,
         "speed_kn": 9
+      },
+      "diagram": {
+        "grid": {
+          "lat": 54.08683,
+          "lon": 7.62602,
+          "k": 0.58656
+        },
+        "width": 7.235,
+        "height": 3.915,
+        "elements": [
+          {
+            "id": "E",
+            "type": "point",
+            "x": 3.617,
+            "y": 1.958,
+            "label": "E2",
+            "label_en": "E2",
+            "style": "mark"
+          },
+          {
+            "id": "B",
+            "type": "line",
+            "x1": 2.026,
+            "y1": 1.79,
+            "x2": 3.617,
+            "y2": 1.958,
+            "style": "bearing",
+            "label": "084° · 1,6 sm",
+            "label_en": "084° · 1.6 nm"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": 2.026,
+            "y": 1.79,
+            "label": "Standort",
+            "label_en": "position",
+            "style": "fix",
+            "sub": "10:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": 2.026,
+            "y1": 1.79,
+            "x2": -0.968,
+            "y2": -0.549,
+            "style": "course",
+            "label": "rwK 232° · 3,8 sm",
+            "label_en": "true 232° · 3.8 nm"
+          },
+          {
+            "id": "V",
+            "type": "point",
+            "x": -0.968,
+            "y": -0.549,
+            "label": "Verkehrstrennungsgebiet",
+            "label_en": "traffic separation scheme",
+            "style": "dr"
+          },
+          {
+            "id": "X",
+            "type": "line",
+            "x1": -0.968,
+            "y1": -0.549,
+            "x2": -3.617,
+            "y2": -1.958,
+            "style": "track",
+            "label": "rwK 242° · 20 min",
+            "label_en": "true 242° · 20 min"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "E",
+              "B",
+              "F"
+            ],
+            "de": "Peilung und Abstand: Die Tonne E2 liegt rechtweisend 084° in 1,6 Seemeilen. Vom Boot aus gesehen, also auf der Peillinie 1,6 Seemeilen von der Tonne entfernt.",
+            "en": "Bearing and distance: buoy E2 bears true 084° at 1.6 nautical miles. The boat is on the bearing line, 1.6 nautical miles from the buoy.",
+            "step": 2
+          },
+          {
+            "show": [
+              "C",
+              "V"
+            ],
+            "de": "Kurs auf das Verkehrstrennungsgebiet: rechtweisend 232°, Distanz 3,8 Seemeilen.",
+            "en": "Course to the traffic separation scheme: true 232°, distance 3.8 nautical miles.",
+            "step": 5
+          },
+          {
+            "show": [
+              "X"
+            ],
+            "de": "Das Verkehrstrennungsgebiet wird rechtwinklig gequert: 242°. Bei 9 Knoten dauern die 3 Seemeilen 20 Minuten.",
+            "en": "The traffic separation scheme is crossed at right angles: 242°. At 9 knots the 3 nautical miles take 20 minutes.",
+            "step": 8
+          }
+        ]
       }
     },
     {
@@ -2623,6 +3565,88 @@
       "values": {
         "mw": 0,
         "speed_kn": 5.8
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.89911,
+          "lon": 8.19804,
+          "k": 0.58921
+        },
+        "width": 4.928,
+        "height": 4.232,
+        "elements": [
+          {
+            "id": "G",
+            "type": "point",
+            "x": -0.52,
+            "y": 2.053,
+            "label": "GPS-Position",
+            "label_en": "GPS position",
+            "style": "gps",
+            "sub": "14:20"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": -0.52,
+            "y1": 2.053,
+            "x2": -2.464,
+            "y2": -2.116,
+            "style": "bearing",
+            "label": "205° · 4,6 sm",
+            "label_en": "205° · 4.6 nm"
+          },
+          {
+            "id": "L",
+            "type": "point",
+            "x": -2.464,
+            "y": -2.116,
+            "label": "Leuchtturm Alte Weser",
+            "label_en": "Alte Weser lighthouse",
+            "style": "mark",
+            "sub": "15:20"
+          },
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": -1.116,
+            "y1": 2.116,
+            "x2": 2.464,
+            "y2": 1.74,
+            "style": "bearing",
+            "label": "Neuwerk · 096°",
+            "label_en": "Neuwerk · 096°"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "G"
+            ],
+            "de": "Um 14:20 Uhr wird die GPS-Position 53° 56,0' N, 008° 11,0' E in die Karte eingetragen.",
+            "en": "At 14:20 the GPS position 53° 56.0' N, 008° 11.0' E is plotted on the chart.",
+            "step": 5
+          },
+          {
+            "show": [
+              "B1",
+              "B2",
+              "L"
+            ],
+            "de": "Von dieser Position aus die Richtungen zu den Leuchttürmen messen: Neuwerk 096°, Alte Weser 205°. Distanz zum Leuchtturm Alte Weser: 4,6 Seemeilen.",
+            "en": "From this position measure the directions to the lighthouses: Neuwerk 096°, Alte Weser 205°. Distance to lighthouse Alte Weser: 4.6 nautical miles.",
+            "step": 8
+          },
+          {
+            "show": [
+              "B2",
+              "L"
+            ],
+            "de": "Um 15:20 Uhr ist der Leuchtturm erreicht: 4,6 Seemeilen in einer Stunde sind 4,6 Knoten.",
+            "en": "At 15:20 the lighthouse is reached: 4.6 nautical miles in one hour is 4.6 knots.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -2872,6 +3896,127 @@
       "notes_en": null,
       "values": {
         "mw": 1
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.91962,
+          "lon": 8.00999,
+          "k": 0.58892
+        },
+        "width": 6.835,
+        "height": 5.154,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": 3.418,
+            "y": -2.577,
+            "label": "A10",
+            "label_en": "A10",
+            "style": "mark",
+            "sub": "12:00"
+          },
+          {
+            "id": "A",
+            "type": "point",
+            "x": -1.06,
+            "y": 0.123,
+            "label": "A2",
+            "label_en": "A2",
+            "style": "mark",
+            "sub": "12:26"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": 3.418,
+            "y1": -2.577,
+            "x2": -1.06,
+            "y2": 0.123,
+            "style": "course",
+            "label": "rwK 301° · 5,2 sm",
+            "label_en": "true 301° · 5.2 nm"
+          },
+          {
+            "id": "S",
+            "type": "point",
+            "x": -3.418,
+            "y": 1.024,
+            "label": "ST",
+            "label_en": "ST",
+            "style": "mark"
+          },
+          {
+            "id": "N",
+            "type": "point",
+            "x": -0.755,
+            "y": 2.174,
+            "label": "NGN",
+            "label_en": "NGN",
+            "style": "mark"
+          },
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": -1.752,
+            "y1": 2.577,
+            "x2": -0.755,
+            "y2": 2.174,
+            "style": "bearing",
+            "label": "112°",
+            "label_en": "112°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": -1.752,
+            "y1": 2.577,
+            "x2": -3.418,
+            "y2": 1.024,
+            "style": "bearing",
+            "label": "227°",
+            "label_en": "227°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": -1.752,
+            "y": 2.577,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 12:00 Uhr steht das Fahrzeug an der Tonne A10.",
+            "en": "At 12:00 the vessel is at buoy A10."
+          },
+          {
+            "show": [
+              "C",
+              "A"
+            ],
+            "de": "Kurs auf die Tonne A2: rechtweisend 301°. 5,2 Seemeilen in 26 Minuten ergeben 12 Knoten.",
+            "en": "Course to buoy A2: true 301°. 5.2 nautical miles in 26 minutes gives 12 knots.",
+            "step": 6
+          },
+          {
+            "show": [
+              "S",
+              "N",
+              "B1",
+              "B2",
+              "F"
+            ],
+            "de": "Peilungen zu den Tonnen Nordergründe-N (112°) und ST (227°) durch die Tonnen zeichnen. Der Schnittpunkt ist der beobachtete Ort.",
+            "en": "Draw the bearings of buoys Nordergründe-N (112°) and ST (227°) through the buoys. The crossing point is the observed position.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -3113,6 +4258,96 @@
       "values": {
         "mw": 1,
         "speed_kn": 6
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.84284,
+          "lon": 8.01427,
+          "k": 0.59
+        },
+        "width": 8.315,
+        "height": 7.26,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": -4.157,
+            "y": 3.63,
+            "label": "Position",
+            "label_en": "position",
+            "style": "gps",
+            "sub": "09:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -4.157,
+            "y1": 3.63,
+            "x2": -2.197,
+            "y2": 0.492,
+            "style": "course",
+            "label": "rwK 148° · 3,7 sm",
+            "label_en": "true 148° · 3.7 nm"
+          },
+          {
+            "id": "T",
+            "type": "point",
+            "x": -2.197,
+            "y": 0.492,
+            "label": "Tonne 5",
+            "label_en": "buoy 5",
+            "style": "mark",
+            "sub": "09:37"
+          },
+          {
+            "id": "L",
+            "type": "point",
+            "x": 4.033,
+            "y": 1.261,
+            "label": "Leuchtturm Alte Weser",
+            "label_en": "Alte Weser lighthouse",
+            "style": "mark"
+          },
+          {
+            "id": "B",
+            "type": "line",
+            "x1": 4.157,
+            "y1": 1.848,
+            "x2": 2.993,
+            "y2": -3.63,
+            "style": "bearing",
+            "label": "012°",
+            "label_en": "012°"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 09:00 Uhr wird die Position 53° 54,2' N, 007° 53,8' E eingetragen.",
+            "en": "At 09:00 the position 53° 54.2' N, 007° 53.8' E is plotted.",
+            "step": 1
+          },
+          {
+            "show": [
+              "C",
+              "T"
+            ],
+            "de": "Kurs auf die Tonne 5 der Neuen Weser: rechtweisend 148°. 3,7 Seemeilen bei 6 Knoten dauern 37 Minuten: 09:37 Uhr.",
+            "en": "Course to buoy 5 of the Neue Weser: true 148°. 3.7 nautical miles at 6 knots take 37 minutes: 09:37.",
+            "step": 4
+          },
+          {
+            "show": [
+              "L",
+              "B"
+            ],
+            "de": "Später: Standlinie zum Leuchtturm Alte Weser, rechtweisend 012°, durch den Leuchtturm. Die Peilung Tegeler Plate (103°) ergibt die zweite Standlinie.",
+            "en": "Later: position line to lighthouse Alte Weser, true 012°, through the lighthouse. The bearing of Tegeler Plate (103°) gives the second line.",
+            "step": 9
+          }
+        ]
       }
     },
     {
@@ -3372,6 +4607,143 @@
       "values": {
         "mw": 1,
         "speed_kn": 8
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.90206,
+          "lon": 7.90379,
+          "k": 0.58917
+        },
+        "width": 0.975,
+        "height": 8.247,
+        "elements": [
+          {
+            "id": "P",
+            "type": "point",
+            "x": -0.487,
+            "y": -4.124,
+            "label": "Tonne 10",
+            "label_en": "buoy 10",
+            "style": "mark",
+            "sub": "08:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -0.487,
+            "y1": -4.124,
+            "x2": 0.487,
+            "y2": 3.817,
+            "style": "course",
+            "label": "rwK 007°",
+            "label_en": "true 007°"
+          },
+          {
+            "id": "DR1",
+            "type": "point",
+            "x": 0.0,
+            "y": -0.153,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "08:30"
+          },
+          {
+            "id": "S",
+            "type": "point",
+            "x": 0.337,
+            "y": 2.077,
+            "label": "ST",
+            "label_en": "ST",
+            "style": "mark"
+          },
+          {
+            "id": "DR2",
+            "type": "point",
+            "x": 0.487,
+            "y": 3.817,
+            "label": "Koppelort",
+            "label_en": "DR",
+            "style": "dr",
+            "sub": "09:00"
+          },
+          {
+            "id": "B",
+            "type": "line",
+            "x1": -0.142,
+            "y1": 4.124,
+            "x2": 0.337,
+            "y2": 2.077,
+            "style": "bearing",
+            "label": "168° · 2,0 sm",
+            "label_en": "168° · 2.0 nm"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": -0.142,
+            "y": 4.124,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix",
+            "sub": "09:00"
+          },
+          {
+            "id": "BV",
+            "type": "line",
+            "x1": 0.487,
+            "y1": 3.817,
+            "x2": -0.142,
+            "y2": 4.124,
+            "style": "set_drift",
+            "label": "BV 296° · 0,7 sm",
+            "label_en": "set/drift 296° · 0.7 nm"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "P"
+            ],
+            "de": "Um 08:00 Uhr steht das Boot an der Tonne 10 des Wangerooger Fahrwassers.",
+            "en": "At 08:00 the boat is at buoy 10 of the Wangerooge fairway."
+          },
+          {
+            "show": [
+              "C",
+              "S"
+            ],
+            "de": "Kurs auf die Tonne ST: rechtweisend 007°.",
+            "en": "Course to buoy ST: true 007°.",
+            "step": 2
+          },
+          {
+            "show": [
+              "DR1"
+            ],
+            "de": "Um 08:30 Uhr: 30 Minuten bei 8 Knoten sind 4 Seemeilen. Koppelort für die Meldung des Ölfasses.",
+            "en": "At 08:30: 30 minutes at 8 knots is 4 nautical miles. Dead-reckoning position for the oil drum report.",
+            "step": 6
+          },
+          {
+            "show": [
+              "DR2",
+              "B",
+              "F"
+            ],
+            "de": "Um 09:00 Uhr: Tonne ST in rechtweisend 168° und 2,0 Seemeilen. Vom Boot aus auf der Peillinie 2,0 Seemeilen von der Tonne: beobachteter Ort.",
+            "en": "At 09:00: buoy ST bears true 168° at 2.0 nautical miles. On the bearing line, 2.0 nautical miles from the buoy: observed position.",
+            "step": 7
+          },
+          {
+            "show": [
+              "BV"
+            ],
+            "de": "Besteckversetzung vom Koppelort 09:00 Uhr zum beobachteten Ort: 296°, 0,7 Seemeilen.",
+            "en": "Set and drift from the 09:00 dead-reckoning position to the observed position: 296°, 0.7 nautical miles.",
+            "step": 8
+          }
+        ]
       }
     },
     {
@@ -3635,6 +5007,98 @@
       "notes_en": null,
       "values": {
         "mw": 1
+      },
+      "diagram": {
+        "grid": {
+          "lat": 54.11486,
+          "lon": 7.91467,
+          "k": 0.58616
+        },
+        "width": 2.125,
+        "height": 6.577,
+        "elements": [
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": 1.063,
+            "y1": 1.553,
+            "x2": -1.063,
+            "y2": 2.122,
+            "style": "bearing",
+            "label": "Helgoland-O · 285°",
+            "label_en": "Helgoland-O · 285°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": 0.389,
+            "y1": 1.116,
+            "x2": 0.733,
+            "y2": 3.289,
+            "style": "bearing",
+            "label": "Düne-S · 009°",
+            "label_en": "Düne-S · 009°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": 0.483,
+            "y": 1.708,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix",
+            "sub": "09:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": 0.483,
+            "y1": 1.708,
+            "x2": 0.308,
+            "y2": -3.289,
+            "style": "course",
+            "label": "rwK 182°",
+            "label_en": "true 182°"
+          },
+          {
+            "id": "E",
+            "type": "point",
+            "x": 0.308,
+            "y": -3.289,
+            "label": "querab E3",
+            "label_en": "E3 abeam",
+            "style": "dr",
+            "sub": "09:40"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "B1",
+              "B2",
+              "F"
+            ],
+            "de": "Peilungen zu den Tonnen Helgoland-O (285°) und Düne-S (009°): Der Schnittpunkt ist der Standort um 09:00 Uhr.",
+            "en": "Bearings of buoys Helgoland-O (285°) and Düne-S (009°): the crossing point is the position at 09:00.",
+            "step": 3
+          },
+          {
+            "show": [
+              "C"
+            ],
+            "de": "Kurs auf die Tonne ST: rechtweisend 182°.",
+            "en": "Course to buoy ST: true 182°.",
+            "step": 5
+          },
+          {
+            "show": [
+              "E"
+            ],
+            "de": "Um 09:40 Uhr ist die Tonne E3 querab: 5 Seemeilen in 40 Minuten ergeben 7,5 Knoten.",
+            "en": "At 09:40 buoy E3 is abeam: 5 nautical miles in 40 minutes gives 7.5 knots.",
+            "step": 8
+          }
+        ]
       }
     },
     {
@@ -3881,7 +5345,8 @@
       "values": {
         "mw": 1,
         "speed_kn": 6
-      }
+      },
+      "diagram": null
     },
     {
       "number": 15,
@@ -4131,6 +5596,124 @@
       "notes_en": null,
       "values": {
         "mw": 0
+      },
+      "diagram": {
+        "grid": {
+          "lat": 53.9375,
+          "lon": 8.24818,
+          "k": 0.58867
+        },
+        "width": 9.791,
+        "height": 6.7,
+        "elements": [
+          {
+            "id": "B1",
+            "type": "line",
+            "x1": -4.296,
+            "y1": -0.75,
+            "x2": -4.296,
+            "y2": -3.35,
+            "style": "bearing",
+            "label": "Alte Weser · 180°",
+            "label_en": "Alte Weser · 180°"
+          },
+          {
+            "id": "B2",
+            "type": "line",
+            "x1": -4.896,
+            "y1": -1.35,
+            "x2": -2.296,
+            "y2": -1.35,
+            "style": "bearing",
+            "label": "Neuwerk · 090°",
+            "label_en": "Neuwerk · 090°"
+          },
+          {
+            "id": "F",
+            "type": "point",
+            "x": -4.296,
+            "y": -1.35,
+            "label": "beob. Ort",
+            "label_en": "fix",
+            "style": "fix",
+            "sub": "09:00"
+          },
+          {
+            "id": "C",
+            "type": "line",
+            "x1": -4.296,
+            "y1": -1.35,
+            "x2": -1.046,
+            "y2": 2.963,
+            "style": "course",
+            "label": "rwK 037° · 5,4 sm",
+            "label_en": "true 037° · 5.4 nm"
+          },
+          {
+            "id": "O",
+            "type": "point",
+            "x": -3.212,
+            "y": 0.088,
+            "label": "Obstn",
+            "label_en": "Obstn",
+            "style": "dr"
+          },
+          {
+            "id": "B",
+            "type": "point",
+            "x": -1.046,
+            "y": 2.963,
+            "label": "Tonne 1",
+            "label_en": "buoy 1",
+            "style": "mark"
+          },
+          {
+            "id": "K",
+            "type": "point",
+            "x": 4.896,
+            "y": 3.35,
+            "label": "Container",
+            "label_en": "containers",
+            "style": "gps"
+          }
+        ],
+        "frames": [
+          {
+            "show": [
+              "B1",
+              "B2",
+              "F"
+            ],
+            "de": "Peilungen zu den Leuchttürmen Alte Weser (180°) und Neuwerk (090°): Der Schnittpunkt ist der Standort um 09:00 Uhr.",
+            "en": "Bearings of lighthouses Alte Weser (180°) and Neuwerk (090°): the crossing point is the position at 09:00.",
+            "step": 2
+          },
+          {
+            "show": [
+              "C",
+              "B"
+            ],
+            "de": "Kurs auf die Tonne 1 des Elbefahrwassers: rechtweisend 037°, Distanz 5,4 Seemeilen.",
+            "en": "Course to buoy 1 of the Elbe fairway: true 037°, distance 5.4 nautical miles.",
+            "step": 6
+          },
+          {
+            "show": [
+              "O"
+            ],
+            "de": "Nach 1,8 Seemeilen kreuzt der Kurs ein Schifffahrtshindernis (Obstn) mit 9,7 m Kartentiefe.",
+            "en": "After 1.8 nautical miles the course crosses an obstruction (Obstn) with 9.7 m charted depth.",
+            "step": 7
+          },
+          {
+            "show": [
+              "K"
+            ],
+            "de": "Die gemeldete Position der Container eintragen: 53° 59,6' N, 008° 23,2' E.",
+            "en": "Plot the reported position of the containers: 53° 59.6' N, 008° 23.2' E.",
+            "step": 9
+          }
+        ]
       }
     }
   ]

@@ -63,6 +63,8 @@ struct NavigationTask: Decodable, Identifiable, Hashable {
     let notesEN: String?
     let values: TaskValues
     let steps: [NavigationStep]
+    /// Step-by-step solution diagram (nil where the official results do not fix the geometry).
+    let diagram: NavigationDiagram?
 
     var id: Int { number }
 
@@ -77,7 +79,7 @@ struct NavigationTask: Decodable, Identifiable, Hashable {
     }
 
     enum CodingKeys: String, CodingKey {
-        case number, values, steps
+        case number, values, steps, diagram
         case introDE = "intro_de"
         case introEN = "intro_en"
         case notesDE = "notes_de"
@@ -167,4 +169,50 @@ final class NavigationStore: ObservableObject {
     }
 
     func task(_ number: Int) -> NavigationTask? { tasks.first { $0.number == number } }
+}
+
+/// Geometry in nautical miles around the diagram centre; see tools/data/navigation_diagrams.py.
+struct NavigationDiagram: Decodable, Hashable {
+    let grid: Grid
+    let width: Double
+    let height: Double
+    let elements: [Element]
+    let frames: [Frame]
+
+    struct Grid: Decodable, Hashable {
+        let lat: Double
+        let lon: Double
+        /// cos(latitude): nautical miles per minute of longitude.
+        let k: Double
+    }
+
+    struct Element: Decodable, Hashable, Identifiable {
+        let id: String
+        let type: String
+        let style: String
+        let label: String?
+        let labelEN: String?
+        let sub: String?
+        let x: Double?
+        let y: Double?
+        let x1: Double?
+        let y1: Double?
+        let x2: Double?
+        let y2: Double?
+
+        var localizedLabel: String? { AppLanguage.isGerman ? label : (labelEN ?? label) }
+
+        enum CodingKeys: String, CodingKey {
+            case id, type, style, label, sub, x, y, x1, y1, x2, y2
+            case labelEN = "label_en"
+        }
+    }
+
+    struct Frame: Decodable, Hashable {
+        let show: [String]
+        let de: String
+        let en: String
+        let step: Int?
+        var localized: String { AppLanguage.isGerman ? de : en }
+    }
 }

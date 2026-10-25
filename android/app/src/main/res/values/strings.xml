@@ -42,6 +42,17 @@
     <string name="data">Data</string>
     <string name="day_streak">Day streak</string>
     <string name="default_quiz_length">Default quiz length</string>
+    <string name="diagram_a11y">Solution diagram</string>
+    <string name="diagram_back">Back</string>
+    <string name="diagram_disclaimer">Drawn from the official results – not a reproduction of chart D49.</string>
+    <string name="diagram_link">Solution diagram, step by step</string>
+    <string name="diagram_next">Next</string>
+    <string name="diagram_pause">Pause</string>
+    <string name="diagram_play">Play</string>
+    <string name="diagram_question">· Question %d</string>
+    <string name="diagram_read_aloud">Read aloud</string>
+    <string name="diagram_step">Step %1$d of %2$d</string>
+    <string name="diagram_title">Task %d · diagram</string>
     <string name="done">Done</string>
     <string name="drill_answer">Answer</string>
     <string name="drill_arrival">Arrival time</string>

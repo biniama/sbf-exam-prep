@@ -97,6 +97,13 @@ STRINGS = {
     "light_quick": "Quick: 50–60 flashes per minute", "light_very_quick": "Very quick: 100–120 flashes per minute",
     "light_interrupted_quick": "Interrupted quick: quick flashes, then a pause", "light_morse": "Morse code letter",
 
+    # Solution diagrams
+    "diagram_link": "Solution diagram, step by step", "diagram_title": "Task %lld · diagram",
+    "diagram_a11y": "Solution diagram", "diagram_step": "Step %lld of %lld", "diagram_question": "· Question %lld",
+    "diagram_read_aloud": "Read aloud", "diagram_back": "Back", "diagram_next": "Next",
+    "diagram_play": "Play", "diagram_pause": "Pause",
+    "diagram_disclaimer": "Drawn from the official results – not a reproduction of chart D49.",
+
     # Exam formats & licence
     "format_binnen_motor": "Inland · motor", "format_binnen_sail": "Inland · sail",
     "format_binnen_motor_sail": "Inland · motor + sail", "format_sail_addon": "Sailing add-on",

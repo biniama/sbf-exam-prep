@@ -118,6 +118,18 @@ struct NavigationTaskView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color.navyLight.opacity(0.10))
                     .clipShape(RoundedRectangle(cornerRadius: 14))
+                if flags.isOn(.navigationDiagrams), let diagram = task.diagram {
+                    NavigationLink {
+                        NavigationDiagramView(task: task, diagram: diagram)
+                    } label: {
+                        Label("Solution diagram, step by step", systemImage: "point.topleft.down.to.point.bottomright.curvepath")
+                            .font(.subheadline.weight(.semibold))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(14)
+                            .cardStyle()
+                    }
+                    .buttonStyle(.plain)
+                }
                 if let mw = task.values.mw {
                     Label {
                         Text("Variation (Mw) on this chart excerpt: \(signedDegrees(mw))")

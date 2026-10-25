@@ -17,6 +17,8 @@ import re
 import urllib.request
 from pathlib import Path
 
+import navigation_diagrams
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 OUT = ROOT / "shared" / "navigation_tasks.json"
@@ -369,6 +371,7 @@ def main():
                 step["solution"], check = solve(step, task["values"])
                 if check:
                     step["check"] = check
+        task["diagram"] = navigation_diagrams.diagram(task["number"])
 
     out = {
         "source": "ELWIS – Navigationsaufgaben SBF See (Übungskarte D49)",

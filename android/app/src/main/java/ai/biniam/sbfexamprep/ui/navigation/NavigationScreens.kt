@@ -51,6 +51,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
+import androidx.compose.material.icons.filled.Speed
+import ai.biniam.sbfexamprep.data.LightCharacter
+import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.NavigationStep
 import ai.biniam.sbfexamprep.ui.LocalApp
 import ai.biniam.sbfexamprep.ui.components.ReadableWidth
@@ -65,28 +68,33 @@ private sealed interface NavScreen {
     data object List : NavScreen
     data class Task(val number: Int) : NavScreen
     data object Glossary : NavScreen
+    data object Drills : NavScreen
 }
 
+/** [start]: "list" (task list) or "drills". Going back from the start screen closes the feature. */
 @Composable
-fun NavigationHost(onClose: () -> Unit) {
-    var screenKey by rememberSaveable { mutableStateOf("list") }
+fun NavigationHost(start: String = "list", onClose: () -> Unit) {
+    var screenKey by rememberSaveable { mutableStateOf(start) }
     val screen: NavScreen = when {
         screenKey == "glossary" -> NavScreen.Glossary
+        screenKey == "drills" -> NavScreen.Drills
         screenKey.startsWith("task:") -> NavScreen.Task(screenKey.removePrefix("task:").toInt())
         else -> NavScreen.List
     }
-    BackHandler { if (screen == NavScreen.List) onClose() else screenKey = "list" }
+    val back = { if (screenKey == start) onClose() else screenKey = "list" }
+    BackHandler(onBack = back)
     when (screen) {
         NavScreen.List -> NavigationTaskList(onBack = onClose, onTask = { screenKey = "task:$it" },
-                                             onGlossary = { screenKey = "glossary" })
-        is NavScreen.Task -> NavigationTaskScreen(screen.number, onBack = { screenKey = "list" })
-        NavScreen.Glossary -> NavigationGlossary(onBack = { screenKey = "list" })
+                                             onGlossary = { screenKey = "glossary" }, onDrills = { screenKey = "drills" })
+        is NavScreen.Task -> NavigationTaskScreen(screen.number, onBack = back)
+        NavScreen.Glossary -> NavigationGlossary(onBack = back)
+        NavScreen.Drills -> NavigationDrillsScreen(onBack = back)
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun NavScaffold(title: String, onBack: () -> Unit, content: @Composable () -> Unit) {
+internal fun NavScaffold(title: String, onBack: () -> Unit, content: @Composable () -> Unit) {
     Scaffold(
         containerColor = Sbf.colors.surface,
         topBar = {
@@ -106,8 +114,10 @@ private fun NavScaffold(title: String, onBack: () -> Unit, content: @Composable 
 }
 
 @Composable
-private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlossary: () -> Unit) {
-    val catalog = LocalApp.current.navigation
+private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlossary: () -> Unit, onDrills: () -> Unit) {
+    val app = LocalApp.current
+    val catalog = app.navigation
+    val flags by app.featureFlags.enabled.collectAsStateWithLifecycle()
     NavScaffold(stringResource(R.string.nav_tasks_title), onBack) {
         Row(Modifier.fillMaxWidth().cardStyle().padding(16.dp), verticalAlignment = Alignment.Top) {
             Icon(Icons.Filled.Map, null, tint = Brand.gold)
@@ -116,6 +126,16 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
                 Text(stringResource(R.string.nav_chart_title), style = MaterialTheme.typography.titleSmall,
                      fontWeight = FontWeight.SemiBold, color = Sbf.colors.ink)
                 Text(stringResource(R.string.nav_chart_text), style = MaterialTheme.typography.bodySmall, color = Sbf.colors.muted)
+            }
+        }
+        if (FeatureFlag.NAVIGATION_DRILLS in flags) {
+            Row(Modifier.fillMaxWidth().cardStyle().clickable(onClick = onDrills).padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Filled.Speed, null, tint = Brand.navyLight)
+                Spacer(Modifier.width(14.dp))
+                Text(stringResource(R.string.ff_navigation_drills), Modifier.weight(1f), style = MaterialTheme.typography.titleSmall,
+                     fontWeight = FontWeight.SemiBold, color = Sbf.colors.ink)
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
             }
         }
         Row(Modifier.fillMaxWidth().cardStyle().clickable(onClick = onGlossary).padding(16.dp),
@@ -152,6 +172,7 @@ private fun NavigationTaskScreen(number: Int, onBack: () -> Unit) {
     val app = LocalApp.current
     val task = app.navigation.task(number) ?: return onBack()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
+    val flags by app.featureFlags.enabled.collectAsStateWithLifecycle()
     var revealed by rememberSaveable { mutableStateOf(setOf<Int>()) }
     NavScaffold(stringResource(R.string.nav_task_n, number), onBack) {
         Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(Brand.navyLight.copy(alpha = 0.10f)).padding(16.dp)) {
@@ -162,7 +183,7 @@ private fun NavigationTaskScreen(number: Int, onBack: () -> Unit) {
                  color = Sbf.colors.muted)
         }
         task.steps.forEach { step ->
-            StepCard(step, step.number in revealed, settings.showEnglish) {
+            StepCard(step, step.number in revealed, settings.showEnglish, FeatureFlag.NAVIGATION_DRILLS in flags) {
                 revealed = if (step.number in revealed) revealed - step.number else revealed + step.number
             }
         }
@@ -180,7 +201,7 @@ private fun NavigationTaskScreen(number: Int, onBack: () -> Unit) {
 }
 
 @Composable
-private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, onToggle: () -> Unit) {
+private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, showLight: Boolean, onToggle: () -> Unit) {
     val german = isGerman()
     Column(Modifier.fillMaxWidth().cardStyle().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(verticalAlignment = Alignment.Top) {
@@ -203,6 +224,7 @@ private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, 
                 Text(stringResource(R.string.nav_official_result), style = MaterialTheme.typography.labelMedium,
                      fontWeight = FontWeight.SemiBold, color = Sbf.colors.success)
                 Bilingual(step.answerDe, step.answerEn, showEnglish, emphasis = true)
+                if (showLight) step.code?.let(LightCharacter::parse)?.let { LightBeacon(it, 70.dp) }
                 if (step.solution.isNotEmpty()) {
                     HorizontalDivider(color = Sbf.colors.hairline)
                     Text(stringResource(R.string.nav_how_to_solve), style = MaterialTheme.typography.labelMedium,

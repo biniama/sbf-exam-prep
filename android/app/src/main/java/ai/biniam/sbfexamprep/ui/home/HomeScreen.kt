@@ -68,6 +68,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
+import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material.icons.filled.Map
 import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamType
@@ -99,7 +100,8 @@ import java.time.LocalDate
 import java.time.format.TextStyle
 
 @Composable
-fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit, onNavigation: () -> Unit = {}) {
+/** [onNavigation] opens the navigation feature at "list" or "drills". */
+fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit, onNavigation: (String) -> Unit = {}) {
     val app = LocalApp.current
     val progress by app.progressRepository.progress.collectAsStateWithLifecycle()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
@@ -126,7 +128,8 @@ fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit, onNavigation: () -> Un
     val streak = @Composable { StreakSection(progress.dailyStreak(today), progress.last7Days(today)) }
     val actions = @Composable {
         QuickActions(settings.quizCount, settings.licenceGoal.examFormats, progress.wrongAnswerCount, quiz, onBrowse,
-                     if (FeatureFlag.NAVIGATION_TASKS in flags) onNavigation else null, FeatureFlag.NAVIGATION_EXAM in flags)
+                     if (FeatureFlag.NAVIGATION_TASKS in flags) { { onNavigation("list") } } else null, FeatureFlag.NAVIGATION_EXAM in flags,
+                     if (FeatureFlag.NAVIGATION_DRILLS in flags) { { onNavigation("drills") } } else null)
     }
     var editLicence by rememberSaveable { mutableStateOf(false) }
     if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
@@ -267,7 +270,7 @@ private fun StreakSection(streak: Int, days: List<Pair<LocalDate, Boolean>>) {
 
 @Composable
 private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit,
-                         onNavigation: (() -> Unit)?, withNavigation: Boolean) {
+                         onNavigation: (() -> Unit)?, withNavigation: Boolean, onDrills: (() -> Unit)?) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
         SectionHeader(stringResource(R.string.quick_start), Icons.Filled.Bolt)
         ActionRow(Icons.Filled.PlayCircle, Brand.navy, stringResource(R.string.quick_quiz),
@@ -283,6 +286,10 @@ private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: In
         if (onNavigation != null) {
             ActionRow(Icons.Filled.Map, Brand.oceanTeal, stringResource(R.string.nav_home_title),
                       stringResource(R.string.nav_home_sub), onNavigation)
+        }
+        if (onDrills != null) {
+            ActionRow(Icons.Filled.Speed, Brand.navyLight, stringResource(R.string.ff_navigation_drills),
+                      stringResource(R.string.drill_home_sub), onDrills)
         }
         if (mistakes > 0) {
             ActionRow(Icons.Filled.Replay, Sbf.colors.error, stringResource(R.string.practise_mistakes),

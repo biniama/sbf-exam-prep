@@ -14,6 +14,18 @@ struct NavigationTasksView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
                 chartCard
+                if flags.isOn(.navigationDrills) {
+                    NavigationLink {
+                        NavigationDrillsView()
+                    } label: {
+                        Label("Navigation drills", systemImage: "dial.medium")
+                            .font(.subheadline.weight(.semibold))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(14)
+                            .cardStyle()
+                    }
+                    .buttonStyle(.plain)
+                }
                 NavigationLink {
                     NavigationGlossaryView()
                 } label: {
@@ -95,6 +107,7 @@ struct NavigationTasksView: View {
 struct NavigationTaskView: View {
     let task: NavigationTask
     @EnvironmentObject var progress: UserProgress
+    @EnvironmentObject var flags: FeatureFlags
     @State private var revealed: Set<Int> = []
 
     var body: some View {
@@ -164,6 +177,9 @@ struct NavigationTaskView: View {
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(Color.successGreen)
                         bilingual(step.answerDE, step.answerEN, emphasis: true)
+                    }
+                    if flags.isOn(.navigationDrills), let code = step.code, let light = LightCharacter(code) {
+                        LightBeaconView(light: light, size: 70)
                     }
                     if !step.solution.isEmpty {
                         Divider()

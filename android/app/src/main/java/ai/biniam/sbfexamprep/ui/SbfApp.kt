@@ -91,9 +91,9 @@ fun SbfApp(app: SbfApplication) {
             QuizScreen(quiz)
             return@CompositionLocalProvider
         }
-        var navigationOpen by rememberSaveable { mutableStateOf(false) }
-        if (navigationOpen) {
-            NavigationHost(onClose = { navigationOpen = false })
+        var navigationStart by rememberSaveable { mutableStateOf<String?>(null) }
+        navigationStart?.let { start ->
+            NavigationHost(start, onClose = { navigationStart = null })
             return@CompositionLocalProvider
         }
 
@@ -112,7 +112,7 @@ fun SbfApp(app: SbfApplication) {
         ) {
             holder.SaveableStateProvider(tab.name) {
                 when (tab) {
-                    AppTab.HOME -> HomeScreen(quiz, onBrowse = { tab = AppTab.BROWSE }, onNavigation = { navigationOpen = true })
+                    AppTab.HOME -> HomeScreen(quiz, onBrowse = { tab = AppTab.BROWSE }, onNavigation = { navigationStart = it })
                     AppTab.BROWSE -> BrowseScreen()
                     AppTab.QUIZ -> QuizSetupScreen(quiz)
                     AppTab.SAVED -> SavedScreen(quiz)

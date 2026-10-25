@@ -42,6 +42,31 @@
     <string name="day_streak">Tage in Folge</string>
     <string name="default_quiz_length">Standardlänge eines Quiz</string>
     <string name="done">Fertig</string>
+    <string name="drill_answer">Antwort</string>
+    <string name="drill_arrival">Ankunftszeit</string>
+    <string name="drill_arrival_prompt">Abfahrt %1$s, Distanz %2$s sm, Fahrt %3$s kn. Wann kommst du an?</string>
+    <string name="drill_arrival_rule">Zeit = Distanz ÷ Fahrt × 60, dann zur Abfahrtszeit addieren.</string>
+    <string name="drill_check">Prüfen</string>
+    <string name="drill_course">Kursumwandlung</string>
+    <string name="drill_course_bearing">MgP = %1$s, Abl = %2$s, Mw = %3$s. Wie lautet die rwP?</string>
+    <string name="drill_course_bearing_rule">Peilungen werden wie Kurse umgerechnet: Ablenkung und Missweisung addieren.</string>
+    <string name="drill_course_c2t">MgK = %1$s, Abl = %2$s, Mw = %3$s. Wie lautet der rwK?</string>
+    <string name="drill_course_c2t_rule">Vom Kompass nach rechtweisend: Ablenkung und Missweisung addieren.</string>
+    <string name="drill_course_t2c">rwK = %1$s, Mw = %2$s, Abl = %3$s. Wie lautet der MgK?</string>
+    <string name="drill_course_t2c_rule">Von rechtweisend nach Kompass: Missweisung und Ablenkung abziehen.</string>
+    <string name="drill_home_sub">Kurse, Zeiten und Kennungen – unbegrenzt üben</string>
+    <string name="drill_light">Feuerkennungen</string>
+    <string name="drill_light_prompt">Beobachte das Feuer. Welche Kennung ist es?</string>
+    <string name="drill_next">Nächste Übung</string>
+    <string name="drill_not_quite">Nicht ganz</string>
+    <string name="drill_score">%1$d von %2$d richtig</string>
+    <string name="drill_tsd">Zeit, Distanz, Fahrt</string>
+    <string name="drill_tsd_distance">%1$d Min. bei %2$s kn. Welche Distanz?</string>
+    <string name="drill_tsd_distance_rule">Distanz = Fahrt × Zeit (in Stunden)</string>
+    <string name="drill_tsd_speed">%1$s sm in %2$d Min. Wie groß ist die Fahrt?</string>
+    <string name="drill_tsd_speed_rule">Fahrt = Distanz ÷ Zeit (in Stunden)</string>
+    <string name="drill_tsd_time">Distanz %1$s sm bei %2$s kn. Wie viele Minuten?</string>
+    <string name="drill_tsd_time_rule">Zeit = Distanz ÷ Fahrt × 60</string>
     <string name="due_explainer">Fragen kommen in wachsenden Abständen wieder, bis du sie sicher kannst.</string>
     <string name="due_for_review">Fällige Wiederholungen</string>
     <string name="each_part">Jeder Teil wird getrennt bewertet und muss bestanden werden.</string>
@@ -110,6 +135,16 @@
     <string name="licence_sail_addon">Nur Segel – ich habe schon den SBF Binnen (Motor)</string>
     <string name="licence_sailing">SBF Binnen · Segeln</string>
     <string name="licence_sea">SBF See</string>
+    <string name="light_animated">Animiertes Leuchtfeuer</string>
+    <string name="light_fixed">Festfeuer: leuchtet ununterbrochen</string>
+    <string name="light_flashing">Blitzfeuer: kurze Blitze, längere Dunkelheit</string>
+    <string name="light_interrupted_quick">Unterbrochenes Funkelfeuer: Funkelfolge, dann Pause</string>
+    <string name="light_isophase">Gleichtaktfeuer: Licht und Dunkel gleich lang</string>
+    <string name="light_long_flashing">Blinkfeuer: Lichtscheine von mindestens 2 Sekunden</string>
+    <string name="light_morse">Morsebuchstabe</string>
+    <string name="light_occulting">Unterbrochenes Feuer: länger hell als dunkel</string>
+    <string name="light_quick">Funkelfeuer: 50–60 Blitze pro Minute</string>
+    <string name="light_very_quick">Schnelles Funkelfeuer: 100–120 Blitze pro Minute</string>
     <string name="list_and">%1$s und %2$s</string>
     <string name="mark_mastered">Als gelernt markieren</string>
     <string name="mastered">Gelernt</string>

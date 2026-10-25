@@ -2,6 +2,16 @@
   "sourceLanguage": "en",
   "version": "1.0",
   "strings": {
+    "%@ nm in %lld min. What is the speed?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ sm in %lld Min. Wie groß ist die Fahrt?"
+          }
+        }
+      }
+    },
     "%@ · %lld min": {
       "localizations": {
         "de": {
@@ -32,6 +42,16 @@
         }
       }
     },
+    "%lld min at %@ kn. What distance?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Min. bei %@ kn. Welche Distanz?"
+          }
+        }
+      }
+    },
     "%lld of %lld": {
       "localizations": {
         "de": {
@@ -58,6 +78,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld von %lld richtig beantwortet"
+          }
+        }
+      }
+    },
+    "%lld of %lld correct": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld richtig"
           }
         }
       }
@@ -502,6 +532,26 @@
         }
       }
     },
+    "Animated light": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Animiertes Leuchtfeuer"
+          }
+        }
+      }
+    },
+    "Answer": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antwort"
+          }
+        }
+      }
+    },
     "Answer %@: %@": {
       "localizations": {
         "de": {
@@ -592,6 +642,16 @@
         }
       }
     },
+    "Arrival time": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ankunftszeit"
+          }
+        }
+      }
+    },
     "Basic": {
       "localizations": {
         "de": {
@@ -622,6 +682,16 @@
         }
       }
     },
+    "Bearings are converted like courses: add deviation and variation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peilungen werden wie Kurse umgerechnet: Ablenkung und Missweisung addieren."
+          }
+        }
+      }
+    },
     "Browse": {
       "localizations": {
         "de": {
@@ -648,6 +718,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kartenarbeit: in der Karte D49 einzeichnen."
+          }
+        }
+      }
+    },
+    "Check": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfen"
           }
         }
       }
@@ -762,6 +842,26 @@
         }
       }
     },
+    "Course conversion": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kursumwandlung"
+          }
+        }
+      }
+    },
+    "Courses, times and light characters – unlimited practice": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurse, Zeiten und Kennungen – unbegrenzt üben"
+          }
+        }
+      }
+    },
     "Daily reminder": {
       "localizations": {
         "de": {
@@ -812,12 +912,42 @@
         }
       }
     },
+    "Departure %@, distance %@ nm, speed %@ kn. When do you arrive?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abfahrt %@, Distanz %@ sm, Fahrt %@ kn. Wann kommst du an?"
+          }
+        }
+      }
+    },
     "Distance": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Distanz"
+          }
+        }
+      }
+    },
+    "Distance %@ nm at %@ kn. How many minutes?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanz %@ sm bei %@ kn. Wie viele Minuten?"
+          }
+        }
+      }
+    },
+    "Distance = speed × time (in hours)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanz = Fahrt × Zeit (in Stunden)"
           }
         }
       }
@@ -838,6 +968,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zum Vergrößern doppeltippen"
+          }
+        }
+      }
+    },
+    "Drill": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übung"
           }
         }
       }
@@ -1052,6 +1192,26 @@
         }
       }
     },
+    "Fixed light: shines continuously": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Festfeuer: leuchtet ununterbrochen"
+          }
+        }
+      }
+    },
+    "Flashing: short flashes, longer darkness": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blitzfeuer: kurze Blitze, längere Dunkelheit"
+          }
+        }
+      }
+    },
     "For testing only. These features are not finished and may change.": {
       "localizations": {
         "de": {
@@ -1068,6 +1228,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Beim reinen Segelschein zählt nur die Gesamtzahl richtiger Antworten."
+          }
+        }
+      }
+    },
+    "From compass to true: add deviation and variation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vom Kompass nach rechtweisend: Ablenkung und Missweisung addieren."
+          }
+        }
+      }
+    },
+    "From true to compass: subtract variation and deviation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Von rechtweisend nach Kompass: Missweisung und Ablenkung abziehen."
           }
         }
       }
@@ -1292,6 +1472,26 @@
         }
       }
     },
+    "Interrupted quick: quick flashes, then a pause": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unterbrochenes Funkelfeuer: Funkelfolge, dann Pause"
+          }
+        }
+      }
+    },
+    "Isophase: light and dark of equal length": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gleichtaktfeuer: Licht und Dunkel gleich lang"
+          }
+        }
+      }
+    },
     "Keep practising": {
       "localizations": {
         "de": {
@@ -1352,6 +1552,16 @@
         }
       }
     },
+    "Light characters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feuerkennungen"
+          }
+        }
+      }
+    },
     "Links to videos about working on the chart.": {
       "localizations": {
         "de": {
@@ -1392,12 +1602,42 @@
         }
       }
     },
+    "Long-flashing: flashes of at least 2 seconds": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blinkfeuer: Lichtscheine von mindestens 2 Sekunden"
+          }
+        }
+      }
+    },
     "Mastered": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Gelernt"
+          }
+        }
+      }
+    },
+    "MgK = %@, Abl = %@, Mw = %@. What is the rwK?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MgK = %@, Abl = %@, Mw = %@. Wie lautet der rwK?"
+          }
+        }
+      }
+    },
+    "MgP = %@, Abl = %@, Mw = %@. What is the rwP?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MgP = %@, Abl = %@, Mw = %@. Wie lautet die rwP?"
           }
         }
       }
@@ -1448,6 +1688,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Modus"
+          }
+        }
+      }
+    },
+    "Morse code letter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Morsebuchstabe"
           }
         }
       }
@@ -1562,6 +1812,16 @@
         }
       }
     },
+    "Next exercise": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nächste Übung"
+          }
+        }
+      }
+    },
     "Next question": {
       "localizations": {
         "de": {
@@ -1652,6 +1912,16 @@
         }
       }
     },
+    "Not quite": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht ganz"
+          }
+        }
+      }
+    },
     "Not studied": {
       "localizations": {
         "de": {
@@ -1678,6 +1948,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Anzahl der Fragen"
+          }
+        }
+      }
+    },
+    "Occulting: light longer than dark": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unterbrochenes Feuer: länger hell als dunkel"
           }
         }
       }
@@ -2088,6 +2368,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Schnellstart"
+          }
+        }
+      }
+    },
+    "Quick: 50–60 flashes per minute": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funkelfeuer: 50–60 Blitze pro Minute"
           }
         }
       }
@@ -2672,6 +2962,16 @@
         }
       }
     },
+    "Speed = distance ÷ time (in hours)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrt = Distanz ÷ Zeit (in Stunden)"
+          }
+        }
+      }
+    },
     "Sportbootführerschein Binnen & See": {
       "localizations": {
         "de": {
@@ -3032,6 +3332,26 @@
         }
       }
     },
+    "Time = distance ÷ speed × 60": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit = Distanz ÷ Fahrt × 60"
+          }
+        }
+      }
+    },
+    "Time = distance ÷ speed × 60, then add it to the departure time.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit = Distanz ÷ Fahrt × 60, dann zur Abfahrtszeit addieren."
+          }
+        }
+      }
+    },
     "Time limit: %lld minutes": {
       "localizations": {
         "en": {
@@ -3088,6 +3408,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zeit zum Lernen! ⛵"
+          }
+        }
+      }
+    },
+    "Time, distance, speed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit, Distanz, Fahrt"
           }
         }
       }
@@ -3178,6 +3508,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Version %@"
+          }
+        }
+      }
+    },
+    "Very quick: 100–120 flashes per minute": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelles Funkelfeuer: 100–120 Blitze pro Minute"
+          }
+        }
+      }
+    },
+    "Watch the light. Which character is it?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beobachte das Feuer. Welche Kennung ist es?"
           }
         }
       }
@@ -3368,6 +3718,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fragen"
+          }
+        }
+      }
+    },
+    "rwK = %@, Mw = %@, Abl = %@. What is the MgK?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rwK = %@, Mw = %@, Abl = %@. Wie lautet der MgK?"
           }
         }
       }

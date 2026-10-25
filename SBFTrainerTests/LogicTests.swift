@@ -239,3 +239,41 @@ final class NavigationExamTests: XCTestCase {
         XCTAssertEqual(vm.examResult?.navigationCorrect, 0)
     }
 }
+
+final class NavigationDrillTests: XCTestCase {
+    func testEveryDrillAcceptsItsOwnAnswer() {
+        for kind in NavigationDrill.Kind.allCases {
+            for _ in 0..<200 {
+                let drill = NavigationDrill.make(kind)
+                if kind == .light {
+                    XCTAssertTrue(drill.check(choice: drill.light!))
+                    XCTAssertEqual(drill.choices.count, 4)
+                    XCTAssertEqual(Set(drill.choices.map(\.code)).count, 4)
+                    XCTAssertEqual(Set(drill.choices.map(\.colour)).count, 1, "colour must not give the answer away")
+                } else if drill.isClock {
+                    let m = Int(drill.answer)
+                    XCTAssertTrue(drill.check(String(format: "%02d:%02d", (m / 60) % 24, m % 60)), drill.prompt)
+                } else {
+                    XCTAssertTrue(drill.check(String(format: "%.2f", drill.answer)), drill.prompt)
+                    XCTAssertFalse(drill.check(String(format: "%.2f", drill.answer + 5)), drill.prompt)
+                }
+            }
+        }
+    }
+
+    func testLightCharactersHaveTheRightRhythm() {
+        for code in LightCharacter.drillCodes {
+            XCTAssertNotNil(LightCharacter(code), code)
+        }
+        let iso = LightCharacter("Iso.W.8s")!
+        XCTAssertEqual(iso.period, 8)
+        XCTAssertTrue(iso.isOn(at: 1))
+        XCTAssertFalse(iso.isOn(at: 5))
+        let oc3 = LightCharacter("Oc(3).Y.12s")!
+        XCTAssertEqual(oc3.period, 12, accuracy: 0.001)
+        XCTAssertEqual(oc3.phases.filter { !$0.on }.count, 3, "three eclipses")
+        XCTAssertEqual(LightCharacter("Q(3).W.10s")!.phases.filter(\.on).count, 3)
+        XCTAssertEqual(LightCharacter("Fl.Y.4s")!.colour, .yellow)
+        XCTAssertNil(LightCharacter("Xyz.W.4s"))
+    }
+}

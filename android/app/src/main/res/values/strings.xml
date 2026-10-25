@@ -43,6 +43,31 @@
     <string name="day_streak">Day streak</string>
     <string name="default_quiz_length">Default quiz length</string>
     <string name="done">Done</string>
+    <string name="drill_answer">Answer</string>
+    <string name="drill_arrival">Arrival time</string>
+    <string name="drill_arrival_prompt">Departure %1$s, distance %2$s nm, speed %3$s kn. When do you arrive?</string>
+    <string name="drill_arrival_rule">Time = distance ÷ speed × 60, then add it to the departure time.</string>
+    <string name="drill_check">Check</string>
+    <string name="drill_course">Course conversion</string>
+    <string name="drill_course_bearing">MgP = %1$s, Abl = %2$s, Mw = %3$s. What is the rwP?</string>
+    <string name="drill_course_bearing_rule">Bearings are converted like courses: add deviation and variation.</string>
+    <string name="drill_course_c2t">MgK = %1$s, Abl = %2$s, Mw = %3$s. What is the rwK?</string>
+    <string name="drill_course_c2t_rule">From compass to true: add deviation and variation.</string>
+    <string name="drill_course_t2c">rwK = %1$s, Mw = %2$s, Abl = %3$s. What is the MgK?</string>
+    <string name="drill_course_t2c_rule">From true to compass: subtract variation and deviation.</string>
+    <string name="drill_home_sub">Courses, times and light characters – unlimited practice</string>
+    <string name="drill_light">Light characters</string>
+    <string name="drill_light_prompt">Watch the light. Which character is it?</string>
+    <string name="drill_next">Next exercise</string>
+    <string name="drill_not_quite">Not quite</string>
+    <string name="drill_score">%1$d of %2$d correct</string>
+    <string name="drill_tsd">Time, distance, speed</string>
+    <string name="drill_tsd_distance">%1$d min at %2$s kn. What distance?</string>
+    <string name="drill_tsd_distance_rule">Distance = speed × time (in hours)</string>
+    <string name="drill_tsd_speed">%1$s nm in %2$d min. What is the speed?</string>
+    <string name="drill_tsd_speed_rule">Speed = distance ÷ time (in hours)</string>
+    <string name="drill_tsd_time">Distance %1$s nm at %2$s kn. How many minutes?</string>
+    <string name="drill_tsd_time_rule">Time = distance ÷ speed × 60</string>
     <string name="due_explainer">Questions come back at growing intervals until you know them for good.</string>
     <string name="due_for_review">Due for review</string>
     <string name="each_part">Each part is assessed separately and must be passed.</string>
@@ -111,6 +136,16 @@
     <string name="licence_sail_addon">Sail only – I already hold SBF Inland (motor)</string>
     <string name="licence_sailing">SBF Inland · sailing</string>
     <string name="licence_sea">SBF Sea</string>
+    <string name="light_animated">Animated light</string>
+    <string name="light_fixed">Fixed light: shines continuously</string>
+    <string name="light_flashing">Flashing: short flashes, longer darkness</string>
+    <string name="light_interrupted_quick">Interrupted quick: quick flashes, then a pause</string>
+    <string name="light_isophase">Isophase: light and dark of equal length</string>
+    <string name="light_long_flashing">Long-flashing: flashes of at least 2 seconds</string>
+    <string name="light_morse">Morse code letter</string>
+    <string name="light_occulting">Occulting: light longer than dark</string>
+    <string name="light_quick">Quick: 50–60 flashes per minute</string>
+    <string name="light_very_quick">Very quick: 100–120 flashes per minute</string>
     <string name="list_and">%1$s and %2$s</string>
     <string name="mark_mastered">Mark as mastered</string>
     <string name="mastered">Mastered</string>

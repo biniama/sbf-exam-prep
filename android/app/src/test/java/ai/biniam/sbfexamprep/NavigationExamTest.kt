@@ -42,3 +42,43 @@ class NavigationExamTest {
         assertEquals(0, ExamRules(ExamFormat.BINNEN_MOTOR, includeNavigation = true).navigationCount)
     }
 }
+
+class NavigationDrillTest {
+    @Test fun everyDrillAcceptsItsOwnAnswer() {
+        val random = kotlin.random.Random(42)
+        ai.biniam.sbfexamprep.data.NavigationDrill.Kind.entries.forEach { kind ->
+            repeat(200) {
+                val drill = ai.biniam.sbfexamprep.data.NavigationDrill.make(kind, random)
+                when {
+                    kind == ai.biniam.sbfexamprep.data.NavigationDrill.Kind.LIGHT -> {
+                        assertTrue(drill.check(drill.light!!))
+                        assertEquals(4, drill.choices.map { it.code }.toSet().size)
+                        assertEquals("colour must not give the answer away", 1, drill.choices.map { it.colour }.toSet().size)
+                    }
+                    drill.isClock -> {
+                        val m = drill.answer.toInt()
+                        assertTrue(drill.check("%02d:%02d".format((m / 60) % 24, m % 60)))
+                    }
+                    else -> {
+                        assertTrue(drill.check("%.2f".format(java.util.Locale.ROOT, drill.answer)))
+                        assertFalse(drill.check("%.2f".format(java.util.Locale.ROOT, drill.answer + 5)))
+                    }
+                }
+            }
+        }
+    }
+
+    @Test fun lightCharactersHaveTheRightRhythm() {
+        ai.biniam.sbfexamprep.data.LightCharacter.drillCodes.forEach {
+            assertTrue(it, ai.biniam.sbfexamprep.data.LightCharacter.parse(it) != null)
+        }
+        val iso = ai.biniam.sbfexamprep.data.LightCharacter.parse("Iso.W.8s")!!
+        assertEquals(8.0, iso.period, 1e-9)
+        assertTrue(iso.isOn(1.0))
+        assertFalse(iso.isOn(5.0))
+        val oc3 = ai.biniam.sbfexamprep.data.LightCharacter.parse("Oc(3).Y.12s")!!
+        assertEquals(12.0, oc3.period, 1e-9)
+        assertEquals(3, oc3.phases.count { !it.first })
+        assertNull(ai.biniam.sbfexamprep.data.LightCharacter.parse("Xyz.W.4s"))
+    }
+}

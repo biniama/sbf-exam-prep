@@ -10,6 +10,7 @@ struct HomeView: View {
     @State private var showingQuiz = false
     @State private var showingLicence = false
     @State private var showingNavigation = false
+    @State private var showingDrills = false
 
     init(selectedTab: Binding<AppTab> = .constant(.home)) {
         _selectedTab = selectedTab
@@ -36,6 +37,7 @@ struct HomeView: View {
                 NavigationStack { QuizView(vm: quizVM) }
             }
             .navigationDestination(isPresented: $showingNavigation) { NavigationTasksView() }
+            .navigationDestination(isPresented: $showingDrills) { NavigationDrillsView() }
             .sheet(isPresented: $showingLicence) {
                 NavigationStack { LicenceSettingsView(isSheet: true) }
             }
@@ -288,6 +290,12 @@ struct HomeView: View {
                     quickActionRow(icon: "map.fill", title: Text("Navigation tasks · Sea"),
                                    subtitle: Text("15 official chart tasks with worked solutions"), color: .oceanTeal) {
                         showingNavigation = true
+                    }
+                }
+                if flags.isOn(.navigationDrills) {
+                    quickActionRow(icon: "dial.medium.fill", title: Text("Navigation drills"),
+                                   subtitle: Text("Courses, times and light characters – unlimited practice"), color: .navyLight) {
+                        showingDrills = true
                     }
                 }
                 if progress.wrongAnswerCount > 0 {

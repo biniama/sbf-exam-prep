@@ -95,8 +95,8 @@ enum NavigationAnswerChecker {
 /// The navigation part of an exam simulation: one task, 9 sub-questions, pass with 7.
 @MainActor
 final class NavigationExamPart: ObservableObject {
-    static let questionCount = 9
-    static let passMark = 7
+    nonisolated static let questionCount = 9
+    nonisolated static let passMark = 7
 
     let task: NavigationTask
     let tolerances: NavigationTolerances

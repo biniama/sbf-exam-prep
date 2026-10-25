@@ -104,6 +104,12 @@ STRINGS = {
     "diagram_play": "Play", "diagram_pause": "Pause",
     "diagram_disclaimer": "Drawn from the official results – not a reproduction of chart D49.",
 
+    # Technique videos
+    "videos_title": "Technique videos", "videos_walkthrough": "Video walkthrough",
+    "videos_watch_step": "Watch this step in the video (%@)", "videos_technique": "Videos: %@",
+    "videos_minutes": "%lld min", "videos_german": "German", "videos_english": "English",
+    "videos_disclaimer": "Videos by third parties on YouTube. They open in YouTube and are not part of the official ELWIS material.",
+
     # Exam formats & licence
     "format_binnen_motor": "Inland · motor", "format_binnen_sail": "Inland · sail",
     "format_binnen_motor_sail": "Inland · motor + sail", "format_sail_addon": "Sailing add-on",

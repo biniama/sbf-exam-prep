@@ -165,6 +165,17 @@ DE = {
     "Drawn from the official results – not a reproduction of chart D49.":
         "Aus den amtlichen Ergebnissen gezeichnet – keine Wiedergabe der Karte D49.",
 
+    # Technique videos
+    "Technique videos": "Technik-Videos",
+    "Video walkthrough": "Lösungsvideo",
+    "Watch this step in the video (%@)": "Diesen Schritt im Video ansehen (%@)",
+    "Videos: %@": "Videos: %@",
+    "%lld min": "%lld Min.",
+    "German": "Deutsch",
+    "English": "Englisch",
+    "Videos by third parties on YouTube. They open in YouTube and are not part of the official ELWIS material.":
+        "Videos von Dritten auf YouTube. Sie öffnen sich in YouTube und gehören nicht zum amtlichen ELWIS-Material.",
+
     # Exam formats & licence
     "Inland · motor": "Binnen · Motor",
     "Inland · sail": "Binnen · Segel",

@@ -26,6 +26,18 @@ struct NavigationTasksView: View {
                     }
                     .buttonStyle(.plain)
                 }
+                if flags.isOn(.navigationVideos), let techniques = nav.catalog?.techniques {
+                    NavigationLink {
+                        NavigationVideosView(techniques: techniques)
+                    } label: {
+                        Label("Technique videos", systemImage: "play.rectangle")
+                            .font(.subheadline.weight(.semibold))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(14)
+                            .cardStyle()
+                    }
+                    .buttonStyle(.plain)
+                }
                 NavigationLink {
                     NavigationGlossaryView()
                 } label: {
@@ -106,6 +118,8 @@ struct NavigationTasksView: View {
 
 struct NavigationTaskView: View {
     let task: NavigationTask
+    @StateObject private var nav = NavigationStore.shared
+    @Environment(\.openURL) private var openURL
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var flags: FeatureFlags
     @State private var revealed: Set<Int> = []
@@ -129,6 +143,14 @@ struct NavigationTaskView: View {
                             .cardStyle()
                     }
                     .buttonStyle(.plain)
+                }
+                if flags.isOn(.navigationVideos), let walkthrough = task.walkthrough {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Video walkthrough")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(Color.inkSecondary)
+                        NavigationVideoRow(video: walkthrough.video)
+                    }
                 }
                 if let mw = task.values.mw {
                     Label {
@@ -207,6 +229,9 @@ struct NavigationTaskView: View {
                             }
                         }
                     }
+                    if flags.isOn(.navigationVideos) {
+                        stepVideos(step)
+                    }
                 }
                 .padding(12)
                 .background(Color.successGreen.opacity(0.08))
@@ -225,6 +250,31 @@ struct NavigationTaskView: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .cardStyle()
+    }
+
+    /// The sub-question in the walkthrough video and the videos about its technique.
+    @ViewBuilder
+    private func stepVideos(_ step: NavigationStep) -> some View {
+        let start = task.walkthrough?.start(ofStep: step.number)
+        let technique = nav.catalog?.technique(for: step.kind)
+        if start != nil || technique != nil {
+            Divider()
+            VStack(alignment: .leading, spacing: 8) {
+                if let walkthrough = task.walkthrough, let start {
+                    Button { openURL(walkthrough.video.url(startingAt: start)) } label: {
+                        Label("Watch this step in the video (\(NavigationWalkthrough.timestamp(start)))",
+                              systemImage: "play.rectangle.fill")
+                    }
+                }
+                if let technique {
+                    NavigationLink { NavigationVideosView(techniques: [technique]) } label: {
+                        Label("Videos: \(technique.localized)", systemImage: "play.rectangle.on.rectangle")
+                    }
+                }
+            }
+            .font(.footnote.weight(.semibold))
+            .foregroundStyle(Color.oceanTeal)
+        }
     }
 
     /// German text as in the exam, with the English translation below when enabled.

@@ -338,6 +338,14 @@
     <string name="translations_question">The exam is in German. Show an English translation below each question and answer?</string>
     <string name="unanswered_wrong">Unanswered questions count as wrong.</string>
     <string name="version">Version %s</string>
+    <string name="videos_disclaimer">Videos by third parties on YouTube. They open in YouTube and are not part of the official ELWIS material.</string>
+    <string name="videos_english">English</string>
+    <string name="videos_german">German</string>
+    <string name="videos_minutes">%d min</string>
+    <string name="videos_technique">Videos: %s</string>
+    <string name="videos_title">Technique videos</string>
+    <string name="videos_walkthrough">Video walkthrough</string>
+    <string name="videos_watch_step">Watch this step in the video (%s)</string>
     <string name="why">Why?</string>
     <string name="wrong">Wrong</string>
     <string name="your_answer_wrong">Your answer, wrong</string>

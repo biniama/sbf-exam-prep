@@ -9,10 +9,11 @@ struct NavigationCatalog: Decodable {
     let tolerances: NavigationTolerances
     let glossary: [GlossaryEntry]
     let questionTypes: [QuestionType]
+    let techniques: [NavigationTechnique]
     let tasks: [NavigationTask]
 
     enum CodingKeys: String, CodingKey {
-        case source, chart, tolerances, glossary, tasks
+        case source, chart, tolerances, glossary, techniques, tasks
         case sourceURL = "source_url"
         case chartExcerpts = "chart_excerpts"
         case questionTypes = "question_types"
@@ -39,6 +40,9 @@ struct NavigationCatalog: Decodable {
         let en: String
         var id: Int { number }
     }
+
+    /// Videos explaining the technique behind a kind of sub-question.
+    func technique(for kind: String) -> NavigationTechnique? { techniques.first { $0.kinds.contains(kind) } }
 }
 
 /// Practice tolerances for typed answers (ELWIS publishes no official tolerances).
@@ -65,6 +69,8 @@ struct NavigationTask: Decodable, Identifiable, Hashable {
     let steps: [NavigationStep]
     /// Step-by-step solution diagram (nil where the official results do not fix the geometry).
     let diagram: NavigationDiagram?
+    /// Third-party video solving this task, with the start of each sub-question.
+    let walkthrough: NavigationWalkthrough?
 
     var id: Int { number }
 
@@ -79,7 +85,7 @@ struct NavigationTask: Decodable, Identifiable, Hashable {
     }
 
     enum CodingKeys: String, CodingKey {
-        case number, values, steps, diagram
+        case number, values, steps, diagram, walkthrough
         case introDE = "intro_de"
         case introEN = "intro_en"
         case notesDE = "notes_de"
@@ -215,4 +221,44 @@ struct NavigationDiagram: Decodable, Hashable {
         let step: Int?
         var localized: String { AppLanguage.isGerman ? de : en }
     }
+}
+
+/// A YouTube video, opened in the YouTube app or browser (feature flag navigationVideos).
+struct NavigationVideo: Decodable, Hashable, Identifiable {
+    let id: String
+    /// "de" or "en"; walkthroughs are German.
+    let lang: String?
+    let title: String
+    let channel: String
+    let seconds: Int
+
+    var minutes: Int { max(1, (seconds + 30) / 60) }
+
+    func url(startingAt start: Int? = nil) -> URL {
+        var components = URLComponents(string: "https://www.youtube.com/watch")!
+        components.queryItems = [URLQueryItem(name: "v", value: id)] + (start.map { [URLQueryItem(name: "t", value: "\($0)s")] } ?? [])
+        return components.url!
+    }
+}
+
+struct NavigationTechnique: Decodable, Hashable, Identifiable {
+    let id: String
+    let de: String
+    let en: String
+    /// Step kinds this technique explains.
+    let kinds: [String]
+    let videos: [NavigationVideo]
+    var localized: String { AppLanguage.isGerman ? de : en }
+}
+
+struct NavigationWalkthrough: Decodable, Hashable {
+    let id: String
+    let title: String
+    let channel: String
+    let seconds: Int
+    /// Sub-question number → start in seconds.
+    let chapters: [String: Int]
+
+    var video: NavigationVideo { NavigationVideo(id: id, lang: "de", title: title, channel: channel, seconds: seconds) }
+    func start(ofStep step: Int) -> Int? { chapters[String(step)] }
 }

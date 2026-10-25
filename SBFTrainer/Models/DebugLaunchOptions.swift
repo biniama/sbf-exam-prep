@@ -20,7 +20,8 @@ enum DebugLaunchOptions {
 
     static var selectedQuestion: String? { UserDefaults.standard.string(forKey: "screenshotQuestion") }
 
-    /// Opens a quiz on launch: "exam-binnen", "exam-segeln", "exam-see", "navigation-exam" or "practice".
+    /// Opens a quiz on launch: "exam-binnen", "exam-segeln", "exam-see", "navigation-exam" or "practice";
+    /// "navigation" opens the navigation task list instead.
     static var autoQuiz: String? { UserDefaults.standard.string(forKey: "screenshotQuiz") }
 
     /// Seeds realistic progress so screenshots don't show an empty app.

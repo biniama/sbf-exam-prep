@@ -24,6 +24,7 @@ ROOT = HERE.parents[1]
 OUT = ROOT / "shared" / "navigation_tasks.json"
 TRANSLATIONS = HERE / "navigation_en.json"
 VALUES = HERE / "navigation_values.json"
+VIDEOS = HERE / "navigation_videos.json"
 BASE = "https://www.elwis.de/DE/Sportschifffahrt/Sportbootfuehrerscheine/Fragenkatalog-See/Navigationsaufgaben"
 OVERVIEW = f"{BASE}/Navigationsaufgaben-node.html"
 
@@ -373,6 +374,15 @@ def main():
                     step["check"] = check
         task["diagram"] = navigation_diagrams.diagram(task["number"])
 
+    # Curated and verified by navigation_videos.py (feature flag navigationVideos).
+    videos = json.loads(VIDEOS.read_text(encoding="utf-8"))
+    covered = {k for t in videos["techniques"] for k in t["kinds"]}
+    uncovered = {s["kind"] for t in tasks for s in t["steps"] if "kind" in s} - covered
+    assert not uncovered, f"no technique videos for: {uncovered}"
+    for task, walkthrough in zip(tasks, videos["walkthroughs"], strict=True):
+        assert walkthrough["task"] == task["number"]
+        task["walkthrough"] = {k: v for k, v in walkthrough.items() if k not in ("task", "lang")}
+
     out = {
         "source": "ELWIS – Navigationsaufgaben SBF See (Übungskarte D49)",
         "source_url": OVERVIEW,
@@ -383,6 +393,7 @@ def main():
         "glossary": [{"abbr": a, "de": de, "en": en, "explanation_de": xde, "explanation_en": xen}
                      for a, de, en, xde, xen in GLOSSARY],
         "question_types": [{"number": n, "de": de, "en": en} for n, (de, en) in QUESTION_TYPES.items()],
+        "techniques": videos["techniques"],
         "tasks": tasks,
     }
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

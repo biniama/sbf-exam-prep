@@ -52,6 +52,7 @@ struct HomeView: View {
                     quizVM.debugSkipToNavigation()
                     showingQuiz = true
                 case "practice": quizVM.setup(type: .all, count: 20); showingQuiz = true
+                case "navigation": showingNavigation = true
                 default: break
                 }
             }

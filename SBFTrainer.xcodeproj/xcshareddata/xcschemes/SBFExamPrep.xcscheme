@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0493175B5334A0790795384"
+               BlueprintIdentifier = "6CBC3D1911C4B14863A238B1"
                BuildableName = "SBFTrainer.app"
                BlueprintName = "SBFTrainer"
                ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -30,7 +30,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A0493175B5334A0790795384"
+            BlueprintIdentifier = "6CBC3D1911C4B14863A238B1"
             BuildableName = "SBFTrainer.app"
             BlueprintName = "SBFTrainer"
             ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -41,7 +41,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "289F33AD7CF3036F054C193D"
+               BlueprintIdentifier = "97DCBA0BBCB656DE2880FC94"
                BuildableName = "SBFTrainerTests.xctest"
                BlueprintName = "SBFTrainerTests"
                ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -63,7 +63,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A0493175B5334A0790795384"
+            BlueprintIdentifier = "6CBC3D1911C4B14863A238B1"
             BuildableName = "SBFTrainer.app"
             BlueprintName = "SBFTrainer"
             ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -80,7 +80,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A0493175B5334A0790795384"
+            BlueprintIdentifier = "6CBC3D1911C4B14863A238B1"
             BuildableName = "SBFTrainer.app"
             BlueprintName = "SBFTrainer"
             ReferencedContainer = "container:SBFTrainer.xcodeproj">

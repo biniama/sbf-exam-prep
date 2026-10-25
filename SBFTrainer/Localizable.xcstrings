@@ -42,6 +42,16 @@
         }
       }
     },
+    "%lld min": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Min."
+          }
+        }
+      }
+    },
     "%lld min at %@ kn. What distance?": {
       "localizations": {
         "de": {
@@ -1042,6 +1052,16 @@
         }
       }
     },
+    "English": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Englisch"
+          }
+        }
+      }
+    },
     "Every question is shown in German, as in the exam, with an optional English translation.": {
       "localizations": {
         "de": {
@@ -1268,6 +1288,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Von rechtweisend nach Kompass: Missweisung und Ablenkung abziehen."
+          }
+        }
+      }
+    },
+    "German": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deutsch"
           }
         }
       }
@@ -3622,12 +3652,52 @@
         }
       }
     },
+    "Video walkthrough": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsvideo"
+          }
+        }
+      }
+    },
+    "Videos by third parties on YouTube. They open in YouTube and are not part of the official ELWIS material.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Videos von Dritten auf YouTube. Sie öffnen sich in YouTube und gehören nicht zum amtlichen ELWIS-Material."
+          }
+        }
+      }
+    },
+    "Videos: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Videos: %@"
+          }
+        }
+      }
+    },
     "Watch the light. Which character is it?": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Beobachte das Feuer. Welche Kennung ist es?"
+          }
+        }
+      }
+    },
+    "Watch this step in the video (%@)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diesen Schritt im Video ansehen (%@)"
           }
         }
       }

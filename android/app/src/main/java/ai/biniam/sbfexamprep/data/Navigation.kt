@@ -17,9 +17,13 @@ data class NavigationCatalog(
     val tolerances: NavigationTolerances,
     val glossary: List<GlossaryEntry>,
     @SerialName("question_types") val questionTypes: List<QuestionTypeEntry>,
+    val techniques: List<NavigationTechnique> = emptyList(),
     val tasks: List<NavigationTask>,
 ) {
     fun task(number: Int) = tasks.firstOrNull { it.number == number }
+
+    /** Videos explaining the technique behind a kind of sub-question. */
+    fun technique(kind: String) = techniques.firstOrNull { kind in it.kinds }
 
     companion object {
         const val ASSET_NAME = "navigation_tasks.json"
@@ -63,6 +67,8 @@ data class NavigationTask(
     val steps: List<NavigationStep>,
     /** Step-by-step solution diagram (null where the official results do not fix the geometry). */
     val diagram: NavigationDiagram? = null,
+    /** Third-party video solving this task, with the start of each sub-question. */
+    val walkthrough: NavigationWalkthrough? = null,
 ) {
     @Serializable
     data class TaskValues(val mw: Double? = null, @SerialName("speed_kn") val speedKn: Double? = null)
@@ -139,4 +145,50 @@ data class AnswerCheck(
 ) {
     val numbers: List<Double> get() = values.orEmpty().mapNotNull { it.doubleOrNull }
     val texts: List<String> get() = values.orEmpty().filter { it.isString }.map { it.content }
+}
+
+/** A YouTube video, opened in the YouTube app or browser (feature flag NAVIGATION_VIDEOS). */
+@Serializable
+data class NavigationVideo(
+    val id: String,
+    /** "de" or "en"; walkthroughs are German. */
+    val lang: String? = null,
+    val title: String,
+    val channel: String,
+    val seconds: Int,
+) {
+    val minutes: Int get() = maxOf(1, (seconds + 30) / 60)
+
+    fun url(start: Int? = null) = "https://www.youtube.com/watch?v=$id" + (start?.let { "&t=${it}s" } ?: "")
+}
+
+@Serializable
+data class NavigationTechnique(
+    val id: String,
+    val de: String,
+    val en: String,
+    /** Step kinds this technique explains. */
+    val kinds: List<String>,
+    val videos: List<NavigationVideo>,
+) {
+    fun title(german: Boolean) = if (german) de else en
+}
+
+@Serializable
+data class NavigationWalkthrough(
+    val id: String,
+    val title: String,
+    val channel: String,
+    val seconds: Int,
+    /** Sub-question number → start in seconds. */
+    val chapters: Map<String, Int> = emptyMap(),
+) {
+    val video: NavigationVideo get() = NavigationVideo(id, "de", title, channel, seconds)
+
+    fun start(step: Int): Int? = chapters[step.toString()]
+
+    companion object {
+        /** "4:41" */
+        fun timestamp(seconds: Int) = "%d:%02d".format(seconds / 60, seconds % 60)
+    }
 }

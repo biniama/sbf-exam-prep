@@ -24,6 +24,12 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Map
+import androidx.compose.material.icons.filled.OndemandVideo
+import androidx.compose.material.icons.filled.SmartDisplay
+import androidx.compose.material.icons.filled.VideoLibrary
+import androidx.compose.ui.platform.LocalUriHandler
+import ai.biniam.sbfexamprep.data.NavigationTechnique
+import ai.biniam.sbfexamprep.data.NavigationWalkthrough
 import androidx.compose.material.icons.filled.Route
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Visibility
@@ -72,6 +78,9 @@ private sealed interface NavScreen {
     data object Glossary : NavScreen
     data object Drills : NavScreen
     data class Diagram(val number: Int) : NavScreen
+    data object Videos : NavScreen
+    /** Videos of one technique, opened from a sub-question of task [number]. */
+    data class Technique(val id: String, val number: Int) : NavScreen
 }
 
 /** [start]: "list" (task list) or "drills". Going back from the start screen closes the feature. */
@@ -81,6 +90,8 @@ fun NavigationHost(start: String = "list", onClose: () -> Unit) {
     val screen: NavScreen = when {
         screenKey == "glossary" -> NavScreen.Glossary
         screenKey == "drills" -> NavScreen.Drills
+        screenKey == "videos" -> NavScreen.Videos
+        screenKey.startsWith("technique:") -> screenKey.split(":").let { NavScreen.Technique(it[1], it[2].toInt()) }
         screenKey.startsWith("task:") -> NavScreen.Task(screenKey.removePrefix("task:").toInt())
         screenKey.startsWith("diagram:") -> NavScreen.Diagram(screenKey.removePrefix("diagram:").toInt())
         else -> NavScreen.List
@@ -89,14 +100,20 @@ fun NavigationHost(start: String = "list", onClose: () -> Unit) {
         when {
             screenKey == start -> onClose()
             screen is NavScreen.Diagram -> screenKey = "task:${screen.number}"
+            screen is NavScreen.Technique -> screenKey = "task:${screen.number}"
             else -> screenKey = "list"
         }
     }
     BackHandler(onBack = back)
     when (screen) {
         NavScreen.List -> NavigationTaskList(onBack = onClose, onTask = { screenKey = "task:$it" },
-                                             onGlossary = { screenKey = "glossary" }, onDrills = { screenKey = "drills" })
-        is NavScreen.Task -> NavigationTaskScreen(screen.number, onBack = back, onDiagram = { screenKey = "diagram:${screen.number}" })
+                                             onGlossary = { screenKey = "glossary" }, onDrills = { screenKey = "drills" },
+                                             onVideos = { screenKey = "videos" })
+        is NavScreen.Task -> NavigationTaskScreen(screen.number, onBack = back, onDiagram = { screenKey = "diagram:${screen.number}" },
+                                                  onTechnique = { screenKey = "technique:$it:${screen.number}" })
+        NavScreen.Videos -> NavigationVideosScreen(LocalApp.current.navigation.techniques, onBack = back)
+        is NavScreen.Technique -> NavigationVideosScreen(LocalApp.current.navigation.techniques.filter { it.id == screen.id },
+                                                         onBack = back)
         NavScreen.Glossary -> NavigationGlossary(onBack = back)
         NavScreen.Drills -> NavigationDrillsScreen(onBack = back)
         is NavScreen.Diagram -> {
@@ -130,7 +147,8 @@ internal fun NavScaffold(title: String, onBack: () -> Unit, content: @Composable
 }
 
 @Composable
-private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlossary: () -> Unit, onDrills: () -> Unit) {
+private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlossary: () -> Unit, onDrills: () -> Unit,
+                               onVideos: () -> Unit) {
     val app = LocalApp.current
     val catalog = app.navigation
     val flags by app.featureFlags.enabled.collectAsStateWithLifecycle()
@@ -150,6 +168,16 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
                 Icon(Icons.Filled.Speed, null, tint = Brand.navyLight)
                 Spacer(Modifier.width(14.dp))
                 Text(stringResource(R.string.ff_navigation_drills), Modifier.weight(1f), style = MaterialTheme.typography.titleSmall,
+                     fontWeight = FontWeight.SemiBold, color = Sbf.colors.ink)
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
+            }
+        }
+        if (FeatureFlag.NAVIGATION_VIDEOS in flags) {
+            Row(Modifier.fillMaxWidth().cardStyle().clickable(onClick = onVideos).padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Filled.OndemandVideo, null, tint = Brand.navyLight)
+                Spacer(Modifier.width(14.dp))
+                Text(stringResource(R.string.videos_title), Modifier.weight(1f), style = MaterialTheme.typography.titleSmall,
                      fontWeight = FontWeight.SemiBold, color = Sbf.colors.ink)
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
             }
@@ -184,7 +212,7 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
 }
 
 @Composable
-private fun NavigationTaskScreen(number: Int, onBack: () -> Unit, onDiagram: () -> Unit) {
+private fun NavigationTaskScreen(number: Int, onBack: () -> Unit, onDiagram: () -> Unit, onTechnique: (String) -> Unit) {
     val app = LocalApp.current
     val task = app.navigation.task(number) ?: return onBack()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
@@ -204,12 +232,20 @@ private fun NavigationTaskScreen(number: Int, onBack: () -> Unit, onDiagram: () 
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
             }
         }
+        val videos = FeatureFlag.NAVIGATION_VIDEOS in flags
+        if (videos) task.walkthrough?.let { walkthrough ->
+            Text(stringResource(R.string.videos_walkthrough), style = MaterialTheme.typography.labelMedium,
+                 fontWeight = FontWeight.SemiBold, color = Sbf.colors.inkSecondary)
+            NavigationVideoRow(walkthrough.video)
+        }
         task.values.mw?.let { mw ->
             Text(stringResource(R.string.nav_variation, signedDegrees(mw)), style = MaterialTheme.typography.bodySmall,
                  color = Sbf.colors.muted)
         }
         task.steps.forEach { step ->
-            StepCard(step, step.number in revealed, settings.showEnglish, FeatureFlag.NAVIGATION_DRILLS in flags) {
+            val stepVideos = if (videos) StepVideos(task.walkthrough, task.walkthrough?.start(step.number),
+                                                     app.navigation.technique(step.kind), onTechnique) else null
+            StepCard(step, step.number in revealed, settings.showEnglish, FeatureFlag.NAVIGATION_DRILLS in flags, stepVideos) {
                 revealed = if (step.number in revealed) revealed - step.number else revealed + step.number
             }
         }
@@ -227,7 +263,8 @@ private fun NavigationTaskScreen(number: Int, onBack: () -> Unit, onDiagram: () 
 }
 
 @Composable
-private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, showLight: Boolean, onToggle: () -> Unit) {
+private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, showLight: Boolean, videos: StepVideos?,
+                     onToggle: () -> Unit) {
     val german = isGerman()
     Column(Modifier.fillMaxWidth().cardStyle().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(verticalAlignment = Alignment.Top) {
@@ -261,6 +298,7 @@ private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, 
                              fontWeight = if ('=' in text) FontWeight.Medium else FontWeight.Normal)
                     }
                 }
+                videos?.let { StepVideoLinks(it, german) }
             }
         }
         TextButton(onClick = onToggle, contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp)) {
@@ -272,6 +310,44 @@ private fun StepCard(step: NavigationStep, open: Boolean, showEnglish: Boolean, 
 }
 
 /** German text as in the exam, with the English translation below when enabled. */
+/** The sub-question in the walkthrough video and the videos about its technique (feature flag NAVIGATION_VIDEOS). */
+private class StepVideos(
+    val walkthrough: NavigationWalkthrough?,
+    val start: Int?,
+    val technique: NavigationTechnique?,
+    val onTechnique: (String) -> Unit,
+)
+
+@Composable
+private fun StepVideoLinks(videos: StepVideos, german: Boolean) {
+    val uriHandler = LocalUriHandler.current
+    val walkthrough = videos.walkthrough
+    val start = videos.start
+    if ((walkthrough == null || start == null) && videos.technique == null) return
+    HorizontalDivider(color = Sbf.colors.hairline)
+    if (walkthrough != null && start != null) {
+        VideoLink(Icons.Filled.SmartDisplay,
+                  stringResource(R.string.videos_watch_step, NavigationWalkthrough.timestamp(start))) {
+            uriHandler.openUri(walkthrough.video.url(start))
+        }
+    }
+    videos.technique?.let { technique ->
+        VideoLink(Icons.Filled.VideoLibrary, stringResource(R.string.videos_technique, technique.title(german))) {
+            videos.onTechnique(technique.id)
+        }
+    }
+}
+
+@Composable
+private fun VideoLink(icon: androidx.compose.ui.graphics.vector.ImageVector, text: String, onClick: () -> Unit) {
+    Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).clickable(onClick = onClick).padding(vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically) {
+        Icon(icon, null, Modifier.size(18.dp), tint = Brand.oceanTeal)
+        Spacer(Modifier.width(8.dp))
+        Text(text, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.SemiBold, color = Brand.oceanTeal)
+    }
+}
+
 @Composable
 private fun Bilingual(de: String, en: String?, showEnglish: Boolean, emphasis: Boolean = false, small: Boolean = false) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {

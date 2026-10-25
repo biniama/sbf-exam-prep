@@ -337,6 +337,14 @@
     <string name="translations_question">Die Prüfung ist auf Deutsch. Soll unter jeder Frage und Antwort eine englische Übersetzung stehen?</string>
     <string name="unanswered_wrong">Unbeantwortete Fragen zählen als falsch.</string>
     <string name="version">Version %s</string>
+    <string name="videos_disclaimer">Videos von Dritten auf YouTube. Sie öffnen sich in YouTube und gehören nicht zum amtlichen ELWIS-Material.</string>
+    <string name="videos_english">Englisch</string>
+    <string name="videos_german">Deutsch</string>
+    <string name="videos_minutes">%d Min.</string>
+    <string name="videos_technique">Videos: %s</string>
+    <string name="videos_title">Technik-Videos</string>
+    <string name="videos_walkthrough">Lösungsvideo</string>
+    <string name="videos_watch_step">Diesen Schritt im Video ansehen (%s)</string>
     <string name="why">Warum?</string>
     <string name="wrong">Falsch</string>
     <string name="your_answer_wrong">Deine Antwort, falsch</string>

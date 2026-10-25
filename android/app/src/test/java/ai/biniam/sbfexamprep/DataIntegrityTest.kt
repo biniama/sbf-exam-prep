@@ -38,6 +38,23 @@ class DataIntegrityTest {
         assertEquals(8, nav.chartExcerpts.size)
     }
 
+    @Test fun navigationVideosCoverEveryStep() {
+        val nav = File(shared, NavigationCatalog.ASSET_NAME).inputStream().use { NavigationCatalog.load(it) }
+        nav.tasks.forEach { task ->
+            task.steps.forEach { step ->
+                val technique = nav.technique(step.kind)
+                assertNotNull("task ${task.number}.${step.number}: no technique for ${step.kind}", technique)
+                assertTrue(technique!!.videos.isNotEmpty())
+            }
+            val walkthrough = task.walkthrough
+            assertNotNull("task ${task.number}: no walkthrough", walkthrough)
+            val starts = (1..9).map { walkthrough!!.start(it) }
+            assertTrue("task ${task.number}: chapters $starts", starts.all { it != null && it < walkthrough!!.seconds })
+            assertEquals("task ${task.number}: chapters out of order", starts.sortedBy { it }, starts)
+        }
+        nav.techniques.flatMap { it.videos }.forEach { assertTrue(it.id, it.id.length == 11 && it.lang in setOf("de", "en")) }
+    }
+
     @Test fun navigationDiagramsAreConsistent() {
         val nav = File(shared, NavigationCatalog.ASSET_NAME).inputStream().use { NavigationCatalog.load(it) }
         // Task 14: the position of buoy 8 is neither given nor derivable from the official results.

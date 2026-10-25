@@ -120,6 +120,26 @@ final class NavigationDataTests: XCTestCase {
         XCTAssertEqual(catalog.questionTypes.map(\.number), Array(286...300))
     }
 
+    func testNavigationVideosCoverEveryStep() throws {
+        let catalog = try XCTUnwrap(NavigationStore.shared.catalog)
+        for task in catalog.tasks {
+            for step in task.steps {
+                let technique = try XCTUnwrap(catalog.technique(for: step.kind), "task \(task.number).\(step.number): \(step.kind)")
+                XCTAssertFalse(technique.videos.isEmpty)
+            }
+            let walkthrough = try XCTUnwrap(task.walkthrough, "task \(task.number)")
+            let starts = (1...9).compactMap { walkthrough.start(ofStep: $0) }
+            XCTAssertEqual(starts.count, 9, "task \(task.number)")
+            XCTAssertEqual(starts, starts.sorted(), "task \(task.number): chapters out of order")
+            XCTAssertLessThan(starts.last ?? .max, walkthrough.seconds)
+        }
+        XCTAssertEqual(walkthroughURL(), "https://www.youtube.com/watch?v=jYWMqmiAeuc&t=281s")
+
+        func walkthroughURL() -> String? {
+            catalog.tasks.first?.walkthrough.map { $0.video.url(startingAt: $0.start(ofStep: 2)).absoluteString }
+        }
+    }
+
     func testNavigationDiagramsAreConsistent() throws {
         let catalog = try XCTUnwrap(NavigationStore.shared.catalog)
         // Task 14: the position of buoy 8 is neither given nor derivable from the official results.

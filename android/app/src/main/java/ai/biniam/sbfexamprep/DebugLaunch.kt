@@ -1,6 +1,7 @@
 package ai.biniam.sbfexamprep
 
 import android.content.Intent
+import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.LicenceGoal
 import ai.biniam.sbfexamprep.data.ProgressState
 import ai.biniam.sbfexamprep.data.QuizRecord
@@ -29,6 +30,9 @@ object DebugLaunch {
         question = intent.getStringExtra("screenshotQuestion")
         quiz = intent.getStringExtra("screenshotQuiz")
         if (intent.getBooleanExtra("demoProgress", false)) seed(app)
+        intent.getStringExtra("featureFlags")?.split(",")?.forEach { name ->
+            FeatureFlag.entries.firstOrNull { it.name.equals(name.trim(), ignoreCase = true) }?.let { app.featureFlags.set(it, true) }
+        }
     }
 
     /** Realistic progress so screenshots don't show an empty app (same data as on iOS). */

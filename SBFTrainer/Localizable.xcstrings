@@ -412,6 +412,16 @@
         }
       }
     },
+    "Adds 9 navigation questions to the SBF Sea exam simulation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ergänzt die See-Prüfungssimulation um 9 Navigationsfragen."
+          }
+        }
+      }
+    },
     "All": {
       "localizations": {
         "de": {
@@ -932,6 +942,16 @@
         }
       }
     },
+    "Experimental features": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimentelle Funktionen"
+          }
+        }
+      }
+    },
     "Features": {
       "localizations": {
         "de": {
@@ -958,6 +978,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Beenden und Ergebnis ansehen"
+          }
+        }
+      }
+    },
+    "For testing only. These features are not finished and may change.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur zum Testen. Diese Funktionen sind noch nicht fertig und können sich ändern."
           }
         }
       }
@@ -1182,6 +1212,16 @@
         }
       }
     },
+    "Links to videos about working on the chart.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links zu Videos über die Arbeit mit der Seekarte."
+          }
+        }
+      }
+    },
     "List": {
       "localizations": {
         "de": {
@@ -1268,6 +1308,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mein Führerschein"
+          }
+        }
+      }
+    },
+    "Navigation drills": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationstraining"
+          }
+        }
+      }
+    },
+    "Navigation part in the Sea exam": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsteil in der See-Prüfung"
+          }
+        }
+      }
+    },
+    "Navigation tasks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgaben"
           }
         }
       }
@@ -2252,6 +2322,16 @@
         }
       }
     },
+    "Solution diagrams": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsskizzen"
+          }
+        }
+      }
+    },
     "Sound signal: %@": {
       "localizations": {
         "de": {
@@ -2412,6 +2492,16 @@
         }
       }
     },
+    "Step-by-step plot of each solution with narration.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schrittweise Lösungsskizze mit Vorlesefunktion."
+          }
+        }
+      }
+    },
     "Stop": {
       "localizations": {
         "de": {
@@ -2498,6 +2588,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tippe beim Lernen oder im Quiz auf das Lesezeichen, um Fragen hier zu sammeln."
+          }
+        }
+      }
+    },
+    "Technique videos": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Technik-Videos"
+          }
+        }
+      }
+    },
+    "The 15 official chart tasks with worked solutions.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die 15 amtlichen Kartenaufgaben mit Lösungsweg."
           }
         }
       }
@@ -2728,6 +2838,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Unbeantwortete Fragen zählen als falsch."
+          }
+        }
+      }
+    },
+    "Unlimited course, time and light character practice.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbegrenztes Üben von Kursen, Zeiten und Feuerkennungen."
           }
         }
       }

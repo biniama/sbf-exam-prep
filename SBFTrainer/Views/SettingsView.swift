@@ -14,10 +14,12 @@ enum AppLinks {
 struct SettingsView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var flags: FeatureFlags
     @Environment(\.openURL) private var openURL
     @Environment(\.requestReview) private var requestReview
     @State private var showResetConfirm = false
     @State private var notificationsDenied = false
+    @State private var versionTaps = 0
 
     var body: some View {
         NavigationStack {
@@ -28,6 +30,7 @@ struct SettingsView: View {
                 statisticsSection
                 questionBankSection
                 aboutSection
+                if flags.unlocked { experimentalSection }
                 Section {
                     Button(role: .destructive) { showResetConfirm = true } label: {
                         Label("Reset all progress", systemImage: "trash")
@@ -173,8 +176,30 @@ struct SettingsView: View {
             Text("About")
         } footer: {
             Text("Version \(appVersion)")
+                .onTapGesture {
+                    // Seven taps reveal the experimental features in release builds (TestFlight).
+                    versionTaps += 1
+                    if versionTaps >= 7 { flags.unlock() }
+                }
         }
         .foregroundStyle(Color.ink)
+    }
+
+    private var experimentalSection: some View {
+        Section {
+            ForEach(FeatureFlag.allCases) { flag in
+                Toggle(isOn: Binding(get: { flags.isOn(flag) }, set: { flags.set(flag, $0) })) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(flag.title)
+                        Text(flag.summary).font(.caption).foregroundStyle(.secondary)
+                    }
+                }
+            }
+        } header: {
+            Text("Experimental features")
+        } footer: {
+            Text("For testing only. These features are not finished and may change.")
+        }
     }
 
     // MARK: Helpers

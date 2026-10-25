@@ -40,6 +40,16 @@ STRINGS = {
     "part_sea": "sea", "part_title_inland": "Inland questions", "part_title_sailing": "Sailing questions",
     "part_title_sea": "Sea questions",
 
+    # Feature flags
+    "experimental_features": "Experimental features",
+    "experimental_footer": "For testing only. These features are not finished and may change.",
+    "ff_navigation_tasks": "Navigation tasks", "ff_navigation_tasks_sub": "The 15 official chart tasks with worked solutions.",
+    "ff_navigation_exam": "Navigation part in the Sea exam",
+    "ff_navigation_exam_sub": "Adds 9 navigation questions to the SBF Sea exam simulation.",
+    "ff_navigation_drills": "Navigation drills", "ff_navigation_drills_sub": "Unlimited course, time and light character practice.",
+    "ff_navigation_diagrams": "Solution diagrams", "ff_navigation_diagrams_sub": "Step-by-step plot of each solution with narration.",
+    "ff_navigation_videos": "Technique videos", "ff_navigation_videos_sub": "Links to videos about working on the chart.",
+
     # Exam formats & licence
     "format_binnen_motor": "Inland · motor", "format_binnen_sail": "Inland · sail",
     "format_binnen_motor_sail": "Inland · motor + sail", "format_sail_addon": "Sailing add-on",

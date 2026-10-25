@@ -47,6 +47,22 @@ DE = {
     "Sailing questions": "Segelfragen",
     "Sea questions": "Seefragen",
 
+    # Feature flags
+    "Experimental features": "Experimentelle Funktionen",
+    "For testing only. These features are not finished and may change.":
+        "Nur zum Testen. Diese Funktionen sind noch nicht fertig und können sich ändern.",
+    "Navigation tasks": "Navigationsaufgaben",
+    "Navigation part in the Sea exam": "Navigationsteil in der See-Prüfung",
+    "Navigation drills": "Navigationstraining",
+    "Solution diagrams": "Lösungsskizzen",
+    "Technique videos": "Technik-Videos",
+    "The 15 official chart tasks with worked solutions.": "Die 15 amtlichen Kartenaufgaben mit Lösungsweg.",
+    "Adds 9 navigation questions to the SBF Sea exam simulation.":
+        "Ergänzt die See-Prüfungssimulation um 9 Navigationsfragen.",
+    "Unlimited course, time and light character practice.": "Unbegrenztes Üben von Kursen, Zeiten und Feuerkennungen.",
+    "Step-by-step plot of each solution with narration.": "Schrittweise Lösungsskizze mit Vorlesefunktion.",
+    "Links to videos about working on the chart.": "Links zu Videos über die Arbeit mit der Seekarte.",
+
     # Exam formats & licence
     "Inland · motor": "Binnen · Motor",
     "Inland · sail": "Binnen · Segel",

@@ -76,6 +76,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import ai.biniam.sbfexamprep.BuildConfig
 import ai.biniam.sbfexamprep.R
+import androidx.compose.runtime.mutableIntStateOf
+import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.reminders.ReminderScheduler
 import ai.biniam.sbfexamprep.ui.AppLinks
@@ -112,6 +114,9 @@ fun SettingsScreen() {
     var pickTime by rememberSaveable { mutableStateOf(false) }
     var notificationsDenied by rememberSaveable { mutableStateOf(false) }
     var editLicence by rememberSaveable { mutableStateOf(false) }
+    val enabledFlags by app.featureFlags.enabled.collectAsStateWithLifecycle()
+    val flagsUnlocked by app.featureFlags.unlocked.collectAsStateWithLifecycle()
+    var versionTaps by rememberSaveable { mutableIntStateOf(0) }
     if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
 
     fun setReminder(enabled: Boolean, minutes: Int = settings.reminderMinutes) {
@@ -232,7 +237,9 @@ fun SettingsScreen() {
                         }
                     }
 
-                    Section(stringResource(R.string.about), stringResource(R.string.version, versionName())) {
+                    Section(stringResource(R.string.about), stringResource(R.string.version, versionName()),
+                            // Seven taps reveal the experimental features in release builds.
+                            onFooterClick = { if (++versionTaps >= 7) app.featureFlags.unlock() }) {
                         LinkRow(Icons.Filled.Info, stringResource(R.string.about_app), null) { showAbout = true }
                         Divider()
                         LinkRow(Icons.AutoMirrored.Filled.HelpOutline, stringResource(R.string.help_feedback), null, external = true) {
@@ -246,6 +253,15 @@ fun SettingsScreen() {
                         LinkRow(Icons.Filled.Star, stringResource(R.string.rate_app), null, external = true) {
                             runCatching { uri.openUri(AppLinks.playStore(context.packageName)) }
                                 .onFailure { uri.openUri(AppLinks.playStoreWeb(context.packageName)) }
+                        }
+                    }
+
+                    if (flagsUnlocked) {
+                        Section(stringResource(R.string.experimental_features), stringResource(R.string.experimental_footer)) {
+                            FeatureFlag.entries.forEachIndexed { i, flag ->
+                                if (i > 0) Divider()
+                                FlagRow(flag, flag in enabledFlags) { app.featureFlags.set(flag, it) }
+                            }
                         }
                     }
 
@@ -296,13 +312,16 @@ fun SettingsScreen() {
 private fun versionName() = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
 
 @Composable
-private fun Section(title: String, footer: String? = null, content: @Composable () -> Unit) {
+private fun Section(title: String, footer: String? = null, onFooterClick: (() -> Unit)? = null,
+                    content: @Composable () -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(title.uppercase(currentLocale()), style = MaterialTheme.typography.labelMedium, color = Sbf.colors.muted,
              modifier = Modifier.padding(start = 14.dp).semantics { heading() })
         Column(Modifier.cardStyle(14.dp)) { content() }
         if (footer != null) {
-            Text(footer, style = MaterialTheme.typography.bodySmall, color = Sbf.colors.muted, modifier = Modifier.padding(horizontal = 14.dp))
+            Text(footer, style = MaterialTheme.typography.bodySmall, color = Sbf.colors.muted,
+                 modifier = Modifier.padding(horizontal = 14.dp)
+                     .then(if (onFooterClick != null) Modifier.clickable(onClick = onFooterClick) else Modifier))
         }
     }
 }
@@ -326,6 +345,28 @@ private fun SwitchRow(icon: ImageVector, text: String, checked: Boolean, onChang
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Label(icon, text, Modifier.weight(1f))
+        Switch(checked, onCheckedChange = null)
+    }
+}
+
+@Composable
+private fun FlagRow(flag: FeatureFlag, checked: Boolean, onChange: (Boolean) -> Unit) {
+    val (title, summary) = when (flag) {
+        FeatureFlag.NAVIGATION_TASKS -> R.string.ff_navigation_tasks to R.string.ff_navigation_tasks_sub
+        FeatureFlag.NAVIGATION_EXAM -> R.string.ff_navigation_exam to R.string.ff_navigation_exam_sub
+        FeatureFlag.NAVIGATION_DRILLS -> R.string.ff_navigation_drills to R.string.ff_navigation_drills_sub
+        FeatureFlag.NAVIGATION_DIAGRAMS -> R.string.ff_navigation_diagrams to R.string.ff_navigation_diagrams_sub
+        FeatureFlag.NAVIGATION_VIDEOS -> R.string.ff_navigation_videos to R.string.ff_navigation_videos_sub
+    }
+    Row(
+        Modifier.fillMaxWidth().toggleable(checked, role = Role.Switch, onValueChange = onChange).padding(horizontal = 14.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(Modifier.weight(1f)) {
+            Text(stringResource(title), style = MaterialTheme.typography.bodyLarge, color = Sbf.colors.ink)
+            Text(stringResource(summary), style = MaterialTheme.typography.bodySmall, color = Sbf.colors.muted)
+        }
+        Spacer(Modifier.width(10.dp))
         Switch(checked, onCheckedChange = null)
     }
 }

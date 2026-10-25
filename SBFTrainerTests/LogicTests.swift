@@ -173,3 +173,17 @@ final class WidgetSnapshotTests: XCTestCase {
         XCTAssertEqual(snap.dueCount(at: now.addingTimeInterval(7200)), 2)
     }
 }
+
+@MainActor
+final class FeatureFlagTests: XCTestCase {
+    func testFlagsAreOffByDefaultAndPersist() {
+        let defaults = UserDefaults(suiteName: "FeatureFlagTests")!
+        defaults.removePersistentDomain(forName: "FeatureFlagTests")
+        let flags = FeatureFlags(defaults: defaults)
+        XCTAssertTrue(flags.enabled.isEmpty)
+        flags.set(.navigationTasks, true)
+        XCTAssertTrue(FeatureFlags(defaults: defaults).isOn(.navigationTasks))
+        flags.set(.navigationTasks, false)
+        XCTAssertFalse(FeatureFlags(defaults: defaults).isOn(.navigationTasks))
+    }
+}

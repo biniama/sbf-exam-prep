@@ -612,6 +612,16 @@
         }
       }
     },
+    "Bearing %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peilung %@"
+          }
+        }
+      }
+    },
     "Browse": {
       "localizations": {
         "de": {
@@ -702,6 +712,16 @@
         }
       }
     },
+    "Compare your chart work and descriptions with the official result and mark them yourself.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vergleiche Kartenarbeit und Beschreibungen mit dem amtlichen Ergebnis und bewerte sie selbst."
+          }
+        }
+      }
+    },
     "Configure your quiz": {
       "localizations": {
         "de": {
@@ -778,6 +798,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Standardlänge eines Quiz"
+          }
+        }
+      }
+    },
+    "Degrees": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grad"
+          }
+        }
+      }
+    },
+    "Distance": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanz"
           }
         }
       }
@@ -1152,6 +1192,16 @@
         }
       }
     },
+    "I had it right": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hatte ich richtig"
+          }
+        }
+      }
+    },
     "Illustrated questions": {
       "localizations": {
         "de": {
@@ -1272,6 +1322,26 @@
         }
       }
     },
+    "Lat '": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Breite '"
+          }
+        }
+      }
+    },
+    "Lat °": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Breite °"
+          }
+        }
+      }
+    },
     "Learning": {
       "localizations": {
         "de": {
@@ -1302,12 +1372,42 @@
         }
       }
     },
+    "Long '": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Länge '"
+          }
+        }
+      }
+    },
+    "Long °": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Länge °"
+          }
+        }
+      }
+    },
     "Mastered": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Gelernt"
+          }
+        }
+      }
+    },
+    "Minutes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minuten"
           }
         }
       }
@@ -1398,6 +1498,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Navigationsteil in der See-Prüfung"
+          }
+        }
+      }
+    },
+    "Navigation task": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgabe"
+          }
+        }
+      }
+    },
+    "Navigation task %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgabe %lld"
           }
         }
       }
@@ -1622,6 +1742,16 @@
         }
       }
     },
+    "Official: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amtlich: %@"
+          }
+        }
+      }
+    },
     "Overall accuracy": {
       "localizations": {
         "de": {
@@ -1728,6 +1858,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Übungs-Quiz mit sofortiger Rückmeldung"
+          }
+        }
+      }
+    },
+    "Practice tolerance for typed answers: ±%lld° for courses and bearings, ±%@ nm, ±%lld min, ±%@' for positions. ELWIS publishes no official tolerances.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übungstoleranz für eingegebene Antworten: ±%lld° für Kurse und Peilungen, ±%@ sm, ±%lld Min., ±%@' für Positionen. ELWIS veröffentlicht keine amtlichen Toleranzen."
           }
         }
       }
@@ -2522,6 +2662,16 @@
         }
       }
     },
+    "Speed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrt"
+          }
+        }
+      }
+    },
     "Sportbootführerschein Binnen & See": {
       "localizations": {
         "de": {
@@ -3052,6 +3202,16 @@
         }
       }
     },
+    "Work on chart D49 and type your results. Chart work and descriptions are compared with the official result at the end.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arbeite in der Karte D49 und gib deine Ergebnisse ein. Kartenarbeit und Beschreibungen vergleichst du am Ende mit dem amtlichen Ergebnis."
+          }
+        }
+      }
+    },
     "Wrong": {
       "localizations": {
         "de": {
@@ -3072,12 +3232,32 @@
         }
       }
     },
+    "Your answer (optional)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Antwort (optional)"
+          }
+        }
+      }
+    },
     "Your answer, wrong": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Deine Antwort, falsch"
+          }
+        }
+      }
+    },
+    "Your answer: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Antwort: %@"
           }
         }
       }
@@ -3122,12 +3302,42 @@
         }
       }
     },
+    "hh:mm": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hh:mm"
+          }
+        }
+      }
+    },
     "inland": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Binnen"
+          }
+        }
+      }
+    },
+    "navigation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigation"
+          }
+        }
+      }
+    },
+    "nm": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sm"
           }
         }
       }

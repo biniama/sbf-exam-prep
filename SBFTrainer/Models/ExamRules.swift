@@ -58,9 +58,12 @@ struct ExamRules: Equatable {
     /// Minimum correct answers over all parts (SBF Binnen under sail only).
     let totalPassMark: Int?
     let minutes: Int
+    /// Navigation task (9 questions, pass with 7) – SBF See only, behind the navigationExam flag.
+    let navigationCount: Int
 
-    init(format: ExamFormat) {
+    init(format: ExamFormat, includeNavigation: Bool = false) {
         self.format = format
+        navigationCount = format == .see && includeNavigation ? NavigationExamPart.questionCount : 0
         switch format {
         case .binnenMotor:
             parts = [ExamPart(type: .shared, count: 7, passMark: 5), ExamPart(type: .binnen, count: 23, passMark: 18)]
@@ -87,20 +90,27 @@ struct ExamRules: Equatable {
         }
     }
 
+    /// Multiple-choice questions only.
     var totalCount: Int { parts.reduce(0) { $0 + $1.count } }
 
-    /// The navigation task (9 written questions) is part of the SBF See exam but not of this app.
-    var excludesNavigationTask: Bool { format == .see }
+    var includesNavigation: Bool { navigationCount > 0 }
+
+    /// The navigation task (9 written questions) is part of the SBF See exam; shown when it is not simulated.
+    var excludesNavigationTask: Bool { format == .see && !includesNavigation }
 
     /// "7 basic + 23 inland questions · 45 min"
     var summary: String {
-        let composition = parts.map { "\($0.count) \($0.type.partNoun)" }.joined(separator: " + ")
+        var nouns = parts.map { "\($0.count) \($0.type.partNoun)" }
+        if includesNavigation {
+            nouns.append("\(navigationCount) \(String(localized: "navigation", comment: "Exam part noun: 7 basic + 23 sea + 9 navigation"))")
+        }
+        let composition = nouns.joined(separator: " + ")
         return String(localized: "\(composition) · \(minutes) min",
                       comment: "Exam composition and time limit, e.g. 7 basic + 23 inland · 45 min")
     }
 
-    func result(correct: [ExamType: Int]) -> ExamResult {
-        ExamResult(rules: self, correct: correct)
+    func result(correct: [ExamType: Int], navigationCorrect: Int? = nil) -> ExamResult {
+        ExamResult(rules: self, correct: correct, navigationCorrect: navigationCorrect)
     }
 }
 
@@ -108,6 +118,8 @@ struct ExamResult: Equatable {
     let rules: ExamRules
     /// Correct answers per part.
     let correct: [ExamType: Int]
+    /// Correct navigation answers when the navigation part was simulated.
+    var navigationCorrect: Int? = nil
 
     func correct(in part: ExamPart) -> Int { correct[part.type] ?? 0 }
 
@@ -118,8 +130,12 @@ struct ExamResult: Equatable {
 
     var totalPassed: Bool { rules.totalPassMark.map { totalCorrect >= $0 } ?? true }
 
+    var navigationPassed: Bool {
+        !rules.includesNavigation || (navigationCorrect ?? 0) >= NavigationExamPart.passMark
+    }
+
     /// Every part with a pass mark and the total (if any) must be passed.
-    var passed: Bool { totalPassed && rules.parts.allSatisfy(passed) }
+    var passed: Bool { totalPassed && rules.parts.allSatisfy(passed) && navigationPassed }
 }
 
 /// The licences the learner is preparing for ("My licence"). Decides which exam simulations are offered.

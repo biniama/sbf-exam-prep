@@ -44,7 +44,11 @@ struct HomeView: View {
                 switch DebugLaunchOptions.autoQuiz {
                 case "exam-binnen": quizVM.setupExam(format: .binnenMotor); showingQuiz = true
                 case "exam-segeln": quizVM.setupExam(format: .binnenMotorSail); showingQuiz = true
-                case "exam-see": quizVM.setupExam(format: .see); showingQuiz = true
+                case "exam-see": quizVM.setupExam(format: .see, includeNavigation: flags.isOn(.navigationExam)); showingQuiz = true
+                case "navigation-exam":
+                    quizVM.setupExam(format: .see, includeNavigation: true)
+                    quizVM.debugSkipToNavigation()
+                    showingQuiz = true
                 case "practice": quizVM.setup(type: .all, count: 20); showingQuiz = true
                 default: break
                 }
@@ -274,9 +278,9 @@ struct HomeView: View {
                 }
                 ForEach(progress.licenceGoal.examFormats) { format in
                     quickActionRow(icon: "timer", title: Text("Exam simulation · \(format.title)"),
-                                   subtitle: Text(ExamRules(format: format).summary),
+                                   subtitle: Text(ExamRules(format: format, includeNavigation: flags.isOn(.navigationExam)).summary),
                                    color: format == .see ? .navyLight : .oceanTeal) {
-                        quizVM.setupExam(format: format)
+                        quizVM.setupExam(format: format, includeNavigation: flags.isOn(.navigationExam))
                         showingQuiz = true
                     }
                 }

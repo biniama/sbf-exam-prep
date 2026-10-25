@@ -187,3 +187,55 @@ final class FeatureFlagTests: XCTestCase {
         XCTAssertFalse(FeatureFlags(defaults: defaults).isOn(.navigationTasks))
     }
 }
+
+@MainActor
+final class NavigationExamTests: XCTestCase {
+    private var catalog: NavigationCatalog { NavigationStore.shared.catalog! }
+    private func step(_ task: Int, _ number: Int) -> NavigationStep {
+        catalog.tasks[task - 1].steps[number - 1]
+    }
+
+    func testAnswerCheckerUsesPracticeTolerances() {
+        let t = catalog.tolerances
+        // Task 1: MgK 074°, distance 6.1 nm, 45.75 min, DR position, two bearings, set and drift.
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 2), inputs: ["74"], tolerances: t), true)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 2), inputs: ["077"], tolerances: t), false)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 3), inputs: ["6,2"], tolerances: t), true)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 4), inputs: ["46"], tolerances: t), true)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 5), inputs: ["53", "55,9", "7", "51,2"], tolerances: t), true)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 5), inputs: ["53", "56,5", "7", "51,3"], tolerances: t), false)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 6), inputs: ["170", "065"], tolerances: t), true)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(1, 8), inputs: ["100", "0.8"], tolerances: t), true)
+        XCTAssertNil(NavigationAnswerChecker.isCorrect(step(1, 7), inputs: [""], tolerances: t), "chart work is self-graded")
+        // Task 3: arrival 15:12; task 12: course 007° wraps around north.
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(3, 5), inputs: ["15:13"], tolerances: t), true)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(12, 3), inputs: ["359"], tolerances: t), false)
+        XCTAssertEqual(NavigationAnswerChecker.isCorrect(step(12, 3), inputs: ["8"], tolerances: t), true)
+    }
+
+    func testNavigationPartMustBePassedInTheSeaExam() {
+        let rules = ExamRules(format: .see, includeNavigation: true)
+        XCTAssertEqual(rules.navigationCount, 9)
+        XCTAssertFalse(rules.excludesNavigationTask)
+        XCTAssertTrue(rules.result(correct: [.shared: 7, .see: 23], navigationCorrect: 7).passed)
+        XCTAssertFalse(rules.result(correct: [.shared: 7, .see: 23], navigationCorrect: 6).passed)
+        XCTAssertEqual(ExamRules(format: .binnenMotor, includeNavigation: true).navigationCount, 0, "Sea exam only")
+    }
+
+    func testExamFlowShowsTheNavigationTaskAfterTheQuestions() {
+        let defaults = UserDefaults(suiteName: "NavigationExamFlow")!
+        defaults.removePersistentDomain(forName: "NavigationExamFlow")
+        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults))
+        vm.setupExam(format: .see, includeNavigation: true)
+        XCTAssertNotNil(vm.navigationPart)
+        while vm.state != .navigation && vm.state != .finished {
+            guard let q = vm.current else { break }
+            vm.select(vm.shuffledOptions(for: q)[0].key)
+            vm.next()
+        }
+        XCTAssertEqual(vm.state, .navigation)
+        vm.finish()
+        XCTAssertEqual(vm.state, .finished)
+        XCTAssertEqual(vm.examResult?.navigationCorrect, 0)
+    }
+}

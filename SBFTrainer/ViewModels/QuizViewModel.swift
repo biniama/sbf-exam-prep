@@ -2,7 +2,8 @@ import Foundation
 import SwiftUI
 import UIKit
 
-enum QuizState { case answering, revealed, finished }
+/// `navigation`: the multiple-choice part of a See exam is done and the navigation task is shown.
+enum QuizState { case answering, revealed, navigation, finished }
 
 enum QuizMode: Equatable {
     case practice
@@ -25,6 +26,8 @@ final class QuizViewModel: ObservableObject {
     @Published private(set) var examType: ExamType = .all
     @Published private(set) var mode: QuizMode = .practice
     @Published private(set) var timeRemaining: Int = 0
+    /// Navigation task of a See exam simulation (feature flag navigationExam).
+    @Published private(set) var navigationPart: NavigationExamPart?
 
     private let store: QuestionStore
     private let progress: UserProgress
@@ -50,7 +53,7 @@ final class QuizViewModel: ObservableObject {
         guard let rules = examRules else { return nil }
         var correct: [ExamType: Int] = [:]
         for q in questions where answers[q.uniqueId] == true { correct[q.examType, default: 0] += 1 }
-        return rules.result(correct: correct)
+        return rules.result(correct: correct, navigationCorrect: navigationPart?.correctCount)
     }
 
     var examPassed: Bool { examResult?.passed ?? false }
@@ -90,16 +93,19 @@ final class QuizViewModel: ObservableObject {
     }
 
     /// Exam simulation following the official composition, e.g. 7 basic + 23 inland questions.
-    func setupExam(format: ExamFormat) {
-        let rules = ExamRules(format: format)
+    func setupExam(format: ExamFormat, includeNavigation: Bool = false) {
+        let rules = ExamRules(format: format, includeNavigation: includeNavigation)
         let qs = rules.parts.flatMap { store.specificQuestions(for: $0.type).shuffled().prefix($0.count) }
         start(qs, type: rules.parts.last?.type ?? .all, mode: .exam(rules))
+        if rules.includesNavigation, let catalog = NavigationStore.shared.catalog, let task = catalog.tasks.randomElement() {
+            navigationPart = NavigationExamPart(task: task, tolerances: catalog.tolerances)
+        }
     }
 
     /// Same questions again, answer order reshuffled.
     func retry() {
         if let rules = examRules {
-            setupExam(format: rules.format)
+            setupExam(format: rules.format, includeNavigation: rules.includesNavigation)
         } else {
             start(questions.shuffled(), type: examType, mode: mode)
         }
@@ -107,6 +113,7 @@ final class QuizViewModel: ObservableObject {
 
     private func start(_ qs: [Question], type: ExamType, mode: QuizMode) {
         timerTask?.cancel()
+        navigationPart = nil
         self.mode = mode
         examType = type
         questions = qs
@@ -168,7 +175,11 @@ final class QuizViewModel: ObservableObject {
 
     func next() {
         if isLast {
-            finish()
+            if navigationPart != nil && state != .navigation {
+                state = .navigation
+            } else {
+                finish()
+            }
         } else {
             currentIndex += 1
             selectedOption = nil
@@ -182,14 +193,36 @@ final class QuizViewModel: ObservableObject {
         state = .finished
         timerTask?.cancel()
         guard !questions.isEmpty else { return }
+        progress.saveQuizRecord(makeRecord())
+    }
+
+    #if DEBUG
+    /// UI checks: jump straight to the navigation task of a See exam.
+    func debugSkipToNavigation() {
+        guard navigationPart != nil else { return }
+        currentIndex = max(0, questions.count - 1)
+        state = .navigation
+    }
+    #endif
+
+    /// Self-grading of navigation answers on the result screen updates the saved record.
+    func regradeNavigation() {
+        guard state == .finished, navigationPart != nil else { return }
+        objectWillChange.send()
+        progress.replaceLatestQuizRecord(makeRecord())
+    }
+
+    private func makeRecord() -> QuizRecord {
+        let navigationTotal = navigationPart.map { _ in NavigationExamPart.questionCount } ?? 0
         var record = QuizRecord(date: .now, examType: examType.rawValue,
-                                totalQuestions: questions.count, correctAnswers: correctCount)
+                                totalQuestions: questions.count + navigationTotal,
+                                correctAnswers: correctCount + (navigationPart?.correctCount ?? 0))
         if let result = examResult {
             record.isExam = true
             record.passed = result.passed
             record.examFormat = result.rules.format.rawValue
         }
-        progress.saveQuizRecord(record)
+        return record
     }
 
     // MARK: - Option colours / icons

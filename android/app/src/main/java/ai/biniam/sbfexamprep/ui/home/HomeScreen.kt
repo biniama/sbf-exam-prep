@@ -126,7 +126,7 @@ fun HomeScreen(quiz: QuizViewModel, onBrowse: () -> Unit, onNavigation: () -> Un
     val streak = @Composable { StreakSection(progress.dailyStreak(today), progress.last7Days(today)) }
     val actions = @Composable {
         QuickActions(settings.quizCount, settings.licenceGoal.examFormats, progress.wrongAnswerCount, quiz, onBrowse,
-                     if (FeatureFlag.NAVIGATION_TASKS in flags) onNavigation else null)
+                     if (FeatureFlag.NAVIGATION_TASKS in flags) onNavigation else null, FeatureFlag.NAVIGATION_EXAM in flags)
     }
     var editLicence by rememberSaveable { mutableStateOf(false) }
     if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
@@ -267,7 +267,7 @@ private fun StreakSection(streak: Int, days: List<Pair<LocalDate, Boolean>>) {
 
 @Composable
 private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit,
-                         onNavigation: (() -> Unit)?) {
+                         onNavigation: (() -> Unit)?, withNavigation: Boolean) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
         SectionHeader(stringResource(R.string.quick_start), Icons.Filled.Bolt)
         ActionRow(Icons.Filled.PlayCircle, Brand.navy, stringResource(R.string.quick_quiz),
@@ -276,8 +276,8 @@ private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: In
         }
         formats.forEach { format ->
             ActionRow(Icons.Filled.Timer, if (format == ExamFormat.SEE) Brand.navyLight else Brand.oceanTeal,
-                      stringResource(R.string.exam_sim_type, examFormatTitle(format)), examSummary(ExamRules(format))) {
-                quiz.setupExam(format)
+                      stringResource(R.string.exam_sim_type, examFormatTitle(format)), examSummary(ExamRules(format, withNavigation))) {
+                quiz.setupExam(format, withNavigation)
             }
         }
         if (onNavigation != null) {

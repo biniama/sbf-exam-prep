@@ -11,6 +11,7 @@ import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamResult
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
+import ai.biniam.sbfexamprep.data.NavigationExamPart
 import ai.biniam.sbfexamprep.data.Question
 import ai.biniam.sbfexamprep.data.QuestionOption
 import ai.biniam.sbfexamprep.data.QuizRecord
@@ -20,7 +21,8 @@ import kotlinx.coroutines.launch
 import java.time.ZoneId
 import java.time.ZonedDateTime
 
-enum class QuizPhase { ANSWERING, REVEALED, FINISHED }
+/** NAVIGATION: the multiple-choice part of a See exam is done and the navigation task is shown. */
+enum class QuizPhase { ANSWERING, REVEALED, NAVIGATION, FINISHED }
 
 sealed interface QuizMode {
     data object Practice : QuizMode
@@ -56,6 +58,9 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
         private set
     var timeRemaining by mutableIntStateOf(0)
         private set
+    /** Navigation task of a See exam simulation (feature flag NAVIGATION_EXAM). */
+    var navigationPart by mutableStateOf<NavigationExamPart?>(null)
+        private set
 
     /** questionId → (displayKey → originalKey): A–D stay in order, content is shuffled. */
     private var keyRemaps = mapOf<String, Map<String, String>>()
@@ -73,7 +78,7 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
         get() {
             val rules = examRules ?: return null
             val correct = questions.filter { answers[it.uniqueId] == true }.groupingBy { it.examType }.eachCount()
-            return rules.result(correct)
+            return rules.result(correct, navigationPart?.correctCount)
         }
 
     val formattedTime: String get() = "%d:%02d".format(timeRemaining / 60, timeRemaining % 60)
@@ -101,20 +106,32 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
     fun setup(list: List<Question>, mode: QuizMode = QuizMode.Saved) = start(list.shuffled(), ExamType.ALL, mode)
 
     /** Exam simulation following the official composition, e.g. 7 basic + 23 inland questions. */
-    fun setupExam(format: ExamFormat) {
-        val rules = ExamRules(format)
+    fun setupExam(format: ExamFormat, includeNavigation: Boolean = false) {
+        val rules = ExamRules(format, includeNavigation)
         val list = rules.parts.flatMap { store.specificQuestions(it.type).shuffled().take(it.count) }
         start(list, rules.parts.last().type, QuizMode.Exam(rules))
+        if (rules.includesNavigation) {
+            val catalog = app.navigation
+            navigationPart = NavigationExamPart(catalog.tasks.random(), catalog.tolerances)
+        }
+    }
+
+    /** UI checks (debug launch option "navigation-exam"): jump straight to the navigation task. */
+    fun debugSkipToNavigation() {
+        if (navigationPart == null) return
+        currentIndex = (questions.size - 1).coerceAtLeast(0)
+        phase = QuizPhase.NAVIGATION
     }
 
     /** Same questions again in a new order (a new exam for simulations). */
     fun retry() {
         val rules = examRules
-        if (rules != null) setupExam(rules.format) else start(questions.shuffled(), examType, mode)
+        if (rules != null) setupExam(rules.format, rules.includesNavigation) else start(questions.shuffled(), examType, mode)
     }
 
     private fun start(list: List<Question>, type: ExamType, mode: QuizMode) {
         timerJob?.cancel()
+        navigationPart = null
         this.mode = mode
         examType = type
         questions = list
@@ -166,7 +183,7 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
     fun next() {
         app.soundPlayer.stop()
         if (isLast) {
-            finish()
+            if (navigationPart != null && phase != QuizPhase.NAVIGATION) phase = QuizPhase.NAVIGATION else finish()
         } else {
             currentIndex++
             selectedOption = null
@@ -181,13 +198,26 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
         timerJob?.cancel()
         app.soundPlayer.stop()
         if (questions.isEmpty()) return
+        val record = makeRecord()
+        progress.updateProgress { it.saveQuizRecord(record, ZoneId.systemDefault()) }
+    }
+
+    /** Self-grading of navigation answers on the result screen updates the saved record. */
+    fun regradeNavigation() {
+        if (phase != QuizPhase.FINISHED || navigationPart == null) return
+        val record = makeRecord()
+        progress.updateProgress { it.replaceLatestQuizRecord(record) }
+    }
+
+    private fun makeRecord(): QuizRecord {
         val result = examResult
-        val record = QuizRecord(
-            date = System.currentTimeMillis(), examType = examType.raw, totalQuestions = questions.size,
-            correctAnswers = correctCount, isExam = result?.let { true }, passed = result?.passed,
+        val nav = navigationPart
+        return QuizRecord(
+            date = System.currentTimeMillis(), examType = examType.raw,
+            totalQuestions = questions.size + (if (nav != null) NavigationExamPart.QUESTION_COUNT else 0),
+            correctAnswers = correctCount + (nav?.correctCount ?: 0), isExam = result?.let { true }, passed = result?.passed,
             examFormat = result?.rules?.format?.raw,
         )
-        progress.updateProgress { it.saveQuizRecord(record, ZoneId.systemDefault()) }
     }
 
     fun toggleBookmark() {

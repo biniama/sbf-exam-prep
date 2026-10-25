@@ -30,6 +30,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import ai.biniam.sbfexamprep.DebugLaunch
 import ai.biniam.sbfexamprep.R
 import ai.biniam.sbfexamprep.data.ExamFormat
+import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.SbfApplication
 import ai.biniam.sbfexamprep.ui.browse.BrowseScreen
@@ -80,7 +81,8 @@ fun SbfApp(app: SbfApplication) {
             when (DebugLaunch.quiz) {
                 "exam-binnen" -> quiz.setupExam(ExamFormat.BINNEN_MOTOR)
                 "exam-segeln" -> quiz.setupExam(ExamFormat.BINNEN_MOTOR_SAIL)
-                "exam-see" -> quiz.setupExam(ExamFormat.SEE)
+                "exam-see" -> quiz.setupExam(ExamFormat.SEE, app.featureFlags.isOn(FeatureFlag.NAVIGATION_EXAM))
+                "navigation-exam" -> { quiz.setupExam(ExamFormat.SEE, includeNavigation = true); quiz.debugSkipToNavigation() }
                 "practice" -> quiz.setup(ExamType.ALL, 20)
             }
         }

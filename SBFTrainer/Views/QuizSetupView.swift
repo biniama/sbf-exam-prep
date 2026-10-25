@@ -5,6 +5,7 @@ struct QuizSetupView: View {
 
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var flags: FeatureFlags
     @Environment(\.horizontalSizeClass) private var hSize
     @State private var mode: Mode = .practice
     @State private var selectedType: ExamType = .all
@@ -21,7 +22,7 @@ struct QuizSetupView: View {
         case .practice: return store.questions(for: selectedType, category: selectedCategory).count
         case .review:   return progress.dueCount
         case .mistakes: return progress.wrongAnswerCount
-        case .exam:     return ExamRules(format: examFormat).totalCount
+        case .exam:     return examRules.totalCount + examRules.navigationCount
         }
     }
 
@@ -158,7 +159,7 @@ struct QuizSetupView: View {
     // MARK: - Exam
 
     private var examSection: some View {
-        let rules = ExamRules(format: examFormat)
+        let rules = examRules
         let formats = progress.licenceGoal.examFormats
         return sectionCard(title: "Exam", icon: "doc.text.magnifyingglass") {
             VStack(alignment: .leading, spacing: 12) {
@@ -190,12 +191,17 @@ struct QuizSetupView: View {
         }
     }
 
+    private var examRules: ExamRules { ExamRules(format: examFormat, includeNavigation: flags.isOn(.navigationExam)) }
+
     private func passText(_ rules: ExamRules) -> String {
         if let total = rules.totalPassMark {
             return String(localized: "Pass: at least \(total) of \(rules.totalCount) correct in total")
         }
-        let parts = rules.parts.compactMap { part in
+        var parts = rules.parts.compactMap { part in
             part.passMark.map { String(localized: "\($0) of \(part.count) \(part.type.partNoun)") }
+        }
+        if rules.includesNavigation {
+            parts.append(String(localized: "\(NavigationExamPart.passMark) of \(rules.navigationCount) \(String(localized: "navigation"))"))
         }
         return String(localized: "Pass: at least \(parts.formatted(.list(type: .and)))")
     }
@@ -279,7 +285,7 @@ struct QuizSetupView: View {
             case .practice: vm.setup(type: selectedType, count: startCount, category: selectedCategory)
             case .review: vm.setupDueReview()
             case .mistakes: vm.setupMistakes()
-            case .exam: vm.setupExam(format: examFormat)
+            case .exam: vm.setupExam(format: examFormat, includeNavigation: flags.isOn(.navigationExam))
             }
             showQuiz = true
         } label: {

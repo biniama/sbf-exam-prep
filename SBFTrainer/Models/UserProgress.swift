@@ -242,6 +242,15 @@ final class UserProgress: ObservableObject {
         updateWidget()
     }
 
+    /// Replaces the most recent record (e.g. after self-grading the navigation task).
+    func replaceLatestQuizRecord(_ record: QuizRecord) {
+        guard let latest = quizHistory.first else { return saveQuizRecord(record) }
+        quizHistory[0] = QuizRecord(date: latest.date, examType: record.examType, totalQuestions: record.totalQuestions,
+                                    correctAnswers: record.correctAnswers, isExam: record.isExam, passed: record.passed,
+                                    examFormat: record.examFormat)
+        save(quizHistory, key: Key.history)
+    }
+
     /// Every answered question counts, not only finished quizzes.
     var totalAnswered: Int { categoryTotal.values.reduce(0, +) }
     var overallAccuracy: Double {

@@ -86,6 +86,32 @@ DE = {
         "Vorzeichen: östliche Missweisung und Ablenkung sind positiv (+), westliche negativ (−).",
     "Exam question types": "Fragetypen in der Prüfung",
 
+    # Navigation exam
+    "navigation": "Navigation",
+    "Navigation task": "Navigationsaufgabe",
+    "Navigation task %lld": "Navigationsaufgabe %lld",
+    "Work on chart D49 and type your results. Chart work and descriptions are compared with the official result at the end.":
+        "Arbeite in der Karte D49 und gib deine Ergebnisse ein. Kartenarbeit und Beschreibungen vergleichst du am Ende mit dem amtlichen Ergebnis.",
+    "Practice tolerance for typed answers: ±%lld° for courses and bearings, ±%@ nm, ±%lld min, ±%@' for positions. ELWIS publishes no official tolerances.":
+        "Übungstoleranz für eingegebene Antworten: ±%lld° für Kurse und Peilungen, ±%@ sm, ±%lld Min., ±%@' für Positionen. ELWIS veröffentlicht keine amtlichen Toleranzen.",
+    "Degrees": "Grad",
+    "Bearing %@": "Peilung %@",
+    "Distance": "Distanz",
+    "Minutes": "Minuten",
+    "Speed": "Fahrt",
+    "hh:mm": "hh:mm",
+    "Lat °": "Breite °",
+    "Lat '": "Breite '",
+    "Long °": "Länge °",
+    "Long '": "Länge '",
+    "Your answer (optional)": "Deine Antwort (optional)",
+    "nm": "sm",
+    "Compare your chart work and descriptions with the official result and mark them yourself.":
+        "Vergleiche Kartenarbeit und Beschreibungen mit dem amtlichen Ergebnis und bewerte sie selbst.",
+    "Your answer: %@": "Deine Antwort: %@",
+    "Official: %@": "Amtlich: %@",
+    "I had it right": "Hatte ich richtig",
+
     # Exam formats & licence
     "Inland · motor": "Binnen · Motor",
     "Inland · sail": "Binnen · Segel",

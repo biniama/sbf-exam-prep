@@ -36,6 +36,9 @@ struct QuizResultView: View {
             VStack(spacing: 24) {
                 heroCard
                 if let result = vm.examResult { examBreakdown(result) }
+                if let part = vm.navigationPart {
+                    NavigationExamReview(part: part, onRegrade: vm.regradeNavigation)
+                }
                 statsRow
                 if !vm.wrongIds.isEmpty { wrongAnswersSection }
                 actionButtons
@@ -113,13 +116,18 @@ struct QuizResultView: View {
                 partRow(title: part.type.partTitle, correct: result.correct(in: part), total: part.count,
                         passMark: part.passMark, passed: part.passMark == nil ? nil : result.passed(part))
             }
+            if result.rules.includesNavigation {
+                partRow(title: String(localized: "Navigation task"), correct: result.navigationCorrect ?? 0,
+                        total: result.rules.navigationCount, passMark: NavigationExamPart.passMark,
+                        passed: result.navigationPassed)
+            }
             if let total = result.rules.totalPassMark {
                 partRow(title: String(localized: "Total"), correct: result.totalCorrect, total: result.rules.totalCount,
                         passMark: total, passed: result.totalPassed)
                 Text("For the sailing licence alone, only the total counts.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-            } else if result.rules.parts.count > 1 {
+            } else if result.rules.parts.count > 1 || result.rules.includesNavigation {
                 Text("Each part is assessed separately and must be passed.")
                     .font(.caption)
                     .foregroundStyle(.secondary)

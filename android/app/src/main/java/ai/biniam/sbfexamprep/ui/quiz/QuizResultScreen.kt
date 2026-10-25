@@ -47,6 +47,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import ai.biniam.sbfexamprep.R
+import ai.biniam.sbfexamprep.ui.navigation.NavigationExamReview
+import ai.biniam.sbfexamprep.data.NavigationExamPart
 import ai.biniam.sbfexamprep.ui.LocalApp
 import ai.biniam.sbfexamprep.ui.components.CountPill
 import ai.biniam.sbfexamprep.ui.components.Layout
@@ -123,13 +125,17 @@ fun QuizResultScreen(vm: QuizViewModel, onReview: (String) -> Unit) {
                                 PartRow(partTitle(part.type), result.correct(part), part.count, part.passMark,
                                         if (part.passMark == null) null else result.passed(part))
                             }
+                            if (result.rules.includesNavigation) {
+                                PartRow(stringResource(R.string.nav_exam_title), result.navigationCorrect ?: 0,
+                                        result.rules.navigationCount, NavigationExamPart.PASS_MARK, result.navigationPassed)
+                            }
                             val totalPassMark = result.rules.totalPassMark
                             if (totalPassMark != null) {
                                 PartRow(stringResource(R.string.total), result.totalCorrect, result.rules.totalCount,
                                         totalPassMark, result.totalPassed)
                                 Text(stringResource(R.string.total_only), style = MaterialTheme.typography.bodySmall,
                                      color = Sbf.colors.muted)
-                            } else if (result.rules.parts.size > 1) {
+                            } else if (result.rules.parts.size > 1 || result.rules.includesNavigation) {
                                 Text(stringResource(R.string.each_part), style = MaterialTheme.typography.bodySmall,
                                      color = Sbf.colors.muted)
                             }
@@ -139,6 +145,8 @@ fun QuizResultScreen(vm: QuizViewModel, onReview: (String) -> Unit) {
                             }
                         }
                     }
+
+                    vm.navigationPart?.let { NavigationExamReview(it, vm::regradeNavigation) }
 
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                         StatCard("${vm.correctCount}", stringResource(R.string.correct), Icons.Filled.CheckCircle,

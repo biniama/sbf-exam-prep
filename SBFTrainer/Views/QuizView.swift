@@ -11,6 +11,11 @@ struct QuizView: View {
         Group {
             if vm.state == .finished {
                 QuizResultView(vm: vm, onDismiss: { dismiss() })
+            } else if vm.state == .navigation, let part = vm.navigationPart {
+                VStack(spacing: 0) {
+                    progressBar
+                    NavigationExamView(part: part, onFinish: { vm.finish() })
+                }
             } else if let q = vm.current {
                 questionScreen(q)
             } else {
@@ -31,7 +36,13 @@ struct QuizView: View {
                     .accessibilityLabel(Text("Close quiz"))
                 }
                 ToolbarItem(placement: .principal) {
-                    Text("\(vm.currentIndex + 1) / \(vm.questions.count)")
+                    Group {
+                        if vm.state == .navigation {
+                            Text("Navigation task")
+                        } else {
+                            Text("\(vm.currentIndex + 1) / \(vm.questions.count)")
+                        }
+                    }
                         .font(.subheadline.weight(.semibold).monospacedDigit())
                         .foregroundStyle(Color.ink)
                         .accessibilityLabel(Text("Question \(vm.currentIndex + 1) of \(vm.questions.count)"))

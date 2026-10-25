@@ -44,6 +44,7 @@ import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.data.LicenceGoal
+import ai.biniam.sbfexamprep.data.NavigationExamPart
 import ai.biniam.sbfexamprep.ui.theme.Brand
 import ai.biniam.sbfexamprep.ui.theme.Sbf
 
@@ -165,7 +166,9 @@ fun examFormatIcon(format: ExamFormat): ImageVector = when (format) {
 /** "7 basic + 23 inland · 45 min" */
 @Composable
 fun examSummary(rules: ExamRules): String {
-    val composition = rules.parts.map { "${it.count} ${partNoun(it.type)}" }.joinToString(" + ")
+    val nouns = rules.parts.map { "${it.count} ${partNoun(it.type)}" } +
+        if (rules.includesNavigation) listOf("${rules.navigationCount} ${stringResource(R.string.part_navigation)}") else emptyList()
+    val composition = nouns.joinToString(" + ")
     return stringResource(R.string.exam_summary, composition, rules.minutes)
 }
 
@@ -175,7 +178,9 @@ fun examPassText(rules: ExamRules): String {
     rules.totalPassMark?.let { return stringResource(R.string.rules_pass_total, it, rules.totalCount) }
     val parts = rules.parts.mapNotNull { part ->
         part.passMark?.let { stringResource(R.string.part_pass, it, part.count, partNoun(part.type)) }
-    }
+    } + if (rules.includesNavigation) {
+        listOf(stringResource(R.string.part_pass, NavigationExamPart.PASS_MARK, rules.navigationCount, stringResource(R.string.part_navigation)))
+    } else emptyList()
     val joined = if (parts.size > 1) {
         stringResource(R.string.list_and, parts.dropLast(1).joinToString(", "), parts.last())
     } else parts.firstOrNull().orEmpty()

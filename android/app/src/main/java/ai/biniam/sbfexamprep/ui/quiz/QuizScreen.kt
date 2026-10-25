@@ -62,6 +62,7 @@ import androidx.compose.ui.text.intl.LocaleList
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
+import ai.biniam.sbfexamprep.ui.navigation.NavigationExamScreen
 import ai.biniam.sbfexamprep.data.Question
 import ai.biniam.sbfexamprep.ui.LocalApp
 import ai.biniam.sbfexamprep.ui.components.CategoryBadge
@@ -88,6 +89,7 @@ fun QuizScreen(vm: QuizViewModel) {
             QuestionDetail(listOf(review), 0, {}, { reviewId = null })
         }
         vm.phase == QuizPhase.FINISHED -> QuizResultScreen(vm, onReview = { reviewId = it })
+        vm.phase == QuizPhase.NAVIGATION && vm.navigationPart != null -> NavigationExamScreen(vm)
         vm.current != null -> QuestionScreen(vm, vm.current!!)
         else -> EmptyQuiz(vm)
     }

@@ -64,6 +64,16 @@ STRINGS = {
     "nav_signs": "Signs: east variation and deviation are positive (+), west negative (−).",
     "nav_question_types": "Exam question types",
 
+    # Navigation exam
+    "part_navigation": "navigation", "nav_exam_title": "Navigation task", "nav_exam_task_n": "Navigation task %lld",
+    "nav_exam_hint": "Work on chart D49 and type your results. Chart work and descriptions are compared with the official result at the end.",
+    "nav_exam_tolerance": "Practice tolerance for typed answers: ±%lld° for courses and bearings, ±%@ nm, ±%lld min, ±%@' for positions. ELWIS publishes no official tolerances.",
+    "nav_field_degrees": "Degrees", "nav_field_distance": "Distance", "nav_field_minutes": "Minutes", "nav_field_speed": "Speed",
+    "nav_field_clock": "hh:mm", "nav_field_lat_deg": "Lat °", "nav_field_lat_min": "Lat '", "nav_field_lon_deg": "Long °",
+    "nav_field_lon_min": "Long '", "nav_field_text": "Your answer (optional)", "nav_unit_nm": "nm",
+    "nav_self_grade_hint": "Compare your chart work and descriptions with the official result and mark them yourself.",
+    "nav_your_answer": "Your answer: %@", "nav_official_answer": "Official: %@", "nav_self_right": "I had it right",
+
     # Exam formats & licence
     "format_binnen_motor": "Inland · motor", "format_binnen_sail": "Inland · sail",
     "format_binnen_motor_sail": "Inland · motor + sail", "format_sail_addon": "Sailing add-on",

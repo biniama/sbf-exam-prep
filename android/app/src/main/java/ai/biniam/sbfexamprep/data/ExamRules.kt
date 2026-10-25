@@ -21,7 +21,8 @@ enum class ExamFormat(val raw: String) {
 /** One separately counted part of an exam; [passMark] is null when only the total counts. */
 data class ExamPart(val type: ExamType, val count: Int, val passMark: Int?)
 
-data class ExamRules(val format: ExamFormat) {
+/** [includeNavigation]: the 9-question navigation task of the SBF See (feature flag NAVIGATION_EXAM). */
+data class ExamRules(val format: ExamFormat, val includeNavigation: Boolean = false) {
     val parts: List<ExamPart> = when (format) {
         ExamFormat.BINNEN_MOTOR -> listOf(ExamPart(ExamType.SHARED, 7, 5), ExamPart(ExamType.BINNEN, 23, 18))
         ExamFormat.BINNEN_SAIL -> listOf(ExamPart(ExamType.SHARED, 4, null), ExamPart(ExamType.BINNEN, 14, null),
@@ -43,15 +44,20 @@ data class ExamRules(val format: ExamFormat) {
         ExamFormat.SAIL_ADDON -> 15
     }
 
+    /** Multiple-choice questions only. */
     val totalCount: Int get() = parts.sumOf { it.count }
 
-    /** The navigation task (9 written questions) is part of the SBF See exam but not of this app. */
-    val excludesNavigationTask: Boolean get() = format == ExamFormat.SEE
+    val navigationCount: Int = if (format == ExamFormat.SEE && includeNavigation) NavigationExamPart.QUESTION_COUNT else 0
 
-    fun result(correct: Map<ExamType, Int>) = ExamResult(this, correct)
+    val includesNavigation: Boolean get() = navigationCount > 0
+
+    /** The navigation task (9 written questions) is part of the SBF See exam; shown when it is not simulated. */
+    val excludesNavigationTask: Boolean get() = format == ExamFormat.SEE && !includesNavigation
+
+    fun result(correct: Map<ExamType, Int>, navigationCorrect: Int? = null) = ExamResult(this, correct, navigationCorrect)
 }
 
-data class ExamResult(val rules: ExamRules, val correct: Map<ExamType, Int>) {
+data class ExamResult(val rules: ExamRules, val correct: Map<ExamType, Int>, val navigationCorrect: Int? = null) {
     fun correct(part: ExamPart): Int = correct[part.type] ?: 0
 
     /** A part without its own pass mark always counts as passed; the total decides. */
@@ -61,8 +67,11 @@ data class ExamResult(val rules: ExamRules, val correct: Map<ExamType, Int>) {
 
     val totalPassed: Boolean get() = rules.totalPassMark?.let { totalCorrect >= it } ?: true
 
+    val navigationPassed: Boolean
+        get() = !rules.includesNavigation || (navigationCorrect ?: 0) >= NavigationExamPart.PASS_MARK
+
     /** Every part with a pass mark and the total (if any) must be passed. */
-    val passed: Boolean get() = totalPassed && rules.parts.all { passed(it) }
+    val passed: Boolean get() = totalPassed && rules.parts.all { passed(it) } && navigationPassed
 }
 
 /** The licences the learner is preparing for ("My licence"). Decides which exam simulations are offered. */

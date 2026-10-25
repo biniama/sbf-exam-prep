@@ -117,6 +117,12 @@ data class ProgressState(
         copy(quizHistory = (listOf(record) + quizHistory).take(100))
             .recordStudy(Instant.ofEpochMilli(record.date).atZone(zone).toLocalDate())
 
+    /** Replaces the most recent record, keeping its date (e.g. after self-grading the navigation task). */
+    fun replaceLatestQuizRecord(record: QuizRecord): ProgressState {
+        val latest = quizHistory.firstOrNull() ?: return copy(quizHistory = listOf(record))
+        return copy(quizHistory = listOf(record.copy(date = latest.date)) + quizHistory.drop(1))
+    }
+
     /** Every answered question counts, not only finished quizzes. */
     val totalAnswered get() = categoryTotal.values.sum()
 

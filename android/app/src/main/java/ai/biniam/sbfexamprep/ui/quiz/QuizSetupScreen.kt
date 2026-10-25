@@ -68,6 +68,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
+import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
@@ -108,12 +109,14 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
     val now = System.currentTimeMillis()
     val due = progress.dueCount(now)
     val mistakes = progress.wrongAnswerCount
-    val rules = ExamRules(exam)
+    val flags by app.featureFlags.enabled.collectAsStateWithLifecycle()
+    val withNavigation = FeatureFlag.NAVIGATION_EXAM in flags
+    val rules = ExamRules(exam, withNavigation)
     val available = when (mode) {
         SetupMode.PRACTICE -> app.questions.questions(examType, category).size
         SetupMode.REVIEW -> due
         SetupMode.MISTAKES -> mistakes
-        SetupMode.EXAM -> rules.totalCount
+        SetupMode.EXAM -> rules.totalCount + rules.navigationCount
     }
     val startCount = when (mode) {
         SetupMode.PRACTICE -> minOf(count, available)
@@ -187,7 +190,7 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                                                        stringResource(R.string.your_mistakes_text))
                         SetupMode.EXAM -> SectionCard(stringResource(R.string.exam), Icons.Filled.FindInPage) {
                             formats.forEach { f ->
-                                ModeRow(exam == f, examFormatIcon(f), examFormatTitle(f), examSummary(ExamRules(f))) {
+                                ModeRow(exam == f, examFormatIcon(f), examFormatTitle(f), examSummary(ExamRules(f, withNavigation))) {
                                     chosenExam = f
                                 }
                             }
@@ -212,7 +215,7 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                                 SetupMode.PRACTICE -> quiz.setup(examType, count, category)
                                 SetupMode.REVIEW -> quiz.setupDueReview()
                                 SetupMode.MISTAKES -> quiz.setupMistakes()
-                                SetupMode.EXAM -> quiz.setupExam(exam)
+                                SetupMode.EXAM -> quiz.setupExam(exam, withNavigation)
                             }
                         },
                         enabled = startCount > 0,

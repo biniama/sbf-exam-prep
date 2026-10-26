@@ -102,6 +102,16 @@
         }
       }
     },
+    "%lld of %lld on": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld an"
+          }
+        }
+      }
+    },
     "%lld questions": {
       "localizations": {
         "en": {
@@ -1198,6 +1208,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Experimentelle Funktionen"
+          }
+        }
+      }
+    },
+    "Feature flags": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feature-Flags"
           }
         }
       }
@@ -3598,6 +3618,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Übersetzungen"
+          }
+        }
+      }
+    },
+    "Turn all off": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle ausschalten"
+          }
+        }
+      }
+    },
+    "Turn all on": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle einschalten"
           }
         }
       }

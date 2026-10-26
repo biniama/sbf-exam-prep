@@ -187,12 +187,13 @@ struct SettingsView: View {
 
     private var experimentalSection: some View {
         Section {
-            ForEach(FeatureFlag.allCases) { flag in
-                Toggle(isOn: Binding(get: { flags.isOn(flag) }, set: { flags.set(flag, $0) })) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(flag.title)
-                        Text(flag.summary).font(.caption).foregroundStyle(.secondary)
-                    }
+            NavigationLink {
+                FeatureFlagsView()
+            } label: {
+                LabeledContent {
+                    Text("\(flags.enabledCount) of \(FeatureFlag.allCases.count) on")
+                } label: {
+                    Label("Feature flags", systemImage: "flag.2.crossed")
                 }
             }
         } header: {
@@ -239,5 +240,37 @@ struct SettingsView: View {
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         notificationsDenied = settings.authorizationStatus == .denied
         if notificationsDenied && progress.reminderEnabled { progress.setReminder(enabled: false) }
+    }
+}
+
+/// Turns unreleased features on and off for testing.
+struct FeatureFlagsView: View {
+    @EnvironmentObject var flags: FeatureFlags
+
+    var body: some View {
+        Form {
+            Section {
+                ForEach(FeatureFlag.allCases) { flag in
+                    Toggle(isOn: Binding(get: { flags.isOn(flag) }, set: { flags.set(flag, $0) })) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(flag.title)
+                            Text(flag.summary).font(.caption).foregroundStyle(.secondary)
+                        }
+                    }
+                }
+            } footer: {
+                Text("For testing only. These features are not finished and may change.")
+            }
+            Section {
+                Button("Turn all on") { flags.setAll(true) }
+                    .disabled(flags.enabledCount == FeatureFlag.allCases.count)
+                Button("Turn all off", role: .destructive) { flags.setAll(false) }
+                    .disabled(flags.enabledCount == 0)
+            }
+        }
+        .scrollContentBackground(.hidden)
+        .background(Color.surfaceBG)
+        .navigationTitle("Feature flags")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -1,9 +1,10 @@
 import Foundation
+import StoreKit
 
 /// Features that are built but not yet released. All flags are off by default.
 ///
-/// Turn them on under Settings → Experimental features. The section is always visible in debug
-/// builds; in release builds (TestFlight) it appears after tapping the version number seven times.
+/// Turn them on under Settings → Feature flags. The button is always visible in debug and TestFlight
+/// builds; in App Store builds it appears after tapping the version number seven times.
 /// For UI checks they can also be set as launch arguments, e.g. `-ff.navigationTasks YES`.
 enum FeatureFlag: String, CaseIterable, Identifiable {
     case navigationTasks
@@ -42,7 +43,7 @@ final class FeatureFlags: ObservableObject {
     static let shared = FeatureFlags()
 
     @Published private(set) var enabled: Set<FeatureFlag> = []
-    /// Shows the experimental settings in release builds.
+    /// Shows the feature-flag settings (debug and TestFlight builds, or after seven taps on the version).
     @Published private(set) var unlocked = false
 
     private let defaults: UserDefaults
@@ -54,7 +55,25 @@ final class FeatureFlags: ObservableObject {
         unlocked = true
         #else
         unlocked = defaults.bool(forKey: "ff.unlocked")
+        if !unlocked {
+            Task { if await Self.isTestFlight() { unlocked = true } }
+        }
         #endif
+    }
+
+    /// TestFlight builds run in the App Store sandbox environment.
+    private static func isTestFlight() async -> Bool {
+        guard let result = try? await AppTransaction.shared else { return false }
+        switch result {
+        case .verified(let transaction), .unverified(let transaction, _):
+            return transaction.environment == .sandbox
+        }
+    }
+
+    var enabledCount: Int { enabled.count }
+
+    func setAll(_ on: Bool) {
+        FeatureFlag.allCases.forEach { set($0, on) }
     }
 
     func isOn(_ flag: FeatureFlag) -> Bool { enabled.contains(flag) }

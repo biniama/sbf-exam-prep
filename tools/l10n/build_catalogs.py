@@ -49,6 +49,10 @@ DE = {
 
     # Feature flags
     "Experimental features": "Experimentelle Funktionen",
+    "Feature flags": "Feature-Flags",
+    "%lld of %lld on": "%lld von %lld an",
+    "Turn all on": "Alle einschalten",
+    "Turn all off": "Alle ausschalten",
     "For testing only. These features are not finished and may change.":
         "Nur zum Testen. Diese Funktionen sind noch nicht fertig und können sich ändern.",
     "Navigation tasks": "Navigationsaufgaben",

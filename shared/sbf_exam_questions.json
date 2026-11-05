@@ -110,7 +110,7 @@
             },
             "C": {
               "german": "Wenn es weder auf Grund sitzt noch vor Anker liegt noch manövrierbehindert oder manövrierunfähig ist.",
-              "english": "When it is neither aground, nor at anchor, nor restricted in its ability to manoeuvre, nor not under command."
+              "english": "When it is neither aground, nor at anchor, nor restricted in its ability to manoeuvre, nor unable to manoeuvre."
             },
             "D": {
               "german": "Wenn es weder an Land festgemacht ist noch vor Anker liegt noch Fahrt durchs Wasser macht.",
@@ -441,7 +441,7 @@
           "question_number": 14,
           "category": "Traffic Rules",
           "german_text": "Wie weichen zwei Motorboote aus, die sich auf entgegengesetzten Kursen nähern?",
-          "english_text": "How do two motorboats manoeuvre when approaching each other on opposite courses?",
+          "english_text": "How must two motorboats approaching each other head-on (on opposite courses) take avoiding action?",
           "options": {
             "A": {
               "german": "Jedes Fahrzeug muss seinen Kurs nach Steuerbord ändern.",
@@ -507,7 +507,7 @@
           "options": {
             "A": {
               "german": "Bleib-weg-Signal, Gefahrenbereich sofort verlassen.",
-              "english": "Keep-clear signal — danger zone, leave immediately."
+              "english": "'Keep away' signal: leave the danger area immediately."
             },
             "B": {
               "german": "Allgemeines Gefahr- und Warnsignal.",
@@ -538,7 +538,7 @@
           "question_number": 17,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Überholverbot.",
@@ -572,7 +572,7 @@
           "question_number": 18,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Begegnungsverbot an einer Engstelle.",
@@ -606,7 +606,7 @@
           "question_number": 19,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Sog und Wellenschlag vermeiden.",
@@ -614,15 +614,15 @@
             },
             "B": {
               "german": "Gefährdeter Strandbereich, Überspülungsgefahr; Mindestpassierabstand 100 m.",
-              "english": "Endangered beach area, risk of flooding; minimum passing distance 100 m."
+              "english": "Vulnerable beach area, risk of waves washing over it; minimum passing distance 100 m."
             },
             "C": {
               "german": "Wasserstraße, die jederzeit sicher befahren werden kann; keine Gefahr durch Seegang.",
-              "english": "Waterway that can be navigated safely at all times; no danger from swell."
+              "english": "Waterway that can be navigated safely at all times; no danger from heavy seas."
             },
             "D": {
               "german": "Wasserstraße, die nicht jederzeit sicher befahren werden kann; Gefahr durch Seegang.",
-              "english": "Waterway that cannot be navigated safely at all times; danger from swell."
+              "english": "Waterway that cannot be navigated safely at all times; danger from heavy seas."
             }
           },
           "correct_option": "A",
@@ -640,7 +640,7 @@
           "question_number": 20,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Mindestabstand in Metern, der in der nachfolgenden Strecke vom Aufstellungsort der Tafel an eingehalten werden muss.",
@@ -674,7 +674,7 @@
           "question_number": 21,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Haltegebot vor beweglichen Brücken, Sperrwerken und Schleusen.",
@@ -708,7 +708,7 @@
           "question_number": 22,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Ankern verboten für alle Fahrzeuge.",
@@ -742,23 +742,23 @@
           "question_number": 23,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung haben folgende Tafelzeichen?",
-          "english_text": "What is the meaning of the following board signs?",
+          "english_text": "What is the meaning of the following signs?",
           "options": {
             "A": {
               "german": "Festmache- und Liegeverbot.",
-              "english": "Making fast and mooring prohibited."
+              "english": "Making fast and berthing prohibited."
             },
             "B": {
               "german": "Festmache- und Liegeverbot für Sportboote.",
-              "english": "Making fast and mooring prohibited for pleasure craft."
+              "english": "Making fast and berthing prohibited for pleasure craft."
             },
             "C": {
               "german": "Festmache- und Liegeverbot für Sportboote über 12 m Länge.",
-              "english": "Making fast and mooring prohibited for pleasure craft over 12 m in length."
+              "english": "Making fast and berthing prohibited for pleasure craft over 12 m in length."
             },
             "D": {
               "german": "Festmache- und Liegeverbot für gewerbliche Schiffe.",
-              "english": "Making fast and mooring prohibited for commercial vessels."
+              "english": "Making fast and berthing prohibited for commercial vessels."
             }
           },
           "correct_option": "A",
@@ -776,7 +776,7 @@
           "question_number": 24,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Abgabe eines langen Tons.",
@@ -810,7 +810,7 @@
           "question_number": 25,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung haben folgende Tafelzeichen?",
-          "english_text": "What is the meaning of the following board signs?",
+          "english_text": "What is the meaning of the following signs?",
           "options": {
             "A": {
               "german": "Wasserflächen, auf denen mit Wasserski oder Wassermotorrädern gefahren werden darf.",
@@ -844,7 +844,7 @@
           "question_number": 26,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Ende einer Gebots- oder Verbotsstrecke.",
@@ -852,7 +852,7 @@
             },
             "B": {
               "german": "Streckenabschnitt für eine nicht frei fahrende Fähre.",
-              "english": "Section for a non-free-running ferry."
+              "english": "Stretch with a ferry not moving independently (e.g. cable ferry)."
             },
             "C": {
               "german": "Queren des Fahrwassers ist gestattet.",
@@ -878,7 +878,7 @@
           "question_number": 27,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat folgendes Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Verbot der Durchfahrt und Sperrung der Schifffahrt.",
@@ -890,11 +890,11 @@
             },
             "C": {
               "german": "Verbot der Durchfahrt, jedoch für Kleinfahrzeuge ohne laufende Antriebsmaschine befahrbar.",
-              "english": "Passage prohibited, but passable for small craft without running propulsion engine."
+              "english": "Passage prohibited, but passable for small craft whose engine is not running."
             },
             "D": {
               "german": "Verbot der Durchfahrt, jedoch für Kleinfahrzeuge ohne Antriebsmaschine befahrbar.",
-              "english": "Passage prohibited, but passable for small craft without propulsion engine."
+              "english": "Passage prohibited, but passable for small craft without an engine."
             }
           },
           "correct_option": "A",
@@ -984,11 +984,11 @@
           "options": {
             "A": {
               "german": "Einfahrt frei, Gegenverkehr gesperrt.",
-              "english": "Entry free, oncoming traffic closed."
+              "english": "Entry permitted; oncoming traffic stopped."
             },
             "B": {
               "german": "Einfahrt frei, Schleusentor öffnet.",
-              "english": "Entry free, lock gate opening."
+              "english": "Entry permitted; lock gate opening."
             },
             "C": {
               "german": "Schleuse in Betrieb, auf Einfahrtsignal gemäß Reihenfolge warten.",
@@ -996,7 +996,7 @@
             },
             "D": {
               "german": "Schleuse in Betrieb, auf Ausfahrtsignal gemäß Reihenfolge warten.",
-              "english": "Lock in operation — wait for departure signal in order of arrival."
+              "english": "Lock in operation — wait for exit signal in order of arrival."
             }
           },
           "correct_option": "A",
@@ -1123,7 +1123,7 @@
             },
             "D": {
               "german": "Es kann durch dessen Bug- oder Heckwelle Seeschlag erleiden.",
-              "english": "It may suffer damage from the bow or stern wave."
+              "english": "It may be struck by heavy water from the bow or stern wave."
             }
           },
           "correct_option": "A",
@@ -1138,7 +1138,7 @@
           "question_number": 35,
           "category": "Vessel Handling",
           "german_text": "Warum soll man möglichst gegen Strom und Wind anlegen?",
-          "english_text": "Why should one berth against the current and wind whenever possible?",
+          "english_text": "Why should one come alongside heading into the current and wind whenever possible?",
           "options": {
             "A": {
               "german": "Weil sich das Fahrzeug dabei sicherer manövrieren lässt.",
@@ -1324,7 +1324,7 @@
           "question_number": 41,
           "category": "Vessel Handling",
           "german_text": "Wie verhält sich im Allgemeinen das Schiff im Rückwärtsgang bei einem rechtsdrehenden Propeller?",
-          "english_text": "How does the vessel generally respond in reverse with a right-handed propeller?",
+          "english_text": "How does a vessel with a right-handed propeller generally behave when going astern?",
           "options": {
             "A": {
               "german": "Das Heck dreht nach Backbord.",
@@ -1421,19 +1421,19 @@
           "options": {
             "A": {
               "german": "Von achtern gesehen in Vorausfahrt Drehung des Propellers im Uhrzeigersinn.",
-              "english": "Viewed from astern, the propeller rotates clockwise in ahead motion."
+              "english": "Viewed from astern, the propeller rotates clockwise when going ahead."
             },
             "B": {
               "german": "Von vorne gesehen in Vorausfahrt Drehung des Propellers im Uhrzeigersinn.",
-              "english": "Viewed from forward, the propeller rotates clockwise in ahead motion."
+              "english": "Viewed from forward, the propeller rotates clockwise when going ahead."
             },
             "C": {
               "german": "Von achtern gesehen in Vorausfahrt Drehung des Propellers gegen den Uhrzeigersinn.",
-              "english": "Viewed from astern, the propeller rotates counter-clockwise in ahead motion."
+              "english": "Viewed from astern, the propeller rotates counter-clockwise when going ahead."
             },
             "D": {
               "german": "Von vorne gesehen in Rückwärtsfahrt Drehung des Propellers gegen den Uhrzeigersinn.",
-              "english": "Viewed from forward, the propeller rotates counter-clockwise in astern motion."
+              "english": "Viewed from forward, the propeller rotates counter-clockwise when going astern."
             }
           },
           "correct_option": "A",
@@ -1452,19 +1452,19 @@
           "options": {
             "A": {
               "german": "Von achtern gesehen in Vorausfahrt Drehung des Propellers gegen den Uhrzeigersinn.",
-              "english": "Viewed from astern, the propeller rotates counter-clockwise in ahead motion."
+              "english": "Viewed from astern, the propeller rotates counter-clockwise when going ahead."
             },
             "B": {
               "german": "Von vorne gesehen in Vorausfahrt Drehung des Propellers gegen den Uhrzeigersinn.",
-              "english": "Viewed from forward, the propeller rotates counter-clockwise in ahead motion."
+              "english": "Viewed from forward, the propeller rotates counter-clockwise when going ahead."
             },
             "C": {
               "german": "Von achtern gesehen in Vorausfahrt Drehung des Propellers im Uhrzeigersinn.",
-              "english": "Viewed from astern, the propeller rotates clockwise in ahead motion."
+              "english": "Viewed from astern, the propeller rotates clockwise when going ahead."
             },
             "D": {
               "german": "Von vorne gesehen in Rückwärtsfahrt Drehung des Propellers im Uhrzeigersinn.",
-              "english": "Viewed from forward, the propeller rotates clockwise in astern motion."
+              "english": "Viewed from forward, the propeller rotates clockwise when going astern."
             }
           },
           "correct_option": "A",
@@ -1479,7 +1479,7 @@
           "question_number": 46,
           "category": "Vessel Handling",
           "german_text": "Was ist unter der indirekten Ruderwirkung (Radeffekt) des Propellers zu verstehen?",
-          "english_text": "What is meant by the indirect rudder effect (paddle-wheel effect) of the propeller?",
+          "english_text": "What is meant by the indirect rudder effect (paddle-wheel effect or prop walk) of the propeller?",
           "options": {
             "A": {
               "german": "Das seitliche Versetzen des Hecks.",
@@ -1607,11 +1607,11 @@
           "options": {
             "A": {
               "german": "Durch Schraubenstrom und Richtung des Propellers.",
-              "english": "Through the propeller thrust and the direction of the propeller."
+              "english": "Through the propeller wash and the direction of the propeller."
             },
             "B": {
               "german": "Durch Schraubenstrom und Anstellwinkel des Propellers.",
-              "english": "Through the propeller thrust and the angle of attack of the propeller."
+              "english": "Through the propeller wash and the angle of attack of the propeller."
             },
             "C": {
               "german": "Durch den Schraubenwiderstand und Anstellwinkel des Propellers.",
@@ -1634,15 +1634,15 @@
           "question_number": 51,
           "category": "Engine and Technical",
           "german_text": "Weshalb setzt bei einem Fahrzeug mit Einbaumaschine und starrer Welle bei Aufnahme der Rückwärtsfahrt die Ruderwirkung erst relativ spät ein?",
-          "english_text": "Why does the steering effect on a vessel with an inboard engine and fixed shaft only take effect relatively late when astern propulsion is engaged?",
+          "english_text": "Why does the steering effect on a vessel with an inboard engine and fixed shaft only take effect relatively late when going astern?",
           "options": {
             "A": {
               "german": "Weil sie erst mit Anströmung des Ruderblattes einsetzt.",
-              "english": "Because it only takes effect when water flows against the rudder blade."
+              "english": "Because it only takes effect once water flows past the rudder blade."
             },
             "B": {
               "german": "Weil sich durch den Radeffekt ein Unterdruck am Propeller entwickelt.",
-              "english": "Because the paddle-wheel effect creates a vacuum at the propeller."
+              "english": "Because the paddle-wheel effect creates low pressure at the propeller."
             },
             "C": {
               "german": "Durch den Abstand von Propeller und Ruderblatt.",
@@ -1650,7 +1650,7 @@
             },
             "D": {
               "german": "Weil sich durch den Radeffekt ein Unterdruck am Ruder entwickelt.",
-              "english": "Because the paddle-wheel effect creates a vacuum at the rudder."
+              "english": "Because the paddle-wheel effect creates low pressure at the rudder."
             }
           },
           "correct_option": "A",
@@ -1789,7 +1789,7 @@
           "question_number": 56,
           "category": "Engine and Technical",
           "german_text": "Der Motor ist gestartet worden. Was kann die Ursache sein, wenn nach dem Einkuppeln der Antriebswelle der Motor stehenbleibt?",
-          "english_text": "The engine has been started. What can be the cause if the engine stops after the drive shaft is engaged?",
+          "english_text": "The engine has been started. What can be the cause if the engine stalls when it is put into gear?",
           "options": {
             "A": {
               "german": "Blockierter Propeller.",
@@ -1828,7 +1828,7 @@
             },
             "B": {
               "german": "Ansaugdüsen zu groß bzw. zu klein.",
-              "english": "Intake jets too large or too small."
+              "english": "Carburettor jets too large or too small."
             },
             "C": {
               "german": "Tankdeckel ist offen.",
@@ -1836,7 +1836,7 @@
             },
             "D": {
               "german": "Schraube an der Welle lose.",
-              "english": "Propeller shaft nut loose."
+              "english": "Propeller loose on the shaft."
             }
           },
           "correct_option": "A",
@@ -1929,7 +1929,7 @@
             },
             "D": {
               "german": "Fahrzeug seefest hinterlassen und den Hafenmeister verständigen.",
-              "english": "Leave the vessel in seaworthy condition and notify the harbourmaster."
+              "english": "Leave the vessel secured for sea and notify the harbourmaster."
             }
           },
           "correct_option": "A",
@@ -2293,15 +2293,15 @@
             },
             "B": {
               "german": "Wenn Gefahr für Leib oder Leben von Personen besteht oder das Schiff nicht mehr sicher manövriert werden kann.",
-              "english": "When there is danger to the life or limb of persons or the vessel can no longer be navigated safely."
+              "english": "When there is danger to the life or limb of persons or the vessel can no longer be manoeuvred safely."
             },
             "C": {
               "german": "Wenn Gefahr für Leib oder Leben von Personen oder erhebliche Sachwerte besteht und daher Hilfe benötigt wird.",
-              "english": "When there is danger to the life or limb of persons or significant property values and assistance is therefore required."
+              "english": "When there is danger to the life or limb of persons or substantial property and assistance is therefore required."
             },
             "D": {
               "german": "Wenn Gefahr für Leib oder Leben von Personen, erhebliche Sachwerte oder die maritime Umwelt besteht.",
-              "english": "When there is danger to the life or limb of persons, significant property values, or the marine environment."
+              "english": "When there is danger to the life or limb of persons, substantial property, or the marine environment."
             }
           },
           "correct_option": "A",
@@ -2401,7 +2401,7 @@
           "options": {
             "A": {
               "german": "Bei fehlender Tauglichkeit oder fehlender Zuverlässigkeit.",
-              "english": "In cases of lacking fitness or lacking reliability."
+              "english": "In cases of lack of fitness or lack of reliability."
             },
             "B": {
               "german": "Bei zweifelhafter Tauglichkeit wegen Alkoholmissbrauch.",
@@ -2413,7 +2413,7 @@
             },
             "D": {
               "german": "Bei fehlender Zuverlässigkeit nach einer begangener Ordnungswidrigkeit.",
-              "english": "In cases of lacking reliability following a committed regulatory offence."
+              "english": "In cases of lacking reliability after committing an administrative offence."
             }
           },
           "correct_option": "A",
@@ -2463,7 +2463,7 @@
           "options": {
             "A": {
               "german": "Bei unmittelbar drohender Gefahr für sich oder andere.",
-              "english": "In the case of immediately threatening danger to oneself or others."
+              "english": "In the case of imminent danger to oneself or others."
             },
             "B": {
               "german": "Bei unmittelbar bevorstehender Begegnung.",
@@ -2475,7 +2475,7 @@
             },
             "D": {
               "german": "Bei mittelbar drohender Gefahr für sich oder andere.",
-              "english": "In the case of indirectly threatening danger to oneself or others."
+              "english": "In the case of indirect (not imminent) danger to oneself or others."
             }
           },
           "correct_option": "A",
@@ -2680,15 +2680,15 @@
           "options": {
             "A": {
               "german": "Binnenschifffahrtsstraßen-Ordnung, Rheinschifffahrtspolizeiverordnung.",
-              "english": "Inland Waterway Traffic Regulations (BinSchStrO); Rhine Vessel Police Regulations (RheinSchPV)."
+              "english": "Inland Waterway Traffic Regulations (BinSchStrO); Rhine Police Regulations (RheinSchPV)."
             },
             "B": {
               "german": "Binnenschiffsuntersuchungsordnung, Rheinschifffahrtspolizeiverordnung.",
-              "english": "Inland Vessel Inspection Regulations; Rhine Vessel Police Regulations."
+              "english": "Inland Vessel Inspection Regulations; Rhine Police Regulations."
             },
             "C": {
               "german": "Moselschifffahrtspolizeiverordnung, Donauschifffahrtspolizeiverordnung.",
-              "english": "Moselle Vessel Police Regulations; Danube Vessel Police Regulations."
+              "english": "Moselle Police Regulations; Danube Police Regulations."
             },
             "D": {
               "german": "Wassermotorräderverordnung, Wasserskiverordnung.",
@@ -2711,15 +2711,15 @@
           "options": {
             "A": {
               "german": "Moselschifffahrtspolizeiverordnung, Donauschifffahrtspolizeiverordnung.",
-              "english": "Moselle Vessel Police Regulations; Danube Vessel Police Regulations."
+              "english": "Moselle Police Regulations; Danube Police Regulations."
             },
             "B": {
               "german": "Donauschifffahrtspolizeiverordnung, Binnenschifffahrtsstraßen-Ordnung.",
-              "english": "Danube Vessel Police Regulations; Inland Waterway Traffic Regulations."
+              "english": "Danube Police Regulations; Inland Waterway Traffic Regulations."
             },
             "C": {
               "german": "Moselschifffahrtspolizeiverordnung, Binnenschiffsuntersuchungsordnung.",
-              "english": "Moselle Vessel Police Regulations; Inland Vessel Inspection Regulations."
+              "english": "Moselle Police Regulations; Inland Vessel Inspection Regulations."
             },
             "D": {
               "german": "Wassermotorräderverordnung, Wasserskiverordnung.",
@@ -2746,15 +2746,15 @@
             },
             "B": {
               "german": "Moselschifffahrtspolizeiverordnung, Donauschifffahrtspolizeiverordnung.",
-              "english": "Moselle Vessel Police Regulations; Danube Vessel Police Regulations."
+              "english": "Moselle Police Regulations; Danube Police Regulations."
             },
             "C": {
               "german": "Binnenschifffahrtsstraßen-Ordnung, Rheinschifffahrtspolizeiverordnung.",
-              "english": "Inland Waterway Traffic Regulations; Rhine Vessel Police Regulations."
+              "english": "Inland Waterway Traffic Regulations; Rhine Police Regulations."
             },
             "D": {
               "german": "Moselschifffahrtspolizeiverordnung, Binnenschiffsuntersuchungsordnung.",
-              "english": "Moselle Vessel Police Regulations; Inland Vessel Inspection Regulations."
+              "english": "Moselle Police Regulations; Inland Vessel Inspection Regulations."
             }
           },
           "correct_option": "A",
@@ -2932,7 +2932,7 @@
             },
             "B": {
               "german": "Einstellung der Schifffahrt.",
-              "english": "Cessation of navigation."
+              "english": "Navigation suspended."
             },
             "C": {
               "german": "Verbot der Schifffahrt bei Nacht und unsichtigem Wetter.",
@@ -2959,7 +2959,7 @@
           "options": {
             "A": {
               "german": "Einstellung der Schifffahrt.",
-              "english": "Cessation of navigation."
+              "english": "Navigation suspended."
             },
             "B": {
               "german": "Geschwindigkeitsbeschränkung und Fahrverbot für Fahrzeuge ohne Sprechfunk.",
@@ -3083,19 +3083,19 @@
           "options": {
             "A": {
               "german": "Rote Stumpftonnen oder Schwimmstangen.",
-              "english": "Red can buoys or spar buoys."
+              "english": "Red can buoys or floating poles."
             },
             "B": {
               "german": "Grüne Spitztonnen oder Schwimmstangen.",
-              "english": "Green conical buoys or spar buoys."
+              "english": "Green conical buoys or floating poles."
             },
             "C": {
               "german": "Rote Spierentonnen oder Schwimmstangen.",
-              "english": "Red spar buoys or spar buoys."
+              "english": "Red spar buoys or floating poles."
             },
             "D": {
               "german": "Grüne Spierentonnen oder Schwimmstangen.",
-              "english": "Green spar buoys or spar buoys."
+              "english": "Green spar buoys or floating poles."
             }
           },
           "correct_option": "A",
@@ -3114,19 +3114,19 @@
           "options": {
             "A": {
               "german": "Grüne Spitztonnen oder Schwimmstangen.",
-              "english": "Green conical buoys or spar buoys."
+              "english": "Green conical buoys or floating poles."
             },
             "B": {
               "german": "Rote Stumpftonnen oder Schwimmstangen.",
-              "english": "Red can buoys or spar buoys."
+              "english": "Red can buoys or floating poles."
             },
             "C": {
               "german": "Rote Spierentonnen oder Schwimmstangen.",
-              "english": "Red spar buoys or spar buoys."
+              "english": "Red spar buoys or floating poles."
             },
             "D": {
               "german": "Grüne Spierentonnen oder Schwimmstangen.",
-              "english": "Green spar buoys or spar buoys."
+              "english": "Green spar buoys or floating poles."
             }
           },
           "correct_option": "A",
@@ -3141,23 +3141,23 @@
           "question_number": 99,
           "category": "Waterways and Fairway Marks",
           "german_text": "Welche Fahrrinnenseite hat ein Bergfahrer an seiner Steuerbordseite und wie ist diese gekennzeichnet?",
-          "english_text": "Which side of the navigable channel does an upstream-bound vessel have on its starboard side, and how is it marked?",
+          "english_text": "Which side of the navigable channel does a vessel proceeding upstream have on its starboard side, and how is it marked?",
           "options": {
             "A": {
               "german": "Die linke Fahrrinnenseite, gekennzeichnet durch grüne Spitztonnen oder Schwimmstangen.",
-              "english": "The left side of the channel, marked by green conical buoys or spar buoys."
+              "english": "The left side of the channel, marked by green conical buoys or floating poles."
             },
             "B": {
               "german": "Die rechte Fahrrinnenseite, gekennzeichnet durch rote Stumpftonnen oder Schwimmstangen.",
-              "english": "The right side of the channel, marked by red can buoys or spar buoys."
+              "english": "The right side of the channel, marked by red can buoys or floating poles."
             },
             "C": {
               "german": "Die linke Fahrrinnenseite, gekennzeichnet durch rote Stumpftonnen oder Schwimmstangen.",
-              "english": "The left side of the channel, marked by red can buoys or spar buoys."
+              "english": "The left side of the channel, marked by red can buoys or floating poles."
             },
             "D": {
               "german": "Die rechte Fahrrinnenseite, gekennzeichnet durch grüne Spitztonnen oder Schwimmstangen.",
-              "english": "The right side of the channel, marked by green conical buoys or spar buoys."
+              "english": "The right side of the channel, marked by green conical buoys or floating poles."
             }
           },
           "correct_option": "A",
@@ -3172,23 +3172,23 @@
           "question_number": 100,
           "category": "Waterways and Fairway Marks",
           "german_text": "Was bedeutet eine rot-grün gestreifte Tonne oder Schwimmstange und was ist zu beachten?",
-          "english_text": "What does a red-and-green striped buoy or spar buoy indicate, and what must be observed?",
+          "english_text": "What does a red-and-green striped buoy or floating pole indicate, and what must be observed?",
           "options": {
             "A": {
               "german": "Fahrrinnenspaltung. Vorbeifahrt an beiden Seiten möglich.",
-              "english": "Channel split — passage on both sides possible."
+              "english": "Channel division — passage on both sides possible."
             },
             "B": {
               "german": "Fahrrinnenspaltung. In Fahrtrichtung links halten.",
-              "english": "Channel split — keep to the left in the direction of travel."
+              "english": "Channel division — keep to the left in the direction of travel."
             },
             "C": {
               "german": "Fahrrinnenspaltung. Vorbeifahrt nur an Steuerbord möglich.",
-              "english": "Channel split — passage only possible on the starboard side."
+              "english": "Channel division — passage only possible on the starboard side."
             },
             "D": {
               "german": "Fahrrinnenspaltung. In Fahrtrichtung rechts halten.",
-              "english": "Channel split — keep to the right in the direction of travel."
+              "english": "Channel division — keep to the right in the direction of travel."
             }
           },
           "correct_option": "A",
@@ -3203,23 +3203,23 @@
           "question_number": 101,
           "category": "Waterways and Fairway Marks",
           "german_text": "Mit welchen Zeichen werden Hindernisse wie zum Beispiel Buhnen und Kribben an der rechten Seite der Wasserstraße bezeichnet?",
-          "english_text": "How are obstructions such as groynes and training walls on the right side of the waterway marked?",
+          "english_text": "How are obstructions such as groynes on the right side of the waterway marked?",
           "options": {
             "A": {
               "german": "Stangen mit Toppzeichen: roter Kegel, Spitze nach unten, oder rot-weiß gestreifte Schwimmstange mit rotem Zylinder.",
-              "english": "Poles with topmarks: red cone, apex downward; or red-and-white striped spar buoy with red cylinder."
+              "english": "Poles with topmarks: red cone, apex downward; or red-and-white striped floating pole with red cylinder."
             },
             "B": {
               "german": "Stangen mit Toppzeichen: grüner Kegel, Spitze nach oben, oder grün-weiß gestreifte Schwimmstange mit grünem Kegel.",
-              "english": "Poles with topmarks: green cone, apex upward; or green-and-white striped spar buoy with green cone."
+              "english": "Poles with topmarks: green cone, apex upward; or green-and-white striped floating pole with green cone."
             },
             "C": {
               "german": "Stangen mit Toppzeichen: roter Kegel, Spitze nach oben, oder rot-weiß gestreifte Schwimmstange mit rotem Zylinder.",
-              "english": "Poles with topmarks: red cone, apex upward; or red-and-white striped spar buoy with red cylinder."
+              "english": "Poles with topmarks: red cone, apex upward; or red-and-white striped floating pole with red cylinder."
             },
             "D": {
               "german": "Stangen mit Toppzeichen: grüner Kegel, Spitze nach unten, oder grün-weiß gestreifte Schwimmstange mit grünem Kegel.",
-              "english": "Poles with topmarks: green cone, apex downward; or green-and-white striped spar buoy with green cone."
+              "english": "Poles with topmarks: green cone, apex downward; or green-and-white striped floating pole with green cone."
             }
           },
           "correct_option": "A",
@@ -3234,7 +3234,7 @@
           "question_number": 102,
           "category": "Waterways and Fairway Marks",
           "german_text": "Was kennzeichnet eine grün-weiß gestreifte Schwimmstange mit grünem Kegel, Spitze nach oben, oder eine grüne Tonne mit grün-weiß gestreiftem Aufsatz mit grünem Kegel, Spitze nach oben?",
-          "english_text": "What does a green-and-white striped spar buoy with a green cone apex upward, or a green buoy with a green-and-white striped top and green cone apex upward, indicate?",
+          "english_text": "What does a green-and-white striped floating pole with a green cone apex upward, or a green buoy with a green-and-white striped top and green cone apex upward, indicate?",
           "options": {
             "A": {
               "german": "Hindernis an der linken Seite der Wasserstraße.",
@@ -3296,7 +3296,7 @@
           "question_number": 104,
           "category": "Waterways and Fairway Marks",
           "german_text": "Was bedeuten auf einem stillliegenden Fahrzeug zwei weiße Lichter übereinander?",
-          "english_text": "What is indicated by two white lights vertically arranged on a stationary vessel?",
+          "english_text": "What is indicated by two white lights one above the other on a stationary vessel?",
           "options": {
             "A": {
               "german": "Ein Ankerlieger, dessen Anker die Schifffahrt gefährden kann.",
@@ -3389,11 +3389,11 @@
           "question_number": 107,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Liegestelle für Fahrzeuge mit explosiven Stoffen, für Kleinfahrzeuge verboten.",
-              "english": "Mooring place for vessels carrying flammable substances — prohibited for small craft."
+              "english": "Mooring place for vessels carrying explosive substances — prohibited for small craft."
             },
             "B": {
               "german": "Liegestelle für Fahrzeuge mit brennbaren Stoffen, für Kleinfahrzeuge verboten.",
@@ -3423,7 +3423,7 @@
           "question_number": 108,
           "category": "Navigation Signs",
           "german_text": "Was bedeuten diese Tafelzeichen?",
-          "english_text": "What is the meaning of these board signs?",
+          "english_text": "What is the meaning of these signs?",
           "options": {
             "A": {
               "german": "Liegestelle für Fahrzeuge ohne gefährliche Güter, auch für Kleinfahrzeuge.",
@@ -3457,7 +3457,7 @@
           "question_number": 109,
           "category": "Navigation Signs",
           "german_text": "Wo besteht ohne besondere Bezeichnung der Stellen bzw. Strecken ein allgemeines Liegeverbot?",
-          "english_text": "Where does a general mooring prohibition apply without special marking of individual locations or stretches?",
+          "english_text": "Where does a general berthing prohibition apply without special marking of individual locations or stretches?",
           "options": {
             "A": {
               "german": "Auf Schifffahrtskanälen und Schleusenkanälen.",
@@ -3488,7 +3488,7 @@
           "question_number": 110,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat das nachstehende Tafelzeichen?",
-          "english_text": "What is the meaning of the following board sign?",
+          "english_text": "What is the meaning of the following sign?",
           "options": {
             "A": {
               "german": "Empfohlene Durchfahrtsöffnung, Durchfahrt in beide Richtungen erlaubt.",
@@ -3522,7 +3522,7 @@
           "question_number": 111,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung haben die nachstehenden Tafelzeichen?",
-          "english_text": "What is the meaning of the following board signs?",
+          "english_text": "What is the meaning of the following signs?",
           "options": {
             "A": {
               "german": "Empfohlene Durchfahrt, Durchfahrt in Gegenrichtung verboten.",
@@ -3556,7 +3556,7 @@
           "question_number": 112,
           "category": "Navigation Signs",
           "german_text": "Was bedeuten diese Tafelzeichen an Brücken?",
-          "english_text": "What is the meaning of these board signs at bridges?",
+          "english_text": "What is the meaning of these signs at bridges?",
           "options": {
             "A": {
               "german": "Durchfahrt nur zwischen den beiden Tafeln erlaubt.",
@@ -3590,7 +3590,7 @@
           "question_number": 113,
           "category": "Navigation Signs",
           "german_text": "Was bedeuten diese Tafelzeichen an Brücken?",
-          "english_text": "What is the meaning of these board signs at bridges?",
+          "english_text": "What is the meaning of these signs at bridges?",
           "options": {
             "A": {
               "german": "Empfohlene Durchfahrt nur zwischen den beiden Tafeln.",
@@ -3624,7 +3624,7 @@
           "question_number": 114,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen an Brücken?",
-          "english_text": "What is the meaning of this board sign at bridges?",
+          "english_text": "What is the meaning of this sign at bridges?",
           "options": {
             "A": {
               "german": "Empfohlene Durchfahrt mit Gegenverkehr.",
@@ -3658,7 +3658,7 @@
           "question_number": 115,
           "category": "Navigation Signs",
           "german_text": "Was bedeuten diese Tafelzeichen an Brücken?",
-          "english_text": "What is the meaning of these board signs at bridges?",
+          "english_text": "What is the meaning of these signs at bridges?",
           "options": {
             "A": {
               "german": "Empfohlene Durchfahrt ohne Gegenverkehr.",
@@ -3692,7 +3692,7 @@
           "question_number": 116,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen im Bereich eines Wehres?",
-          "english_text": "What is the meaning of this board sign in the area of a weir?",
+          "english_text": "What is the meaning of this sign in the area of a weir?",
           "options": {
             "A": {
               "german": "Verbot der Durchfahrt und Sperrung der Schifffahrt.",
@@ -3700,11 +3700,11 @@
             },
             "B": {
               "german": "Gesperrte Wasserfläche, jedoch für Kleinfahrzeuge mit Antriebsmaschine befahrbar.",
-              "english": "Restricted water area, but navigable for small craft with propulsion engine."
+              "english": "Closed area, but navigable for small craft with an engine."
             },
             "C": {
               "german": "Gesperrte Wasserfläche, jedoch für Kleinfahrzeuge ohne Antriebsmaschine befahrbar.",
-              "english": "Restricted water area, but navigable for small craft without propulsion engine."
+              "english": "Closed area, but navigable for small craft without an engine."
             },
             "D": {
               "german": "Schutzbedürftige Anlage.",
@@ -3738,11 +3738,11 @@
             },
             "C": {
               "german": "Ausfahrt verboten, Öffnen der Schleuse wird vorbereitet.",
-              "english": "Departure prohibited — opening of the lock is being prepared."
+              "english": "Exit prohibited — opening of the lock is being prepared."
             },
             "D": {
               "german": "Ausfahrt verboten, Schließen der Schleuse wird vorbereitet.",
-              "english": "Departure prohibited — closing of the lock is being prepared."
+              "english": "Exit prohibited — closing of the lock is being prepared."
             }
           },
           "correct_option": "A",
@@ -3788,23 +3788,23 @@
           "question_number": 119,
           "category": "Locks",
           "german_text": "Mehrere Kleinfahrzeuge sollen gemeinsam vom Oberwasser in das Unterwasser geschleust werden. Worauf ist bei deren Einfahrt in die Schleuse und während des Schleusens besonders zu achten?",
-          "english_text": "Several small craft are to be locked through together from the upper water to the lower water. What must be observed particularly during their entry into the lock and during the locking operation?",
+          "english_text": "Several small craft are to be locked through together from the upper level down to the lower level. What must be observed particularly during their entry into the lock and during the locking operation?",
           "options": {
             "A": {
               "german": "Das letzte Kleinfahrzeug muss so weit einfahren, dass es beim Leeren der Schleuse nicht auf den Drempel aufsetzen kann. Die Festmacherleinen sind so zu bedienen, dass Stöße gegen Schleusenwände, Schleusentore, andere Fahrzeuge vermieden werden und ein sicheres Fieren der Leinen möglich ist.",
-              "english": "The last small craft must proceed far enough in so that it cannot settle on the sill when the lock is emptied. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and safe slacking of lines is possible."
+              "english": "The last small craft must proceed far enough in so that it cannot settle on the sill when the lock is emptied. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and the lines can be eased safely."
             },
             "B": {
               "german": "Das erste Kleinfahrzeug muss so weit einfahren, dass es beim Leeren der Schleuse nicht auf den Drempel aufsetzen kann. Die Festmacherleinen sind so zu bedienen, dass Stöße gegen Schleusenwände, Schleusentore, andere Fahrzeuge vermieden werden und ein sicheres Fieren der Leinen möglich ist.",
-              "english": "The first small craft must proceed far enough in so that it cannot settle on the sill when the lock is emptied. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and safe slacking of lines is possible."
+              "english": "The first small craft must proceed far enough in so that it cannot settle on the sill when the lock is emptied. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and the lines can be eased safely."
             },
             "C": {
               "german": "Das erste Kleinfahrzeug muss so weit einfahren, dass es beim Füllen der Schleuse nicht auf den Drempel aufsetzen kann. Die Festmacherleinen sind so zu bedienen, dass Stöße gegen Schleusenwände, Schleusentore, andere Fahrzeuge vermieden werden und ein sicheres Fieren der Leinen möglich ist.",
-              "english": "The first small craft must proceed far enough in so that it cannot settle on the sill when the lock is filled. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and safe slacking of lines is possible."
+              "english": "The first small craft must proceed far enough in so that it cannot settle on the sill when the lock is filled. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and the lines can be eased safely."
             },
             "D": {
               "german": "Das letzte Kleinfahrzeug muss so weit einfahren, dass es beim Füllen der Schleuse nicht auf den Drempel aufsetzen kann. Die Festmacherleinen sind so zu bedienen, dass Stöße gegen Schleusenwände, Schleusentore, andere Fahrzeuge vermieden werden und ein sicheres Fieren der Leinen möglich ist.",
-              "english": "The last small craft must proceed far enough in so that it cannot settle on the sill when the lock is filled. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and safe slacking of lines is possible."
+              "english": "The last small craft must proceed far enough in so that it cannot settle on the sill when the lock is filled. Mooring lines must be handled so that impacts against lock walls, lock gates, and other vessels are avoided and the lines can be eased safely."
             }
           },
           "correct_option": "A",
@@ -3823,7 +3823,7 @@
           "options": {
             "A": {
               "german": "Fahrzeug mit Maschinenantrieb länger als 110 m.",
-              "english": "Power-driven vessel longer than 110 m."
+              "english": "Motorized vessel longer than 110 m."
             },
             "B": {
               "german": "Schubverband kürzer als 110 m.",
@@ -3835,7 +3835,7 @@
             },
             "D": {
               "german": "Fahrzeug ohne Maschinenantrieb länger als 110 m.",
-              "english": "Vessel without propulsion engine longer than 110 m."
+              "english": "Vessel without an engine longer than 110 m."
             }
           },
           "correct_option": "A",
@@ -3959,11 +3959,11 @@
           "options": {
             "A": {
               "german": "Nicht frei fahrende Fähre.",
-              "english": "Non-free-running ferry."
+              "english": "Ferry not moving independently."
             },
             "B": {
               "german": "Frei fahrende Fähre.",
-              "english": "Free-running ferry."
+              "english": "Ferry moving independently."
             },
             "C": {
               "german": "Schubverband von achtern.",
@@ -3993,11 +3993,11 @@
           "options": {
             "A": {
               "german": "Frei fahrende Fähre.",
-              "english": "Free-running ferry."
+              "english": "Ferry moving independently."
             },
             "B": {
               "german": "Nicht frei fahrende Fähre.",
-              "english": "Non-free-running ferry."
+              "english": "Ferry not moving independently."
             },
             "C": {
               "german": "Schubverband von achtern.",
@@ -4027,19 +4027,19 @@
           "options": {
             "A": {
               "german": "Fahrzeug hat brennbare Stoffe geladen. Abstand beim Stillliegen 10 m.",
-              "english": "Vessel is carrying flammable substances — minimum lying distance 10 m."
+              "english": "Vessel is carrying flammable substances — minimum distance when berthed: 10 m."
             },
             "B": {
               "german": "Fahrzeug hat gesundheitsschädliche Stoffe geladen. Abstand beim Stillliegen 50 m.",
-              "english": "Vessel is carrying health-hazardous substances — minimum lying distance 50 m."
+              "english": "Vessel is carrying health-hazardous substances — minimum distance when berthed: 50 m."
             },
             "C": {
               "german": "Fahrzeug hat explosive Stoffe geladen. Abstand beim Stillliegen 100 m.",
-              "english": "Vessel is carrying explosive substances — minimum lying distance 100 m."
+              "english": "Vessel is carrying explosive substances — minimum distance when berthed: 100 m."
             },
             "D": {
               "german": "Fahrzeug der Überwachungsbehörden im Einsatz.",
-              "english": "Regulatory authority vessel on duty."
+              "english": "Supervisory authority vessel on duty."
             }
           },
           "correct_option": "A",
@@ -4058,19 +4058,19 @@
           "options": {
             "A": {
               "german": "Fahrzeug hat brennbare Stoffe geladen, Abstand beim Stillliegen 10 m.",
-              "english": "Vessel is carrying flammable substances — minimum lying distance 10 m."
+              "english": "Vessel is carrying flammable substances — minimum distance when berthed: 10 m."
             },
             "B": {
               "german": "Fahrzeug hat gesundheitsschädliche Stoffe geladen, Abstand beim Stillliegen 50 m.",
-              "english": "Vessel is carrying health-hazardous substances — minimum lying distance 50 m."
+              "english": "Vessel is carrying health-hazardous substances — minimum distance when berthed: 50 m."
             },
             "C": {
               "german": "Fahrzeug hat explosive Stoffe geladen. Abstand beim Stillliegen 100 m.",
-              "english": "Vessel is carrying explosive substances — minimum lying distance 100 m."
+              "english": "Vessel is carrying explosive substances — minimum distance when berthed: 100 m."
             },
             "D": {
               "german": "Fahrzeug der Überwachungsbehörden im Einsatz.",
-              "english": "Regulatory authority vessel on duty."
+              "english": "Supervisory authority vessel on duty."
             }
           },
           "correct_option": "A",
@@ -4088,23 +4088,23 @@
           "question_number": 128,
           "category": "Lights and Day Signals",
           "german_text": "Was bedeuten auf einem Fahrzeug zwei blaue Lichter übereinander?",
-          "english_text": "What do two blue lights vertically arranged on a vessel indicate?",
+          "english_text": "What do two blue lights one above the other on a vessel indicate?",
           "options": {
             "A": {
               "german": "Fahrzeug hat gesundheitsschädliche Stoffe geladen, Abstand beim Stillliegen 50 m.",
-              "english": "Vessel is carrying health-hazardous substances — minimum lying distance 50 m."
+              "english": "Vessel is carrying health-hazardous substances — minimum distance when berthed: 50 m."
             },
             "B": {
               "german": "Fahrzeug hat explosive Stoffe geladen, Abstand beim Stillliegen 100 m.",
-              "english": "Vessel is carrying explosive substances — minimum lying distance 100 m."
+              "english": "Vessel is carrying explosive substances — minimum distance when berthed: 100 m."
             },
             "C": {
               "german": "Fahrzeug hat brennbare Stoffe geladen, Abstand beim Stillliegen 10 m.",
-              "english": "Vessel is carrying flammable substances — minimum lying distance 10 m."
+              "english": "Vessel is carrying flammable substances — minimum distance when berthed: 10 m."
             },
             "D": {
               "german": "Fahrzeug der Überwachungsbehörden im Einsatz.",
-              "english": "Regulatory authority vessel on duty."
+              "english": "Supervisory authority vessel on duty."
             }
           },
           "correct_option": "A",
@@ -4123,19 +4123,19 @@
           "options": {
             "A": {
               "german": "Fahrzeug hat gesundheitsschädliche Stoffe geladen, Abstand beim Stillliegen 50 m.",
-              "english": "Vessel is carrying health-hazardous substances — minimum lying distance 50 m."
+              "english": "Vessel is carrying health-hazardous substances — minimum distance when berthed: 50 m."
             },
             "B": {
               "german": "Fahrzeug hat explosive Stoffe geladen, Abstand beim Stillliegen 100 m.",
-              "english": "Vessel is carrying explosive substances — minimum lying distance 100 m."
+              "english": "Vessel is carrying explosive substances — minimum distance when berthed: 100 m."
             },
             "C": {
               "german": "Fahrzeug hat brennbare Stoffe geladen, Abstand beim Stillliegen 10 m.",
-              "english": "Vessel is carrying flammable substances — minimum lying distance 10 m."
+              "english": "Vessel is carrying flammable substances — minimum distance when berthed: 10 m."
             },
             "D": {
               "german": "Fahrzeug der Überwachungsbehörden im Einsatz.",
-              "english": "Regulatory authority vessel on duty."
+              "english": "Supervisory authority vessel on duty."
             }
           },
           "correct_option": "A",
@@ -4153,23 +4153,23 @@
           "question_number": 130,
           "category": "Lights and Day Signals",
           "german_text": "Was bedeuten auf einem Fahrzeug drei blaue Lichter übereinander?",
-          "english_text": "What do three blue lights vertically arranged on a vessel indicate?",
+          "english_text": "What do three blue lights one above the other on a vessel indicate?",
           "options": {
             "A": {
               "german": "Fahrzeug hat explosive Stoffe geladen, Abstand beim Stillliegen 100 m.",
-              "english": "Vessel is carrying explosive substances — minimum lying distance 100 m."
+              "english": "Vessel is carrying explosive substances — minimum distance when berthed: 100 m."
             },
             "B": {
               "german": "Fahrzeug hat gesundheitsschädliche Stoffe geladen, Abstand beim Stillliegen 50 m.",
-              "english": "Vessel is carrying health-hazardous substances — minimum lying distance 50 m."
+              "english": "Vessel is carrying health-hazardous substances — minimum distance when berthed: 50 m."
             },
             "C": {
               "german": "Fahrzeug hat brennbare Stoffe geladen, Abstand beim Stillliegen 10 m.",
-              "english": "Vessel is carrying flammable substances — minimum lying distance 10 m."
+              "english": "Vessel is carrying flammable substances — minimum distance when berthed: 10 m."
             },
             "D": {
               "german": "Fahrzeug der Überwachungsbehörden im Einsatz.",
-              "english": "Regulatory authority vessel on duty."
+              "english": "Supervisory authority vessel on duty."
             }
           },
           "correct_option": "A",
@@ -4188,19 +4188,19 @@
           "options": {
             "A": {
               "german": "Fahrzeug hat explosive Stoffe geladen, Abstand beim Stillliegen 100 m.",
-              "english": "Vessel is carrying explosive substances — minimum lying distance 100 m."
+              "english": "Vessel is carrying explosive substances — minimum distance when berthed: 100 m."
             },
             "B": {
               "german": "Fahrzeug hat gesundheitsschädliche Stoffe geladen, Abstand beim Stillliegen 50 m.",
-              "english": "Vessel is carrying health-hazardous substances — minimum lying distance 50 m."
+              "english": "Vessel is carrying health-hazardous substances — minimum distance when berthed: 50 m."
             },
             "C": {
               "german": "Fahrzeug hat brennbare Stoffe geladen, Abstand beim Stillliegen 10 m.",
-              "english": "Vessel is carrying flammable substances — minimum lying distance 10 m."
+              "english": "Vessel is carrying flammable substances — minimum distance when berthed: 10 m."
             },
             "D": {
               "german": "Fahrzeug der Überwachungsbehörden im Einsatz.",
-              "english": "Regulatory authority vessel on duty."
+              "english": "Supervisory authority vessel on duty."
             }
           },
           "correct_option": "A",
@@ -4218,7 +4218,7 @@
           "question_number": 132,
           "category": "Lights and Day Signals",
           "german_text": "Welches Fahrzeug führt die nachstehende Tagbezeichnung?",
-          "english_text": "Which vessel displays the following day shape?",
+          "english_text": "Which vessel displays the following day marking?",
           "options": {
             "A": {
               "german": "Ein Fahrzeug, dem die zuständige Behörde einen Vorrang zur Durchfahrt durch Stellen an denen eine bestimmte Reihenfolge gilt eingeräumt hat.",
@@ -4291,7 +4291,7 @@
             },
             "B": {
               "german": "Es muss ein weißes Funkellicht geführt werden.",
-              "english": "A white flashing light must be displayed."
+              "english": "A white scintillating light must be displayed."
             },
             "C": {
               "german": "Es muss kein weiteres Licht geführt werden.",
@@ -4314,15 +4314,15 @@
           "question_number": 135,
           "category": "Lights and Day Signals",
           "german_text": "Welche Lichter muss ein Kleinfahrzeug unter Motor führen, wenn es ein anderes Kleinfahrzeug ohne Maschinenantrieb schleppt?",
-          "english_text": "Which lights must a small craft under power display when towing another small craft without propulsion?",
+          "english_text": "Which lights must a small craft under power display when towing another small craft without an engine?",
           "options": {
             "A": {
               "german": "Lichter eines Kleinfahrzeugs mit Maschinenantrieb.",
-              "english": "The lights of a power-driven small craft."
+              "english": "The lights of a motorized small craft."
             },
             "B": {
               "german": "Zwei weiße Lichter übereinander.",
-              "english": "Two white lights vertically arranged."
+              "english": "Two white lights one above the other."
             },
             "C": {
               "german": "Weißes Rundumlicht.",
@@ -4330,7 +4330,7 @@
             },
             "D": {
               "german": "Lichter eines Kleinfahrzeugs mit Maschinenantrieb und ein zweites weißes Topplicht.",
-              "english": "The lights of a power-driven small craft plus a second white masthead light."
+              "english": "The lights of a motorized small craft plus a second white masthead light."
             }
           },
           "correct_option": "A",
@@ -4353,15 +4353,15 @@
             },
             "B": {
               "german": "Lichter eines Kleinfahrzeugs mit Maschinenantrieb.",
-              "english": "The lights of a power-driven small craft."
+              "english": "The lights of a motorized small craft."
             },
             "C": {
               "german": "Zwei weiße Lichter übereinander.",
-              "english": "Two white lights vertically arranged."
+              "english": "Two white lights one above the other."
             },
             "D": {
               "german": "Weißes Funkellicht.",
-              "english": "White flashing light."
+              "english": "White scintillating light."
             }
           },
           "correct_option": "A",
@@ -4438,7 +4438,7 @@
           "question_number": 139,
           "category": "Lights and Day Signals",
           "german_text": "Welches Licht muss ein Kleinfahrzeug ohne Maschinenantrieb mindestens führen?",
-          "english_text": "What light must a small craft without propulsion display as a minimum?",
+          "english_text": "What light must a small craft without an engine display as a minimum?",
           "options": {
             "A": {
               "german": "Ein von allen Seiten sichtbares weißes Licht.",
@@ -4469,7 +4469,7 @@
           "question_number": 140,
           "category": "Traffic Rules",
           "german_text": "Wie muss sich ein Segelfahrzeug auf einer Binnenschifffahrtsstraße, welches sich auf Kollisionskurs mit einem Kleinfahrzeug mit Maschinenantrieb befindet, verhalten?",
-          "english_text": "How must a sailing vessel on an inland waterway behave when on a collision course with a power-driven small craft?",
+          "english_text": "How must a sailing vessel on an inland waterway behave when on a collision course with a motorized small craft?",
           "options": {
             "A": {
               "german": "Es hält Kurs und Geschwindigkeit bei.",
@@ -4531,7 +4531,7 @@
           "question_number": 142,
           "category": "Traffic Rules",
           "german_text": "Wie muss sich ein Kleinfahrzeug mit Maschinenantrieb gegenüber einem Segelsurfer, der auf Kollisionskurs liegt, verhalten?",
-          "english_text": "How must a power-driven small craft behave toward a windsurfer that is on a collision course?",
+          "english_text": "How must a motorized small craft behave toward a windsurfer that is on a collision course?",
           "options": {
             "A": {
               "german": "Es muss ausweichen.",
@@ -4566,7 +4566,7 @@
           "options": {
             "A": {
               "german": "Die Segelyacht mit Wind von Steuerbord, weil sie als Kleinfahrzeug mit Maschinenantrieb gilt.",
-              "english": "The sailing yacht with the wind on its starboard side, because it is deemed a power-driven small craft."
+              "english": "The sailing yacht with the wind on its starboard side, because it is deemed a motorized small craft."
             },
             "B": {
               "german": "Die Segelyacht mit Wind von Backbord, weil sie als Kleinfahrzeug unter Segel gilt.",
@@ -4578,7 +4578,7 @@
             },
             "D": {
               "german": "Beide Segelyachten, weil eines als Kleinfahrzeug mit Maschinenantrieb gilt und das andere den Wind von Backbord hat.",
-              "english": "Both sailing yachts, because one is deemed a power-driven small craft and the other has the wind on its port side."
+              "english": "Both sailing yachts, because one is deemed a motorized small craft and the other has the wind on its port side."
             }
           },
           "correct_option": "A",
@@ -4628,11 +4628,11 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an jeder Seite gestattet. Sog und Wellenschlag vermeiden.",
-              "english": "Floating plant at work — passage permitted on either side; avoid suction and wash."
+              "english": "Floating equipment at work — passage permitted on either side; avoid suction and wash."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt nicht gestattet.",
-              "english": "Floating plant at work — passage not permitted."
+              "english": "Floating equipment at work — passage not permitted."
             },
             "C": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Steuerbordseite gestattet. Sog und Wellenschlag vermeiden.",
@@ -4662,11 +4662,11 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an jeder Seite gestattet. Sog und Wellenschlag vermeiden.",
-              "english": "Floating plant at work — passage permitted on either side; avoid suction and wash."
+              "english": "Floating equipment at work — passage permitted on either side; avoid suction and wash."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt nicht gestattet.",
-              "english": "Floating plant at work — passage not permitted."
+              "english": "Floating equipment at work — passage not permitted."
             },
             "C": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Steuerbordseite gestattet. Sog und Wellenschlag vermeiden.",
@@ -4764,19 +4764,19 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der grünen Seite gestattet; rote Seite gesperrt.",
-              "english": "Floating plant at work — passage permitted on the green side; red side blocked."
+              "english": "Floating equipment at work — passage permitted on the green side; red side blocked."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der grünen Seite gestattet; rote Seite gesperrt. Sog und Wellenschlag vermeiden.",
-              "english": "Floating plant at work — passage permitted on the green side; red side blocked; avoid suction and wash."
+              "english": "Floating equipment at work — passage permitted on the green side; red side blocked; avoid suction and wash."
             },
             "C": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der grünen Seite gestattet. Vorbeifahrt an der roten Seite mit unverminderter Geschwindigkeit möglich.",
-              "english": "Floating plant at work — passage permitted on the green side; passage on red side at full speed possible."
+              "english": "Floating equipment at work — passage permitted on the green side; passage on red side at full speed possible."
             },
             "D": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der roten Seite gestattet; grüne Seite gesperrt.",
-              "english": "Floating plant at work — passage permitted on the red side; green side blocked."
+              "english": "Floating equipment at work — passage permitted on the red side; green side blocked."
             }
           },
           "correct_option": "A",
@@ -4798,19 +4798,19 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der grünen Seite gestattet; rote Seite gesperrt.",
-              "english": "Floating plant at work — passage permitted on the green side; red side blocked."
+              "english": "Floating equipment at work — passage permitted on the green side; red side blocked."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der grünen Seite gestattet; rote Seite gesperrt. Sog und Wellenschlag vermeiden.",
-              "english": "Floating plant at work — passage permitted on the green side; red side blocked; avoid suction and wash."
+              "english": "Floating equipment at work — passage permitted on the green side; red side blocked; avoid suction and wash."
             },
             "C": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der grünen Seite gestattet. Vorbeifahrt an der roten Seite mit unverminderter Geschwindigkeit möglich.",
-              "english": "Floating plant at work — passage permitted on the green side; passage on red side at full speed possible."
+              "english": "Floating equipment at work — passage permitted on the green side; passage on red side at full speed possible."
             },
             "D": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der roten Seite gestattet; grüne Seite gesperrt.",
-              "english": "Floating plant at work — passage permitted on the red side; green side blocked."
+              "english": "Floating equipment at work — passage permitted on the red side; green side blocked."
             }
           },
           "correct_option": "A",
@@ -4832,7 +4832,7 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der Seite mit dem grün-weiß-grünen Tafelzeichen gestattet; rot-weiß-rote Seite gesperrt.",
-              "english": "Floating plant at work — passage permitted on the green-white-green side; red-white-red side blocked."
+              "english": "Floating equipment at work — passage permitted on the green-white-green side; red-white-red side blocked."
             },
             "B": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Seite mit dem grün-weiß-grünen Tafelzeichen gestattet; rot-weiß-rote Seite gesperrt. Sog und Wellenschlag vermeiden.",
@@ -4840,7 +4840,7 @@
             },
             "C": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an der Seite mit dem grün-weiß-grünen Tafelzeichen gestattet; rot-weiß-rote Seite gesperrt. Sog und Wellenschlag vermeiden.",
-              "english": "Floating plant at work — passage permitted on the green-white-green side; red-white-red side blocked; avoid suction and wash."
+              "english": "Floating equipment at work — passage permitted on the green-white-green side; red-white-red side blocked; avoid suction and wash."
             },
             "D": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Seite mit dem rot-weiß-roten Tafelzeichen gestattet; grün-weiß-grüne Seite gesperrt.",
@@ -4866,11 +4866,11 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an jeder Seite gestattet.",
-              "english": "Floating plant at work — passage permitted on either side."
+              "english": "Floating equipment at work — passage permitted on either side."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt nicht gestattet.",
-              "english": "Floating plant at work — passage not permitted."
+              "english": "Floating equipment at work — passage not permitted."
             },
             "C": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Steuerbordseite gestattet.",
@@ -4900,11 +4900,11 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an jeder Seite gestattet.",
-              "english": "Floating plant at work — passage permitted on either side."
+              "english": "Floating equipment at work — passage permitted on either side."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt nicht gestattet.",
-              "english": "Floating plant at work — passage not permitted."
+              "english": "Floating equipment at work — passage not permitted."
             },
             "C": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Steuerbordseite gestattet.",
@@ -4934,11 +4934,11 @@
           "options": {
             "A": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt an jeder Seite gestattet.",
-              "english": "Floating plant at work — passage permitted on either side."
+              "english": "Floating equipment at work — passage permitted on either side."
             },
             "B": {
               "german": "Schwimmendes Gerät bei der Arbeit. Vorbeifahrt nicht gestattet.",
-              "english": "Floating plant at work — passage not permitted."
+              "english": "Floating equipment at work — passage not permitted."
             },
             "C": {
               "german": "Festgefahrenes oder gesunkenes Fahrzeug. Vorbeifahrt an der Steuerbordseite gestattet. Sog und Wellenschlag vermeiden.",
@@ -4998,23 +4998,23 @@
           "question_number": 156,
           "category": "Traffic Rules",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Gesperrte Wasserfläche, jedoch für Kleinfahrzeuge ohne Antriebsmaschine befahrbar.",
-              "english": "Restricted water area, but navigable for small craft without propulsion engine."
+              "english": "Closed area, but navigable for small craft without an engine."
             },
             "B": {
               "german": "Gesperrte Wasserfläche, jedoch für Kleinfahrzeuge ohne laufende Antriebsmaschine befahrbar.",
-              "english": "Restricted water area, but navigable for small craft with engine not running."
+              "english": "Closed area, but navigable for small craft with engine not running."
             },
             "C": {
               "german": "Gesperrte Wasserfläche, für Kleinfahrzeuge nicht befahrbar.",
-              "english": "Restricted water area, not navigable for small craft."
+              "english": "Closed area, not navigable for small craft."
             },
             "D": {
               "german": "Gesperrte Wasserfläche, Verbot der Durchfahrt und Sperrung der Schifffahrt.",
-              "english": "Restricted water area — passage prohibited and waterway closed to navigation."
+              "english": "Closed area — passage prohibited and waterway closed to navigation."
             }
           },
           "correct_option": "A",
@@ -5032,19 +5032,19 @@
           "question_number": 157,
           "category": "Traffic Rules",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Fahrverbot für Fahrzeuge mit Maschinenantrieb.",
-              "english": "Navigation prohibited for vessels with propulsion engine."
+              "english": "Navigation prohibited for vessels with an engine."
             },
             "B": {
               "german": "Fahrverbot für Kleinfahrzeuge mit Maschinenantrieb.",
-              "english": "Navigation prohibited for small craft with propulsion engine."
+              "english": "Navigation prohibited for small craft with an engine."
             },
             "C": {
               "german": "Fahrverbot für Fahrzeuge ohne Antriebsmaschine.",
-              "english": "Navigation prohibited for vessels without propulsion engine."
+              "english": "Navigation prohibited for vessels without an engine."
             },
             "D": {
               "german": "Fahrverbot für Kleinfahrzeuge ohne laufende Antriebsmaschine.",
@@ -5109,7 +5109,7 @@
             },
             "C": {
               "german": "Fahrzeug ist manövrierunfähig.",
-              "english": "Vessel is not under command."
+              "english": "Vessel is unable to manoeuvre."
             },
             "D": {
               "german": "Überholen nicht möglich.",
@@ -5132,7 +5132,7 @@
           "options": {
             "A": {
               "german": "Fahrzeug ist manövrierunfähig.",
-              "english": "Vessel is not under command."
+              "english": "Vessel is unable to manoeuvre."
             },
             "B": {
               "german": "Maschine geht rückwärts.",
@@ -5171,7 +5171,7 @@
             },
             "C": {
               "german": "Fahrzeug ist manövrierunfähig.",
-              "english": "Vessel is not under command."
+              "english": "Vessel is unable to manoeuvre."
             },
             "D": {
               "german": "Achtung!",
@@ -5443,7 +5443,7 @@
             },
             "C": {
               "german": "Fahrzeug ist manövrierunfähig.",
-              "english": "Vessel is not under command."
+              "english": "Vessel is unable to manoeuvre."
             },
             "D": {
               "german": "Überholen nicht möglich.",
@@ -5462,7 +5462,7 @@
           "question_number": 170,
           "category": "Traffic Rules",
           "german_text": "Welche Schallsignale bzw. Zeichen sind zu geben, wenn das Boot manövrierunfähig geworden ist?",
-          "english_text": "What sound signals or visual signals must be given when the vessel has become not under command?",
+          "english_text": "What sound signals or visual signals must be given when the vessel has become unable to manoeuvre?",
           "options": {
             "A": {
               "german": "Vier kurze Töne. Bei Tag eine rote Flagge, bei Nacht ein rotes Licht im unteren Halbkreis schwenken.",
@@ -5493,7 +5493,7 @@
           "question_number": 171,
           "category": "Traffic Rules",
           "german_text": "Ein Fahrzeug zeigt an der Steuerbordseite seines Ruderhauses eine blaue Tafel mit weißem Funkellicht. Welche Bedeutung hat dieses Zeichen?",
-          "english_text": "A vessel displays a blue panel with a white flashing light on the starboard side of its wheelhouse. What is the meaning of this signal?",
+          "english_text": "A vessel displays a light-blue board with a bright white scintillating light on the starboard side of its wheelhouse. What is the meaning of this signal?",
           "options": {
             "A": {
               "german": "Fahrzeuge begegnen sich an Steuerbord. Dieses Zeichen gilt nicht für Kleinfahrzeuge, verpflichtet aber zu erhöhter Aufmerksamkeit.",
@@ -5524,7 +5524,7 @@
           "question_number": 172,
           "category": "Traffic Rules",
           "german_text": "Ein Sportfahrzeug fährt hinter einem Fahrzeug, das nicht Kleinfahrzeug ist, in den Schleusenvorhafen ein. Aus der Schleusenkammer kommt ein Fahrzeug, das an Steuerbord eine blaue Tafel mit einem weißen Funkellicht zeigt. Was bedeutet dieses Zeichen?",
-          "english_text": "A pleasure craft is entering a lock approach harbour behind a vessel that is not a small craft. From the lock chamber, a vessel is emerging showing a blue panel with a white flashing light on its starboard side. What does this signal mean?",
+          "english_text": "A pleasure craft is entering a lock approach harbour behind a vessel that is not a small craft. From the lock chamber, a vessel is emerging showing a light-blue board with a bright white scintillating light on its starboard side. What does this signal mean?",
           "options": {
             "A": {
               "german": "Das aus- und die einfahrenden Fahrzeuge passieren sich an der Steuerbordseite, das Kleinfahrzeug ist nur zu erhöhter Aufmerksamkeit verpflichtet.",
@@ -5590,19 +5590,19 @@
           "options": {
             "A": {
               "german": "Zügig überholen. Beteiligte Fahrzeuge nicht behindern. Verkehrslage und eventuelle Schallzeichen beachten. Ausreichend Abstand halten.",
-              "english": "Overtake briskly. Do not obstruct vessels involved. Observe the traffic situation and any sound signals. Maintain sufficient distance."
+              "english": "Overtake swiftly. Do not obstruct vessels involved. Observe the traffic situation and any sound signals. Maintain sufficient distance."
             },
             "B": {
               "german": "Zügig überholen. Gegebenenfalls das Fahrzeug stark beschleunigen, um schnell passieren zu können.",
-              "english": "Overtake briskly. If necessary, accelerate the vessel sharply to pass quickly."
+              "english": "Overtake swiftly. If necessary, accelerate the vessel sharply to pass quickly."
             },
             "C": {
               "german": "Zügig überholen; überholen nur auf der Steuerbordseite erlaubt, ausreichend Abstand halten.",
-              "english": "Overtake briskly; overtaking permitted only on the starboard side; maintain sufficient distance."
+              "english": "Overtake swiftly; overtaking permitted only on the starboard side; maintain sufficient distance."
             },
             "D": {
               "german": "Zügig überholen. Dicht am Ufer entlang fahren, eventuelle Schallzeichen müssen von Kleinfahrzeugen beachtet werden.",
-              "english": "Overtake briskly. Navigate close to the bank; any sound signals must be observed by small craft."
+              "english": "Overtake swiftly. Navigate close to the bank; any sound signals must be observed by small craft."
             }
           },
           "correct_option": "A",
@@ -5617,7 +5617,7 @@
           "question_number": 175,
           "category": "Traffic Rules",
           "german_text": "Wann besteht die Gefahr eines Zusammenstoßes?",
-          "english_text": "When does the danger of a collision exist?",
+          "english_text": "When does a risk of collision exist?",
           "options": {
             "A": {
               "german": "Wenn sich zwei Fahrzeuge bei gleichbleibender Peilung einander nähern.",
@@ -5648,23 +5648,23 @@
           "question_number": 176,
           "category": "Traffic Rules",
           "german_text": "Wie müssen Ausweichmanöver durchgeführt werden?",
-          "english_text": "How must give-way manoeuvres be carried out?",
+          "english_text": "How must avoiding action be taken?",
           "options": {
             "A": {
               "german": "Rechtzeitig, klar erkennbar und entschlossen.",
-              "english": "In good time, clearly recognisably, and decisively."
+              "english": "In good time, clearly recognisable and decisive."
             },
             "B": {
               "german": "Rechtzeitig, klar erkennbar und nach Steuerbord.",
-              "english": "In good time, clearly recognisably, and to starboard."
+              "english": "In good time, clearly recognisable and to starboard."
             },
             "C": {
               "german": "Rechtzeitig, klar erkennbar und nach Backbord.",
-              "english": "In good time, clearly recognisably, and to port."
+              "english": "In good time, clearly recognisable and to port."
             },
             "D": {
               "german": "Rechtzeitig, klar erkennbar und vorsichtig.",
-              "english": "In good time, clearly recognisably, and cautiously."
+              "english": "In good time, clearly recognisable and cautious."
             }
           },
           "correct_option": "A",
@@ -5714,15 +5714,15 @@
           "options": {
             "A": {
               "german": "Geschleppte oder längsseits gekuppelte Kleinfahrzeuge.",
-              "english": "Towed or side-coupled small craft."
+              "english": "Small craft being towed or lashed alongside."
             },
             "B": {
               "german": "Kleinfahrzeuge mit Maschinenantrieb unter 20 m Länge.",
-              "english": "Power-driven small craft under 20 m in length."
+              "english": "Motorized small craft under 20 m in length."
             },
             "C": {
               "german": "Kleinfahrzeuge mit Maschinenantrieb und geschleppte Fahrzeuge.",
-              "english": "Power-driven small craft and towed vessels."
+              "english": "Motorized small craft and towed vessels."
             },
             "D": {
               "german": "Fahrzeuge die geschoben werden.",
@@ -5741,7 +5741,7 @@
           "question_number": 179,
           "category": "Traffic Rules",
           "german_text": "Wie muss sich ein kreuzendes Kleinfahrzeug unter Segel am Wind in der Nähe eines Ufers gegenüber einem anderen Kleinfahrzeug verhalten?",
-          "english_text": "How must a crossing small craft under sail close-hauled, near a bank, behave toward another small craft?",
+          "english_text": "How must a small craft beating to windward (close-hauled) near a bank behave toward another small craft?",
           "options": {
             "A": {
               "german": "Es darf ein anderes Kleinfahrzeug, das sein steuerbordseitiges Ufer anhält, nicht zum Ausweichen zwingen.",
@@ -5784,7 +5784,7 @@
             },
             "C": {
               "german": "Das Fahrzeug unter Maschinenantrieb ist ausweichpflichtig.",
-              "english": "The power-driven vessel is the give-way vessel."
+              "english": "The motorized vessel is the give-way vessel."
             },
             "D": {
               "german": "Beide Fahrzeuge sind ausweichpflichtig.",
@@ -5837,7 +5837,7 @@
           "question_number": 182,
           "category": "Traffic Rules",
           "german_text": "Von Backbord kommend kreuzt ein Fahrzeug unter Segel mit einem schwarzen Kegel, Spitze nach unten, den Kurs eines Fahrzeuges mit Maschinenantrieb. Wer ist ausweichpflichtig?",
-          "english_text": "A vessel under sail with a black cone, apex downward, crosses the course of a power-driven vessel from the port side. Which vessel is the give-way vessel?",
+          "english_text": "A vessel under sail with a black cone, apex downward, crosses the course of a motorized vessel from the port side. Which vessel is the give-way vessel?",
           "options": {
             "A": {
               "german": "Das Fahrzeug unter Segel mit einem schwarzen Kegel ist ausweichpflichtig.",
@@ -5902,11 +5902,11 @@
           "question_number": 184,
           "category": "Traffic Rules",
           "german_text": "Ein Fahrzeug unter Segel kreuzt eine Binnenschifffahrtsstraße. In der Fahrwassermitte kommt ihm ein Kleinfahrzeug mit Maschinenantrieb zu Berg entgegen. Wer ist ausweichpflichtig?",
-          "english_text": "A vessel under sail is crossing an inland waterway. In the middle of the fairway, a power-driven small craft approaches upstream. Which vessel is the give-way vessel?",
+          "english_text": "A vessel under sail is crossing an inland waterway. In the middle of the fairway, a motorized small craft approaches upstream. Which vessel is the give-way vessel?",
           "options": {
             "A": {
               "german": "Fahrzeug mit Maschinenantrieb.",
-              "english": "The power-driven vessel."
+              "english": "The motorized vessel."
             },
             "B": {
               "german": "Fahrzeug in der Talfahrt.",
@@ -6066,7 +6066,7 @@
           "question_number": 189,
           "category": "Traffic Rules",
           "german_text": "Wer ist wem gegenüber kurshaltepflichtig?",
-          "english_text": "Which vessel has the obligation to maintain course (stand-on) with respect to which?",
+          "english_text": "Which vessel is the stand-on vessel with respect to which?",
           "options": {
             "A": {
               "german": "A gegenüber B und C, B gegenüber C.",
@@ -6104,7 +6104,7 @@
           "options": {
             "A": {
               "german": "Vollständigkeit der Crew überprüfen, gegebenenfalls Hilfe leisten. Am Boot festhalten oder gegebenenfalls aufs Boot legen, Hilfe abwarten.",
-              "english": "Check the completeness of the crew, render assistance if necessary. Hold onto the vessel or if necessary climb on top; wait for help."
+              "english": "Check that all crew are accounted for and help them if necessary. Hold on to the boat or, if necessary, lie on the hull; wait for help."
             },
             "B": {
               "german": "Sofort vorgeschriebene Notsignale geben, mit allen Mitteln versuchen, das Fahrzeug aus dem Fahrwasser zu bringen.",
@@ -6116,7 +6116,7 @@
             },
             "D": {
               "german": "Rettungswesten anlegen und mit geeigneten Mitteln Hilfe herbeiholen. Gegebenenfalls Segel bergen.",
-              "english": "Put on lifejackets and call for help by appropriate means. Stow the sails if possible."
+              "english": "Put on lifejackets and call for help by appropriate means. Lower the sails if necessary."
             }
           },
           "correct_option": "A",
@@ -6166,11 +6166,11 @@
           "options": {
             "A": {
               "german": "Kleinfahrzeug mit Maschinenantrieb.",
-              "english": "Power-driven small craft."
+              "english": "Motorized small craft."
             },
             "B": {
               "german": "Frei fahrende Fähre.",
-              "english": "Free-running ferry."
+              "english": "Ferry moving independently."
             },
             "C": {
               "german": "Schubverband von vorne.",
@@ -6200,7 +6200,7 @@
           "options": {
             "A": {
               "german": "Kleinfahrzeug mit Maschinenantrieb.",
-              "english": "The power-driven small craft."
+              "english": "The motorized small craft."
             },
             "B": {
               "german": "Kleinfahrzeug unter Segel.",
@@ -6230,15 +6230,15 @@
           "question_number": 194,
           "category": "Traffic Rules",
           "german_text": "Ein Kleinfahrzeug unter Segel und mit Maschinenantrieb kreuzt nachts stromauf. Ein Fahrzeug kommt entgegen, das nur ein weißes Licht führt. Was bedeutet dieses Licht?",
-          "english_text": "A small craft under sail and with propulsion engine is crossing upstream at night. An approaching vessel displays only a white light. What does this light indicate?",
+          "english_text": "A small craft motor-sailing (under sail and engine) is beating upstream at night. An approaching vessel displays only a white light. What does this light indicate?",
           "options": {
             "A": {
               "german": "Kleinfahrzeug ohne Maschinenantrieb.",
-              "english": "Small craft without propulsion engine."
+              "english": "Small craft without an engine."
             },
             "B": {
               "german": "Kleinfahrzeug mit Maschinenantrieb.",
-              "english": "Power-driven small craft."
+              "english": "Motorized small craft."
             },
             "C": {
               "german": "Kleinfahrzeug unter Segel.",
@@ -6246,7 +6246,7 @@
             },
             "D": {
               "german": "Kleinfahrzeug unter Segel mit Maschinenantrieb.",
-              "english": "Small craft under sail with propulsion engine."
+              "english": "Small craft under sail with an engine."
             }
           },
           "correct_option": "A",
@@ -6261,15 +6261,15 @@
           "question_number": 195,
           "category": "Traffic Rules",
           "german_text": "Ein Kleinfahrzeug unter Segel kreuzt nachts im Fahrwasser. Von achtern kommt ein Fahrzeug, das eine Zweifarbenlaterne und ein Topplicht führt. Was bedeuten diese Lichter?",
-          "english_text": "A small craft under sail is crossing the fairway at night. From astern, a vessel approaches displaying a combined lantern and a masthead light. What do these lights indicate?",
+          "english_text": "A small craft under sail is crossing the fairway at night. From astern, a vessel approaches displaying a bi-colour lantern and a masthead light. What do these lights indicate?",
           "options": {
             "A": {
               "german": "Kleinfahrzeug mit Maschinenantrieb.",
-              "english": "Power-driven small craft."
+              "english": "Motorized small craft."
             },
             "B": {
               "german": "Kleinfahrzeug ohne Maschinenantrieb.",
-              "english": "Small craft without propulsion engine."
+              "english": "Small craft without an engine."
             },
             "C": {
               "german": "Kleinfahrzeug unter Segel.",
@@ -6277,7 +6277,7 @@
             },
             "D": {
               "german": "Kleinfahrzeug unter Segel mit Maschinenantrieb.",
-              "english": "Small craft under sail with propulsion engine."
+              "english": "Small craft under sail with an engine."
             }
           },
           "correct_option": "A",
@@ -6330,19 +6330,19 @@
           "options": {
             "A": {
               "german": "Vor Hafeneinmündungen, an Lade-, Lösch- und Liegeplätzen, in der Nähe nicht frei fahrender Fähren, auf gekennzeichneten Strecken, in der Nähe schwimmender Geräte bei der Arbeit.",
-              "english": "In front of harbour entrances; at loading, unloading, and mooring places; near non-free-running ferries; on marked stretches; near floating plant at work."
+              "english": "In front of harbour entrances; at loading, unloading, and mooring places; near ferries not moving independently; on marked stretches; near floating equipment at work."
             },
             "B": {
               "german": "Vor Einmündungen, an Lade-, Lösch- und Liegeplätzen, in der Nähe nicht frei fahrender Fähren, auf gekennzeichneten Strecken, in der Nähe schwimmender Geräte bei der Arbeit.",
-              "english": "In front of junctions; at loading, unloading, and mooring places; near non-free-running ferries; on marked stretches; near floating plant at work."
+              "english": "In front of junctions; at loading, unloading, and mooring places; near ferries not moving independently; on marked stretches; near floating equipment at work."
             },
             "C": {
               "german": "Vor Hafeneinmündungen, an Lade-, Lösch- und Liegeplätzen, in der Nähe frei fahrender Fähren, auf gekennzeichneten Strecken, in der Nähe schwimmender Geräte bei der Arbeit.",
-              "english": "In front of harbour entrances; at loading, unloading, and mooring places; near free-running ferries; on marked stretches; near floating plant at work."
+              "english": "In front of harbour entrances; at loading, unloading, and mooring places; near ferries moving independently; on marked stretches; near floating equipment at work."
             },
             "D": {
               "german": "Vor Hafeneinmündungen, an Lade-, Lösch- und Liegeplätzen, in der Nähe nicht frei fahrender Fähren, auf gekennzeichneten Strecken, in der Nähe schwimmender Schifffahrtszeichen.",
-              "english": "In front of harbour entrances; at loading, unloading, and mooring places; near non-free-running ferries; on marked stretches; near floating navigation marks."
+              "english": "In front of harbour entrances; at loading, unloading, and mooring places; near ferries not moving independently; on marked stretches; near floating navigation marks."
             }
           },
           "correct_option": "A",
@@ -6357,7 +6357,7 @@
           "question_number": 198,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Vorgeschriebene Fahrtrichtung.",
@@ -6391,7 +6391,7 @@
           "question_number": 199,
           "category": "Navigation Signs",
           "german_text": "Welche Bedeutung hat das nachstehende Tafelzeichen, wenn das rote Licht leuchtet?",
-          "english_text": "What is the meaning of the following board sign when the red light is illuminated?",
+          "english_text": "What is the meaning of the following sign when the red light is illuminated?",
           "options": {
             "A": {
               "german": "Verbot der Einfahrt in einen Hafen oder eine Nebenwasserstraße.",
@@ -6425,7 +6425,7 @@
           "question_number": 200,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "10 km/h Höchstgeschwindigkeit gegenüber dem Ufer.",
@@ -6459,7 +6459,7 @@
           "question_number": 201,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Gebot: Besondere Vorsicht walten lassen.",
@@ -6493,7 +6493,7 @@
           "question_number": 202,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Wendeverbot.",
@@ -6527,23 +6527,23 @@
           "question_number": 203,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Empfohlener Wendeplatz. Stillliegen für alle Fahrzeuge verboten.",
-              "english": "Recommended turning place — stationary mooring prohibited for all vessels."
+              "english": "Recommended turning place — berthing prohibited for all vessels."
             },
             "B": {
               "german": "Empfohlener Wendeplatz. Stillliegen von Kleinfahrzeugen erlaubt.",
-              "english": "Recommended turning place — stationary mooring for small craft permitted."
+              "english": "Recommended turning place — berthing for small craft permitted."
             },
             "C": {
               "german": "Vorgeschriebener Wendeplatz. Stillliegen für alle Fahrzeuge verboten.",
-              "english": "Prescribed turning place — stationary mooring prohibited for all vessels."
+              "english": "Prescribed turning place — berthing prohibited for all vessels."
             },
             "D": {
               "german": "Vorgeschriebener Wendeplatz. Stillliegen von Kleinfahrzeugen erlaubt.",
-              "english": "Prescribed turning place — stationary mooring for small craft permitted."
+              "english": "Prescribed turning place — berthing for small craft permitted."
             }
           },
           "correct_option": "A",
@@ -6561,7 +6561,7 @@
           "question_number": 204,
           "category": "Navigation Signs",
           "german_text": "Was bedeutet dieses Tafelzeichen?",
-          "english_text": "What is the meaning of this board sign?",
+          "english_text": "What is the meaning of this sign?",
           "options": {
             "A": {
               "german": "Wehr.",
@@ -6569,7 +6569,7 @@
             },
             "B": {
               "german": "Hubbrücke.",
-              "english": "Bascule bridge."
+              "english": "Lift bridge."
             },
             "C": {
               "german": "Schleuse.",
@@ -6661,19 +6661,19 @@
           "options": {
             "A": {
               "german": "Auf bestimmten Wasserstraßen ist ohne Radar und Sprechfunk die Fahrt unverzüglich einzustellen.",
-              "english": "On certain waterways, navigation must be stopped immediately without radar and radio."
+              "english": "On certain waterways, vessels without radar and radio must stop immediately."
             },
             "B": {
               "german": "Auf allen Wasserstraßen ist ohne Radar und Sprechfunk die Fahrt unverzüglich einzustellen.",
-              "english": "On all waterways, navigation must be stopped immediately without radar and radio."
+              "english": "On all waterways, vessels without radar and radio must stop immediately."
             },
             "C": {
               "german": "Auf bestimmten Wasserstraßen ist ohne Radar und AIS-- die Fahrt unverzüglich einzustellen.",
-              "english": "On certain waterways, navigation must be stopped immediately without radar and AIS."
+              "english": "On certain waterways, vessels without radar and AIS must stop immediately."
             },
             "D": {
               "german": "Auf allen Wasserstraßen ist ohne Radar und ECDIS die Fahrt unverzüglich einzustellen.",
-              "english": "On all waterways, navigation must be stopped immediately without radar and ECDIS."
+              "english": "On all waterways, vessels without radar and ECDIS must stop immediately."
             }
           },
           "correct_option": "A",
@@ -6781,7 +6781,7 @@
           "question_number": 211,
           "category": "Safety",
           "german_text": "Welche Bedeutung hat am Tag das Kreisen einer roten Flagge auf einem Wasserfahrzeug?",
-          "english_text": "What is the meaning during the day of a red flag being circled on a waterborne vessel?",
+          "english_text": "What does it mean when a red flag is swung in a circle on a vessel by day?",
           "options": {
             "A": {
               "german": "Ein in Not befindliches Fahrzeug, das durch Sichtzeichen Hilfe herbeirufen will.",
@@ -6816,7 +6816,7 @@
           "options": {
             "A": {
               "german": "Kreisförmiges Schwenken der Arme oder eines Gegenstandes.",
-              "english": "Slowly and repeatedly raising and lowering outstretched arms or waving an object in a circular motion."
+              "english": "Waving the arms or an object in a circle."
             },
             "B": {
               "german": "Kreisförmiges Schwenken einer grünen Flagge, die mit anderen Zeichen nicht verwechselt werden kann.",
@@ -6971,7 +6971,7 @@
           "options": {
             "A": {
               "german": "Rettungsweste anlegen. Segel bergen, versuchen einen Hafen oder eine geschützte Bucht anzulaufen.",
-              "english": "Put on lifejacket. Stow sails; try to head for a harbour or a sheltered bay."
+              "english": "Put on lifejacket. Lower the sails; try to head for a harbour or a sheltered bay."
             },
             "B": {
               "german": "Rettungsweste anlegen. Alle Segel setzen, versuchen, einen Hafen oder eine geschützte Bucht anzulaufen.",
@@ -6979,7 +6979,7 @@
             },
             "C": {
               "german": "Rettungsweste bereit halten. Segel bergen, versuchen, einen Hafen oder eine geschützte Bucht anzulaufen.",
-              "english": "Keep lifejacket ready. Stow sails; try to head for a harbour or a sheltered bay."
+              "english": "Keep lifejacket ready. Lower the sails; try to head for a harbour or a sheltered bay."
             },
             "D": {
               "german": "Rettungsweste anlegen. Segel setzen, versuchen die Gewässermitte anzulaufen.",
@@ -6998,23 +6998,23 @@
           "question_number": 218,
           "category": "Weather",
           "german_text": "Welche Fahrrinnenseite hat ein Talfahrer an seiner Backbordseite?",
-          "english_text": "Which side of the navigable channel does a downstream-bound vessel have on its port side?",
+          "english_text": "Which side of the navigable channel does a vessel proceeding downstream have on its port side?",
           "options": {
             "A": {
               "german": "Die linke Fahrrinnenseite, gekennzeichnet durch grüne Spitztonnen oder Schwimmstangen.",
-              "english": "The left side of the channel, marked by green conical buoys or spar buoys."
+              "english": "The left side of the channel, marked by green conical buoys or floating poles."
             },
             "B": {
               "german": "Die rechte Fahrrinnenseite, gekennzeichnet durch rote Stumpftonnen oder Schwimmstangen.",
-              "english": "The right side of the channel, marked by red can buoys or spar buoys."
+              "english": "The right side of the channel, marked by red can buoys or floating poles."
             },
             "C": {
               "german": "Die linke Fahrrinnenseite, gekennzeichnet durch rote Stumpftonnen oder Schwimmstangen.",
-              "english": "The left side of the channel, marked by red can buoys or spar buoys."
+              "english": "The left side of the channel, marked by red can buoys or floating poles."
             },
             "D": {
               "german": "Die rechte Fahrrinnenseite, gekennzeichnet durch grüne Spitztonnen oder Schwimmstangen.",
-              "english": "The right side of the channel, marked by green conical buoys or spar buoys."
+              "english": "The right side of the channel, marked by green conical buoys or floating poles."
             }
           },
           "correct_option": "A",
@@ -7095,7 +7095,7 @@
           "options": {
             "A": {
               "german": "Nur in durch Tafelzeichen freigegebenen Bereichen.",
-              "english": "Only in areas approved by board signs."
+              "english": "Only in areas designated by signs."
             },
             "B": {
               "german": "Außerhalb des Fahrwassers.",
@@ -7277,7 +7277,7 @@
           "question_number": 227,
           "category": "Water Sports",
           "german_text": "Weshalb muss sich der Schiffsführer vor dem Befahren fremder Gewässer über die dort geltenden Vorschriften informieren?",
-          "english_text": "Why must a skipper inform himself of the applicable regulations before navigating unfamiliar waters?",
+          "english_text": "Why must a skipper find out about the applicable regulations before navigating unfamiliar waters?",
           "options": {
             "A": {
               "german": "Um die jeweils geltenden Vorschriften einhalten zu können.",
@@ -7498,7 +7498,7 @@
           "options": {
             "A": {
               "german": "Nummer des Internationalen Bootsscheins, gefolgt vom Kennbuchstaben für die ausstellende Organisation.",
-              "english": "The number of the International Certificate for Operators of Pleasure Craft, followed by the identifying letter of the issuing organisation."
+              "english": "The number of the International Boat Certificate (Internationaler Bootsschein, IBS), followed by the identifying letter of the issuing organisation."
             },
             "B": {
               "german": "Nummer des Binnenschiffsregisters, gefolgt vom Kennbuchstaben für die ausstellende Organisation.",
@@ -7807,7 +7807,7 @@
           "question_number": 244,
           "category": "Regulations and Licensing",
           "german_text": "Was bedeutet dieses Tafelzeichen an einer Brückendurchfahrt?",
-          "english_text": "What is the meaning of this board sign at a bridge passage?",
+          "english_text": "What is the meaning of this sign at a bridge passage?",
           "options": {
             "A": {
               "german": "Verbot der Durchfahrt und Sperrung der Schifffahrt.",
@@ -7815,11 +7815,11 @@
             },
             "B": {
               "german": "Gesperrte Durchfahrt, jedoch für Kleinfahrzeuge mit Antriebsmaschine befahrbar.",
-              "english": "Passage closed, but navigable for small craft with propulsion engine."
+              "english": "Passage closed, but navigable for small craft with an engine."
             },
             "C": {
               "german": "Gesperrte Durchfahrt, jedoch für Kleinfahrzeuge ohne Antriebsmaschine befahrbar.",
-              "english": "Passage closed, but navigable for small craft without propulsion engine."
+              "english": "Passage closed, but navigable for small craft without an engine."
             },
             "D": {
               "german": "Schutzbedürftige Anlage.",
@@ -9681,7 +9681,7 @@
           "options": {
             "A": {
               "german": "Sportboote ohne Antriebsmaschine oder solche mit einer größten, nicht überschreitbaren Nutzleistung von 11,03 Kilowatt ( 15 PS ) bei Verwendung eines Verbrennungsmotors bzw. 7,5 Kilowatt bei Verwendung eines Elektromotors Betriebsart S1 (Dauerbetrieb) oder weniger.",
-              "english": "Pleasure craft without an engine or those with a maximum non-exceeding rated power output of 11.03 kilowatts (15 hp) when using a combustion engine, or 7.5 kilowatts when using an electric motor in operating mode S1 (continuous duty) or less."
+              "english": "Pleasure craft without an engine or those with a maximum rated power output (which cannot be exceeded) of 11.03 kilowatts (15 hp) when using a combustion engine, or 7.5 kilowatts when using an electric motor in operating mode S1 (continuous duty) or less."
             },
             "B": {
               "german": "Sportboote unter Segel mit einer Rumpflänge unter 20 m und solche deren Antriebsmaschine nicht benutzt wird.",
@@ -9960,15 +9960,15 @@
           "options": {
             "A": {
               "german": "Es muss mit sicherer, den verminderten Sichtverhältnissen angepasster Geschwindigkeit gefahren werden, es müssen Schallsignale gegeben werden, es müssen Positionslichter eingeschaltet werden und es muss gehörig Ausguck gegangen werden.",
-              "english": "Speed must be reduced to a safe speed adapted to the reduced visibility conditions, sound signals must be given, navigation lights must be switched on, and a proper lookout must be maintained."
+              "english": "Proceed at a safe speed adapted to the reduced visibility conditions, sound signals must be given, navigation lights must be switched on, and a proper lookout must be maintained."
             },
             "B": {
               "german": "Es muss mit sicherer, den verminderten Sichtverhältnissen angepasster Geschwindigkeit gefahren werden, es müssen Schallsignale gegeben werden, das Radargerät muss eingeschaltet werden und es muss Ausguck gegangen werden.",
-              "english": "Speed must be reduced to a safe speed adapted to the reduced visibility conditions, sound signals must be given, the radar must be switched on, and a lookout must be maintained."
+              "english": "Proceed at a safe speed adapted to the reduced visibility conditions, sound signals must be given, the radar must be switched on, and a lookout must be maintained."
             },
             "C": {
               "german": "Es muss mit sicherer, den verminderten Sichtverhältnissen angepasster Geschwindigkeit gefahren werden, es müssen Schallsinale gegeben werden, es müssen Positionslichter eingeschaltet werden und es muss der Radarreflektor eingesetzt werden.",
-              "english": "Speed must be reduced to a safe speed adapted to the reduced visibility conditions, sound signals must be given, navigation lights must be switched on, and the radar reflector must be deployed."
+              "english": "Proceed at a safe speed adapted to the reduced visibility conditions, sound signals must be given, navigation lights must be switched on, and the radar reflector must be deployed."
             },
             "D": {
               "german": "Es muss mit verminderter Geschwindigkeit gefahren werden, es müssen Schallsignale gegeben werden, es müssen Positionslichter eingeschaltet werden und es muss das AIS ( Automatic Identifikation System ) eingeschaltet werden.",
@@ -10053,19 +10053,19 @@
           "options": {
             "A": {
               "german": "Es sind bekannt gemachte Schifffahrtswege, die durch Trennlinien oder Trennzonen in Einbahnwege geteilt sind.",
-              "english": "They are charted shipping routes divided into one-way lanes by separation lines or separation zones."
+              "english": "They are officially established shipping routes divided into one-way lanes by separation lines or separation zones."
             },
             "B": {
               "german": "Es sind bekannt gemachte Fahrwasser, die durch Trennlinien oder Trennzonen in Einbahnwege geteilt sind.",
-              "english": "They are charted fairways divided into one-way lanes by separation lines or separation zones."
+              "english": "They are officially established fairways divided into one-way lanes by separation lines or separation zones."
             },
             "C": {
               "german": "Es sind bekannt gemachte Seeschifffahrtsstraßen, die durch Trennlinien oder Trennzonen in Einbahnwege geteilt sind.",
-              "english": "They are charted maritime waterways divided into one-way lanes by separation lines or separation zones."
+              "english": "They are officially established maritime waterways divided into one-way lanes by separation lines or separation zones."
             },
             "D": {
               "german": "Es sind bekannt gemachte Bundeswasserstraßen, die durch Trennlinien oder Trennzonen in Einbahnwege geteilt sind.",
-              "english": "They are charted federal waterways divided into one-way lanes by separation lines or separation zones."
+              "english": "They are officially established federal waterways divided into one-way lanes by separation lines or separation zones."
             }
           },
           "correct_option": "A",
@@ -10321,11 +10321,11 @@
             },
             "C": {
               "german": "Seitenlichter rot und grün und zwei rote Rundumlichter senkrecht übereinander.",
-              "english": "Sidelights (red and green) and two red all-round lights vertically."
+              "english": "Sidelights (red and green) and two red all-round lights in a vertical line."
             },
             "D": {
               "german": "Seitenlichter rot und grün und ein rotes Rundumlicht senkrecht über einem weißen Rundumlicht.",
-              "english": "Sidelights (red and green) and one red all-round light vertically above one white all-round light."
+              "english": "Sidelights (red and green) and one red all-round light in a vertical line above one white all-round light."
             }
           },
           "correct_option": "A",
@@ -10477,19 +10477,19 @@
           "options": {
             "A": {
               "german": "Zwei rote Rundumlichter senkrecht übereinander.",
-              "english": "Two red all-round lights vertically."
+              "english": "Two red all-round lights in a vertical line."
             },
             "B": {
               "german": "Zwei rote Rundumlichter senkrecht übereinander und zusätzlich die Seitenlichter und das Hecklicht.",
-              "english": "Two red all-round lights vertically, and additionally sidelights and the sternlight."
+              "english": "Two red all-round lights in a vertical line, and additionally sidelights and the sternlight."
             },
             "C": {
               "german": "Drei rote Rundumlichter senkrecht übereinander.",
-              "english": "Three red all-round lights vertically."
+              "english": "Three red all-round lights in a vertical line."
             },
             "D": {
               "german": "Drei rote Rundumlichter senkrecht übereinander und zusätzlich die Seitenlichter und das Hecklicht.",
-              "english": "Three red all-round lights vertically, and additionally sidelights and the sternlight."
+              "english": "Three red all-round lights in a vertical line, and additionally sidelights and the sternlight."
             }
           },
           "correct_option": "A",
@@ -10508,19 +10508,19 @@
           "options": {
             "A": {
               "german": "Zwei rote Rundumlichter senkrecht übereinander und zusätzlich die Seitenlichter und das Hecklicht.",
-              "english": "Two red all-round lights vertically, and additionally sidelights and the sternlight."
+              "english": "Two red all-round lights in a vertical line, and additionally sidelights and the sternlight."
             },
             "B": {
               "german": "Zwei rote Rundumlichter senkrecht übereinander.",
-              "english": "Two red all-round lights vertically."
+              "english": "Two red all-round lights in a vertical line."
             },
             "C": {
               "german": "Drei rote Rundumlichter senkrecht übereinander.",
-              "english": "Three red all-round lights vertically."
+              "english": "Three red all-round lights in a vertical line."
             },
             "D": {
               "german": "Drei rote Rundumlichter senkrecht übereinander und zusätzlich die Seitenlichter und das Hecklicht.",
-              "english": "Three red all-round lights vertically, and additionally sidelights and the sternlight."
+              "english": "Three red all-round lights in a vertical line, and additionally sidelights and the sternlight."
             }
           },
           "correct_option": "A",
@@ -11337,7 +11337,7 @@
           "question_number": 126,
           "category": "Traffic Rules",
           "german_text": "Zwei in Sicht befindliche Segelfahrzeuge nähern sich im freien Seeraum oder außerhalb des Fahrwassers so, dass die Möglichkeit der Gefahr eines Zusammenstoßes besteht. Welches Fahrzeug muss dem anderen ausweichen, wenn sie den Wind von derselben Seite haben?",
-          "english_text": "Two sailing vessels visible to one another are approaching in open water or outside the fairway such that there is a risk of collision. Which vessel must give way to the other when they have the wind on the same side?",
+          "english_text": "Two sailing vessels in sight of one another are approaching in open water or outside the fairway such that there is a risk of collision. Which vessel must give way to the other when they have the wind on the same side?",
           "options": {
             "A": {
               "german": "Das luvwärtige Fahrzeug dem leewärtigen Fahrzeug.",
@@ -11368,7 +11368,7 @@
           "question_number": 127,
           "category": "Traffic Rules",
           "german_text": "Wie müssen sich zwei in Sicht befindliche Maschinenfahrzeuge verhalten, die sich einander auf entgegengesetzten oder fast entgegengesetzten Kursen nähern, um die Möglichkeit der Gefahr eines Zusammenstoßes zu vermeiden?",
-          "english_text": "How must two power-driven vessels visible to one another, approaching each other on reciprocal or nearly reciprocal courses, behave to avoid the risk of collision?",
+          "english_text": "How must two power-driven vessels in sight of one another, approaching each other on reciprocal or nearly reciprocal courses, behave to avoid the risk of collision?",
           "options": {
             "A": {
               "german": "Jedes Fahrzeug muss seinen Kurs nach Steuerbord ändern.",
@@ -11399,7 +11399,7 @@
           "question_number": 128,
           "category": "Traffic Rules",
           "german_text": "Wie hat sich ein Maschinenfahrzeug im freien Seeraum oder außerhalb des Fahrwassers gegenüber einem in Sicht befindlichen Segelfahrzeug zu verhalten, wenn die Möglichkeit der Gefahr eines Zusammenstoßes besteht?",
-          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a sailing vessel visible to it when there is a risk of collision?",
+          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a sailing vessel in sight when there is a risk of collision?",
           "options": {
             "A": {
               "german": "Das Maschinenfahrzeug muss ausweichen.",
@@ -11430,7 +11430,7 @@
           "question_number": 129,
           "category": "Traffic Rules",
           "german_text": "Wie hat sich ein Maschinenfahrzeug im freien Seeraum oder außerhalb des Fahrwassers gegenüber einem in Sicht befindlichen manövrierunfähigen Fahrzeug zu verhalten, wenn die Möglichkeit der Gefahr eines Zusammenstoßes besteht?",
-          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a vessel not under command visible to it when there is a risk of collision?",
+          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a vessel not under command in sight when there is a risk of collision?",
           "options": {
             "A": {
               "german": "Das Maschinenfahrzeug muss ausweichen.",
@@ -11461,7 +11461,7 @@
           "question_number": 130,
           "category": "Traffic Rules",
           "german_text": "Wie hat sich ein Maschinenfahrzeug im freien Seeraum oder außerhalb des Fahrwassers gegenüber einem in Sicht befindlichen manövrierbehinderten Fahrzeug zu verhalten, wenn die Möglichkeit der Gefahr eines Zusammenstoßes besteht?",
-          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a vessel restricted in her ability to manoeuvre visible to it when there is a risk of collision?",
+          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a vessel restricted in her ability to manoeuvre in sight when there is a risk of collision?",
           "options": {
             "A": {
               "german": "Das Maschinenfahrzeug muss ausweichen.",
@@ -11492,7 +11492,7 @@
           "question_number": 131,
           "category": "Traffic Rules",
           "german_text": "Wie hat sich ein Maschinenfahrzeug im freien Seeraum oder außerhalb des Fahrwassers gegenüber einem in Sicht befindlichen fischenden Fahrzeug zu verhalten, wenn die Möglichkeit der Gefahr eines Zusammenstoßes besteht?",
-          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a vessel engaged in fishing visible to it when there is a risk of collision?",
+          "english_text": "How must a power-driven vessel in open water or outside the fairway behave towards a vessel engaged in fishing in sight when there is a risk of collision?",
           "options": {
             "A": {
               "german": "Das Maschinenfahrzeug muss ausweichen.",
@@ -11523,7 +11523,7 @@
           "question_number": 132,
           "category": "Traffic Rules",
           "german_text": "Wie hat sich ein Segelfahrzeug im freien Seeraum oder außerhalb des Fahrwassers gegenüber einem in Sicht befindlichen fischenden Fahrzeug zu verhalten, wenn die Möglichkeit der Gefahr eines Zusammenstoßes besteht?",
-          "english_text": "How must a sailing vessel in open water or outside the fairway behave towards a vessel engaged in fishing visible to it when there is a risk of collision?",
+          "english_text": "How must a sailing vessel in open water or outside the fairway behave towards a vessel engaged in fishing in sight when there is a risk of collision?",
           "options": {
             "A": {
               "german": "Das Segelfahrzeug muss ausweichen.",
@@ -11746,7 +11746,7 @@
           "question_number": 139,
           "category": "Traffic Rules",
           "german_text": "Wie verhält man sich als Kurshalter, wenn man feststellt, dass ein anderes Fahrzeug seiner Ausweichpflicht nicht nachkommt und die Gefahr einer unmittelbaren Kollision bevorsteht?",
-          "english_text": "How does a stand-on vessel behave when it notices that a give-way vessel is not fulfilling its obligation to give way and imminent danger of collision is approaching?",
+          "english_text": "How does a stand-on vessel behave when it notices that a give-way vessel is not fulfilling its obligation to give way and a collision is imminent?",
           "options": {
             "A": {
               "german": "Man gibt mindestens fünf kurze Töne mit der Pfeife ab und führt das \"Manöver des letzten Augenblicks\" durch. Dabei ist so zu manövrieren, wie es zur Vermeidung eines Zusammenstoßes am dienlichsten ist.",
@@ -12208,7 +12208,7 @@
             },
             "B": {
               "german": "Die Nachrichten für Seefahrer ( NfS ), herausgegeben vom Bundesamt für Seeschifffahrt und Hydrographie, sowie die Bekanntmachungen für Seefahrer ( BfS ) der örtlich zuständigen Wasserstraßen- und Schifffahrtsämter, die auf alle Veränderungen hinsichtlich Betonnung, Befeuerung, Wracks und Untiefen sowie auf die Schifffahrt betreffende Maßnahmen und Ereignisse hinweisen.",
-              "english": "The Notices to Mariners (NfS), published by the Federal Maritime and Hydrographic Agency, and the Mariners' Notices (BfS) of the locally competent Waterways and Shipping Offices, which draw attention to all changes in buoyage, lightage, wrecks and shoals as well as measures and events affecting navigation."
+              "english": "The Notices to Mariners (NfS), published by the Federal Maritime and Hydrographic Agency, and the Mariners' Notices (BfS) of the locally competent Waterways and Shipping Offices, which draw attention to all changes in buoyage, lights, wrecks and shoals as well as measures and events affecting navigation."
             },
             "C": {
               "german": "Die Bekanntmachung der Generaldirektion Wasserstraßen und Schifffahrt (GDWS) sowie die nautische Veröffentlichung \"Sicherheit auf dem Wasser\", herausgegeben durch das Bundesministerium für Digitales und Verkehr ( BMDV ), mit wichtigen Regeln und Tipps für Wassersportler.",
@@ -12269,7 +12269,7 @@
           "options": {
             "A": {
               "german": "Fahrzeug der Bundeswehr, der Bundespolizei oder Maschinenfahrzeug, das Schießscheiben schleppt bei Übungen. Man hält sich frei.",
-              "english": "Federal Armed Forces vessel, Federal Police vessel, or power-driven vessel towing shooting targets during exercises. Keep clear."
+              "english": "Federal Armed Forces vessel, Federal Police vessel, or power-driven vessel towing targets during firing exercises. Keep clear."
             },
             "B": {
               "german": "Fahrzeug, das mit Netzen, Leinen, Schleppnetzen oder anderen Fanggeräten fischt und auf sich aufmerksam macht. Ausreichenden Abstand halten.",
@@ -12676,15 +12676,15 @@
           "options": {
             "A": {
               "german": "An Engstellen, unübersichtlichen Krümmungen, in Schleusenbereichen, innerhalb durch Überholverbotszeichen gekennzeichneter Strecken, in der Nähe nicht frei fahrender Fähren in Fahrt.",
-              "english": "At narrow passages, blind bends, in lock areas, within stretches marked by no-overtaking signs, in the vicinity of non-freely operating ferries underway."
+              "english": "At narrow passages, blind bends, in lock areas, within stretches marked by no-overtaking signs, in the vicinity of ferries not moving independently underway."
             },
             "B": {
               "german": "An Engstellen, unübersichtlichen Krümmungen, in Schleusenbereichen, innerhalb durch Überholverbotszeichen gekennzeichneter Strecken, in der Nähe nicht frei fahrender Fähren in Fahrt und außerhalb des Fahrwassers.",
-              "english": "At narrow passages, blind bends, in lock areas, within stretches marked by no-overtaking signs, in the vicinity of non-freely operating ferries underway, and outside the fairway."
+              "english": "At narrow passages, blind bends, in lock areas, within stretches marked by no-overtaking signs, in the vicinity of ferries not moving independently underway, and outside the fairway."
             },
             "C": {
               "german": "An Engstellen, unübersichtlichen Krümmungen, in Schleusenbereichen, innerhalb durch Überholverbotszeichen gekennzeichneter Strecken, in der Nähe nicht frei fahrender Fähren in Fahrt, und in Verkehrstrennungsgebieten.",
-              "english": "At narrow passages, blind bends, in lock areas, within stretches marked by no-overtaking signs, in the vicinity of non-freely operating ferries underway, and in traffic separation schemes."
+              "english": "At narrow passages, blind bends, in lock areas, within stretches marked by no-overtaking signs, in the vicinity of ferries not moving independently underway, and in traffic separation schemes."
             },
             "D": {
               "german": "An Engstellen, unübersichtlichen Krümmungen, innerhalb durch Überholverbotszeichen gekennzeichneter Strecken und in Nationalparks und besonders ausgewiesenen Naturschutzgebieten.",
@@ -12831,7 +12831,7 @@
           "options": {
             "A": {
               "german": "Wenn ein weißes unterbrochenes Licht gezeigt wird.",
-              "english": "When a white interrupted light is shown."
+              "english": "When a white occulting light is shown."
             },
             "B": {
               "german": "Wenn ein weißes Funkellicht gezeigt wird.",
@@ -12843,7 +12843,7 @@
             },
             "D": {
               "german": "Wenn ein grünes Gleichtaktlicht gezeigt wird.",
-              "english": "When a green fixed flashing light is shown."
+              "english": "When a green isophase light is shown."
             }
           },
           "correct_option": "A",
@@ -12889,11 +12889,11 @@
           "question_number": 175,
           "category": "SeeSchStrO Regulations",
           "german_text": "Was bedeuten im Nord-Ostsee-Kanal an einem Weichensignalmast drei unterbrochene rote Lichter übereinander und was ist zu beachten?",
-          "english_text": "What do three interrupted red lights vertically arranged on a signal mast at a passing bay in the Kiel Canal mean, and what must be observed?",
+          "english_text": "What do three occulting red lights one above the other on the signal mast of a siding (Weiche) in the Kiel Canal mean, and what must be observed?",
           "options": {
             "A": {
               "german": "Ausfahren für alle Fahrzeuge verboten; Aufhebung des Signals abwarten.",
-              "english": "Departure prohibited for all vessels; wait for the signal to be cleared."
+              "english": "Leaving the siding prohibited for all vessels; wait for the signal to be cleared."
             },
             "B": {
               "german": "Schutzbedürftige Anlage; Geschwindigkeit reduzieren, Sog und Wellenschlag vermeiden.",
@@ -13134,7 +13134,7 @@
             },
             "C": {
               "german": "Kennzeichnung von Schießgebieten.",
-              "english": "Marking of shooting areas."
+              "english": "Marking of firing areas."
             },
             "D": {
               "german": "Kennzeichnung von Badegebieten.",
@@ -13203,7 +13203,7 @@
             },
             "D": {
               "german": "Schießgebiet.",
-              "english": "Shooting area."
+              "english": "Firing area."
             }
           },
           "correct_option": "A",
@@ -13401,7 +13401,7 @@
             },
             "B": {
               "german": "Kennzeichnung von Einzelgefahrenstellen.",
-              "english": "Marking of isolated danger positions."
+              "english": "Marking of isolated dangers."
             },
             "C": {
               "german": "Kennzeichnung einer Reede.",
@@ -13643,7 +13643,7 @@
             },
             "C": {
               "german": "Blink (2) rot, Glockentonne.",
-              "english": "Group isophase (2) red, bell buoy."
+              "english": "Group long-flashing (2) red, bell buoy."
             },
             "D": {
               "german": "Leitfeuer rot, zwei Warnsektoren.",
@@ -13678,7 +13678,7 @@
             },
             "D": {
               "german": "Grünes Blitzfeuer, Funkelfeuer oder Blinkfeuer.",
-              "english": "Green flashing light, quick flashing, or isophase light."
+              "english": "Green flashing light, quick flashing, or long-flashing light."
             }
           },
           "correct_option": "A",
@@ -13709,7 +13709,7 @@
             },
             "D": {
               "german": "Rotes Blitzfeuer, Funkelfeuer oder Blinkfeuer.",
-              "english": "Red flashing light, quick flashing, or isophase light."
+              "english": "Red flashing light, quick flashing, or long-flashing light."
             }
           },
           "correct_option": "A",
@@ -13728,19 +13728,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Nordquadrant.",
-              "english": "Marking of a general danger position, North quadrant."
+              "english": "Marking of a general danger, North quadrant."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Südquadrant.",
-              "english": "Marking of a general danger position, South quadrant."
+              "english": "Marking of a general danger, South quadrant."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Westquadrant.",
-              "english": "Marking of a general danger position, West quadrant."
+              "english": "Marking of a general danger, West quadrant."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Ostquadrant.",
-              "english": "Marking of a general danger position, East quadrant."
+              "english": "Marking of a general danger, East quadrant."
             }
           },
           "correct_option": "A",
@@ -13762,19 +13762,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Ostquadrant.",
-              "english": "Marking of a general danger position, East quadrant."
+              "english": "Marking of a general danger, East quadrant."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Nordquadrant.",
-              "english": "Marking of a general danger position, North quadrant."
+              "english": "Marking of a general danger, North quadrant."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Westquadrant.",
-              "english": "Marking of a general danger position, West quadrant."
+              "english": "Marking of a general danger, West quadrant."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Südquadrant.",
-              "english": "Marking of a general danger position, South quadrant."
+              "english": "Marking of a general danger, South quadrant."
             }
           },
           "correct_option": "A",
@@ -13796,19 +13796,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Südquadrant.",
-              "english": "Marking of a general danger position, South quadrant."
+              "english": "Marking of a general danger, South quadrant."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Nordquadrant.",
-              "english": "Marking of a general danger position, North quadrant."
+              "english": "Marking of a general danger, North quadrant."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Westquadrant.",
-              "english": "Marking of a general danger position, West quadrant."
+              "english": "Marking of a general danger, West quadrant."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Ostquadrant.",
-              "english": "Marking of a general danger position, East quadrant."
+              "english": "Marking of a general danger, East quadrant."
             }
           },
           "correct_option": "A",
@@ -13830,19 +13830,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Westquadrant.",
-              "english": "Marking of a general danger position, West quadrant."
+              "english": "Marking of a general danger, West quadrant."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Ostquadrant.",
-              "english": "Marking of a general danger position, East quadrant."
+              "english": "Marking of a general danger, East quadrant."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Nordquadrant.",
-              "english": "Marking of a general danger position, North quadrant."
+              "english": "Marking of a general danger, North quadrant."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Südquadrant.",
-              "english": "Marking of a general danger position, South quadrant."
+              "english": "Marking of a general danger, South quadrant."
             }
           },
           "correct_option": "A",
@@ -13864,19 +13864,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die nördlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the north."
+              "english": "Marking of a general danger to be passed to the north."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die südlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the south."
+              "english": "Marking of a general danger to be passed to the south."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die östlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the east."
+              "english": "Marking of a general danger to be passed to the east."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die westlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the west."
+              "english": "Marking of a general danger to be passed to the west."
             }
           },
           "correct_option": "A",
@@ -13898,19 +13898,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die östlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the east."
+              "english": "Marking of a general danger to be passed to the east."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die nördlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the north."
+              "english": "Marking of a general danger to be passed to the north."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die südlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the south."
+              "english": "Marking of a general danger to be passed to the south."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, die westlich zu passieren ist.",
-              "english": "Marking of a general danger position to be passed to the west."
+              "english": "Marking of a general danger to be passed to the west."
             }
           },
           "correct_option": "A",
@@ -13932,19 +13932,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Südquadrant.",
-              "english": "Marking of a general danger position, South quadrant."
+              "english": "Marking of a general danger, South quadrant."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Westquadrant.",
-              "english": "Marking of a general danger position, West quadrant."
+              "english": "Marking of a general danger, West quadrant."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Ostquadrant.",
-              "english": "Marking of a general danger position, East quadrant."
+              "english": "Marking of a general danger, East quadrant."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Nordquadrant.",
-              "english": "Marking of a general danger position, North quadrant."
+              "english": "Marking of a general danger, North quadrant."
             }
           },
           "correct_option": "A",
@@ -13966,19 +13966,19 @@
           "options": {
             "A": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Westquadrant. Sie ist westlich zu passieren.",
-              "english": "Marking of a general danger position, West quadrant. It must be passed to the west."
+              "english": "Marking of a general danger, West quadrant. It must be passed to the west."
             },
             "B": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Südquadrant. Sie ist südlich zu passieren.",
-              "english": "Marking of a general danger position, South quadrant. It must be passed to the south."
+              "english": "Marking of a general danger, South quadrant. It must be passed to the south."
             },
             "C": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Ostquadrant. Sie ist östlich zu passieren.",
-              "english": "Marking of a general danger position, East quadrant. It must be passed to the east."
+              "english": "Marking of a general danger, East quadrant. It must be passed to the east."
             },
             "D": {
               "german": "Kennzeichnung einer allgemeinen Gefahrenstelle, Nordquadrant. Sie ist nördlich zu passieren.",
-              "english": "Marking of a general danger position, North quadrant. It must be passed to the north."
+              "english": "Marking of a general danger, North quadrant. It must be passed to the north."
             }
           },
           "correct_option": "A",
@@ -14000,19 +14000,19 @@
           "options": {
             "A": {
               "german": "Eine Einzelgefahrenstelle, die an allen Seiten passiert werden kann.",
-              "english": "An isolated danger position that can be passed on all sides."
+              "english": "An isolated danger that can be passed on all sides."
             },
             "B": {
               "german": "Den nördlichen Quadranten einer allgemeinen Gefahrenstelle, die nördlich passiert werden muss.",
-              "english": "The north quadrant of a general danger position that must be passed to the north."
+              "english": "The north quadrant of a general danger that must be passed to the north."
             },
             "C": {
               "german": "Den südlichen Quadranten einer allgemeinen Gefahrenstelle, die südlich passiert werden muss.",
-              "english": "The south quadrant of a general danger position that must be passed to the south."
+              "english": "The south quadrant of a general danger that must be passed to the south."
             },
             "D": {
               "german": "Den westlichen Quadranten einer allgemeinen Gefahrenstelle, die westlich passiert werden muss.",
-              "english": "The west quadrant of a general danger position that must be passed to the west."
+              "english": "The west quadrant of a general danger that must be passed to the west."
             }
           },
           "correct_option": "A",
@@ -14034,19 +14034,19 @@
           "options": {
             "A": {
               "german": "Eine Einzelgefahrenstelle, die an allen Seiten passiert werden kann.",
-              "english": "An isolated danger position that can be passed on all sides."
+              "english": "An isolated danger that can be passed on all sides."
             },
             "B": {
               "german": "Nördlicher Quadrant einer allgemeinen Gefahrenstelle, die nördlich passiert werden muss.",
-              "english": "North quadrant of a general danger position that must be passed to the north."
+              "english": "North quadrant of a general danger that must be passed to the north."
             },
             "C": {
               "german": "Südlicher Quadrant einer allgemeinen Gefahrenstelle, die südlich passiert werden muss.",
-              "english": "South quadrant of a general danger position that must be passed to the south."
+              "english": "South quadrant of a general danger that must be passed to the south."
             },
             "D": {
               "german": "Westlicher Quadrant einer allgemeinen Gefahrenstelle, die westlich passiert werden muss.",
-              "english": "West quadrant of a general danger position that must be passed to the west."
+              "english": "West quadrant of a general danger that must be passed to the west."
             }
           },
           "correct_option": "A",
@@ -14061,7 +14061,7 @@
           "question_number": 210,
           "category": "Navigation Signs",
           "german_text": "Was versteht man unter einem Leitfeuer?",
-          "english_text": "What is a sector light (\"Leitfeuer\")?",
+          "english_text": "What is a directional light (\"Leitfeuer\")?",
           "options": {
             "A": {
               "german": "Sektorenfeuer, das ein Fahrwasser bezeichnet.",
@@ -14092,7 +14092,7 @@
           "question_number": 211,
           "category": "Navigation Signs",
           "german_text": "Wie navigiert man mittels eines Leitfeuers?",
-          "english_text": "How does one navigate using a sector light?",
+          "english_text": "How does one navigate using a directional light?",
           "options": {
             "A": {
               "german": "In Fahrtrichtung an der rechten Seite des weißen Leitsektors halten.",
@@ -14123,7 +14123,7 @@
           "question_number": 212,
           "category": "Navigation Signs",
           "german_text": "Was versteht man unter einem Richtfeuer?",
-          "english_text": "What is a leading/range light (\"Richtfeuer\")?",
+          "english_text": "What are leading lights (\"Richtfeuer\")?",
           "options": {
             "A": {
               "german": "Ober- und Unterfeuer, die in Deckung zu bringen sind.",
@@ -14371,7 +14371,7 @@
           "question_number": 220,
           "category": "Environmental Protection",
           "german_text": "Was versteht man unter einem Blinkfeuer?",
-          "english_text": "What is an isophase light (\"Blinkfeuer\")?",
+          "english_text": "What is a long-flashing light (\"Blinkfeuer\")?",
           "options": {
             "A": {
               "german": "Lichterscheinung kürzer als Verdunkelung, Blink mindestens 2 s lang.",
@@ -14464,7 +14464,7 @@
           "question_number": 223,
           "category": "Environmental Protection",
           "german_text": "Was versteht man unter einem Gleichtaktfeuer?",
-          "english_text": "What is an equal-interval light (\"Gleichtaktfeuer\")?",
+          "english_text": "What is an isophase light (\"Gleichtaktfeuer\")?",
           "options": {
             "A": {
               "german": "Lichterscheinung und Verdunkelung von gleicher Länge.",
@@ -14495,7 +14495,7 @@
           "question_number": 224,
           "category": "Environmental Protection",
           "german_text": "Was versteht man unter der Wiederkehr eines Leuchtfeuers?",
-          "english_text": "What is understood by the \"period\" of a lighthouse?",
+          "english_text": "What is understood by the \"period\" of a light?",
           "options": {
             "A": {
               "german": "Zeitraum vom Einsetzen der Taktkennung bis zum Einsetzen der nächsten gleichen Taktkennung.",
@@ -14619,7 +14619,7 @@
           "question_number": 228,
           "category": "Environmental Protection",
           "german_text": "Was verstehen Sie gemäß Nordsee-Befahrens-Verordnung (NordSBefV) unter Schnellfahrkorridore?",
-          "english_text": "What do you understand by \"fast-speed corridors\" (Schnellfahrkorridore) under the North Sea Navigation Ordinance (NordSBefV)?",
+          "english_text": "What do you understand by \"high-speed corridors\" (Schnellfahrkorridore) under the North Sea Navigation Ordinance (NordSBefV)?",
           "options": {
             "A": {
               "german": "Ausgewiesene Wasserflächen für den gewerblichen Verkehr.",
@@ -14747,19 +14747,19 @@
           "options": {
             "A": {
               "german": "Sie enthalten alle Veränderungen hinsichtlich Betonnung, Befeuerung, Wracks, Untiefen sowie andere die Schifffahrt betreffende Maßnahmen und Ereignisse.",
-              "english": "They contain all changes concerning buoyage, lightage, wrecks, shoals, and other measures and events affecting navigation."
+              "english": "They contain all changes concerning buoyage, lights, wrecks, shoals, and other measures and events affecting navigation."
             },
             "B": {
               "german": "Sie enthalten alle Veränderungen hinsichtlich Betonnung, Befeuerung, Wracks, Untiefen sowie andere Änderungen der Seeschifffahrtsstraßen-Ordnung.",
-              "english": "They contain all changes concerning buoyage, lightage, wrecks, shoals, and other amendments to the German Maritime Traffic Regulations."
+              "english": "They contain all changes concerning buoyage, lights, wrecks, shoals, and other amendments to the German Maritime Traffic Regulations."
             },
             "C": {
               "german": "Sie enthalten alle Veränderungen hinsichtlich Betonnung, Befeuerung, Wracks sowie die aktuellen Wasserstände.",
-              "english": "They contain all changes concerning buoyage, lightage, wrecks, and current water levels."
+              "english": "They contain all changes concerning buoyage, lights, wrecks, and current water levels."
             },
             "D": {
               "german": "Sie enthalten alle Veränderungen hinsichtlich Betonnung, Befeuerung, Wracks, Untiefen sowie andere die Schifffahrt betreffende meteorologische Hinweise.",
-              "english": "They contain all changes concerning buoyage, lightage, wrecks, shoals, and meteorological notes affecting navigation."
+              "english": "They contain all changes concerning buoyage, lights, wrecks, shoals, and meteorological notes affecting navigation."
             }
           },
           "correct_option": "A",
@@ -14813,7 +14813,7 @@
             },
             "B": {
               "german": "In den Bekanntmachungen und Nachrichten für Seefahrer.",
-              "english": "In the Notices and Notices to Mariners."
+              "english": "In the Mariners' Notices (BfS) and Notices to Mariners (NfS)."
             },
             "C": {
               "german": "Im Nautischen Revierfunkdienst.",
@@ -14840,7 +14840,7 @@
           "options": {
             "A": {
               "german": "Dass die Karte auf den neuesten Stand berichtigt ist.",
-              "english": "That the chart has been corrected to the latest edition."
+              "english": "That the chart has been corrected up to date."
             },
             "B": {
               "german": "Dass die Nummerierung mit dem Katalog übereinstimmt.",
@@ -15092,7 +15092,7 @@
             },
             "B": {
               "german": "Das Feststellen der Abweichung des Steuerkompasses vom Peilkompass.",
-              "english": "The determination of the deviation of the steering compass from the pelorus."
+              "english": "The determination of the deviation of the steering compass from the hand-bearing compass."
             },
             "C": {
               "german": "Das Feststellen des Koppelortes durch Winkelmessung.",
@@ -15584,7 +15584,7 @@
           "options": {
             "A": {
               "german": "Um Schäden durch Seeschlag zu vermeiden.",
-              "english": "To avoid damage from breaking seas."
+              "english": "To avoid damage from pounding (slamming into the waves)."
             },
             "B": {
               "german": "Um das Austauchen der Schraube zu vermeiden und Kraftstoff zu sparen.",
@@ -15623,11 +15623,11 @@
             },
             "C": {
               "german": "Strom aus Richtung Nordwest; Stärke: 3 Knoten; Tidegebiet.",
-              "english": "Current from the northwest; force: 3 knots; tidal area."
+              "english": "Current from the northwest; rate: 3 knots; tidal area."
             },
             "D": {
               "german": "Strom in Richtung Nordwest; Stärke: 3 Knoten; Tidegebiet.",
-              "english": "Current in the direction northwest; force: 3 knots; tidal area."
+              "english": "Current in the direction northwest; rate: 3 knots; tidal area."
             }
           },
           "correct_option": "A",
@@ -15973,7 +15973,7 @@
             },
             "C": {
               "german": "Umsichtig, aber zügig weiterfahren, um den übrigen Verkehr nicht zu behindern. Beim Hören fremder Nebelsignale aufstoppen und abwarten, dabei fortlaufend die Wassertiefe loten.",
-              "english": "Proceed carefully but without delay so as not to impede other traffic. When hearing foreign fog signals, stop and wait, continuously sounding the depth."
+              "english": "Proceed carefully but without delay so as not to impede other traffic. When hearing other vessels' fog signals, stop and wait, continuously sounding the depth."
             },
             "D": {
               "german": "Im Fahrwasser äußerst rechts halten und den nächstgelegenen Hafen oder Liegeplatz anlaufen. Im Zweifel andere Fahrzeuge nach Position und richtigem Kurs fragen.",
@@ -16120,19 +16120,19 @@
           "options": {
             "A": {
               "german": "Leinenverbindung, Rettungsschlaufe, Bergenetz, Talje, Badeleiter, Großbaum.",
-              "english": "Line connection, rescue loop, rescue net, tackle, bathing ladder, main boom."
+              "english": "Line connection, rescue loop, rescue net, tackle, swimming ladder, main boom."
             },
             "B": {
               "german": "Leinenverbindung, Badeleiter, Treibanker, Rettungsschlaufe, Bergenetz, Talje.",
-              "english": "Line connection, bathing ladder, sea anchor, rescue loop, rescue net, tackle."
+              "english": "Line connection, swimming ladder, sea anchor, rescue loop, rescue net, tackle."
             },
             "C": {
               "german": "Leinenverbindung, Großbaum, Ankerkette, Talje, Badeleiter, Rettungsschlaufe.",
-              "english": "Line connection, main boom, anchor chain, tackle, bathing ladder, rescue loop."
+              "english": "Line connection, main boom, anchor chain, tackle, swimming ladder, rescue loop."
             },
             "D": {
               "german": "Leinenverbindung, Badeleiter, Rettungsboje, Bergenetz, Großbaum, Talje.",
-              "english": "Line connection, bathing ladder, lifebuoy, rescue net, main boom, tackle."
+              "english": "Line connection, swimming ladder, lifebuoy, rescue net, main boom, tackle."
             }
           },
           "correct_option": "A",
@@ -16349,7 +16349,7 @@
             },
             "C": {
               "german": "Schießübung.",
-              "english": "Shooting exercise."
+              "english": "Firing exercise."
             },
             "D": {
               "german": "Aufforderung zur Kursänderung.",

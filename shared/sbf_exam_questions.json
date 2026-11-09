@@ -16212,20 +16212,20 @@
           "english_text": "What distress signals can be given?",
           "options": {
             "A": {
-              "german": "Leuchtrakete mit rotem Leuchtstern oder rot brennende Handfackel, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben per Licht oder Ton, dreimal das Wort MAYDAY über Sprechfunk, seitliches Heben und Senken der Arme, Flaggensignal NC , EPIRB , DSC , Radartransponder.",
+              "german": "Leuchtrakete mit rotem Leuchtstern oder rot brennende Handfackel, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben (●●●−−−●●●) per Licht oder Ton, dreimal das Wort MAYDAY über Sprechfunk, seitliches Heben und Senken der Arme, Flaggensignal NC , EPIRB , DSC , Radartransponder.",
               "english": "Rocket flare with red star or red hand-held flare, continuous sounding of a fog signalling device, SOS (●●●−−−●●●) three times by light or sound, three times the word MAYDAY over radiotelephony, raising and lowering arms sideways, flag signal NC, EPIRB, DSC, radar transponder (SART)."
             },
             "B": {
-              "german": "Leuchtrakete mit rotem Leuchtstern oder rot brennende Handfackel, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben per Licht oder Ton, Seewasserfärber, seitliches Heben und Senken der Arme, Ball über oder unter Flaggensignal NC, EPIRB, DSC, Radartransponder.",
-              "english": "Rocket flare with red star or red hand-held flare, continuous sounding of a fog signalling device, SOS three times by light or sound, sea-dye marker, raising and lowering arms sideways, ball above or below flag signal NC, EPIRB, DSC, radar transponder."
+              "german": "Leuchtrakete mit rotem Leuchtstern oder rot brennende Handfackel, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben (●●●−−−●●●) per Licht oder Ton, Seewasserfärber, seitliches Heben und Senken der Arme, Ball über oder unter Flaggensignal NC, EPIRB, DSC, Radartransponder.",
+              "english": "Rocket flare with red star or red hand-held flare, continuous sounding of a fog signalling device, SOS (●●●−−−●●●) three times by light or sound, sea-dye marker, raising and lowering arms sideways, ball above or below flag signal NC, EPIRB, DSC, radar transponder."
             },
             "C": {
-              "german": "Leuchtrakete mit orangem Leuchtstern oder orange brennende Handfackel, rotes Rauchsignal, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben per Licht oder Ton, dreimal das Wort MAYDAY über Sprechfunk, seitliches Heben und Senken der Arme, Flaggensignal NC, EPIRB, DSC, Radartransponder.",
-              "english": "Rocket flare with orange star or orange hand-held flare, red smoke signal, continuous sounding of a fog signalling device, SOS three times by light or sound, three times the word MAYDAY over radiotelephony, raising and lowering arms sideways, flag signal NC, EPIRB, DSC, radar transponder."
+              "german": "Leuchtrakete mit orangem Leuchtstern oder orange brennende Handfackel, rotes Rauchsignal, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben (●●●−−−●●●) per Licht oder Ton, dreimal das Wort MAYDAY über Sprechfunk, seitliches Heben und Senken der Arme, Flaggensignal NC, EPIRB, DSC, Radartransponder.",
+              "english": "Rocket flare with orange star or orange hand-held flare, red smoke signal, continuous sounding of a fog signalling device, SOS (●●●−−−●●●) three times by light or sound, three times the word MAYDAY over radiotelephony, raising and lowering arms sideways, flag signal NC, EPIRB, DSC, radar transponder."
             },
             "D": {
-              "german": "Leuchtrakete mit rotem Leuchtstern oder rot brennende Handfackel, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben per Licht oder Ton, dreimal das Wort MAYDAY über Sprechfunk, seitliches Heben und Senken der Arme, Flaggensignal NC, EPIRB, DSC, Radartransponder.",
-              "english": "Rocket flare with red star or red hand-held flare, continuous sounding of a fog signalling device, three signals by light or sound, three times the word MAYDAY over radiotelephony, raising and lowering arms sideways, flag signal NC, EPIRB, DSC, radar transponder."
+              "german": "Leuchtrakete mit rotem Leuchtstern oder rot brennende Handfackel, anhaltendes Ertönen eines Nebelsignalgerätes, dreimaliges Geben (−−−●●●−−−) per Licht oder Ton, dreimal das Wort MAYDAY über Sprechfunk, seitliches Heben und Senken der Arme, Flaggensignal NC, EPIRB, DSC, Radartransponder.",
+              "english": "Rocket flare with red star or red hand-held flare, continuous sounding of a fog signalling device, SOS (−−−●●●−−−) three times by light or sound, three times the word MAYDAY over radiotelephony, raising and lowering arms sideways, flag signal NC, EPIRB, DSC, radar transponder."
             }
           },
           "correct_option": "A",

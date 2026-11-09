@@ -6,20 +6,24 @@ struct QuizResultView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
     let onDismiss: () -> Void
-    @State private var showingReview = false
     @State private var animateRing = false
     @Environment(\.requestReview) private var requestReview
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var accuracy: Double { vm.questions.isEmpty ? 0 : Double(vm.correctCount) / Double(vm.questions.count) }
-    var grade: String {
+
+    var grade: LocalizedStringKey {
+        if let result = vm.examResult { return result.passed ? "Passed" : "Not passed" }
         switch accuracy {
         case 0.9...: return "Excellent!"
-        case 0.75...: return "Great Job!"
-        case 0.6...: return "Good Effort"
-        default: return "Keep Practicing"
+        case 0.75...: return "Great job!"
+        case 0.6...: return "Good effort"
+        default: return "Keep practising"
         }
     }
+
     var gradeColor: Color {
+        if let result = vm.examResult { return result.passed ? .successGreen : .errorRed }
         switch accuracy {
         case 0.8...: return .successGreen
         case 0.6...: return .gold
@@ -28,40 +32,34 @@ struct QuizResultView: View {
     }
 
     var body: some View {
-        ZStack {
-            Color.surfaceBG.ignoresSafeArea()
-
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 28) {
-                    // Hero result card
-                    heroCard
-                    // Stats row
-                    statsRow
-                    // Wrong answers list
-                    if !vm.wrongIds.isEmpty { wrongAnswersSection }
-                    // Actions
-                    actionButtons
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 24) {
+                heroCard
+                if let result = vm.examResult { examBreakdown(result) }
+                if let part = vm.navigationPart {
+                    NavigationExamReview(part: part, onRegrade: vm.regradeNavigation)
                 }
-                .padding(20)
-                .padding(.top, 12)
+                statsRow
+                if !vm.wrongIds.isEmpty { wrongAnswersSection }
+                actionButtons
             }
+            .padding(20)
+            .padding(.top, 8)
+            .readableWidth()
         }
+        .background(Color.surfaceBG.ignoresSafeArea())
         .navigationTitle("Results")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Done") { onDismiss() }
-                    .font(.body.weight(.semibold))
-                    .foregroundStyle(Color.navy)
+                Button("Done", action: onDismiss).fontWeight(.semibold)
             }
         }
         .overlay(alignment: .top) {
-            if vm.examMode && vm.examPassed {
-                ConfettiView()
-            }
+            if vm.examPassed && !reduceMotion { ConfettiView().allowsHitTesting(false) }
         }
         .onAppear {
-            withAnimation(.easeOut(duration: 1).delay(0.3)) { animateRing = true }
+            withAnimation(.easeOut(duration: reduceMotion ? 0 : 1).delay(0.3)) { animateRing = true }
             if accuracy >= 0.7 && progress.quizHistory.count >= 3 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { requestReview() }
             }
@@ -69,120 +67,149 @@ struct QuizResultView: View {
     }
 
     private var heroCard: some View {
-        VStack(spacing: 20) {
-            // Exam pass/fail banner
-            if vm.examMode {
+        VStack(spacing: 18) {
+            if let result = vm.examResult {
                 HStack(spacing: 8) {
-                    Image(systemName: vm.examPassed ? "checkmark.seal.fill" : "xmark.seal.fill")
-                    Text(vm.examPassed ? "BESTANDEN · PASSED" : "NICHT BESTANDEN · FAILED")
+                    Image(systemName: result.passed ? "checkmark.seal.fill" : "xmark.seal.fill")
+                    Text(result.passed ? "Exam passed" : "Exam not passed")
                         .font(.subheadline.weight(.bold))
-                    Image(systemName: vm.examPassed ? "checkmark.seal.fill" : "xmark.seal.fill")
                 }
-                .foregroundStyle(vm.examPassed ? Color.successGreen : Color.errorRed)
+                .foregroundStyle(.white)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
-                .background((vm.examPassed ? Color.successGreen : Color.errorRed).opacity(0.15))
+                .background(result.passed ? AppGradient.successGreen : AppGradient.errorRed)
                 .clipShape(Capsule())
-                .overlay(Capsule().stroke((vm.examPassed ? Color.successGreen : Color.errorRed).opacity(0.4), lineWidth: 1.5))
             }
-
-            // Result ring
             ZStack {
                 Circle()
                     .stroke(Color.white.opacity(0.2), lineWidth: 14)
-                    .frame(width: 140, height: 140)
                 Circle()
                     .trim(from: 0, to: animateRing ? accuracy : 0)
                     .stroke(gradeColor, style: StrokeStyle(lineWidth: 14, lineCap: .round))
-                    .frame(width: 140, height: 140)
                     .rotationEffect(.degrees(-90))
-                VStack(spacing: 4) {
-                    Text("\(Int(accuracy * 100))%")
-                        .font(.system(size: 34, weight: .bold, design: .rounded))
-                        .foregroundStyle(.white)
-                    Text(grade)
-                        .font(.caption.weight(.medium))
-                        .foregroundStyle(Color.white.opacity(0.8))
-                }
+                Text(accuracy, format: .percent.precision(.fractionLength(0)))
+                    .font(.largeTitle.bold())
+                    .fontDesign(.rounded)
+                    .foregroundStyle(.white)
             }
+            .frame(width: 140, height: 140)
+            .accessibilityHidden(true)
 
             Text(grade)
                 .font(.title2.bold())
                 .foregroundStyle(.white)
-
-            Text("\(vm.correctCount) correct out of \(vm.questions.count) questions")
+            Text("\(vm.correctCount) of \(vm.questions.count) answered correctly")
                 .font(.subheadline)
-                .foregroundStyle(Color.white.opacity(0.75))
+                .foregroundStyle(Color.white.opacity(0.8))
         }
-        .padding(32)
+        .padding(28)
         .frame(maxWidth: .infinity)
-        .background(
-            LinearGradient(colors: [.navy, .navyMid], startPoint: .topLeading, endPoint: .bottomTrailing)
-        )
+        .background(NavyGradient())
         .clipShape(RoundedRectangle(cornerRadius: 24))
-        .shadow(color: Color.navy.opacity(0.3), radius: 12, y: 6)
+        .accessibilityElement(children: .combine)
+    }
+
+    private func examBreakdown(_ result: ExamResult) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Official scoring", systemImage: "list.clipboard")
+            ForEach(result.rules.parts) { part in
+                partRow(title: part.type.partTitle, correct: result.correct(in: part), total: part.count,
+                        passMark: part.passMark, passed: part.passMark == nil ? nil : result.passed(part))
+            }
+            if result.rules.includesNavigation {
+                partRow(title: String(localized: "Navigation task"), correct: result.navigationCorrect ?? 0,
+                        total: result.rules.navigationCount, passMark: NavigationExamPart.passMark,
+                        passed: result.navigationPassed)
+            }
+            if let total = result.rules.totalPassMark {
+                partRow(title: String(localized: "Total"), correct: result.totalCorrect, total: result.rules.totalCount,
+                        passMark: total, passed: result.totalPassed)
+                Text("For the sailing licence alone, only the total counts.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else if result.rules.parts.count > 1 || result.rules.includesNavigation {
+                Text("Each part is assessed separately and must be passed.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            if result.rules.excludesNavigationTask {
+                Text("The real SBF See exam also includes a navigation task (9 questions, at least 7 correct), which is not part of this simulation.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(16)
+        .cardStyle()
+    }
+
+    /// `passed == nil`: the part has no pass mark of its own (only the total counts).
+    private func partRow(title: String, correct: Int, total: Int, passMark: Int?, passed: Bool?) -> some View {
+        let color: Color = passed.map { $0 ? .successGreen : .errorRed } ?? .inkSecondary
+        return HStack(spacing: 12) {
+            Image(systemName: passed.map { $0 ? "checkmark.circle.fill" : "xmark.circle.fill" } ?? "circle.dashed")
+                .foregroundStyle(color)
+                .font(.title3)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Color.ink)
+                if let passMark {
+                    Text("Pass mark: \(passMark) of \(total)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            Spacer()
+            Text("\(correct)/\(total)")
+                .font(.headline.monospacedDigit())
+                .foregroundStyle(color)
+        }
+        .accessibilityElement(children: .combine)
     }
 
     private var statsRow: some View {
         HStack(spacing: 12) {
-            StatCard(value: "\(vm.correctCount)",    label: "Correct",   icon: "checkmark.circle.fill", color: .successGreen)
-            StatCard(value: "\(vm.wrongIds.count)",  label: "Wrong",     icon: "xmark.circle.fill",     color: .errorRed)
-            StatCard(value: vm.examType.rawValue,    label: "Mode",      icon: "rectangle.stack",       color: .navyLight)
+            StatCard(value: "\(vm.correctCount)", label: "Correct", icon: "checkmark.circle.fill", color: .successGreen)
+            StatCard(value: "\(vm.wrongIds.count)", label: "Wrong", icon: "xmark.circle.fill", color: .errorRed)
+            StatCard(value: vm.examRules?.format.shortTitle ?? vm.examType.title, label: "Exam",
+                     icon: vm.examRules?.format.icon ?? vm.examType.icon, color: .navyLight)
         }
     }
 
     private var wrongAnswersSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Label("Questions to Review", systemImage: "exclamationmark.circle")
-                    .font(.headline)
-                    .foregroundStyle(Color.navy)
-                Spacer()
-                Text("\(vm.wrongIds.count)")
-                    .goldBadge()
+                SectionHeader(title: "Review your mistakes", systemImage: "exclamationmark.circle")
+                Text("\(vm.wrongIds.count)").goldBadge()
             }
-
-            ForEach(vm.wrongIds.prefix(5), id: \.self) { id in
+            ForEach(vm.wrongIds, id: \.self) { id in
                 if let q = store.question(id: id) {
                     NavigationLink(destination: QuestionDetailView(question: q)) {
-                        wrongRow(q)
+                        HStack(spacing: 10) {
+                            Image(systemName: "xmark.circle.fill").foregroundStyle(Color.errorRed)
+                            Text(q.germanText)
+                                .font(.caption)
+                                .foregroundStyle(Color.ink)
+                                .lineLimit(2)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                            Image(systemName: "chevron.right").font(.caption2).foregroundStyle(.secondary)
+                        }
+                        .padding(12)
+                        .cardStyle()
                     }
+                    .buttonStyle(.plain)
                 }
             }
-
-            if vm.wrongIds.count > 5 {
-                Text("+ \(vm.wrongIds.count - 5) more — see Review on Home")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity)
-            }
         }
-    }
-
-    private func wrongRow(_ q: Question) -> some View {
-        HStack(spacing: 10) {
-            Image(systemName: "xmark.circle.fill")
-                .foregroundStyle(Color.errorRed)
-            Text("Q\(q.questionNumber): \(q.germanText)")
-                .font(.caption)
-                .foregroundStyle(Color.navy)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-            Spacer()
-            Image(systemName: "chevron.right")
-                .font(.caption2)
-                .foregroundStyle(.secondary)
-        }
-        .padding(12)
-        .cardStyle()
     }
 
     private var actionButtons: some View {
         VStack(spacing: 12) {
-            Button {
-                vm.setup(type: vm.examType, count: vm.questions.count)
-            } label: {
-                Label("Retry Same Quiz", systemImage: "arrow.counterclockwise")
+            Button { vm.retry() } label: {
+                Label(vm.examMode ? "New exam simulation" : "Retry these questions",
+                      systemImage: "arrow.counterclockwise")
                     .font(.headline)
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
@@ -190,29 +217,26 @@ struct QuizResultView: View {
                     .background(AppGradient.navy)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             }
-
             if !vm.wrongIds.isEmpty {
                 Button {
-                    vm.setup(type: .all, count: vm.wrongIds.count, fromWrong: true)
+                    vm.setup(questions: vm.wrongIds.compactMap { store.question(id: $0) }, mode: .mistakes)
                 } label: {
-                    Label("Practice Mistakes (\(vm.wrongIds.count))", systemImage: "xmark.circle")
+                    Label("Practise the \(vm.wrongIds.count) mistakes", systemImage: "xmark.circle")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Color.errorRed)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 14)
                         .background(Color.errorRed.opacity(0.1))
                         .clipShape(RoundedRectangle(cornerRadius: 16))
-                        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.errorRed.opacity(0.3), lineWidth: 1))
                 }
             }
-
             Button(action: onDismiss) {
                 Text("Done")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(Color.navyMid)
+                    .foregroundStyle(Color.ink)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
-                    .background(Color.navyLight.opacity(0.1))
+                    .background(Color.navyLight.opacity(0.12))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             }
         }

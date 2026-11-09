@@ -1,0 +1,264 @@
+import Foundation
+
+/// The 15 official navigation tasks of the SBF See (ELWIS, chart D49), from navigation_tasks.json.
+struct NavigationCatalog: Decodable {
+    let source: String
+    let sourceURL: URL
+    let chart: String
+    let chartExcerpts: [String]
+    let tolerances: NavigationTolerances
+    let glossary: [GlossaryEntry]
+    let questionTypes: [QuestionType]
+    let techniques: [NavigationTechnique]
+    let tasks: [NavigationTask]
+
+    enum CodingKeys: String, CodingKey {
+        case source, chart, tolerances, glossary, techniques, tasks
+        case sourceURL = "source_url"
+        case chartExcerpts = "chart_excerpts"
+        case questionTypes = "question_types"
+    }
+
+    struct GlossaryEntry: Decodable, Identifiable, Hashable {
+        let abbr: String
+        let de: String
+        let en: String
+        let explanationDE: String
+        let explanationEN: String
+        var id: String { abbr }
+
+        enum CodingKeys: String, CodingKey {
+            case abbr, de, en
+            case explanationDE = "explanation_de"
+            case explanationEN = "explanation_en"
+        }
+    }
+
+    struct QuestionType: Decodable, Identifiable, Hashable {
+        let number: Int
+        let de: String
+        let en: String
+        var id: Int { number }
+    }
+
+    /// Videos explaining the technique behind a kind of sub-question.
+    func technique(for kind: String) -> NavigationTechnique? { techniques.first { $0.kinds.contains(kind) } }
+}
+
+/// Practice tolerances for typed answers (ELWIS publishes no official tolerances).
+struct NavigationTolerances: Decodable, Equatable {
+    let degrees: Double
+    let nm: Double
+    let minutes: Double
+    let knots: Double
+    let arcMinutes: Double
+
+    enum CodingKeys: String, CodingKey {
+        case degrees, nm, minutes, knots
+        case arcMinutes = "arc_minutes"
+    }
+}
+
+struct NavigationTask: Decodable, Identifiable, Hashable {
+    let number: Int
+    let introDE: String
+    let introEN: String?
+    let notesDE: String
+    let notesEN: String?
+    let values: TaskValues
+    let steps: [NavigationStep]
+    /// Step-by-step solution diagram (nil where the official results do not fix the geometry).
+    let diagram: NavigationDiagram?
+    /// Third-party video solving this task, with the start of each sub-question.
+    let walkthrough: NavigationWalkthrough?
+
+    var id: Int { number }
+
+    struct TaskValues: Decodable, Hashable {
+        let mw: Double?
+        let speedKn: Double?
+
+        enum CodingKeys: String, CodingKey {
+            case mw
+            case speedKn = "speed_kn"
+        }
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case number, values, steps, diagram, walkthrough
+        case introDE = "intro_de"
+        case introEN = "intro_en"
+        case notesDE = "notes_de"
+        case notesEN = "notes_en"
+    }
+
+    static func == (lhs: NavigationTask, rhs: NavigationTask) -> Bool { lhs.number == rhs.number }
+    func hash(into hasher: inout Hasher) { hasher.combine(number) }
+}
+
+struct NavigationStep: Decodable, Identifiable, Hashable {
+    let number: Int
+    let questionDE: String
+    let questionEN: String?
+    let answerDE: String
+    let answerEN: String?
+    let kind: String
+    let solution: [SolutionLine]
+    let check: AnswerCheck?
+    /// Light character code such as "Oc(3).Y.12s" (light descriptions only).
+    let code: String?
+
+    var id: Int { number }
+
+    struct SolutionLine: Decodable, Hashable {
+        let de: String
+        let en: String
+        var localized: String { AppLanguage.isGerman ? de : en }
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case number, kind, solution, check, code
+        case questionDE = "question_de"
+        case questionEN = "question_en"
+        case answerDE = "answer_de"
+        case answerEN = "answer_en"
+    }
+
+    /// Sub-questions that are answered by drawing on the chart.
+    var isPlot: Bool { kind == "plot" }
+}
+
+/// How a typed answer is checked; positions as [degrees, minutes].
+struct AnswerCheck: Decodable, Hashable {
+    let type: String
+    let values: [AnswerValue]?
+    let lat: [Double]?
+    let lon: [Double]?
+    let direction: Double?
+    let nm: Double?
+
+    /// Numbers (degrees, miles, minutes, knots) or clock times ("15:12").
+    enum AnswerValue: Decodable, Hashable {
+        case number(Double)
+        case text(String)
+
+        init(from decoder: Decoder) throws {
+            let c = try decoder.singleValueContainer()
+            if let d = try? c.decode(Double.self) { self = .number(d) } else { self = .text(try c.decode(String.self)) }
+        }
+
+        var number: Double? { if case .number(let d) = self { return d } else { return nil } }
+        var text: String? { if case .text(let s) = self { return s } else { return nil } }
+    }
+}
+
+@MainActor
+final class NavigationStore: ObservableObject {
+    static let shared = NavigationStore()
+
+    private(set) var catalog: NavigationCatalog?
+    private(set) var loadError: String?
+
+    var tasks: [NavigationTask] { catalog?.tasks ?? [] }
+
+    private init() {
+        do {
+            guard let url = Bundle.main.url(forResource: "navigation_tasks", withExtension: "json") else {
+                loadError = "navigation_tasks.json is missing from the app bundle"
+                return
+            }
+            catalog = try JSONDecoder().decode(NavigationCatalog.self, from: Data(contentsOf: url))
+        } catch {
+            loadError = "Could not load navigation tasks: \(error)"
+            assertionFailure(loadError!)
+        }
+    }
+
+    func task(_ number: Int) -> NavigationTask? { tasks.first { $0.number == number } }
+}
+
+/// Geometry in nautical miles around the diagram centre; see tools/data/navigation_diagrams.py.
+struct NavigationDiagram: Decodable, Hashable {
+    let grid: Grid
+    let width: Double
+    let height: Double
+    let elements: [Element]
+    let frames: [Frame]
+
+    struct Grid: Decodable, Hashable {
+        let lat: Double
+        let lon: Double
+        /// cos(latitude): nautical miles per minute of longitude.
+        let k: Double
+    }
+
+    struct Element: Decodable, Hashable, Identifiable {
+        let id: String
+        let type: String
+        let style: String
+        let label: String?
+        let labelEN: String?
+        let sub: String?
+        let x: Double?
+        let y: Double?
+        let x1: Double?
+        let y1: Double?
+        let x2: Double?
+        let y2: Double?
+
+        var localizedLabel: String? { AppLanguage.isGerman ? label : (labelEN ?? label) }
+
+        enum CodingKeys: String, CodingKey {
+            case id, type, style, label, sub, x, y, x1, y1, x2, y2
+            case labelEN = "label_en"
+        }
+    }
+
+    struct Frame: Decodable, Hashable {
+        let show: [String]
+        let de: String
+        let en: String
+        let step: Int?
+        var localized: String { AppLanguage.isGerman ? de : en }
+    }
+}
+
+/// A YouTube video, opened in the YouTube app or browser (feature flag navigationVideos).
+struct NavigationVideo: Decodable, Hashable, Identifiable {
+    let id: String
+    /// "de" or "en"; walkthroughs are German.
+    let lang: String?
+    let title: String
+    let channel: String
+    let seconds: Int
+
+    var minutes: Int { max(1, (seconds + 30) / 60) }
+
+    func url(startingAt start: Int? = nil) -> URL {
+        var components = URLComponents(string: "https://www.youtube.com/watch")!
+        components.queryItems = [URLQueryItem(name: "v", value: id)] + (start.map { [URLQueryItem(name: "t", value: "\($0)s")] } ?? [])
+        return components.url!
+    }
+}
+
+struct NavigationTechnique: Decodable, Hashable, Identifiable {
+    let id: String
+    let de: String
+    let en: String
+    /// Step kinds this technique explains.
+    let kinds: [String]
+    let videos: [NavigationVideo]
+    var localized: String { AppLanguage.isGerman ? de : en }
+}
+
+struct NavigationWalkthrough: Decodable, Hashable {
+    let id: String
+    let title: String
+    let channel: String
+    let seconds: Int
+    /// Sub-question number → start in seconds.
+    let chapters: [String: Int]
+
+    var video: NavigationVideo { NavigationVideo(id: id, lang: "de", title: title, channel: channel, seconds: seconds) }
+    func start(ofStep step: Int) -> Int? { chapters[String(step)] }
+}

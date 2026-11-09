@@ -1,0 +1,3996 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "%@ nm in %lld min. What is the speed?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ sm in %lld Min. Wie groß ist die Fahrt?"
+          }
+        }
+      }
+    },
+    "%@ · %lld min": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %lld Min."
+          }
+        }
+      }
+    },
+    "%lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld"
+          }
+        }
+      }
+    },
+    "%lld / %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld / %lld"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Min."
+          }
+        }
+      }
+    },
+    "%lld min at %@ kn. What distance?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Min. bei %@ kn. Welche Distanz?"
+          }
+        }
+      }
+    },
+    "%lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld"
+          }
+        }
+      }
+    },
+    "%lld of %lld %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld %@"
+          }
+        }
+      }
+    },
+    "%lld of %lld answered correctly": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld richtig beantwortet"
+          }
+        }
+      }
+    },
+    "%lld of %lld correct": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld richtig"
+          }
+        }
+      }
+    },
+    "%lld of %lld on": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld von %lld an"
+          }
+        }
+      }
+    },
+    "%lld questions": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld question"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld questions"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Frage"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Fragen"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld questions answered wrongly": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld question answered wrongly"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld questions answered wrongly"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Frage falsch beantwortet"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Fragen falsch beantwortet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld questions available": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld question available"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld questions available"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Frage verfügbar"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Fragen verfügbar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld questions due for review": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld question due for review"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld questions due for review"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Frage zur Wiederholung fällig"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Fragen zur Wiederholung fällig"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld questions due today": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld question due today"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld questions due today"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Frage heute fällig"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Fragen heute fällig"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld questions to retry": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld question to retry"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld questions to retry"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Frage zum Wiederholen"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Fragen zum Wiederholen"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld random questions": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld random question"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld random questions"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld zufällige Frage"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld zufällige Fragen"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld/%lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
+          }
+        }
+      }
+    },
+    "%lld×": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld×"
+          }
+        }
+      }
+    },
+    "15 official chart tasks with worked solutions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "15 amtliche Kartenaufgaben mit Lösungsweg"
+          }
+        }
+      }
+    },
+    "A local notification on this device. No data is sent anywhere.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eine lokale Mitteilung auf diesem Gerät. Es werden keine Daten übertragen."
+          }
+        }
+      }
+    },
+    "About": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über"
+          }
+        }
+      }
+    },
+    "About SBF Exam Prep": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über SBF Exam Prep"
+          }
+        }
+      }
+    },
+    "About this app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über diese App"
+          }
+        }
+      }
+    },
+    "Accuracy": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trefferquote"
+          }
+        }
+      }
+    },
+    "Adds 9 navigation questions to the SBF Sea exam simulation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ergänzt die See-Prüfungssimulation um 9 Navigationsfragen."
+          }
+        }
+      }
+    },
+    "All": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle"
+          }
+        }
+      }
+    },
+    "All %lld official questions, exam simulation and spaced repetition.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle %lld offiziellen Fragen, Prüfungssimulation und intelligente Wiederholung."
+          }
+        }
+      }
+    },
+    "All questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Fragen"
+          }
+        }
+      }
+    },
+    "All questions in order": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Fragen der Reihe nach"
+          }
+        }
+      }
+    },
+    "All topics": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Themen"
+          }
+        }
+      }
+    },
+    "Allow notifications in Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitteilungen in den Einstellungen erlauben"
+          }
+        }
+      }
+    },
+    "Also preparing for SBF Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ich mache auch den SBF See"
+          }
+        }
+      }
+    },
+    "Animated light": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Animiertes Leuchtfeuer"
+          }
+        }
+      }
+    },
+    "Answer": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antwort"
+          }
+        }
+      }
+    },
+    "Answer %@: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antwort %@: %@"
+          }
+        }
+      }
+    },
+    "Answer new questions — anything you get wrong will come back for review.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beantworte neue Fragen – was du falsch beantwortest, kommt zur Wiederholung zurück."
+          }
+        }
+      }
+    },
+    "Answered": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beantwortet"
+          }
+        }
+      }
+    },
+    "Answered wrongly": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falsch beantwortet"
+          }
+        }
+      }
+    },
+    "Answered wrongly %lld times": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Answered wrongly once"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Answered wrongly %lld times"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Einmal falsch beantwortet"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld-mal falsch beantwortet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "App language": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Sprache"
+          }
+        }
+      }
+    },
+    "Arrival time": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ankunftszeit"
+          }
+        }
+      }
+    },
+    "Back": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurück"
+          }
+        }
+      }
+    },
+    "Basic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basis"
+          }
+        }
+      }
+    },
+    "Basic questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basisfragen"
+          }
+        }
+      }
+    },
+    "Bearing %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peilung %@"
+          }
+        }
+      }
+    },
+    "Bearings are converted like courses: add deviation and variation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peilungen werden wie Kurse umgerechnet: Ablenkung und Missweisung addieren."
+          }
+        }
+      }
+    },
+    "Browse": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        }
+      }
+    },
+    "Chart work: draw this on chart D49.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kartenarbeit: in der Karte D49 einzeichnen."
+          }
+        }
+      }
+    },
+    "Check": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfen"
+          }
+        }
+      }
+    },
+    "Choose a question from the list to study it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle links eine Frage aus, um sie zu lernen."
+          }
+        }
+      }
+    },
+    "Choose exam and topic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfung und Thema wählen"
+          }
+        }
+      }
+    },
+    "Choose your licence to get the right exam simulation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle deinen Führerschein, um die passende Prüfungssimulation zu bekommen."
+          }
+        }
+      }
+    },
+    "Clear illustrations for every image question — and sound signals you can listen to.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klare Abbildungen zu jeder Bildfrage – und Schallsignale zum Anhören."
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schließen"
+          }
+        }
+      }
+    },
+    "Close quiz": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quiz schließen"
+          }
+        }
+      }
+    },
+    "Compare your chart work and descriptions with the official result and mark them yourself.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vergleiche Kartenarbeit und Beschreibungen mit dem amtlichen Ergebnis und bewerte sie selbst."
+          }
+        }
+      }
+    },
+    "Configure your quiz": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quiz zusammenstellen"
+          }
+        }
+      }
+    },
+    "Continue": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiter"
+          }
+        }
+      }
+    },
+    "Correct": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Richtig"
+          }
+        }
+      }
+    },
+    "Correct answer": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Richtige Antwort"
+          }
+        }
+      }
+    },
+    "Course conversion": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kursumwandlung"
+          }
+        }
+      }
+    },
+    "Courses, times and light characters – unlimited practice": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurse, Zeiten und Kennungen – unbegrenzt üben"
+          }
+        }
+      }
+    },
+    "Daily reminder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tägliche Erinnerung"
+          }
+        }
+      }
+    },
+    "Data": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daten"
+          }
+        }
+      }
+    },
+    "Day streak": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tage in Folge"
+          }
+        }
+      }
+    },
+    "Default quiz length": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standardlänge eines Quiz"
+          }
+        }
+      }
+    },
+    "Degrees": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grad"
+          }
+        }
+      }
+    },
+    "Departure %@, distance %@ nm, speed %@ kn. When do you arrive?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abfahrt %@, Distanz %@ sm, Fahrt %@ kn. Wann kommst du an?"
+          }
+        }
+      }
+    },
+    "Distance": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanz"
+          }
+        }
+      }
+    },
+    "Distance %@ nm at %@ kn. How many minutes?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanz %@ sm bei %@ kn. Wie viele Minuten?"
+          }
+        }
+      }
+    },
+    "Distance = speed × time (in hours)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanz = Fahrt × Zeit (in Stunden)"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fertig"
+          }
+        }
+      }
+    },
+    "Double-tap to enlarge": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zum Vergrößern doppeltippen"
+          }
+        }
+      }
+    },
+    "Drawn from the official results – not a reproduction of chart D49.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus den amtlichen Ergebnissen gezeichnet – keine Wiedergabe der Karte D49."
+          }
+        }
+      }
+    },
+    "Drill": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übung"
+          }
+        }
+      }
+    },
+    "Due for review": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fällige Wiederholungen"
+          }
+        }
+      }
+    },
+    "Each part is assessed separately and must be passed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeder Teil wird getrennt bewertet und muss bestanden werden."
+          }
+        }
+      }
+    },
+    "Enable daily reminder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tägliche Erinnerung aktivieren"
+          }
+        }
+      }
+    },
+    "End the exam?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfung beenden?"
+          }
+        }
+      }
+    },
+    "English": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Englisch"
+          }
+        }
+      }
+    },
+    "Every question is shown in German, as in the exam, with an optional English translation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jede Frage wird wie in der Prüfung auf Deutsch angezeigt, wahlweise mit englischer Übersetzung."
+          }
+        }
+      }
+    },
+    "Everything you need": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles, was du brauchst"
+          }
+        }
+      }
+    },
+    "Exam": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfung"
+          }
+        }
+      }
+    },
+    "Exam not passed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfung nicht bestanden"
+          }
+        }
+      }
+    },
+    "Exam passed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfung bestanden"
+          }
+        }
+      }
+    },
+    "Exam question types": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragetypen in der Prüfung"
+          }
+        }
+      }
+    },
+    "Exam questions are always shown in German, as in the official exam. The app language can be changed in the system settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungsfragen werden immer auf Deutsch angezeigt, wie in der offiziellen Prüfung. Die App-Sprache lässt sich in den Systemeinstellungen ändern."
+          }
+        }
+      }
+    },
+    "Exam simulation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungssimulation"
+          }
+        }
+      }
+    },
+    "Exam simulation with the official pass marks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungssimulation mit offiziellen Bestehensgrenzen"
+          }
+        }
+      }
+    },
+    "Exam simulation · %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungssimulation · %@"
+          }
+        }
+      }
+    },
+    "Exam simulations": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungssimulationen"
+          }
+        }
+      }
+    },
+    "Exam · %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfung · %@"
+          }
+        }
+      }
+    },
+    "Excellent!": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hervorragend!"
+          }
+        }
+      }
+    },
+    "Experimental features": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimentelle Funktionen"
+          }
+        }
+      }
+    },
+    "Feature flags": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feature-Flags"
+          }
+        }
+      }
+    },
+    "Features": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funktionen"
+          }
+        }
+      }
+    },
+    "Filter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
+          }
+        }
+      }
+    },
+    "Finish and see result": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beenden und Ergebnis ansehen"
+          }
+        }
+      }
+    },
+    "Fixed light: shines continuously": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Festfeuer: leuchtet ununterbrochen"
+          }
+        }
+      }
+    },
+    "Flashing: short flashes, longer darkness": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blitzfeuer: kurze Blitze, längere Dunkelheit"
+          }
+        }
+      }
+    },
+    "For testing only. These features are not finished and may change.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur zum Testen. Diese Funktionen sind noch nicht fertig und können sich ändern."
+          }
+        }
+      }
+    },
+    "For the sailing licence alone, only the total counts.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim reinen Segelschein zählt nur die Gesamtzahl richtiger Antworten."
+          }
+        }
+      }
+    },
+    "From compass to true: add deviation and variation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vom Kompass nach rechtweisend: Ablenkung und Missweisung addieren."
+          }
+        }
+      }
+    },
+    "From true to compass: subtract variation and deviation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Von rechtweisend nach Kompass: Missweisung und Ablenkung abziehen."
+          }
+        }
+      }
+    },
+    "German": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deutsch"
+          }
+        }
+      }
+    },
+    "German + English": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deutsch + Englisch"
+          }
+        }
+      }
+    },
+    "German only": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur Deutsch"
+          }
+        }
+      }
+    },
+    "Get a daily reminder at 6 pm to keep your streak going. You can change the time or turn it off in Settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erhalte täglich um 18 Uhr eine Erinnerung, um deine Serie zu halten. Uhrzeit und Erinnerung kannst du in den Einstellungen ändern."
+          }
+        }
+      }
+    },
+    "Get started": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los geht's"
+          }
+        }
+      }
+    },
+    "Go through the whole catalogue": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Den ganzen Fragenkatalog durchgehen"
+          }
+        }
+      }
+    },
+    "Good effort": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gut gemacht"
+          }
+        }
+      }
+    },
+    "Great job!": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sehr gut!"
+          }
+        }
+      }
+    },
+    "Help & feedback": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hilfe & Feedback"
+          }
+        }
+      }
+    },
+    "Hide all answers": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Lösungen ausblenden"
+          }
+        }
+      }
+    },
+    "Hide solution": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösung ausblenden"
+          }
+        }
+      }
+    },
+    "Home": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
+          }
+        }
+      }
+    },
+    "How to solve it": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsweg"
+          }
+        }
+      }
+    },
+    "I had it right": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hatte ich richtig"
+          }
+        }
+      }
+    },
+    "Illustrated questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen mit Abbildung"
+          }
+        }
+      }
+    },
+    "Illustration for question %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbildung zu Frage %lld"
+          }
+        }
+      }
+    },
+    "Illustrations were drawn for this app following the official figures. English translations are unofficial study aids; only the German text is valid in the exam.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Abbildungen wurden für diese App nach den amtlichen Vorlagen gezeichnet. Die englischen Übersetzungen sind inoffizielle Lernhilfen; in der Prüfung gilt nur der deutsche Text."
+          }
+        }
+      }
+    },
+    "In the exam the 9 navigation questions are solved on paper chart D49 with a plotting triangle and dividers. The app explains every step and the arithmetic.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In der Prüfung werden die 9 Navigationsfragen auf der Papierkarte D49 mit Kursdreieck und Zirkel gelöst. Die App erklärt jeden Schritt und die Rechnung."
+          }
+        }
+      }
+    },
+    "Inland": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen"
+          }
+        }
+      }
+    },
+    "Inland questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnenfragen"
+          }
+        }
+      }
+    },
+    "Inland · motor": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen · Motor"
+          }
+        }
+      }
+    },
+    "Inland · motor + sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen · Motor + Segel"
+          }
+        }
+      }
+    },
+    "Inland · sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen · Segel"
+          }
+        }
+      }
+    },
+    "Interrupted quick: quick flashes, then a pause": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unterbrochenes Funkelfeuer: Funkelfolge, dann Pause"
+          }
+        }
+      }
+    },
+    "Isophase: light and dark of equal length": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gleichtaktfeuer: Licht und Dunkel gleich lang"
+          }
+        }
+      }
+    },
+    "Keep practising": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiter üben"
+          }
+        }
+      }
+    },
+    "Keep your streak going – a short SBF quiz takes just 5 minutes.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Halte deine Serie – ein kurzes SBF-Quiz dauert nur 5 Minuten."
+          }
+        }
+      }
+    },
+    "Keeps your progress in your own iCloud account so it follows you to your other devices. The developer has no access to it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speichert deinen Fortschritt in deinem eigenen iCloud-Konto, damit er auf deinen anderen Geräten verfügbar ist. Der Entwickler hat keinen Zugriff darauf."
+          }
+        }
+      }
+    },
+    "Lat '": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Breite '"
+          }
+        }
+      }
+    },
+    "Lat °": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Breite °"
+          }
+        }
+      }
+    },
+    "Learning": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lernen"
+          }
+        }
+      }
+    },
+    "Light characters": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feuerkennungen"
+          }
+        }
+      }
+    },
+    "Links to videos about working on the chart.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links zu Videos über die Arbeit mit der Seekarte."
+          }
+        }
+      }
+    },
+    "List": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liste"
+          }
+        }
+      }
+    },
+    "Long '": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Länge '"
+          }
+        }
+      }
+    },
+    "Long °": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Länge °"
+          }
+        }
+      }
+    },
+    "Long-flashing: flashes of at least 2 seconds": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blinkfeuer: Lichtscheine von mindestens 2 Sekunden"
+          }
+        }
+      }
+    },
+    "Mastered": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelernt"
+          }
+        }
+      }
+    },
+    "MgK = %@, Abl = %@, Mw = %@. What is the rwK?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MgK = %@, Abl = %@, Mw = %@. Wie lautet der rwK?"
+          }
+        }
+      }
+    },
+    "MgP = %@, Abl = %@, Mw = %@. What is the rwP?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MgP = %@, Abl = %@, Mw = %@. Wie lautet die rwP?"
+          }
+        }
+      }
+    },
+    "Minutes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minuten"
+          }
+        }
+      }
+    },
+    "Mistakes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler"
+          }
+        }
+      }
+    },
+    "Mistakes (%lld)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler (%lld)"
+          }
+        }
+      }
+    },
+    "Mistakes to review": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler zum Wiederholen"
+          }
+        }
+      }
+    },
+    "Mode": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modus"
+          }
+        }
+      }
+    },
+    "Morse code letter": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Morsebuchstabe"
+          }
+        }
+      }
+    },
+    "Motor": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motor"
+          }
+        }
+      }
+    },
+    "Motor + sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motor + Segel"
+          }
+        }
+      }
+    },
+    "My licence": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mein Führerschein"
+          }
+        }
+      }
+    },
+    "Navigation drills": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationstraining"
+          }
+        }
+      }
+    },
+    "Navigation part in the Sea exam": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsteil in der See-Prüfung"
+          }
+        }
+      }
+    },
+    "Navigation task": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgabe"
+          }
+        }
+      }
+    },
+    "Navigation task %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgabe %lld"
+          }
+        }
+      }
+    },
+    "Navigation tasks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgaben"
+          }
+        }
+      }
+    },
+    "Navigation tasks · Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigationsaufgaben · See"
+          }
+        }
+      }
+    },
+    "New exam simulation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neue Prüfungssimulation"
+          }
+        }
+      }
+    },
+    "New: sailing questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu: Segelfragen"
+          }
+        }
+      }
+    },
+    "Next": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiter"
+          }
+        }
+      }
+    },
+    "Next exercise": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nächste Übung"
+          }
+        }
+      }
+    },
+    "Next question": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nächste Frage"
+          }
+        }
+      }
+    },
+    "No feedback until the end, like the real exam": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Rückmeldung bis zum Schluss – wie in der echten Prüfung"
+          }
+        }
+      }
+    },
+    "No mistakes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Fehler"
+          }
+        }
+      }
+    },
+    "No questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Fragen"
+          }
+        }
+      }
+    },
+    "No saved questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine gemerkten Fragen"
+          }
+        }
+      }
+    },
+    "No. %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nr. %lld"
+          }
+        }
+      }
+    },
+    "Not needed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht nötig"
+          }
+        }
+      }
+    },
+    "Not now": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jetzt nicht"
+          }
+        }
+      }
+    },
+    "Not passed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht bestanden"
+          }
+        }
+      }
+    },
+    "Not quite": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht ganz"
+          }
+        }
+      }
+    },
+    "Not studied": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht gelernt"
+          }
+        }
+      }
+    },
+    "Nothing due right now": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerade nichts fällig"
+          }
+        }
+      }
+    },
+    "Number of questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anzahl der Fragen"
+          }
+        }
+      }
+    },
+    "Occulting: light longer than dark": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unterbrochenes Feuer: länger hell als dunkel"
+          }
+        }
+      }
+    },
+    "Official composition, time limit and pass marks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Zusammenstellung, Zeit und Bestehensgrenzen"
+          }
+        }
+      }
+    },
+    "Official information on ELWIS": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Informationen auf ELWIS"
+          }
+        }
+      }
+    },
+    "Official questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Fragen"
+          }
+        }
+      }
+    },
+    "Official result": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amtliches Ergebnis"
+          }
+        }
+      }
+    },
+    "Official scoring": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Bewertung"
+          }
+        }
+      }
+    },
+    "Official source: elwis.de": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Quelle: elwis.de"
+          }
+        }
+      }
+    },
+    "Official: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amtlich: %@"
+          }
+        }
+      }
+    },
+    "Overall accuracy": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trefferquote gesamt"
+          }
+        }
+      }
+    },
+    "Page %lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seite %lld von %lld"
+          }
+        }
+      }
+    },
+    "Pass mark: %lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestehensgrenze: %lld von %lld"
+          }
+        }
+      }
+    },
+    "Pass your German boating licence exam": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestehe deine Sportbootführerschein-Prüfung"
+          }
+        }
+      }
+    },
+    "Pass: at least %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestanden mit mindestens %@"
+          }
+        }
+      }
+    },
+    "Pass: at least %lld of %lld correct in total": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestanden mit mindestens %lld von %lld richtigen Antworten insgesamt"
+          }
+        }
+      }
+    },
+    "Passed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestanden"
+          }
+        }
+      }
+    },
+    "Pause": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "Play": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abspielen"
+          }
+        }
+      }
+    },
+    "Play signal": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signal abspielen"
+          }
+        }
+      }
+    },
+    "Play sound signal": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schallsignal abspielen"
+          }
+        }
+      }
+    },
+    "Practice": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Üben"
+          }
+        }
+      }
+    },
+    "Practice quizzes with instant feedback": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übungs-Quiz mit sofortiger Rückmeldung"
+          }
+        }
+      }
+    },
+    "Practice tolerance for typed answers: ±%lld° for courses and bearings, ±%@ nm, ±%lld min, ±%@' for positions. ELWIS publishes no official tolerances.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übungstoleranz für eingegebene Antworten: ±%lld° für Kurse und Peilungen, ±%@ sm, ±%lld Min., ±%@' für Positionen. ELWIS veröffentlicht keine amtlichen Toleranzen."
+          }
+        }
+      }
+    },
+    "Practise": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Üben"
+          }
+        }
+      }
+    },
+    "Practise mistakes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler üben"
+          }
+        }
+      }
+    },
+    "Practise the %lld mistakes": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Practise the mistake"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Practise the %lld mistakes"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Den Fehler üben"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Die %lld Fehler üben"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Previous question": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorherige Frage"
+          }
+        }
+      }
+    },
+    "Privacy policy": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datenschutzerklärung"
+          }
+        }
+      }
+    },
+    "Progress sync via iCloud": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fortschritt per iCloud synchronisieren"
+          }
+        }
+      }
+    },
+    "Question %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frage %lld"
+          }
+        }
+      }
+    },
+    "Question %lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frage %lld von %lld"
+          }
+        }
+      }
+    },
+    "Question %lld: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frage %lld: %@"
+          }
+        }
+      }
+    },
+    "Question catalogue": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragenkatalog"
+          }
+        }
+      }
+    },
+    "Questions and answers: official question catalogue for the Sportbootführerschein, published on ELWIS by the Generaldirektion Wasserstraßen und Schifffahrt (status: August 2023).": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen und Antworten: amtlicher Fragenkatalog für den Sportbootführerschein, veröffentlicht auf ELWIS von der Generaldirektion Wasserstraßen und Schifffahrt (Stand: August 2023)."
+          }
+        }
+      }
+    },
+    "Questions answered": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beantwortete Fragen"
+          }
+        }
+      }
+    },
+    "Questions come back at growing intervals until you know them for good.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen kommen in wachsenden Abständen wieder, bis du sie sicher kannst."
+          }
+        }
+      }
+    },
+    "Questions from the official ELWIS catalogue (GDWS). Independent study aid, not a government app.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen aus dem amtlichen ELWIS-Fragenkatalog (GDWS). Unabhängige Lernhilfe, keine Behörden-App."
+          }
+        }
+      }
+    },
+    "Questions you answer wrongly will appear here.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falsch beantwortete Fragen erscheinen hier."
+          }
+        }
+      }
+    },
+    "Questions you answered come back after 1, 3, 7, 14 and 30 days. A wrong answer starts the cycle again.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beantwortete Fragen kommen nach 1, 3, 7, 14 und 30 Tagen wieder. Eine falsche Antwort startet den Zyklus neu."
+          }
+        }
+      }
+    },
+    "Questions you answered wrongly, most frequent first. Answer one correctly to reduce its count.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falsch beantwortete Fragen, die häufigsten zuerst. Eine richtige Antwort verringert den Zähler."
+          }
+        }
+      }
+    },
+    "Quick quiz": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelles Quiz"
+          }
+        }
+      }
+    },
+    "Quick start": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnellstart"
+          }
+        }
+      }
+    },
+    "Quick: 50–60 flashes per minute": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funkelfeuer: 50–60 Blitze pro Minute"
+          }
+        }
+      }
+    },
+    "Quit without result": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ohne Ergebnis abbrechen"
+          }
+        }
+      }
+    },
+    "Quiz": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quiz"
+          }
+        }
+      }
+    },
+    "Quiz · %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quiz · %@"
+          }
+        }
+      }
+    },
+    "Quizzes completed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abgeschlossene Quiz"
+          }
+        }
+      }
+    },
+    "Random questions with instant feedback": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zufällige Fragen mit sofortiger Rückmeldung"
+          }
+        }
+      }
+    },
+    "Rate the app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App bewerten"
+          }
+        }
+      }
+    },
+    "Read aloud": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorlesen"
+          }
+        }
+      }
+    },
+    "Real exam simulation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Echte Prüfungssimulation"
+          }
+        }
+      }
+    },
+    "Recent quizzes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letzte Quiz"
+          }
+        }
+      }
+    },
+    "Reminders": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erinnerungen"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernen"
+          }
+        }
+      }
+    },
+    "Remove from saved": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr merken"
+          }
+        }
+      }
+    },
+    "Reset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurücksetzen"
+          }
+        }
+      }
+    },
+    "Reset all progress": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesamten Fortschritt zurücksetzen"
+          }
+        }
+      }
+    },
+    "Reset progress?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fortschritt zurücksetzen?"
+          }
+        }
+      }
+    },
+    "Results": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ergebnis"
+          }
+        }
+      }
+    },
+    "Retry these questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese Fragen wiederholen"
+          }
+        }
+      }
+    },
+    "Review box %lld of 5": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lernstufe %lld von 5"
+          }
+        }
+      }
+    },
+    "Review your mistakes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler ansehen"
+          }
+        }
+      }
+    },
+    "SBF Exam Prep": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Exam Prep"
+          }
+        }
+      }
+    },
+    "SBF Exam Prep helps you prepare for the theory exam of the German recreational boating licence — Sportbootführerschein Binnen (motor and sail) and See.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Exam Prep bereitet dich auf die theoretische Prüfung zum Sportbootführerschein Binnen (unter Antriebsmaschine und unter Segel) und See vor."
+          }
+        }
+      }
+    },
+    "SBF Inland": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Binnen"
+          }
+        }
+      }
+    },
+    "SBF Inland (specific)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Binnen (spezifisch)"
+          }
+        }
+      }
+    },
+    "SBF Inland · sailing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Binnen · Segeln"
+          }
+        }
+      }
+    },
+    "SBF Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF See"
+          }
+        }
+      }
+    },
+    "SBF Sea (specific)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF See (spezifisch)"
+          }
+        }
+      }
+    },
+    "Sail": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segel"
+          }
+        }
+      }
+    },
+    "Sail only – I already hold SBF Inland (motor)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur Segel – ich habe schon den SBF Binnen (Motor)"
+          }
+        }
+      }
+    },
+    "Sailing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segeln"
+          }
+        }
+      }
+    },
+    "Sailing add-on": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segel-Ergänzung"
+          }
+        }
+      }
+    },
+    "Sailing questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segelfragen"
+          }
+        }
+      }
+    },
+    "Save question": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frage merken"
+          }
+        }
+      }
+    },
+    "Saved": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemerkt"
+          }
+        }
+      }
+    },
+    "Saved (%lld)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemerkt (%lld)"
+          }
+        }
+      }
+    },
+    "Saved questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemerkte Fragen"
+          }
+        }
+      }
+    },
+    "Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See"
+          }
+        }
+      }
+    },
+    "Sea questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seefragen"
+          }
+        }
+      }
+    },
+    "Search questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen durchsuchen"
+          }
+        }
+      }
+    },
+    "See results": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ergebnis ansehen"
+          }
+        }
+      }
+    },
+    "Select a question": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frage auswählen"
+          }
+        }
+      }
+    },
+    "Selected": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausgewählt"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
+          }
+        }
+      }
+    },
+    "Show English translation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Englische Übersetzung anzeigen"
+          }
+        }
+      }
+    },
+    "Show all answers": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Lösungen zeigen"
+          }
+        }
+      }
+    },
+    "Show correct answer": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Richtige Antwort zeigen"
+          }
+        }
+      }
+    },
+    "Show only mistakes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur Fehler anzeigen"
+          }
+        }
+      }
+    },
+    "Show only saved questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur gemerkte Fragen anzeigen"
+          }
+        }
+      }
+    },
+    "Show solution": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösung zeigen"
+          }
+        }
+      }
+    },
+    "Signs, lights & sound signals": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeichen, Lichter & Schallsignale"
+          }
+        }
+      }
+    },
+    "Signs: east variation and deviation are positive (+), west negative (−).": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorzeichen: östliche Missweisung und Ablenkung sind positiv (+), westliche negativ (−)."
+          }
+        }
+      }
+    },
+    "Solution diagram": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsskizze"
+          }
+        }
+      }
+    },
+    "Solution diagram, step by step": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsskizze, Schritt für Schritt"
+          }
+        }
+      }
+    },
+    "Solution diagrams": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsskizzen"
+          }
+        }
+      }
+    },
+    "Sound signal: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schallsignal: %@"
+          }
+        }
+      }
+    },
+    "Sound signals you can listen to": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schallsignale zum Anhören"
+          }
+        }
+      }
+    },
+    "Source: ELWIS navigation tasks, status August 2023. English translations are unofficial.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelle: ELWIS-Navigationsaufgaben, Stand August 2023. Die englischen Übersetzungen sind inoffiziell."
+          }
+        }
+      }
+    },
+    "Source: ELWIS scoring key for the SBF theory exam.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelle: ELWIS-Bewertungsschlüssel der theoretischen SBF-Prüfung."
+          }
+        }
+      }
+    },
+    "Sources & legal": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quellen & Rechtliches"
+          }
+        }
+      }
+    },
+    "Spaced repetition": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intelligente Wiederholung"
+          }
+        }
+      }
+    },
+    "Spaced repetition and mistake review": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intelligente Wiederholung und Fehlertraining"
+          }
+        }
+      }
+    },
+    "Speed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrt"
+          }
+        }
+      }
+    },
+    "Speed = distance ÷ time (in hours)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrt = Distanz ÷ Zeit (in Stunden)"
+          }
+        }
+      }
+    },
+    "Sportbootführerschein Binnen & See": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sportbootführerschein Binnen & See"
+          }
+        }
+      }
+    },
+    "Start a quick quiz": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelles Quiz starten"
+          }
+        }
+      }
+    },
+    "Start exam simulation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungssimulation starten"
+          }
+        }
+      }
+    },
+    "Start review": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiederholung starten"
+          }
+        }
+      }
+    },
+    "Start · %lld questions": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Start · %lld question"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Start · %lld questions"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Start · %lld Frage"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Start · %lld Fragen"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Statistics": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Statistik"
+          }
+        }
+      }
+    },
+    "Stay on track": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dranbleiben"
+          }
+        }
+      }
+    },
+    "Step %lld of %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schritt %lld von %lld"
+          }
+        }
+      }
+    },
+    "Step-by-step plot of each solution with narration.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schrittweise Lösungsskizze mit Vorlesefunktion."
+          }
+        }
+      }
+    },
+    "Stop": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stopp"
+          }
+        }
+      }
+    },
+    "Stop sound signal": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schallsignal stoppen"
+          }
+        }
+      }
+    },
+    "Studied": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gelernt"
+          }
+        }
+      }
+    },
+    "Study streak": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lernserie"
+          }
+        }
+      }
+    },
+    "Swipe right to mark a question as mastered, swipe left to remove it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach rechts wischen markiert eine Frage als gelernt, nach links entfernt sie."
+          }
+        }
+      }
+    },
+    "Sync": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Synchronisierung"
+          }
+        }
+      }
+    },
+    "Sync with iCloud": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mit iCloud synchronisieren"
+          }
+        }
+      }
+    },
+    "Tap an answer to check yourself": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippe auf eine Antwort, um dich zu prüfen"
+          }
+        }
+      }
+    },
+    "Tap the bookmark while browsing or during a quiz to collect questions here.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippe beim Lernen oder im Quiz auf das Lesezeichen, um Fragen hier zu sammeln."
+          }
+        }
+      }
+    },
+    "Task %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgabe %lld"
+          }
+        }
+      }
+    },
+    "Task %lld · diagram": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgabe %lld · Skizze"
+          }
+        }
+      }
+    },
+    "Tasks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgaben"
+          }
+        }
+      }
+    },
+    "Technique videos": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Technik-Videos"
+          }
+        }
+      }
+    },
+    "Terms and abbreviations": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begriffe und Abkürzungen"
+          }
+        }
+      }
+    },
+    "The 15 official chart tasks with worked solutions.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die 15 amtlichen Kartenaufgaben mit Lösungsweg."
+          }
+        }
+      }
+    },
+    "The complete ELWIS catalogue (August 2023) for SBF Binnen (motor and sail) and SBF See, in German with English translations.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der vollständige ELWIS-Fragenkatalog (August 2023) für SBF Binnen (Motor und Segel) und SBF See, auf Deutsch mit englischer Übersetzung."
+          }
+        }
+      }
+    },
+    "The exam is in German. Show an English translation below each question and answer?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Prüfung ist auf Deutsch. Soll unter jeder Frage und Antwort eine englische Übersetzung stehen?"
+          }
+        }
+      }
+    },
+    "The navigation task of the SBF See exam is not included": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Navigationsaufgabe der SBF-See-Prüfung ist nicht enthalten"
+          }
+        }
+      }
+    },
+    "The official composition, pass marks and time limit for your licence.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offizielle Zusammensetzung, Bestehensgrenzen und Zeitlimit für deinen Führerschein."
+          }
+        }
+      }
+    },
+    "The real SBF See exam also includes a navigation task (9 questions, at least 7 correct), which is not part of this simulation.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die echte SBF-See-Prüfung enthält zusätzlich eine Navigationsaufgabe (9 Fragen, mindestens 7 richtig), die nicht Teil dieser Simulation ist."
+          }
+        }
+      }
+    },
+    "The sailing licence for inland waters has its own exam with 7 extra sailing questions.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für den Binnenschein unter Segel gibt es eine eigene Prüfung mit 7 zusätzlichen Segelfragen."
+          }
+        }
+      }
+    },
+    "There are no questions for this selection.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für diese Auswahl gibt es keine Fragen."
+          }
+        }
+      }
+    },
+    "This app is an independent study aid and is not affiliated with or endorsed by the GDWS, ELWIS, the DMYV or the DSV. Always check the current regulations.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese App ist eine unabhängige Lernhilfe und steht in keiner Verbindung zur GDWS, zu ELWIS, zum DMYV oder zum DSV. Bitte prüfe stets die aktuellen Vorschriften."
+          }
+        }
+      }
+    },
+    "This decides which exam simulations you get. You can change it any time in Settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Davon hängt ab, welche Prüfungssimulationen du bekommst. Du kannst es jederzeit in den Einstellungen ändern."
+          }
+        }
+      }
+    },
+    "This erases your quiz history, saved questions, mistakes and review schedule on all devices that use iCloud sync. This cannot be undone.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dadurch werden Quiz-Verlauf, gemerkte Fragen, Fehler und Wiederholungsplan auf allen Geräten mit iCloud-Synchronisierung gelöscht. Das kann nicht rückgängig gemacht werden."
+          }
+        }
+      }
+    },
+    "Time": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uhrzeit"
+          }
+        }
+      }
+    },
+    "Time = distance ÷ speed × 60": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit = Distanz ÷ Fahrt × 60"
+          }
+        }
+      }
+    },
+    "Time = distance ÷ speed × 60, then add it to the departure time.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit = Distanz ÷ Fahrt × 60, dann zur Abfahrtszeit addieren."
+          }
+        }
+      }
+    },
+    "Time limit: %lld minutes": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Time limit: %lld minute"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Time limit: %lld minutes"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Zeitlimit: %lld Minute"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Zeitlimit: %lld Minuten"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Time remaining: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbleibende Zeit: %@"
+          }
+        }
+      }
+    },
+    "Time to study! ⛵": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit zum Lernen! ⛵"
+          }
+        }
+      }
+    },
+    "Time, distance, speed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit, Distanz, Fahrt"
+          }
+        }
+      }
+    },
+    "Today": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heute"
+          }
+        }
+      }
+    },
+    "Topic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thema"
+          }
+        }
+      }
+    },
+    "Topic (optional)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thema (optional)"
+          }
+        }
+      }
+    },
+    "Total": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesamt"
+          }
+        }
+      }
+    },
+    "Translations": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übersetzungen"
+          }
+        }
+      }
+    },
+    "Turn all off": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle ausschalten"
+          }
+        }
+      }
+    },
+    "Turn all on": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle einschalten"
+          }
+        }
+      }
+    },
+    "Unanswered questions count as wrong.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbeantwortete Fragen zählen als falsch."
+          }
+        }
+      }
+    },
+    "Unlimited course, time and light character practice.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbegrenztes Üben von Kursen, Zeiten und Feuerkennungen."
+          }
+        }
+      }
+    },
+    "Variation (Mw) on this chart excerpt: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Missweisung (Mw) in diesem Kartenausschnitt: %@"
+          }
+        }
+      }
+    },
+    "Version %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@"
+          }
+        }
+      }
+    },
+    "Very quick: 100–120 flashes per minute": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelles Funkelfeuer: 100–120 Blitze pro Minute"
+          }
+        }
+      }
+    },
+    "Video walkthrough": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lösungsvideo"
+          }
+        }
+      }
+    },
+    "Videos by third parties on YouTube. They open in YouTube and are not part of the official ELWIS material.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Videos von Dritten auf YouTube. Sie öffnen sich in YouTube und gehören nicht zum amtlichen ELWIS-Material."
+          }
+        }
+      }
+    },
+    "Videos: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Videos: %@"
+          }
+        }
+      }
+    },
+    "Watch the light. Which character is it?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beobachte das Feuer. Welche Kennung ist es?"
+          }
+        }
+      }
+    },
+    "Watch this step in the video (%@)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diesen Schritt im Video ansehen (%@)"
+          }
+        }
+      }
+    },
+    "Which licence are you taking?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welchen Führerschein machst du?"
+          }
+        }
+      }
+    },
+    "Why?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warum?"
+          }
+        }
+      }
+    },
+    "Work on chart D49 and type your results. Chart work and descriptions are compared with the official result at the end.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arbeite in der Karte D49 und gib deine Ergebnisse ein. Kartenarbeit und Beschreibungen vergleichst du am Ende mit dem amtlichen Ergebnis."
+          }
+        }
+      }
+    },
+    "Wrong": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falsch"
+          }
+        }
+      }
+    },
+    "You need practice chart D49": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du brauchst die Übungskarte D49"
+          }
+        }
+      }
+    },
+    "Your answer (optional)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Antwort (optional)"
+          }
+        }
+      }
+    },
+    "Your answer, wrong": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Antwort, falsch"
+          }
+        }
+      }
+    },
+    "Your answer: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Antwort: %@"
+          }
+        }
+      }
+    },
+    "Your choice decides which exam simulations are offered. All questions stay available for practice.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Auswahl bestimmt, welche Prüfungssimulationen angeboten werden. Zum Üben bleiben alle Fragen verfügbar."
+          }
+        }
+      }
+    },
+    "Your mistakes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Fehler"
+          }
+        }
+      }
+    },
+    "^[%lld day](inflect: true)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "^[%lld Tag](inflect: true)"
+          }
+        }
+      }
+    },
+    "basic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basis"
+          }
+        }
+      }
+    },
+    "hh:mm": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hh:mm"
+          }
+        }
+      }
+    },
+    "inland": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binnen"
+          }
+        }
+      }
+    },
+    "navigation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigation"
+          }
+        }
+      }
+    },
+    "nm": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sm"
+          }
+        }
+      }
+    },
+    "pause": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        }
+      }
+    },
+    "prolonged": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lang"
+          }
+        }
+      }
+    },
+    "questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fragen"
+          }
+        }
+      }
+    },
+    "rwK = %@, Mw = %@, Abl = %@. What is the MgK?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rwK = %@, Mw = %@, Abl = %@. Wie lautet der MgK?"
+          }
+        }
+      }
+    },
+    "sailing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segeln"
+          }
+        }
+      }
+    },
+    "sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See"
+          }
+        }
+      }
+    },
+    "short": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kurz"
+          }
+        }
+      }
+    },
+    "© 2026 SBF Exam Prep": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 SBF Exam Prep"
+          }
+        }
+      }
+    },
+    "· Question %lld": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "· Frage %lld"
+          }
+        }
+      }
+    }
+  }
+}

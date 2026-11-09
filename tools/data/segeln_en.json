@@ -1,0 +1,425 @@
+{
+  "254": {
+    "question": "What is a \"bilge keeler\" (Kimmkieler)?",
+    "answers": [
+      "A yacht with two bilge keels (side keels).",
+      "A yacht with two side centreboards.",
+      "A yacht with a keel-centreboard.",
+      "A yacht with two keels one behind the other."
+    ]
+  },
+  "255": {
+    "question": "What is the advantage of a bilge keeler over other keelboats?",
+    "answers": [
+      "It can dry out upright without problems.",
+      "Its draught is greater.",
+      "Its leeway is smaller than that of other keelboats.",
+      "The keel can be raised."
+    ]
+  },
+  "256": {
+    "question": "What is a \"keel-centreboard yacht\" (Kielschwertyacht)?",
+    "answers": [
+      "A yacht with a shallow ballast keel and an additional retractable centreboard.",
+      "A yacht with a ballast keel and an additional centreboard.",
+      "A yacht with a retractable ballast keel.",
+      "A yacht with two bilge keels."
+    ]
+  },
+  "257": {
+    "question": "How do a dinghy's self-bailers (Bodenlenzventile), which lie below the waterline, work?",
+    "answers": [
+      "Through the suction created when the boat moves through the water.",
+      "Gravity makes the water flow overboard.",
+      "Through the boat's inertia.",
+      "Through the pressure difference between air and water pressure."
+    ]
+  },
+  "258": {
+    "question": "What is meant by \"form stability\" (Formstabilität)?",
+    "answers": [
+      "A vessel's ability to resist heeling through the shape of its hull.",
+      "A vessel's ability to right itself after capsizing.",
+      "A vessel's ability to hold its course when the tiller is released.",
+      "A vessel's ability to keep its hull shape for years, even under heavy loads."
+    ]
+  },
+  "259": {
+    "question": "What is meant by \"weight stability\" (Gewichtsstabilität)?",
+    "answers": [
+      "A vessel's ability to resist heeling through its low-lying ballast.",
+      "The possibility of reducing heel by adding internal ballast.",
+      "The possibility of countering heel with a heavy crew.",
+      "A vessel's ability to resist heeling through the shape of its hull."
+    ]
+  },
+  "260": {
+    "question": "Which boats are mainly \"weight-stable\"?",
+    "answers": [
+      "Keel yachts are mainly \"weight-stable\".",
+      "Dinghies are mainly \"weight-stable\".",
+      "Catamarans are mainly \"weight-stable\".",
+      "Trimarans are mainly \"weight-stable\"."
+    ]
+  },
+  "261": {
+    "question": "Which boats are mainly \"form-stable\"?",
+    "answers": [
+      "Dinghies are mainly \"form-stable\".",
+      "Keel yachts are mainly \"form-stable\".",
+      "Bilge keelers are mainly \"form-stable\".",
+      "Keel-centreboard yachts are mainly \"form-stable\"."
+    ]
+  },
+  "262": {
+    "question": "How can the stability of form-stable boats be increased in strong wind?",
+    "answers": [
+      "By hiking out or using the trapeze.",
+      "By shifting internal ballast.",
+      "By pumping water ballast across.",
+      "By extending so-called trim tabs or an additional centreboard."
+    ]
+  },
+  "263": {
+    "question": "How does the righting moment of a dinghy change as it heels?",
+    "answers": [
+      "It first increases to a maximum and then decreases until the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes.",
+      "It first decreases to a minimum and then increases again until the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes.",
+      "It first decreases and reaches a maximum when the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes.",
+      "It first decreases and reaches its minimum when the centres of buoyancy and gravity are vertically aligned; after that the dinghy capsizes."
+    ]
+  },
+  "264": {
+    "question": "How does the righting moment of a keel yacht change as the heel steadily increases?",
+    "answers": [
+      "It increases and, after passing its maximum, reaches its critical angle only beyond 90°.",
+      "It increases until the critical angle of about 70° is reached.",
+      "It decreases until the critical angle of 90° is reached.",
+      "It decreases up to 90° of heel and then increases steadily."
+    ]
+  },
+  "265": {
+    "question": "What must be done if a dinghy's rudder breaks?",
+    "answers": [
+      "Use an emergency rudder or a paddle instead, leave the fairway and show that you are unable to manoeuvre.",
+      "Anchor immediately, send a distress call and hoist a signal shape (blue cone).",
+      "Wave a red flag in a circle and have a towline ready.",
+      "Lower the sails, start the engine and head for the shore in reverse."
+    ]
+  },
+  "266": {
+    "question": "How can tiller steering be reached and operated safely even when the boat heels?",
+    "answers": [
+      "With a tiller extension.",
+      "By adjusting the traveller.",
+      "By hiking out on the trapeze.",
+      "By replacing the tiller with a wheel."
+    ]
+  },
+  "267": {
+    "question": "Why should ropes on board always be coiled neatly?",
+    "answers": [
+      "So they are clear and ready when needed.",
+      "So they can dry and do not rot.",
+      "So their breaking strength is maintained.",
+      "So they are not damaged by UV radiation."
+    ]
+  },
+  "268": {
+    "question": "Why should halyards always be coiled neatly?",
+    "answers": [
+      "So they can be let go quickly and safely when needed.",
+      "So they can dry and do not rot.",
+      "So they are not damaged by UV radiation.",
+      "So they cannot be confused with the sheets."
+    ]
+  },
+  "269": {
+    "question": "What are the corners of a sail called?",
+    "answers": [
+      "Head, tack, clew (Kopf, Hals, Schothorn).",
+      "Head, tack, boom end (Kopf, Hals, Nock).",
+      "Luff, foot, leech (Vorliek, Unterliek, Achterliek).",
+      "Forestay, lower shroud, backstay (Vorstag, Unterwant, Achterstag)."
+    ]
+  },
+  "270": {
+    "question": "What are the edges of a sail called?",
+    "answers": [
+      "Luff, foot, leech (Vorliek, Unterliek, Achterliek).",
+      "Head, tack, boom end (Kopf, Hals, Nock).",
+      "Forestay, lower shroud, backstay (Vorstag, Unterwant, Achterstag).",
+      "Head, tack, clew (Kopf, Hals, Schothorn)."
+    ]
+  },
+  "271": {
+    "question": "What are sail battens for?",
+    "answers": [
+      "To give the sail its shape and stiffen it.",
+      "To make reefing easier.",
+      "To stop the sail from flogging.",
+      "To allow the sail to be used in strong wind as well."
+    ]
+  },
+  "272": {
+    "question": "Why must sails not flog (killen) for a long time?",
+    "answers": [
+      "Flogging damages the cloth and opens the seams.",
+      "Flogging makes the boat capsize in stronger wind.",
+      "Flogging injures the crew.",
+      "Flogging damages vessels lying alongside."
+    ]
+  },
+  "273": {
+    "question": "Why must even small damage to the sails be repaired immediately?",
+    "answers": [
+      "Because under wind pressure it quickly becomes major damage.",
+      "Because it reduces the sail's drive.",
+      "Because the sail can then only be used in a calm.",
+      "Because moisture can get into the sail."
+    ]
+  },
+  "274": {
+    "question": "How can the direction of the true wind be recognised while under way?",
+    "answers": [
+      "By flags or other signs on land.",
+      "By the direction in which the clouds are moving.",
+      "By the national flag at the stern.",
+      "By the telltales on the mainsail."
+    ]
+  },
+  "275": {
+    "question": "Which wind is shown by burgees or wind indicators (Verklicker) while under way?",
+    "answers": [
+      "The apparent wind.",
+      "The wind created by the boat's own motion.",
+      "The true wind.",
+      "The wind direction."
+    ]
+  },
+  "276": {
+    "question": "When do the true wind and the apparent wind come from the same direction on a sailing boat?",
+    "answers": [
+      "On a run (dead downwind).",
+      "On a beam reach.",
+      "Close-hauled.",
+      "On a broad reach."
+    ]
+  },
+  "277": {
+    "question": "Why is the apparent wind weaker than the true wind on a run?",
+    "answers": [
+      "The true wind is reduced by the opposing wind of the boat's own motion.",
+      "The true wind is slowed down by the wind of the boat's motion.",
+      "The apparent wind is slowed down by the low pressure along the sail.",
+      "The apparent wind is always weaker than the true wind, whatever the wind direction."
+    ]
+  },
+  "278": {
+    "question": "Why is the apparent wind stronger than the true wind when sailing close-hauled?",
+    "answers": [
+      "Because on this course the true wind and the wind of the boat's motion add up in direction and strength.",
+      "Because on this course a slot forms between jib and mainsail that accelerates the wind.",
+      "Because the true wind is stronger close-hauled than on downwind courses.",
+      "Because the apparent wind is always stronger than the true wind, whatever the wind direction."
+    ]
+  },
+  "279": {
+    "question": "A boat sailing close-hauled has reefed. An oncoming boat of the same type is sailing unreefed. How can this be explained?",
+    "answers": [
+      "The apparent wind is stronger than the true wind close-hauled, and weaker on broad-reach and downwind courses.",
+      "Boats are more stable when the wind comes from further aft.",
+      "On a broad reach the true wind builds up against the sail and is therefore weaker.",
+      "Close-hauled, the wind flows along the wing-shaped sail and is accelerated by it."
+    ]
+  },
+  "280": {
+    "question": "Why does the apparent wind free (come from further aft) when a gust hits while sailing close-hauled?",
+    "answers": [
+      "Because the wind of the boat's motion stays the same at first while the true wind increases, so the resulting apparent wind comes from further aft.",
+      "Because the Coriolis force also changes the wind's direction when it gets stronger.",
+      "Because the boat's trim changes the course automatically when the wind increases.",
+      "Because the wind direction is influenced by the set of the sails, the apparent wind changes too."
+    ]
+  },
+  "281": {
+    "question": "When a gust hits while sailing close-hauled, the apparent wind frees. How can this be used when beating to windward?",
+    "answers": [
+      "Luff up with the gust to gain more ground to windward.",
+      "Bear away to sail as high as possible.",
+      "Ease the sails a little to turn the gust into heel.",
+      "A spinnaker can be set."
+    ]
+  },
+  "282": {
+    "question": "How should a dinghy's centreboard be set on a run, and why?",
+    "answers": [
+      "It should be raised. This reduces friction, and also the risk of capsizing in an accidental gybe.",
+      "It should be lowered. This makes the boat more stable and reduces the risk of capsizing in an accidental gybe.",
+      "It should never be raised completely, otherwise it cannot be reached to right the dinghy after a capsize.",
+      "It should be raised completely in stronger wind to improve the dinghy's steering."
+    ]
+  },
+  "283": {
+    "question": "How do leeway and heel change when a dinghy's centreboard is raised a little while sailing close-hauled?",
+    "answers": [
+      "Leeway increases, heel decreases.",
+      "Leeway increases, heel increases.",
+      "Leeway decreases, and the boat gets faster because of the lower water resistance.",
+      "Leeway decreases, heel decreases."
+    ]
+  },
+  "284": {
+    "question": "At what angle of heel should a dinghy normally be sailed, and why?",
+    "answers": [
+      "As upright as possible, otherwise leeway and weather helm increase.",
+      "As upright as possible, otherwise leeway and lee helm increase.",
+      "Heeled slightly to leeward, otherwise the sails can easily swing over to windward.",
+      "Heeled to windward as far as possible, because this reduces leeway and weather helm."
+    ]
+  },
+  "285": {
+    "question": "On a beam reach, how does a mainsail sheeted in too tight affect the boat's speed?",
+    "answers": [
+      "Heel increases, speed decreases.",
+      "Heel and speed increase up to a critical point and then drop quickly.",
+      "Speed increases because the wind forces are used better.",
+      "The boat stops because the airflow separates from the sail."
+    ]
+  },
+  "286": {
+    "question": "How does a sheet lead (Holepunkt) that is too far forward affect the set and load of the headsail?",
+    "answers": [
+      "The foot flutters, the leech is overstretched.",
+      "The leech flutters, the luff is overstretched.",
+      "The luff flutters, the foot is overstretched.",
+      "The luff flutters, the leech is overstretched."
+    ]
+  },
+  "287": {
+    "question": "How does a sheet lead (Holepunkt) that is too far aft affect the set and load of the headsail?",
+    "answers": [
+      "The leech flutters, the foot is overstretched.",
+      "The luff flutters, the foot is overstretched.",
+      "The foot flutters, the leech is overstretched.",
+      "The leech flutters, the luff is overstretched."
+    ]
+  },
+  "288": {
+    "question": "How should a sail be trimmed in light wind?",
+    "answers": [
+      "The sail should be full (deep).",
+      "The sail should be trimmed flat.",
+      "The sheets must be eased.",
+      "The sheets must be pulled in tight."
+    ]
+  },
+  "289": {
+    "question": "How should a sail be trimmed in strong wind?",
+    "answers": [
+      "The sail should be trimmed flat.",
+      "It should be trimmed full (deep).",
+      "The sheets must be pulled in tight.",
+      "The sheets must be eased."
+    ]
+  },
+  "290": {
+    "question": "How does an outhaul (Unterliekstrecker) affect the trim of the sail?",
+    "answers": [
+      "Depending on the tension, the lower part of the mainsail becomes fuller or flatter.",
+      "Depending on the tension, the lower part of the headsail becomes fuller or flatter.",
+      "Depending on the tension, the aft part of the headsail becomes fuller or flatter.",
+      "Depending on the tension, the aft part of the mainsail becomes fuller or flatter."
+    ]
+  },
+  "291": {
+    "question": "To keep a dinghy on course when sailing close-hauled, the tiller always has to be pulled hard away from the side the sails are on. How can this trim fault be corrected?",
+    "answers": [
+      "Trim the mainsail flatter; move weight aft.",
+      "Trim the mainsail flatter; move weight forward.",
+      "Trim the headsail flatter; move weight aft.",
+      "Trim the headsail flatter; move weight forward."
+    ]
+  },
+  "292": {
+    "question": "To keep a dinghy on course when sailing close-hauled, the tiller always has to be pushed hard towards the side the sails are on. How can this trim fault be corrected?",
+    "answers": [
+      "Trim the mainsail fuller; move weight forward.",
+      "Trim the mainsail flatter; move weight forward.",
+      "Trim the mainsail fuller; move weight aft.",
+      "Trim the mainsail flatter; move weight aft."
+    ]
+  },
+  "293": {
+    "question": "Why should a well-trimmed sailing boat have slight weather helm?",
+    "answers": [
+      "Because in an emergency it turns into the wind by itself.",
+      "Because it is then more demanding to steer.",
+      "Because it then points less high.",
+      "Because it is then faster on a broad reach."
+    ]
+  },
+  "294": {
+    "question": "What effect does increasing heel have on the boat's balance (trim)?",
+    "answers": [
+      "Weather helm increases.",
+      "Lee helm increases.",
+      "None.",
+      "Weather helm increases up to 45° of heel and then decreases."
+    ]
+  },
+  "295": {
+    "question": "Which manoeuvres did the boat sail at points 1, 2 and 3 on the course shown?",
+    "answers": [
+      "1 tack, 2 gybe, 3 chicken gybe (Q-Wende).",
+      "1 chicken gybe (Q-Wende), 2 gybe, 3 tack.",
+      "1 gybe, 2 tack, 3 chicken gybe (Q-Wende).",
+      "1 tack, 2 chicken gybe (Q-Wende), 3 gybe."
+    ]
+  },
+  "296": {
+    "question": "What should be done with the centreboard and rudder of a dinghy that is left on a mooring buoy?",
+    "answers": [
+      "Raise the centreboard and the rudder blade so the boat can swing freely.",
+      "Lower the centreboard and raise the rudder so the boat can swing freely.",
+      "Raise the centreboard and lower the rudder so the boat can swing freely.",
+      "Lower the centreboard and the rudder so the boat can swing freely."
+    ]
+  },
+  "297": {
+    "question": "Why is an accidental gybe (Patenthalse) dangerous?",
+    "answers": [
+      "It can injure the crew, damage the rig and cause a capsize.",
+      "It can suddenly change which vessel has to give way.",
+      "It can make the vessel lose its steering.",
+      "Another accidental gybe can follow if you do not bear away immediately."
+    ]
+  },
+  "298": {
+    "question": "A sailing boat is sailing close-hauled when the windward shroud suddenly breaks. Which manoeuvre makes sense?",
+    "answers": [
+      "Tack.",
+      "Gybe.",
+      "Chicken gybe (Q-Wende).",
+      "Shooting up into the wind (Aufschießer)."
+    ]
+  },
+  "299": {
+    "question": "In strong wind a sailing boat is sailing close-hauled under mainsail only. Suddenly the forestay breaks. What must be done immediately?",
+    "answers": [
+      "Bear away onto a run.",
+      "Sheet in and luff up.",
+      "Shoot up into the wind.",
+      "Gybe."
+    ]
+  },
+  "300": {
+    "question": "In strong wind a sailing boat is sailing close-hauled under mainsail only. Suddenly the forestay breaks. What can quickly be used as a temporary replacement for the broken forestay?",
+    "answers": [
+      "The jib or a halyard.",
+      "The jib sheet or the main halyard.",
+      "The bow line or the stern line.",
+      "The jib sheet or a reefing line."
+    ]
+  }
+}

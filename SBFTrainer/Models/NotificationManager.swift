@@ -1,10 +1,13 @@
 import UserNotifications
 import Foundation
 
+/// Local daily study reminder. Nothing leaves the device.
 @MainActor
 final class NotificationManager {
     static let shared = NotificationManager()
     private init() {}
+
+    private let identifier = "sbf-daily"
 
     func requestPermission() async -> Bool {
         let center = UNUserNotificationCenter.current()
@@ -19,25 +22,24 @@ final class NotificationManager {
         }
     }
 
-    func scheduleDailyReminder(hour: Int = 18) {
+    func scheduleDailyReminder(hour: Int = 18, minute: Int = 0) {
         let center = UNUserNotificationCenter.current()
-        center.removePendingNotificationRequests(withIdentifiers: ["sbf-daily"])
+        center.removePendingNotificationRequests(withIdentifiers: [identifier])
 
         let content = UNMutableNotificationContent()
-        content.title = "Zeit zu lernen! ⛵"
-        content.body = "Halte deinen Streak aufrecht – mach heute ein kurzes SBF-Quiz."
+        content.title = String(localized: "Time to study! ⛵", comment: "Daily reminder title")
+        content.body = String(localized: "Keep your streak going – a short SBF quiz takes just 5 minutes.",
+                              comment: "Daily reminder body")
         content.sound = .default
 
         var components = DateComponents()
         components.hour = hour
-        components.minute = 0
-
+        components.minute = minute
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-        let request = UNNotificationRequest(identifier: "sbf-daily", content: content, trigger: trigger)
-        center.add(request)
+        center.add(UNNotificationRequest(identifier: identifier, content: content, trigger: trigger))
     }
 
     func cancelReminders() {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["sbf-daily"])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
 }

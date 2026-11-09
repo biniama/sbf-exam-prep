@@ -1,66 +1,52 @@
 import SwiftUI
 
+/// "Saved" tab: bookmarked questions and the list of mistakes.
 struct BookmarksView: View {
+    enum Segment: Hashable { case saved, mistakes }
+
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
-    @State private var selectedType: ExamType = .all
+    @State private var segment: Segment = .saved
     @State private var showingQuiz = false
     @StateObject private var vm = QuizViewModel()
 
-    var bookmarkedQuestions: [Question] {
-        store.questions(for: selectedType)
-            .filter { progress.isBookmarked($0.uniqueId) }
+    var savedQuestions: [Question] {
+        store.allQuestions.filter { progress.isBookmarked($0.uniqueId) }
     }
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                if bookmarkedQuestions.isEmpty {
-                    emptyState
-                } else {
-                    // Type filter
-                    examTypePicker
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
+                Picker("List", selection: $segment) {
+                    Text("Saved (\(progress.bookmarks.count))").tag(Segment.saved)
+                    Text("Mistakes (\(progress.wrongAnswerCount))").tag(Segment.mistakes)
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .readableWidth()
 
-                    List {
-                        ForEach(Array(bookmarkedQuestions.enumerated()), id: \.element.uniqueId) { index, q in
-                            NavigationLink(destination: QuestionDetailView(questions: bookmarkedQuestions, startIndex: index)) {
-                                QuestionRowView(question: q)
-                            }
-                            .listRowBackground(Color.cardBG)
-                            .listRowSeparatorTint(Color.navyLight.opacity(0.15))
-                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                                Button(role: .destructive) {
-                                    withAnimation { progress.toggleBookmark(q.uniqueId) }
-                                } label: {
-                                    Label("Remove", systemImage: "bookmark.slash")
-                                }
-                                .tint(Color.gold)
-                            }
-                        }
-                    }
-                    .listStyle(.plain)
-                    .background(Color.surfaceBG)
+                switch segment {
+                case .saved: savedList
+                case .mistakes: MistakesList()
                 }
             }
             .background(Color.surfaceBG)
-            .navigationTitle("Saved Questions")
+            .navigationTitle(segment == .saved ? "Saved questions" : "Mistakes")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                if !bookmarkedQuestions.isEmpty {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button {
-                            vm.setup(type: .all, count: min(bookmarkedQuestions.count, 30))
-                            // Override with bookmarked only
-                            vm.questions = Array(bookmarkedQuestions.shuffled().prefix(30))
-                            showingQuiz = true
-                        } label: {
-                            Label("Quiz", systemImage: "play.circle")
-                                .font(.subheadline.weight(.semibold))
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        if segment == .saved {
+                            vm.setup(questions: Array(savedQuestions.shuffled().prefix(30)), mode: .saved)
+                        } else {
+                            vm.setupMistakes()
                         }
-                        .foregroundStyle(Color.navy)
+                        showingQuiz = true
+                    } label: {
+                        Label("Practise", systemImage: "play.circle")
                     }
+                    .disabled(segment == .saved ? savedQuestions.isEmpty : progress.wrongAnswerCount == 0)
                 }
             }
             .fullScreenCover(isPresented: $showingQuiz) {
@@ -69,47 +55,104 @@ struct BookmarksView: View {
         }
     }
 
-    private var examTypePicker: some View {
-        HStack(spacing: 0) {
-            ForEach(ExamType.allCases) { type in
-                let count = store.questions(for: type).filter { progress.isBookmarked($0.uniqueId) }.count
-                Button {
-                    withAnimation(.spring(response: 0.3)) { selectedType = type }
-                } label: {
-                    VStack(spacing: 2) {
-                        Text(type.rawValue)
-                            .font(.caption.weight(.semibold))
-                        Text("\(count)")
-                            .font(.caption2)
+    @ViewBuilder
+    private var savedList: some View {
+        let qs = savedQuestions
+        if qs.isEmpty {
+            ContentUnavailableView {
+                Label("No saved questions", systemImage: "bookmark")
+            } description: {
+                Text("Tap the bookmark while browsing or during a quiz to collect questions here.")
+            }
+        } else {
+            List {
+                ForEach(Array(qs.enumerated()), id: \.element.uniqueId) { index, q in
+                    NavigationLink(destination: QuestionDetailView(questions: qs, startIndex: index)) {
+                        QuestionRowView(question: q)
                     }
-                    .foregroundStyle(selectedType == type ? .white : Color.navy)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
-                    .background(selectedType == type ? Color.navy : Color.clear)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .listRowBackground(Color.cardBG)
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            withAnimation { progress.toggleBookmark(q.uniqueId) }
+                        } label: {
+                            Label("Remove", systemImage: "bookmark.slash")
+                        }
+                    }
                 }
             }
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
         }
-        .padding(4)
-        .background(Color.navy.opacity(0.1))
-        .clipShape(RoundedRectangle(cornerRadius: 13))
+    }
+}
+
+/// Questions answered wrongly, most frequent first.
+struct MistakesList: View {
+    @EnvironmentObject var progress: UserProgress
+    @EnvironmentObject var store: QuestionStore
+
+    var questions: [(question: Question, count: Int)] {
+        progress.wrongAnswerIds.sorted { $0.value > $1.value }
+            .compactMap { id, count in store.question(id: id).map { ($0, count) } }
     }
 
-    private var emptyState: some View {
-        VStack(spacing: 20) {
-            Spacer()
-            Image(systemName: "bookmark.slash")
-                .font(.system(size: 60))
-                .foregroundStyle(Color.navyLight.opacity(0.3))
-            Text("No Saved Questions")
-                .font(.title3.bold())
-                .foregroundStyle(Color.navy)
-            Text("Tap the bookmark icon while browsing or during a quiz to save questions here.")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 40)
-            Spacer()
+    var body: some View {
+        let items = questions
+        if items.isEmpty {
+            ContentUnavailableView {
+                Label("No mistakes", systemImage: "checkmark.circle")
+            } description: {
+                Text("Questions you answer wrongly will appear here.")
+            }
+        } else {
+            List {
+                Section {
+                    ForEach(items, id: \.question.uniqueId) { item in
+                        NavigationLink(destination: QuestionDetailView(question: item.question)) {
+                            HStack(spacing: 12) {
+                                Text("\(item.count)×")
+                                    .font(.caption.bold().monospacedDigit())
+                                    .foregroundStyle(Color.errorRed)
+                                    .frame(width: 40, height: 36)
+                                    .background(Color.errorRed.opacity(0.12))
+                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                                    .accessibilityLabel(Text("Answered wrongly \(item.count) times"))
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(item.question.germanText)
+                                        .font(.subheadline)
+                                        .foregroundStyle(Color.ink)
+                                        .lineLimit(2)
+                                    HStack(spacing: 6) {
+                                        ExamTypeBadge(type: item.question.examType)
+                                        CategoryBadge(text: item.question.localizedCategory)
+                                    }
+                                }
+                            }
+                            .padding(.vertical, 4)
+                        }
+                        .listRowBackground(Color.cardBG)
+                        .swipeActions(edge: .leading) {
+                            Button {
+                                withAnimation { progress.markMastered(item.question.uniqueId) }
+                            } label: {
+                                Label("Mastered", systemImage: "checkmark.circle")
+                            }
+                            .tint(.green)
+                        }
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                withAnimation { progress.clearWrongAnswer(item.question.uniqueId) }
+                            } label: {
+                                Label("Remove", systemImage: "trash")
+                            }
+                        }
+                    }
+                } footer: {
+                    Text("Swipe right to mark a question as mastered, swipe left to remove it.")
+                }
+            }
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
         }
     }
 }

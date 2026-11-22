@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5CBC93E5165BFAE6F2BFBA4C"
+               BlueprintIdentifier = "60CE37C1497E2E42972F28AE"
                BuildableName = "SBFTrainer.app"
                BlueprintName = "SBFTrainer"
                ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -30,7 +30,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5CBC93E5165BFAE6F2BFBA4C"
+            BlueprintIdentifier = "60CE37C1497E2E42972F28AE"
             BuildableName = "SBFTrainer.app"
             BlueprintName = "SBFTrainer"
             ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -41,7 +41,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "80D8640878E990747D54864F"
+               BlueprintIdentifier = "469929663E54AFF114C2EC18"
                BuildableName = "SBFTrainerTests.xctest"
                BlueprintName = "SBFTrainerTests"
                ReferencedContainer = "container:SBFTrainer.xcodeproj">
@@ -63,12 +63,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5CBC93E5165BFAE6F2BFBA4C"
+            BlueprintIdentifier = "60CE37C1497E2E42972F28AE"
             BuildableName = "SBFTrainer.app"
             BlueprintName = "SBFTrainer"
             ReferencedContainer = "container:SBFTrainer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../SBFTrainer/Products.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -80,7 +83,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5CBC93E5165BFAE6F2BFBA4C"
+            BlueprintIdentifier = "60CE37C1497E2E42972F28AE"
             BuildableName = "SBFTrainer.app"
             BlueprintName = "SBFTrainer"
             ReferencedContainer = "container:SBFTrainer.xcodeproj">

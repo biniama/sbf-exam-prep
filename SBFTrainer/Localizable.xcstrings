@@ -502,6 +502,16 @@
         }
       }
     },
+    "All inland and sailing questions, unlimited exam simulations": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Binnen- und Segelfragen, unbegrenzte Prüfungssimulationen"
+          }
+        }
+      }
+    },
     "All questions": {
       "localizations": {
         "de": {
@@ -518,6 +528,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Alle Fragen der Reihe nach"
+          }
+        }
+      }
+    },
+    "All questions of your licence, German and English": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Fragen deines Scheins, auf Deutsch und Englisch"
+          }
+        }
+      }
+    },
+    "All sea questions, unlimited exam simulations": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Seefragen, unbegrenzte Prüfungssimulationen"
           }
         }
       }
@@ -872,6 +902,26 @@
         }
       }
     },
+    "Could not load prices from the App Store. Please check your connection.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Preise konnten nicht aus dem App Store geladen werden. Bitte prüfe deine Verbindung."
+          }
+        }
+      }
+    },
+    "Could not restore purchases. Please check your connection.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käufe konnten nicht wiederhergestellt werden. Bitte prüfe deine Verbindung."
+          }
+        }
+      }
+    },
     "Course conversion": {
       "localizations": {
         "de": {
@@ -1072,12 +1122,42 @@
         }
       }
     },
+    "Every illustration and sound signal": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Abbildungen und Schallsignale"
+          }
+        }
+      }
+    },
     "Every question is shown in German, as in the exam, with an optional English translation.": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
             "value": "Jede Frage wird wie in der Prüfung auf Deutsch angezeigt, wahlweise mit englischer Übersetzung."
+          }
+        }
+      }
+    },
+    "Everything for both licences. Best value": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles für beide Scheine. Am günstigsten"
+          }
+        }
+      }
+    },
+    "Everything is unlocked": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles ist freigeschaltet"
           }
         }
       }
@@ -1292,6 +1372,36 @@
         }
       }
     },
+    "Free exam simulation used · unlimited in the full version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kostenlose Prüfungssimulation genutzt · unbegrenzt in der Vollversion"
+          }
+        }
+      }
+    },
+    "Free sample": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kostenlose Auswahl"
+          }
+        }
+      }
+    },
+    "Free: all basic questions and a sample of every topic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kostenlos: alle Basisfragen und eine Auswahl aus jedem Thema"
+          }
+        }
+      }
+    },
     "From compass to true: add deviation and variation.": {
       "localizations": {
         "de": {
@@ -1308,6 +1418,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Von rechtweisend nach Kompass: Missweisung und Ablenkung abziehen."
+          }
+        }
+      }
+    },
+    "Full version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollversion"
           }
         }
       }
@@ -1378,6 +1498,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gut gemacht"
+          }
+        }
+      }
+    },
+    "Got a code from your boat school? Tap Redeem school code and enter it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code von deiner Bootsschule bekommen? Tippe auf „Schulcode einlösen“ und gib ihn ein."
           }
         }
       }
@@ -1648,6 +1778,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Liste"
+          }
+        }
+      }
+    },
+    "Load prices": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preise laden"
+          }
+        }
+      }
+    },
+    "Locked": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesperrt"
           }
         }
       }
@@ -2032,6 +2182,16 @@
         }
       }
     },
+    "OK": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
     "Occulting: light longer than dark": {
       "localizations": {
         "de": {
@@ -2112,6 +2272,26 @@
         }
       }
     },
+    "One free exam simulation · unlimited in the full version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eine kostenlose Prüfungssimulation · unbegrenzt in der Vollversion"
+          }
+        }
+      }
+    },
+    "One-time purchase, no subscription. Unlocks on all devices with your Apple ID.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einmalkauf, kein Abo. Gilt auf allen Geräten mit deiner Apple-ID."
+          }
+        }
+      }
+    },
     "Overall accuracy": {
       "localizations": {
         "de": {
@@ -2128,6 +2308,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Seite %lld von %lld"
+          }
+        }
+      }
+    },
+    "Part of the full version · %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teil der Vollversion · %@"
           }
         }
       }
@@ -2262,6 +2452,16 @@
         }
       }
     },
+    "Practise every official question and take unlimited exam simulations.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Übe alle offiziellen Fragen und mach unbegrenzt Prüfungssimulationen."
+          }
+        }
+      }
+    },
     "Practise mistakes": {
       "localizations": {
         "de": {
@@ -2338,6 +2538,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fortschritt per iCloud synchronisieren"
+          }
+        }
+      }
+    },
+    "Purchase": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kauf"
           }
         }
       }
@@ -2572,6 +2782,16 @@
         }
       }
     },
+    "Redeem school code": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schulcode einlösen"
+          }
+        }
+      }
+    },
     "Reminders": {
       "localizations": {
         "de": {
@@ -2628,6 +2848,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fortschritt zurücksetzen?"
+          }
+        }
+      }
+    },
+    "Restore purchases": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käufe wiederherstellen"
           }
         }
       }
@@ -2708,6 +2938,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "SBF Binnen (spezifisch)"
+          }
+        }
+      }
+    },
+    "SBF Inland + Sea": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SBF Binnen + See"
           }
         }
       }
@@ -3082,6 +3322,16 @@
         }
       }
     },
+    "Spaced repetition and mistakes across the whole catalogue": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wiederholung und Fehlertraining über den ganzen Katalog"
+          }
+        }
+      }
+    },
     "Speed": {
       "localizations": {
         "de": {
@@ -3412,6 +3662,16 @@
         }
       }
     },
+    "The purchase could not be completed. Please try again.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Kauf konnte nicht abgeschlossen werden. Bitte versuche es erneut."
+          }
+        }
+      }
+    },
     "The real SBF See exam also includes a navigation task (9 questions, at least 7 correct), which is not part of this simulation.": {
       "localizations": {
         "de": {
@@ -3662,6 +3922,86 @@
         }
       }
     },
+    "Unlimited exam simulations with the official pass marks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbegrenzte Prüfungssimulationen mit den offiziellen Bestehensgrenzen"
+          }
+        }
+      }
+    },
+    "Unlock": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Freischalten"
+          }
+        }
+      }
+    },
+    "Unlock all questions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Fragen freischalten"
+          }
+        }
+      }
+    },
+    "Unlock exam simulation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prüfungssimulation freischalten"
+          }
+        }
+      }
+    },
+    "Unlock full version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollversion freischalten"
+          }
+        }
+      }
+    },
+    "Unlock it to see the answers and practise every question of your licence.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schalte sie frei, um die Antworten zu sehen und alle Fragen deines Scheins zu üben."
+          }
+        }
+      }
+    },
+    "Unlock the full catalogue": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Den ganzen Fragenkatalog freischalten"
+          }
+        }
+      }
+    },
+    "Unlocked": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Freigeschaltet"
+          }
+        }
+      }
+    },
     "Variation (Mw) on this chart excerpt: %@": {
       "localizations": {
         "de": {
@@ -3838,6 +4178,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Deine Fehler"
+          }
+        }
+      }
+    },
+    "Your purchase is waiting for approval.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dein Kauf wartet auf Freigabe."
           }
         }
       }

@@ -59,6 +59,9 @@ struct QuizView: View {
                 }
             }
         }
+        .sheet(isPresented: $vm.showPaywall) {
+            PaywallView()
+        }
         .alert("End the exam?", isPresented: $confirmQuit) {
             Button("Finish and see result") { vm.finish() }
             Button("Quit without result", role: .destructive) { close() }

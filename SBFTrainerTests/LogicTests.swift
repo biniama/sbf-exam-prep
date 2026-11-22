@@ -40,7 +40,8 @@ final class ExamRulesTests: XCTestCase {
     func testExamSimulationComposition() {
         let defaults = UserDefaults(suiteName: "ExamRulesTests")!
         defaults.removePersistentDomain(forName: "ExamRulesTests")
-        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults))
+        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults),
+                               entitlements: EntitlementManager(testOwned: Set(ProProduct.allCases), defaults: defaults))
         for format in ExamFormat.allCases {
             let rules = ExamRules(format: format)
             vm.setupExam(format: format)
@@ -57,7 +58,8 @@ final class ExamRulesTests: XCTestCase {
     func testExamScoringCountsEveryPart() {
         let defaults = UserDefaults(suiteName: "ExamScoring")!
         defaults.removePersistentDomain(forName: "ExamScoring")
-        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults))
+        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults),
+                               entitlements: EntitlementManager(testOwned: Set(ProProduct.allCases), defaults: defaults))
         vm.setupExam(format: .binnenMotorSail)
         // Answer every question correctly.
         while vm.state != .finished {
@@ -225,7 +227,8 @@ final class NavigationExamTests: XCTestCase {
     func testExamFlowShowsTheNavigationTaskAfterTheQuestions() {
         let defaults = UserDefaults(suiteName: "NavigationExamFlow")!
         defaults.removePersistentDomain(forName: "NavigationExamFlow")
-        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults))
+        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults),
+                               entitlements: EntitlementManager(testOwned: Set(ProProduct.allCases), defaults: defaults))
         vm.setupExam(format: .see, includeNavigation: true)
         XCTAssertNotNil(vm.navigationPart)
         while vm.state != .navigation && vm.state != .finished {
@@ -275,5 +278,53 @@ final class NavigationDrillTests: XCTestCase {
         XCTAssertEqual(LightCharacter("Q(3).W.10s")!.phases.filter(\.on).count, 3)
         XCTAssertEqual(LightCharacter("Fl.Y.4s")!.colour, .yellow)
         XCTAssertNil(LightCharacter("Xyz.W.4s"))
+    }
+}
+
+@MainActor
+final class FreeTierTests: XCTestCase {
+    private func freshDefaults(_ name: String) -> UserDefaults {
+        let defaults = UserDefaults(suiteName: name)!
+        defaults.removePersistentDomain(forName: name)
+        return defaults
+    }
+
+    func testFreeSampleIsStableAndMatchesAndroid() {
+        let store = QuestionStore.shared
+        let sample = QuestionStore.makeFreeSample(from: store.allQuestions)
+        XCTAssertEqual(sample, store.freeSampleIds)
+        // Same rule on Android (QuestionRepository.freeSampleIds); keep both counts in sync.
+        XCTAssertEqual(sample.filter { $0.hasPrefix("binnen") }.count, 29)
+        XCTAssertEqual(sample.filter { $0.hasPrefix("segeln") }.count, 9)
+        XCTAssertEqual(sample.filter { $0.hasPrefix("see") }.count, 34)
+        XCTAssertFalse(sample.contains { $0.hasPrefix("shared") }, "basic questions are free anyway")
+    }
+
+    func testAccessPerProduct() {
+        let defaults = freshDefaults("FreeTierAccess")
+        let inland = EntitlementManager(testOwned: [.binnen], defaults: defaults)
+        XCTAssertTrue(inland.hasAccess(to: .binnen))
+        XCTAssertTrue(inland.hasAccess(to: .segeln), "sailing belongs to the inland licence")
+        XCTAssertFalse(inland.hasAccess(to: .see))
+        XCTAssertEqual(inland.offeredProducts, [.see], "no bundle once one licence is owned")
+
+        let both = EntitlementManager(testOwned: [.both], defaults: defaults)
+        XCTAssertTrue(both.hasEverything)
+        XCTAssertEqual(both.offeredProducts, [])
+
+        let none = EntitlementManager(testOwned: [], defaults: defaults)
+        XCTAssertEqual(none.offeredProducts, [.both, .binnen, .see])
+    }
+
+    func testOneFreeExamSimulationPerLicence() {
+        let defaults = freshDefaults("FreeTierTrial")
+        let entitlements = EntitlementManager(testOwned: [], defaults: defaults)
+        let vm = QuizViewModel(progress: UserProgress(testDefaults: defaults), entitlements: entitlements)
+
+        XCTAssertTrue(vm.setupExam(format: .binnenMotor), "first inland simulation is free")
+        XCTAssertEqual(vm.questions.count, ExamRules(format: .binnenMotor).totalCount)
+        XCTAssertFalse(vm.setupExam(format: .binnenMotorSail), "inland formats share one trial")
+        XCTAssertTrue(vm.setupExam(format: .see), "sea has its own trial")
+        XCTAssertFalse(vm.setupExam(format: .see))
     }
 }

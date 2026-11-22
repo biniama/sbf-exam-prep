@@ -5,6 +5,7 @@ struct HomeView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
     @EnvironmentObject var flags: FeatureFlags
+    @EnvironmentObject var entitlements: EntitlementManager
     @Environment(\.horizontalSizeClass) private var hSize
     @StateObject private var quizVM = QuizViewModel()
     @State private var showingQuiz = false
@@ -283,8 +284,11 @@ struct HomeView: View {
                     quickActionRow(icon: "timer", title: Text("Exam simulation · \(format.title)"),
                                    subtitle: Text(ExamRules(format: format, includeNavigation: flags.isOn(.navigationExam)).summary),
                                    color: format == .see ? .navyLight : .oceanTeal) {
-                        quizVM.setupExam(format: format, includeNavigation: flags.isOn(.navigationExam))
-                        showingQuiz = true
+                        if quizVM.setupExam(format: format, includeNavigation: flags.isOn(.navigationExam)) {
+                            showingQuiz = true
+                        } else {
+                            entitlements.paywallShown = true
+                        }
                     }
                 }
                 if flags.isOn(.navigationTasks) {
@@ -309,6 +313,9 @@ struct HomeView: View {
                 quickActionRow(icon: "list.number", title: Text("All questions in order"),
                                subtitle: Text("Go through the whole catalogue"), color: .gold) {
                     selectedTab = .browse
+                }
+                if !entitlements.hasEverything {
+                    UnlockBanner { entitlements.paywallShown = true }
                 }
             }
         }

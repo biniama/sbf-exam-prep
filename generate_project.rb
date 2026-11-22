@@ -23,7 +23,7 @@ widget = project.new_target(:app_extension, 'SBFWidget', :ios, DEPLOYMENT_TARGET
 tests  = project.new_target(:unit_test_bundle, 'SBFTrainerTests', :ios, DEPLOYMENT_TARGET)
 
 RESOURCE_EXTENSIONS = %w[.xcassets .xcstrings .xcprivacy .json].freeze
-REFERENCE_ONLY = %w[.plist .entitlements].freeze
+REFERENCE_ONLY = %w[.plist .entitlements .storekit].freeze
 
 # Adds a directory tree to `group`; Swift files are compiled into `source_targets`,
 # resources are copied into `resource_target`.
@@ -123,6 +123,9 @@ scheme = Xcodeproj::XCScheme.new
 scheme.add_build_target(app)
 scheme.add_test_target(tests)
 scheme.set_launch_target(app)
+# Local StoreKit testing: purchases in the Simulator use SBFTrainer/Products.storekit.
+scheme.launch_action.xml_element.add_element('StoreKitConfigurationFileReference',
+                                             'identifier' => '../../SBFTrainer/Products.storekit')
 scheme.save_as(PROJECT_PATH, 'SBFExamPrep', true)
 
 project.save

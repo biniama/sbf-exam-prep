@@ -15,15 +15,18 @@ struct SettingsView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
     @EnvironmentObject var flags: FeatureFlags
+    @EnvironmentObject var entitlements: EntitlementManager
     @Environment(\.openURL) private var openURL
     @Environment(\.requestReview) private var requestReview
     @State private var showResetConfirm = false
     @State private var notificationsDenied = false
     @State private var versionTaps = 0
+    @State private var showRedeemSheet = false
 
     var body: some View {
         NavigationStack {
             Form {
+                fullVersionSection
                 learningSection
                 reminderSection
                 syncSection
@@ -47,10 +50,42 @@ struct SettingsView: View {
                 Text("This erases your quiz history, saved questions, mistakes and review schedule on all devices that use iCloud sync. This cannot be undone.")
             }
             .task { await refreshNotificationStatus() }
+            .offerCodeRedemption(isPresented: $showRedeemSheet) { _ in
+                Task { await entitlements.refreshEntitlements() }
+            }
         }
     }
 
     // MARK: Sections
+
+    private var fullVersionSection: some View {
+        Section {
+            accessRow(ExamType.binnen.licenceName, unlocked: entitlements.hasBinnen)
+            accessRow(ExamType.see.licenceName, unlocked: entitlements.hasSee)
+            if !entitlements.hasEverything {
+                Button { entitlements.paywallShown = true } label: {
+                    Label("Unlock full version", systemImage: "lock.open.fill")
+                }
+            }
+            Button { showRedeemSheet = true } label: {
+                Label("Redeem school code", systemImage: "ticket")
+            }
+            Button { Task { await entitlements.restorePurchases() } } label: {
+                Label("Restore purchases", systemImage: "arrow.clockwise")
+            }
+        } header: {
+            Text("Full version")
+        } footer: {
+            Text("Got a code from your boat school? Tap Redeem school code and enter it.")
+        }
+    }
+
+    private func accessRow(_ title: String, unlocked: Bool) -> some View {
+        LabeledContent(title) {
+            Label(unlocked ? "Unlocked" : "Free sample", systemImage: unlocked ? "checkmark.seal.fill" : "lock.fill")
+                .foregroundStyle(unlocked ? Color.successGreen : Color.gold)
+        }
+    }
 
     private var learningSection: some View {
         Section {

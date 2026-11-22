@@ -3,6 +3,7 @@ import SwiftUI
 enum AppTab: Hashable { case home, browse, quiz, saved, settings }
 
 struct MainTabView: View {
+    @EnvironmentObject var entitlements: EntitlementManager
     @State private var selectedTab: AppTab = .home
     @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "onboardingDone")
 
@@ -11,6 +12,9 @@ struct MainTabView: View {
             .tint(Color.gold)
             .fullScreenCover(isPresented: $showOnboarding) {
                 OnboardingView(isPresented: $showOnboarding)
+            }
+            .sheet(isPresented: $entitlements.paywallShown) {
+                PaywallView()
             }
             .onAppear {
                 #if DEBUG

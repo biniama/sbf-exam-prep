@@ -1,0 +1,79 @@
+{
+  "identifier": "8736D831-DDF9-42CB-9980-3603FA7D9F66",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "6740000000",
+      "localizations": [
+        {
+          "description": "All inland and sailing questions, unlimited exam simulations",
+          "displayName": "SBF Inland",
+          "locale": "en_US"
+        },
+        {
+          "description": "Alle Binnen- und Segelfragen, unbegrenzte Prüfungssimulationen",
+          "displayName": "SBF Binnen",
+          "locale": "de_DE"
+        }
+      ],
+      "productID": "ai.biniam.SBFExamPrep.binnen",
+      "referenceName": "SBF Binnen",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "6740000001",
+      "localizations": [
+        {
+          "description": "All sea questions, unlimited exam simulations",
+          "displayName": "SBF Sea",
+          "locale": "en_US"
+        },
+        {
+          "description": "Alle Seefragen, unbegrenzte Prüfungssimulationen",
+          "displayName": "SBF See",
+          "locale": "de_DE"
+        }
+      ],
+      "productID": "ai.biniam.SBFExamPrep.see",
+      "referenceName": "SBF See",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "14.99",
+      "familyShareable": false,
+      "internalID": "6740000002",
+      "localizations": [
+        {
+          "description": "Everything for both licences",
+          "displayName": "SBF Inland + Sea",
+          "locale": "en_US"
+        },
+        {
+          "description": "Alles für beide Scheine",
+          "displayName": "SBF Binnen + See",
+          "locale": "de_DE"
+        }
+      ],
+      "productID": "ai.biniam.SBFExamPrep.both",
+      "referenceName": "SBF Binnen + See",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "A86W8T79TR",
+    "_failTransactionsEnabled": false,
+    "_locale": "de_DE",
+    "_storefront": "DEU",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}

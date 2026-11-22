@@ -6,6 +6,7 @@ struct QuizSetupView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
     @EnvironmentObject var flags: FeatureFlags
+    @EnvironmentObject var entitlements: EntitlementManager
     @Environment(\.horizontalSizeClass) private var hSize
     @State private var mode: Mode = .practice
     @State private var selectedType: ExamType = .all
@@ -19,7 +20,7 @@ struct QuizSetupView: View {
 
     private var availableCount: Int {
         switch mode {
-        case .practice: return store.questions(for: selectedType, category: selectedCategory).count
+        case .practice: return store.availableQuestions(for: selectedType, category: selectedCategory).count
         case .review:   return progress.dueCount
         case .mistakes: return progress.wrongAnswerCount
         case .exam:     return examRules.totalCount + examRules.navigationCount
@@ -49,6 +50,9 @@ struct QuizSetupView: View {
                         optionSections
                     }
                     startButton
+                    if !entitlements.hasEverything {
+                        UnlockBanner { entitlements.paywallShown = true }
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.bottom, 32)
@@ -177,6 +181,11 @@ struct QuizSetupView: View {
                 ruleRow("list.number", Text(rules.summary))
                 ruleRow("checkmark.seal", Text(passText(rules)))
                 ruleRow("timer", Text("Time limit: \(rules.minutes) minutes"))
+                if !entitlements.hasAccess(to: examFormat.licenceType) {
+                    ruleRow("gift", entitlements.hasFreeExamTrial(for: examFormat)
+                            ? Text("One free exam simulation · unlimited in the full version")
+                            : Text("Free exam simulation used · unlimited in the full version"))
+                }
                 ruleRow("eye.slash", Text("No feedback until the end, like the real exam"))
                 if rules.excludesNavigationTask {
                     ruleRow("map", Text("The navigation task of the SBF See exam is not included"))
@@ -190,6 +199,9 @@ struct QuizSetupView: View {
             }
         }
     }
+
+    /// Exam simulation without the purchase and with the free trial used.
+    private var examLocked: Bool { mode == .exam && !entitlements.canStartExamSimulation(examFormat) }
 
     private var examRules: ExamRules { ExamRules(format: examFormat, includeNavigation: flags.isOn(.navigationExam)) }
 
@@ -229,7 +241,7 @@ struct QuizSetupView: View {
                                 .foregroundStyle(active ? Color.gold : .secondary)
                             Text(type.licenceName).font(.subheadline).foregroundStyle(Color.ink)
                             Spacer()
-                            Text("\(store.questions(for: type).count)")
+                            Text("\(store.availableQuestions(for: type).count)")
                                 .font(.caption.monospacedDigit()).foregroundStyle(.secondary)
                             if active { Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.gold) }
                         }
@@ -285,12 +297,16 @@ struct QuizSetupView: View {
             case .practice: vm.setup(type: selectedType, count: startCount, category: selectedCategory)
             case .review: vm.setupDueReview()
             case .mistakes: vm.setupMistakes()
-            case .exam: vm.setupExam(format: examFormat, includeNavigation: flags.isOn(.navigationExam))
+            case .exam:
+                guard vm.setupExam(format: examFormat, includeNavigation: flags.isOn(.navigationExam)) else {
+                    entitlements.paywallShown = true
+                    return
+                }
             }
             showQuiz = true
         } label: {
-            Label(mode == .exam ? "Start exam simulation" : "Start · \(startCount) questions",
-                  systemImage: mode == .exam ? "timer" : "play.fill")
+            Label(examLocked ? "Unlock exam simulation" : (mode == .exam ? "Start exam simulation" : "Start · \(startCount) questions"),
+                  systemImage: examLocked ? "lock.fill" : (mode == .exam ? "timer" : "play.fill"))
                 .font(.headline)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)

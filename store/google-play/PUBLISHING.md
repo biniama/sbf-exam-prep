@@ -82,3 +82,15 @@ Production → **Create new release**
 > requires a closed test with at least 12 testers who stay opted in for 14 days. If Play Console shows this
 > requirement, create the release under **Testing → Closed testing** instead (same steps), invite 12+ testers by email,
 > and apply for production access from the dashboard after 14 days.
+
+## In-app products and school codes
+
+Create three one-time products (Monetize → Products → In-app products). The IDs must match `ProProduct` in `data/FullVersion.kt`:
+
+| Product ID | Name | Price |
+|---|---|---|
+| `binnen` | SBF Inland | 9.99 € |
+| `see` | SBF Sea | 9.99 € |
+| `both` | SBF Inland + Sea | 14.99 € |
+
+School codes are Google Play promo codes (Monetize → Promotions). Create one promotion per product and download the codes as CSV. Limits: 500 codes per quarter for one-time products, each code works once, and codes cannot be revoked. Students redeem a code in the app under Settings → Redeem school code, which opens the Play Store; the purchase shows up when they return to the app.

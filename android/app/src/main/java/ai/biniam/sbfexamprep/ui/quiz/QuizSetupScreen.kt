@@ -73,6 +73,9 @@ import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.ExamRules
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.ui.LocalApp
+import ai.biniam.sbfexamprep.ui.billing.UnlockBanner
+import ai.biniam.sbfexamprep.data.licenceType
+import androidx.compose.material.icons.filled.Redeem
 import ai.biniam.sbfexamprep.ui.components.CountPill
 import ai.biniam.sbfexamprep.ui.components.PrimaryButton
 import ai.biniam.sbfexamprep.ui.components.ReadableWidth
@@ -98,6 +101,7 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
     val app = LocalApp.current
     val progress by app.progressRepository.progress.collectAsStateWithLifecycle()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
+    val access by app.billing.access.collectAsStateWithLifecycle()
     var mode by rememberSaveable { mutableStateOf(SetupMode.PRACTICE) }
     var examType by rememberSaveable { mutableStateOf(ExamType.ALL) }
     val formats = settings.licenceGoal.examFormats
@@ -113,7 +117,7 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
     val withNavigation = FeatureFlag.NAVIGATION_EXAM in flags
     val rules = ExamRules(exam, withNavigation)
     val available = when (mode) {
-        SetupMode.PRACTICE -> app.questions.questions(examType, category).size
+        SetupMode.PRACTICE -> app.questions.availableQuestions(examType, category, access).size
         SetupMode.REVIEW -> due
         SetupMode.MISTAKES -> mistakes
         SetupMode.EXAM -> rules.totalCount + rules.navigationCount
@@ -163,9 +167,9 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                         SetupMode.PRACTICE -> {
                             SectionCard(stringResource(R.string.exam), Icons.Filled.FormatListNumbered) {
                                 listOf(ExamType.ALL, ExamType.BINNEN, ExamType.SEGELN, ExamType.SEE, ExamType.SHARED).forEach { t ->
-                                    ModeRow(examType == t, examTypeIcon(t), licenceName(t),
-                                            pluralStringResource(R.plurals.questions_count, app.questions.questions(t).size,
-                                                                 app.questions.questions(t).size)) {
+                                    val n = app.questions.availableQuestions(t, null, access).size
+                                ModeRow(examType == t, examTypeIcon(t), licenceName(t),
+                                            pluralStringResource(R.plurals.questions_count, n, n)) {
                                         examType = t
                                         category = null
                                     }
@@ -196,6 +200,10 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                             }
                             RuleRow(Icons.Filled.Verified, examPassText(rules))
                             RuleRow(Icons.Filled.Timer, pluralStringResource(R.plurals.time_limit_minutes, rules.minutes, rules.minutes))
+                            if (!access.hasAccess(exam.licenceType)) {
+                                RuleRow(Icons.Filled.Redeem, stringResource(
+                                    if (app.billing.hasFreeExamTrial(exam)) R.string.exam_trial_available else R.string.exam_trial_used))
+                            }
                             RuleRow(Icons.Filled.VisibilityOff, stringResource(R.string.rules_feedback))
                             if (rules.excludesNavigationTask) RuleRow(Icons.Filled.Map, stringResource(R.string.rules_navigation))
                             if (rules.totalPassMark == null && rules.parts.size > 1) {
@@ -206,8 +214,11 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                         }
                     }
 
+                    val examLocked = mode == SetupMode.EXAM && !access.hasAccess(exam.licenceType) &&
+                        !app.billing.hasFreeExamTrial(exam)
                     PrimaryButton(
-                        if (mode == SetupMode.EXAM) stringResource(R.string.start_exam_sim)
+                        if (examLocked) stringResource(R.string.unlock_exam_sim)
+                        else if (mode == SetupMode.EXAM) stringResource(R.string.start_exam_sim)
                         else pluralStringResource(R.plurals.start_n_questions, startCount, startCount),
                         Icons.Filled.PlayArrow,
                         onClick = {
@@ -215,11 +226,12 @@ fun QuizSetupScreen(quiz: QuizViewModel) {
                                 SetupMode.PRACTICE -> quiz.setup(examType, count, category)
                                 SetupMode.REVIEW -> quiz.setupDueReview()
                                 SetupMode.MISTAKES -> quiz.setupMistakes()
-                                SetupMode.EXAM -> quiz.setupExam(exam, withNavigation)
+                                SetupMode.EXAM -> if (!quiz.setupExam(exam, withNavigation)) app.billing.paywallShown.value = true
                             }
                         },
                         enabled = startCount > 0,
                     )
+                    UnlockBanner()
                 }
             }
         }

@@ -89,6 +89,11 @@ import ai.biniam.sbfexamprep.ui.components.isGerman
 import ai.biniam.sbfexamprep.ui.components.percent
 import ai.biniam.sbfexamprep.ui.theme.Brand
 import ai.biniam.sbfexamprep.ui.components.licenceSummary
+import androidx.activity.compose.LocalActivity
+import androidx.compose.material.icons.filled.LockOpen
+import androidx.compose.material.icons.filled.ConfirmationNumber
+import androidx.compose.material.icons.filled.Refresh
+import ai.biniam.sbfexamprep.ui.components.licenceName
 import ai.biniam.sbfexamprep.ui.theme.Sbf
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -117,6 +122,8 @@ fun SettingsScreen() {
     val enabledFlags by app.featureFlags.enabled.collectAsStateWithLifecycle()
     val flagsUnlocked by app.featureFlags.unlocked.collectAsStateWithLifecycle()
     var versionTaps by rememberSaveable { mutableIntStateOf(0) }
+    val access by app.billing.access.collectAsStateWithLifecycle()
+    val activity = LocalActivity.current
     if (editLicence) LicenceDialog(onDismiss = { editLicence = false })
 
     fun setReminder(enabled: Boolean, minutes: Int = settings.reminderMinutes) {
@@ -149,6 +156,31 @@ fun SettingsScreen() {
         Column(Modifier.padding(padding).fillMaxSize().verticalScroll(rememberScrollState())) {
             ReadableWidth {
                 Column(Modifier.padding(start = 16.dp, end = 16.dp, bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
+                    Section(stringResource(R.string.full_version), stringResource(R.string.full_version_footer)) {
+                        LinkRow(Icons.Filled.Sailing, licenceName(ExamType.BINNEN),
+                                stringResource(if (access.hasBinnen) R.string.unlocked else R.string.free_sample)) {
+                            if (!access.hasBinnen) app.billing.paywallShown.value = true
+                        }
+                        Divider()
+                        LinkRow(Icons.Filled.Sailing, licenceName(ExamType.SEE),
+                                stringResource(if (access.hasSee) R.string.unlocked else R.string.free_sample)) {
+                            if (!access.hasSee) app.billing.paywallShown.value = true
+                        }
+                        Divider()
+                        if (!access.hasEverything) {
+                            LinkRow(Icons.Filled.LockOpen, stringResource(R.string.unlock_full_version), null) {
+                                app.billing.paywallShown.value = true
+                            }
+                            Divider()
+                        }
+                        LinkRow(Icons.Filled.ConfirmationNumber, stringResource(R.string.redeem_school_code), null, external = true) {
+                            activity?.let(app.billing::openRedeemCode)
+                        }
+                        Divider()
+                        LinkRow(Icons.Filled.Refresh, stringResource(R.string.restore_purchases), null) {
+                            app.billing.refresh()
+                        }
+                    }
                     Section(stringResource(R.string.learning), stringResource(R.string.learning_footer)) {
                         LinkRow(Icons.Filled.Sailing, stringResource(R.string.my_licence), licenceSummary(settings.licenceGoal)) {
                             editLicence = true

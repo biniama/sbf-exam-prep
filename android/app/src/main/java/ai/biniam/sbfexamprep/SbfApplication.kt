@@ -2,6 +2,7 @@ package ai.biniam.sbfexamprep
 
 import android.app.Application
 import ai.biniam.sbfexamprep.audio.SoundSignalPlayer
+import ai.biniam.sbfexamprep.billing.BillingManager
 import ai.biniam.sbfexamprep.data.FeatureFlags
 import ai.biniam.sbfexamprep.data.NavigationCatalog
 import ai.biniam.sbfexamprep.data.ProgressRepository
@@ -15,5 +16,6 @@ class SbfApplication : Application() {
     val progressRepository: ProgressRepository by lazy { ProgressRepository(this) }
     val soundPlayer: SoundSignalPlayer by lazy { SoundSignalPlayer(MainScope()) }
     val featureFlags: FeatureFlags by lazy { FeatureFlags(this) }
+    val billing: BillingManager by lazy { BillingManager(this) }
     val navigation: NavigationCatalog by lazy { assets.open(NavigationCatalog.ASSET_NAME).use { NavigationCatalog.load(it) } }
 }

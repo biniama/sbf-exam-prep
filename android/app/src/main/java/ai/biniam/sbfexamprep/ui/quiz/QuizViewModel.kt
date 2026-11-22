@@ -15,6 +15,7 @@ import ai.biniam.sbfexamprep.data.NavigationExamPart
 import ai.biniam.sbfexamprep.data.Question
 import ai.biniam.sbfexamprep.data.QuestionOption
 import ai.biniam.sbfexamprep.data.QuizRecord
+import ai.biniam.sbfexamprep.data.licenceType
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -36,6 +37,8 @@ sealed interface QuizMode {
 class QuizViewModel(private val app: SbfApplication) : ViewModel() {
     private val store get() = app.questions
     private val progress get() = app.progressRepository
+    private val billing get() = app.billing
+    private fun unlocked(q: Question) = store.isUnlocked(q, billing.access.value)
 
     /** True while the quiz screen is shown. */
     var active by mutableStateOf(false)
@@ -87,26 +90,34 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
 
     /** Practice quiz from the catalogue. */
     fun setup(type: ExamType, count: Int, category: String? = null) {
-        start(store.questions(type, category).shuffled().take(count), type, QuizMode.Practice)
+        start(store.availableQuestions(type, category, billing.access.value).shuffled().take(count), type, QuizMode.Practice)
     }
 
     /** Quiz over the questions answered wrongly so far, most frequent first. */
     fun setupMistakes(limit: Int = 30) {
         val ids = progress.progress.value.wrongAnswers.entries.sortedByDescending { it.value }.map { it.key }
-        start(ids.mapNotNull(store::question).take(limit).shuffled(), ExamType.ALL, QuizMode.Mistakes)
+        start(ids.mapNotNull(store::question).filter(::unlocked).take(limit).shuffled(), ExamType.ALL, QuizMode.Mistakes)
     }
 
     /** Spaced-repetition session with the questions that are due today. */
     fun setupDueReview(limit: Int = 30) {
         val ids = progress.progress.value.dueQuestionIds(System.currentTimeMillis())
-        start(ids.mapNotNull(store::question).take(limit), ExamType.ALL, QuizMode.Review)
+        start(ids.mapNotNull(store::question).filter(::unlocked).take(limit), ExamType.ALL, QuizMode.Review)
     }
 
     /** Quiz over an explicit list (e.g. saved questions). */
-    fun setup(list: List<Question>, mode: QuizMode = QuizMode.Saved) = start(list.shuffled(), ExamType.ALL, mode)
+    fun setup(list: List<Question>, mode: QuizMode = QuizMode.Saved) = start(list.filter(::unlocked).shuffled(), ExamType.ALL, mode)
 
-    /** Exam simulation following the official composition, e.g. 7 basic + 23 inland questions. */
-    fun setupExam(format: ExamFormat, includeNavigation: Boolean = false) {
+    /**
+     * Exam simulation following the official composition, e.g. 7 basic + 23 inland questions.
+     * Without the matching purchase, the one free trial run for that licence is used. Returns
+     * false (and sets nothing up) when neither is available: show the paywall then.
+     */
+    fun setupExam(format: ExamFormat, includeNavigation: Boolean = false): Boolean {
+        if (!billing.access.value.hasAccess(format.licenceType)) {
+            if (!billing.hasFreeExamTrial(format)) return false
+            billing.consumeFreeExamTrial(format)
+        }
         val rules = ExamRules(format, includeNavigation)
         val list = rules.parts.flatMap { store.specificQuestions(it.type).shuffled().take(it.count) }
         start(list, rules.parts.last().type, QuizMode.Exam(rules))
@@ -114,6 +125,7 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
             val catalog = app.navigation
             navigationPart = NavigationExamPart(catalog.tasks.random(), catalog.tolerances)
         }
+        return true
     }
 
     /** UI checks (debug launch option "navigation-exam"): jump straight to the navigation task. */
@@ -126,7 +138,11 @@ class QuizViewModel(private val app: SbfApplication) : ViewModel() {
     /** Same questions again in a new order (a new exam for simulations). */
     fun retry() {
         val rules = examRules
-        if (rules != null) setupExam(rules.format, rules.includesNavigation) else start(questions.shuffled(), examType, mode)
+        if (rules != null) {
+            if (!setupExam(rules.format, rules.includesNavigation)) billing.paywallShown.value = true
+        } else {
+            start(questions.shuffled(), examType, mode)
+        }
     }
 
     private fun start(list: List<Question>, type: ExamType, mode: QuizMode) {

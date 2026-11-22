@@ -11,6 +11,8 @@ class QuestionRepository(json: String) {
     val sections: List<ExamSection>
     val allQuestions: List<Question>
     private val byId: Map<String, Question>
+    /** Inland, sailing and sea questions that are free without a purchase. */
+    val freeSampleIds: Set<String>
 
     init {
         val data = parser.decodeFromString(ExamData.serializer(), json)
@@ -18,7 +20,14 @@ class QuestionRepository(json: String) {
         sections = data.examSections
         allQuestions = data.examSections.flatMap { it.questions }
         byId = allQuestions.associateBy { it.uniqueId }
+        freeSampleIds = FreeTier.sampleIds(allQuestions)
     }
+
+    fun isUnlocked(question: Question, access: Access): Boolean = FreeTier.isUnlocked(question, freeSampleIds, access)
+
+    /** Questions the user can practise right now. */
+    fun availableQuestions(type: ExamType, category: String?, access: Access): List<Question> =
+        questions(type, category).filter { isUnlocked(it, access) }
 
     /**
      * Questions of an exam. Basic questions (Basisfragen) belong to both licences;

@@ -12,10 +12,17 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) DebugLaunch.read(intent, application as SbfApplication)
+        (application as SbfApplication).billing.start()
         setContent {
             SbfTheme {
                 SbfApp(application as SbfApplication)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Picks up promo codes (school codes) redeemed in the Play Store meanwhile.
+        (application as SbfApplication).billing.refresh()
     }
 }

@@ -226,7 +226,7 @@ struct SettingsView: View {
                 FeatureFlagsView()
             } label: {
                 LabeledContent {
-                    Text("\(flags.enabledCount) of \(FeatureFlag.allCases.count) on")
+                    Text("\(flags.enabledCount) of \(FeatureFlag.testable.count) on")
                 } label: {
                     Label("Feature flags", systemImage: "flag.2.crossed")
                 }
@@ -285,7 +285,7 @@ struct FeatureFlagsView: View {
     var body: some View {
         Form {
             Section {
-                ForEach(FeatureFlag.allCases) { flag in
+                ForEach(FeatureFlag.testable) { flag in
                     Toggle(isOn: Binding(get: { flags.isOn(flag) }, set: { flags.set(flag, $0) })) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(flag.title)
@@ -298,7 +298,7 @@ struct FeatureFlagsView: View {
             }
             Section {
                 Button("Turn all on") { flags.setAll(true) }
-                    .disabled(flags.enabledCount == FeatureFlag.allCases.count)
+                    .disabled(flags.enabledCount == FeatureFlag.testable.count)
                 Button("Turn all off", role: .destructive) { flags.setAll(false) }
                     .disabled(flags.enabledCount == 0)
             }

@@ -51,6 +51,13 @@ class FreeTierTest {
         assertTrue(both.offeredProducts.isEmpty())
         assertTrue(store.allQuestions.all { store.isUnlocked(it, both) })
 
+        // Navigation tasks: task 1 is free, the rest belong to SBF Sea.
+        assertTrue(Access().canOpenNavigationTask(1))
+        assertFalse(Access().canOpenNavigationTask(2))
+        assertFalse(binnen.canOpenNavigationTask(15))
+        assertTrue(see.canOpenNavigationTask(15))
+        assertTrue(both.canOpenNavigationTask(15))
+
         assertEquals(3, Access().offeredProducts.size)
         assertTrue(Access().hasAccess(ExamType.SHARED))
     }

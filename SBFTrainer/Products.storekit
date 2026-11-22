@@ -28,12 +28,12 @@
       "internalID": "6740000001",
       "localizations": [
         {
-          "description": "All sea questions, unlimited exam simulations",
+          "description": "All sea questions and navigation tasks, unlimited exam simulations",
           "displayName": "SBF Sea",
           "locale": "en_US"
         },
         {
-          "description": "Alle Seefragen, unbegrenzte Prüfungssimulationen",
+          "description": "Alle Seefragen und Navigationsaufgaben, unbegrenzte Prüfungssimulationen",
           "displayName": "SBF See",
           "locale": "de_DE"
         }

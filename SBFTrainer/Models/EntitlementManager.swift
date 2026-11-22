@@ -21,7 +21,7 @@ enum ProProduct: String, CaseIterable, Identifiable {
     var subtitle: String {
         switch self {
         case .binnen: return String(localized: "All inland and sailing questions, unlimited exam simulations")
-        case .see:    return String(localized: "All sea questions, unlimited exam simulations")
+        case .see:    return String(localized: "All sea questions and navigation tasks, unlimited exam simulations")
         case .both:   return String(localized: "Everything for both licences. Best value")
         }
     }
@@ -81,6 +81,11 @@ final class EntitlementManager: ObservableObject {
         case .all:             return hasEverything
         }
     }
+
+    /// Navigation tasks 1…N are a free sample; the rest belong to SBF Sea.
+    static let freeNavigationTasks = 1
+
+    func canOpenNavigationTask(_ number: Int) -> Bool { hasSee || number <= Self.freeNavigationTasks }
 
     /// Products worth offering right now: never the bundle once one exam is owned,
     /// so nobody pays twice for the same questions.

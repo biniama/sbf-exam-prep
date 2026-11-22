@@ -422,7 +422,7 @@
     <string name="product_see">SBF See</string>
     <string name="product_both">SBF Binnen + See</string>
     <string name="product_binnen_summary">Alle Binnen- und Segelfragen, unbegrenzte Prüfungssimulationen</string>
-    <string name="product_see_summary">Alle Seefragen, unbegrenzte Prüfungssimulationen</string>
+    <string name="product_see_summary">Alle Seefragen und Navigationsaufgaben, unbegrenzte Prüfungssimulationen</string>
     <string name="product_both_summary">Alles für beide Scheine. Am günstigsten</string>
     <string name="unlock_all_questions">Alle Fragen freischalten</string>
     <string name="unlock_all_questions_summary">Kostenlos: alle Basisfragen und eine Auswahl aus jedem Thema</string>

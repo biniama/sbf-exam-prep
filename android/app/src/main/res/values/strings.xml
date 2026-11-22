@@ -423,7 +423,7 @@
     <string name="product_see">SBF Sea</string>
     <string name="product_both">SBF Inland + Sea</string>
     <string name="product_binnen_summary">All inland and sailing questions, unlimited exam simulations</string>
-    <string name="product_see_summary">All sea questions, unlimited exam simulations</string>
+    <string name="product_see_summary">All sea questions and navigation tasks, unlimited exam simulations</string>
     <string name="product_both_summary">Everything for both licences. Best value</string>
     <string name="unlock_all_questions">Unlock all questions</string>
     <string name="unlock_all_questions_summary">Free: all basic questions and a sample of every topic</string>

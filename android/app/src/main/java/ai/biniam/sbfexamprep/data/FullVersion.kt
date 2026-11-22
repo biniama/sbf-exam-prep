@@ -28,6 +28,9 @@ data class Access(val owned: Set<ProProduct> = emptySet()) {
         ExamType.ALL -> hasEverything
     }
 
+    /** Navigation tasks belong to SBF Sea; the first ones are a free sample. */
+    fun canOpenNavigationTask(number: Int): Boolean = hasSee || number <= FreeTier.FREE_NAVIGATION_TASKS
+
     /** Never offer the bundle once one licence is owned, so nobody pays twice. */
     val offeredProducts: List<ProProduct>
         get() = when {
@@ -45,6 +48,9 @@ val ExamFormat.licenceType: ExamType get() = if (this == ExamFormat.SEE) ExamTyp
 object FreeTier {
     /** Every Nth question of each topic is free. */
     const val SAMPLE_INTERVAL = 7
+
+    /** Navigation tasks 1…N are free. */
+    const val FREE_NAVIGATION_TASKS = 1
 
     /**
      * Within each exam part and topic, sorted by question number, the 1st, 8th, 15th … question

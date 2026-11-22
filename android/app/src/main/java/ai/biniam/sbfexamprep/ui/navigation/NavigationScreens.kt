@@ -23,6 +23,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.Explore
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.OndemandVideo
 import androidx.compose.material.icons.filled.SmartDisplay
@@ -152,6 +153,7 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
     val app = LocalApp.current
     val catalog = app.navigation
     val flags by app.featureFlags.enabled.collectAsStateWithLifecycle()
+    val access by app.billing.access.collectAsStateWithLifecycle()
     NavScaffold(stringResource(R.string.nav_tasks_title), onBack) {
         Row(Modifier.fillMaxWidth().cardStyle().padding(16.dp), verticalAlignment = Alignment.Top) {
             Icon(Icons.Filled.Map, null, tint = Brand.gold)
@@ -192,7 +194,10 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
         }
         SectionHeader(stringResource(R.string.nav_tasks_section), Icons.Filled.Explore)
         catalog.tasks.forEach { task ->
-            Row(Modifier.fillMaxWidth().cardStyle().clickable { onTask(task.number) }.padding(14.dp),
+            val locked = !access.canOpenNavigationTask(task.number)
+            Row(Modifier.fillMaxWidth().cardStyle()
+                    .clickable { if (locked) app.billing.paywallShown.value = true else onTask(task.number) }
+                    .padding(14.dp),
                 verticalAlignment = Alignment.Top) {
                 Box(Modifier.size(36.dp).clip(RoundedCornerShape(10.dp)).background(Brand.navyLight),
                     contentAlignment = Alignment.Center) {
@@ -204,7 +209,8 @@ private fun NavigationTaskList(onBack: () -> Unit, onTask: (Int) -> Unit, onGlos
                          fontWeight = FontWeight.SemiBold, color = Sbf.colors.ink)
                     Text(task.introDe, style = MaterialTheme.typography.bodySmall, color = Sbf.colors.muted, maxLines = 3)
                 }
-                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
+                if (locked) Icon(Icons.Filled.Lock, stringResource(R.string.locked), tint = Brand.gold)
+                else Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Sbf.colors.muted)
             }
         }
         Text(stringResource(R.string.nav_source), style = MaterialTheme.typography.labelSmall, color = Sbf.colors.muted)

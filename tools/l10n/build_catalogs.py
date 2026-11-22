@@ -480,7 +480,7 @@ DE = {
     # Full version and school codes
     "SBF Inland + Sea": "SBF Binnen + See",
     "All inland and sailing questions, unlimited exam simulations": "Alle Binnen- und Segelfragen, unbegrenzte Prüfungssimulationen",
-    "All sea questions, unlimited exam simulations": "Alle Seefragen, unbegrenzte Prüfungssimulationen",
+    "All sea questions and navigation tasks, unlimited exam simulations": "Alle Seefragen und Navigationsaufgaben, unbegrenzte Prüfungssimulationen",
     "Everything for both licences. Best value": "Alles für beide Scheine. Am günstigsten",
     "Could not load prices from the App Store. Please check your connection.": "Die Preise konnten nicht aus dem App Store geladen werden. Bitte prüfe deine Verbindung.",
     "Your purchase is waiting for approval.": "Dein Kauf wartet auf Freigabe.",

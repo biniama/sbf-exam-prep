@@ -1,1 +1,5 @@
-Neu: alle 47 Segelfragen des SBF Binnen – mit Erklärungen und Prüfungssimulation für Segel, Motor + Segel und die Segel-Ergänzung. Wähle unter „Mein Führerschein“, welche Prüfung du machst.
+Neu in 1.3:
+• Kostenlos laden: alle Basisfragen, eine Auswahl aus jedem Thema und eine Prüfungssimulation pro Schein ausprobieren
+• SBF Binnen, SBF See oder beide mit einem einmaligen Kauf freischalten, kein Abo
+• Bootsschulen können Codes ausgeben: einlösen unter Einstellungen
+• SBF See: alle 15 Navigationsaufgaben mit Lösungsweg, Lösungsskizzen und Training, dazu der Navigationsteil in der Prüfungssimulation

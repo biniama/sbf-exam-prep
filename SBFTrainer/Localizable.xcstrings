@@ -542,12 +542,12 @@
         }
       }
     },
-    "All sea questions, unlimited exam simulations": {
+    "All sea questions and navigation tasks, unlimited exam simulations": {
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Alle Seefragen, unbegrenzte Prüfungssimulationen"
+            "value": "Alle Seefragen und Navigationsaufgaben, unbegrenzte Prüfungssimulationen"
           }
         }
       }

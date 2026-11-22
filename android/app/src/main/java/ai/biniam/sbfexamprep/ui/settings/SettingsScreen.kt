@@ -290,7 +290,7 @@ fun SettingsScreen() {
 
                     if (flagsUnlocked) {
                         Section(stringResource(R.string.experimental_features), stringResource(R.string.experimental_footer)) {
-                            FeatureFlag.entries.forEachIndexed { i, flag ->
+                            FeatureFlag.testable.forEachIndexed { i, flag ->
                                 if (i > 0) Divider()
                                 FlagRow(flag, flag in enabledFlags) { app.featureFlags.set(flag, it) }
                             }

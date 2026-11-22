@@ -178,15 +178,21 @@ final class WidgetSnapshotTests: XCTestCase {
 
 @MainActor
 final class FeatureFlagTests: XCTestCase {
-    func testFlagsAreOffByDefaultAndPersist() {
+    func testReleasedFlagsAreOnAndOthersOffByDefault() {
         let defaults = UserDefaults(suiteName: "FeatureFlagTests")!
         defaults.removePersistentDomain(forName: "FeatureFlagTests")
         let flags = FeatureFlags(defaults: defaults)
-        XCTAssertTrue(flags.enabled.isEmpty)
-        flags.set(.navigationTasks, true)
-        XCTAssertTrue(FeatureFlags(defaults: defaults).isOn(.navigationTasks))
+        XCTAssertEqual(flags.enabled, FeatureFlag.released)
+        XCTAssertEqual(FeatureFlag.testable, [.navigationVideos])
+        XCTAssertEqual(flags.enabledCount, 0)
+        // Released features cannot be switched off.
         flags.set(.navigationTasks, false)
-        XCTAssertFalse(FeatureFlags(defaults: defaults).isOn(.navigationTasks))
+        XCTAssertTrue(flags.isOn(.navigationTasks))
+        // Testable flags persist.
+        flags.set(.navigationVideos, true)
+        XCTAssertTrue(FeatureFlags(defaults: defaults).isOn(.navigationVideos))
+        flags.set(.navigationVideos, false)
+        XCTAssertFalse(FeatureFlags(defaults: defaults).isOn(.navigationVideos))
     }
 }
 
@@ -314,6 +320,13 @@ final class FreeTierTests: XCTestCase {
 
         let none = EntitlementManager(testOwned: [], defaults: defaults)
         XCTAssertEqual(none.offeredProducts, [.both, .binnen, .see])
+
+        // Navigation tasks: task 1 is free, the rest belong to SBF Sea.
+        XCTAssertTrue(none.canOpenNavigationTask(1))
+        XCTAssertFalse(none.canOpenNavigationTask(2))
+        XCTAssertFalse(inland.canOpenNavigationTask(15))
+        XCTAssertTrue(EntitlementManager(testOwned: [.see], defaults: defaults).canOpenNavigationTask(15))
+        XCTAssertTrue(both.canOpenNavigationTask(15))
     }
 
     func testOneFreeExamSimulationPerLicence() {

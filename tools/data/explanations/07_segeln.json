@@ -1,0 +1,190 @@
+{
+  "segeln_254": {
+    "de": "Ein Kimmkieler hat statt eines Mittelkiels zwei Seitenkiele, die schräg links und rechts unter dem Rumpf sitzen.",
+    "en": "A bilge keeler has two side keels, angled out to port and starboard under the hull, instead of one central keel."
+  },
+  "segeln_255": {
+    "de": "Auf seinen beiden Seitenkielen steht ein Kimmkieler bei Niedrigwasser aufrecht – ideal für Tidengewässer und trockenfallende Liegeplätze.",
+    "en": "Standing on its two side keels, a bilge keeler stays upright when the water drops away – ideal for tidal waters and moorings that dry out."
+  },
+  "segeln_256": {
+    "de": "Die Kielschwertyacht kombiniert einen flachen Ballastkiel (wenig Tiefgang) mit einem aufholbaren Schwert, das am Wind die Abdrift verringert.",
+    "en": "A keel-centreboard yacht combines a shallow ballast keel (little draught) with a retractable centreboard that reduces leeway when sailing upwind."
+  },
+  "segeln_257": {
+    "de": "In Fahrt erzeugt die Strömung am Lenzventil einen Sog, der das Wasser aus dem Boot zieht. Im Stand funktionieren Bodenlenzventile nicht.",
+    "en": "When the boat moves, the water flowing past the self-bailer creates suction that draws the water out. At rest, self-bailers do not work."
+  },
+  "segeln_258": {
+    "de": "Formstabilität entsteht durch einen breiten, flachen Rumpf: Bei Krängung wandert der Auftrieb nach Lee und richtet das Boot auf.",
+    "en": "Form stability comes from a wide, flat hull: when the boat heels, the buoyancy moves to leeward and pushes the boat upright."
+  },
+  "segeln_259": {
+    "de": "Gewichtsstabilität entsteht durch tief liegenden Ballast, meist im Kiel. Je stärker das Boot krängt, desto weiter wirkt das Gewicht als Hebel nach Luv.",
+    "en": "Weight stability comes from low-lying ballast, usually in the keel. The more the boat heels, the further the weight acts as a lever to windward."
+  },
+  "segeln_260": {
+    "de": "Kielyachten richten sich durch ihren schweren Ballastkiel auf – sie sind vorwiegend gewichtsstabil.",
+    "en": "Keel yachts are pushed upright by their heavy ballast keel – they are mainly weight-stable."
+  },
+  "segeln_261": {
+    "de": "Jollen haben keinen Ballastkiel. Ihre Stabilität kommt aus der breiten Rumpfform und dem Gewicht der Crew – sie sind vorwiegend formstabil.",
+    "en": "Dinghies have no ballast keel. Their stability comes from the wide hull shape and the crew's weight – they are mainly form-stable."
+  },
+  "segeln_262": {
+    "de": "Beim Ausreiten oder im Trapez verlagert die Crew ihr Gewicht weit nach Luv und vergrößert so das aufrichtende Moment.",
+    "en": "When hiking out or on the trapeze, the crew moves its weight far to windward and so increases the righting moment."
+  },
+  "segeln_263": {
+    "de": "Bei einer Jolle steigt das aufrichtende Moment zunächst bis zu einem Maximum und nimmt dann ab. Liegen Auftriebs- und Gewichtsschwerpunkt übereinander, ist kein aufrichtendes Moment mehr da – die Jolle kentert.",
+    "en": "A dinghy's righting moment first rises to a maximum and then falls. Once the centres of buoyancy and gravity are vertically aligned, there is no righting moment left – the dinghy capsizes."
+  },
+  "segeln_264": {
+    "de": "Bei der Kielyacht wächst das aufrichtende Moment mit der Krängung. Der kritische Winkel, ab dem sie nicht mehr selbst aufrichtet, liegt erst jenseits von 90°.",
+    "en": "A keel yacht's righting moment grows as it heels. The critical angle beyond which it no longer rights itself lies only beyond 90°."
+  },
+  "segeln_265": {
+    "de": "Ohne Ruder ist die Jolle kaum steuerbar: Notruder oder Paddel nutzen, das Fahrwasser verlassen und anderen zeigen, dass man manövrierunfähig ist.",
+    "en": "Without a rudder the dinghy can hardly be steered: use an emergency rudder or paddle, leave the fairway and show others that you are unable to manoeuvre."
+  },
+  "segeln_266": {
+    "de": "Mit dem Pinnenausleger kann der Steuermann auch beim Ausreiten auf der hohen Kante steuern.",
+    "en": "A tiller extension lets the helmsman steer even while hiking out on the windward side."
+  },
+  "segeln_267": {
+    "de": "Ordentlich aufgeschossenes Tauwerk ist sofort einsatzbereit und vertörnt nicht, wenn es schnell gebraucht wird.",
+    "en": "Neatly coiled rope is ready to use straight away and does not tangle when it is needed in a hurry."
+  },
+  "segeln_268": {
+    "de": "Ein Fall muss im Notfall sofort und ohne Kinken laufen, damit das Segel schnell geborgen werden kann.",
+    "en": "In an emergency a halyard must run free immediately and without kinks so the sail can be lowered quickly."
+  },
+  "segeln_269": {
+    "de": "Die Ecken heißen Kopf (oben), Hals (vorne unten) und Schothorn (hinten unten, dort greift die Schot an).",
+    "en": "The corners are the head (top), the tack (lower front) and the clew (lower back, where the sheet is attached)."
+  },
+  "segeln_270": {
+    "de": "Die Kanten heißen Vorliek (vorne), Unterliek (unten) und Achterliek (hinten).",
+    "en": "The edges are the luff (front), the foot (bottom) and the leech (back)."
+  },
+  "segeln_271": {
+    "de": "Segellatten stecken in Taschen am Achterliek. Sie stützen das Profil und halten das Achterliek in Form.",
+    "en": "Sail battens sit in pockets along the leech. They support the sail's profile and keep the leech in shape."
+  },
+  "segeln_272": {
+    "de": "Beim Killen schlägt das Tuch ständig hin und her. Das zermürbt das Material und lässt Nähte aufgehen.",
+    "en": "When a sail flogs, the cloth flaps back and forth constantly. This wears out the material and opens the seams."
+  },
+  "segeln_273": {
+    "de": "Ein kleiner Riss reißt unter Winddruck schnell weiter. Rechtzeitig repariert, bleibt der Schaden klein.",
+    "en": "Under wind pressure a small tear quickly spreads. Repaired in time, the damage stays small."
+  },
+  "segeln_274": {
+    "de": "Alles an Bord zeigt in Fahrt den scheinbaren Wind. Den wahren Wind erkennt man an Flaggen, Rauch oder Bäumen an Land.",
+    "en": "Everything on board shows the apparent wind while under way. The true wind can be seen on flags, smoke or trees on land."
+  },
+  "segeln_275": {
+    "de": "Stander und Verklicker bewegen sich mit dem Boot und zeigen deshalb den scheinbaren Wind – die Summe aus wahrem Wind und Fahrtwind.",
+    "en": "Burgees and wind indicators move with the boat, so they show the apparent wind – the sum of the true wind and the wind from the boat's motion."
+  },
+  "segeln_276": {
+    "de": "Auf Vorwindkurs kommen wahrer Wind und Fahrtwind genau von vorne bzw. hinten. Der scheinbare Wind hat dieselbe Richtung, ist aber schwächer.",
+    "en": "On a run, the true wind and the wind from the boat's motion are directly opposite each other. The apparent wind has the same direction but is weaker."
+  },
+  "segeln_277": {
+    "de": "Vor dem Wind segelt das Boot mit dem Wind mit. Der Fahrtwind kommt von vorne und wird vom wahren Wind abgezogen.",
+    "en": "Downwind the boat moves with the wind. The wind from the boat's motion comes from ahead and is subtracted from the true wind."
+  },
+  "segeln_278": {
+    "de": "Hoch am Wind kommen wahrer Wind und Fahrtwind beide von vorne. Sie addieren sich zu einem stärkeren scheinbaren Wind.",
+    "en": "Close-hauled, the true wind and the wind from the boat's motion both come from ahead. They add up to a stronger apparent wind."
+  },
+  "segeln_279": {
+    "de": "Beide Boote haben denselben wahren Wind. Am Wind spürt man aber deutlich mehr scheinbaren Wind als auf raumen Kursen – daher refft nur der Amwindsegler.",
+    "en": "Both boats have the same true wind. Close-hauled, however, the apparent wind is much stronger than on downwind courses – so only the boat sailing upwind reefs."
+  },
+  "segeln_280": {
+    "de": "In der Bö nimmt der wahre Wind zu, der Fahrtwind bleibt zunächst gleich. Im Windparallelogramm überwiegt dann der wahre Wind – der scheinbare Wind dreht nach achtern (er raumt).",
+    "en": "In a gust the true wind increases while the wind from the boat's motion stays the same at first. The true wind then dominates, so the apparent wind shifts aft (it frees)."
+  },
+  "segeln_281": {
+    "de": "Raumt der Wind in der Bö, kann man anluven und dieselbe Segelstellung beibehalten – so gewinnt man auf der Kreuz Höhe.",
+    "en": "When the wind frees in a gust, you can luff up and keep the same sail setting – gaining ground to windward when beating."
+  },
+  "segeln_282": {
+    "de": "Vor dem Wind gibt es kaum Abdrift. Aufgeholtes Schwert spart Widerstand. Außerdem kann die Jolle bei einer Patenthalse eher seitlich ausweichen, statt über das Schwert zu kentern.",
+    "en": "Downwind there is hardly any leeway. A raised centreboard saves resistance, and in an accidental gybe the dinghy can slide sideways rather than tripping over its board and capsizing."
+  },
+  "segeln_283": {
+    "de": "Weniger Schwertfläche bedeutet weniger Lateralwiderstand: Das Boot treibt mehr seitlich ab, krängt aber weniger.",
+    "en": "Less centreboard area means less lateral resistance: the boat slips more sideways but heels less."
+  },
+  "segeln_284": {
+    "de": "Eine aufrecht gesegelte Jolle ist am schnellsten. Krängt sie, nehmen Abdrift und Luvgierigkeit zu.",
+    "en": "A dinghy sailed upright is fastest. When it heels, leeway and weather helm increase."
+  },
+  "segeln_285": {
+    "de": "Ist das Großsegel zu dicht, reißt die Strömung ab. Das Segel drückt dann mehr seitlich als nach vorne – mehr Krängung, weniger Fahrt.",
+    "en": "If the mainsail is sheeted in too tight, the airflow breaks away. The sail then pushes more sideways than forwards – more heel, less speed."
+  },
+  "segeln_286": {
+    "de": "Liegt der Holepunkt zu weit vorne, zieht die Schot vor allem nach unten: Das Achterliek wird stark gespannt, das Unterliek ist zu lose und killt.",
+    "en": "If the sheet lead is too far forward, the sheet pulls mainly downwards: the leech is pulled very tight while the foot is too loose and flutters."
+  },
+  "segeln_287": {
+    "de": "Liegt der Holepunkt zu weit achtern, zieht die Schot vor allem nach hinten: Das Unterliek wird stark gespannt, das Achterliek ist zu lose und killt.",
+    "en": "If the sheet lead is too far aft, the sheet pulls mainly backwards: the foot is pulled very tight while the leech is too loose and flutters."
+  },
+  "segeln_288": {
+    "de": "Ein bauchiges Segel erzeugt bei wenig Wind mehr Vortrieb.",
+    "en": "A full sail produces more drive in light wind."
+  },
+  "segeln_289": {
+    "de": "Ein flaches Segel erzeugt weniger Kraft und damit weniger Krängung – das Boot bleibt bei viel Wind kontrollierbar.",
+    "en": "A flat sail produces less force and therefore less heel – the boat stays under control in strong wind."
+  },
+  "segeln_290": {
+    "de": "Der Unterliekstrecker spannt das Unterliek des Großsegels am Baum. Mehr Zug macht den unteren Teil flacher, weniger Zug bauchiger.",
+    "en": "The outhaul tensions the foot of the mainsail along the boom. More tension makes the lower part flatter, less tension makes it fuller."
+  },
+  "segeln_291": {
+    "de": "Die Pinne muss nach Luv gezogen werden – das Boot ist zu luvgierig. Abhilfe: Großsegel flacher trimmen (weniger Druck achtern) und Gewicht nach achtern verlagern.",
+    "en": "The tiller has to be pulled to windward – the boat has too much weather helm. Fix: trim the mainsail flatter (less pressure aft) and move weight aft."
+  },
+  "segeln_292": {
+    "de": "Die Pinne muss nach Lee gedrückt werden – das Boot ist leegierig. Abhilfe: Großsegel bauchiger trimmen (mehr Druck achtern) und Gewicht nach vorne verlagern.",
+    "en": "The tiller has to be pushed to leeward – the boat has lee helm. Fix: trim the mainsail fuller (more pressure aft) and move weight forward."
+  },
+  "segeln_293": {
+    "de": "Lässt man die Pinne los, dreht ein leicht luvgieriges Boot von selbst in den Wind und bleibt stehen. Das ist ein wichtiger Sicherheitsvorteil, z. B. bei Mensch über Bord.",
+    "en": "If the tiller is let go, a boat with slight weather helm turns into the wind by itself and stops. This is an important safety advantage, e.g. in a man-overboard situation."
+  },
+  "segeln_294": {
+    "de": "Mit der Krängung wandert der Segeldruckpunkt nach Lee und dreht das Boot in den Wind – die Luvgierigkeit nimmt zu.",
+    "en": "As the boat heels, the sail's centre of effort moves out to leeward and turns the boat into the wind – weather helm increases."
+  },
+  "segeln_295": {
+    "de": "Bei 1 geht der Bug durch den Wind (Wende), bei 2 das Heck (Halse). Bei 3 dreht das Boot mit dem Bug durch den Wind und läuft dann in eine Schleife weiter – eine Q-Wende statt einer Halse.",
+    "en": "At 1 the bow passes through the wind (tack), at 2 the stern (gybe). At 3 the boat turns its bow through the wind and carries on round in a loop – a chicken gybe instead of a gybe."
+  },
+  "segeln_296": {
+    "de": "Mit aufgeholtem Schwert und Ruder kann die Jolle um die Boje schwojen, ohne sich mit Leine oder Boje zu verhaken. Ruder und Schwert werden zudem nicht beschädigt.",
+    "en": "With the centreboard and rudder raised, the dinghy can swing around the buoy without catching the line or the buoy, and neither blade gets damaged."
+  },
+  "segeln_297": {
+    "de": "Bei einer Patenthalse schlägt der Baum unkontrolliert über. Er kann Personen am Kopf treffen, das Rigg beschädigen und das Boot kentern lassen.",
+    "en": "In an accidental gybe the boom swings across without control. It can hit people on the head, damage the rig and capsize the boat."
+  },
+  "segeln_298": {
+    "de": "Nach der Wende wird das gebrochene Want zum Leewant und trägt keine Last mehr. Das intakte Want auf der anderen Seite hält dann den Mast.",
+    "en": "After tacking, the broken shroud becomes the leeward shroud and no longer carries load. The intact shroud on the other side then holds the mast."
+  },
+  "segeln_299": {
+    "de": "Beim Abfallen auf Vorwindkurs drückt der Wind den Mast nach vorne gegen das Achterstag. Das entlastet den Mast, der sonst ohne Vorstag nach achtern fallen könnte.",
+    "en": "When bearing away onto a run, the wind pushes the mast forwards against the backstay. This relieves the mast, which could otherwise fall aft without its forestay."
+  },
+  "segeln_300": {
+    "de": "Ein ungenutztes Fall (z. B. das Fockfall) oder die Fock selbst kann vom Masttopp zum Bug gespannt werden und den Mast provisorisch nach vorne abstützen.",
+    "en": "An unused halyard (e.g. the jib halyard) or the jib itself can be tensioned from the masthead to the bow to support the mast forwards temporarily."
+  }
+}

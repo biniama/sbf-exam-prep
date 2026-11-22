@@ -1,0 +1,213 @@
+{
+  "1": {
+    "intro": "On 05.05.2012 a recreational craft is in the German Bight on passage from Borkum to Cuxhaven. Speed over ground is 8 kn.\n\nAt 10:00 the lighted buoy \"TG19/Weser 2\" is passed close by. From this buoy the course is set to the Alte Weser landfall buoy \"ST\".",
+    "notes": "*) Based on the result of question 1 as corrected in the Verkehrsblatt of 15.01.2013 (rwK = 079°), the magnetic compass course is worked out with a deviation of +4° and the variation of +1° given on the chart excerpt of exam sheet no. 1.\n\nThe MgK is therefore actually: 074°",
+    "steps": {
+      "1": {"question": "What is the true course (rwK)?", "answer": "rwK = 079°"},
+      "2": {"question": "Deviation is +4°; take the variation (Mw) from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 074° *)"},
+      "3": {"question": "What is the distance between buoy \"TG19/Weser 2\" and buoy \"ST\"?", "answer": "6.1 nm"},
+      "4": {"question": "How long does it take to cover the distance between buoy \"TG19/Weser 2\" and buoy \"ST\"?", "answer": "45.75 min, i.e. 46 min or \"in three quarters of an hour\""},
+      "5": {"question": "What is the boat's dead-reckoning position (Koppelort) at 10:30?", "answer": "53° 55.8' N\n007° 51.3' E"},
+      "6": {"question": "At 10:30 the following marks are taken with the hand bearing compass. Deviation is 0°; take the variation from the chart.\n\nNeue Weser, lighted buoy \"4a\", MgP = 169°\nAlte Weser, lighted buoy \"ST\", MgP = 064°.\n\nWhat are the true bearings?", "answer": "Lighted buoy \"4a\" rwP = 170°\nLighted buoy \"ST\" rwP = 065°"},
+      "7": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "8": {"question": "What is the set and drift (Besteckversetzung)?", "answer": "BV = 103° – 0.8 nm"},
+      "9": {"question": "Describe the colour, light character and topmark of lighted buoy \"ST\".", "answer": "Colour: red/white vertical stripes\nLight: white isophase light, period 8 seconds\nTopmark: red ball"}
+    }
+  },
+  "2": {
+    "intro": "On 10.06.2011 a recreational craft is in the German Bight on passage from Helgoland to Cuxhaven. Speed over ground is 10 kn. At 11:00, 1.2 nm south of Helgoland, buoy \"Helgoland-O\" is passed close by.",
+    "steps": {
+      "1": {"question": "Take the boat's geographical position at 11:00 from the chart.", "answer": "54° 09.0' N\n007° 53.5' E"},
+      "2": {"question": "About 0.6 nm south-west of buoy \"Helgoland-O\" there is an entry on the chart. What does it mean?", "answer": "Wreck,\ncharted depth 53.6 m"},
+      "3": {"question": "From buoy \"Helgoland-O\" a magnetic compass course (MgK) of 116° is steered. Deviation is +3°; take the variation from the chart. What is the true course (rwK)?", "answer": "rwK = 120°"},
+      "4": {"question": "Plot the true course on the chart.", "answer": "See chart"},
+      "5": {"question": "After a distance of 11.1 nm, buoy \"Außenelbe-Reede 4\" is passed close by. Describe the colour, light character and topmark of this mark.", "answer": "Colour: yellow\nLight: yellow flashing light, period 4 seconds\nTopmark: none"},
+      "6": {"question": "How long does it take to cover the distance named in question 5?", "answer": "67 min"},
+      "7": {"question": "What is the boat's dead-reckoning position at 11:54?", "answer": "54° 04.5' N\n008° 06.7' E"},
+      "8": {"question": "At 11:54 the lighted buoy \"Außenelbe-Reede 4\" is taken with the hand bearing compass: MgP = 146°. Deviation is 0°; take the variation from the chart. What is the true bearing?", "answer": "rwP = 147°"},
+      "9": {"question": "At the time of the bearing the boat is on the 20-metre depth contour. What is the set and drift?", "answer": "BV = 007° – 1.6 nm"}
+    }
+  },
+  "3": {
+    "intro": "On 23.05.2011 a recreational craft is in the German Bight on passage from the Jade to Langeoog. At 13:30 buoy \"1b/Jade 1\" is passed close by. Speed over ground is assumed to be 6 kn.",
+    "steps": {
+      "1": {"question": "Take the boat's geographical position at 13:30 from the chart.", "answer": "53° 52.4' N\n007° 44.0' E"},
+      "2": {"question": "From this buoy the course is set to buoy \"Accumer Ee\". Plot the course on the chart.", "answer": "See chart"},
+      "3": {"question": "What is the true course (rwK)?", "answer": "rwK = 240°"},
+      "4": {"question": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 242°"},
+      "5": {"question": "When is buoy \"Accumer Ee\" expected to be reached?", "answer": "15:12"},
+      "6": {"question": "At position 53° 49.5' N 007° 36.8' E (about 1.9 nm north-west of the landfall buoy \"Otzumer Balje\") there is a red entry with an \"A\". What does this entry on the chart mean?", "answer": "Position of a tidal stream table entry, or \"tidal diamond\""},
+      "7": {"question": "At 14:30 a cross bearing is taken with the bearing ring of the magnetic compass. Deviation for the current course is –2°; take the variation from the chart.\n\nBuoy \"TG15\" MgP = 292°\nBuoy \"TG17/Weser1\" MgP = 347°\nBuoy \"Accumer Ee\" MgP = 234°\n\nWhat are the true bearings?", "answer": "Buoy \"TG15\" rwP = 290°\nBuoy \"TG17/Weser1\" rwP = 345°\nBuoy \"Accumer Ee\" rwP = 232°"},
+      "8": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "9": {"question": "Describe the colour, light character and topmark of buoy \"Accumer Ee\".", "answer": "Colour: red-white vertical stripes\nLight: white isophase light, period 8 seconds\nTopmark: red ball"}
+    }
+  },
+  "4": {
+    "intro": "On 18.04.2014 at 09:00 a recreational craft leaving Langeoog is close to buoy \"Accumer Ee\".",
+    "steps": {
+      "1": {"question": "Take the boat's geographical position at 09:00 from the chart.", "answer": "53° 47.2' N\n007° 29.1' E"},
+      "2": {"question": "From buoy \"Accumer Ee\" the course is set to buoy \"Otzumer Balje\". Plot the course on the chart.", "answer": "See chart"},
+      "3": {"question": "What is the true course (rwK)?", "answer": "rwK = 081°"},
+      "4": {"question": "Deviation is +7°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 074°"},
+      "5": {"question": "Describe the colour, light character and topmark of buoy \"Otzumer Balje\".", "answer": "Colour: red-white vertical stripes\nLight: white isophase light, period 4 seconds\nTopmark: red ball"},
+      "6": {"question": "It is 10:00. The average speed over ground during the last hour was 6 kn. What is the boat's dead-reckoning position?", "answer": "53° 48.2' N\n007° 39.2' E"},
+      "7": {"question": "You decide to return to the harbour via the Otzumer Balje and the Langeoog tidal-flat channel behind the island. About 1.2 nm south-west of buoy \"Otzumer Balje\" you find two similar entries. What do these entries on the chart mean?", "answer": "Wrecks with 3.7 m and 1.4 m depth"},
+      "8": {"question": "At 10:15 you take the westernmost of the three churches on Spiekeroog with the bearing ring of the magnetic compass at MgP = 110°, and buoy \"Otzumer Balje\" at MgP = 030°. Deviation for the current course is +5°; take the variation from the chart. What are the true bearings?", "answer": "Church rwP = 115°\nBuoy rwP = 035°"},
+      "9": {"question": "Plot the true bearings on the chart.", "answer": "See chart"}
+    }
+  },
+  "5": {
+    "intro": "On 29.07.2011 a motor boat is in the inshore traffic zone and wants to enter the Jade.",
+    "steps": {
+      "1": {"question": "To fix the position, the following objects are taken at 14:00 with the bearing ring of the magnetic compass. Deviation for the current course is –4°; take the variation from the chart.\n\nLangeoog water tower MgP = 225°\nBuoy \"Otzumer Balje\" MgP = 131°\n\nWhat are the true bearings?", "answer": "Water tower rwP = 221°\nBuoy rwP = 127°"},
+      "2": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "3": {"question": "Take the geographical position of the fix from the chart.", "answer": "53° 49.7' N\n007° 35.8' E"},
+      "4": {"question": "From this position the course is set to buoy \"1b/Jade1\". Plot the course on the chart.", "answer": "See chart"},
+      "5": {"question": "What is the true course (rwK)?", "answer": "rwK = 061°"},
+      "6": {"question": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 063°"},
+      "7": {"question": "The motor boat makes 11 kn over ground. At what time is buoy \"1b/Jade1\" expected to be reached?", "answer": "14:30"},
+      "8": {"question": "Describe the colour, light character and topmark of buoy \"1b/Jade1\".", "answer": "Colour: green\nLight: green occulting light, period 4 seconds\nTopmark: none"},
+      "9": {"question": "The motor boat keeps making 11 kn over ground when an engine failure occurs at 14:06. What is the boat's dead-reckoning position at that moment?", "answer": "53° 50.2' N\n007° 37.4' E"}
+    }
+  },
+  "6": {
+    "intro": "On 30.06.2012 a motor boat leaving the Alte Weser is on its way to the Elbe and is close to buoy \"A2\" at 09:00.",
+    "steps": {
+      "1": {"question": "Take the motor boat's geographical position from the chart.", "answer": "53° 55.3' N\n007° 58.8' E"},
+      "2": {"question": "From buoy \"A2\" the boat sets its course to buoy \"Westertill-N\". Plot the course on the chart.", "answer": "See chart"},
+      "3": {"question": "What is the true course (rwK)?", "answer": "rwK = 059°"},
+      "4": {"question": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 060°"},
+      "5": {"question": "After a while buoy \"NGN\" is passed on the port side.\nDescribe the colour, light character and topmark of this mark.", "answer": "Colour: black above, yellow below\nLight: white quick flashing light\nTopmark: two cones, both point up, one above the other"},
+      "6": {"question": "Further on, the following objects are taken with the bearing ring of the magnetic compass. Deviation for the current course is –2°; take the variation from the chart.\n\nLighthouse \"Alte Weser\" MgP = 160°\nBuoy \"Westertill-N\" MgP = 056°\n\nWhat are the true bearings?", "answer": "Lighthouse rwP = 159°\nBuoy rwP = 055°"},
+      "7": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "8": {"question": "At 09:54 buoy \"Westertill-N\" is passed. What has the speed been since 09:00?", "answer": "Speed over ground = 6 kn"},
+      "9": {"question": "Immediately south of buoy \"Westertill-N\" there is an entry. What does this entry on the chart mean?", "answer": "Charted depth 24 m"}
+    }
+  },
+  "7": {
+    "intro": "On 22.10.2010 at 11:00 a motor boat leaving the Elbe is close to buoy \"Außenelbe-Reede 2\". Speed over ground is 8 kn.",
+    "steps": {
+      "1": {"question": "Take the motor boat's geographical position at 11:00 from the chart.", "answer": "54° 03.5' N\n008° 06.9' E"},
+      "2": {"question": "Describe the colour, light character and topmark of buoy \"Außenelbe-Reede 2\".", "answer": "Colour: yellow\nLight: yellow occulting light, groups of 3, period 12 seconds\nTopmark: none"},
+      "3": {"question": "From this position a magnetic compass course of 218° is steered. Deviation is –3°; take the variation from the chart. What is the true course (rwK)?", "answer": "rwK = 216°"},
+      "4": {"question": "Plot the true course on the chart.", "answer": "See chart"},
+      "5": {"question": "When do you reach buoy \"NGN\"?", "answer": "11:57"},
+      "6": {"question": "What is the meaning of buoy \"NGN\"?", "answer": "North cardinal mark\nShows that the danger can be passed safely to the north of the buoy."},
+      "7": {"question": "At 12:00 the following buoys are taken with the hand bearing compass:\n\nBuoy \"ST\" MgP = 240°\nBuoy \"A2\" MgP = 150°\n\nDeviation is 0°; take the variation from the chart. What are the true bearings?", "answer": "Buoy \"ST\" rwP = 241°\nBuoy \"A2\" rwP = 151°"},
+      "8": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "9": {"question": "What is the set and drift?", "answer": "BV = 273° – 1.1 nm"}
+    }
+  },
+  "8": {
+    "intro": "On 28.05.2012 at 10:00 a motor boat is in the German Bight. Speed over ground is assumed to be 9 kn.",
+    "steps": {
+      "1": {"question": "The position is fixed by bearing and distance. Buoy \"E2\" is taken: rwP = 084°, distance 1.6 nm. Plot the true bearing on the chart.", "answer": "See chart"},
+      "2": {"question": "Take the geographical position from the chart.", "answer": "54° 07.0' N\n007° 41.0' E"},
+      "3": {"question": "There is an entry at this position. What does this entry on the chart mean?", "answer": "Charted depth 37 m"},
+      "4": {"question": "From this position the boat heads for the Jade Approach traffic separation scheme on a true course of 232°. Plot the course on the chart.", "answer": "See chart"},
+      "5": {"question": "What is the distance to the traffic separation scheme?", "answer": "3.8 nm"},
+      "6": {"question": "Deviation is +2°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 229°"},
+      "7": {"question": "On reaching the Jade Approach traffic separation scheme the course is altered to cross the scheme at right angles (assumption: no set from current or wind). What is the true course (rwK)?", "answer": "rwK = 242°"},
+      "8": {"question": "How long is crossing the Jade Approach traffic separation scheme expected to take?", "answer": "20 min"},
+      "9": {"question": "After a while buoy \"TG16/Reede\" is passed abeam to port. Describe the colour, light character and topmark of this mark.", "answer": "Colour: red\nLight: red occulting light in groups of 3, period 12 seconds\nTopmark: none"}
+    }
+  },
+  "9": {
+    "intro": "On 23.06.2011 a recreational craft is heading seawards on the Elbe, north of the line of red buoys. At about 12:00 buoy \"14\" is passed close by. Speed over ground is 5.8 kn.",
+    "steps": {
+      "1": {"question": "When is the boat expected to reach buoy \"6\"?", "answer": "At about 13:00"},
+      "2": {"question": "At buoy \"6\" the fairway is crossed southwards quickly and without impeding commercial shipping. Well south of the line of green buoys the boat continues down the Elbe along the 5 m contour until, at about 13:50, buoy \"1\" is abeam to starboard. Now the true course 206° is set towards lighthouse \"Alte Weser\". Deviation is +4°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 202°"},
+      "3": {"question": "Describe the light of lighthouse \"Alte Weser\" from its entry on the chart.", "answer": "Fixed light in sectors, white, red and green. Height of light 33 m, ranges 23 nm to 18 nm."},
+      "4": {"question": "What does the addition \"Horn Mo(AL)60s\" mean?", "answer": "Fog horn sounding the Morse letters A and L every 60 seconds."},
+      "5": {"question": "At 14:20 the GPS shows the following position: 53° 56.0' N 008° 11.0' E. Plot it on the chart.", "answer": "See chart"},
+      "6": {"question": "The GPS position is to be checked with bearings. From this GPS position, what are the true bearings of lighthouse \"Neuwerk\" and lighthouse \"Alte Weser\"?", "answer": "rwP = 096° Neuwerk\nrwP = 205° Alte Weser"},
+      "7": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "8": {"question": "What is the distance to lighthouse \"Alte Weser\"?", "answer": "4.6 nm"},
+      "9": {"question": "At about 15:20 you are at lighthouse \"Alte Weser\". What was the speed during the last hour?", "answer": "4.6 kn"}
+    }
+  },
+  "10": {
+    "intro": "A vessel leaving the \"Alte Weser\" on 14.07.2010 has passed lighthouse \"Alte Weser\" and is close to buoy \"A10\" at 12:00.",
+    "steps": {
+      "1": {"question": "Take the geographical position of this buoy from the chart.", "answer": "53° 52.6' N\n008° 06.4' E"},
+      "2": {"question": "Describe the light of lighthouse \"Alte Weser\".", "answer": "Fixed light with white, red and green sectors. Height of light 33 m, nominal range 23 nm to 18 nm."},
+      "3": {"question": "From this position the course is set to buoy \"A2\". Plot the course on the chart.", "answer": "See chart"},
+      "4": {"question": "What is the true course (rwK)?", "answer": "rwK = 301°"},
+      "5": {"question": "Deviation is –4°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 304°"},
+      "6": {"question": "At 12:26 buoy \"A2\" is passed abeam. What has the speed over ground been since passing buoy \"A10\"?", "answer": "12.0 kn"},
+      "7": {"question": "After passing buoy \"A2\" the course is altered to starboard and set to buoy \"E3\". A little later buoy \"ST\" is passed. What is the meaning of this mark?", "answer": "Marks the approach to fairways and the middle of channels"},
+      "8": {"question": "To fix the position, the following marks are then taken with the bearing ring of the magnetic compass:\n\nBuoy \"Nordergründe-N\" MgP = 110°\nBuoy \"ST\" MgP = 225°\n\nDeviation for the current course is +1°; take the variation from the chart. What are the true bearings?", "answer": "rwP = 112° buoy \"NGN\"\nrwP = 227° buoy \"ST\""},
+      "9": {"question": "Plot the true bearings on the chart.", "answer": "See chart"}
+    }
+  },
+  "11": {
+    "intro": "On 05.08.2013 at 09:00 a recreational craft is in the German Bight at position 53° 54.2' N and 007° 53.8' E and wants to enter the Neue Weser.",
+    "steps": {
+      "1": {"question": "Plot the position on the chart.", "answer": "See chart"},
+      "2": {"question": "There is an entry at this position. What does this entry on the chart mean?", "answer": "Charted depth 18.5 m"},
+      "3": {"question": "From this position the course is set to buoy \"5\" of the Neue Weser fairway. What is the true course (rwK)?", "answer": "rwK = 148°"},
+      "4": {"question": "Plot the true course on the chart.", "answer": "See chart"},
+      "5": {"question": "Deviation is –5°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 152°"},
+      "6": {"question": "Describe the colour, light character and topmark of buoy \"5\" of the Neue Weser.", "answer": "Colour: green\nLight: green occulting light in groups of 2, period 9 seconds\nTopmark: none"},
+      "7": {"question": "When will buoy \"5\" be passed if the boat makes 6 kn over ground?", "answer": "At 09:37"},
+      "8": {"question": "Further on, the following lighthouses are taken with the hand bearing compass:\n\nLighthouse \"Alte Weser\" MgP = 011°\nLighthouse \"Tegeler Plate\" MgP = 102°\n\nDeviation is 0°; take the variation from the chart. What are the true bearings?", "answer": "rwP = 012° lighthouse \"Alte Weser\"\nrwP = 103° lighthouse \"Tegeler Plate\""},
+      "9": {"question": "Plot the true bearings on the chart.", "answer": "See chart"}
+    }
+  },
+  "12": {
+    "intro": "On 02.05.2012 at 08:00 a recreational craft leaving the Jade is close to buoy \"10\" of the Wangerooge fairway and wants to head north. Speed over ground is assumed to be 8 kn.",
+    "steps": {
+      "1": {"question": "Take the boat's geographical position from the chart.", "answer": "53° 50.0' N\n007° 53.4' E"},
+      "2": {"question": "From this position the course is set to buoy \"ST\". Plot the course on the chart.", "answer": "See chart"},
+      "3": {"question": "What is the true course (rwK)?", "answer": "rwK = 007°"},
+      "4": {"question": "Deviation is –3°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 009°"},
+      "5": {"question": "Buoy \"4a\" of the \"Neue Weser\" is passed. Describe the colour, light character and topmark of this mark.", "answer": "Colour: red\nLight: red interrupted quick flashing light, period 13 seconds\nTopmark: red cylinder"},
+      "6": {"question": "At 08:30 a drifting, leaking oil drum is passed close by and reported to the vessel traffic service. What is the boat's dead-reckoning position at that time?", "answer": "53° 54.0' N\n007° 54.3' E"},
+      "7": {"question": "At 09:00 buoy \"ST\" is taken: rwP = 168°. The distance is found to be 2.0 nm. Plot the true bearing on the chart.", "answer": "See chart"},
+      "8": {"question": "What is the set and drift?", "answer": "BV = 296° – 0.7 nm"},
+      "9": {"question": "What is the meaning of buoy \"ST\"?", "answer": "Marks the approach to fairways and the middle of channels (here: \"Alte Weser\")"}
+    }
+  },
+  "13": {
+    "intro": "On 02.07.2014 a recreational craft that has left Helgoland is on its way to Bremerhaven.",
+    "steps": {
+      "1": {"question": "At 09:00 the following marks are taken with the hand bearing compass:\n\nBuoy \"Helgoland-O\" MgP = 284°\nBuoy \"Düne-S\" MgP = 008°\n\nDeviation is 0°; take the variation from the chart. What are the true bearings?", "answer": "rwP = 285° buoy \"Helgoland-O\"\nrwP = 009° buoy \"Düne-S\""},
+      "2": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "3": {"question": "Take the geographical position of the fix from the chart.", "answer": "54° 08.6' N\n007° 55.7' E"},
+      "4": {"question": "What is the meaning of buoy \"Helgoland-O\"?", "answer": "East cardinal mark\nShows that the danger can be passed safely to the east"},
+      "5": {"question": "From the fix the course is set to buoy \"ST\". Plot the course on the chart.", "answer": "See chart"},
+      "6": {"question": "What is the true course (rwK)?", "answer": "rwK = 182°"},
+      "7": {"question": "Deviation is +4°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 177°"},
+      "8": {"question": "At 09:40 buoy \"E3\" is passed abeam. What has the boat's speed been since the fix?", "answer": "Speed over ground = 7.5 kn"},
+      "9": {"question": "Describe the colour, light character and topmark of buoy \"ST\".", "answer": "Colour: red-white vertical stripes\nLight: white isophase light, period 8 seconds\nTopmark: red ball"}
+    }
+  },
+  "14": {
+    "intro": "Early in the morning of 31.08.2013 a recreational craft leaves the island of Neuwerk bound for Husum. Speed over ground is given as 6 kn.",
+    "steps": {
+      "1": {"question": "Describe the light of lighthouse Neuwerk.", "answer": "Long flashing light in groups of 3, white-red-green. Period 20 seconds. Light structure 38 m high. Nominal range 16 nm to 11 nm."},
+      "2": {"question": "Explain the meaning of the following background colours on the chart: white, light blue, light green and light yellow.", "answer": "white: \"deep water\"\nlight blue: \"shallow water\"\nlight green: \"tidal flats\"\nlight yellow: \"land\""},
+      "3": {"question": "At about 07:00 buoy \"13/Neuwerk-Reede1\" is passed close by. Take the geographical position of this buoy from the chart.", "answer": "53° 58.4' N\n008° 28.2' E"},
+      "4": {"question": "From buoy \"13/Neuwerk-Reede1\" the fairway is first crossed. The boat then runs down the Elbe outside the line of red buoys to buoy \"8\", which it reaches at 07:45. From buoy \"8\" the course is set to buoy \"Norderelbe\". Plot the course from buoy \"8\" on the chart.", "answer": "See chart"},
+      "5": {"question": "What is the true course (rwK)?", "answer": "rwK = 038°"},
+      "6": {"question": "Deviation is +4°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 033°"},
+      "7": {"question": "What is the distance between buoys \"8\" and \"Norderelbe\"?", "answer": "3.6 nm"},
+      "8": {"question": "At 08:30 buoy \"Süderpiep\" is taken with the bearing ring of the magnetic compass at MgP = 020°, and buoy \"Norderelbe\" at MgP = 098°. Deviation for the current course is +1°; take the variation from the chart. What are the true bearings?", "answer": "rwP = 022° Süderpiep\nrwP = 100° Norderelbe"},
+      "9": {"question": "Plot the true bearings on the chart.", "answer": "See chart"}
+    }
+  },
+  "15": {
+    "intro": "On 20.08.2011 a recreational craft coming from the Weser enters the mouth of the Elbe.",
+    "steps": {
+      "1": {"question": "At 09:00 the following bearings are taken:\n\nLighthouse \"Alte Weser\" MgP = 175°\nLighthouse \"Neuwerk\" MgP = 085°\n\nDeviation is +5°; take the variation from the chart. What are the true bearings?", "answer": "rwP = 180° Alte Weser\nrwP = 090° Neuwerk"},
+      "2": {"question": "Plot the true bearings on the chart.", "answer": "See chart"},
+      "3": {"question": "Give the position found as latitude and longitude.", "answer": "53° 54.9' N\n008° 07.6' E"},
+      "4": {"question": "From this position you set course to buoy \"1\" of the Elbe fairway. What is the true course (rwK)?", "answer": "rwK = 037°"},
+      "5": {"question": "Deviation is –2°; take the variation from the chart. What is the magnetic compass course (MgK)?", "answer": "MgK = 039°"},
+      "6": {"question": "What is the distance to buoy \"1\"?", "answer": "5.4 nm"},
+      "7": {"question": "After 1.8 nm your course crosses an entry on the chart labelled \"Obstn\". What does this entry on the chart mean?", "answer": "Obstruction with a charted depth of 9.7 m"},
+      "8": {"question": "Describe the colour, light character and topmark of buoy \"1\" of the Elbe fairway.", "answer": "Colour: green\nLight: green quick flashing light\nTopmark: green cone, point up"},
+      "9": {"question": "The vessel traffic service \"Cuxhaven Elbe Traffic\" reports three containers lost overboard at position 53° 59.6' N and 008° 23.2' E. Plot the position on the chart.", "answer": "See chart"}
+    }
+  }
+}

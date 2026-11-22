@@ -1,0 +1,298 @@
+{
+  "see_073": {
+    "de": "Die KVR gelten auf der Hohen See und allen damit zusammenhängenden, von Seeschiffen befahrbaren Gewässern.",
+    "en": "The COLREGs apply on the high seas and all connected waters navigable by seagoing vessels."
+  },
+  "see_074": {
+    "de": "Auf den Seeschifffahrtsstraßen geht die SeeSchStrO als speziellere Regel den KVR vor.",
+    "en": "On German maritime waterways the SeeSchStrO, as the more specific rule, takes precedence over the COLREGs."
+  },
+  "see_075": {
+    "de": "Führerscheinfrei sind Boote ohne Motor oder mit höchstens 11,03 kW (15 PS) Verbrennungsmotor bzw. 7,5 kW Elektromotor (Dauerleistung).",
+    "en": "No licence is needed for boats without an engine or with at most 11.03 kW (15 hp) combustion or 7.5 kW electric (continuous rating)."
+  },
+  "see_076": {
+    "de": "Verantwortlich ist der Fahrzeugführer – oder, wenn er sich vertreten lässt, sein Stellvertreter.",
+    "en": "The skipper is responsible — or, if he has appointed one, his deputy."
+  },
+  "see_077": {
+    "de": "Seemännische Sorgfalt geht über die Vorschriften hinaus: Man muss alles tun, was Seemannsbrauch und die Umstände des Einzelfalls verlangen.",
+    "en": "Good seamanship goes beyond the rules: you must take every precaution that seamanlike practice and the circumstances require."
+  },
+  "see_078": {
+    "de": "Vor der Fahrt alle an Bord über Sicherheitsvorkehrungen, Rettungs- und Feuerlöschmittel und Schutz gegen Überbordfallen einweisen; angelegte Rettungswesten erhöhen die Überlebenschance.",
+    "en": "Before sailing brief everyone on board on safety measures, life-saving and fire-fighting equipment and how to avoid falling overboard; lifejackets that are worn raise survival chances."
+  },
+  "see_079": {
+    "de": "Das Manöver des letzten Augenblicks führt der Kurshalter aus – wenn der Ausweichpflichtige allein die Kollision nicht mehr verhindern kann.",
+    "en": "The last-moment manoeuvre is made by the stand-on vessel — when the give-way vessel alone can no longer prevent a collision."
+  },
+  "see_080": {
+    "de": "Der Kurshalter muss handeln, sobald ein Zusammenstoß durch Manöver des Ausweichpflichtigen allein nicht mehr zu vermeiden ist.",
+    "en": "The stand-on vessel must act as soon as a collision can no longer be avoided by the give-way vessel's action alone."
+  },
+  "see_081": {
+    "de": "Überholer ist, wer sich aus dem Bereich des Hecklichts nähert – also aus mehr als 22,5° achterlicher als querab.",
+    "en": "A vessel is overtaking when it approaches from the sternlight sector — more than 22.5° abaft the beam."
+  },
+  "see_082": {
+    "de": "Manövrierunfähig ist ein Fahrzeug durch außergewöhnliche Umstände wie Ruder- oder Maschinenausfall.",
+    "en": "A vessel is not under command because of exceptional circumstances such as rudder or engine failure."
+  },
+  "see_083": {
+    "de": "Manövrierbehindert ist ein Fahrzeug durch die Art seiner Arbeit, z. B. Baggern, Kabellegen oder Schleppen.",
+    "en": "A vessel is restricted in her ability to manoeuvre by the nature of her work, e.g. dredging, cable laying or towing."
+  },
+  "see_084": {
+    "de": "Bei verminderter Sicht: sichere Geschwindigkeit, Schallsignale geben, Lichter einschalten und gehörigen Ausguck halten.",
+    "en": "In restricted visibility: proceed at safe speed, sound fog signals, switch on navigation lights and keep a proper lookout."
+  },
+  "see_085": {
+    "de": "Lichter, Sichtzeichen und Schallsignalanlagen regeln KVR, SeeSchStrO und Schifffahrtsordnung Emsmündung.",
+    "en": "Lights, shapes and sound appliances are governed by the COLREGs, the SeeSchStrO and the Ems Estuary Regulations."
+  },
+  "see_086": {
+    "de": "Positionslaternen und Schallsignalanlagen müssen vom BSH zugelassen sein oder eine gleichwertige EU-Zulassung haben.",
+    "en": "Navigation lights and sound appliances must be type-approved by the BSH or hold an equivalent EU approval."
+  },
+  "see_087": {
+    "de": "Verkehrstrennungsgebiete sind Schifffahrtswege, die durch Trennlinien oder -zonen in Einbahnwege geteilt sind.",
+    "en": "Traffic separation schemes are routes divided by separation lines or zones into one-way lanes."
+  },
+  "see_088": {
+    "de": "Im Verkehrstrennungsgebiet fährt man im Einbahnweg rechts der Trennlinie bzw. -zone in der allgemeinen Verkehrsrichtung.",
+    "en": "In a traffic separation scheme proceed in the lane to the right of the separation line or zone, in the general direction of traffic."
+  },
+  "see_089": {
+    "de": "„In Sicht“ sind Fahrzeuge, wenn jedes das andere mit dem Auge wahrnehmen kann – Radarkontakt genügt nicht.",
+    "en": "Vessels are “in sight” when each can be observed visually from the other — radar contact is not enough."
+  },
+  "see_090": {
+    "de": "Sicher ist eine Geschwindigkeit, die Verkehr, Sicht und Wetter angepasst ist und jederzeit rechtzeitiges Aufstoppen erlaubt.",
+    "en": "Safe speed is adapted to traffic, visibility and weather and allows the vessel to stop in time."
+  },
+  "see_091": {
+    "de": "Ein Topplicht, Seitenlichter und Hecklicht: Maschinenfahrzeug in Fahrt unter 50 m.",
+    "en": "One masthead light, sidelights and sternlight: power-driven vessel underway under 50 m."
+  },
+  "see_092": {
+    "de": "Zwei Topplichter (das achtere höher), Seitenlichter und Hecklicht: Maschinenfahrzeug in Fahrt von 50 m und mehr.",
+    "en": "Two masthead lights (the after one higher), sidelights and sternlight: power-driven vessel underway of 50 m or more."
+  },
+  "see_093": {
+    "de": "Zwei Topplichter übereinander zeigen einen Schleppverband bis 200 m; Rot-Weiß-Rot zeigt die Manövrierbehinderung; achtern das gelbe Schlepplicht.",
+    "en": "Two masthead lights in a vertical line show a tow up to 200 m; red-white-red shows restricted manoeuvrability; aft the yellow towing light."
+  },
+  "see_094": {
+    "de": "Drei Topplichter übereinander: Schleppverband über 200 m Länge, hier zusätzlich manövrierbehindert (Rot-Weiß-Rot).",
+    "en": "Three masthead lights in a vertical line: a tow longer than 200 m, here also restricted in manoeuvrability (red-white-red)."
+  },
+  "see_095": {
+    "de": "Geschleppte Fahrzeuge führen Seitenlichter und ein Hecklicht – kein Topplicht.",
+    "en": "Towed vessels show sidelights and a sternlight — no masthead light."
+  },
+  "see_096": {
+    "de": "Führt jedes Fahrzeug eines Schleppverbands einen schwarzen Rhombus, ist der Verband länger als 200 m.",
+    "en": "When every vessel of a tow shows a black diamond, the tow is longer than 200 m."
+  },
+  "see_097": {
+    "de": "Zwei rote Rundumlichter übereinander ohne weitere Lichter: manövrierunfähig, ohne Fahrt durchs Wasser.",
+    "en": "Two red all-round lights vertically and nothing else: not under command, without way through the water."
+  },
+  "see_098": {
+    "de": "Zwei rote Rundumlichter plus Seitenlichter und Hecklicht: manövrierunfähig mit Fahrt durchs Wasser.",
+    "en": "Two red all-round lights plus sidelights and sternlight: not under command, making way through the water."
+  },
+  "see_099": {
+    "de": "Zwei schwarze Bälle übereinander: manövrierunfähiges Fahrzeug.",
+    "en": "Two black balls vertically: vessel not under command."
+  },
+  "see_100": {
+    "de": "Manövrierunfähig ohne Fahrt durchs Wasser: nur zwei rote Rundumlichter senkrecht übereinander.",
+    "en": "Not under command without way: only two red all-round lights in a vertical line."
+  },
+  "see_101": {
+    "de": "Macht der Manövrierunfähige Fahrt durchs Wasser, kommen Seitenlichter und Hecklicht hinzu.",
+    "en": "If the vessel not under command is making way, sidelights and sternlight are added."
+  },
+  "see_102": {
+    "de": "Rot-Weiß-Rot senkrecht: manövrierbehindertes Fahrzeug.",
+    "en": "Red-white-red vertically: vessel restricted in her ability to manoeuvre."
+  },
+  "see_103": {
+    "de": "Rot-Weiß-Rot plus zwei Topplichter, Seitenlichter und Hecklicht: manövrierbehindert mit Fahrt durchs Wasser, 50 m oder länger.",
+    "en": "Red-white-red plus two masthead lights, sidelights and sternlight: restricted in ability to manoeuvre, making way, 50 m or more."
+  },
+  "see_104": {
+    "de": "Ball–Rhombus–Ball senkrecht: manövrierbehindertes Fahrzeug.",
+    "en": "Ball–diamond–ball vertically: vessel restricted in her ability to manoeuvre."
+  },
+  "see_105": {
+    "de": "Ankerlicht plus zwei rote Rundumlichter: Grundsitzer unter 50 m.",
+    "en": "Anchor light plus two red all-round lights: vessel aground, under 50 m."
+  },
+  "see_106": {
+    "de": "Drei schwarze Bälle senkrecht: Grundsitzer.",
+    "en": "Three black balls vertically: vessel aground."
+  },
+  "see_107": {
+    "de": "Zwei Ankerlichter (vorn höher) plus zwei rote Rundumlichter: Grundsitzer von 50 m und mehr.",
+    "en": "Two anchor lights (forward higher) plus two red all-round lights: vessel aground of 50 m or more."
+  },
+  "see_108": {
+    "de": "Drei rote Rundumlichter übereinander zusätzlich zu den Lichtern eines Maschinenfahrzeugs: tiefgangbehindert.",
+    "en": "Three red all-round lights vertically in addition to power-driven lights: constrained by her draught."
+  },
+  "see_109": {
+    "de": "Ein schwarzer Zylinder: tiefgangbehindertes Fahrzeug.",
+    "en": "A black cylinder: vessel constrained by her draught."
+  },
+  "see_110": {
+    "de": "Grün über Weiß: trawlender Fischer. Ab 50 m zusätzlich ein Topplicht achterlich und höher; mit Fahrt auch Seiten- und Hecklicht.",
+    "en": "Green over white: trawler. From 50 m also a masthead light abaft and higher; making way also sidelights and sternlight."
+  },
+  "see_111": {
+    "de": "Rot über Weiß: fischendes Fahrzeug, das nicht trawlt (z. B. Treibnetzfischer) – in Fahrt oder vor Anker.",
+    "en": "Red over white: fishing vessel other than trawling (e.g. drift-netter), underway or at anchor. “Red over white, fishing at night.”"
+  },
+  "see_112": {
+    "de": "Zwei Kegel mit den Spitzen zueinander (Stundenglas): fischendes Fahrzeug.",
+    "en": "Two cones with points together (hourglass): fishing vessel."
+  },
+  "see_113": {
+    "de": "Nur Seitenlichter und Hecklicht – ohne Topplicht – führen Segelfahrzeuge, Ruderboote und geschleppte Fahrzeuge.",
+    "en": "Only sidelights and sternlight — no masthead light — are shown by sailing vessels, rowing boats and towed vessels."
+  },
+  "see_114": {
+    "de": "Ein Ankerlieger unter 50 m zeigt ein weißes Rundumlicht.",
+    "en": "A vessel at anchor under 50 m shows one white all-round light."
+  },
+  "see_115": {
+    "de": "Ab 100 m Länge zeigt ein Ankerlieger zwei Ankerlichter und muss zusätzlich seine Decks beleuchten.",
+    "en": "At 100 m or more a vessel at anchor shows two anchor lights and must also illuminate her decks."
+  },
+  "see_116": {
+    "de": "Ein langer Ton alle 2 Minuten: Maschinenfahrzeug, das Fahrt durchs Wasser macht.",
+    "en": "One prolonged blast every 2 minutes: power-driven vessel making way through the water."
+  },
+  "see_117": {
+    "de": "Zwei lange Töne alle 2 Minuten: Maschinenfahrzeug in Fahrt, gestoppt, ohne Fahrt durchs Wasser.",
+    "en": "Two prolonged blasts every 2 minutes: power-driven vessel underway but stopped, no way through the water."
+  },
+  "see_118": {
+    "de": "Lang–kurz–kurz geben alle „behinderten“ Fahrzeuge: manövrierunfähige, manövrierbehinderte, tiefgangbehinderte, Segler, Schlepper und Fischer.",
+    "en": "Long–short–short is sounded by all “hampered” vessels: not under command, restricted, constrained by draught, sailing, towing/pushing and fishing."
+  },
+  "see_119": {
+    "de": "Lang–kurz–kurz–kurz gibt das geschleppte bzw. letzte bemannte Fahrzeug eines Schleppverbands – direkt nach dem Signal des Schleppers.",
+    "en": "Long–short–short–short is sounded by the towed or last manned vessel of a tow — right after the tug's signal."
+  },
+  "see_120": {
+    "de": "Ein Segelfahrzeug ab 12 m gibt bei verminderter Sicht mindestens alle 2 Minuten lang–kurz–kurz.",
+    "en": "A sailing vessel of 12 m or more sounds long–short–short at least every 2 minutes in restricted visibility."
+  },
+  "see_121": {
+    "de": "Fahrzeuge unter 12 m müssen die Standardsignale nicht geben, dann aber mindestens alle 2 Minuten ein anderes kräftiges Schallsignal.",
+    "en": "Vessels under 12 m need not give the standard signals but must then make some other efficient sound signal at least every 2 minutes."
+  },
+  "see_122": {
+    "de": "Etwa 5 Sekunden rasches Läuten jede Minute: Ankerlieger unter 100 m.",
+    "en": "About 5 seconds of rapid bell ringing every minute: vessel at anchor under 100 m."
+  },
+  "see_123": {
+    "de": "Glocke vorn und direkt danach Gong achtern: Ankerlieger von 100 m und mehr.",
+    "en": "Bell forward followed immediately by gong aft: vessel at anchor of 100 m or more."
+  },
+  "see_124": {
+    "de": "Ein Ankerlieger darf zusätzlich kurz–lang–kurz geben, um ein sich näherndes Fahrzeug zu warnen.",
+    "en": "A vessel at anchor may additionally sound short–long–short to warn an approaching vessel."
+  },
+  "see_125": {
+    "de": "Kollisionsgefahr besteht, wenn der Abstand abnimmt und die Peilung zum anderen Fahrzeug gleich bleibt.",
+    "en": "Risk of collision exists when the distance decreases and the bearing of the other vessel does not appreciably change."
+  },
+  "see_126": {
+    "de": "Haben zwei Segler den Wind von derselben Seite, weicht das luvwärtige dem leewärtigen Fahrzeug aus.",
+    "en": "When two sailing vessels have the wind on the same side, the windward vessel keeps out of the way of the leeward one."
+  },
+  "see_127": {
+    "de": "Auf Gegenkurs ändern beide Maschinenfahrzeuge ihren Kurs nach Steuerbord.",
+    "en": "On reciprocal courses both power-driven vessels alter course to starboard."
+  },
+  "see_128": {
+    "de": "Im freien Seeraum weicht ein Maschinenfahrzeug einem Segelfahrzeug aus.",
+    "en": "In open waters a power-driven vessel keeps out of the way of a sailing vessel."
+  },
+  "see_129": {
+    "de": "Ein manövrierunfähiges Fahrzeug kann nicht ausweichen – das Maschinenfahrzeug muss es tun.",
+    "en": "A vessel not under command cannot keep clear — the power-driven vessel must."
+  },
+  "see_130": {
+    "de": "Auch manövrierbehinderten Fahrzeugen muss das Maschinenfahrzeug ausweichen.",
+    "en": "The power-driven vessel must also keep out of the way of a vessel restricted in her ability to manoeuvre."
+  },
+  "see_131": {
+    "de": "Maschinenfahrzeuge weichen fischenden Fahrzeugen aus, da diese durch ihr Fanggerät behindert sind.",
+    "en": "Power-driven vessels keep out of the way of fishing vessels, which are hampered by their gear."
+  },
+  "see_132": {
+    "de": "Auch Segelfahrzeuge müssen fischenden Fahrzeugen ausweichen.",
+    "en": "Sailing vessels too must keep out of the way of vessels engaged in fishing."
+  },
+  "see_133": {
+    "de": "Der schwarze Zylinder zeigt ein tiefgangbehindertes Fahrzeug. Man darf seine sichere Durchfahrt nicht behindern.",
+    "en": "The black cylinder shows a vessel constrained by her draught. You must not impede her safe passage."
+  },
+  "see_134": {
+    "de": "Drei rote Rundumlichter: tiefgangbehindert. Seine sichere Durchfahrt darf nicht behindert werden.",
+    "en": "Three red all-round lights: constrained by draught. Her safe passage must not be impeded."
+  },
+  "see_135": {
+    "de": "Der Kurshalter behält Kurs und Geschwindigkeit zunächst bei und beobachtet den Ausweichpflichtigen genau.",
+    "en": "The stand-on vessel keeps her course and speed for now and watches the give-way vessel closely."
+  },
+  "see_136": {
+    "de": "Ausweichen muss frühzeitig, durchgreifend und klar erkennbar sein – kleine Kursänderungen in Schritten sind falsch.",
+    "en": "Avoiding action must be early, substantial and clearly visible — a series of small alterations is wrong."
+  },
+  "see_137": {
+    "de": "Der Überholer muss dem überholten Fahrzeug immer ausweichen.",
+    "en": "The overtaking vessel must always keep out of the way of the vessel being overtaken."
+  },
+  "see_138": {
+    "de": "Hört man vorlicher als querab ein Nebelsignal: selbst Signal geben, auf Steuerfahrt verlangsamen, notfalls aufstoppen und vorsichtig manövrieren.",
+    "en": "Hearing a fog signal forward of the beam: give your own signal, slow to steerage way, stop if necessary and navigate with caution."
+  },
+  "see_139": {
+    "de": "Kommt der Ausweichpflichtige seiner Pflicht nicht nach: mindestens fünf kurze Töne geben und das Manöver des letzten Augenblicks fahren.",
+    "en": "If the give-way vessel does not act: sound at least five short blasts and carry out the last-moment manoeuvre."
+  },
+  "see_140": {
+    "de": "Mindestens fünf kurze Töne: Zweifel- bzw. Warnsignal – der Ausweichpflichtige soll auf seine Pflicht aufmerksam werden.",
+    "en": "At least five short blasts: the doubt/warning signal — the give-way vessel is reminded of its duty."
+  },
+  "see_141": {
+    "de": "Kurz–lang–kurz gibt ein Ankerlieger, um ein sich gefährlich näherndes Fahrzeug zu warnen.",
+    "en": "Short–long–short is sounded by a vessel at anchor to warn a vessel approaching dangerously."
+  },
+  "see_142": {
+    "de": "Im Einbahnweg in Verkehrsrichtung fahren, von der Trennzone frei halten, möglichst an den Enden ein- und auslaufen bzw. seitlich in kleinem Winkel.",
+    "en": "Follow the lane in the direction of traffic, keep clear of the separation zone, join and leave at the ends or from the side at a small angle."
+  },
+  "see_143": {
+    "de": "Queren möglichst vermeiden. Wenn nötig, mit der Kielrichtung im rechten Winkel zur Verkehrsrichtung queren – auch wenn Wind oder Strom versetzen.",
+    "en": "Avoid crossing if possible. If necessary, cross with the heading at right angles to the traffic flow — even when set by wind or current."
+  },
+  "see_144": {
+    "de": "Die Regeln für Verkehrstrennungsgebiete stehen in den KVR (Regel 10).",
+    "en": "The rules for traffic separation schemes are in the COLREGs (Rule 10)."
+  },
+  "see_145": {
+    "de": "Auch im Einbahnweg gilt die normale Kreuzungsregel: Wer das andere Maschinenfahrzeug an Steuerbord hat, muss ausweichen.",
+    "en": "Even in a lane the normal crossing rule applies: the power-driven vessel with the other on her starboard side gives way."
+  },
+  "see_146": {
+    "de": "Ein Segler darf die sichere Durchfahrt eines Maschinenfahrzeugs, das dem Einbahnweg folgt, nicht behindern.",
+    "en": "A sailing vessel must not impede the safe passage of a power-driven vessel following the lane."
+  }
+}

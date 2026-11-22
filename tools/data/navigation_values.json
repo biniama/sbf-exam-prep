@@ -1,0 +1,213 @@
+{
+  "_comment": "Structured values behind the official results. mw = variation used in the official solution (east positive). Positions as [degrees, minutes]. Derived values (marked derived) are worked back from the official result, e.g. distance = speed x time.",
+  "1": {
+    "task": {"mw": 1, "speed_kn": 8},
+    "steps": {
+      "1": {"kind": "true_course", "from": "TG19/Weser 2", "to": "ST", "rwk": 79},
+      "2": {"kind": "compass_course", "rwk": 79, "abl": 4, "mgk": 74},
+      "3": {"kind": "distance", "nm": 6.1},
+      "4": {"kind": "travel_time", "nm": 6.1, "kn": 8, "minutes": 45.75},
+      "5": {"kind": "dr_position", "start": "10:00", "end": "10:30", "kn": 8, "rwk": 79, "lat": [53, 55.8], "lon": [7, 51.3]},
+      "6": {"kind": "bearings", "abl": 0, "items": [{"object": "4a", "mgp": 169, "rwp": 170}, {"object": "ST", "mgp": 64, "rwp": 65}]},
+      "7": {"kind": "plot", "what": "bearings"},
+      "8": {"kind": "set_drift", "direction": 103, "nm": 0.8},
+      "9": {"kind": "light", "object": "ST", "code": "Iso.W.8s"}
+    }
+  },
+  "2": {
+    "task": {"mw": 1, "speed_kn": 10},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [54, 9.0], "lon": [7, 53.5]},
+      "2": {"kind": "chart_entry"},
+      "3": {"kind": "true_from_compass", "mgk": 116, "abl": 3, "rwk": 120},
+      "4": {"kind": "plot", "what": "course"},
+      "5": {"kind": "light", "object": "Außenelbe-Reede 4", "code": "Fl.Y.4s"},
+      "6": {"kind": "travel_time", "nm": 11.1, "kn": 10, "minutes": 67},
+      "7": {"kind": "dr_position", "start": "11:00", "end": "11:54", "kn": 10, "rwk": 120, "lat": [54, 4.5], "lon": [8, 6.7]},
+      "8": {"kind": "bearings", "abl": 0, "items": [{"object": "Außenelbe-Reede 4", "mgp": 146, "rwp": 147}]},
+      "9": {"kind": "set_drift", "direction": 7, "nm": 1.6}
+    }
+  },
+  "3": {
+    "task": {"mw": 0, "speed_kn": 6},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [53, 52.4], "lon": [7, 44.0]},
+      "2": {"kind": "plot", "what": "course"},
+      "3": {"kind": "true_course", "from": "1b/Jade 1", "to": "Accumer Ee", "rwk": 240},
+      "4": {"kind": "compass_course", "rwk": 240, "abl": -2, "mgk": 242},
+      "5": {"kind": "eta", "start": "13:30", "kn": 6, "eta": "15:12", "nm": 10.2, "derived": true},
+      "6": {"kind": "chart_entry"},
+      "7": {"kind": "bearings", "abl": -2, "items": [{"object": "TG15", "mgp": 292, "rwp": 290}, {"object": "TG17/Weser1", "mgp": 347, "rwp": 345}, {"object": "Accumer Ee", "mgp": 234, "rwp": 232}]},
+      "8": {"kind": "plot", "what": "bearings"},
+      "9": {"kind": "light", "object": "Accumer Ee", "code": "Iso.W.8s"}
+    }
+  },
+  "4": {
+    "task": {"mw": 0, "speed_kn": 6},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [53, 47.2], "lon": [7, 29.1]},
+      "2": {"kind": "plot", "what": "course"},
+      "3": {"kind": "true_course", "from": "Accumer Ee", "to": "Otzumer Balje", "rwk": 81},
+      "4": {"kind": "compass_course", "rwk": 81, "abl": 7, "mgk": 74},
+      "5": {"kind": "light", "object": "Otzumer Balje", "code": "Iso.W.4s"},
+      "6": {"kind": "dr_position", "start": "09:00", "end": "10:00", "kn": 6, "rwk": 81, "lat": [53, 48.2], "lon": [7, 39.2]},
+      "7": {"kind": "chart_entry"},
+      "8": {"kind": "bearings", "abl": 5, "items": [{"object": "Kirche Spiekeroog", "mgp": 110, "rwp": 115}, {"object": "Otzumer Balje", "mgp": 30, "rwp": 35}]},
+      "9": {"kind": "plot", "what": "bearings"}
+    }
+  },
+  "5": {
+    "task": {"mw": 0, "speed_kn": 11},
+    "steps": {
+      "1": {"kind": "bearings", "abl": -4, "items": [{"object": "Wasserturm Langeoog", "mgp": 225, "rwp": 221}, {"object": "Otzumer Balje", "mgp": 131, "rwp": 127}]},
+      "2": {"kind": "plot", "what": "bearings"},
+      "3": {"kind": "read_position", "lat": [53, 49.7], "lon": [7, 35.8]},
+      "4": {"kind": "plot", "what": "course"},
+      "5": {"kind": "true_course", "from": "Standort", "to": "1b/Jade1", "rwk": 61},
+      "6": {"kind": "compass_course", "rwk": 61, "abl": -2, "mgk": 63},
+      "7": {"kind": "eta", "start": "14:00", "kn": 11, "eta": "14:30", "nm": 5.5, "derived": true},
+      "8": {"kind": "light", "object": "1b/Jade1", "code": "Oc.G.4s"},
+      "9": {"kind": "dr_position", "start": "14:00", "end": "14:06", "kn": 11, "rwk": 61, "lat": [53, 50.2], "lon": [7, 37.4]}
+    }
+  },
+  "6": {
+    "task": {"mw": 1},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [53, 55.3], "lon": [7, 58.8]},
+      "2": {"kind": "plot", "what": "course"},
+      "3": {"kind": "true_course", "from": "A2", "to": "Westertill-N", "rwk": 59},
+      "4": {"kind": "compass_course", "rwk": 59, "abl": -2, "mgk": 60},
+      "5": {"kind": "light", "object": "NGN", "code": "Q.W", "mark": "north_cardinal"},
+      "6": {"kind": "bearings", "abl": -2, "items": [{"object": "Leuchtturm Alte Weser", "mgp": 160, "rwp": 159}, {"object": "Westertill-N", "mgp": 56, "rwp": 55}]},
+      "7": {"kind": "plot", "what": "bearings"},
+      "8": {"kind": "speed", "start": "09:00", "end": "09:54", "nm": 5.4, "kn": 6, "derived": true},
+      "9": {"kind": "chart_entry"}
+    }
+  },
+  "7": {
+    "task": {"mw": 1, "speed_kn": 8},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [54, 3.5], "lon": [8, 6.9]},
+      "2": {"kind": "light", "object": "Außenelbe-Reede 2", "code": "Oc(3).Y.12s"},
+      "3": {"kind": "true_from_compass", "mgk": 218, "abl": -3, "rwk": 216},
+      "4": {"kind": "plot", "what": "course"},
+      "5": {"kind": "eta", "start": "11:00", "kn": 8, "eta": "11:57", "nm": 7.6, "derived": true},
+      "6": {"kind": "mark_meaning", "mark": "north_cardinal"},
+      "7": {"kind": "bearings", "abl": 0, "items": [{"object": "ST", "mgp": 240, "rwp": 241}, {"object": "A2", "mgp": 150, "rwp": 151}]},
+      "8": {"kind": "plot", "what": "bearings"},
+      "9": {"kind": "set_drift", "direction": 273, "nm": 1.1}
+    }
+  },
+  "8": {
+    "task": {"mw": 1, "speed_kn": 9},
+    "steps": {
+      "1": {"kind": "plot", "what": "bearing_distance"},
+      "2": {"kind": "read_position", "lat": [54, 7.0], "lon": [7, 41.0]},
+      "3": {"kind": "chart_entry"},
+      "4": {"kind": "plot", "what": "course"},
+      "5": {"kind": "distance", "nm": 3.8},
+      "6": {"kind": "compass_course", "rwk": 232, "abl": 2, "mgk": 229},
+      "7": {"kind": "true_course", "from": "Verkehrstrennungsgebiet", "to": "rechtwinklig", "rwk": 242, "perpendicular": true},
+      "8": {"kind": "travel_time", "nm": 3.0, "kn": 9, "minutes": 20, "derived": true},
+      "9": {"kind": "light", "object": "TG16/Reede", "code": "Oc(3).R.12s"}
+    }
+  },
+  "9": {
+    "task": {"mw": 0, "speed_kn": 5.8},
+    "steps": {
+      "1": {"kind": "eta", "start": "12:00", "kn": 5.8, "eta": "13:00", "nm": 5.8, "derived": true},
+      "2": {"kind": "compass_course", "rwk": 206, "abl": 4, "mgk": 202},
+      "3": {"kind": "lighthouse"},
+      "4": {"kind": "chart_entry"},
+      "5": {"kind": "plot", "what": "position"},
+      "6": {"kind": "chart_bearings", "items": [{"object": "Neuwerk", "rwp": 96}, {"object": "Alte Weser", "rwp": 205}]},
+      "7": {"kind": "plot", "what": "bearings"},
+      "8": {"kind": "distance", "nm": 4.6},
+      "9": {"kind": "speed", "start": "14:20", "end": "15:20", "nm": 4.6, "kn": 4.6}
+    }
+  },
+  "10": {
+    "task": {"mw": 1},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [53, 52.6], "lon": [8, 6.4]},
+      "2": {"kind": "lighthouse"},
+      "3": {"kind": "plot", "what": "course"},
+      "4": {"kind": "true_course", "from": "A10", "to": "A2", "rwk": 301},
+      "5": {"kind": "compass_course", "rwk": 301, "abl": -4, "mgk": 304},
+      "6": {"kind": "speed", "start": "12:00", "end": "12:26", "nm": 5.2, "kn": 12.0, "derived": true},
+      "7": {"kind": "mark_meaning", "mark": "safe_water"},
+      "8": {"kind": "bearings", "abl": 1, "items": [{"object": "NGN", "mgp": 110, "rwp": 112}, {"object": "ST", "mgp": 225, "rwp": 227}]},
+      "9": {"kind": "plot", "what": "bearings"}
+    }
+  },
+  "11": {
+    "task": {"mw": 1, "speed_kn": 6},
+    "steps": {
+      "1": {"kind": "plot", "what": "position"},
+      "2": {"kind": "chart_entry"},
+      "3": {"kind": "true_course", "from": "Standort", "to": "5", "rwk": 148},
+      "4": {"kind": "plot", "what": "course"},
+      "5": {"kind": "compass_course", "rwk": 148, "abl": -5, "mgk": 152},
+      "6": {"kind": "light", "object": "5", "code": "Oc(2).G.9s"},
+      "7": {"kind": "eta", "start": "09:00", "kn": 6, "eta": "09:37", "nm": 3.7, "derived": true},
+      "8": {"kind": "bearings", "abl": 0, "items": [{"object": "Leuchtturm Alte Weser", "mgp": 11, "rwp": 12}, {"object": "Leuchtturm Tegeler Plate", "mgp": 102, "rwp": 103}]},
+      "9": {"kind": "plot", "what": "bearings"}
+    }
+  },
+  "12": {
+    "task": {"mw": 1, "speed_kn": 8},
+    "steps": {
+      "1": {"kind": "read_position", "lat": [53, 50.0], "lon": [7, 53.4]},
+      "2": {"kind": "plot", "what": "course"},
+      "3": {"kind": "true_course", "from": "10", "to": "ST", "rwk": 7},
+      "4": {"kind": "compass_course", "rwk": 7, "abl": -3, "mgk": 9},
+      "5": {"kind": "light", "object": "4a", "code": "IQ.R.13s"},
+      "6": {"kind": "dr_position", "start": "08:00", "end": "08:30", "kn": 8, "rwk": 7, "lat": [53, 54.0], "lon": [7, 54.3]},
+      "7": {"kind": "plot", "what": "bearing_distance"},
+      "8": {"kind": "set_drift", "direction": 296, "nm": 0.7},
+      "9": {"kind": "mark_meaning", "mark": "safe_water"}
+    }
+  },
+  "13": {
+    "task": {"mw": 1},
+    "steps": {
+      "1": {"kind": "bearings", "abl": 0, "items": [{"object": "Helgoland-O", "mgp": 284, "rwp": 285}, {"object": "Düne-S", "mgp": 8, "rwp": 9}]},
+      "2": {"kind": "plot", "what": "bearings"},
+      "3": {"kind": "read_position", "lat": [54, 8.6], "lon": [7, 55.7]},
+      "4": {"kind": "mark_meaning", "mark": "east_cardinal"},
+      "5": {"kind": "plot", "what": "course"},
+      "6": {"kind": "true_course", "from": "Standort", "to": "ST", "rwk": 182},
+      "7": {"kind": "compass_course", "rwk": 182, "abl": 4, "mgk": 177},
+      "8": {"kind": "speed", "start": "09:00", "end": "09:40", "nm": 5.0, "kn": 7.5, "derived": true},
+      "9": {"kind": "light", "object": "ST", "code": "Iso.W.8s"}
+    }
+  },
+  "14": {
+    "task": {"mw": 1, "speed_kn": 6},
+    "steps": {
+      "1": {"kind": "lighthouse", "code": "LFl(3).WRG.20s"},
+      "2": {"kind": "chart_colours"},
+      "3": {"kind": "read_position", "lat": [53, 58.4], "lon": [8, 28.2]},
+      "4": {"kind": "plot", "what": "course"},
+      "5": {"kind": "true_course", "from": "8", "to": "Norderelbe", "rwk": 38},
+      "6": {"kind": "compass_course", "rwk": 38, "abl": 4, "mgk": 33},
+      "7": {"kind": "distance", "nm": 3.6},
+      "8": {"kind": "bearings", "abl": 1, "items": [{"object": "Süderpiep", "mgp": 20, "rwp": 22}, {"object": "Norderelbe", "mgp": 98, "rwp": 100}]},
+      "9": {"kind": "plot", "what": "bearings"}
+    }
+  },
+  "15": {
+    "task": {"mw": 0},
+    "steps": {
+      "1": {"kind": "bearings", "abl": 5, "items": [{"object": "Leuchtturm Alte Weser", "mgp": 175, "rwp": 180}, {"object": "Leuchtturm Neuwerk", "mgp": 85, "rwp": 90}]},
+      "2": {"kind": "plot", "what": "bearings"},
+      "3": {"kind": "read_position", "lat": [53, 54.9], "lon": [8, 7.6]},
+      "4": {"kind": "true_course", "from": "Standort", "to": "1", "rwk": 37},
+      "5": {"kind": "compass_course", "rwk": 37, "abl": -2, "mgk": 39},
+      "6": {"kind": "distance", "nm": 5.4},
+      "7": {"kind": "chart_entry"},
+      "8": {"kind": "light", "object": "1", "code": "Q.G"},
+      "9": {"kind": "plot", "what": "position"}
+    }
+  }
+}

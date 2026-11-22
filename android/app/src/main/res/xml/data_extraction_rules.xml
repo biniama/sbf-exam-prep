@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+: progress goes into the user's own cloud backup and device-to-device transfer. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="progress.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="progress.xml" />
+    </device-transfer>
+</data-extraction-rules>

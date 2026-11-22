@@ -1,0 +1,6 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+__pycache__/
+# Intermediate SVGs written by tools/images/build.py
+tools/images/out/

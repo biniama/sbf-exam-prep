@@ -1,0 +1,159 @@
+import XCTest
+@testable import SBFTrainer
+
+/// Guards the bundled question catalogue and illustrations.
+@MainActor
+final class DataIntegrityTests: XCTestCase {
+    private var store: QuestionStore { .shared }
+
+    func testCatalogueLoads() {
+        XCTAssertNil(store.loadError)
+        XCTAssertEqual(store.allQuestions.count, 513)
+        XCTAssertEqual(store.sections.count, 4)
+    }
+
+    func testSailingQuestionsAreComplete() {
+        let sailing = store.specificQuestions(for: .segeln)
+        XCTAssertEqual(sailing.map(\.questionNumber), Array(254...300))
+        XCTAssertEqual(sailing.filter(\.hasImage).map(\.uniqueId), ["segeln_295"])
+        XCTAssertTrue(sailing.allSatisfy { !$0.englishText.isEmpty })
+    }
+
+    func testIdsAreUnique() {
+        let ids = store.allQuestions.map(\.uniqueId)
+        XCTAssertEqual(Set(ids).count, ids.count)
+    }
+
+    func testEveryQuestionHasFourAnswersAndAValidKey() {
+        for q in store.allQuestions {
+            XCTAssertEqual(Set(q.options.keys), ["A", "B", "C", "D"], q.uniqueId)
+            XCTAssertNotNil(q.options[q.correctOption], q.uniqueId)
+            XCTAssertFalse(q.germanText.isEmpty, q.uniqueId)
+            for (key, option) in q.options {
+                XCTAssertFalse(option.german.isEmpty, "\(q.uniqueId) \(key)")
+            }
+        }
+    }
+
+    func testEveryIllustrationExists() {
+        for q in store.allQuestions where q.hasImage {
+            let urls = q.imageURLs
+            XCTAssertFalse(urls.isEmpty, "\(q.uniqueId) has no image")
+            for url in urls {
+                XCTAssertTrue(FileManager.default.fileExists(atPath: url.path), "\(q.uniqueId): \(url.lastPathComponent)")
+                XCTAssertNotNil(UIImage(contentsOfFile: url.path), "\(q.uniqueId) image does not decode")
+            }
+        }
+        for q in store.allQuestions where !q.hasImage {
+            XCTAssertTrue(q.imageURLs.isEmpty, "\(q.uniqueId) is not an image question but references one")
+        }
+    }
+
+    func testNoOrphanedIllustrations() throws {
+        let assets = try XCTUnwrap(Bundle.main.url(forResource: "assets", withExtension: nil))
+        let files = FileManager.default.enumerator(at: assets, includingPropertiesForKeys: nil)?
+            .compactMap { $0 as? URL }
+            .filter { $0.pathExtension == "png" }
+            .map { $0.deletingPathExtension().lastPathComponent } ?? []
+        let referenced = Set(store.allQuestions.flatMap { q in q.imageURLs.map { $0.deletingPathExtension().lastPathComponent } })
+        XCTAssertEqual(Set(files), referenced)
+    }
+
+    func testEveryQuestionHasAGermanCategory() {
+        for q in store.allQuestions {
+            XCTAssertNotNil(q.categoryDE, q.uniqueId)
+        }
+    }
+
+    func testSoundPatternsAreValid() {
+        let withPattern = store.allQuestions.compactMap(\.soundPattern)
+        XCTAssertGreaterThanOrEqual(withPattern.count, 15)
+        for pattern in withPattern {
+            XCTAssertTrue(pattern.allSatisfy { ".- ".contains($0) }, pattern)
+            XCTAssertFalse(pattern.trimmingCharacters(in: .whitespaces).isEmpty)
+        }
+    }
+
+    func testEveryQuestionHasExplanationsInBothLanguages() {
+        for q in store.allQuestions {
+            XCTAssertFalse(q.explanationDE?.isEmpty ?? true, "\(q.uniqueId) German explanation missing")
+            XCTAssertFalse(q.explanationEN?.isEmpty ?? true, "\(q.uniqueId) English explanation missing")
+        }
+    }
+
+    func testDisplayOptionsKeepExactlyOneCorrectAnswer() {
+        for q in store.allQuestions {
+            let options = q.displayOptions
+            XCTAssertEqual(options.map(\.key), ["A", "B", "C", "D"])
+            XCTAssertEqual(options.filter(\.isCorrect).count, 1, q.uniqueId)
+            XCTAssertEqual(options.first(where: \.isCorrect)?.value, q.options[q.correctOption])
+        }
+        // The official catalogue always lists the correct answer first; browsing must not.
+        let correctIsA = store.allQuestions.filter { $0.displayOptions.first?.isCorrect == true }.count
+        XCTAssertLessThan(correctIsA, store.allQuestions.count / 2)
+    }
+
+    func testGermanLocalisationIsBundled() {
+        let path = Bundle.main.path(forResource: "Localizable", ofType: "strings", inDirectory: nil, forLocalization: "de")
+        let strings = path.flatMap { NSDictionary(contentsOfFile: $0) as? [String: String] } ?? [:]
+        XCTAssertGreaterThan(strings.count, 150)
+        XCTAssertEqual(strings["Browse"], "Fragen")
+        XCTAssertEqual(strings["Settings"], "Einstellungen")
+    }
+}
+
+@MainActor
+final class NavigationDataTests: XCTestCase {
+    func testNavigationCatalogLoads() throws {
+        let catalog = try XCTUnwrap(NavigationStore.shared.catalog, NavigationStore.shared.loadError ?? "")
+        XCTAssertEqual(catalog.tasks.map(\.number), Array(1...15))
+        for task in catalog.tasks {
+            XCTAssertEqual(task.steps.map(\.number), Array(1...9), "task \(task.number)")
+            XCTAssertNotNil(task.introEN, "task \(task.number)")
+            for step in task.steps {
+                XCTAssertNotNil(step.questionEN, "task \(task.number).\(step.number)")
+                XCTAssertNotNil(step.answerEN, "task \(task.number).\(step.number)")
+                XCTAssertFalse(step.solution.isEmpty, "task \(task.number).\(step.number) has no worked solution")
+            }
+        }
+        XCTAssertEqual(catalog.chartExcerpts.count, 8)
+        XCTAssertEqual(catalog.questionTypes.map(\.number), Array(286...300))
+    }
+
+    func testNavigationVideosCoverEveryStep() throws {
+        let catalog = try XCTUnwrap(NavigationStore.shared.catalog)
+        for task in catalog.tasks {
+            for step in task.steps {
+                let technique = try XCTUnwrap(catalog.technique(for: step.kind), "task \(task.number).\(step.number): \(step.kind)")
+                XCTAssertFalse(technique.videos.isEmpty)
+            }
+            let walkthrough = try XCTUnwrap(task.walkthrough, "task \(task.number)")
+            let starts = (1...9).compactMap { walkthrough.start(ofStep: $0) }
+            XCTAssertEqual(starts.count, 9, "task \(task.number)")
+            XCTAssertEqual(starts, starts.sorted(), "task \(task.number): chapters out of order")
+            XCTAssertLessThan(starts.last ?? .max, walkthrough.seconds)
+        }
+        XCTAssertEqual(walkthroughURL(), "https://www.youtube.com/watch?v=jYWMqmiAeuc&t=281s")
+
+        func walkthroughURL() -> String? {
+            catalog.tasks.first?.walkthrough.map { $0.video.url(startingAt: $0.start(ofStep: 2)).absoluteString }
+        }
+    }
+
+    func testNavigationDiagramsAreConsistent() throws {
+        let catalog = try XCTUnwrap(NavigationStore.shared.catalog)
+        // Task 14: the position of buoy 8 is neither given nor derivable from the official results.
+        XCTAssertEqual(catalog.tasks.filter { $0.diagram != nil }.map(\.number), Array(1...15).filter { $0 != 14 })
+        for task in catalog.tasks {
+            guard let diagram = task.diagram else { continue }
+            let ids = Set(diagram.elements.map(\.id))
+            XCTAssertEqual(ids.count, diagram.elements.count, "task \(task.number): duplicate ids")
+            XCTAssertFalse(diagram.frames.isEmpty, "task \(task.number)")
+            for frame in diagram.frames {
+                XCTAssertFalse(frame.show.isEmpty || frame.de.isEmpty || frame.en.isEmpty, "task \(task.number): empty frame")
+                XCTAssertTrue(Set(frame.show).isSubset(of: ids), "task \(task.number): unknown ids")
+            }
+            XCTAssertEqual(Set(diagram.frames.flatMap(\.show)), ids, "task \(task.number): elements never shown")
+        }
+    }
+}

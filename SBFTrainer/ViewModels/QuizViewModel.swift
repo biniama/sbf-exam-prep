@@ -56,11 +56,20 @@ final class QuizViewModel: ObservableObject {
         if fromWrong {
             let ids = Array(progress.wrongAnswerIds.keys)
             pool = ids.compactMap { store.question(id: $0) }
-            if shuffle { pool = pool.shuffled() }
         } else {
             pool = store.questions(for: type, category: category)
-            if shuffle { pool = pool.shuffled() }
         }
+
+        // Free vs Pro: an exam simulation uses the full catalogue when the exam is owned
+        // or the one free trial run for that exam is still available; everything else
+        // only uses questions the user has unlocked.
+        let entitlements = EntitlementManager.shared
+        if examMode && !entitlements.hasAccess(to: type) && entitlements.hasFreeExamTrial(for: type) {
+            entitlements.consumeFreeExamTrial(for: type)
+        } else if !(examMode && entitlements.hasAccess(to: type)) {
+            pool = pool.filter { store.isUnlocked($0) }
+        }
+        if shuffle { pool = pool.shuffled() }
         questions = Array(pool.prefix(count))
         currentIndex = 0
         selectedOption = nil

@@ -32,6 +32,23 @@ A bilingual German/English iOS app for studying the **Sportbootführerschein (SB
 
 ---
 
+## Free vs Full Version
+
+The app is free to download. Three one-time in-app purchases (StoreKit 2, no server) unlock the rest:
+
+| Product ID | Unlocks | Price |
+|---|---|---|
+| `ai.biniam.SBFExamPrep.binnen` | All Binnen questions (+ Basisfragen), unlimited exam simulations | 9.99 € |
+| `ai.biniam.SBFExamPrep.see` | All See questions (+ Basisfragen), unlimited exam simulations | 9.99 € |
+| `ai.biniam.SBFExamPrep.both` | Everything | 14.99 € |
+
+- **Free:** all 72 Basisfragen, every 7th question of each Binnen/See category (29 Binnen, 34 See), one exam simulation per exam.
+- **School codes:** Apple offer codes (free offer) for the same three products. Students redeem them via *Settings → Redeem School Code* or the App Store; the unlock arrives as a normal transaction.
+- **Code:** `Models/EntitlementManager.swift` (purchases, restore, entitlements, free trial), `QuestionStore.isUnlocked(_:)` (the single gate), `Views/PaywallView.swift`.
+- **Local testing:** the shared scheme uses `SBFTrainer/Products.storekit`, so purchases work in the Simulator without App Store Connect.
+
+---
+
 ## App Structure
 
 ```

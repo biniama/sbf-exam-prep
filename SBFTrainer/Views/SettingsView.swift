@@ -1,13 +1,48 @@
 import SwiftUI
+import StoreKit
 
 struct SettingsView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var entitlements: EntitlementManager
     @State private var showResetConfirm = false
+    @State private var showPaywall = false
+    @State private var showRedeemSheet = false
 
     var body: some View {
         NavigationStack {
             List {
+                // Purchases and school codes
+                Section {
+                    accessRow("SBF Binnen", unlocked: entitlements.hasBinnen)
+                    accessRow("SBF See", unlocked: entitlements.hasSee)
+
+                    if !entitlements.hasEverything {
+                        Button {
+                            showPaywall = true
+                        } label: {
+                            Label("Unlock Full Version", systemImage: "lock.open.fill")
+                                .foregroundStyle(Color.navy)
+                        }
+                    }
+
+                    Button {
+                        showRedeemSheet = true
+                    } label: {
+                        Label("Redeem School Code", systemImage: "ticket")
+                            .foregroundStyle(Color.navy)
+                    }
+
+                    Button {
+                        Task { await entitlements.restorePurchases() }
+                    } label: {
+                        Label("Restore Purchases", systemImage: "arrow.clockwise")
+                            .foregroundStyle(Color.navy)
+                    }
+                } header: { Text("Full Version") } footer: {
+                    Text("Got a code from your boat school? Tap Redeem School Code and enter it.")
+                }
+
                 // Learning preferences
                 Section {
                     Toggle(isOn: Binding(
@@ -84,6 +119,12 @@ struct SettingsView: View {
                 } header: { Text("Data") }
             }
             .navigationTitle("Settings")
+            .sheet(isPresented: $showPaywall) {
+                PaywallView()
+            }
+            .offerCodeRedemption(isPresented: $showRedeemSheet) { _ in
+                Task { await entitlements.refreshEntitlements() }
+            }
             .alert("Reset Progress?", isPresented: $showResetConfirm) {
                 Button("Reset", role: .destructive) { progress.resetProgress() }
                 Button("Cancel", role: .cancel) {}
@@ -95,6 +136,18 @@ struct SettingsView: View {
 
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+    }
+
+    private func accessRow(_ label: String, unlocked: Bool) -> some View {
+        HStack {
+            Text(label)
+                .foregroundStyle(Color.primary)
+            Spacer()
+            Label(unlocked ? "Unlocked" : "Free sample",
+                  systemImage: unlocked ? "checkmark.seal.fill" : "lock.fill")
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(unlocked ? Color.successGreen : Color.gold)
+        }
     }
 
     private func statRow(_ label: String, value: String) -> some View {

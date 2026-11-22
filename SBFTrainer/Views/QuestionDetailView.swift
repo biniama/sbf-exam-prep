@@ -4,6 +4,9 @@ struct QuestionDetailView: View {
     let questions: [Question]
     @State private var currentIndex: Int
     @EnvironmentObject var progress: UserProgress
+    @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var entitlements: EntitlementManager
+    @State private var showPaywall = false
     @State private var revealAnswer = false
     @State private var selectedOption: String? = nil
 
@@ -64,52 +67,56 @@ struct QuestionDetailView: View {
                     QuestionImageView(question: question)
                 }
 
-                // Options
-                Text("Answer Options")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
-                    .padding(.top, 4)
-
-                ForEach(question.sortedOptions, id: \.key) { key, option in
-                    optionRow(key: key, option: option)
-                }
-
-                // Reveal button
-                if !revealAnswer {
-                    Button {
-                        withAnimation(.spring(response: 0.4)) { revealAnswer = true }
-                    } label: {
-                        Label("Show Correct Answer", systemImage: "eye")
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
-                            .background(AppGradient.navy)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
-                    }
+                if !store.isUnlocked(question) {
+                    LockedQuestionCard(examType: question.examType) { showPaywall = true }
                 } else {
-                    HStack(spacing: 10) {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundStyle(Color.successGreen)
-                            .font(.title3)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text("Correct: Option \(question.correctOption)")
-                                .font(.subheadline.weight(.semibold))
-                                .foregroundStyle(Color.successGreen)
-                            Text(question.options[question.correctOption]?.german ?? "")
-                                .font(.caption)
-                                .foregroundStyle(Color.navy)
-                        }
+                    // Options
+                    Text("Answer Options")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 4)
+
+                    ForEach(question.sortedOptions, id: \.key) { key, option in
+                        optionRow(key: key, option: option)
                     }
-                    .padding(14)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.successGreen.opacity(0.1))
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(Color.successGreen.opacity(0.3), lineWidth: 1)
-                    )
-                    .transition(.scale.combined(with: .opacity))
+
+                    // Reveal button
+                    if !revealAnswer {
+                        Button {
+                            withAnimation(.spring(response: 0.4)) { revealAnswer = true }
+                        } label: {
+                            Label("Show Correct Answer", systemImage: "eye")
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 14)
+                                .background(AppGradient.navy)
+                                .clipShape(RoundedRectangle(cornerRadius: 14))
+                        }
+                    } else {
+                        HStack(spacing: 10) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundStyle(Color.successGreen)
+                                .font(.title3)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Correct: Option \(question.correctOption)")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(Color.successGreen)
+                                Text(question.options[question.correctOption]?.german ?? "")
+                                    .font(.caption)
+                                    .foregroundStyle(Color.navy)
+                            }
+                        }
+                        .padding(14)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.successGreen.opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .stroke(Color.successGreen.opacity(0.3), lineWidth: 1)
+                        )
+                        .transition(.scale.combined(with: .opacity))
+                    }
                 }
 
                 // Next question button (when list has multiple questions)
@@ -164,6 +171,9 @@ struct QuestionDetailView: View {
                     }
                 }
             }
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
         }
         .onChange(of: currentIndex) {
             revealAnswer = false

@@ -22,6 +22,8 @@
 		80D781D409D67D1144146D78 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB718E8CE4431804806F1ED1 /* Question.swift */; };
 		8199254471E7C6287401E202 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8CB1EDCCB42060176587E /* BookmarksView.swift */; };
 		8AD7FF74D576C60E0F102C9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F61FFF46A0FE9A49E74BB1 /* HomeView.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F3 /* EntitlementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* EntitlementManager.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F5 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F4 /* PaywallView.swift */; };
 		8B9AE038FB9AC32D296495EE /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9786B7EBE01835C33EAE93C8 /* UserProgress.swift */; };
 		94ED5C05BC2AAE5FBD718C79 /* QuestionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1945881CC24D9509A529EFE /* QuestionStore.swift */; };
 		BA9CD0715345A9BE9CCBB9C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D14321975749903208298FD /* Assets.xcassets */; };
@@ -49,6 +51,9 @@
 		892123906D2400266DE7BB37 /* ConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		8B197CB53C61FBB1D5355AAD /* sbf_exam_questions.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = sbf_exam_questions.json; sourceTree = "<group>"; };
 		8C05086971AF1CCC93F6C62A /* AboutView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* EntitlementManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EntitlementManager.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F4 /* PaywallView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F6 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		9786B7EBE01835C33EAE93C8 /* UserProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
 		985713EA5FAF7D8B8ADDF215 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AB718E8CE4431804806F1ED1 /* Question.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 				2262AF18CA9CA68BE58B5581 /* LearnView.swift */,
 				AD561024B002EF087BBEF6A1 /* MainTabView.swift */,
 				C01DB3EAD71FA0F959580AE4 /* OnboardingView.swift */,
+				A1B2C3D4E5F6A7B8C9D0E1F4 /* PaywallView.swift */,
 				32E39B13FD9A028CA0F3E8EC /* QuestionDetailView.swift */,
 				B7DEF7D3AE8215CEE5F167F6 /* QuizResultView.swift */,
 				0A45D5281E5AAE586C8EFF3A /* QuizSetupView.swift */,
@@ -135,6 +141,7 @@
 				0D14321975749903208298FD /* Assets.xcassets */,
 				C8FF1EAF0BE9BA3C8ECAD30A /* Info.plist */,
 				9CC5F0BCF85C2C9BB610B0E9 /* Models */,
+				A1B2C3D4E5F6A7B8C9D0E1F6 /* Products.storekit */,
 				1EBA2BBF2E4FF280DC063C4B /* Resources */,
 				2D8B076884C3810ED530CCA1 /* SBFTrainerApp.swift */,
 				DB9951677F1EC2014F8C07E1 /* ViewModels */,
@@ -146,6 +153,7 @@
 		9CC5F0BCF85C2C9BB610B0E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* EntitlementManager.swift */,
 				DBED5AD764848254667FEF6F /* NotificationManager.swift */,
 				AB718E8CE4431804806F1ED1 /* Question.swift */,
 				F1945881CC24D9509A529EFE /* QuestionStore.swift */,
@@ -278,6 +286,8 @@
 				80D781D409D67D1144146D78 /* Question.swift in Sources */,
 				94ED5C05BC2AAE5FBD718C79 /* QuestionStore.swift in Sources */,
 				8B9AE038FB9AC32D296495EE /* UserProgress.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F3 /* EntitlementManager.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F5 /* PaywallView.swift in Sources */,
 				22CA77AD69911696A830E6FC /* SBFTrainerApp.swift in Sources */,
 				EF58BB899791FD9880CB9827 /* QuizViewModel.swift in Sources */,
 				CDF48960D99CF5DEA334AD84 /* AboutView.swift in Sources */,

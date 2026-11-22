@@ -4,7 +4,9 @@ import UIKit
 struct HomeView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var entitlements: EntitlementManager
     @State private var showingQuiz = false
+    @State private var showPaywall = false
     @StateObject private var quizVM = QuizViewModel()
 
     private var topSafeArea: CGFloat {
@@ -26,6 +28,9 @@ struct HomeView: View {
                         statsRow
                         studyCalendarSection
                         quickActions
+                        if !entitlements.hasEverything {
+                            UnlockBanner { showPaywall = true }
+                        }
                         reviewSection
                         recentSection
                     }
@@ -40,6 +45,9 @@ struct HomeView: View {
                 NavigationStack {
                     QuizView(vm: quizVM)
                 }
+            }
+            .sheet(isPresented: $showPaywall) {
+                PaywallView()
             }
         }
     }
@@ -216,7 +224,7 @@ struct HomeView: View {
                 quickActionRow(
                     icon: "water.waves",
                     title: "Binnen Motor",
-                    subtitle: "\(store.questions(for: .binnen).count) questions · in order",
+                    subtitle: "\(store.availableQuestions(for: .binnen).count) questions · in order",
                     color: .oceanTeal
                 ) {
                     quizVM.setup(type: .binnen, count: store.questions(for: .binnen).count, shuffle: false)
@@ -226,7 +234,7 @@ struct HomeView: View {
                 quickActionRow(
                     icon: "wind",
                     title: "SBF See",
-                    subtitle: "\(store.questions(for: .see).count) questions · in order",
+                    subtitle: "\(store.availableQuestions(for: .see).count) questions · in order",
                     color: .navyLight
                 ) {
                     quizVM.setup(type: .see, count: store.questions(for: .see).count, shuffle: false)

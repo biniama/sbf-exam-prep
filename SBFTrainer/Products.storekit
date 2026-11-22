@@ -1,0 +1,79 @@
+{
+  "identifier": "8736D831-DDF9-42CB-9980-3603FA7D9F66",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "A0B5AB410",
+      "localizations": [
+        {
+          "description": "All Binnen questions and unlimited exam simulations",
+          "displayName": "SBF Binnen",
+          "locale": "en_US"
+        },
+        {
+          "description": "All Binnen questions and unlimited exam simulations",
+          "displayName": "SBF Binnen",
+          "locale": "de"
+        }
+      ],
+      "productID": "ai.biniam.SBFExamPrep.binnen",
+      "referenceName": "SBF Binnen",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "4F519AD60",
+      "localizations": [
+        {
+          "description": "All See questions and unlimited exam simulations",
+          "displayName": "SBF See",
+          "locale": "en_US"
+        },
+        {
+          "description": "All See questions and unlimited exam simulations",
+          "displayName": "SBF See",
+          "locale": "de"
+        }
+      ],
+      "productID": "ai.biniam.SBFExamPrep.see",
+      "referenceName": "SBF See",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "14.99",
+      "familyShareable": false,
+      "internalID": "A6820C290",
+      "localizations": [
+        {
+          "description": "All questions for both exams",
+          "displayName": "Binnen + See",
+          "locale": "en_US"
+        },
+        {
+          "description": "All questions for both exams",
+          "displayName": "Binnen + See",
+          "locale": "de"
+        }
+      ],
+      "productID": "ai.biniam.SBFExamPrep.both",
+      "referenceName": "SBF Binnen + See",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "A86W8T79TR",
+    "_failTransactionsEnabled": false,
+    "_locale": "de_DE",
+    "_storefront": "DEU",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}

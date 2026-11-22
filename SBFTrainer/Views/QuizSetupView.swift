@@ -3,6 +3,8 @@ import SwiftUI
 struct QuizSetupView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var entitlements: EntitlementManager
+    @State private var showPaywall = false
     @State private var selectedType: ExamType = .all
     @State private var selectedCategory: String? = nil
     @State private var questionCount: Int = 20
@@ -14,9 +16,24 @@ struct QuizSetupView: View {
     let counts = [10, 20, 30, 50]
 
     var availableCount: Int {
-        if examSimulation { return store.questions(for: selectedType == .all ? .binnen : selectedType).count }
-        if fromWrong { return progress.wrongAnswerCount }
-        return store.questions(for: selectedType, category: selectedCategory).count
+        if examSimulation {
+            let type = simExamType
+            return entitlements.canStartExamSimulation(for: type)
+                ? store.questions(for: type).count
+                : store.availableQuestions(for: type).count
+        }
+        if fromWrong {
+            return progress.wrongAnswerIds.keys.compactMap { store.question(id: $0) }
+                .filter { store.isUnlocked($0) }.count
+        }
+        return store.availableQuestions(for: selectedType, category: selectedCategory).count
+    }
+
+    private var simExamType: ExamType { selectedType == .all || selectedType == .shared ? .binnen : selectedType }
+
+    /// Exam simulation for an exam the user doesn't own, with the free trial already used.
+    private var simulationLocked: Bool {
+        examSimulation && !entitlements.canStartExamSimulation(for: simExamType)
     }
 
     var body: some View {
@@ -39,7 +56,13 @@ struct QuizSetupView: View {
 
                         startButton
                             .padding(.horizontal, 20)
-                            .padding(.bottom, 32)
+
+                        if !entitlements.hasEverything {
+                            UnlockBanner { showPaywall = true }
+                                .padding(.horizontal, 20)
+                        }
+
+                        Color.clear.frame(height: 16)
                     }
                 }
             }
@@ -47,6 +70,9 @@ struct QuizSetupView: View {
             .navigationBarTitleDisplayMode(.large)
             .fullScreenCover(isPresented: $showQuiz) {
                 NavigationStack { QuizView(vm: vm) }
+            }
+            .sheet(isPresented: $showPaywall) {
+                PaywallView()
             }
         }
     }
@@ -103,6 +129,11 @@ struct QuizSetupView: View {
                     Text("30 questions · 30 min · 70% to pass")
                         .font(.caption)
                         .foregroundStyle(examSimulation ? Color.white.opacity(0.8) : Color.navyMid)
+                    if let note = simulationAccessNote {
+                        Text(note)
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(examSimulation ? Color.goldLight : Color.gold)
+                    }
                 }
                 Spacer()
                 if examSimulation {
@@ -116,6 +147,16 @@ struct QuizSetupView: View {
             .overlay(RoundedRectangle(cornerRadius: 14)
                 .stroke(examSimulation ? Color.clear : Color.gold.opacity(0.4), lineWidth: 1.5))
         }
+    }
+
+    /// "Free trial" / "Pro" hint under the exam simulation button; nil when the exam is owned.
+    private var simulationAccessNote: String? {
+        let types: [ExamType] = examSimulation ? [simExamType] : [.binnen, .see]
+        if types.allSatisfy({ entitlements.hasAccess(to: $0) }) { return nil }
+        if types.contains(where: { !entitlements.hasAccess(to: $0) && entitlements.hasFreeExamTrial(for: $0) }) {
+            return "1 free trial run per exam · unlimited with Pro"
+        }
+        return "Pro · free trial used"
     }
 
     private var examSimSection: some View {
@@ -132,6 +173,11 @@ struct QuizSetupView: View {
                                 .font(.subheadline)
                                 .foregroundStyle(Color.navy)
                             Spacer()
+                            if !entitlements.canStartExamSimulation(for: type) {
+                                Image(systemName: "lock.fill")
+                                    .font(.caption)
+                                    .foregroundStyle(Color.gold)
+                            }
                             if selectedType == type {
                                 Image(systemName: "checkmark.circle.fill").foregroundStyle(Color.navy)
                             }
@@ -198,7 +244,7 @@ struct QuizSetupView: View {
                     .font(.subheadline)
                     .foregroundStyle(Color.navy)
                 Spacer()
-                Text("\(store.questions(for: type).count) Qs")
+                Text("\(store.availableQuestions(for: type).count) Qs")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                 if selectedType == type {
@@ -267,16 +313,21 @@ struct QuizSetupView: View {
     }
 
     private var startButton: some View {
-        let examType = examSimulation ? (selectedType == .all ? ExamType.binnen : selectedType) : selectedType
+        let examType = examSimulation ? simExamType : selectedType
         let count = examSimulation ? min(30, availableCount) : min(questionCount, availableCount)
+        let locked = simulationLocked
         return Button {
+            if locked {
+                showPaywall = true
+                return
+            }
             vm.setup(type: examType, count: count, category: examSimulation ? nil : selectedCategory,
                      fromWrong: fromWrong, examMode: examSimulation)
             showQuiz = true
         } label: {
             HStack {
-                Image(systemName: examSimulation ? "timer" : "play.fill")
-                Text(examSimulation ? "Start Exam Simulation" : "Start Quiz · \(count) Questions")
+                Image(systemName: locked ? "lock.fill" : (examSimulation ? "timer" : "play.fill"))
+                Text(locked ? "Unlock Exam Simulation" : (examSimulation ? "Start Exam Simulation" : "Start Quiz · \(count) Questions"))
                     .font(.headline)
             }
             .foregroundStyle(.white)
@@ -286,7 +337,7 @@ struct QuizSetupView: View {
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .shadow(color: (examSimulation ? Color.errorRed : Color.navy).opacity(0.3), radius: 8, y: 4)
         }
-        .disabled(count == 0)
+        .disabled(count == 0 && !locked)
     }
 
     private func sectionCard<Content: View>(title: String, icon: String, @ViewBuilder content: () -> Content) -> some View {

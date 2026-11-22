@@ -10,7 +10,7 @@ No account or login is needed; everything is available immediately after the sho
 - Quiz → practice, due reviews, mistakes or exam simulation.
 - Saved → bookmarked questions and mistakes.
 - Settings → English translation toggle, optional daily reminder (local notification), optional iCloud sync, reset.
-The app is a one-time paid download; there are no in-app purchases, subscriptions or ads.
+The app is a free download. Free: all 72 basic questions, a sample of every topic and one exam simulation per licence. Three non-consumable in-app purchases unlock the rest: SBF Inland (ai.biniam.SBFExamPrep.binnen), SBF Sea (ai.biniam.SBFExamPrep.see) and both licences as a cheaper bundle (ai.biniam.SBFExamPrep.both). No subscriptions, no ads. Purchases are in Settings → Full version or on any locked question. Boat schools hand out Apple offer codes for these same products; "Redeem school code" opens Apple's offer code redemption sheet. "Restore purchases" calls AppStore.sync().
 
 4. External services
 None. All content is bundled and the app works offline. Optional: iCloud key-value storage (the user's own iCloud account) to sync progress, and local notifications for the daily reminder. No analytics, no tracking, no third-party SDKs.

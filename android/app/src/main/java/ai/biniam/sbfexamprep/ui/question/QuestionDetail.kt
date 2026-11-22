@@ -65,6 +65,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ai.biniam.sbfexamprep.R
 import ai.biniam.sbfexamprep.data.Question
 import ai.biniam.sbfexamprep.ui.LocalApp
+import ai.biniam.sbfexamprep.ui.billing.LockedQuestionCard
 import ai.biniam.sbfexamprep.ui.components.CategoryBadge
 import ai.biniam.sbfexamprep.ui.components.ExamTypeBadge
 import ai.biniam.sbfexamprep.ui.components.PrimaryButton
@@ -91,6 +92,7 @@ fun QuestionDetail(
     val app = LocalApp.current
     val progress by app.progressRepository.progress.collectAsStateWithLifecycle()
     val settings by app.progressRepository.settings.collectAsStateWithLifecycle()
+    val access by app.billing.access.collectAsStateWithLifecycle()
     val question = questions.getOrNull(index) ?: return
     var revealed by rememberSaveable(question.uniqueId) { mutableStateOf(false) }
     var picked by rememberSaveable(question.uniqueId) { mutableStateOf<String?>(null) }
@@ -152,32 +154,36 @@ fun QuestionDetail(
                     }
                     QuestionText(question, settings.showEnglish)
                     if (question.hasMedia) QuestionMedia(question)
-                    Text(stringResource(R.string.tap_to_check), style = MaterialTheme.typography.labelMedium,
-                         fontWeight = FontWeight.SemiBold, color = Sbf.colors.muted)
-                    question.displayOptions.forEach { option ->
-                        val showState = revealed || picked != null
-                        val tint = when {
-                            showState && option.isCorrect -> Sbf.colors.success
-                            picked == option.key && !option.isCorrect -> Sbf.colors.error
-                            else -> null
+                    if (!app.questions.isUnlocked(question, access)) {
+                        LockedQuestionCard(question.examType)
+                    } else {
+                        Text(stringResource(R.string.tap_to_check), style = MaterialTheme.typography.labelMedium,
+                             fontWeight = FontWeight.SemiBold, color = Sbf.colors.muted)
+                        question.displayOptions.forEach { option ->
+                            val showState = revealed || picked != null
+                            val tint = when {
+                                showState && option.isCorrect -> Sbf.colors.success
+                                picked == option.key && !option.isCorrect -> Sbf.colors.error
+                                else -> null
+                            }
+                            val state = when {
+                                tint == null -> null
+                                option.isCorrect -> stringResource(R.string.correct_answer)
+                                else -> stringResource(R.string.wrong)
+                            }
+                            AnswerOption(option.key, option.option.german, option.option.english, settings.showEnglish, tint,
+                                         icon = if (tint == null) null else option.isCorrect, stateDescription = state,
+                                         enabled = !revealed) {
+                                picked = option.key
+                                revealed = true
+                            }
                         }
-                        val state = when {
-                            tint == null -> null
-                            option.isCorrect -> stringResource(R.string.correct_answer)
-                            else -> stringResource(R.string.wrong)
+                        AnimatedVisibility(revealed, enter = fadeIn() + slideInVertically { it / 3 }) {
+                            ExplanationCard(question)
                         }
-                        AnswerOption(option.key, option.option.german, option.option.english, settings.showEnglish, tint,
-                                     icon = if (tint == null) null else option.isCorrect, stateDescription = state,
-                                     enabled = !revealed) {
-                            picked = option.key
-                            revealed = true
+                        if (!revealed) {
+                            PrimaryButton(stringResource(R.string.show_correct_answer), Icons.Filled.Visibility, { revealed = true })
                         }
-                    }
-                    AnimatedVisibility(revealed, enter = fadeIn() + slideInVertically { it / 3 }) {
-                        ExplanationCard(question)
-                    }
-                    if (!revealed) {
-                        PrimaryButton(stringResource(R.string.show_correct_answer), Icons.Filled.Visibility, { revealed = true })
                     }
                     if (many && !isLast) {
                         SecondaryButton(stringResource(R.string.next_question), Icons.AutoMirrored.Filled.ArrowForward,

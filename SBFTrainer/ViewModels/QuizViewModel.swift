@@ -28,6 +28,8 @@ final class QuizViewModel: ObservableObject {
     @Published private(set) var timeRemaining: Int = 0
     /// Navigation task of a See exam simulation (feature flag navigationExam).
     @Published private(set) var navigationPart: NavigationExamPart?
+    /// Set when a retried exam simulation needs the full version (shown by QuizView).
+    @Published var showPaywall = false
 
     private let store: QuestionStore
     private let progress: UserProgress
@@ -36,9 +38,13 @@ final class QuizViewModel: ObservableObject {
     private var answers: [String: Bool] = [:]
     private var timerTask: Task<Void, Never>?
 
-    init(store: QuestionStore = .shared, progress: UserProgress = .shared) {
+    private let entitlements: EntitlementManager
+
+    init(store: QuestionStore = .shared, progress: UserProgress = .shared,
+         entitlements: EntitlementManager = .shared) {
         self.store = store
         self.progress = progress
+        self.entitlements = entitlements
     }
 
     var current: Question? { questions.indices.contains(currentIndex) ? questions[currentIndex] : nil }
@@ -69,7 +75,7 @@ final class QuizViewModel: ObservableObject {
 
     /// Practice quiz from the catalogue.
     func setup(type: ExamType, count: Int, category: String? = nil, shuffle: Bool = true) {
-        var pool = store.questions(for: type, category: category)
+        var pool = store.availableQuestions(for: type, category: category)
         if shuffle { pool.shuffle() }
         start(Array(pool.prefix(count)), type: type, mode: .practice)
     }
@@ -77,13 +83,13 @@ final class QuizViewModel: ObservableObject {
     /// Quiz over the questions answered wrongly so far.
     func setupMistakes(limit: Int = 30) {
         let ids = progress.wrongAnswerIds.sorted { $0.value > $1.value }.map(\.key)
-        let qs = ids.compactMap { store.question(id: $0) }
+        let qs = ids.compactMap { store.question(id: $0) }.filter { store.isUnlocked($0) }
         start(Array(qs.prefix(limit)).shuffled(), type: .all, mode: .mistakes)
     }
 
     /// Spaced-repetition session with the questions that are due today.
     func setupDueReview(limit: Int = 30) {
-        let qs = progress.dueQuestionIds().compactMap { store.question(id: $0) }
+        let qs = progress.dueQuestionIds().compactMap { store.question(id: $0) }.filter { store.isUnlocked($0) }
         start(Array(qs.prefix(limit)), type: .all, mode: .review)
     }
 
@@ -93,25 +99,38 @@ final class QuizViewModel: ObservableObject {
     }
 
     /// Exam simulation following the official composition, e.g. 7 basic + 23 inland questions.
-    func setupExam(format: ExamFormat, includeNavigation: Bool = false) {
+    /// Without the matching purchase, the one free trial run for that licence is used.
+    /// Returns false (and sets nothing up) when neither is available: show the paywall then.
+    @discardableResult
+    func setupExam(format: ExamFormat, includeNavigation: Bool = false) -> Bool {
+        if !entitlements.hasAccess(to: format.licenceType) {
+            guard entitlements.hasFreeExamTrial(for: format) else { return false }
+            entitlements.consumeFreeExamTrial(for: format)
+        }
         let rules = ExamRules(format: format, includeNavigation: includeNavigation)
         let qs = rules.parts.flatMap { store.specificQuestions(for: $0.type).shuffled().prefix($0.count) }
         start(qs, type: rules.parts.last?.type ?? .all, mode: .exam(rules))
         if rules.includesNavigation, let catalog = NavigationStore.shared.catalog, let task = catalog.tasks.randomElement() {
             navigationPart = NavigationExamPart(task: task, tolerances: catalog.tolerances)
         }
+        return true
     }
 
     /// Same questions again, answer order reshuffled.
     func retry() {
         if let rules = examRules {
-            setupExam(format: rules.format, includeNavigation: rules.includesNavigation)
+            if !setupExam(format: rules.format, includeNavigation: rules.includesNavigation) {
+                showPaywall = true
+            }
         } else {
             start(questions.shuffled(), type: examType, mode: mode)
         }
     }
 
     private func start(_ qs: [Question], type: ExamType, mode: QuizMode) {
+        // Free vs full version: only exam simulations (checked in setupExam) may contain
+        // locked questions; every other quiz uses unlocked questions only.
+        let qs = mode.isExam ? qs : qs.filter { store.isUnlocked($0) }
         timerTask?.cancel()
         navigationPart = nil
         self.mode = mode

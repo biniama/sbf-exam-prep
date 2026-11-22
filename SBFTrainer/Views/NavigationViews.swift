@@ -6,6 +6,7 @@ import SwiftUI
 struct NavigationTasksView: View {
     @StateObject private var nav = NavigationStore.shared
     @EnvironmentObject var flags: FeatureFlags
+    @EnvironmentObject var entitlements: EntitlementManager
     @Environment(\.horizontalSizeClass) private var hSize
 
     private let columns = [GridItem(.adaptive(minimum: 300), spacing: 12)]
@@ -51,8 +52,14 @@ struct NavigationTasksView: View {
                 SectionHeader(title: "Tasks", systemImage: "map")
                 LazyVGrid(columns: columns, spacing: 12) {
                     ForEach(nav.tasks) { task in
-                        NavigationLink { NavigationTaskView(task: task) } label: { taskRow(task) }
-                            .buttonStyle(.plain)
+                        if entitlements.canOpenNavigationTask(task.number) {
+                            NavigationLink { NavigationTaskView(task: task) } label: { taskRow(task, locked: false) }
+                                .buttonStyle(.plain)
+                        } else {
+                            Button { entitlements.paywallShown = true } label: { taskRow(task, locked: true) }
+                                .buttonStyle(.plain)
+                                .accessibilityHint(Text("Locked"))
+                        }
                     }
                 }
                 Text("Source: ELWIS navigation tasks, status August 2023. English translations are unofficial.")
@@ -86,7 +93,7 @@ struct NavigationTasksView: View {
         .cardStyle()
     }
 
-    private func taskRow(_ task: NavigationTask) -> some View {
+    private func taskRow(_ task: NavigationTask, locked: Bool) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Text("\(task.number)")
                 .font(.headline.monospacedDigit())
@@ -104,9 +111,9 @@ struct NavigationTasksView: View {
                     .lineLimit(3)
             }
             Spacer(minLength: 0)
-            Image(systemName: "chevron.right")
+            Image(systemName: locked ? "lock.fill" : "chevron.right")
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(locked ? Color.gold : .secondary)
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)

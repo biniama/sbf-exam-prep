@@ -322,6 +322,8 @@ private struct TopicPickerSheet: View {
 struct QuestionRowView: View {
     let question: Question
     @EnvironmentObject var progress: UserProgress
+    @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var entitlements: EntitlementManager
 
     var body: some View {
         HStack(spacing: 12) {
@@ -353,6 +355,9 @@ struct QuestionRowView: View {
             }
             Spacer(minLength: 0)
             VStack(spacing: 4) {
+                if !store.isUnlocked(question) {
+                    Image(systemName: "lock.fill").font(.caption).foregroundStyle(Color.gold)
+                }
                 if progress.isBookmarked(question.uniqueId) {
                     Image(systemName: "bookmark.fill").font(.caption).foregroundStyle(Color.gold)
                 }
@@ -369,6 +374,7 @@ struct QuestionRowView: View {
 
     private var accessibilityStatus: Text {
         var parts: [String] = [question.localizedCategory]
+        if !store.isUnlocked(question) { parts.append(String(localized: "Locked")) }
         if progress.isBookmarked(question.uniqueId) { parts.append(String(localized: "Saved")) }
         if progress.isWrong(question.uniqueId) { parts.append(String(localized: "Answered wrongly")) }
         return Text(parts.joined(separator: ", "))

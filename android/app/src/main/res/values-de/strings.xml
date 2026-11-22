@@ -398,4 +398,39 @@
         <item quantity="one">Zeitlimit: %d Minute</item>
         <item quantity="other">Zeitlimit: %d Minuten</item>
     </plurals>
+
+    <!-- Full version and school codes -->
+    <string name="full_version">Vollversion</string>
+    <string name="full_version_footer">Code von deiner Bootsschule bekommen? Tippe auf „Schulcode einlösen“ und gib ihn ein.</string>
+    <string name="unlocked">Freigeschaltet</string>
+    <string name="free_sample">Kostenlose Auswahl</string>
+    <string name="unlock_full_version">Vollversion freischalten</string>
+    <string name="redeem_school_code">Schulcode einlösen</string>
+    <string name="restore_purchases">Käufe wiederherstellen</string>
+    <string name="paywall_title">Den ganzen Fragenkatalog freischalten</string>
+    <string name="paywall_subtitle">Übe alle offiziellen Fragen und mach unbegrenzt Prüfungssimulationen.</string>
+    <string name="paywall_all_unlocked">Alles ist freigeschaltet</string>
+    <string name="paywall_feature_questions">Alle Fragen deines Scheins, auf Deutsch und Englisch</string>
+    <string name="paywall_feature_media">Alle Abbildungen und Schallsignale</string>
+    <string name="paywall_feature_exams">Unbegrenzte Prüfungssimulationen mit den offiziellen Bestehensgrenzen</string>
+    <string name="paywall_feature_review">Wiederholung und Fehlertraining über den ganzen Katalog</string>
+    <string name="paywall_footnote">Einmalkauf, kein Abo. Gilt auf allen Geräten mit deinem Google-Konto.</string>
+    <string name="billing_pending">Dein Kauf wartet auf Freigabe.</string>
+    <string name="billing_failed">Der Kauf konnte nicht abgeschlossen werden. Bitte versuche es erneut.</string>
+    <string name="billing_prices_unavailable">Die Preise konnten nicht von Google Play geladen werden. Bitte prüfe deine Verbindung.</string>
+    <string name="product_binnen">SBF Binnen</string>
+    <string name="product_see">SBF See</string>
+    <string name="product_both">SBF Binnen + See</string>
+    <string name="product_binnen_summary">Alle Binnen- und Segelfragen, unbegrenzte Prüfungssimulationen</string>
+    <string name="product_see_summary">Alle Seefragen und Navigationsaufgaben, unbegrenzte Prüfungssimulationen</string>
+    <string name="product_both_summary">Alles für beide Scheine. Am günstigsten</string>
+    <string name="unlock_all_questions">Alle Fragen freischalten</string>
+    <string name="unlock_all_questions_summary">Kostenlos: alle Basisfragen und eine Auswahl aus jedem Thema</string>
+    <string name="locked_question_title">Teil der Vollversion · %1$s</string>
+    <string name="locked_question_text">Schalte sie frei, um die Antworten zu sehen und alle Fragen deines Scheins zu üben.</string>
+    <string name="unlock">Freischalten</string>
+    <string name="locked">Gesperrt</string>
+    <string name="unlock_exam_sim">Prüfungssimulation freischalten</string>
+    <string name="exam_trial_available">Eine kostenlose Prüfungssimulation · unbegrenzt in der Vollversion</string>
+    <string name="exam_trial_used">Kostenlose Prüfungssimulation genutzt · unbegrenzt in der Vollversion</string>
 </resources>

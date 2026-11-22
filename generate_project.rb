@@ -11,8 +11,8 @@ PROJECT_PATH = File.join(ROOT, 'SBFTrainer.xcodeproj')
 TEAM = 'A86W8T79TR'
 BUNDLE_ID = 'ai.biniam.SBFExamPrep'
 DEPLOYMENT_TARGET = '17.0'
-MARKETING_VERSION = '1.2'
-BUILD_NUMBER = '7'
+MARKETING_VERSION = '1.3'
+BUILD_NUMBER = '8'
 
 project = Xcodeproj::Project.new(PROJECT_PATH)
 project.root_object.development_region = 'en'
@@ -23,7 +23,7 @@ widget = project.new_target(:app_extension, 'SBFWidget', :ios, DEPLOYMENT_TARGET
 tests  = project.new_target(:unit_test_bundle, 'SBFTrainerTests', :ios, DEPLOYMENT_TARGET)
 
 RESOURCE_EXTENSIONS = %w[.xcassets .xcstrings .xcprivacy .json].freeze
-REFERENCE_ONLY = %w[.plist .entitlements].freeze
+REFERENCE_ONLY = %w[.plist .entitlements .storekit].freeze
 
 # Adds a directory tree to `group`; Swift files are compiled into `source_targets`,
 # resources are copied into `resource_target`.
@@ -123,6 +123,9 @@ scheme = Xcodeproj::XCScheme.new
 scheme.add_build_target(app)
 scheme.add_test_target(tests)
 scheme.set_launch_target(app)
+# Local StoreKit testing: purchases in the Simulator use SBFTrainer/Products.storekit.
+scheme.launch_action.xml_element.add_element('StoreKitConfigurationFileReference',
+                                             'identifier' => '../../SBFTrainer/Products.storekit')
 scheme.save_as(PROJECT_PATH, 'SBFExamPrep', true)
 
 project.save

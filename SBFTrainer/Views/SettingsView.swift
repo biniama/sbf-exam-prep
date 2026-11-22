@@ -15,15 +15,18 @@ struct SettingsView: View {
     @EnvironmentObject var progress: UserProgress
     @EnvironmentObject var store: QuestionStore
     @EnvironmentObject var flags: FeatureFlags
+    @EnvironmentObject var entitlements: EntitlementManager
     @Environment(\.openURL) private var openURL
     @Environment(\.requestReview) private var requestReview
     @State private var showResetConfirm = false
     @State private var notificationsDenied = false
     @State private var versionTaps = 0
+    @State private var showRedeemSheet = false
 
     var body: some View {
         NavigationStack {
             Form {
+                fullVersionSection
                 learningSection
                 reminderSection
                 syncSection
@@ -47,10 +50,42 @@ struct SettingsView: View {
                 Text("This erases your quiz history, saved questions, mistakes and review schedule on all devices that use iCloud sync. This cannot be undone.")
             }
             .task { await refreshNotificationStatus() }
+            .offerCodeRedemption(isPresented: $showRedeemSheet) { _ in
+                Task { await entitlements.refreshEntitlements() }
+            }
         }
     }
 
     // MARK: Sections
+
+    private var fullVersionSection: some View {
+        Section {
+            accessRow(ExamType.binnen.licenceName, unlocked: entitlements.hasBinnen)
+            accessRow(ExamType.see.licenceName, unlocked: entitlements.hasSee)
+            if !entitlements.hasEverything {
+                Button { entitlements.paywallShown = true } label: {
+                    Label("Unlock full version", systemImage: "lock.open.fill")
+                }
+            }
+            Button { showRedeemSheet = true } label: {
+                Label("Redeem school code", systemImage: "ticket")
+            }
+            Button { Task { await entitlements.restorePurchases() } } label: {
+                Label("Restore purchases", systemImage: "arrow.clockwise")
+            }
+        } header: {
+            Text("Full version")
+        } footer: {
+            Text("Got a code from your boat school? Tap Redeem school code and enter it.")
+        }
+    }
+
+    private func accessRow(_ title: String, unlocked: Bool) -> some View {
+        LabeledContent(title) {
+            Label(unlocked ? "Unlocked" : "Free sample", systemImage: unlocked ? "checkmark.seal.fill" : "lock.fill")
+                .foregroundStyle(unlocked ? Color.successGreen : Color.gold)
+        }
+    }
 
     private var learningSection: some View {
         Section {
@@ -191,7 +226,7 @@ struct SettingsView: View {
                 FeatureFlagsView()
             } label: {
                 LabeledContent {
-                    Text("\(flags.enabledCount) of \(FeatureFlag.allCases.count) on")
+                    Text("\(flags.enabledCount) of \(FeatureFlag.testable.count) on")
                 } label: {
                     Label("Feature flags", systemImage: "flag.2.crossed")
                 }
@@ -250,7 +285,7 @@ struct FeatureFlagsView: View {
     var body: some View {
         Form {
             Section {
-                ForEach(FeatureFlag.allCases) { flag in
+                ForEach(FeatureFlag.testable) { flag in
                     Toggle(isOn: Binding(get: { flags.isOn(flag) }, set: { flags.set(flag, $0) })) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(flag.title)
@@ -263,7 +298,7 @@ struct FeatureFlagsView: View {
             }
             Section {
                 Button("Turn all on") { flags.setAll(true) }
-                    .disabled(flags.enabledCount == FeatureFlag.allCases.count)
+                    .disabled(flags.enabledCount == FeatureFlag.testable.count)
                 Button("Turn all off", role: .destructive) { flags.setAll(false) }
                     .disabled(flags.enabledCount == 0)
             }

@@ -25,8 +25,8 @@ android {
         applicationId = "ai.biniam.sbfexamprep"
         minSdk = 26
         targetSdk = 36
-        versionCode = 4
-        versionName = "1.2"
+        versionCode = 5
+        versionName = "1.3"
     }
 
     signingConfigs {
@@ -87,6 +87,7 @@ dependencies {
     implementation(libs.androidx.compose.material3.navigation.suite)
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.android.billing)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     testImplementation(libs.junit)

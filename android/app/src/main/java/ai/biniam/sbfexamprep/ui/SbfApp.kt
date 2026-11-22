@@ -33,6 +33,7 @@ import ai.biniam.sbfexamprep.data.ExamFormat
 import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.SbfApplication
+import ai.biniam.sbfexamprep.ui.billing.PaywallSheet
 import ai.biniam.sbfexamprep.ui.browse.BrowseScreen
 import ai.biniam.sbfexamprep.ui.home.HomeScreen
 import ai.biniam.sbfexamprep.ui.onboarding.OnboardingScreen
@@ -72,6 +73,8 @@ fun SbfApp(app: SbfApplication) {
             OnboardingScreen()
             return@CompositionLocalProvider
         }
+        val paywallShown by app.billing.paywallShown.collectAsStateWithLifecycle()
+        if (paywallShown) PaywallSheet(onDismiss = { app.billing.paywallShown.value = false; app.billing.clearMessage() })
         val quiz: QuizViewModel = viewModel { QuizViewModel(app) }
         val holder = rememberSaveableStateHolder()
         var tab by rememberSaveable {

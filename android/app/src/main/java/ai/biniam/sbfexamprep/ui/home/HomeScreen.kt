@@ -74,6 +74,7 @@ import ai.biniam.sbfexamprep.data.FeatureFlag
 import ai.biniam.sbfexamprep.data.ExamType
 import ai.biniam.sbfexamprep.data.QuizRecord
 import ai.biniam.sbfexamprep.ui.LocalApp
+import ai.biniam.sbfexamprep.ui.billing.UnlockBanner
 import ai.biniam.sbfexamprep.ui.components.Layout
 import ai.biniam.sbfexamprep.ui.components.LightStatusBarIcons
 import ai.biniam.sbfexamprep.ui.components.PrimaryButton
@@ -271,6 +272,7 @@ private fun StreakSection(streak: Int, days: List<Pair<LocalDate, Boolean>>) {
 @Composable
 private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: Int, quiz: QuizViewModel, onBrowse: () -> Unit,
                          onNavigation: (() -> Unit)?, withNavigation: Boolean, onDrills: (() -> Unit)?) {
+    val app = LocalApp.current
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
         SectionHeader(stringResource(R.string.quick_start), Icons.Filled.Bolt)
         ActionRow(Icons.Filled.PlayCircle, Brand.navy, stringResource(R.string.quick_quiz),
@@ -280,7 +282,7 @@ private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: In
         formats.forEach { format ->
             ActionRow(Icons.Filled.Timer, if (format == ExamFormat.SEE) Brand.navyLight else Brand.oceanTeal,
                       stringResource(R.string.exam_sim_type, examFormatTitle(format)), examSummary(ExamRules(format, withNavigation))) {
-                quiz.setupExam(format, withNavigation)
+                if (!quiz.setupExam(format, withNavigation)) app.billing.paywallShown.value = true
             }
         }
         if (onNavigation != null) {
@@ -297,6 +299,7 @@ private fun QuickActions(quizCount: Int, formats: List<ExamFormat>, mistakes: In
         }
         ActionRow(Icons.Filled.FormatListNumbered, Brand.gold, stringResource(R.string.all_in_order),
                   stringResource(R.string.all_in_order_sub), onBrowse)
+        UnlockBanner()
     }
 }
 

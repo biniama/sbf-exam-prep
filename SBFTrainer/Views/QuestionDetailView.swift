@@ -4,8 +4,11 @@ struct QuestionDetailView: View {
     let questions: [Question]
     @State private var currentIndex: Int
     @EnvironmentObject var progress: UserProgress
+    @EnvironmentObject var store: QuestionStore
+    @EnvironmentObject var entitlements: EntitlementManager
     @State private var revealAnswer = false
     @State private var picked: String? = nil
+    @State private var showPaywall = false
 
     /// Single question (results, review lists).
     init(question: Question) {
@@ -31,27 +34,31 @@ struct QuestionDetailView: View {
                 if question.hasMedia {
                     QuestionImageView(question: question)
                 }
-                Text("Tap an answer to check yourself")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
-                    .padding(.top, 2)
-                ForEach(question.displayOptions, id: \.key) { item in
-                    optionRow(key: item.key, option: item.value, isCorrect: item.isCorrect)
-                }
-                if revealAnswer {
-                    ExplanationCard(question: question)
-                        .transition(.opacity.combined(with: .move(edge: .bottom)))
+                if !store.isUnlocked(question) {
+                    LockedQuestionCard(examType: question.examType) { showPaywall = true }
                 } else {
-                    Button {
-                        withAnimation(.spring(response: 0.4)) { revealAnswer = true }
-                    } label: {
-                        Label("Show correct answer", systemImage: "eye")
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
-                            .background(AppGradient.navy)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                    Text("Tap an answer to check yourself")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 2)
+                    ForEach(question.displayOptions, id: \.key) { item in
+                        optionRow(key: item.key, option: item.value, isCorrect: item.isCorrect)
+                    }
+                    if revealAnswer {
+                        ExplanationCard(question: question)
+                            .transition(.opacity.combined(with: .move(edge: .bottom)))
+                    } else {
+                        Button {
+                            withAnimation(.spring(response: 0.4)) { revealAnswer = true }
+                        } label: {
+                            Label("Show correct answer", systemImage: "eye")
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 14)
+                                .background(AppGradient.navy)
+                                .clipShape(RoundedRectangle(cornerRadius: 14))
+                        }
                     }
                 }
                 if questions.count > 1 && !isLast {
@@ -97,6 +104,9 @@ struct QuestionDetailView: View {
                 }
                 .accessibilityLabel(progress.isBookmarked(question.uniqueId) ? Text("Remove from saved") : Text("Save question"))
             }
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
         }
         .onChange(of: currentIndex) {
             revealAnswer = false

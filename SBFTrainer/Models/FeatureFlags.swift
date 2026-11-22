@@ -1,7 +1,8 @@
 import Foundation
 import StoreKit
 
-/// Features that are built but not yet released. All flags are off by default.
+/// Features behind a flag. Released flags are always on and no longer appear in the flag
+/// screen; the others are off by default.
 ///
 /// Turn them on under Settings → Feature flags. The button is always visible in debug and TestFlight
 /// builds; in App Store builds it appears after tapping the version number seven times.
@@ -14,6 +15,14 @@ enum FeatureFlag: String, CaseIterable, Identifiable {
     case navigationVideos
 
     var id: String { rawValue }
+
+    /// Shipped to everyone. The technique videos (YouTube links) are not released.
+    static let released: Set<FeatureFlag> = [.navigationTasks, .navigationExam, .navigationDrills, .navigationDiagrams]
+
+    /// Flags that can still be toggled for testing.
+    static var testable: [FeatureFlag] { allCases.filter { !released.contains($0) } }
+
+    var isReleased: Bool { Self.released.contains(self) }
 
     var title: String {
         switch self {
@@ -50,7 +59,7 @@ final class FeatureFlags: ObservableObject {
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
-        enabled = Set(FeatureFlag.allCases.filter { defaults.bool(forKey: $0.key) })
+        enabled = FeatureFlag.released.union(FeatureFlag.testable.filter { defaults.bool(forKey: $0.key) })
         #if DEBUG
         unlocked = true
         #else
@@ -70,15 +79,17 @@ final class FeatureFlags: ObservableObject {
         }
     }
 
-    var enabledCount: Int { enabled.count }
+    /// Number of testable flags that are on.
+    var enabledCount: Int { FeatureFlag.testable.filter(enabled.contains).count }
 
     func setAll(_ on: Bool) {
-        FeatureFlag.allCases.forEach { set($0, on) }
+        FeatureFlag.testable.forEach { set($0, on) }
     }
 
     func isOn(_ flag: FeatureFlag) -> Bool { enabled.contains(flag) }
 
     func set(_ flag: FeatureFlag, _ on: Bool) {
+        guard !flag.isReleased else { return }
         if on { enabled.insert(flag) } else { enabled.remove(flag) }
         defaults.set(on, forKey: flag.key)
     }

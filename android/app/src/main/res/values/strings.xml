@@ -399,4 +399,39 @@
         <item quantity="one">Time limit: %d minute</item>
         <item quantity="other">Time limit: %d minutes</item>
     </plurals>
+
+    <!-- Full version and school codes -->
+    <string name="full_version">Full version</string>
+    <string name="full_version_footer">Got a code from your boat school? Tap Redeem school code and enter it.</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="free_sample">Free sample</string>
+    <string name="unlock_full_version">Unlock full version</string>
+    <string name="redeem_school_code">Redeem school code</string>
+    <string name="restore_purchases">Restore purchases</string>
+    <string name="paywall_title">Unlock the full catalogue</string>
+    <string name="paywall_subtitle">Practise every official question and take unlimited exam simulations.</string>
+    <string name="paywall_all_unlocked">Everything is unlocked</string>
+    <string name="paywall_feature_questions">All questions of your licence, German and English</string>
+    <string name="paywall_feature_media">Every illustration and sound signal</string>
+    <string name="paywall_feature_exams">Unlimited exam simulations with the official pass marks</string>
+    <string name="paywall_feature_review">Spaced repetition and mistakes across the whole catalogue</string>
+    <string name="paywall_footnote">One-time purchase, no subscription. Unlocks on all devices with your Google account.</string>
+    <string name="billing_pending">Your purchase is waiting for approval.</string>
+    <string name="billing_failed">The purchase could not be completed. Please try again.</string>
+    <string name="billing_prices_unavailable">Could not load prices from Google Play. Please check your connection.</string>
+    <string name="product_binnen">SBF Inland</string>
+    <string name="product_see">SBF Sea</string>
+    <string name="product_both">SBF Inland + Sea</string>
+    <string name="product_binnen_summary">All inland and sailing questions, unlimited exam simulations</string>
+    <string name="product_see_summary">All sea questions and navigation tasks, unlimited exam simulations</string>
+    <string name="product_both_summary">Everything for both licences. Best value</string>
+    <string name="unlock_all_questions">Unlock all questions</string>
+    <string name="unlock_all_questions_summary">Free: all basic questions and a sample of every topic</string>
+    <string name="locked_question_title">Part of the full version · %1$s</string>
+    <string name="locked_question_text">Unlock it to see the answers and practise every question of your licence.</string>
+    <string name="unlock">Unlock</string>
+    <string name="locked">Locked</string>
+    <string name="unlock_exam_sim">Unlock exam simulation</string>
+    <string name="exam_trial_available">One free exam simulation · unlimited in the full version</string>
+    <string name="exam_trial_used">Free exam simulation used · unlimited in the full version</string>
 </resources>

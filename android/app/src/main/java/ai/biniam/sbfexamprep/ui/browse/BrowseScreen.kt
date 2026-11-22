@@ -34,6 +34,7 @@ import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.GraphicEq
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
@@ -255,9 +256,13 @@ private fun QuestionList(
 
 @Composable
 fun QuestionRow(question: Question, progress: ProgressState, selected: Boolean, onClick: () -> Unit) {
+    val app = LocalApp.current
+    val access by app.billing.access.collectAsStateWithLifecycle()
+    val locked = !app.questions.isUnlocked(question, access)
     val wrong = progress.isWrong(question.uniqueId)
     val saved = progress.isBookmarked(question.uniqueId)
     val extra = buildList {
+        if (locked) add(stringResource(R.string.locked))
         if (wrong) add(stringResource(R.string.answered_wrongly))
         if (saved) add(stringResource(R.string.tab_saved))
     }.joinToString(", ")
@@ -292,6 +297,7 @@ fun QuestionRow(question: Question, progress: ProgressState, selected: Boolean, 
             }
         }
         Column(horizontalAlignment = Alignment.End) {
+            if (locked) Icon(Icons.Filled.Lock, null, Modifier.size(16.dp), tint = Brand.gold)
             if (saved) Icon(Icons.Filled.Bookmark, null, Modifier.size(16.dp), tint = Brand.gold)
             if (wrong) Icon(Icons.Filled.Cancel, null, Modifier.size(16.dp), tint = Sbf.colors.error)
         }
